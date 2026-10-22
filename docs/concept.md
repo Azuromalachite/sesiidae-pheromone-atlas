@@ -2,27 +2,48 @@
 
 **Working repository:** `Azuromalachite/sesiidae-pheromone-atlas`  
 **Working subtitle:** *A curated, machine-readable resource linking Sesiidae pheromone chemistry, genomes, biosynthetic hypotheses, and candidate enzyme families.*  
-**Revision 2, 2026-10-23.** Addresses findings F1–F9 of adversarial review 1 (`atlas-concept-review-1.md`). F10–F12 are still open; see §0.
+**Revision 3, 2026-10-23.** Addresses adversarial review 2 (`atlas-concept-review-2.md`: retractions R1–R3, findings N1–N8) on top of revision 2's response to review 1 (F1–F9). No external review has been run; the same model wrote the reviews and the revisions. F10 and F11 are still open; see §0.
 
 ---
 
-## 0. Changes in revision 2
+## 0. Changes
+
+### Revision 3 (review 2)
+
+| finding | what changed | sections |
+|---|---|---|
+| R1/N2 wrong site statistic | site contrasts are per-conformer paired differences with sign consistency, under both rules; the measured table replaces the unpaired 6.5 kcal/mol argument | §26, §35 (19) |
+| R2/N3 archived gene-model source | annotation identity = provider + method + dated geneset + checksums; the archived Ensembl Rapid Release FTP genesets are the reference (*S. tipuliformis* `ensembl` 2023_05; *S. apiformis* `braker` 2021_12); new-platform IDs are a cross-reference still to be checked | §4.2, §15, §15a, §20, §21 |
+| R3 isomerase shape | Route C3 runs from either Δ3 geometry to E2, direction and equilibrium unknown; the two predictions that needed an equilibrium are removed; Rhea 23716/23717 cited | §18, §37 |
+| N1 chain maps across elongation | maps are positions within a compound; each reaction carries `atom_correspondence` (identity / offset / explicit); the validator applies it | §10, §10a, §11, §16, §35 (18) |
+| N4 CI tied to espmap | the Atlas validator applies the map rule itself; `espmap --check` runs as a pinned, non-blocking job until espmap P3 | §12, §36, §35 (20) |
+| N5 detection without method | `method` is required for any `detected: true/false`; `detection_limit` has a unit | §13, §35 (12) |
+| N6 non-discriminating test | the constant-ratio clause is reclassified as consistent-with only | §37 |
+| N7 regeneration fragility | generator versions are recorded; toolkit upgrades are dedicated regeneration commits | §10 |
+| N8 loose ends | F12 marked done; `electrophysiology` has fields; species-level caveat applies to every genome–pheromone match; *S. myopaeformis* population noted; *S. bicingulata* minors added | §0, §4.3, §13 |
+| reaction status | `reaction_status` (the chemistry) and `pathway_status` (its role in Sesiidae) replace one `status` | §16 |
+
+### Revision 2 (review 1)
+
+Rows marked † were later corrected in revision 3.
 
 | finding | what changed | sections |
 |---|---|---|
 | F1 taxa without genomes | taxa are chosen from a taxon × layer matrix built first; the expansion set is replaced by NCBI-assembled species; *S. myopaeformis* added | §4, §33, §36 |
-| F2 no RefSeq proteins | protein identity = assembly + annotation source + release + stable ID; gene-level absence needs a genome-level search | §15, §15a, §20, §29 |
-| F3 espmap on the wrong molecule | the espmap subject is a curated precursor model (truncated thioester), not the pheromone; site contrasts are reported against the per-site budget | §25, §26 |
-| F4 partial atom maps | head-group heavy atoms get maps from 101; CI runs `espmap --check` on every compound | §11, §12 |
-| F5 E2/E3 origin | Route C (enoyl intermediates of elongation or β-oxidation, and isomerisation); ACOX, elongation-cycle enzymes and enoyl-CoA isomerase added; isotope labelling is an evidence type | §16, §18, §19, §37 |
+| F2 no RefSeq proteins † | protein identity = assembly + annotation source + release + stable ID; gene-level absence needs a genome-level search | §15, §15a, §20, §29 |
+| F3 espmap on the wrong molecule † | the espmap subject is a curated precursor model (truncated thioester), not the pheromone; site contrasts are reported against the per-site budget | §25, §26 |
+| F4 partial atom maps † | head-group heavy atoms get maps from 101; CI runs `espmap --check` on every compound | §11, §12 |
+| F5 E2/E3 origin † | Route C (enoyl intermediates of elongation or β-oxidation, and isomerisation); ACOX, elongation-cycle enzymes and enoyl-CoA isomerase added; isotope labelling is an evidence type | §16, §18, §19, §37 |
 | F6 observation model | typed observations; method per measurement; `detected: true/false/not_tested` with detection limit; `role` split into abundance class and behavioural effect | §13, §35 |
 | F7 redundant encodings | only `shorthand` and `mapped_smiles` are hand-entered; everything else is generated and diffed in CI | §10, §12 |
 | F8 precursors without structure | acyl-CoA, free acid, alcohol, aldehyde and acetate are separate compounds with full structures; computational models link to them | §10a, §16 |
 | F9 gate after data | validator and CI precede the first curated record | §36 |
 
-Still open: F10 (separate data licence; Pherobase reuse terms not yet found), F11 (out-of-family reference taxa such as *Zeuzera pyrina*), F12 (cite espmap schema IDs, not a package version — partly done in §25).
+Still open: F10 (separate data licence; Pherobase reuse terms not yet found) and F11 (out-of-family reference taxa such as *Zeuzera pyrina*). F12 is done: §25 cites espmap's record and site schema IDs and `analysis_key`, and no package version remains.
 
-The natural-history motivation (the *Amegilla* → Sesiidae origin, lipid-derived signalling, the C18 pheromone cases) lives in the companion document `sesiidae_context_lipid_signaling_amegilla_motivation.md`. Species chemistry quoted from it in §4.3 is a summary, not a curated record, until the primary papers are read.
+Still unverified, and named where it matters: how the new Ensembl platform identifies these annotations (§15a), the isomerase equilibrium (§18), and whether the Δ2-vs-Δ3 contrast resolves on the thioester model (§26).
+
+The natural-history motivation (the *Amegilla* → Sesiidae origin, lipid-derived signalling, the C18 pheromone cases) lives in the companion document `docs/context.md`. Species chemistry quoted from it in §4.3 is a summary, not a curated record, until the primary papers are read.
 
 ---
 
@@ -121,7 +142,7 @@ comes from the sequenced population.
 
 Strong complementary case because:
 
-- a chromosome-level nuclear genome exists: ilSesApif2.1, GCA_914767545.1, 546.8 Mb (Ensembl: 16,358 protein-coding genes);
+- a chromosome-level nuclear genome exists: ilSesApif2.1, GCA_914767545.1, 546.8 Mb (16,358 protein-coding genes, BRAKER gene set published by Ensembl Rapid Release);
 - the gland blend is Z3,Z13-18:OH and E2,Z13-18:Al, with E2,Z13-18:OH as a minor component (Francke et al. 2004);
 - it **shares the E2,Z13 backbone** with *S. tipuliformis* (as the aldehyde rather than the acetate), and carries the Δ3 bond as **Z** where *S. tipuliformis* has **E**;
 - so the pair is a controlled comparison: same Δ2/Δ13 skeleton, different terminal group, opposite Δ3 geometry.
@@ -138,7 +159,7 @@ none of them with an NCBI annotation:
 |---|---|---|
 | *Synanthedon tipuliformis* | GCA_947623395.1 | yes (flagship) |
 | *Sesia apiformis* | GCA_914767545.1 | yes (flagship) |
-| *Synanthedon myopaeformis* | GCA_944738685.1 | yes: Z3,Z13-18:OAc, GC-EAD (Judd et al. 2011) |
+| *Synanthedon myopaeformis* | GCA_944738685.1 | yes: Z3,Z13-18:OAc, GC-EAD (Judd et al. 2011), in an introduced British Columbia population |
 | *Synanthedon formicaeformis* | GCA_945859745.1 | to check |
 | *Synanthedon vespiformis* | GCA_918317495.1 | to check |
 | *Synanthedon andrenaeformis* | GCA_936446665.2 | to check |
@@ -149,7 +170,9 @@ none of them with an NCBI annotation:
 | *Sphecodoptera sheni* | GCA_062004741.1 | to check |
 
 "To check" means a primary-literature search has not been done, not that no
-pheromone is known. The matrix is regenerated from the NCBI API and committed
+pheromone is known. Every genome–pheromone match in the matrix is at species
+level: each taxon record states the genome specimen's locality and each
+observation its population, and neither is assumed to stand for the other. The matrix is regenerated from the NCBI API and committed
 as `releases/taxon_layers.tsv`; the table above is a snapshot.
 
 Expansion set for v0.1: *S. myopaeformis* (Z3,Z13 acetate, the Δ3 geometry of
@@ -159,13 +182,14 @@ check" species whose pheromone turns out to be characterised.
 *Synanthedon bicingulata*, *S. tenuis* and *Nokona pernix* stay as
 chemistry-only rows: none has a nuclear assembly (*S. bicingulata* has a
 mitogenome). They are valuable for compound and observation records, because
-together they cover the 3,13-diene space the flagships leave open (as
-summarised in the companion context document §12, primary papers still to be
-read for curation):
+together they cover the 3,13-diene space the flagships leave open. The rows
+below were checked against the primary abstracts (Yang, Kim & Lee 2011;
+Yang, Lee & Park 2012; Naka et al. 2006); curation still needs the full
+papers:
 
 | species | reported components | why it matters here |
 |---|---|---|
-| *S. bicingulata* | E3,Z13-18:OAc + Z3,Z13-18:OAc, ~4 : 6 | both Δ3 geometries in one gland |
+| *S. bicingulata* | E3,Z13-18:OAc + Z3,Z13-18:OAc, ~4 : 6; minor Z13-18:OAc, E2,Z13-18:OAc, E3,Z13-18:OH, Z3,Z13-18:OH | both Δ3 geometries and an E2 compound in one gland |
 | *S. tenuis* | Z3,Z13-18:OH; the acetate **not detected** and inhibitory when added | a tested negative (§13) |
 | *N. pernix* | E3,Z13-18:OH + Z3,Z13-18:OH, ~9 : 1 | both Δ3 geometries as alcohols |
 | *S. scoliaeformis* | E2,Z13-18:OAc, specificity vs *S. tipuliformis* by minor components, antagonism and timing | same major compound, different channel |
@@ -342,7 +366,10 @@ Compound records provide the **chemical identity spine**.
 Two fields are written by a curator: `shorthand` and `mapped_smiles`.
 Everything else in the structure and annotation blocks is **generated** from
 them by the release workflow and committed so diffs stay readable; CI
-regenerates it and fails on any difference. One fact, one hand-entered
+regenerates it and fails on any difference **at the same generator
+versions**. Upgrading RDKit or InChI is a dedicated commit that regenerates
+every record and records the new versions, so a toolkit change never shows
+up as a curation change. One fact, one hand-entered
 copy — the same rule espmap learned for its file reader.
 
 ```yaml
@@ -360,6 +387,7 @@ external_ids:
 
 # --- generated (do not edit) ---
 generated:
+  generator: {rdkit: "<version>", inchi: "<version>"}   # canonical SMILES can change between RDKit releases
   canonical_isomeric_smiles: "..."
   inchi: "..."
   inchikey: "..."
@@ -377,7 +405,7 @@ generated:
 Why multiple identifiers:
 
 - `compound_id`: stable Atlas-internal ID;
-- mapped SMILES: structure, computation and persistent atom identity;
+- mapped SMILES: structure, computation and atom identity within the compound (by biochemical position, §11);
 - canonical isomeric SMILES, InChI/InChIKey: generated, for external matching;
 - ChEBI: only when a correct entry exists.
 
@@ -405,8 +433,10 @@ represents: precursor.z13_18_coa
 truncation: "CoA replaced by S-methyl at the thioester sulfur"
 ```
 
-Chain maps (§11) are identical across the whole series, so C2 of the
-acyl-CoA, the alcohol, the acetate and the model is the same map number.
+Chain maps (§11) are identical across this series, which has one chain
+length, so C2 of the acyl-CoA, the alcohol, the acetate and the model is the
+same map number. Across elongation or chain shortening the numbering moves,
+and reactions state the correspondence (§16).
 That is a statement about identity, not chemistry: C2 is α to a carbonyl in
 the thioester and β to an ether oxygen in the acetate.
 
@@ -428,8 +458,11 @@ map 18 = C18
 
 C1 is the carbon that carries the oxygen function: the carbonyl carbon of
 an acid, acyl-CoA or aldehyde, and the CH₂–O carbon of an alcohol or acetate.
-Reduction and acetylation do not move it, so the chain maps are the same
-along the whole pathway.
+Reduction, oxidation, acetylation, desaturation and isomerisation do not
+move it, so across those steps the chain maps are the same. Elongation and
+chain shortening do (old C1 becomes C3 after one elongation cycle), so a map
+number is a **position**, not a persistent atom identity across the whole
+pathway; reactions carry the correspondence (§16).
 
 **Every heavy atom is mapped.** espmap refuses partial heavy-atom maps
 (`PARTIAL_ATOM_MAP`, a gate BLOCK), and a site table with holes is worse
@@ -510,8 +543,18 @@ The validator:
    and compares them with step 1;
 4. regenerates canonical SMILES, InChI, InChIKey and the lipid annotation and
    fails if the committed copies differ;
-5. runs `espmap --check` (the admissibility gate only, no SCF) on every
-   compound, so a record that espmap would refuse fails here first.
+5. applies espmap's heavy-atom map rule **itself**: maps all-or-none on heavy
+   atoms, unique, and never on a hydrogen (the same three conditions as
+   espmap's `atom_map_findings`), so a record espmap would refuse for its
+   maps fails here first.
+
+Atlas CI does not install espmap. espmap pulls in PySCF and a plotting
+stack, and its gate is still changing before its site contract is frozen
+(`espmap.sites/1`, espmap stage P3). A separate job runs `espmap --check`
+(the admissibility gate only; exit 1 on BLOCK, before any basis or SCF work)
+on every compound, pinned to a recorded espmap commit. It is **non-blocking
+until P3**, and any disagreement between it and step 5 is a bug in one of
+the two, reported rather than silenced.
 
 The check must catch mistakes such as:
 
@@ -537,7 +580,7 @@ and get different shapes.
 |---|---|---|
 | `gland_composition` | compounds present in gland extract or effluvia | per-component detection and abundance, each with its method |
 | `behavioural_response` | male response to a synthetic blend in a field or wind-tunnel test | blend, comparator, locality, effect |
-| `electrophysiology` | antennal response (EAG, GC-EAD) | compound, response |
+| `electrophysiology` | antennal response (EAG, GC-EAD) | compound, method (EAG or GC-EAD), preparation (male antenna), response: `active` / `inactive` / `not_tested`. Amplitudes are not compared across studies in v0.1 |
 
 Two existing records show why: the *S. apiformis* aldehyde : alcohol ratio is
 about 2 : 3 in pooled gland extract and about 1 : 7 by SPME of single calling
@@ -561,22 +604,25 @@ context:
 components:
   - compound: pheromone.e2_z13_18_oac
     detected: true
+    method: gland_extract_gc_ms         # how it was detected; required unless not_tested
     abundance_class: major              # major | minor | trace, as the paper states it
     measurements:
       - value: <from primary paper>
         unit: relative_to_major         # or percent, ng_per_female
-        method: gland_extract_gc_ms
-        qualifier: as_reported
+        qualifier: as_reported          # method inherited; give method: here to override
 
   - compound: pheromone.e3_z13_18_oac
     detected: true
+    method: gland_extract_gc_ms
     abundance_class: minor
     measurements: []
 
   - compound: pheromone.z3_z13_18_oac
     detected: false                     # looked for and not found
-    detection_limit: null               # give it when the paper does
     method: gland_extract_gc_ms
+    detection_limit:                    # give it when the paper does
+      value: null
+      unit: null
 
 evidence:
   reference: ref.<id>
@@ -601,7 +647,9 @@ evidence:
 ```
 
 `detected` has three values. `not_tested` (the default) is unknown;
-`false` is a real negative that says how it was looked for. The *S. tenuis*
+`false` is a real negative that says how it was looked for. Detection is
+itself a measurement, so `method` is required whenever `detected` is true or
+false, whether or not an amount was reported. The *S. tenuis*
 gland acetate, not detected and inhibitory when added, needs both a
 `gland_composition` record with `detected: false` and a
 `behavioural_response` record with `effect: decreased`.
@@ -671,13 +719,16 @@ bioproject: <PRJ…>
 biosample: <SAM…>
 
 annotations:                            # an assembly can have several
-  - annotation_id: annot.ensembl_rapid.<release>
-    source: Ensembl Rapid Release       # none of the NCBI Sesiidae assemblies is annotated
-    release: <release>
-    protein_coding_genes: 11878
+  - annotation_id: annot.ensembl_rr.ensembl.2023_05
+    provider: Ensembl Rapid Release (archived)   # none of the NCBI Sesiidae assemblies is annotated
+    method: ensembl                     # Ensembl's own pipeline; S. apiformis is "braker"
+    geneset: 2023_05                    # the dated geneset directory on the FTP site
+    protein_coding_genes: 11878         # as reported in the genome note
     files:
-      protein_fasta: <url + sha256>
-      gff3: <url + sha256>
+      protein_fasta: ftp.ensembl.org/pub/rapid-release/species/Synanthedon_tipuliformis/GCA_947623395.1/ensembl/geneset/2023_05/Synanthedon_tipuliformis-GCA_947623395.1-2023_05-pep.fa.gz
+      gff3: …/2023_05/Synanthedon_tipuliformis-GCA_947623395.1-2023_05-genes.gff3.gz
+      checksums: …/2023_05/md5sum.txt  # recorded in the Atlas at retrieval
+    current_platform_id: <ID on the new Ensembl platform, once checked>
 ```
 
 Stable assembly accession/version should be the identity, not a filename.
@@ -695,22 +746,40 @@ Useful identifiers:
 
 On 2026-10-23 none of the 21 NCBI Sesiidae assemblies carried an NCBI
 annotation, so there are no RefSeq `XP_` proteins to curate. The gene models
-that exist are Ensembl's. A protein in the Atlas is therefore identified by:
+that exist were published by **Ensembl Rapid Release**. That platform was
+frozen in November 2024 and archived in 2025; new genome data now goes only
+to the new Ensembl platform (beta.ensembl.org until it becomes the main site).
+The archived gene sets remain on the Ensembl FTP site under dated geneset
+directories, with checksums:
+
+| species | assembly | annotation method | geneset |
+|---|---|---|---|
+| *S. tipuliformis* | GCA_947623395.1 | `ensembl` (Ensembl pipeline) | 2023_05 |
+| *S. apiformis* | GCA_914767545.1 | `braker` (BRAKER) | 2021_12 |
+
+The two flagships' gene models therefore come from **different annotation
+methods**, not just different runs.
+
+A protein in the Atlas is identified by:
 
 ```text
-(assembly accession.version, annotation source, annotation release, stable ID)
+(assembly accession.version, annotation provider, method, geneset, stable ID)
 ```
 
-with `refseq_protein` and `uniprot` as optional cross-references when they
-appear. Stable IDs can change between releases; the release is part of the
-identity, and a release change is a migration with its own diff.
+with the retrieved files' checksums recorded, and `refseq_protein`,
+`uniprot` and an ID on the new Ensembl platform as optional cross-references.
+Whether the new platform keeps the archived stable IDs, and how it versions
+an annotation, has not been checked; until it is, the archived geneset is the
+reference and the FTP files are the source of truth. A change of geneset or
+platform is a migration with its own diff.
 
 Two consequences:
 
 - **Gene counts compare annotations as much as genomes.** *S. apiformis* has
   38 % more annotated protein-coding genes than *S. tipuliformis* (16,358 vs
-  11,878) on a 1.85× larger assembly. "Family X has n members here and m
-  there" is stated per annotation release.
+  11,878) on a 1.85× larger assembly, from a different annotation method.
+  "Family X has n members here and m there" is stated per annotation and
+  method.
 - **A missing gene model is not a missing gene.** Before a family is recorded
   as absent or small in a species, the family's reference proteins are
   searched against the assembly itself (tblastn or a spliced aligner such as
@@ -735,7 +804,8 @@ substrates:
 products:
   - compound: ...
 
-status: established
+reaction_status: established
+pathway_status: null          # set when a Sesiidae pathway uses it
 ```
 
 ### Atlas-local hypothetical reaction
@@ -754,7 +824,11 @@ products:
 enzyme_family:
   - membrane_fatty_acyl_desaturase
 
-status: hypothetical
+reaction_status: hypothetical   # no characterised Δ2 acyl-CoA desaturase cited
+pathway_status: hypothetical
+
+atom_correspondence:
+  rule: identity
 
 evidence:
   - type: analogy_to_characterized_lepidopteran_pathway
@@ -776,12 +850,50 @@ products:
 enzyme_family:
   - fatty_acyl_elongase_cycle           # ELO condensation, KAR, HACD; TER would reduce the E2 bond
 
-status: hypothetical
+reaction_status: hypothetical   # the cycle is established; releasing its E2 intermediate is not
+pathway_status: hypothetical
+
+atom_correspondence:            # see below
+  rule: offset
+  offset: 2
 ```
 
 Substrates and products are full compound records (§10a), never fragments.
-Every reaction's mapped SMILES must conserve the chain maps 1…n from
-substrate to product; cofactors are listed but not atom-balanced in v0.2.
+
+**Map numbers are positions, so a reaction states its atom correspondence.**
+A compound's chain maps follow biochemical numbering (§11), which changes
+when the chain length does: one elongation cycle turns substrate C1 into
+product C3 and Δ11 into Δ13, and one β-oxidation cycle does the reverse.
+Each reaction therefore carries an explicit correspondence from substrate
+maps to product maps:
+
+```yaml
+atom_correspondence:          # spa.rxn.0008, one elongation cycle
+  rule: offset                # product map = substrate map + 2 for chain atoms
+  offset: 2
+  new_atoms: [1, 2]           # product C1, C2 come from malonyl-CoA
+  headgroup: replaced         # the substrate's thioester O and CoA leave; the product's come with malonyl-CoA
+```
+
+`rule: identity` (offset 0) covers reduction, oxidation, acetylation,
+desaturation and isomerisation; `rule: offset` covers elongation (+2) and
+chain shortening (−2, with `lost_atoms`); `rule: explicit` takes a full
+substrate → product map list for anything else. The validator applies the
+correspondence and then checks that conserved atoms keep their element and
+that bonds change only where the reaction class allows: one C–C bond order
+for a desaturase or isomerase, the C1 head group for terminal-group enzymes.
+A Δ11 substrate whose elongation product is written with its double bond at
+Δ12 must fail.
+
+Cofactors are listed but not atom-balanced in v0.2.
+
+A reaction has two statuses, because a reaction can be well established
+in general and only hypothesised in Sesiidae:
+
+```yaml
+reaction_status: established       # the chemistry, e.g. a Rhea entry
+pathway_status: hypothetical       # its role in a Sesiidae pathway
+```
 
 Absence from Rhea must not be treated as evidence against a specialized Sesiidae reaction.
 
@@ -875,17 +987,29 @@ Z13-18:CoA (or a longer chain)
 E2,Z13-18:CoA
 
 Route C3  isomerisation
+E3,Z13-18:CoA  or  Z3,Z13-18:CoA
+  ⇄ Δ3,Δ2-enoyl-CoA isomerase (EC 5.3.3.8; Rhea 23716, 23717)
 E2,Z13-18:CoA
-  ⇄ Δ3,Δ2-enoyl-CoA isomerase
-E3,Z13-18:CoA
 ```
 
 These are hypotheses from general fatty-acid biochemistry, not findings:
-no Sesiidae study testing them was found (review 1, F5). They make
-distinct predictions. C1 ties the E2 bond to the elongation step of Route B;
-C3 predicts that E3 tracks E2 and stays a minor partner of it, as in
-*S. tipuliformis* (100 : 0.7); none of them explains Z3 without a further
-step, which *S. apiformis*, *S. bicingulata* and *N. pernix* require.
+no Sesiidae study testing them was found (review 1, F5). What is known about
+C3 is limited:
+
+- the isomerase's catalogued reactions run from **either** Δ3 geometry, 3Z
+  (about ten times faster) and 3E, **to** 2E;
+- so in its written direction it **consumes** Δ3 bonds. In a gland it is as
+  plausibly a sink for E3/Z3 products as a source of them;
+- no equilibrium constant was found, so no prediction about E2 : E3 or E2 :
+  Z3 ratios follows from C3 until one is cited.
+
+C1 ties the E2 bond to the elongation step of Route B. How Z3 and E3 bonds
+arise in *S. apiformis*, *S. bicingulata*, *N. pernix* and *S. tipuliformis*
+is open: a Δ3 desaturation and the reverse of C3 are both candidates.
+
+In the reaction records, the isomerase reaction has
+`reaction_status: established` (Rhea) and `pathway_status: hypothetical`
+(§16).
 
 Every pathway hypothesis lists, per step, the experiment that would
 distinguish it from its competitors (§37).
@@ -957,7 +1081,7 @@ candidate_id: candidate.tipuliformis.DES07.delta11
 
 protein:
   genome: genome.synanthedon_tipuliformis.GCA_947623395.1
-  annotation: annot.ensembl_rapid.<release>
+  annotation: annot.ensembl_rr.ensembl.2023_05
   stable_id: <Ensembl gene / transcript ID>
   model_source: annotation            # or genome_search (§15a)
   refseq_protein: null
@@ -1005,7 +1129,7 @@ Recommended first-pass stack:
 | Reaction vocabulary | Rhea |
 | Enzyme specificity/literature | BRENDA + UniProt |
 | Genome retrieval | NCBI Datasets |
-| Gene models | Ensembl Rapid Release (versioned, §15a) |
+| Gene models | archived Ensembl Rapid Release genesets (FTP, with checksums); new Ensembl platform as a cross-reference (§15a) |
 | Genome-level family search | tblastn / miniprot against the assembly |
 | Insect cross-reference | InsectBase |
 | Similarity search | DIAMOND / BLASTP |
@@ -1213,24 +1337,42 @@ reaction chemistry
 experimental evidence
 ```
 
-**Whether the question can be answered at all is measured first.** On the
-closest molecule espmap has computed, the Z3,Z13-18:OAc fixture over 10 MMFF
-conformers (`bench/site_partition.jsonl`), per-carbon site means separate
-sp² from sp³ carbons (C3/C4 and C13/C14 at −0.9 to 2.4 kcal/mol, chain CH₂
-at 3–9), but the conformer range at a single site reaches 6.5 kcal/mol (C5:
-2.2 to 8.7), more than most differences between neighbouring CH₂ sites.
-espmap's per-site budget says the same: the median C18 site moves 5.1
-kcal/mol across conformers and up to 3.95 with the partition rule.
+**A site contrast is a paired difference.** Neighbouring sites move
+together as the chain changes shape, so the uncertainty of "C2 versus C3" is
+the spread of the difference **within each conformer**, not the spread of
+either site on its own. Each contrast is reported as: mean paired
+difference, paired SD, and sign consistency (in how many conformers the
+difference has the same sign), under **both** partition rules.
 
-So a C2-vs-C3-vs-C4 comparison is reported as a difference **with its
-conformer and partition-rule spreads**, and the Atlas says "not resolved by
-substrate electrostatics" when the difference is inside them. That outcome
-is a result, not a failure: it is the point at which the question passes to
-enzyme geometry (Arrowfield's "what does the protein contribute?").
+What this gives on the closest molecule espmap has computed: the
+Z3,Z13-18:OAc fixture, B3LYP/def2-SVP + RI in the gas phase, 10 MMFF
+conformers including two folded ones (`bench/site_partition.jsonl`),
+reaction-site means in kcal/mol, biochemical numbering:
+
+| contrast | kind | mean diff (nearest-nucleus / radius-scaled) | same sign |
+|---|---|---|---|
+| C2–C3, C4–C5, C12–C13, C14–C15 | sp³ vs sp² | 4.5 to 7.9 in magnitude | 10/10 under both rules |
+| C5–C6, C15–C16 | allylic CH₂ vs next CH₂ | 1.5 to 1.8 | 8–10/10 |
+| C1–C2, C10–C11, C16–C17 | plain CH₂ neighbours | ≤ 1.1 | 6/10 |
+
+With 10 conformers, a two-sided sign test needs 9/10 for p < 0.05. The
+conformers are MMFF-selected, not a random sample, so this is descriptive.
+Plain CH₂ neighbours are not resolved; sp²/sp³ contrasts are, in every
+conformer under both rules.
+
+The Atlas says "not resolved by substrate electrostatics" when a contrast is
+not sign-consistent under the stated test. That outcome is a result, not a
+failure: it is the point at which the question passes to enzyme geometry
+(Arrowfield's "what does the protein contribute?").
 
 The calibration comes before any site claim: one run of the thioester model
-over a conformer set that includes folded shapes, with the C2–C3 and C3–C4
-mean differences and their spreads written into the Atlas docs.
+over a conformer set that includes folded shapes, reporting the C2–C3, C3–C4
+and C2–C4 paired contrasts as above. On the thioester, C2 is α to a carbonyl,
+so the Δ2-vs-Δ3 contrast may resolve where acetate CH₂ neighbours do not; the
+run decides, not this paragraph. Quote espmap's per-site budget only with its
+protocol (`CLAUDE.md`): on the C18 acetate, conformers move the median site by
+5.1 kcal/mol with the folded conformers and 2.69 without them, and the
+partition rule moves a site by up to 3.95.
 
 ---
 
@@ -1526,11 +1668,15 @@ Do **not** begin with RDF/SPARQL unless a concrete interoperability need appears
 10. Competing pathway hypotheses may coexist.
 11. Derived analyses never overwrite curated observations.
 12. Not tested is unknown. Tested and not detected is a negative, recorded with its method and detection limit. A missing gene model is neither.
+    Every detection, positive or negative, names its method.
 13. Every release is reproducible from curated source files.
 14. External identifiers are never guessed.
 15. Arrowfield-specific presentation data stays outside biological source records.
 16. espmap runs on the molecule the question is about: a substrate model for biosynthetic questions, never the pheromone as a proxy.
 17. Synergist and antagonist are conclusions from behavioural records, per population, never properties of a compound.
+18. A map number is a biochemical position within one compound. Every reaction states its atom correspondence; chain-length changes are offsets, never silent renumbering.
+19. A site contrast is a per-conformer paired difference, reported under both partition rules with its sign consistency.
+20. Atlas CI never requires espmap to be installed; the espmap gate runs as a pinned, separate job.
 
 ---
 
@@ -1551,7 +1697,8 @@ A practical first sprint:
    - genome + annotation
    - reference
 5. write the RDKit validator (§12) and wire CI: schema validation,
-   shorthand ↔ structure check, regeneration diff, espmap --check
+   shorthand ↔ structure check, regeneration diff, the Atlas's own
+   atom-map rule; plus a pinned, non-blocking `espmap --check` job (§12)
 6. prove the gate fails: synthetic fixtures with a flipped E/Z, a partial
    map and a wrong chain length must each fail CI
 7. only now curate: S. tipuliformis, S. apiformis, S. myopaeformis
@@ -1595,7 +1742,7 @@ Question 8 is a table, one row per competing step:
 |---|---|---|
 | origin of Z13 | A (Δ13 on 18:0) vs B (Δ11 on 16:0, elongate) | topical deuterium-labelled 16:0 vs 18:0 and Z11-16 acid; which label reaches the pheromone |
 | origin of E2 | desaturation vs C1 vs C2 | labelled Z13-18 vs Z11-16 precursor: under C1 the Z11-16 label reaches E2 and the Z13-18 label does not; under desaturation or C2 the Z13-18 label reaches E2 |
-| E3 from E2 | C3 vs separate Δ3 enzyme | labelled E2 precursor appearing as E3; E2 : E3 ratio constant across individuals |
+| Δ3 bonds and E2 | C3 (either direction) vs separate Δ3 desaturation | labelled E2 precursor appearing as E3 or Z3, and labelled Δ3 precursor appearing as E2. A constant E2 : E3 ratio across individuals is consistent with C3 but does not discriminate: one bifunctional enzyme would give it too |
 | terminal group | alcohol intermediate or not | label in E2,Z13-18:OH before E2,Z13-18:OAc |
 
 `isotope_labelling` is an evidence type alongside sequence and phylogenetic
