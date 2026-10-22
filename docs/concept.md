@@ -160,24 +160,26 @@ none of them with an NCBI annotation:
 | *Synanthedon tipuliformis* | GCA_947623395.1 | yes (flagship) |
 | *Sesia apiformis* | GCA_914767545.1 | yes (flagship) |
 | *Synanthedon myopaeformis* | GCA_944738685.1 | yes: Z3,Z13-18:OAc, GC-EAD (Judd et al. 2011), in an introduced British Columbia population |
-| *Synanthedon formicaeformis* | GCA_945859745.1 | to check |
-| *Synanthedon vespiformis* | GCA_918317495.1 | to check |
-| *Synanthedon andrenaeformis* | GCA_936446665.2 | to check |
-| *Synanthedon spheciformis* | GCA_964332195.1 | to check |
-| *Sesia bembeciformis* | GCA_943735995.1 | to check |
-| *Bembecia ichneumoniformis* | GCA_910589475.2 | to check |
-| *Pyropteron chrysidiforme* | GCA_982500485.1 / GCA_982500805.1 (haplotypes) | to check |
-| *Sphecodoptera sheni* | GCA_062004741.1 | to check |
+| *Synanthedon vespiformis* | GCA_918317495.1 | yes: E3,Z13-18:OAc + Z3,Z13-18:OAc, 4:1, from females (Levi-Zada et al. 2011) |
+| *Bembecia ichneumoniformis* | GCA_910589475.2 | field attractant only: an alcohol component is essential (Buda et al. 1993) |
+| *Sesia bembeciformis* | GCA_943735995.1 | males reported at a commercial lure; composition not found |
+| *Synanthedon formicaeformis* | GCA_945859745.1 | not found |
+| *Synanthedon andrenaeformis* | GCA_936446665.2 | not found |
+| *Synanthedon spheciformis* | GCA_964332195.1 | not found |
+| *Pyropteron chrysidiforme* | GCA_982500805.1 / GCA_982500485.1 (haplotypes) | not found |
+| *Sphecodoptera sheni* | GCA_062004741.1 | not found |
 
-"To check" means a primary-literature search has not been done, not that no
-pheromone is known. Every genome–pheromone match in the matrix is at species
-level: each taxon record states the genome specimen's locality and each
-observation its population, and neither is assumed to stand for the other. The matrix is regenerated from the NCBI API and committed
-as `releases/taxon_layers.tsv`; the table above is a snapshot.
+"Not found" means no identification turned up in the search of 2026-10-23,
+not that none exists: the Pherobase database could not be read for that
+search. Every genome–pheromone match in the matrix is at species level: each
+taxon record states the genome specimen's locality and each observation its
+population, and neither is assumed to stand for the other. The full matrix,
+with annotation method, gene set, checksums and references, is
+`releases/taxon_layers.tsv`; the table above is a summary.
 
 Expansion set for v0.1: *S. myopaeformis* (Z3,Z13 acetate, the Δ3 geometry of
-*S. apiformis* on the terminal group of *S. tipuliformis*), plus any "to
-check" species whose pheromone turns out to be characterised.
+*S. apiformis* on the terminal group of *S. tipuliformis*) and
+*S. vespiformis* (both Δ3 geometries as acetates, E3 dominant).
 
 *Synanthedon bicingulata*, *S. tenuis* and *Nokona pernix* stay as
 chemistry-only rows: none has a nuclear assembly (*S. bicingulata* has a
@@ -582,8 +584,9 @@ and get different shapes.
 | `behavioural_response` | male response to a synthetic blend in a field or wind-tunnel test | blend, comparator, locality, effect |
 | `electrophysiology` | antennal response (EAG, GC-EAD) | compound, method (EAG or GC-EAD), preparation (male antenna), response: `active` / `inactive` / `not_tested`. Amplitudes are not compared across studies in v0.1 |
 
-Two existing records show why: the *S. apiformis* aldehyde : alcohol ratio is
-about 2 : 3 in pooled gland extract and about 1 : 7 by SPME of single calling
+Two existing records show why: the *S. apiformis* alcohol : aldehyde ratio
+(Z3,Z13-18:OH : E2,Z13-18:Al) is about 2 : 3 in pooled gland extract and
+about 1 : 7 by SPME of single calling
 females, a 4.7-fold difference from the method alone; and *S. tipuliformis*'s
 E3 component is a synergist in Hungary and New Zealand and reduces catches in
 Tasmania. A per-observation `methods` list and a `role: minor` field can hold
@@ -1569,7 +1572,7 @@ Initial taxa, from the matrix (§4.3):
 genome + pheromone   Synanthedon tipuliformis
                      Sesia apiformis
                      Synanthedon myopaeformis
-                     + any "to check" species that qualifies
+                     Synanthedon vespiformis
 
 pheromone only       Synanthedon bicingulata
                      Synanthedon tenuis
