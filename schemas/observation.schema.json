@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Azuromalachite/sesiidae-pheromone-atlas/schemas/observation.schema.json",
+  "title": "Observation",
+  "description": "One measurement event, typed by what was measured (concept §13). Gland contents, male behaviour and antennal responses are different observations, never one record with a 'role' field.",
+  "type": "object",
+  "required": ["observation_id", "observation_type", "taxon", "context", "evidence"],
+  "properties": {
+    "observation_id": {"type": "string", "pattern": "^obs\\.[a-z0-9_.]+$"},
+    "observation_type": {"enum": ["gland_composition", "behavioural_response", "electrophysiology"]},
+    "taxon": {"type": "string"},
+    "context": {"$ref": "#/$defs/context"},
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reference"],
+      "properties": {
+        "reference": {"type": "string"},
+        "notes": {"type": "string"}
+      }
+    }
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "observation_id": true, "observation_type": {"const": "gland_composition"},
+        "taxon": true, "context": true, "evidence": true,
+        "components": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/component"}}
+      },
+      "required": ["components"],
+      "additionalProperties": false
+    },
+    {
+      "properties": {
+        "observation_id": true, "observation_type": {"const": "behavioural_response"},
+        "taxon": true, "context": true, "evidence": true,
+        "assay": {"enum": ["field_trapping", "wind_tunnel", "other"]},
+        "blend": {"$ref": "#/$defs/blend"},
+        "comparator": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["description"],
+          "properties": {
+            "description": {"type": "string"},
+            "blend": {"$ref": "#/$defs/blend"}
+          }
+        },
+        "effect": {"enum": ["increased", "decreased", "no_effect"]}
+      },
+      "required": ["assay", "blend", "comparator", "effect"],
+      "additionalProperties": false
+    },
+    {
+      "properties": {
+        "observation_id": true, "observation_type": {"const": "electrophysiology"},
+        "taxon": true, "context": true, "evidence": true,
+        "responses": {
+          "type": "array", "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["compound", "method", "preparation", "response"],
+            "properties": {
+              "compound": {"type": "string"},
+              "method": {"enum": ["EAG", "GC-EAD"]},
+              "preparation": {"type": "string"},
+              "response": {"enum": ["active", "inactive", "not_tested"]}
+            }
+          }
+        }
+      },
+      "required": ["responses"],
+      "additionalProperties": false
+    }
+  ],
+  "$defs": {
+    "context": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sex": {"enum": ["female", "male", null]},
+        "tissue": {"type": ["string", "null"]},
+        "life_stage": {"type": ["string", "null"]},
+        "population": {"type": ["string", "null"]},
+        "locality": {"type": ["string", "null"]},
+        "rearing": {"enum": ["wild", "laboratory", null]}
+      }
+    },
+    "quantity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "unit"],
+      "properties": {
+        "value": {"type": ["number", "null"]},
+        "unit": {"type": ["string", "null"]}
+      }
+    },
+    "component": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["compound", "detected"],
+      "properties": {
+        "compound": {"type": "string"},
+        "detected": {"enum": [true, false, "not_tested"], "description": "not_tested is unknown; false is a negative and needs a method"},
+        "method": {"type": "string", "description": "how presence or absence was established"},
+        "abundance_class": {"enum": ["major", "minor", "trace"]},
+        "measurements": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["value", "unit"],
+            "properties": {
+              "value": {"type": "number"},
+              "unit": {"enum": ["relative_to_major", "percent", "ng_per_female", "ratio_part"]},
+              "method": {"type": "string", "description": "overrides the component's method"},
+              "qualifier": {"enum": ["as_reported", "approximate", "mean", "range_midpoint"]}
+            }
+          }
+        },
+        "detection_limit": {"$ref": "#/$defs/quantity"}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"detected": {"enum": [true, false]}}},
+          "then": {"required": ["method"]}
+        }
+      ]
+    },
+    "blend": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["compound"],
+        "properties": {
+          "compound": {"type": "string"},
+          "amount": {"$ref": "#/$defs/quantity"}
+        }
+      }
+    }
+  }
+}

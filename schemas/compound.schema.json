@@ -1,0 +1,77 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Azuromalachite/sesiidae-pheromone-atlas/schemas/compound.schema.json",
+  "title": "Compound",
+  "description": "A compound with an explicit, fully mapped structure. Only names.shorthand and mapped_smiles are curated; the generated block is written by atlas_validate.py --write-generated and checked in CI (concept §10, §12).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["compound_id", "compound_class", "names", "mapped_smiles", "external_ids", "generated"],
+  "properties": {
+    "compound_id": {"type": "string", "pattern": "^(pheromone|precursor|model)\\.[a-z0-9_]+$"},
+    "compound_class": {"enum": ["pheromone_component", "precursor", "computational_model"]},
+    "names": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["shorthand"],
+      "properties": {
+        "shorthand": {"type": "string", "description": "lipid shorthand, e.g. E2,Z13-18:OAc"},
+        "systematic": {"type": ["string", "null"], "description": "optional; not checked against the structure in v0.1"}
+      }
+    },
+    "mapped_smiles": {"type": "string", "description": "every heavy atom mapped: chain carbons 1..n from C1, head-group atoms from 101 (data/headgroups.yaml)"},
+    "represents": {"type": "string", "description": "computational_model only: the compound this model stands for"},
+    "truncation": {"type": "string", "description": "computational_model only: what was cut"},
+    "external_ids": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "chebi": {"type": ["string", "null"], "pattern": "^CHEBI:[0-9]+$"}
+      }
+    },
+    "generated": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["generator", "canonical_isomeric_smiles", "inchi", "inchikey", "lipid_annotation"],
+      "properties": {
+        "generator": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["rdkit", "inchi"],
+          "properties": {"rdkit": {"type": "string"}, "inchi": {"type": "string"}}
+        },
+        "canonical_isomeric_smiles": {"type": "string"},
+        "inchi": {"type": "string", "pattern": "^InChI="},
+        "inchikey": {"type": "string", "pattern": "^[A-Z]{14}-[A-Z]{10}-[A-Z]$"},
+        "lipid_annotation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["chain_length", "unsaturation_count", "double_bonds", "terminal_group"],
+          "properties": {
+            "chain_length": {"type": "integer", "minimum": 2},
+            "unsaturation_count": {"type": "integer", "minimum": 0},
+            "double_bonds": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["position", "geometry"],
+                "properties": {
+                  "position": {"type": "integer", "minimum": 1},
+                  "geometry": {"enum": ["E", "Z"]}
+                }
+              }
+            },
+            "terminal_group": {"type": "string"}
+          }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"compound_class": {"const": "computational_model"}}},
+      "then": {"required": ["represents", "truncation"]},
+      "else": {"not": {"anyOf": [{"required": ["represents"]}, {"required": ["truncation"]}]}}
+    }
+  ]
+}

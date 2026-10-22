@@ -1,0 +1,24 @@
+compound_id: pheromone.e2_z13_18_oac
+compound_class: pheromone_component
+names:
+  shorthand: E2,Z13-18:OAc
+  systematic: null
+mapped_smiles: '[CH3:104][C:102](=[O:103])[O:101][CH2:1]/[CH:2]=[CH:3]/[CH2:4][CH2:4][CH2:6][CH2:7][CH2:8][CH2:9][CH2:10][CH2:11][CH2:12]/[CH:13]=[CH:14]\[CH2:15][CH2:16][CH2:17][CH3:18]'
+external_ids:
+  chebi: null
+generated:
+  generator:
+    rdkit: 2026.09.1
+    inchi: 1.07.3
+  canonical_isomeric_smiles: CCCC/C=C\CCCCCCCCC/C=C/COC(C)=O
+  inchi: InChI=1S/C20H36O2/c1-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-19-22-20(2)21/h6-7,17-18H,3-5,8-16,19H2,1-2H3/b7-6-,18-17+
+  inchikey: NWRSOYAGXTXEMK-NHRIVICHSA-N
+  lipid_annotation:
+    chain_length: 18
+    unsaturation_count: 2
+    double_bonds:
+    - position: 2
+      geometry: E
+    - position: 13
+      geometry: Z
+    terminal_group: acetate

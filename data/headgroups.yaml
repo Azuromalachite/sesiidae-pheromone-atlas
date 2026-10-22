@@ -1,0 +1,33 @@
+# Head-group atom maps (concept §11). Chain carbons are maps 1..n from C1,
+# the carbon carrying the oxygen function. Head-group heavy atoms are mapped
+# from 101 by this table, so the same oxygen keeps map 101 from acid to
+# alcohol to acetate. Bonds are [map, map, order]; map 1 is chain C1.
+# A compound's head group must match its entry exactly: the same atoms, the
+# same elements, the same bonds, nothing else attached.
+#
+# CoA is not here yet: it arrives with the v0.2 reaction records.
+
+OH:
+  name: alcohol
+  atoms: {101: O}
+  bonds: [[1, 101, 1]]
+
+Al:
+  name: aldehyde
+  atoms: {101: O}
+  bonds: [[1, 101, 2]]
+
+OAc:
+  name: acetate
+  atoms: {101: O, 102: C, 103: O, 104: C}
+  bonds: [[1, 101, 1], [101, 102, 1], [102, 103, 2], [102, 104, 1]]
+
+COOH:
+  name: carboxylic acid
+  atoms: {101: O, 102: O}
+  bonds: [[1, 101, 2], [1, 102, 1]]
+
+SMe:
+  name: S-methyl thioester (computational model for an acyl-CoA)
+  atoms: {101: O, 102: S, 103: C}
+  bonds: [[1, 101, 2], [1, 102, 1], [102, 103, 1]]

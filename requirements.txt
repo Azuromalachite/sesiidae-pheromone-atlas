@@ -1,0 +1,7 @@
+# rdkit is pinned exactly: the generated block of every compound records the
+# RDKit and InChI versions it was made with, and CI compares at the same
+# versions. Upgrading is one dedicated commit that regenerates every record.
+rdkit==2026.9.1
+jsonschema>=4.19
+pyyaml>=6
+pytest>=8

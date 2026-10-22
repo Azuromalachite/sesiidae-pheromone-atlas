@@ -3,9 +3,17 @@
 *A curated, machine-readable resource linking Sesiidae pheromone chemistry,
 genomes, biosynthetic hypotheses, and candidate enzyme families.*
 
-**Status: concept stage.** This repository holds the design documents and
-the first discovery table (the taxon × layer matrix). There are no schemas,
-curated records or code yet.
+**Status: building v0.1.** This repository holds the design documents, the
+first discovery table (the taxon × layer matrix), the record schemas and the
+validator with its failing fixtures. There are no curated records yet.
+
+```bash
+pip install -r requirements.txt
+pytest -q                          # the validator accepts good fixtures and refuses every bad one
+python atlas_validate.py data      # validate curated records
+```
+
+See [`docs/validation.md`](docs/validation.md) for what is checked.
 
 The Atlas records what is known, what is inferred, and what is hypothesised
 about clearwing-moth (Sesiidae) pheromones, and keeps those three apart. It

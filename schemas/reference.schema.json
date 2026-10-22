@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Azuromalachite/sesiidae-pheromone-atlas/schemas/reference.schema.json",
+  "title": "Reference",
+  "description": "A primary source. 'read' records what the curator actually read, so an observation built from an abstract says so.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["reference_id", "citation", "read"],
+  "properties": {
+    "reference_id": {"type": "string", "pattern": "^ref\\.[a-z0-9_]+$"},
+    "citation": {"type": "string"},
+    "doi": {"type": ["string", "null"], "pattern": "^10\\.[0-9]{4,}/\\S+$"},
+    "pmid": {"type": ["integer", "null"]},
+    "read": {"enum": ["abstract", "full_text"]},
+    "notes": {"type": "string"}
+  }
+}

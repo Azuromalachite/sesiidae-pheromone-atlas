@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Azuromalachite/sesiidae-pheromone-atlas/schemas/genome.schema.json",
+  "title": "Genome assembly",
+  "description": "Identity is the assembly accession.version; gene models are a separate, versioned annotation layer (concept §15, §15a).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["genome_id", "taxon", "assembly", "annotations"],
+  "properties": {
+    "genome_id": {"type": "string", "pattern": "^genome\\.[a-z_]+\\.GC[AF]_[0-9]{9}\\.[0-9]+$"},
+    "taxon": {"type": "string"},
+    "assembly": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["accession", "version", "name", "level", "source"],
+      "properties": {
+        "accession": {"type": "string", "pattern": "^GC[AF]_[0-9]{9}$"},
+        "version": {"type": "integer", "minimum": 1},
+        "name": {"type": "string"},
+        "level": {"enum": ["contig", "scaffold", "chromosome", "complete"]},
+        "source": {"enum": ["NCBI", "ENA"]}
+      }
+    },
+    "specimen": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sex": {"enum": ["female", "male", null]},
+        "locality": {"type": ["string", "null"]}
+      }
+    },
+    "bioproject": {"type": ["string", "null"], "pattern": "^PRJ[A-Z]{2}[0-9]+$"},
+    "biosample": {"type": ["string", "null"], "pattern": "^SAM[A-Z]{1,2}[0-9]+$"},
+    "annotations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["annotation_id", "provider", "method", "geneset", "files"],
+        "properties": {
+          "annotation_id": {"type": "string", "pattern": "^annot\\.[a-z0-9_.]+$"},
+          "provider": {"type": "string"},
+          "method": {"type": "string"},
+          "geneset": {"type": "string"},
+          "protein_coding_genes": {"type": ["integer", "null"]},
+          "files": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["protein_fasta"],
+            "properties": {
+              "protein_fasta": {"$ref": "#/$defs/file"},
+              "gff3": {"$ref": "#/$defs/file"}
+            }
+          },
+          "current_platform_id": {"type": ["string", "null"]}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "file": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "md5"],
+      "properties": {
+        "url": {"type": "string", "pattern": "^https://"},
+        "md5": {"type": "string", "pattern": "^[0-9a-f]{32}$"}
+      }
+    }
+  }
+}

@@ -1,0 +1,27 @@
+# Test fixture: shapes of the three awkward cases, with made-up numbers.
+observation_id: obs.fixture.gland.pooled
+observation_type: gland_composition
+taxon: fixture.species_a
+context: {sex: female, tissue: pheromone_gland, life_stage: adult, population: null, locality: null, rearing: wild}
+components:
+  - compound: pheromone.z3_z13_18_oh
+    detected: true
+    method: pooled_gland_extract_gc_ms
+    abundance_class: major
+    detection_limit: {value: 1, unit: ng_per_female}
+    measurements:
+      - {value: 2, unit: ratio_part, qualifier: approximate}
+  - compound: pheromone.e2_z13_18_al
+    detected: true
+    method: pooled_gland_extract_gc_ms
+    abundance_class: major
+    measurements:
+      - {value: 3, unit: ratio_part, qualifier: approximate}
+      - {value: 7, unit: ratio_part, method: spme_single_female_gc_ms, qualifier: approximate}
+  - compound: pheromone.z3_z13_18_oac
+    detected: false
+    method: pooled_gland_extract_gc_ms
+    detection_limit: {value: null, unit: null}
+  - compound: pheromone.e3_z13_18_oac
+    detected: not_tested
+evidence: {reference: ref.fixture_2026}

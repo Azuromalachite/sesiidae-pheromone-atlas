@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Azuromalachite/sesiidae-pheromone-atlas/schemas/taxon.schema.json",
+  "title": "Taxon",
+  "description": "A species. External identifiers are null until looked up; they are never guessed (concept §9).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["taxon_id", "scientific_name", "taxonomy", "identifiers"],
+  "properties": {
+    "taxon_id": {"type": "string", "pattern": "^[a-z]+\\.[a-z_]+$"},
+    "scientific_name": {"type": "string", "pattern": "^[A-Z][a-z]+ [a-z]+$"},
+    "taxonomy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["family", "genus", "species"],
+      "properties": {
+        "family": {"type": "string"},
+        "genus": {"type": "string"},
+        "species": {"type": "string"}
+      }
+    },
+    "identifiers": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ncbi_taxid"],
+      "properties": {
+        "ncbi_taxid": {"type": ["integer", "null"]},
+        "gbif": {"type": ["integer", "null"]}
+      }
+    },
+    "notes": {"type": "string"}
+  }
+}
