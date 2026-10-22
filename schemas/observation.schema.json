@@ -48,7 +48,8 @@
             "blend": {"$ref": "#/$defs/blend"}
           }
         },
-        "effect": {"enum": ["increased", "decreased", "no_effect"]},
+        "effect": {"enum": ["increased", "decreased", "no_effect", "caught_without_control"],
+                   "description": "relative to the comparator; caught_without_control means males were caught and no comparator was run"},
         "significance": {"enum": ["significant", "not_significant", "not_reported"]},
         "dose": {"$ref": "#/$defs/quantity", "description": "total load per lure, when given"},
         "response": {
@@ -58,14 +59,21 @@
           "description": "the size of the effect, when the source gives one",
           "properties": {
             "measure": {"enum": ["trap_catch", "close_range_approach", "landing", "other"]},
-            "unit": {"enum": ["fold_change_vs_comparator", "percent_of_males", "count"]},
+            "unit": {"enum": ["fold_change_vs_comparator", "percent_of_males", "count", "mean_catch_per_trap", "total_catch"]},
             "treatment_value": {"type": ["number", "null"]},
             "comparator_value": {"type": ["number", "null"]},
             "qualifier": {"enum": ["as_reported", "approximate", "more_than", "less_than"]}
           }
         }
       },
-      "required": ["assay", "blend", "comparator", "effect"],
+      "required": ["assay", "blend", "effect"],
+      "allOf": [
+        {
+          "if": {"properties": {"effect": {"const": "caught_without_control"}}, "required": ["effect"]},
+          "then": {"not": {"required": ["comparator"]}},
+          "else": {"required": ["comparator"]}
+        }
+      ],
       "additionalProperties": false
     },
     {
@@ -80,9 +88,10 @@
             "required": ["compound", "method", "preparation", "response"],
             "properties": {
               "compound": {"type": "string"},
-              "method": {"enum": ["EAG", "GC-EAD"]},
+              "method": {"enum": ["EAG", "GC-EAD", "SSR"], "description": "SSR = single-sensillum recording"},
               "preparation": {"type": "string"},
-              "response": {"enum": ["active", "inactive", "not_tested"]}
+              "response": {"enum": ["active", "inactive", "not_tested"]},
+              "notes": {"type": "string"}
             }
           }
         }
@@ -102,7 +111,7 @@
         "population": {"type": ["string", "null"]},
         "locality": {"type": ["string", "null"]},
         "habitat": {"type": ["string", "null"], "description": "as reported, e.g. 'black currant field'"},
-        "rearing": {"enum": ["wild", "laboratory", null]},
+        "rearing": {"enum": ["wild", "field_collected_reared", "laboratory", null], "description": "field_collected_reared: collected as larvae or pupae, adults emerged in the laboratory"},
         "mating_status": {"enum": ["virgin", "mated", null]},
         "behavioural_state": {"enum": ["calling", null]},
         "sampling_unit": {"enum": ["pooled", "individual", null], "description": "pooled extract or single insects; ratios can differ between the two"},
@@ -137,7 +146,16 @@
               "value": {"type": "number"},
               "unit": {"enum": ["relative_to_major", "percent", "ng_per_female", "ratio_part"]},
               "method": {"type": "string", "description": "overrides the component's method"},
-              "qualifier": {"enum": ["as_reported", "approximate", "mean", "range_midpoint"]}
+              "qualifier": {"enum": ["as_reported", "approximate", "mean", "range_midpoint"]},
+              "spread": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["value", "kind"],
+                "properties": {
+                  "value": {"type": "number"},
+                  "kind": {"enum": ["sd", "se"]}
+                }
+              }
             }
           }
         },

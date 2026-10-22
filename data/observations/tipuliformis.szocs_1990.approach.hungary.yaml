@@ -1,20 +1,19 @@
 observation_id: obs.tipuliformis.szocs_1990.approach.hungary
 observation_type: behavioural_response
 taxon: sesiidae.synanthedon_tipuliformis
-context: {sex: male, population: null, locality: Hungary}
+context: {sex: male, population: null, locality: "Kemence and Bernecebaráti, Pest County, Hungary"}
 assay: other
 blend:
-  - {compound: cmpd.e2_z13_18_oac, amount: {value: 100, unit: ratio_part}}
-  - {compound: cmpd.e3_z13_18_oac, amount: {value: 3, unit: ratio_part}}
+  - {compound: cmpd.e2_z13_18_oac, amount: {value: 10, unit: microgram}}
+  - {compound: cmpd.e3_z13_18_oac, amount: {value: 0.3, unit: microgram}}
 comparator:
-  description: E2,Z13-18:OAc alone
-  blend: [{compound: cmpd.e2_z13_18_oac}]
+  description: E2,Z13-18:OAc alone, 10 micrograms
+  blend: [{compound: cmpd.e2_z13_18_oac, amount: {value: 10, unit: microgram}}]
 effect: increased
-significance: not_reported
-response: {measure: close_range_approach, unit: percent_of_males, treatment_value: 65, comparator_value: 20, qualifier: as_reported}
+significance: significant
+response: {measure: close_range_approach, unit: percent_of_males, treatment_value: 65.6, comparator_value: 20.6, qualifier: as_reported}
 evidence:
   reference: ref.szocs_1990
-  source_location: abstract (AGRIS record)
-  author_statement: "evoked close-range approaches to the source from only 20% of males"
-  unresolved: [number of males observed, observation protocol]
-  notes: "Field behaviour observation, not trap catch. Landing was reported as significant only for a five-component blend; not curated until the full text confirms that blend."
+  source_location: "Results, Approach; Fig. 4"
+  author_statement: "E,Z2,13-18:OAc alone evoked approach from only 20.6% of males"
+  notes: "July 3-20, 1987; filter-paper baits observed in the field; 29 and 32 males observed for the two treatments; chi-square, P = 5%. Approach = flying to within ca. 2 cm, as a percentage of males appearing ca. 40 cm downwind."

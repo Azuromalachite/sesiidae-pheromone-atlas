@@ -1,0 +1,13 @@
+observation_id: obs.tipuliformis.suckling_2005.gland
+observation_type: gland_composition
+taxon: sesiidae.synanthedon_tipuliformis
+context: {sex: female, tissue: pheromone_gland, life_stage: adult, behavioural_state: calling, sampling_unit: pooled, n_individuals: 5, population: null, locality: "Nelson, New Zealand"}
+components:
+  - {compound: cmpd.e2_z13_18_oac, detected: true, method: gland_extract_gc_ead_two_columns, abundance_class: major, measurements: [{value: 97, unit: ratio_part, qualifier: as_reported}]}
+  - {compound: cmpd.e3_z13_18_oac, detected: true, method: gland_extract_gc_ead_two_columns, abundance_class: minor, measurements: [{value: 3, unit: ratio_part, qualifier: as_reported}]}
+evidence:
+  reference: ref.suckling_2005
+  source_location: "Experiment 4; Fig. 3 caption"
+  author_statement: "a pheromone gland extract (97:3 ratio, mean of 5 antennae)"
+  unresolved: [how the 97:3 ratio was quantified from the gland extract, number of extracts]
+  notes: "Glands excised from calling 1-2-day-old females in batches of five. Canterbury females were also analysed (not shown). No additional components were found."

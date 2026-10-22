@@ -163,8 +163,8 @@ none of them with an NCBI annotation:
 | *Synanthedon vespiformis* | GCA_918317495.1 | yes: E3,Z13-18:OAc + Z3,Z13-18:OAc, 4:1, from females (Levi-Zada et al. 2011) |
 | *Bembecia ichneumoniformis* | GCA_910589475.2 | field attractant only: an alcohol component is essential (Buda et al. 1993) |
 | *Sesia bembeciformis* | GCA_943735995.1 | males reported at a commercial lure; composition not found |
-| *Synanthedon formicaeformis* | GCA_945859745.1 | not found |
-| *Synanthedon andrenaeformis* | GCA_936446665.2 | not found |
+| *Synanthedon formicaeformis* | GCA_945859745.1 | field attractant only: E2:E3,Z13-18:OAc 100:100 (Priesner et al. 1986) |
+| *Synanthedon andrenaeformis* | GCA_936446665.2 | field attractant only: E2:E3,Z13-18:OAc 10:100 (Priesner et al. 1986) |
 | *Synanthedon spheciformis* | GCA_964332195.1 | not found |
 | *Pyropteron chrysidiforme* | GCA_982500805.1 / GCA_982500485.1 (haplotypes) | not found |
 | *Sphecodoptera sheni* | GCA_062004741.1 | not found |

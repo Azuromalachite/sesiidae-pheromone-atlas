@@ -1,0 +1,19 @@
+observation_id: obs.tenuis.yang_2012.trap_e3oac_added
+observation_type: behavioural_response
+taxon: sesiidae.synanthedon_tenuis
+context: {sex: male, habitat: persimmon orchard, population: "Korean population", locality: "Gimhae, Republic of Korea"}
+assay: field_trapping
+blend:
+  - {compound: cmpd.z3_z13_18_oh, amount: {value: 500, unit: microgram}}
+  - {compound: cmpd.e3_z13_18_oac, amount: {value: 50, unit: microgram}}
+comparator:
+  description: Z3,Z13-18:OH alone, 500 micrograms
+  blend: [{compound: cmpd.z3_z13_18_oh, amount: {value: 500, unit: microgram}}]
+effect: no_effect
+significance: not_significant
+response: {measure: trap_catch, unit: mean_catch_per_trap, treatment_value: 4.7, comparator_value: 3.3, qualifier: as_reported}
+evidence:
+  reference: ref.yang_2012
+  source_location: "Table 1, trial 1"
+  author_statement: "Trap catches of males to Z3,Z13-18:OH were unaffected by the addition of E2,Z13-18:OAc, Z2,Z13-18:OAc, E3,Z13-18:OAc"
+  notes: "Trial 2: 6.3 vs 5.3, also not significant. In Japan (Tamaki et al. 1977) E3,Z13-18:OAc at 5% strongly reduced catches, but there the base compound was Z3,Z13-18:OAc, not the alcohol."

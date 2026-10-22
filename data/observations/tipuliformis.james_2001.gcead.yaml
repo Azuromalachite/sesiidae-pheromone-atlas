@@ -1,0 +1,11 @@
+observation_id: obs.tipuliformis.james_2001.gcead
+observation_type: electrophysiology
+taxon: sesiidae.synanthedon_tipuliformis
+context: {sex: male, population: null, locality: "Prosser, Washington, USA"}
+responses:
+  - {compound: cmpd.e2_z13_18_oac, method: GC-EAD, preparation: male antenna, response: active}
+  - {compound: cmpd.e3_z13_18_oac, method: GC-EAD, preparation: male antenna, response: active, notes: "the earlier depolarization; no traceable FID peak, matched by retention time to the synthetic standard"}
+evidence:
+  reference: ref.james_2001
+  source_location: "Results; Fig. 1"
+  author_statement: "revealed 2 distinct depolarizations in the male antennal signal (n = 3)"

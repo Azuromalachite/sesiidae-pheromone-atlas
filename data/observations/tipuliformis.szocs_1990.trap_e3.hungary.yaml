@@ -1,19 +1,19 @@
 observation_id: obs.tipuliformis.szocs_1990.trap_e3.hungary
 observation_type: behavioural_response
 taxon: sesiidae.synanthedon_tipuliformis
-context: {sex: male, population: null, locality: Hungary}
+context: {sex: male, habitat: black currant plantation, population: null, locality: "Kemence, Pest County, Hungary"}
 assay: field_trapping
 blend:
-  - {compound: cmpd.e2_z13_18_oac, amount: {value: 100, unit: ratio_part}}
-  - {compound: cmpd.e3_z13_18_oac, amount: {value: 3, unit: ratio_part}}
+  - {compound: cmpd.e2_z13_18_oac, amount: {value: 100, unit: microgram}}
+  - {compound: cmpd.e3_z13_18_oac, amount: {value: 3, unit: microgram}}
 comparator:
-  description: E2,Z13-18:OAc alone
-  blend: [{compound: cmpd.e2_z13_18_oac}]
+  description: E2,Z13-18:OAc alone, 100 micrograms
+  blend: [{compound: cmpd.e2_z13_18_oac, amount: {value: 100, unit: microgram}}]
 effect: increased
-significance: not_reported
+significance: significant
+response: {measure: trap_catch, unit: mean_catch_per_trap, treatment_value: 40.81, comparator_value: 15.38, qualifier: as_reported}
 evidence:
   reference: ref.szocs_1990
-  source_location: abstract (AGRIS record)
-  author_statement: "in a ratio of 100:3 was strongly synergistic"
-  unresolved: [dose, years and sites, trap counts and statistics]
-  notes: "One of three regional trials of the same blend; the effect of E3,Z13-18:OAc reverses in Tasmania."
+  source_location: "Table 5"
+  author_statement: "resulted in a statistically significant increase in captures in both New Zealand and Hungary"
+  notes: "June 20-25, 1986; 8 traps per treatment; mean moths per trap per check; Duncan's test on log(x+1), with each check counted as a repetition."

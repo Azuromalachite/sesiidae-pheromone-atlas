@@ -5,9 +5,10 @@ genomes, biosynthetic hypotheses, and candidate enzyme families.*
 
 **Status: building v0.1.** This repository holds the design documents, the
 first discovery table (the taxon × layer matrix), the record schemas and the
-validator with its failing fixtures, and the first 34 curated records
-(4 taxa, 4 references, 9 compounds, 17 observations), so far read from
-abstracts only ([`docs/curation-log.md`](docs/curation-log.md)).
+validator with its failing fixtures, and the first 66 curated records
+(6 taxa, 10 references, 10 compounds, 40 observations), all from full texts
+([`docs/curation-log.md`](docs/curation-log.md)). There are no reaction or
+pathway records yet: this corpus records what was observed, not how it is made.
 
 ```bash
 pip install -r requirements.txt

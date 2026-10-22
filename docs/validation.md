@@ -44,9 +44,31 @@ component whose `detected` is true or false; three observation types and no
 | `genome_id` ends with the assembly accession.version | `GENOME_ID` |
 | ids unique | `DUPLICATE_ID` |
 
+## Structural rules, not just checks
+
+Some rules hold because the schema has no place to break them, and a bad
+fixture keeps each one that way:
+
+- **No species-level pheromone list.** A taxon has no `pheromone` field;
+  what a species uses is read from its observations (`taxon_pheromone_list`).
+- **No role on a compound.** Pheromone, synergist and antagonist are
+  conclusions from behavioural records, per population (`compound_role_field`).
+- **A field attractant is not a gland component.** Synthetic-lure results are
+  `behavioural_response` records; only `gland_composition` records say a
+  female produces a compound. The two types share no fields that could carry
+  one into the other.
+- **A catch without a control says so** (`effect: caught_without_control`,
+  and then no comparator; `control_less_with_comparator`, `missing_comparator`).
+
+**Planned for v0.2, when reaction records arrive:** observation records
+cannot be cited as evidence for a reaction. Co-occurrence of an alcohol and
+its acetate in one gland is not evidence that one is made from the other.
+Reaction evidence will be limited to types that test a conversion
+(isotope labelling, enzyme assay, heterologous expression).
+
 ## The gate is seen to fail
 
-`tests/fixtures/bad/` holds 22 cases, each a one-change edit of a good
+`tests/fixtures/bad/` holds 26 cases, each a one-change edit of a good
 fixture with the error code it must produce in `EXPECT`. On top of these,
 the mutation tests flip every double bond's E/Z, once in the shorthand and
 once in the structure, for every good compound, and require
