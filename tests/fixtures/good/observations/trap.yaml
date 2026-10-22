@@ -4,11 +4,13 @@ taxon: fixture.species_a
 context: {sex: male, population: population_b, locality: null}
 assay: field_trapping
 blend:
-  - {compound: pheromone.e2_z13_18_oac, amount: {value: 100, unit: ratio_part}}
-  - {compound: pheromone.e3_z13_18_oac, amount: {value: 3, unit: ratio_part}}
+  - {compound: cmpd.e2_z13_18_oac, amount: {value: 100, unit: ratio_part}}
+  - {compound: cmpd.e3_z13_18_oac, amount: {value: 3, unit: ratio_part}}
 comparator:
   description: major component alone
   blend:
-    - {compound: pheromone.e2_z13_18_oac, amount: {value: 100, unit: ratio_part}}
+    - {compound: cmpd.e2_z13_18_oac, amount: {value: 100, unit: ratio_part}}
 effect: decreased
-evidence: {reference: ref.fixture_2026}
+significance: not_reported
+response: {measure: trap_catch, unit: fold_change_vs_comparator, treatment_value: 0.5, comparator_value: 1, qualifier: approximate}
+evidence: {reference: ref.fixture_2026, source_location: fixture}

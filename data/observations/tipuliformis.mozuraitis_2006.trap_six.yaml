@@ -1,0 +1,24 @@
+observation_id: obs.tipuliformis.mozuraitis_2006.trap_six
+observation_type: behavioural_response
+taxon: sesiidae.synanthedon_tipuliformis
+context: {sex: male, habitat: black currant field, population: null, locality: null}
+assay: field_trapping
+blend:
+  - {compound: cmpd.e2_z13_18_oac}
+  - {compound: cmpd.e3_z13_18_oac}
+  - {compound: cmpd.z13_18_oac}
+  - {compound: cmpd.e2_z13_18_oh}
+  - {compound: cmpd.z13_18_oh}
+  - {compound: cmpd.18_oh}
+comparator:
+  description: binary E2,Z13-18:OAc + E3,Z13-18:OAc, 100:0.7
+  blend:
+    - {compound: cmpd.e2_z13_18_oac, amount: {value: 100, unit: ratio_part}}
+    - {compound: cmpd.e3_z13_18_oac, amount: {value: 0.7, unit: ratio_part}}
+effect: no_effect
+significance: not_significant
+evidence:
+  reference: ref.mozuraitis_2006
+  source_location: abstract
+  author_statement: "did not differ significantly from the one of the binary mixture"
+  unresolved: [ratio of the six-component lure, dose, replicates]

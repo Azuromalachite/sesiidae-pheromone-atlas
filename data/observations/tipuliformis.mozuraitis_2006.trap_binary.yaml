@@ -1,0 +1,19 @@
+observation_id: obs.tipuliformis.mozuraitis_2006.trap_binary
+observation_type: behavioural_response
+taxon: sesiidae.synanthedon_tipuliformis
+context: {sex: male, habitat: black currant field, population: null, locality: null}
+assay: field_trapping
+blend:
+  - {compound: cmpd.e2_z13_18_oac, amount: {value: 100, unit: ratio_part}}
+  - {compound: cmpd.e3_z13_18_oac, amount: {value: 0.7, unit: ratio_part}}
+comparator:
+  description: E2,Z13-18:OAc alone
+  blend: [{compound: cmpd.e2_z13_18_oac}]
+effect: increased
+significance: not_reported
+response: {measure: trap_catch, unit: fold_change_vs_comparator, treatment_value: 7, comparator_value: 1, qualifier: more_than}
+evidence:
+  reference: ref.mozuraitis_2006
+  source_location: abstract
+  author_statement: "increased the effectiveness of E2,Z13-18:OAc over seven times"
+  unresolved: [dose per lure, number of traps and replicates, locality and year, statistical test]

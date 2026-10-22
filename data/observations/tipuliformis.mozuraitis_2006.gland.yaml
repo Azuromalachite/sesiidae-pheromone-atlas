@@ -1,0 +1,43 @@
+observation_id: obs.tipuliformis.mozuraitis_2006.gland
+observation_type: gland_composition
+taxon: sesiidae.synanthedon_tipuliformis
+context: {sex: female, tissue: pheromone_gland, life_stage: adult, mating_status: virgin, sampling_unit: null, n_individuals: null, population: null, locality: null, rearing: null}
+components:
+  - compound: cmpd.e2_z13_18_oac
+    detected: true
+    method: gland_extract_gc_ms_vs_synthetic_standards
+    abundance_class: major
+    measurements: [{value: 100, unit: relative_to_major, qualifier: as_reported}]
+  - compound: cmpd.e3_z13_18_oac
+    detected: true
+    method: gland_extract_gc_ms_vs_synthetic_standards
+    abundance_class: minor
+    measurements: [{value: 0.7, unit: relative_to_major, qualifier: as_reported}]
+  - compound: cmpd.z13_18_oac
+    detected: true
+    method: gland_extract_gc_ms_vs_synthetic_standards
+    abundance_class: minor
+    measurements: [{value: 2.7, unit: relative_to_major, qualifier: as_reported}]
+  - compound: cmpd.e2_z13_18_oh
+    detected: true
+    method: gland_extract_gc_ms_vs_synthetic_standards
+    abundance_class: minor
+    measurements: [{value: 3.2, unit: relative_to_major, qualifier: as_reported}]
+  - compound: cmpd.z13_18_oh
+    detected: true
+    method: gland_extract_gc_ms_vs_synthetic_standards
+    abundance_class: trace
+  - compound: cmpd.18_oh
+    detected: true
+    method: gland_extract_gc_ms_vs_synthetic_standards
+    abundance_class: trace
+evidence:
+  reference: ref.mozuraitis_2006
+  source_location: abstract
+  author_statement: "in the ratio 100:0.7:2.7:3.2:traces:traces"
+  unresolved:
+    - number of females and whether extracts were pooled or individual
+    - origin and population of the insects
+    - whether the ratio is a mean, and its spread
+    - which other isomers were looked for and not found (e.g. the S. tipuliformis antagonist Z3,Z13-18:OAc)
+  notes: "Identity by retention time and mass spectrum against synthetic standards, per the abstract."

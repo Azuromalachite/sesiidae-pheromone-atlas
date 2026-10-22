@@ -1,0 +1,17 @@
+observation_id: obs.tenuis.yang_2012.trap_acetate_alone
+observation_type: behavioural_response
+taxon: sesiidae.synanthedon_tenuis
+context: {sex: male, habitat: persimmon orchard, population: null, locality: Republic of Korea}
+assay: field_trapping
+blend:
+  - {compound: cmpd.z3_z13_18_oac}
+comparator:
+  description: not stated in the abstract
+effect: no_effect
+significance: not_reported
+evidence:
+  reference: ref.yang_2012
+  source_location: abstract
+  author_statement: "this compound had no effect on male catch in the persimmon orchards in Korea"
+  unresolved: [comparator, dose, the earlier study that reported attraction and where it was done]
+  notes: "Contradicts an earlier report of attraction to the acetate; that study is not yet curated."

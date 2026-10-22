@@ -1,0 +1,19 @@
+observation_id: obs.tenuis.yang_2012.gland
+observation_type: gland_composition
+taxon: sesiidae.synanthedon_tenuis
+context: {sex: female, tissue: pheromone_gland, life_stage: adult, sampling_unit: null, n_individuals: null, population: null, locality: null, rearing: null}
+components:
+  - compound: cmpd.z3_z13_18_oh
+    detected: true
+    method: gland_extract_analysis
+    abundance_class: major
+  - compound: cmpd.z3_z13_18_oac
+    detected: false
+    method: gland_extract_analysis
+    detection_limit: {value: null, unit: null}
+evidence:
+  reference: ref.yang_2012
+  source_location: abstract
+  author_statement: "Z3,Z13-18:OAc, a previously reported attractant, was not detected in the gland extracts"
+  unresolved: [analytical method and detection limit for the acetate, number of females, insect origin]
+  notes: "A tested negative: the acetate was looked for and not found."

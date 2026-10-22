@@ -1,0 +1,19 @@
+observation_id: obs.tipuliformis.szocs_1990.trap_e3.new_zealand
+observation_type: behavioural_response
+taxon: sesiidae.synanthedon_tipuliformis
+context: {sex: male, population: null, locality: New Zealand}
+assay: field_trapping
+blend:
+  - {compound: cmpd.e2_z13_18_oac, amount: {value: 100, unit: ratio_part}}
+  - {compound: cmpd.e3_z13_18_oac, amount: {value: 3, unit: ratio_part}}
+comparator:
+  description: E2,Z13-18:OAc alone
+  blend: [{compound: cmpd.e2_z13_18_oac}]
+effect: increased
+significance: not_reported
+evidence:
+  reference: ref.szocs_1990
+  source_location: abstract (AGRIS record)
+  author_statement: "in a ratio of 100:3 was strongly synergistic"
+  unresolved: [dose, years and sites, trap counts and statistics]
+  notes: "One of three regional trials of the same blend; the effect of E3,Z13-18:OAc reverses in Tasmania."

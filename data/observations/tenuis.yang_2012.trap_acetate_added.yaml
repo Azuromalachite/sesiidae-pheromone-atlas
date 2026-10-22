@@ -1,0 +1,18 @@
+observation_id: obs.tenuis.yang_2012.trap_acetate_added
+observation_type: behavioural_response
+taxon: sesiidae.synanthedon_tenuis
+context: {sex: male, habitat: persimmon orchard, population: null, locality: Republic of Korea}
+assay: field_trapping
+blend:
+  - {compound: cmpd.z3_z13_18_oh}
+  - {compound: cmpd.z3_z13_18_oac}
+comparator:
+  description: Z3,Z13-18:OH alone
+  blend: [{compound: cmpd.z3_z13_18_oh}]
+effect: decreased
+significance: not_reported
+evidence:
+  reference: ref.yang_2012
+  source_location: abstract
+  author_statement: "the addition of Z3,Z13-18:OAc to the main pheromone component strongly inhibited attraction"
+  unresolved: [ratio and dose, catch numbers, statistics]

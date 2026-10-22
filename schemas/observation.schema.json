@@ -13,10 +13,13 @@
     "evidence": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["reference"],
+      "required": ["reference", "source_location"],
       "properties": {
         "reference": {"type": "string"},
-        "notes": {"type": "string"}
+        "source_location": {"type": "string", "description": "where in the source this was read, e.g. 'abstract', 'Table 2'"},
+        "author_statement": {"type": "string", "maxLength": 200, "description": "the authors' own short wording of the result, kept apart from the Atlas's reading"},
+        "unresolved": {"type": "array", "items": {"type": "string"}, "description": "what this record needs and the source as read does not give: missing evidence, stated explicitly"},
+        "notes": {"type": "string", "description": "the Atlas's notes and inferences, never the authors'"}
       }
     }
   },
@@ -45,7 +48,22 @@
             "blend": {"$ref": "#/$defs/blend"}
           }
         },
-        "effect": {"enum": ["increased", "decreased", "no_effect"]}
+        "effect": {"enum": ["increased", "decreased", "no_effect"]},
+        "significance": {"enum": ["significant", "not_significant", "not_reported"]},
+        "dose": {"$ref": "#/$defs/quantity", "description": "total load per lure, when given"},
+        "response": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["measure", "unit"],
+          "description": "the size of the effect, when the source gives one",
+          "properties": {
+            "measure": {"enum": ["trap_catch", "close_range_approach", "landing", "other"]},
+            "unit": {"enum": ["fold_change_vs_comparator", "percent_of_males", "count"]},
+            "treatment_value": {"type": ["number", "null"]},
+            "comparator_value": {"type": ["number", "null"]},
+            "qualifier": {"enum": ["as_reported", "approximate", "more_than", "less_than"]}
+          }
+        }
       },
       "required": ["assay", "blend", "comparator", "effect"],
       "additionalProperties": false
@@ -83,7 +101,12 @@
         "life_stage": {"type": ["string", "null"]},
         "population": {"type": ["string", "null"]},
         "locality": {"type": ["string", "null"]},
-        "rearing": {"enum": ["wild", "laboratory", null]}
+        "habitat": {"type": ["string", "null"], "description": "as reported, e.g. 'black currant field'"},
+        "rearing": {"enum": ["wild", "laboratory", null]},
+        "mating_status": {"enum": ["virgin", "mated", null]},
+        "behavioural_state": {"enum": ["calling", null]},
+        "sampling_unit": {"enum": ["pooled", "individual", null], "description": "pooled extract or single insects; ratios can differ between the two"},
+        "n_individuals": {"type": ["integer", "null"], "minimum": 1}
       }
     },
     "quantity": {

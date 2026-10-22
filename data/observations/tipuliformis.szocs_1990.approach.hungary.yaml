@@ -1,0 +1,20 @@
+observation_id: obs.tipuliformis.szocs_1990.approach.hungary
+observation_type: behavioural_response
+taxon: sesiidae.synanthedon_tipuliformis
+context: {sex: male, population: null, locality: Hungary}
+assay: other
+blend:
+  - {compound: cmpd.e2_z13_18_oac, amount: {value: 100, unit: ratio_part}}
+  - {compound: cmpd.e3_z13_18_oac, amount: {value: 3, unit: ratio_part}}
+comparator:
+  description: E2,Z13-18:OAc alone
+  blend: [{compound: cmpd.e2_z13_18_oac}]
+effect: increased
+significance: not_reported
+response: {measure: close_range_approach, unit: percent_of_males, treatment_value: 65, comparator_value: 20, qualifier: as_reported}
+evidence:
+  reference: ref.szocs_1990
+  source_location: abstract (AGRIS record)
+  author_statement: "evoked close-range approaches to the source from only 20% of males"
+  unresolved: [number of males observed, observation protocol]
+  notes: "Field behaviour observation, not trap catch. Landing was reported as significant only for a five-component blend; not curated until the full text confirms that blend."

@@ -7,8 +7,8 @@
   "additionalProperties": false,
   "required": ["compound_id", "compound_class", "names", "mapped_smiles", "external_ids", "generated"],
   "properties": {
-    "compound_id": {"type": "string", "pattern": "^(pheromone|precursor|model)\\.[a-z0-9_]+$"},
-    "compound_class": {"enum": ["pheromone_component", "precursor", "computational_model"]},
+    "compound_id": {"type": "string", "pattern": "^(cmpd|precursor|model)\\.[a-z0-9_]+$"},
+    "compound_class": {"enum": ["natural_product", "precursor", "computational_model"], "description": "chemical state only. Whether a compound is a pheromone, synergist or antagonist is a conclusion from behavioural records, never a property of the compound (concept §35, 17)"},
     "names": {
       "type": "object",
       "additionalProperties": false,

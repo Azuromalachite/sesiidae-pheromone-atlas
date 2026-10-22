@@ -3,5 +3,5 @@ observation_type: electrophysiology
 taxon: fixture.species_a
 context: {sex: male}
 responses:
-  - {compound: pheromone.z3_z13_18_oac, method: GC-EAD, preparation: male antenna, response: active}
-evidence: {reference: ref.fixture_2026}
+  - {compound: cmpd.z3_z13_18_oac, method: GC-EAD, preparation: male antenna, response: active}
+evidence: {reference: ref.fixture_2026, source_location: fixture}

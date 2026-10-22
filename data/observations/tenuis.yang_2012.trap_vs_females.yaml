@@ -1,0 +1,17 @@
+observation_id: obs.tenuis.yang_2012.trap_vs_females
+observation_type: behavioural_response
+taxon: sesiidae.synanthedon_tenuis
+context: {sex: male, habitat: persimmon orchard, population: null, locality: Republic of Korea}
+assay: field_trapping
+blend:
+  - {compound: cmpd.z3_z13_18_oh}
+comparator:
+  description: live virgin females
+effect: no_effect
+significance: not_reported
+evidence:
+  reference: ref.yang_2012
+  source_location: abstract
+  author_statement: "attractive to S. tenuis males and competitive with live virgin females"
+  unresolved: [dose, catch numbers, statistics, whether the trials were in Korea (the abstract implies it)]
+  notes: "effect no_effect is the Atlas's reading of 'competitive with': catches not distinguishable from virgin-female traps."

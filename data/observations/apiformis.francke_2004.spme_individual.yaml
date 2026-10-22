@@ -1,0 +1,23 @@
+observation_id: obs.apiformis.francke_2004.spme_individual
+observation_type: gland_composition
+taxon: sesiidae.sesia_apiformis
+context: {sex: female, tissue: pheromone_gland, life_stage: adult, behavioural_state: calling, sampling_unit: individual, n_individuals: null, population: null, locality: null, rearing: null}
+components:
+  - compound: cmpd.z3_z13_18_oh
+    detected: true
+    method: spme_single_calling_female_gc_ms
+    abundance_class: major
+    measurements: [{value: 1, unit: ratio_part, qualifier: approximate}]
+  - compound: cmpd.e2_z13_18_al
+    detected: true
+    method: spme_single_calling_female_gc_ms
+    abundance_class: major
+    measurements: [{value: 7, unit: ratio_part, qualifier: approximate}]
+evidence:
+  reference: ref.francke_2004
+  source_location: abstract
+  author_statement: "SPME-investigations on single calling females revealed a ratio of ca. 1:7"
+  unresolved:
+    - which compound is 1 and which is 7 (listing order assumed, as for the pooled extract)
+    - number of females sampled and the spread between them
+  notes: "SPME samples what a calling female releases; a pooled extract samples gland content. The Atlas does not decide which is 'the' ratio."

@@ -1,0 +1,27 @@
+observation_id: obs.apiformis.francke_2004.gland_pooled
+observation_type: gland_composition
+taxon: sesiidae.sesia_apiformis
+context: {sex: female, tissue: pheromone_gland, life_stage: adult, sampling_unit: pooled, n_individuals: null, population: null, locality: null, rearing: null}
+components:
+  - compound: cmpd.z3_z13_18_oh
+    detected: true
+    method: pooled_gland_extract_gc_ms
+    abundance_class: major
+    measurements: [{value: 2, unit: ratio_part, qualifier: approximate}]
+  - compound: cmpd.e2_z13_18_al
+    detected: true
+    method: pooled_gland_extract_gc_ms
+    abundance_class: major
+    measurements: [{value: 3, unit: ratio_part, qualifier: approximate}]
+  - compound: cmpd.e2_z13_18_oh
+    detected: true
+    method: pooled_gland_extract_gc_ms
+    abundance_class: minor
+evidence:
+  reference: ref.francke_2004
+  source_location: abstract
+  author_statement: "Pooled gland extracts showed the two major compounds in a proportion of ca. 2:3"
+  unresolved:
+    - which compound is 2 and which is 3 (the Atlas reads the abstract's listing order, alcohol then aldehyde)
+    - number of females pooled, origin of the insects
+  notes: "Same gland chemistry as obs.apiformis.francke_2004.spme_individual, sampled differently; the ratio shifts about 4.7-fold between the two."

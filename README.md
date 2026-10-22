@@ -5,7 +5,9 @@ genomes, biosynthetic hypotheses, and candidate enzyme families.*
 
 **Status: building v0.1.** This repository holds the design documents, the
 first discovery table (the taxon × layer matrix), the record schemas and the
-validator with its failing fixtures. There are no curated records yet.
+validator with its failing fixtures, and the first 34 curated records
+(4 taxa, 4 references, 9 compounds, 17 observations), so far read from
+abstracts only ([`docs/curation-log.md`](docs/curation-log.md)).
 
 ```bash
 pip install -r requirements.txt

@@ -1,0 +1,18 @@
+observation_id: obs.tipuliformis.szocs_1990.trap_z13oac.hungary
+observation_type: behavioural_response
+taxon: sesiidae.synanthedon_tipuliformis
+context: {sex: male, population: null, locality: Hungary}
+assay: field_trapping
+blend:
+  - {compound: cmpd.e2_z13_18_oac}
+  - {compound: cmpd.z13_18_oac}
+comparator:
+  description: the same lure without Z13-18:OAc
+  blend: [{compound: cmpd.e2_z13_18_oac}]
+effect: no_effect
+significance: not_reported
+evidence:
+  reference: ref.szocs_1990
+  source_location: abstract (AGRIS record)
+  author_statement: "Captures were not influenced by the addition of Z13-18:OAc"
+  unresolved: [ratio, whether E3,Z13-18:OAc was also in the base lure, dose, statistics]
