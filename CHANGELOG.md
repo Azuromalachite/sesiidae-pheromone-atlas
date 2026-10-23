@@ -13,6 +13,11 @@ nothing here is a release, and no DOI has been minted
 
 ### Added
 
+- **Human spot-check** (`review/`, `scripts/spot_check.py`): a seeded
+  random sample of observations plus hand-picked hard cases, a sheet of the
+  fields to check against each paper, and a results file the tests keep
+  well-formed. `spot-check-001` is drawn (24 + 14) and not yet done; until it
+  is, no record has been checked by a person.
 - **Records:** 28 taxa, 31 references, 24 compounds, 11 genomes,
   524 observations and 6 searches. Every observation is from a primary full
   text, and every batch was re-read against the PDFs by an independent

@@ -137,6 +137,15 @@ and a migration of every record, all in one commit. The v0.2 reaction layer is
 expected to be additive (new record kinds) apart from the chemistry gate
 above.
 
+## What no gate checks: a person reading the paper
+
+The validator checks that records are well-formed and consistent. It cannot
+check that a value is what the paper says. The independent re-reads in
+`docs/curation-log.md` were done by Claude reviewers, not by a person. A
+human spot-check (`review/README.md`, `scripts/spot_check.py`) has a seeded
+random part, which gives an error rate, and a hand-picked part for
+judgement calls. The first one is drawn and not yet done.
+
 ## The gate is seen to fail
 
 `tests/fixtures/bad/` holds one directory per case, each a minimal edit of

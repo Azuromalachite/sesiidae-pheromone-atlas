@@ -441,3 +441,28 @@ def test_exporter_refuses_a_case_outside_the_gate(tmp_path):
     tb = _load("export_teaching_bundle")
     with pytest.raises(SystemExit, match="not a case"):
         tb.build(GOOD, "../../fixture_case")
+
+
+# ---- the human spot-check: drawn once, deterministically, and its results file stays well-formed
+
+def test_spot_check_draw_is_deterministic(tmp_path):
+    sc = _load("spot_check")
+    a = sc.draw(tmp_path / "a", 7, 10)
+    b = sc.draw(tmp_path / "b", 7, 10)
+    assert a == b and len(a) == 10 + len(sc.HARD)
+    assert (tmp_path / "a" / "sheet.md").read_text(encoding="utf-8").replace("# Spot-check a", "") == \
+           (tmp_path / "b" / "sheet.md").read_text(encoding="utf-8").replace("# Spot-check b", "")
+    with pytest.raises(SystemExit, match="already holds a draw"):
+        sc.draw(tmp_path / "a", 7, 10)
+    lines, problems = sc.summarise(tmp_path / "a")
+    assert problems == [] and "random: 0 of 10 checked" in lines[0]
+    res = yaml.safe_load((tmp_path / "a" / "results.yaml").read_text(encoding="utf-8"))
+    res["records"][0]["verdict"] = "error"
+    (tmp_path / "a" / "results.yaml").write_text(yaml.safe_dump(res), encoding="utf-8")
+    assert any("must name its wrong rows" in p for p in sc.summarise(tmp_path / "a")[1])
+
+
+def test_committed_spot_checks_are_well_formed():
+    sc = _load("spot_check")
+    for d in sorted((ROOT / "review").glob("spot-check-*")):
+        assert sc.summarise(d)[1] == [], d.name

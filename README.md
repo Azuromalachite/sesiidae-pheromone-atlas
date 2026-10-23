@@ -11,6 +11,11 @@ records:
   ([`docs/curation-log.md`](docs/curation-log.md));
 - 6 dated searches, the only basis for "not found".
 
+**No record has yet been checked by a person against its paper.** Every
+record was extracted by Claude and re-read against the PDFs by other Claude
+reviewers. A human spot-check, 24 random records and 14 hard cases, is
+drawn and waiting in [`review/`](review/README.md).
+
 The taxon × layer matrix is generated from these records. There are no reaction or
 pathway records yet: this corpus records what was observed, not how it is made.
 
