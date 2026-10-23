@@ -1,0 +1,17 @@
+observation_id: spa.obs.myopaeformis.2011.judd.gcead
+observation_type: electrophysiology
+taxon: spa.tax.synanthedon_myopaeformis
+context: {sex: male, population: introduced British Columbia population, locality: 'Cawston, British Columbia, Canada'}
+responses:
+- {compound: spa.cmpd.z3_z13_18_oac, method: GC-EAD, preparation: male antenna; gland extract and effluvia, response: active, notes: the most stimulatory component (B)}
+- {compound: spa.cmpd.z3_z13_18_oh, method: GC-EAD, preparation: male antenna; gland extract and effluvia, response: active, notes: component A}
+- {compound: spa.cmpd.e2_z13_18_oac, method: GC-EAD, preparation: male antenna; gland extract, response: active, notes: component C; not detected in effluvia}
+- {compound: spa.cmpd.e3_z13_18_oac, method: GC-EAD, preparation: male antenna; gland extract, response: inconsistent, notes: 'a fourth component, on DB-23 only'}
+- {compound: spa.cmpd.e3_e13_18_oac, method: GC-EAD, preparation: male antenna; synthetic standard, response: inactive, notes: 'stated in the Discussion as an impurity of commercial Z3,Z13-18:OAc that elicits no antennal response; no figure'}
+- {compound: spa.cmpd.z3_e13_18_oac, method: GC-EAD, preparation: male antenna; synthetic standard, response: inactive, notes: 'stated in the Discussion as an impurity of commercial Z3,Z13-18:OAc that elicits no antennal response; no figure'}
+evidence:
+  reference: spa.ref.judd_2011
+  source_location: Results and discussion; Figs. 1-2; Table 1
+  author_statement: three components (A, B, and C) that consistently elicited strong responses from male antennae
+  unresolved: [number of antennae]
+  notes: Synthetic Z3,Z13-18:OAc, Z3,Z13-18:OH and E2,Z13-18:OAc also 'elicited strong responses from male antennae'.

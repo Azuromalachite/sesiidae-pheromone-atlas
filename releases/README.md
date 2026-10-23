@@ -4,7 +4,7 @@
 
 Snapshot of 2026-10-23. One row per species: every Sesiidae species with a
 nuclear assembly in NCBI Datasets (11), plus species with a characterised
-pheromone and no assembly (4). It decides which taxa enter v0.1 with a
+pheromone and no assembly (5; *S. hector* added from Naka et al. 2008). It decides which taxa enter v0.1 with a
 genome layer (concept §4.3). It is a **discovery table, not curated
 records**: every pheromone entry was read from an abstract, and curation
 reads the full paper.

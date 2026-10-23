@@ -1,0 +1,25 @@
+observation_id: spa.obs.myopaeformis.2011.judd.trap_ternary_vs_z3oh_binary.exp1
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_myopaeformis
+context: {sex: male, habitat: organic apple orchard, population: introduced British Columbia population, locality: 'Cawston, British Columbia, Canada'}
+assay: field_trapping
+trap: {design: delta, colour: white, supplier: null}
+dispenser: {design: rubber_septum, description: grey halobutyl rubber septum (West Pharmaceutical Services)}
+blend:
+- compound: spa.cmpd.z3_z13_18_oac
+  amount: {value: 100, unit: microgram}
+- compound: spa.cmpd.e3_z13_18_oac
+  amount: {value: 5, unit: microgram}
+- compound: spa.cmpd.z3_z13_18_oh
+  amount: {value: 5, unit: microgram}
+comparator:
+  description: Z3,Z13-18:OAc + 5 ug Z3,Z13-18:OH
+  blend:
+  - compound: spa.cmpd.z3_z13_18_oac
+    amount: {value: 100, unit: microgram}
+  - compound: spa.cmpd.z3_z13_18_oh
+    amount: {value: 5, unit: microgram}
+effect: increased
+significance: significant
+response: {measure: trap_catch, unit: mean_catch_per_trap, treatment_value: 16.4, comparator_value: 7.6, qualifier: as_reported}
+evidence: {reference: spa.ref.judd_2011, source_location: 'Table 2, experiment 1', author_statement: Inexplicably the inhibitory action of the alcohol was less apparent in the ternary blend., notes: 'Experiment 1, Cawston, 12-19 July 2006, 10 blocks, small white delta traps coated inside with Tanglefoot, 10 m apart, daily counts and re-randomisation, lures not replaced; two-way ANOVA and Student-Newman-Keuls test. Mean +- SE per trap: 16.4 +- 3.7 (a) vs 7.6 +- 4.0 (b).'}

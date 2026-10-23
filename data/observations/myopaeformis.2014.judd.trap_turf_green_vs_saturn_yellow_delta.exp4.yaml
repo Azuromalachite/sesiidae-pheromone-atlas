@@ -1,0 +1,60 @@
+observation_id: spa.obs.myopaeformis.2014.judd.trap_turf_green_vs_saturn_yellow_delta.exp4
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_myopaeformis
+context:
+  sex: male
+  population: introduced British Columbia population
+  locality: near Cawston, Similkameen Valley, British Columbia, Canada
+  habitat: commercial organic apple orchards (dwarfing, high-density superspindle plantings, 2-3 m tall)
+  rearing: wild
+assay: field_trapping
+trap:
+  design: delta
+  colour: fluorescent Turf Green (Beauti-Tone A127-TG 1740-227)
+  supplier: Pherobank International (clear plastic delta; painted by the authors)
+blend:
+- compound: spa.cmpd.z3_z13_18_oac
+  amount:
+    value: 1
+    unit: milligram
+  purity:
+    value: 95
+    kind: isomeric
+    basis: stated
+    qualifier: more_than
+    method: supplier figure (Pherobank) as quoted by the authors
+dispenser:
+  design: rubber_septum
+  description: grey halobutyl rubber septum
+comparator:
+  description: same lure in a fluorescent Saturn Yellow delta trap
+  blend:
+  - compound: spa.cmpd.z3_z13_18_oac
+    amount:
+      value: 1
+      unit: milligram
+    purity:
+      value: 95
+      kind: isomeric
+      basis: stated
+      qualifier: more_than
+      method: supplier figure (Pherobank) as quoted by the authors
+  trap:
+    design: delta
+    colour: fluorescent Saturn Yellow (Beauti-Tone A127-SY 1740-236)
+    supplier: Pherobank International (clear plastic delta; painted by the authors)
+effect: increased
+significance: significant
+dose:
+  value: 1
+  unit: milligram
+response:
+  measure: trap_catch
+  unit: mean_catch_per_trap
+  treatment_value: 18.6
+  comparator_value: 9.6
+  qualifier: approximate
+evidence:
+  reference: spa.ref.judd_2014
+  source_location: Experiment 4; Fig. 2B
+  notes: 'Experiment 4, 7-17 July 2007 (counted 14 and 17 July), randomised complete blocks, 10 replicates, 5 delta traps 5 m apart in linear blocks 20 m apart; ANOVA F4,36 = 6.986, P < 0.001, Tukey (alpha 0.05). Delta traps 21 cm long, 10 x 10 x 10 cm cross-section, painted inside and out with a gloss white base coat (Krylon Fusion) then a high-gloss Ecologic acrylic (Cloverdale Paints); clear traps left unpainted; lure pinned at the upper centre; traps about 1.5 m up in the canopy; sticky bases. Fluorescent pigments from Beauti-Tone (Home Hardware). Lure: grey halobutyl rubber septum (West Co.) loaded with 1 mg Z3,Z13-18:OAc (Pherobank, >95% isomeric purity) in 200 µL hexane; the micro sign was checked in the PDF font stream: ''1 mg'' is set in the text font, ''200 µL'' uses the symbol font. Means read from the bar chart (Fig. 2B), Atlas reading; letters b vs c. Reflectance (Fig. 2A and text): both fluorescent pigments reflect far more at 500-550 nm than the nonfluorescent paints (peaks well above 100% of the white standard); the authors give ultraviolet (300-400 nm) reflectance of 5.8% (Turf Green) vs 14.5% (Saturn Yellow), and above 550 nm 16.6% vs 133.5%. Yellow vs clear in this experiment differs from experiment 1, where yellow and clear shared a letter. Contrast used in the Results for the ultraviolet argument: Turf Green reflects less ultraviolet (5.8% vs 14.5%, 300-400 nm) and less light above 550 nm than Saturn Yellow.'

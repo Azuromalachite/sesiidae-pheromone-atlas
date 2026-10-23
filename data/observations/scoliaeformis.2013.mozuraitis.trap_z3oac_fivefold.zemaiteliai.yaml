@@ -1,0 +1,33 @@
+observation_id: spa.obs.scoliaeformis.2013.mozuraitis.trap_z3oac_fivefold.zemaiteliai
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_scoliaeformis
+context: {sex: male, habitat: null, population: Lithuanian population, locality: 'Žemaitėliai, Lithuania'}
+assay: field_trapping
+trap: {design: delta, colour: white, supplier: Flora Co. (Atracon A)}
+dispenser: {design: rubber_tube, description: 'red rubber tube, 8 x 15 mm'}
+blend:
+- compound: spa.cmpd.e2_z13_18_oac
+  amount: {value: 150, unit: microgram}
+  purity: {value: 99, kind: chemical_and_isomeric, basis: stated, qualifier: more_than}
+- compound: spa.cmpd.e2_z13_18_oh
+  amount: {value: 12, unit: microgram}
+  purity: {value: 99, kind: chemical_and_isomeric, basis: stated, qualifier: more_than}
+- compound: spa.cmpd.z3_z13_18_oac
+  amount: {value: 1.5, unit: microgram}
+  purity: {value: 99, kind: chemical_and_isomeric, basis: stated, qualifier: more_than}
+comparator:
+  description: the same ternary blend with 0.3 ug Z3,Z13-18:OAc
+  blend:
+  - compound: spa.cmpd.e2_z13_18_oac
+    amount: {value: 150, unit: microgram}
+    purity: {value: 99, kind: chemical_and_isomeric, basis: stated, qualifier: more_than}
+  - compound: spa.cmpd.e2_z13_18_oh
+    amount: {value: 12, unit: microgram}
+    purity: {value: 99, kind: chemical_and_isomeric, basis: stated, qualifier: more_than}
+  - compound: spa.cmpd.z3_z13_18_oac
+    amount: {value: 0.3, unit: microgram}
+    purity: {value: 99, kind: chemical_and_isomeric, basis: stated, qualifier: more_than}
+effect: decreased
+significance: significant
+response: {measure: trap_catch, unit: total_catch, treatment_value: 12, comparator_value: 52, qualifier: as_reported}
+evidence: {reference: spa.ref.mozuraitis_2013, source_location: 'Table 1, Žemaitėliai 2011', author_statement: 'A five-fold increase of Z3,Z13-18:Ac in the ternary blend resulted in reduced catches of males (Table 1).', notes: 'Žemaitėliai, 20 June - 11 July 2011, 7 replicates, total catch; same design and statistics. Letters b vs a.'}

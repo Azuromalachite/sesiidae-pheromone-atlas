@@ -1,5 +1,76 @@
 # Curation log
 
+## 2026-10-23 (6) — six more full texts, with independent review
+
+| paper | taxon | records |
+|---|---|---|
+| Voerman, Persoons & Priesner 1984 | *S. tipuliformis* (Netherlands; SSR from Bavaria and Austria) | 16 |
+| Mozūraitis & Būda 2013 | *S. scoliaeformis* (Lithuania) | 21 |
+| Judd, Gries, Aurelian & Gries 2011 | *S. myopaeformis* (introduced, British Columbia) | 14 |
+| Judd & Eby 2014 | *S. myopaeformis*, trap colour and design | 41 |
+| Levi-Zada et al. 2011 | *S. vespiformis* (Israel) | 28 |
+| Naka et al. 2008 | *S. hector* (Japan), new taxon | 26 |
+
+New: 1 taxon (*S. hector*, NCBI 2912888, GBIF 1940506), 6 references,
+5 compounds (Z2,Z13-18:OAc, Z2,Z13-18:OH, 18:OAc, E3,E13-18:OAc,
+Z3,E13-18:OAc; all InChIKeys resolve in PubChem to the expected isomers),
+146 observations. The file supplied as Naka 2012 (*S. tenuis*) was Naka et al.
+2008 (*S. hector*); the *S. tenuis* paper is still wanted. Szöcs et al. 1998
+is deferred (no access).
+
+Judd & Eby 2014 was curated by a separate agent from the PDF. All six papers
+were then re-read against the PDFs by three reviewers working without the
+curator's notes. No number or significance letter was wrong; the defects were
+in conventions, quotes, notes and missing contrasts, and all are fixed.
+
+### Schema changes
+
+| change | forced by |
+|---|---|
+| `dispenser` (design, description) on treatment and comparator; the identical-comparator check compares it | Voerman: the same lure in a polyethylene vial caught 23 per trap, on a sleeve stopper 9 |
+| trap design `funnel` (Unitrap) and `bottle` | Voerman, Levi-Zada, Judd & Eby |
+| antennal response `inconsistent` | Judd 2011: E3,Z13-18:OAc on DB-23 only |
+| purity kind `chemical_and_isomeric` | Mozūraitis 2013 |
+| unit `mean_catch_per_trap_per_week` | Levi-Zada 2011 |
+| **with `significance: not_tested`, `effect` is the direction of the raw numbers**; the authors' reading goes in `author_statement` | review: Voerman's 32 and 34 vs 46 were `no_effect` on the authors' "small amounts" sentence while 35 vs 46 was `decreased` |
+| **`identification` follows the authors' own wording**; the notes say what it rests on (e.g. geometry from retention on one polar column) | review: Levi-Zada and Naka identify by MS plus DB-23 retention, Judd by retention only, and none call it tentative |
+| `synthetic_analogue` defined as "no Atlas gland record yet" | Naka 2008 and Voerman test isomers no gland record holds |
+
+### What the review changed
+
+- **Missing contrasts added:**
+  - Judd 2011: ternary vs the alcohol binary, and each binary vs the control;
+  - Levi-Zada: the gland-ratio 4:1 lure as comparator;
+  - Naka 2008 Test I: 70:30 and 30:70 vs blank;
+  - Mozūraitis: blend vs control at the second site;
+  - Voerman: the headline result, E2,Z13-18:OAc vs blank;
+  - Judd & Eby: four more colour contrasts;
+  - gland negatives the figures show but the records lacked.
+- **Quotes moved** to the sentence about each record's contrast (Judd ternary, Naka 70:30 and Test IV, Levi-Zada dose).
+- **Overstated negatives softened.** Voerman's Z2,Z13-18:OAc is `not_tested`, not `inactive`: no specialist cell is not no response. Judd's effluvia E2,Z13-18:OAc negative is noted as weak: on DB-5 it drew no response even in gland extracts.
+- **Purity removed where the paper gives none** (Voerman's alcohols, synthesis intermediates).
+- **Inferences labelled:** the trap for Voerman's vial test, the Starnberg setup, the Mozūraitis habitat, Levi-Zada's dose-trial habitat.
+
+### Internal inconsistencies found in these papers
+
+- **Mozūraitis 2013:** Methods say six females; the Fig. 1 caption says three. Mozūraitis 2006 had the same kind of discrepancy, 12 vs 6.
+- **Naka 2008:**
+  - The abstract labels Z3 as I and E3 as II (60:36:4); the Results reverse the labels (36:60:4).
+  - Test I: "92 males by four traps" against 24.5 per trap with n = 2.
+- **Levi-Zada 2011:**
+  - The Discussion says single components "did not attract any males"; Table 2 shows 0.2–0.4.
+  - Table 3 prints 1.9 ± 2.1, which cannot be an SE of five non-negative counts.
+- **Judd 2011:** the text says retention matched on four columns; Table 1 marks antennal responses on three columns (Z3,Z13-18:OH) and two (E2,Z13-18:OAc).
+- **Judd & Eby 2014:** eight, listed in `data/references/judd_2014.yaml`. Among them: the wrong experiment and figure cited in the Discussion, and 82 % vs 83 %.
+
+### Not recorded, by design
+
+- Diel activity (Mozūraitis 2013): there is no observation type for it.
+- Lure ageing (Levi-Zada 2011): the schema has no lure age.
+- Mating disruption (Levi-Zada 2011).
+- Feeding-attractant traps (Judd & Eby 2014, experiments 2, 3 and 15).
+- Results stated without numbers (Voerman: blank traps, the Unitrap, the Starnberg confirmation).
+
 ## 2026-10-23 (5) — adversarial review of entries (3) and (4)
 
 Every record from Yang 2011, Naka 2006 and Kwon 2021 was re-read against the

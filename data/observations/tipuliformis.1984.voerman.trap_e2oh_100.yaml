@@ -1,0 +1,23 @@
+observation_id: spa.obs.tipuliformis.1984.voerman.trap_e2oh_100
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_tipuliformis
+context: {sex: male, habitat: currant orchard, population: Dutch population, locality: 'Boven-Leeuwen, Netherlands'}
+assay: field_trapping
+trap: {design: delta, colour: white, supplier: null}
+dispenser: {design: rubber_sleeve_stopper, description: 'red rubber sleeve stopper, 7 x 11 mm'}
+blend:
+- compound: spa.cmpd.e2_z13_18_oac
+  amount: {value: 900, unit: microgram}
+  purity: {value: 99, kind: unspecified, basis: stated, qualifier: as_reported, method: 'estimated from the syntheses, argentation chromatography and HPLC; positional isomers not checked'}
+- compound: spa.cmpd.e2_z13_18_oh
+  amount: {value: 100, unit: microgram}
+comparator:
+  description: E2,Z13-18:OAc alone, 1000 ug
+  blend:
+  - compound: spa.cmpd.e2_z13_18_oac
+    amount: {value: 1000, unit: microgram}
+    purity: {value: 99, kind: unspecified, basis: stated, qualifier: as_reported, method: 'estimated from the syntheses, argentation chromatography and HPLC; positional isomers not checked'}
+effect: decreased
+significance: not_tested
+response: {measure: trap_catch, unit: mean_catch_per_trap, treatment_value: 34, comparator_value: 46, qualifier: as_reported}
+evidence: {reference: spa.ref.voerman_1984, source_location: Table 1, author_statement: 'The addition of small amounts of EZ2,13-18 : OH did not increase or diminish the catches appreciably.', notes: 'Table 1: Boven-Leeuwen, 13-24 June 1983, 4 traps per treatment, opaque white PVC delta traps, mean catch per trap. No statistics in the paper: effect is the direction of the raw numbers, and the authors'' own reading, where they give one, is the author_statement. Lures held 0.1 percent BHT as antioxidant. The stated 99 percent purity is for the synthetic acetates; the alcohols were synthesis intermediates of unstated purity. Which lures ''small amounts'' covers is not stated.'}

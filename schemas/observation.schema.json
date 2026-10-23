@@ -53,7 +53,7 @@
           }
         },
         "effect": {"enum": ["increased", "decreased", "no_effect", "caught_without_control"],
-                   "description": "relative to the comparator; caught_without_control means males were caught and no comparator was run. With significance not_tested, effect is the authors' stated reading, or else the direction of the raw means, and the notes say which"},
+                   "description": "relative to the comparator; caught_without_control means males were caught and no comparator was run. With significance not_tested, effect is the direction of the raw means, so equal numbers always get the same label; the authors' own reading, if any, is in author_statement"},
         "significance": {"enum": ["significant", "not_significant", "not_tested", "not_reported"], "description": "not_tested: the paper ran no test on this contrast, e.g. a zero-catch treatment left out of the ANOVA"},
         "dose": {"$ref": "#/$defs/quantity", "description": "total load per lure, when given"},
         "response": {
@@ -63,7 +63,7 @@
           "description": "the size of the effect, when the source gives one",
           "properties": {
             "measure": {"enum": ["trap_catch", "close_range_approach", "landing", "other"]},
-            "unit": {"enum": ["fold_change_vs_comparator", "percent_of_males", "count", "mean_catch_per_trap", "total_catch"]},
+            "unit": {"enum": ["fold_change_vs_comparator", "percent_of_males", "count", "mean_catch_per_trap", "mean_catch_per_trap_per_week", "total_catch"]},
             "treatment_value": {"type": ["number", "null"]},
             "comparator_value": {"type": ["number", "null"]},
             "qualifier": {"enum": ["as_reported", "approximate", "more_than", "less_than"]}
@@ -139,7 +139,7 @@
         "compound": {"type": "string"},
         "detected": {"enum": [true, false, "not_tested"], "description": "not_tested is unknown; false is a negative and needs a method"},
         "method": {"type": "string", "description": "how presence or absence was established"},
-        "identification": {"enum": ["confirmed", "tentative"], "description": "as the authors state it: tentative when, for example, only retention indices matched"},
+        "identification": {"enum": ["confirmed", "tentative"], "description": "as the authors state it: tentative when they call it tentative (e.g. Yang 2011 for retention-index-only matches), confirmed when they present it as identified; method and notes say what it rests on, e.g. geometry from retention on one polar column"},
         "abundance_class": {"enum": ["major", "minor", "trace"]},
         "measurements": {
           "type": "array",

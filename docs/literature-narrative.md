@@ -33,6 +33,16 @@ Gland analyses started to say what females produce:
   (`spa.obs.apiformis.1988.kovalev.*`). They followed only the alcohol fraction,
   so the aldehyde found in 2004 was never looked for.
 
+A year before Szöcs et al. 1985, Voerman et al. 1984 had found the *S.
+tipuliformis* attractant by screening synthetics: E2,Z13-18:OAc, 46 males
+per trap in a Dutch orchard, with no statistics in the paper
+(`spa.obs.tipuliformis.1984.voerman.*`). Single-cell recordings in the same
+paper found specialist receptor cells for E2,Z13-18:OAc, E3,Z13-18:OAc and
+Z3,Z13-18:OAc (`…voerman.ssr.*`), so the E3 isomer had a receptor before any
+gland was analysed. The same compound on a closed polyethylene vial caught 23
+per trap, against 9 on a rubber stopper (`…trap_vial_vs_stopper`). **The
+dispenser is part of the signal.**
+
 **Production** and **attraction** are now two separate observations. They do
 not always agree.
 
@@ -139,8 +149,28 @@ The Atlas keeps all of these and decides none of them.
   the same for *S. bicingulata*: four minor compounds, three of them
   identified only tentatively, and none of them changed catches on the 4:6
   pair, alone or all together (`spa.obs.bicingulata.2011.yang.trap_{z13oac,e2z13oac,e3oh,z3oh}_added`,
-  `…trap_complete`). Whether the extra compounds are biosynthetic
-  intermediates is the authors' hypothesis, not an observation.
+  `…trap_complete`). Mozūraitis & Būda 2013 found six gland compounds in *S.
+  scoliaeformis*, and E2,Z13-18:OAc alone was as good as any blend; a
+  five-fold increase of the 0.2 % Z3,Z13-18:OAc cut catches
+  (`spa.obs.scoliaeformis.2013.mozuraitis.*`). Whether the extra compounds are
+  biosynthetic intermediates is the authors' hypothesis, not an observation.
+- Judd et al. 2011 separated gland from emission in *S. myopaeformis*: three
+  antennally active compounds in gland extracts, only two in the volatiles
+  of calling females (`spa.obs.myopaeformis.2011.judd.{gland,effluvia,gcead}`).
+  In the field, Z3,Z13-18:OAc alone was as good as any blend, and 5 %
+  Z3,Z13-18:OH, which females do emit, cut catches by more than half
+  (`…trap_z3oh_added.exp1`). **An emitted, antennally active compound can lower
+  trap catch.** The authors note it may still act at close range, where traps
+  do not measure.
+- Two species use the same two acetates with opposite ratio tolerances.
+  - *S. hector* (Japan) makes E3:Z3,Z13-18:OAc at about 36:60, and lures from
+    70:30 to 30:70 all attract (`spa.obs.hector.2008.naka.*`).
+  - *S. vespiformis* (Israel) makes them at 83:17. There, 9:1 and 4:1 attract,
+    while 6:4 and 5:5 catch almost nothing
+    (`spa.obs.vespiformis.2011.levizada.*`).
+
+  The 50:50 lure that works best for one species shuts the other down. **The
+  same molecules carry different messages in different ratios.**
 
 ## 6. The signal is more than chemistry
 
@@ -149,8 +179,11 @@ The Atlas keeps all of these and decides none of them.
   beat green ones in spring at two sites and in autumn at two of three, and
   beat white ones at one site of three
   (`spa.obs.bicingulata.2021.kwon.trap_yellow_vs_*`). Across sites, catch
-  rose with the trap's b* (yellowness) value (Kwon et al. 2021). They cite
-  the same result for *S. myopaeformis*.
+  rose with the trap's b* (yellowness) value (Kwon et al. 2021). For *S.
+  myopaeformis*, Judd & Eby 2014 found the effect depends on the trap. Males
+  did not separate yellow, green, white and clear delta traps. But all-yellow
+  unitraps out-caught green, white and red ones, and replacing any single part
+  with a green one lowered catch (`spa.obs.myopaeformis.2014.judd.*`).
 - **Lure and trap.** Catch rose with lure loading (Suckling et al. 2005).
   Green buckets out-caught white deltas, 13.2 vs 7.6 per trap
   (`…kwon.trap_bucket_vs_delta.exp2_2017.chuncheon`), but design and colour

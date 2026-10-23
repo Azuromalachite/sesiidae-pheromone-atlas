@@ -1,0 +1,21 @@
+observation_id: spa.obs.myopaeformis.2011.judd.trap_z3oh_added.exp1
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_myopaeformis
+context: {sex: male, habitat: organic apple orchard, population: introduced British Columbia population, locality: 'Cawston, British Columbia, Canada'}
+assay: field_trapping
+trap: {design: delta, colour: white, supplier: null}
+dispenser: {design: rubber_septum, description: grey halobutyl rubber septum (West Pharmaceutical Services)}
+blend:
+- compound: spa.cmpd.z3_z13_18_oac
+  amount: {value: 100, unit: microgram}
+- compound: spa.cmpd.z3_z13_18_oh
+  amount: {value: 5, unit: microgram}
+comparator:
+  description: Z3,Z13-18:OAc alone, 100 ug
+  blend:
+  - compound: spa.cmpd.z3_z13_18_oac
+    amount: {value: 100, unit: microgram}
+effect: decreased
+significance: significant
+response: {measure: trap_catch, unit: mean_catch_per_trap, treatment_value: 7.6, comparator_value: 19.0, qualifier: as_reported}
+evidence: {reference: spa.ref.judd_2011, source_location: 'Table 2, experiment 1', author_statement: 'whereas 5% (3Z,13Z)-18:OH appeared antagonistic.', notes: 'Experiment 1, Cawston, 12-19 July 2006, 10 blocks, small white delta traps coated inside with Tanglefoot, 10 m apart, daily counts and re-randomisation, lures not replaced; two-way ANOVA and Student-Newman-Keuls test. Mean +- SE per trap: 7.6 +- 4.0 (b) vs 19.0 +- 7.3 (a). The alcohol binary still caught significantly more than the control (record trap_z3oh_binary_vs_control.exp1).'}

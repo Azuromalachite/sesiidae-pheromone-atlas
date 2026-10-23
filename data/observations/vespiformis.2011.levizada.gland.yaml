@@ -1,0 +1,33 @@
+observation_id: spa.obs.vespiformis.2011.levizada.gland
+observation_type: gland_composition
+taxon: spa.tax.synanthedon_vespiformis
+context: {sex: female, tissue: pheromone gland, life_stage: adult, mating_status: null, behavioural_state: calling, sampling_unit: pooled, n_individuals: 25, population: Israeli population, locality: 'Kefar Tabor, Israel', rearing: field_collected_reared}
+components:
+- compound: spa.cmpd.e3_z13_18_oac
+  detected: true
+  method: gland_extract_gc_ms_and_fid_ri_on_rtx5_and_db23_vs_standards
+  identification: confirmed
+  abundance_class: major
+  measurements:
+  - {value: 83, unit: percent, qualifier: mean}
+  - {value: 14.0, unit: ng_per_female, qualifier: mean}
+- compound: spa.cmpd.z3_z13_18_oac
+  detected: true
+  method: gland_extract_gc_ms_and_fid_ri_on_rtx5_and_db23_vs_standards
+  identification: confirmed
+  abundance_class: minor
+  measurements:
+  - {value: 17, unit: percent, qualifier: mean}
+  - {value: 2.9, unit: ng_per_female, qualifier: mean}
+- {compound: spa.cmpd.e3_e13_18_oac, detected: false, method: gland_extract_gc_ms_and_fid_ri_on_rtx5_and_db23_vs_standards}
+- {compound: spa.cmpd.z3_e13_18_oac, detected: false, method: gland_extract_gc_ms_and_fid_ri_on_rtx5_and_db23_vs_standards}
+- {compound: spa.cmpd.e2_z13_18_oac, detected: false, method: gland_extract_gc_ms_and_fid_ri_on_rtx5_and_db23_vs_standards}
+- {compound: spa.cmpd.z2_z13_18_oac, detected: false, method: gland_extract_gc_ms_and_fid_ri_on_rtx5_and_db23_vs_standards}
+- {compound: spa.cmpd.e3_z13_18_oh, detected: false, method: gland_extract_gc_ms_without_alcohol_standards}
+- {compound: spa.cmpd.z3_z13_18_oh, detected: false, method: gland_extract_gc_ms_without_alcohol_standards}
+evidence:
+  reference: spa.ref.levizada_2011
+  source_location: Results, Chemical analysis; Fig. 2; Table 1
+  author_statement: No traces of other octadecadienyl acetates or of the corresponding alcohols were found.
+  unresolved: [whether the +- values are SD or SE, detection limits for the negatives, mating status of the extracted females]
+  notes: 'Larvae from root collars of peach and nectarine, Kefar Tabor, March-June 2010, reared on a peach-cortex diet at 24 C in darkness. One-day-old calling females; samples of 1-3 glands in 20 ul hexane for 15 min. Ratio 83:17 from 15 samples; amounts 14.0 +- 6.2 and 2.9 +- 1.3 ng per gland from 25 females (dispersion type not stated). The authors call the ratio about 4:1 and used 4:1 in the field. The geometry rests on retention on DB-23: RTX-5 does not separate the 3,13 isomers (Table 1) and the mass spectra do not distinguish them (Atlas note). Negatives: no other octadecadienyl acetates (standards of all four 3,13 isomers and all four 2,13 acetates were run; the Z2,E13 and E2,E13 acetates have no Atlas compound record) and no corresponding alcohols, for which no standards are listed; no detection limit is given.'

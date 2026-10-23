@@ -1,0 +1,21 @@
+observation_id: spa.obs.scoliaeformis.2013.mozuraitis.trap_z3oac_alone.visoriai
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_scoliaeformis
+context: {sex: male, habitat: null, population: Lithuanian population, locality: 'Visoriai, Lithuania'}
+assay: field_trapping
+trap: {design: delta, colour: white, supplier: Flora Co. (Atracon A)}
+dispenser: {design: rubber_tube, description: 'red rubber tube, 8 x 15 mm'}
+blend:
+- compound: spa.cmpd.z3_z13_18_oac
+  amount: {value: 0.3, unit: microgram}
+  purity: {value: 99, kind: chemical_and_isomeric, basis: stated, qualifier: more_than}
+comparator:
+  description: E2,Z13-18:OAc alone, 150 ug
+  blend:
+  - compound: spa.cmpd.e2_z13_18_oac
+    amount: {value: 150, unit: microgram}
+    purity: {value: 99, kind: chemical_and_isomeric, basis: stated, qualifier: more_than}
+effect: decreased
+significance: not_tested
+response: {measure: trap_catch, unit: total_catch, treatment_value: 0, comparator_value: 24, qualifier: as_reported}
+evidence: {reference: spa.ref.mozuraitis_2013, source_location: 'Table 1, Visoriai 2010', author_statement: 'E2,Z13-18:OAc was the only compound attractive alone to S. scoliaeformis males (Table 1).', notes: 'Visoriai, 24 June - 15 July 2010, 5 replicates, total catch, white delta traps 1.5 m up on shrubs close to old birch trees, moved every 2 days; log(x+1) ANOVA and Duncan test with zero-catch lures excluded. The single compound caught nothing and was excluded from the test; direction of the raw totals.'}

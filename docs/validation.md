@@ -35,15 +35,22 @@ CIP label is the chain geometry that lipid shorthand names.
 JSON Schema (`schemas/`) enforces the shapes, including: `method` on every
 component whose `detected` is true or false; `identification` only on a
 detected component; a lure `purity` that names its `kind` (chemical,
-isomeric or unspecified) and `basis` (measured or stated); a trap `design`
-from a fixed list; three observation types and no `role` field. The
-validator adds:
+isomeric, both or unspecified) and `basis` (measured or stated); a trap
+and a dispenser `design` from fixed lists; three observation types and no
+`role` field. The validator adds the checks below.
+
+Two conventions the schema states but cannot check:
+- **`effect` with `significance: not_tested`** is the direction of the raw
+  numbers, so equal numbers always get the same label. The authors' reading
+  goes in `author_statement`.
+- **`identification`** follows the authors' own wording. The notes say what
+  it rests on.
 
 | check | error code |
 |---|---|
 | every taxon, compound, reference and `represents` id resolves | `REF_MISSING` |
 | observations are of real compounds, never computational models | `OBS_MODEL_COMPOUND` |
-| amounts only on detections; a detection limit only on a negative; a comparator differs from the treatment in blend or trap | `OBS_FIELD_CONFLICT` |
+| amounts only on detections; a detection limit only on a negative; a comparator differs from the treatment in blend, trap or dispenser | `OBS_FIELD_CONFLICT` |
 | `genome_id` ends with the assembly accession.version | `GENOME_ID` |
 | ids unique | `DUPLICATE_ID` |
 | no two taxa share an accepted name; a synonym spelling another accepted name carries both authorities | `TAXON_NAME_DUPLICATE`, `NAME_AMBIGUOUS` |

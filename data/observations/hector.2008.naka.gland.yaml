@@ -1,0 +1,41 @@
+observation_id: spa.obs.hector.2008.naka.gland
+observation_type: gland_composition
+taxon: spa.tax.synanthedon_hector
+context: {sex: female, tissue: abdominal end, life_stage: adult, mating_status: virgin, behavioural_state: calling, sampling_unit: pooled, n_individuals: null, population: Aichi population, locality: 'Kasugai City, Aichi Prefecture, Japan', rearing: field_collected_reared}
+components:
+- compound: spa.cmpd.e3_z13_18_oac
+  detected: true
+  method: gland_extract_gc_ead_and_gc_ms_db23_vs_standards
+  identification: confirmed
+  abundance_class: major
+  measurements:
+  - {value: 4.4, unit: ng_per_female, qualifier: mean}
+  - {value: 36, unit: ratio_part, qualifier: approximate}
+- compound: spa.cmpd.z3_z13_18_oac
+  detected: true
+  method: gland_extract_gc_ead_and_gc_ms_db23_vs_standards
+  identification: confirmed
+  abundance_class: major
+  measurements:
+  - {value: 7.3, unit: ng_per_female, qualifier: mean}
+  - {value: 60, unit: ratio_part, qualifier: approximate}
+- compound: spa.cmpd.e2_z13_18_oac
+  detected: true
+  method: gland_extract_gc_ead_and_gc_ms_db23_vs_standards
+  identification: confirmed
+  abundance_class: minor
+  measurements:
+  - {value: 0.5, unit: ng_per_female, qualifier: mean}
+  - {value: 4, unit: ratio_part, qualifier: approximate}
+- {compound: spa.cmpd.e3_z13_18_oh, detected: false, method: gland_extract_gc_ms_mass_chromatograms_db23}
+- {compound: spa.cmpd.z3_z13_18_oh, detected: false, method: gland_extract_gc_ms_mass_chromatograms_db23}
+- {compound: spa.cmpd.e2_z13_18_al, detected: false, method: gland_extract_gc_ms_mass_chromatograms_db23}
+- {compound: spa.cmpd.e3_e13_18_oac, detected: false, method: gland_extract_gc_ms_mass_chromatograms_db23}
+- {compound: spa.cmpd.z3_e13_18_oac, detected: false, method: gland_extract_gc_ms_mass_chromatograms_db23}
+- {compound: spa.cmpd.z2_z13_18_oac, detected: false, method: gland_extract_gc_ms_mass_chromatograms_db23}
+evidence:
+  reference: spa.ref.naka_2008
+  source_location: Results, GC-MS analysis; Fig. 2
+  author_statement: 'The mixing ratios of Comps. I–III approximately converged at 36 : 60 : 4.'
+  unresolved: [whether the +- values are SD or SE, detection limits for the negatives]
+  notes: 'Last-instar larvae from the Meijo University farm, Kasugai, reared at 25 C, 15L:9D. Abdominal ends of 1-2-day-old calling virgin females, 250 ul hexane for 5 min. Geometry rests on retention on one polar column (DB-23); the mass spectra do not separate the isomers (Atlas note). Titres from the GC-MS analysis repeated ''three times'' with 4 female equivalents each after a first 4 FE run, so three or four runs (+- 2.2, 3.2, 0.2 ng; dispersion type not stated). E3:Z3 = 37.6:62.4 (Atlas note: Yang et al. 2011 cite it as 38:62). Negatives: no E3,Z13- or Z3,Z13-18:OH or E2,Z13-18:Al peaks at the retention times of their standards (Fig. 2B), and no E3,E13-, Z3,E13- or Z2,Z13-18:OAc (Fig. 2A; the Z2,E13 and E2,E13 acetates, also marked, have no Atlas compound record); no detection limit given. The abstract swaps the I/II labels (see the reference notes).'

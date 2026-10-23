@@ -1,0 +1,30 @@
+observation_id: spa.obs.hector.2008.naka.trap_e3oh_added.test5_2
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_hector
+context: {sex: male, habitat: peach orchard, population: Aichi population, locality: 'Kasugai City, Aichi Prefecture, Japan'}
+assay: field_trapping
+trap: {design: sticky_board, colour: null, supplier: Takeda Chemical Industries}
+dispenser: {design: rubber_septum, description: 'white rubber septum, 8 mm o.d. (Sigma-Aldrich)'}
+blend:
+- compound: spa.cmpd.e3_z13_18_oac
+  amount: {value: 500, unit: microgram}
+  purity: {value: 98, kind: unspecified, basis: stated, qualifier: more_than}
+- compound: spa.cmpd.z3_z13_18_oac
+  amount: {value: 500, unit: microgram}
+  purity: {value: 98, kind: unspecified, basis: stated, qualifier: more_than}
+- compound: spa.cmpd.e3_z13_18_oh
+  amount: {value: 100, unit: microgram}
+comparator:
+  description: E3:Z3,Z13-18:OAc 50:50, 1 mg
+  blend:
+  - compound: spa.cmpd.e3_z13_18_oac
+    amount: {value: 500, unit: microgram}
+    purity: {value: 98, kind: unspecified, basis: stated, qualifier: more_than}
+  - compound: spa.cmpd.z3_z13_18_oac
+    amount: {value: 500, unit: microgram}
+    purity: {value: 98, kind: unspecified, basis: stated, qualifier: more_than}
+effect: no_effect
+significance: not_significant
+dose: {value: 1100, unit: microgram}
+response: {measure: trap_catch, unit: mean_catch_per_trap, treatment_value: 18.3, comparator_value: 17.3, qualifier: as_reported}
+evidence: {reference: spa.ref.naka_2008, source_location: 'Table 4, Test V', author_statement: 'Adding neither E3,Z13-18:OH nor Z3,Z13-18:OH to the 50 : 50 mixture of E3,Z13-18:OAc and Z3,Z13-18:OAc influenced the number of males', notes: 'Test V, Kasugai, 1 June - 2 November 2005, n = 4; one-way ANOVA not significant, control excluded. 18.3 +- 8.2 vs 17.3 +- 9.9. The authors suggest males might not perceive the alcohols: an author hypothesis. Sticky board traps 1.5 m up, 7-10 m apart, checked every 2-3 days and rotated (Latin square); log-transformed one-way ANOVA and Tukey-Kramer HSD. Shin-Etsu acetates stated above 98 percent pure; alcohols by saponification of the acetates; E,E and Z,E acetates synthesised by the authors, purity not stated. Mean +- SE per trap.'}
