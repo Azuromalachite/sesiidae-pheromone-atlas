@@ -1,0 +1,22 @@
+{
+  "analysis_key": "687b21259a68c8605a6e07feb45d16973a0020d7",
+  "input": {
+    "computed_smiles": "CCCC/C=C\\CCCCCCCC/C=C\\CCOC(C)=O",
+    "structure_verified": true
+  },
+  "note": "fixture: the Atlas reads schema, analysis_key, validity.input, input.computed_smiles and structure_verified, and settings",
+  "schema": "other.record/1",
+  "settings": {
+    "basis": "def2-svp",
+    "iso": 0.002,
+    "solvent": null,
+    "solvent_esp": null,
+    "xc": "b3lyp"
+  },
+  "validity": {
+    "electronic": true,
+    "input": true,
+    "sites": true,
+    "surface": true
+  }
+}

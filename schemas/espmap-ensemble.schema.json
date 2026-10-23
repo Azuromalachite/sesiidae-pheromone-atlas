@@ -1,0 +1,171 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Azuromalachite/sesiidae-pheromone-atlas/schemas/espmap-ensemble.schema.json",
+  "title": "espmap conformer ensemble (Atlas index)",
+  "description": "computed/espmap/<slug>/<protocol>/ensemble.json: the Atlas's index of one espmap conformer ensemble for one Atlas compound or model. espmap computes; the Atlas checks that each member record is present, unchanged (sha256), an espmap.record/1 with the stated analysis_key, computed from this molecule (input.computed_smiles), structure-verified and input-valid, with the protocol's settings, and that the molecule is the Atlas compound (InChIKey). NPZ surfaces are not in git: they ship as release-bundle assets, verified against npz_sha256 when a bundle is built. When espmap's own ensemble record ships (v0.3), this file will be replaced by a new schema version, never edited in place.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "atlas_id",
+    "smiles",
+    "inchikey",
+    "protocol",
+    "settings",
+    "espmap",
+    "selection",
+    "members"
+  ],
+  "properties": {
+    "schema": {
+      "const": "spa.espmap_ensemble/0"
+    },
+    "atlas_id": {
+      "type": "string",
+      "pattern": "^spa\\.(cmpd|model)\\.[a-z0-9_]+$",
+      "description": "the compound or model record; its last segment is the directory slug"
+    },
+    "smiles": {
+      "type": "string",
+      "minLength": 1,
+      "description": "isomeric SMILES of the computed molecule. The identity check: re-canonicalised with the validator's RDKit and compared with the record's structure, so a standard InChIKey's merging of tautomers cannot pass a different molecule"
+    },
+    "inchikey": {
+      "type": "string",
+      "pattern": "^[A-Z]{14}-[A-Z]{10}-[A-Z]$",
+      "description": "second identity check: must equal the record's generated InChIKey"
+    },
+    "protocol": {
+      "type": "string",
+      "pattern": "^[a-z0-9_.-]+$",
+      "description": "must equal the directory name, e.g. b3lyp_def2-svp_gas_espmap-v0.2.1"
+    },
+    "settings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "xc",
+        "basis",
+        "solvent",
+        "solvent_esp"
+      ],
+      "description": "the protocol's settings; every member record's settings.xc, basis, solvent and solvent_esp must equal these",
+      "properties": {
+        "xc": {
+          "type": "string"
+        },
+        "basis": {
+          "type": "string"
+        },
+        "solvent": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "solvent_esp": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "espmap": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "version"
+      ],
+      "properties": {
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "commit": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[0-9a-f]{7,40}$"
+        }
+      }
+    },
+    "selection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "method"
+      ],
+      "description": "how the conformers were chosen, e.g. 'lowest 10 MMFF of 300 ETKDG, RMSD 0.5 A'",
+      "properties": {
+        "method": {
+          "type": "string",
+          "minLength": 1
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    },
+    "members": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "conformer",
+          "record",
+          "record_sha256",
+          "analysis_key",
+          "npz",
+          "npz_sha256",
+          "rg_angstrom",
+          "folded"
+        ],
+        "properties": {
+          "conformer": {
+            "type": "string",
+            "pattern": "^conf_[0-9]{2,}$"
+          },
+          "record": {
+            "type": "string",
+            "pattern": "^conformers/conf_[0-9]{2,}\\.json$",
+            "description": "relative to the protocol directory; must be conformers/<conformer>.json"
+          },
+          "record_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "analysis_key": {
+            "type": "string",
+            "minLength": 1,
+            "description": "must equal the record's analysis_key"
+          },
+          "npz": {
+            "type": "string",
+            "pattern": "^conf_[0-9]{2,}\\.npz$",
+            "description": "release-bundle asset name, beside ensemble.json in the bundle; must be <conformer>.npz"
+          },
+          "npz_sha256": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          },
+          "rg_angstrom": {
+            "type": "number",
+            "exclusiveMinimum": 0,
+            "description": "radius of gyration of the heavy atoms"
+          },
+          "folded": {
+            "type": "boolean",
+            "description": "the producer's extended/folded call; its rule goes in selection.notes"
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}

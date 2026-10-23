@@ -1,0 +1,324 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Azuromalachite/sesiidae-pheromone-atlas/schemas/teaching-bundle.schema.json",
+  "title": "Teaching bundle spa.teaching/0",
+  "description": "What a teaching consumer (Arrowfield) may read about one case. Built from the Atlas records named in teaching/cases/<case_id>.yaml by scripts/export_teaching_bundle.py. Every statement and both sides of every observed_contrast are assembled from record fields, unrounded and with nothing left out; case_title and case_label are the only text not built from records, and are the case author's words. derived/teaching/<case_id>.json carries no atlas_version (derived/ holds no release metadata); a copy exported with --atlas-version carries the commit or tag it was built from.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "bundle",
+    "case_id",
+    "case_title",
+    "schema_version",
+    "compounds",
+    "observations",
+    "comparisons",
+    "espmap"
+  ],
+  "properties": {
+    "bundle": {
+      "const": "spa.teaching/0"
+    },
+    "case_id": {
+      "type": "string"
+    },
+    "schema_version": {
+      "type": "string",
+      "description": "the Atlas record shape the bundle was built from"
+    },
+    "atlas_version": {
+      "type": "string",
+      "description": "commit or tag; only on exported copies"
+    },
+    "compounds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "atlas_id",
+          "inchikey",
+          "shorthand",
+          "systematic",
+          "occurrences"
+        ],
+        "properties": {
+          "atlas_id": {
+            "type": "string"
+          },
+          "inchikey": {
+            "type": "string"
+          },
+          "shorthand": {
+            "type": "string"
+          },
+          "systematic": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "occurrences": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "observation_id",
+                "roles"
+              ],
+              "properties": {
+                "observation_id": {
+                  "type": "string"
+                },
+                "roles": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "enum": [
+                      "treatment",
+                      "comparator",
+                      "detected",
+                      "not_detected",
+                      "not_tested",
+                      "antennal_active",
+                      "antennal_inconsistent",
+                      "antennal_inactive",
+                      "antennal_not_tested"
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "observation_id",
+          "observation_type",
+          "taxon",
+          "reference",
+          "context",
+          "source_location",
+          "statement"
+        ],
+        "properties": {
+          "observation_id": {
+            "type": "string"
+          },
+          "observation_type": {
+            "enum": [
+              "chemical_measurement",
+              "behavioural_response",
+              "electrophysiology"
+            ]
+          },
+          "taxon": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "atlas_id",
+              "accepted_name",
+              "name_as_reported"
+            ],
+            "properties": {
+              "atlas_id": {
+                "type": "string"
+              },
+              "accepted_name": {
+                "type": "string"
+              },
+              "name_as_reported": {
+                "type": "string"
+              }
+            }
+          },
+          "reference": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "atlas_id",
+              "citation",
+              "doi"
+            ],
+            "properties": {
+              "atlas_id": {
+                "type": "string"
+              },
+              "citation": {
+                "type": "string"
+              },
+              "doi": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            }
+          },
+          "context": {
+            "type": "object"
+          },
+          "experiment_id": {
+            "type": [
+              "string",
+              "array",
+              "null"
+            ]
+          },
+          "source_location": {
+            "type": "string"
+          },
+          "assay": {
+            "type": "string"
+          },
+          "treatment": {
+            "type": "array"
+          },
+          "comparator": {
+            "type": "object"
+          },
+          "outcome": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "effect",
+              "significance",
+              "response"
+            ],
+            "properties": {
+              "effect": {
+                "type": "string"
+              },
+              "significance": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "response": {
+                "type": [
+                  "object",
+                  "null"
+                ]
+              }
+            }
+          },
+          "materials": {
+            "type": "array"
+          },
+          "components": {
+            "type": "array"
+          },
+          "responses": {
+            "type": "array"
+          },
+          "statement": {
+            "type": "string",
+            "description": "one line assembled from the fields above"
+          },
+          "trap": {
+            "type": [
+              "object",
+              "null"
+            ]
+          },
+          "dispenser": {
+            "type": [
+              "object",
+              "null"
+            ]
+          },
+          "dose": {
+            "type": [
+              "object",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "comparisons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "case_label",
+          "observation_ids",
+          "observed_contrast"
+        ],
+        "properties": {
+          "observation_ids": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 2,
+            "items": {
+              "type": "string"
+            }
+          },
+          "observed_contrast": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "a",
+              "b"
+            ],
+            "properties": {
+              "a": {
+                "type": "string"
+              },
+              "b": {
+                "type": "string"
+              }
+            },
+            "description": "each side's statement, verbatim from its observation entry; the bundle draws no conclusion"
+          },
+          "case_label": {
+            "type": "string",
+            "description": "the case author's neutral name for the pair, not built from records"
+          }
+        }
+      }
+    },
+    "espmap": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "atlas_id",
+          "protocol",
+          "path",
+          "sha256"
+        ],
+        "properties": {
+          "atlas_id": {
+            "type": "string"
+          },
+          "protocol": {
+            "type": "string"
+          },
+          "path": {
+            "type": "string",
+            "description": "computed/espmap/<slug>/<protocol>/ensemble.json"
+          },
+          "sha256": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "case_title": {
+      "type": "string",
+      "description": "the case author's words, not built from records"
+    }
+  }
+}

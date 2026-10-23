@@ -1,0 +1,38 @@
+case_id: sesiidae-homework-1
+title: 'Sesiidae homework 1: one vocabulary, three readings'
+compounds:
+- spa.cmpd.z3_z13_18_oh
+- spa.cmpd.z3_z13_18_oac
+- spa.cmpd.e3_z13_18_oac
+- spa.cmpd.e2_z13_18_oac
+observations:
+# S. tenuis, Japan and Korea: what the gland holds, and what each population's lure tolerates
+- spa.obs.synanthedon_tenuis.naka_2013.gland
+- spa.obs.synanthedon_tenuis.yang_2012.gland
+- spa.obs.synanthedon_tenuis.naka_2013.trap_z3z13oh_added.test4_1
+- spa.obs.synanthedon_tenuis.yang_2012.trap_acetate_added
+# S. tipuliformis: the E3,Z13-18:OAc effect across places and years
+- spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.hungary
+- spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.tasmania_1986
+- spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.tasmania_1987
+- spa.obs.synanthedon_tipuliformis.suckling_2005.trap_e3.tasmania
+- spa.obs.synanthedon_tipuliformis.suckling_2005.trap_e3.new_zealand
+# S. tipuliformis: gland content against the sufficient lure
+- spa.obs.synanthedon_tipuliformis.mozuraitis_2006.gland
+- spa.obs.synanthedon_tipuliformis.mozuraitis_2006.trap_six
+comparisons:
+- label: S. tenuis gland, Japan and Korea
+  a: spa.obs.synanthedon_tenuis.naka_2013.gland
+  b: spa.obs.synanthedon_tenuis.yang_2012.gland
+- label: S. tenuis, the other population's compound added to each lure
+  a: spa.obs.synanthedon_tenuis.naka_2013.trap_z3z13oh_added.test4_1
+  b: spa.obs.synanthedon_tenuis.yang_2012.trap_acetate_added
+- label: S. tipuliformis, E3,Z13-18:OAc added, Hungary and Tasmania 1986
+  a: spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.hungary
+  b: spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.tasmania_1986
+- label: S. tipuliformis, E3,Z13-18:OAc added in Tasmania, 1986 and 2005
+  a: spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.tasmania_1986
+  b: spa.obs.synanthedon_tipuliformis.suckling_2005.trap_e3.tasmania
+- label: S. tipuliformis gland content and the six-compound lure
+  a: spa.obs.synanthedon_tipuliformis.mozuraitis_2006.gland
+  b: spa.obs.synanthedon_tipuliformis.mozuraitis_2006.trap_six

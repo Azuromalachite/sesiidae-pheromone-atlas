@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Azuromalachite/sesiidae-pheromone-atlas/schemas/teaching-case.schema.json",
+  "title": "Teaching case",
+  "description": "teaching/cases/<case_id>.yaml: which Atlas records a teaching bundle may assert. It names records only; everything the bundle says about them is built from the records by scripts/export_teaching_bundle.py. Teaching prose (acts, prompts, site labels) belongs to the consumer, not here.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "case_id",
+    "title",
+    "compounds",
+    "observations",
+    "comparisons"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_-]*$",
+      "description": "equals the file name without .yaml"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "^[^\\u0000-\\u001f\\u007f\\u202a-\\u202e\\u2066-\\u2069]+$",
+      "description": "the case author's words; no control or bidirectional-override characters"
+    },
+    "compounds": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^spa\\.cmpd\\.[a-z0-9_]+$"
+      },
+      "description": "compounds the case is about; each must occur in at least one listed observation"
+    },
+    "observations": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^spa\\.obs\\."
+      }
+    },
+    "comparisons": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "label",
+          "a",
+          "b"
+        ],
+        "properties": {
+          "label": {
+            "type": "string",
+            "minLength": 1,
+            "description": "a neutral name for the pair, never a conclusion",
+            "pattern": "^[^\\u0000-\\u001f\\u007f\\u202a-\\u202e\\u2066-\\u2069]+$"
+          },
+          "a": {
+            "type": "string",
+            "pattern": "^spa\\.obs\\."
+          },
+          "b": {
+            "type": "string",
+            "pattern": "^spa\\.obs\\."
+          }
+        }
+      }
+    }
+  }
+}

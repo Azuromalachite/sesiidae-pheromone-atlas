@@ -1,0 +1,1133 @@
+{
+  "bundle": "spa.teaching/0",
+  "case_id": "sesiidae-homework-1",
+  "case_title": "Sesiidae homework 1: one vocabulary, three readings",
+  "comparisons": [
+    {
+      "case_label": "S. tenuis gland, Japan and Korea",
+      "observation_ids": [
+        "spa.obs.synanthedon_tenuis.naka_2013.gland",
+        "spa.obs.synanthedon_tenuis.yang_2012.gland"
+      ],
+      "observed_contrast": {
+        "a": "Synanthedon tenuis (Japanese population), gland_extract: detected Z3,Z13-18:OAc [major; 2 ng_per_female approximate]; not detected E3,Z13-18:OAc, Z3,E13-18:OAc, E3,E13-18:OAc, E2,Z13-18:OAc, E3,Z13-18:OH, Z3,Z13-18:OH, E2,Z13-18:Al",
+        "b": "Synanthedon tenuis (Korean population), gland_extract: detected Z3,Z13-18:OH [major]; not detected Z3,Z13-18:OAc [limit 100 pg]"
+      }
+    },
+    {
+      "case_label": "S. tenuis, the other population's compound added to each lure",
+      "observation_ids": [
+        "spa.obs.synanthedon_tenuis.naka_2013.trap_z3z13oh_added.test4_1",
+        "spa.obs.synanthedon_tenuis.yang_2012.trap_acetate_added"
+      ],
+      "observed_contrast": {
+        "a": "Synanthedon tenuis (Japanese population), field_trapping: Z3,Z13-18:OAc 1000 ug + Z3,Z13-18:OH 100 ug vs Z3,Z13-18:OAc 1000 ug; dose 1100 ug: decreased, significant; 4.6 vs 17.0 mean_catch_per_trap (trap_catch, as_reported)",
+        "b": "Synanthedon tenuis (Korean population), field_trapping: Z3,Z13-18:OH 500 ug + Z3,Z13-18:OAc 50 ug vs Z3,Z13-18:OH 500 ug: decreased, not_reported; 0 vs 3.3 mean_catch_per_trap (trap_catch, as_reported)"
+      }
+    },
+    {
+      "case_label": "S. tipuliformis, E3,Z13-18:OAc added, Hungary and Tasmania 1986",
+      "observation_ids": [
+        "spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.hungary",
+        "spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.tasmania_1986"
+      ],
+      "observed_contrast": {
+        "a": "Synanthedon tipuliformis (Kemence, Pest County, Hungary), field_trapping: E2,Z13-18:OAc 100 ug + E3,Z13-18:OAc 3 ug vs E2,Z13-18:OAc 100 ug: increased, significant; 40.81 vs 15.38 mean_catch_per_trap (trap_catch, as_reported)",
+        "b": "Synanthedon tipuliformis (Huonville, Tasmania, Australia), field_trapping: E2,Z13-18:OAc 100 ug + E3,Z13-18:OAc 3 ug vs E2,Z13-18:OAc 100 ug: decreased, significant; 3.24 vs 6.73 mean_catch_per_trap (trap_catch, as_reported)"
+      }
+    },
+    {
+      "case_label": "S. tipuliformis, E3,Z13-18:OAc added in Tasmania, 1986 and 2005",
+      "observation_ids": [
+        "spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.tasmania_1986",
+        "spa.obs.synanthedon_tipuliformis.suckling_2005.trap_e3.tasmania"
+      ],
+      "observed_contrast": {
+        "a": "Synanthedon tipuliformis (Huonville, Tasmania, Australia), field_trapping: E2,Z13-18:OAc 100 ug + E3,Z13-18:OAc 3 ug vs E2,Z13-18:OAc 100 ug: decreased, significant; 3.24 vs 6.73 mean_catch_per_trap (trap_catch, as_reported)",
+        "b": "Synanthedon tipuliformis (near Hobart, Tasmania, Australia), field_trapping: E2,Z13-18:OAc 97 parts + E3,Z13-18:OAc 3 parts vs E2,Z13-18:OAc amount not given: no_effect, not_significant"
+      }
+    },
+    {
+      "case_label": "S. tipuliformis gland content and the six-compound lure",
+      "observation_ids": [
+        "spa.obs.synanthedon_tipuliformis.mozuraitis_2006.gland",
+        "spa.obs.synanthedon_tipuliformis.mozuraitis_2006.trap_six"
+      ],
+      "observed_contrast": {
+        "a": "Synanthedon tipuliformis (Kairėnai near Vilnius, Lithuania), gland_extract: detected E2,Z13-18:OAc [major; 100 relative_to_major as_reported], E3,Z13-18:OAc [minor; 0.7 relative_to_major as_reported], Z13-18:OAc [minor; 2.7 relative_to_major as_reported], E2,Z13-18:OH [minor; 3.2 relative_to_major as_reported], Z13-18:OH [trace], 18:OH [trace]",
+        "b": "Synanthedon tipuliformis (Kairėnai near Vilnius, Lithuania), field_trapping: E2,Z13-18:OAc 280 ug + E2,Z13-18:OH 9 ug + Z13-18:OAc 8.5 ug + E3,Z13-18:OAc 2.3 ug + Z13-18:OH 0.1 ug + 18:OH 0.1 ug vs E2,Z13-18:OAc 280 ug + E3,Z13-18:OAc 2.3 ug: no_effect, not_significant; 19.6 vs 20.8 mean_catch_per_trap (trap_catch, as_reported)"
+      }
+    }
+  ],
+  "compounds": [
+    {
+      "atlas_id": "spa.cmpd.z3_z13_18_oh",
+      "inchikey": "QBNCGBJHGBGHLS-NCCHCWSYSA-N",
+      "occurrences": [
+        {
+          "observation_id": "spa.obs.synanthedon_tenuis.naka_2013.gland",
+          "roles": [
+            "not_detected"
+          ]
+        },
+        {
+          "observation_id": "spa.obs.synanthedon_tenuis.yang_2012.gland",
+          "roles": [
+            "detected"
+          ]
+        },
+        {
+          "observation_id": "spa.obs.synanthedon_tenuis.naka_2013.trap_z3z13oh_added.test4_1",
+          "roles": [
+            "treatment"
+          ]
+        },
+        {
+          "observation_id": "spa.obs.synanthedon_tenuis.yang_2012.trap_acetate_added",
+          "roles": [
+            "treatment",
+            "comparator"
+          ]
+        }
+      ],
+      "shorthand": "Z3,Z13-18:OH",
+      "systematic": null
+    },
+    {
+      "atlas_id": "spa.cmpd.z3_z13_18_oac",
+      "inchikey": "VVJPJXKHBZNADP-DNNFRFAMSA-N",
+      "occurrences": [
+        {
+          "observation_id": "spa.obs.synanthedon_tenuis.naka_2013.gland",
+          "roles": [
+            "detected"
+          ]
+        },
+        {
+          "observation_id": "spa.obs.synanthedon_tenuis.yang_2012.gland",
+          "roles": [
+            "not_detected"
+          ]
+        },
+        {
+          "observation_id": "spa.obs.synanthedon_tenuis.naka_2013.trap_z3z13oh_added.test4_1",
+          "roles": [
+            "treatment",
+            "comparator"
+          ]
+        },
+        {
+          "observation_id": "spa.obs.synanthedon_tenuis.yang_2012.trap_acetate_added",
+          "roles": [
+            "treatment"
+          ]
+        }
+      ],
+      "shorthand": "Z3,Z13-18:OAc",
+      "systematic": null
+    },
+    {
+      "atlas_id": "spa.cmpd.e3_z13_18_oac",
+      "inchikey": "VVJPJXKHBZNADP-ZSTZHTMOSA-N",
+      "occurrences": [
+        {
+          "observation_id": "spa.obs.synanthedon_tenuis.naka_2013.gland",
+          "roles": [
+            "not_detected"
+          ]
+        },
+        {
+          "observation_id": "spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.hungary",
+          "roles": [
+            "treatment"
+          ]
+        },
+        {
+          "observation_id": "spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.tasmania_1986",
+          "roles": [
+            "treatment"
+          ]
+        },
+        {
+          "observation_id": "spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.tasmania_1987",
+          "roles": [
+            "treatment"
+          ]
+        },
+        {
+          "observation_id": "spa.obs.synanthedon_tipuliformis.suckling_2005.trap_e3.tasmania",
+          "roles": [
+            "treatment"
+          ]
+        },
+        {
+          "observation_id": "spa.obs.synanthedon_tipuliformis.suckling_2005.trap_e3.new_zealand",
+          "roles": [
+            "treatment"
+          ]
+        },
+        {
+          "observation_id": "spa.obs.synanthedon_tipuliformis.mozuraitis_2006.gland",
+          "roles": [
+            "detected"
+          ]
+        },
+        {
+          "observation_id": "spa.obs.synanthedon_tipuliformis.mozuraitis_2006.trap_six",
+          "roles": [
+            "treatment",
+            "comparator"
+          ]
+        }
+      ],
+      "shorthand": "E3,Z13-18:OAc",
+      "systematic": null
+    },
+    {
+      "atlas_id": "spa.cmpd.e2_z13_18_oac",
+      "inchikey": "NWRSOYAGXTXEMK-NHRIVICHSA-N",
+      "occurrences": [
+        {
+          "observation_id": "spa.obs.synanthedon_tenuis.naka_2013.gland",
+          "roles": [
+            "not_detected"
+          ]
+        },
+        {
+          "observation_id": "spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.hungary",
+          "roles": [
+            "treatment",
+            "comparator"
+          ]
+        },
+        {
+          "observation_id": "spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.tasmania_1986",
+          "roles": [
+            "treatment",
+            "comparator"
+          ]
+        },
+        {
+          "observation_id": "spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.tasmania_1987",
+          "roles": [
+            "treatment",
+            "comparator"
+          ]
+        },
+        {
+          "observation_id": "spa.obs.synanthedon_tipuliformis.suckling_2005.trap_e3.tasmania",
+          "roles": [
+            "treatment",
+            "comparator"
+          ]
+        },
+        {
+          "observation_id": "spa.obs.synanthedon_tipuliformis.suckling_2005.trap_e3.new_zealand",
+          "roles": [
+            "treatment",
+            "comparator"
+          ]
+        },
+        {
+          "observation_id": "spa.obs.synanthedon_tipuliformis.mozuraitis_2006.gland",
+          "roles": [
+            "detected"
+          ]
+        },
+        {
+          "observation_id": "spa.obs.synanthedon_tipuliformis.mozuraitis_2006.trap_six",
+          "roles": [
+            "treatment",
+            "comparator"
+          ]
+        }
+      ],
+      "shorthand": "E2,Z13-18:OAc",
+      "systematic": null
+    }
+  ],
+  "espmap": [],
+  "observations": [
+    {
+      "components": [
+        {
+          "abundance_class": "major",
+          "atlas_id": "spa.cmpd.z3_z13_18_oac",
+          "detected": true,
+          "detection_limit": null,
+          "identification": "confirmed",
+          "measurements": [
+            {
+              "qualifier": "approximate",
+              "unit": "ng_per_female",
+              "value": 2
+            }
+          ],
+          "method": "gland_extract_gc_ead_florisil_and_gc_ms_db23_vs_four_3_13_isomers"
+        },
+        {
+          "abundance_class": null,
+          "atlas_id": "spa.cmpd.e3_z13_18_oac",
+          "detected": false,
+          "detection_limit": null,
+          "identification": null,
+          "measurements": [],
+          "method": "gland_extract_gc_ms_mass_chromatograms_db23"
+        },
+        {
+          "abundance_class": null,
+          "atlas_id": "spa.cmpd.z3_e13_18_oac",
+          "detected": false,
+          "detection_limit": null,
+          "identification": null,
+          "measurements": [],
+          "method": "gland_extract_gc_ms_mass_chromatograms_db23"
+        },
+        {
+          "abundance_class": null,
+          "atlas_id": "spa.cmpd.e3_e13_18_oac",
+          "detected": false,
+          "detection_limit": null,
+          "identification": null,
+          "measurements": [],
+          "method": "gland_extract_gc_ms_mass_chromatograms_db23"
+        },
+        {
+          "abundance_class": null,
+          "atlas_id": "spa.cmpd.e2_z13_18_oac",
+          "detected": false,
+          "detection_limit": null,
+          "identification": null,
+          "measurements": [],
+          "method": "gland_extract_gc_ms_mass_chromatograms_db23"
+        },
+        {
+          "abundance_class": null,
+          "atlas_id": "spa.cmpd.e3_z13_18_oh",
+          "detected": false,
+          "detection_limit": null,
+          "identification": null,
+          "measurements": [],
+          "method": "gland_extract_gc_ms_mass_chromatograms_db23"
+        },
+        {
+          "abundance_class": null,
+          "atlas_id": "spa.cmpd.z3_z13_18_oh",
+          "detected": false,
+          "detection_limit": null,
+          "identification": null,
+          "measurements": [],
+          "method": "gland_extract_gc_ms_mass_chromatograms_db23"
+        },
+        {
+          "abundance_class": null,
+          "atlas_id": "spa.cmpd.e2_z13_18_al",
+          "detected": false,
+          "detection_limit": null,
+          "identification": null,
+          "measurements": [],
+          "method": "gland_extract_gc_ms_mass_chromatograms_db23"
+        }
+      ],
+      "context": {
+        "habitat": null,
+        "locality": "Toyota City (formerly Fujioka Town), Aichi Prefecture, Japan",
+        "population": "Japanese population",
+        "sex": "female"
+      },
+      "experiment_id": null,
+      "materials": [
+        "gland_extract"
+      ],
+      "observation_id": "spa.obs.synanthedon_tenuis.naka_2013.gland",
+      "observation_type": "chemical_measurement",
+      "reference": {
+        "atlas_id": "spa.ref.naka_2013",
+        "citation": "Naka H, Suzuki T, Watarai T, Horie Y, Mochizuki F, Mochizuki A, Tsuchida K, Arita Y, Ando T (2013) Identification of the sex pheromone secreted by Synanthedon tenuis (Lepidoptera: Sesiidae). Appl Entomol Zool 48:27-33.",
+        "doi": "10.1007/s13355-012-0148-0"
+      },
+      "source_location": "Results; Figs. 1-2",
+      "statement": "Synanthedon tenuis (Japanese population), gland_extract: detected Z3,Z13-18:OAc [major; 2 ng_per_female approximate]; not detected E3,Z13-18:OAc, Z3,E13-18:OAc, E3,E13-18:OAc, E2,Z13-18:OAc, E3,Z13-18:OH, Z3,Z13-18:OH, E2,Z13-18:Al",
+      "taxon": {
+        "accepted_name": "Synanthedon tenuis",
+        "atlas_id": "spa.tax.synanthedon_tenuis",
+        "name_as_reported": "Synanthedon tenuis"
+      }
+    },
+    {
+      "components": [
+        {
+          "abundance_class": "major",
+          "atlas_id": "spa.cmpd.z3_z13_18_oh",
+          "detected": true,
+          "detection_limit": null,
+          "identification": null,
+          "measurements": [],
+          "method": "gland_extract_gc_ms_db5ms_and_db23_vs_standards_dmds"
+        },
+        {
+          "abundance_class": null,
+          "atlas_id": "spa.cmpd.z3_z13_18_oac",
+          "detected": false,
+          "detection_limit": {
+            "unit": "picogram",
+            "value": 100
+          },
+          "identification": null,
+          "measurements": [],
+          "method": "gland_extract_gc_ms_db5ms_and_db23_vs_standards"
+        }
+      ],
+      "context": {
+        "habitat": null,
+        "locality": "Gimhae, Republic of Korea",
+        "population": "Korean population",
+        "sex": "female"
+      },
+      "experiment_id": null,
+      "materials": [
+        "gland_extract"
+      ],
+      "observation_id": "spa.obs.synanthedon_tenuis.yang_2012.gland",
+      "observation_type": "chemical_measurement",
+      "reference": {
+        "atlas_id": "spa.ref.yang_2012",
+        "citation": "Yang CY, Lee HS, Park CG (2012) Sex pheromone of the smaller clearwing moth Synanthedon tenuis (Butler). J Chem Ecol 38(9):1159-1162.",
+        "doi": "10.1007/s10886-012-0179-6"
+      },
+      "source_location": "Results and Discussion; Fig. 1",
+      "statement": "Synanthedon tenuis (Korean population), gland_extract: detected Z3,Z13-18:OH [major]; not detected Z3,Z13-18:OAc [limit 100 pg]",
+      "taxon": {
+        "accepted_name": "Synanthedon tenuis",
+        "atlas_id": "spa.tax.synanthedon_tenuis",
+        "name_as_reported": "Synanthedon tenuis"
+      }
+    },
+    {
+      "assay": "field_trapping",
+      "comparator": {
+        "blend": [
+          {
+            "amount": {
+              "unit": "microgram",
+              "value": 1000
+            },
+            "atlas_id": "spa.cmpd.z3_z13_18_oac",
+            "purity": {
+              "basis": "stated",
+              "kind": "unspecified",
+              "qualifier": "more_than",
+              "value": 98
+            }
+          }
+        ],
+        "description": "Z3,Z13-18:OAc alone, 1000 ug",
+        "dispenser": null,
+        "trap": null
+      },
+      "context": {
+        "habitat": "persimmon orchard",
+        "locality": "Motosu City, Gifu Prefecture, Japan",
+        "population": "Japanese population",
+        "sex": "male"
+      },
+      "dispenser": {
+        "description": "white rubber septum, 8 mm o.d. (Sigma-Aldrich)",
+        "design": "rubber_septum"
+      },
+      "dose": {
+        "unit": "microgram",
+        "value": 1100
+      },
+      "experiment_id": "spa.exp.naka_2013.test4_1",
+      "observation_id": "spa.obs.synanthedon_tenuis.naka_2013.trap_z3z13oh_added.test4_1",
+      "observation_type": "behavioural_response",
+      "outcome": {
+        "effect": "decreased",
+        "response": {
+          "comparator_value": 17.0,
+          "measure": "trap_catch",
+          "qualifier": "as_reported",
+          "treatment_value": 4.6,
+          "unit": "mean_catch_per_trap"
+        },
+        "significance": "significant"
+      },
+      "reference": {
+        "atlas_id": "spa.ref.naka_2013",
+        "citation": "Naka H, Suzuki T, Watarai T, Horie Y, Mochizuki F, Mochizuki A, Tsuchida K, Arita Y, Ando T (2013) Identification of the sex pheromone secreted by Synanthedon tenuis (Lepidoptera: Sesiidae). Appl Entomol Zool 48:27-33.",
+        "doi": "10.1007/s13355-012-0148-0"
+      },
+      "source_location": "Table 4, test IV",
+      "statement": "Synanthedon tenuis (Japanese population), field_trapping: Z3,Z13-18:OAc 1000 ug + Z3,Z13-18:OH 100 ug vs Z3,Z13-18:OAc 1000 ug; dose 1100 ug: decreased, significant; 4.6 vs 17.0 mean_catch_per_trap (trap_catch, as_reported)",
+      "taxon": {
+        "accepted_name": "Synanthedon tenuis",
+        "atlas_id": "spa.tax.synanthedon_tenuis",
+        "name_as_reported": "Synanthedon tenuis"
+      },
+      "trap": {
+        "colour": null,
+        "design": "sticky_board",
+        "supplier": "Takeda Chemical Industries"
+      },
+      "treatment": [
+        {
+          "amount": {
+            "unit": "microgram",
+            "value": 1000
+          },
+          "atlas_id": "spa.cmpd.z3_z13_18_oac",
+          "purity": {
+            "basis": "stated",
+            "kind": "unspecified",
+            "qualifier": "more_than",
+            "value": 98
+          }
+        },
+        {
+          "amount": {
+            "unit": "microgram",
+            "value": 100
+          },
+          "atlas_id": "spa.cmpd.z3_z13_18_oh",
+          "purity": null
+        }
+      ]
+    },
+    {
+      "assay": "field_trapping",
+      "comparator": {
+        "blend": [
+          {
+            "amount": {
+              "unit": "microgram",
+              "value": 500
+            },
+            "atlas_id": "spa.cmpd.z3_z13_18_oh",
+            "purity": null
+          }
+        ],
+        "description": "Z3,Z13-18:OH alone, 500 micrograms",
+        "dispenser": null,
+        "trap": null
+      },
+      "context": {
+        "habitat": "persimmon orchard",
+        "locality": "Gimhae, Republic of Korea",
+        "population": "Korean population",
+        "sex": "male"
+      },
+      "dispenser": null,
+      "dose": null,
+      "experiment_id": "spa.exp.yang_2012.trial_1",
+      "observation_id": "spa.obs.synanthedon_tenuis.yang_2012.trap_acetate_added",
+      "observation_type": "behavioural_response",
+      "outcome": {
+        "effect": "decreased",
+        "response": {
+          "comparator_value": 3.3,
+          "measure": "trap_catch",
+          "qualifier": "as_reported",
+          "treatment_value": 0,
+          "unit": "mean_catch_per_trap"
+        },
+        "significance": "not_reported"
+      },
+      "reference": {
+        "atlas_id": "spa.ref.yang_2012",
+        "citation": "Yang CY, Lee HS, Park CG (2012) Sex pheromone of the smaller clearwing moth Synanthedon tenuis (Butler). J Chem Ecol 38(9):1159-1162.",
+        "doi": "10.1007/s10886-012-0179-6"
+      },
+      "source_location": "Table 1, trial 1",
+      "statement": "Synanthedon tenuis (Korean population), field_trapping: Z3,Z13-18:OH 500 ug + Z3,Z13-18:OAc 50 ug vs Z3,Z13-18:OH 500 ug: decreased, not_reported; 0 vs 3.3 mean_catch_per_trap (trap_catch, as_reported)",
+      "taxon": {
+        "accepted_name": "Synanthedon tenuis",
+        "atlas_id": "spa.tax.synanthedon_tenuis",
+        "name_as_reported": "Synanthedon tenuis"
+      },
+      "trap": null,
+      "treatment": [
+        {
+          "amount": {
+            "unit": "microgram",
+            "value": 500
+          },
+          "atlas_id": "spa.cmpd.z3_z13_18_oh",
+          "purity": null
+        },
+        {
+          "amount": {
+            "unit": "microgram",
+            "value": 50
+          },
+          "atlas_id": "spa.cmpd.z3_z13_18_oac",
+          "purity": null
+        }
+      ]
+    },
+    {
+      "assay": "field_trapping",
+      "comparator": {
+        "blend": [
+          {
+            "amount": {
+              "unit": "microgram",
+              "value": 100
+            },
+            "atlas_id": "spa.cmpd.e2_z13_18_oac",
+            "purity": null
+          }
+        ],
+        "description": "E2,Z13-18:OAc alone, 100 micrograms",
+        "dispenser": null,
+        "trap": null
+      },
+      "context": {
+        "habitat": "black currant plantation",
+        "locality": "Kemence, Pest County, Hungary",
+        "population": null,
+        "sex": "male"
+      },
+      "dispenser": null,
+      "dose": null,
+      "experiment_id": "spa.exp.szocs_1990.table5_hungary",
+      "observation_id": "spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.hungary",
+      "observation_type": "behavioural_response",
+      "outcome": {
+        "effect": "increased",
+        "response": {
+          "comparator_value": 15.38,
+          "measure": "trap_catch",
+          "qualifier": "as_reported",
+          "treatment_value": 40.81,
+          "unit": "mean_catch_per_trap"
+        },
+        "significance": "significant"
+      },
+      "reference": {
+        "atlas_id": "spa.ref.szocs_1990",
+        "citation": "Szöcs G, Miller LA, Thomas W, Vickers RA, Rothschild GHL, Schwarz M, Tóth M (1990) Compounds modifying male responsiveness to main female sex pheromone component of the currant borer, Synanthedon tipuliformis Clerck (Lepidoptera: Sesiidae) under field conditions. J Chem Ecol 16(4):1289-1305.",
+        "doi": "10.1007/BF01021027"
+      },
+      "source_location": "Table 5",
+      "statement": "Synanthedon tipuliformis (Kemence, Pest County, Hungary), field_trapping: E2,Z13-18:OAc 100 ug + E3,Z13-18:OAc 3 ug vs E2,Z13-18:OAc 100 ug: increased, significant; 40.81 vs 15.38 mean_catch_per_trap (trap_catch, as_reported)",
+      "taxon": {
+        "accepted_name": "Synanthedon tipuliformis",
+        "atlas_id": "spa.tax.synanthedon_tipuliformis",
+        "name_as_reported": "Synanthedon tipuliformis"
+      },
+      "trap": null,
+      "treatment": [
+        {
+          "amount": {
+            "unit": "microgram",
+            "value": 100
+          },
+          "atlas_id": "spa.cmpd.e2_z13_18_oac",
+          "purity": null
+        },
+        {
+          "amount": {
+            "unit": "microgram",
+            "value": 3
+          },
+          "atlas_id": "spa.cmpd.e3_z13_18_oac",
+          "purity": null
+        }
+      ]
+    },
+    {
+      "assay": "field_trapping",
+      "comparator": {
+        "blend": [
+          {
+            "amount": {
+              "unit": "microgram",
+              "value": 100
+            },
+            "atlas_id": "spa.cmpd.e2_z13_18_oac",
+            "purity": null
+          }
+        ],
+        "description": "E2,Z13-18:OAc alone, 100 micrograms",
+        "dispenser": null,
+        "trap": null
+      },
+      "context": {
+        "habitat": "black currant plantation",
+        "locality": "Huonville, Tasmania, Australia",
+        "population": null,
+        "sex": "male"
+      },
+      "dispenser": null,
+      "dose": null,
+      "experiment_id": "spa.exp.szocs_1990.table5_tasmania_1986",
+      "observation_id": "spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.tasmania_1986",
+      "observation_type": "behavioural_response",
+      "outcome": {
+        "effect": "decreased",
+        "response": {
+          "comparator_value": 6.73,
+          "measure": "trap_catch",
+          "qualifier": "as_reported",
+          "treatment_value": 3.24,
+          "unit": "mean_catch_per_trap"
+        },
+        "significance": "significant"
+      },
+      "reference": {
+        "atlas_id": "spa.ref.szocs_1990",
+        "citation": "Szöcs G, Miller LA, Thomas W, Vickers RA, Rothschild GHL, Schwarz M, Tóth M (1990) Compounds modifying male responsiveness to main female sex pheromone component of the currant borer, Synanthedon tipuliformis Clerck (Lepidoptera: Sesiidae) under field conditions. J Chem Ecol 16(4):1289-1305.",
+        "doi": "10.1007/BF01021027"
+      },
+      "source_location": "Table 5",
+      "statement": "Synanthedon tipuliformis (Huonville, Tasmania, Australia), field_trapping: E2,Z13-18:OAc 100 ug + E3,Z13-18:OAc 3 ug vs E2,Z13-18:OAc 100 ug: decreased, significant; 3.24 vs 6.73 mean_catch_per_trap (trap_catch, as_reported)",
+      "taxon": {
+        "accepted_name": "Synanthedon tipuliformis",
+        "atlas_id": "spa.tax.synanthedon_tipuliformis",
+        "name_as_reported": "Synanthedon tipuliformis"
+      },
+      "trap": null,
+      "treatment": [
+        {
+          "amount": {
+            "unit": "microgram",
+            "value": 100
+          },
+          "atlas_id": "spa.cmpd.e2_z13_18_oac",
+          "purity": null
+        },
+        {
+          "amount": {
+            "unit": "microgram",
+            "value": 3
+          },
+          "atlas_id": "spa.cmpd.e3_z13_18_oac",
+          "purity": null
+        }
+      ]
+    },
+    {
+      "assay": "field_trapping",
+      "comparator": {
+        "blend": [
+          {
+            "amount": {
+              "unit": "microgram",
+              "value": 10
+            },
+            "atlas_id": "spa.cmpd.e2_z13_18_oac",
+            "purity": null
+          }
+        ],
+        "description": "E2,Z13-18:OAc alone, 10 micrograms",
+        "dispenser": null,
+        "trap": null
+      },
+      "context": {
+        "habitat": "black currant plantation",
+        "locality": "Slateford, Tasmania, Australia",
+        "population": null,
+        "sex": "male"
+      },
+      "dispenser": null,
+      "dose": null,
+      "experiment_id": "spa.exp.szocs_1990.table6_tasmania_1987",
+      "observation_id": "spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.tasmania_1987",
+      "observation_type": "behavioural_response",
+      "outcome": {
+        "effect": "no_effect",
+        "response": {
+          "comparator_value": 0.19,
+          "measure": "trap_catch",
+          "qualifier": "as_reported",
+          "treatment_value": 0.15,
+          "unit": "mean_catch_per_trap"
+        },
+        "significance": "not_significant"
+      },
+      "reference": {
+        "atlas_id": "spa.ref.szocs_1990",
+        "citation": "Szöcs G, Miller LA, Thomas W, Vickers RA, Rothschild GHL, Schwarz M, Tóth M (1990) Compounds modifying male responsiveness to main female sex pheromone component of the currant borer, Synanthedon tipuliformis Clerck (Lepidoptera: Sesiidae) under field conditions. J Chem Ecol 16(4):1289-1305.",
+        "doi": "10.1007/BF01021027"
+      },
+      "source_location": "Table 6",
+      "statement": "Synanthedon tipuliformis (Slateford, Tasmania, Australia), field_trapping: E2,Z13-18:OAc 10 ug + E3,Z13-18:OAc 0.3 ug vs E2,Z13-18:OAc 10 ug: no_effect, not_significant; 0.15 vs 0.19 mean_catch_per_trap (trap_catch, as_reported)",
+      "taxon": {
+        "accepted_name": "Synanthedon tipuliformis",
+        "atlas_id": "spa.tax.synanthedon_tipuliformis",
+        "name_as_reported": "Synanthedon tipuliformis"
+      },
+      "trap": null,
+      "treatment": [
+        {
+          "amount": {
+            "unit": "microgram",
+            "value": 10
+          },
+          "atlas_id": "spa.cmpd.e2_z13_18_oac",
+          "purity": null
+        },
+        {
+          "amount": {
+            "unit": "microgram",
+            "value": 0.3
+          },
+          "atlas_id": "spa.cmpd.e3_z13_18_oac",
+          "purity": null
+        }
+      ]
+    },
+    {
+      "assay": "field_trapping",
+      "comparator": {
+        "blend": [
+          {
+            "amount": null,
+            "atlas_id": "spa.cmpd.e2_z13_18_oac",
+            "purity": null
+          }
+        ],
+        "description": "E2,Z13-18:OAc alone, same doses (100 and 1000 micrograms)",
+        "dispenser": null,
+        "trap": null
+      },
+      "context": {
+        "habitat": "untreated commercial black currant block",
+        "locality": "near Hobart, Tasmania, Australia",
+        "population": null,
+        "sex": "male"
+      },
+      "dispenser": null,
+      "dose": null,
+      "experiment_id": "spa.exp.suckling_2005.exp7_tasmania",
+      "observation_id": "spa.obs.synanthedon_tipuliformis.suckling_2005.trap_e3.tasmania",
+      "observation_type": "behavioural_response",
+      "outcome": {
+        "effect": "no_effect",
+        "response": null,
+        "significance": "not_significant"
+      },
+      "reference": {
+        "atlas_id": "spa.ref.suckling_2005",
+        "citation": "Suckling DM, Gibb AR, Burnip GM, Snelling C, de Ruiter J, Langford G, El-Sayed AM (2005) Optimization of pheromone lure and trap characteristics for currant clearwing, Synanthedon tipuliformis. J Chem Ecol 31:393-406.",
+        "doi": "10.1007/s10886-005-1348-7"
+      },
+      "source_location": "Experiment 7; Fig. 6",
+      "statement": "Synanthedon tipuliformis (near Hobart, Tasmania, Australia), field_trapping: E2,Z13-18:OAc 97 parts + E3,Z13-18:OAc 3 parts vs E2,Z13-18:OAc amount not given: no_effect, not_significant",
+      "taxon": {
+        "accepted_name": "Synanthedon tipuliformis",
+        "atlas_id": "spa.tax.synanthedon_tipuliformis",
+        "name_as_reported": "Synanthedon tipuliformis"
+      },
+      "trap": null,
+      "treatment": [
+        {
+          "amount": {
+            "unit": "ratio_part",
+            "value": 97
+          },
+          "atlas_id": "spa.cmpd.e2_z13_18_oac",
+          "purity": null
+        },
+        {
+          "amount": {
+            "unit": "ratio_part",
+            "value": 3
+          },
+          "atlas_id": "spa.cmpd.e3_z13_18_oac",
+          "purity": null
+        }
+      ]
+    },
+    {
+      "assay": "field_trapping",
+      "comparator": {
+        "blend": [
+          {
+            "amount": null,
+            "atlas_id": "spa.cmpd.e2_z13_18_oac",
+            "purity": null
+          }
+        ],
+        "description": "E2,Z13-18:OAc alone, same 1 mg dose",
+        "dispenser": null,
+        "trap": null
+      },
+      "context": {
+        "habitat": "black currant block without mating disruption",
+        "locality": "Edenfield, Canterbury, New Zealand",
+        "population": null,
+        "sex": "male"
+      },
+      "dispenser": null,
+      "dose": {
+        "unit": "milligram",
+        "value": 1
+      },
+      "experiment_id": "spa.exp.suckling_2005.exp2_new_zealand",
+      "observation_id": "spa.obs.synanthedon_tipuliformis.suckling_2005.trap_e3.new_zealand",
+      "observation_type": "behavioural_response",
+      "outcome": {
+        "effect": "no_effect",
+        "response": {
+          "comparator_value": 481.0,
+          "measure": "trap_catch",
+          "qualifier": "as_reported",
+          "treatment_value": 489.7,
+          "unit": "mean_catch_per_trap"
+        },
+        "significance": "not_reported"
+      },
+      "reference": {
+        "atlas_id": "spa.ref.suckling_2005",
+        "citation": "Suckling DM, Gibb AR, Burnip GM, Snelling C, de Ruiter J, Langford G, El-Sayed AM (2005) Optimization of pheromone lure and trap characteristics for currant clearwing, Synanthedon tipuliformis. J Chem Ecol 31:393-406.",
+        "doi": "10.1007/s10886-005-1348-7"
+      },
+      "source_location": "Experiment 2; Table 1",
+      "statement": "Synanthedon tipuliformis (Edenfield, Canterbury, New Zealand), field_trapping: E2,Z13-18:OAc 97 parts + E3,Z13-18:OAc 3 parts vs E2,Z13-18:OAc amount not given; dose 1 mg: no_effect, not_reported; 489.7 vs 481.0 mean_catch_per_trap (trap_catch, as_reported)",
+      "taxon": {
+        "accepted_name": "Synanthedon tipuliformis",
+        "atlas_id": "spa.tax.synanthedon_tipuliformis",
+        "name_as_reported": "Synanthedon tipuliformis"
+      },
+      "trap": null,
+      "treatment": [
+        {
+          "amount": {
+            "unit": "ratio_part",
+            "value": 97
+          },
+          "atlas_id": "spa.cmpd.e2_z13_18_oac",
+          "purity": null
+        },
+        {
+          "amount": {
+            "unit": "ratio_part",
+            "value": 3
+          },
+          "atlas_id": "spa.cmpd.e3_z13_18_oac",
+          "purity": null
+        }
+      ]
+    },
+    {
+      "components": [
+        {
+          "abundance_class": "major",
+          "atlas_id": "spa.cmpd.e2_z13_18_oac",
+          "detected": true,
+          "detection_limit": null,
+          "identification": null,
+          "measurements": [
+            {
+              "qualifier": "as_reported",
+              "unit": "relative_to_major",
+              "value": 100
+            }
+          ],
+          "method": "gland_extract_gc_ms_two_columns_vs_standards"
+        },
+        {
+          "abundance_class": "minor",
+          "atlas_id": "spa.cmpd.e3_z13_18_oac",
+          "detected": true,
+          "detection_limit": null,
+          "identification": null,
+          "measurements": [
+            {
+              "qualifier": "as_reported",
+              "unit": "relative_to_major",
+              "value": 0.7
+            }
+          ],
+          "method": "gland_extract_gc_ms_two_columns_vs_standards"
+        },
+        {
+          "abundance_class": "minor",
+          "atlas_id": "spa.cmpd.z13_18_oac",
+          "detected": true,
+          "detection_limit": null,
+          "identification": null,
+          "measurements": [
+            {
+              "qualifier": "as_reported",
+              "unit": "relative_to_major",
+              "value": 2.7
+            }
+          ],
+          "method": "gland_extract_gc_ms_two_columns_vs_standards"
+        },
+        {
+          "abundance_class": "minor",
+          "atlas_id": "spa.cmpd.e2_z13_18_oh",
+          "detected": true,
+          "detection_limit": null,
+          "identification": null,
+          "measurements": [
+            {
+              "qualifier": "as_reported",
+              "unit": "relative_to_major",
+              "value": 3.2
+            }
+          ],
+          "method": "gland_extract_gc_ms_two_columns_vs_standards"
+        },
+        {
+          "abundance_class": "trace",
+          "atlas_id": "spa.cmpd.z13_18_oh",
+          "detected": true,
+          "detection_limit": null,
+          "identification": null,
+          "measurements": [],
+          "method": "gland_extract_gc_ms_two_columns_vs_standards"
+        },
+        {
+          "abundance_class": "trace",
+          "atlas_id": "spa.cmpd.18_oh",
+          "detected": true,
+          "detection_limit": null,
+          "identification": null,
+          "measurements": [],
+          "method": "gland_extract_gc_ms_two_columns_vs_standards"
+        }
+      ],
+      "context": {
+        "habitat": null,
+        "locality": "Kairėnai near Vilnius, Lithuania",
+        "population": null,
+        "sex": "female"
+      },
+      "experiment_id": null,
+      "materials": [
+        "gland_extract"
+      ],
+      "observation_id": "spa.obs.synanthedon_tipuliformis.mozuraitis_2006.gland",
+      "observation_type": "chemical_measurement",
+      "reference": {
+        "atlas_id": "spa.ref.mozuraitis_2006",
+        "citation": "Mozūraitis R, Karalius V, Būda V, Borg-Karlson AK (2006) Inter- and intraspecific activities of compounds derived from sex pheromone glands of currant borer, Synanthedon tipuliformis (Clerck) (Lepidoptera: Sesiidae). Z Naturforsch C 61(3-4):278-284.",
+        "doi": "10.1515/znc-2006-3-421"
+      },
+      "source_location": "Results; Fig. 1",
+      "statement": "Synanthedon tipuliformis (Kairėnai near Vilnius, Lithuania), gland_extract: detected E2,Z13-18:OAc [major; 100 relative_to_major as_reported], E3,Z13-18:OAc [minor; 0.7 relative_to_major as_reported], Z13-18:OAc [minor; 2.7 relative_to_major as_reported], E2,Z13-18:OH [minor; 3.2 relative_to_major as_reported], Z13-18:OH [trace], 18:OH [trace]",
+      "taxon": {
+        "accepted_name": "Synanthedon tipuliformis",
+        "atlas_id": "spa.tax.synanthedon_tipuliformis",
+        "name_as_reported": "Synanthedon tipuliformis"
+      }
+    },
+    {
+      "assay": "field_trapping",
+      "comparator": {
+        "blend": [
+          {
+            "amount": {
+              "unit": "microgram",
+              "value": 280
+            },
+            "atlas_id": "spa.cmpd.e2_z13_18_oac",
+            "purity": null
+          },
+          {
+            "amount": {
+              "unit": "microgram",
+              "value": 2.3
+            },
+            "atlas_id": "spa.cmpd.e3_z13_18_oac",
+            "purity": null
+          }
+        ],
+        "description": "binary E2,Z13-18:OAc 280 + E3,Z13-18:OAc 2.3 micrograms",
+        "dispenser": null,
+        "trap": null
+      },
+      "context": {
+        "habitat": "black currant plantation",
+        "locality": "Kairėnai near Vilnius, Lithuania",
+        "population": null,
+        "sex": "male"
+      },
+      "dispenser": null,
+      "dose": null,
+      "experiment_id": "spa.exp.mozuraitis_2006.table1_kairenai",
+      "observation_id": "spa.obs.synanthedon_tipuliformis.mozuraitis_2006.trap_six",
+      "observation_type": "behavioural_response",
+      "outcome": {
+        "effect": "no_effect",
+        "response": {
+          "comparator_value": 20.8,
+          "measure": "trap_catch",
+          "qualifier": "as_reported",
+          "treatment_value": 19.6,
+          "unit": "mean_catch_per_trap"
+        },
+        "significance": "not_significant"
+      },
+      "reference": {
+        "atlas_id": "spa.ref.mozuraitis_2006",
+        "citation": "Mozūraitis R, Karalius V, Būda V, Borg-Karlson AK (2006) Inter- and intraspecific activities of compounds derived from sex pheromone glands of currant borer, Synanthedon tipuliformis (Clerck) (Lepidoptera: Sesiidae). Z Naturforsch C 61(3-4):278-284.",
+        "doi": "10.1515/znc-2006-3-421"
+      },
+      "source_location": "Table I",
+      "statement": "Synanthedon tipuliformis (Kairėnai near Vilnius, Lithuania), field_trapping: E2,Z13-18:OAc 280 ug + E2,Z13-18:OH 9 ug + Z13-18:OAc 8.5 ug + E3,Z13-18:OAc 2.3 ug + Z13-18:OH 0.1 ug + 18:OH 0.1 ug vs E2,Z13-18:OAc 280 ug + E3,Z13-18:OAc 2.3 ug: no_effect, not_significant; 19.6 vs 20.8 mean_catch_per_trap (trap_catch, as_reported)",
+      "taxon": {
+        "accepted_name": "Synanthedon tipuliformis",
+        "atlas_id": "spa.tax.synanthedon_tipuliformis",
+        "name_as_reported": "Synanthedon tipuliformis"
+      },
+      "trap": null,
+      "treatment": [
+        {
+          "amount": {
+            "unit": "microgram",
+            "value": 280
+          },
+          "atlas_id": "spa.cmpd.e2_z13_18_oac",
+          "purity": null
+        },
+        {
+          "amount": {
+            "unit": "microgram",
+            "value": 9
+          },
+          "atlas_id": "spa.cmpd.e2_z13_18_oh",
+          "purity": null
+        },
+        {
+          "amount": {
+            "unit": "microgram",
+            "value": 8.5
+          },
+          "atlas_id": "spa.cmpd.z13_18_oac",
+          "purity": null
+        },
+        {
+          "amount": {
+            "unit": "microgram",
+            "value": 2.3
+          },
+          "atlas_id": "spa.cmpd.e3_z13_18_oac",
+          "purity": null
+        },
+        {
+          "amount": {
+            "unit": "microgram",
+            "value": 0.1
+          },
+          "atlas_id": "spa.cmpd.z13_18_oh",
+          "purity": null
+        },
+        {
+          "amount": {
+            "unit": "microgram",
+            "value": 0.1
+          },
+          "atlas_id": "spa.cmpd.18_oh",
+          "purity": null
+        }
+      ]
+    }
+  ],
+  "schema_version": "0.1"
+}

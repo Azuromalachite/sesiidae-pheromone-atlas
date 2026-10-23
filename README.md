@@ -23,7 +23,8 @@ python scripts/build_release.py        # regenerate derived/ (CI runs it with --
 
 `derived/` holds machine-readable exports: tidy relational tables in
 `derived/tables/` (the analytical form), one JSONL file per record kind,
-the taxon × layer matrix, and checksums. They are generated from the records,
+the taxon × layer matrix, one teaching bundle per `teaching/cases/` file,
+and checksums. They are generated from the records,
 never edited by hand. No release has been tagged and no DOI minted yet; to
 cite the Atlas meanwhile, see [`CITATION.cff`](CITATION.cff) and
 [`CHANGELOG.md`](CHANGELOG.md).
@@ -45,6 +46,7 @@ generated machine-readable releases.
 | [`docs/identifiers.md`](docs/identifiers.md) | the permanent `spa.` ID scheme and its rules |
 | [`docs/releases-and-occurrences.md`](docs/releases-and-occurrences.md) | decisions on citable releases, the GBIF occurrence layer and roadmap order |
 | [`docs/scope-v0.1.md`](docs/scope-v0.1.md) | what v0.1 is complete for: the scope statement, curated and target species, and how the list was built |
+| [`docs/computed-and-teaching.md`](docs/computed-and-teaching.md) | the contract for espmap results (`computed/espmap/`) and teaching bundles (`teaching/cases/` → `derived/teaching/`): layout, checks, what a bundle may assert |
 | [`docs/direction-type1-grammar.md`](docs/direction-type1-grammar.md) | v0.2 direction: a Type-I moth reaction grammar from primary experiments, applied to Sesiidae (not built) |
 | [`docs/reviews/`](docs/reviews/) | the two adversarial reviews the concept was revised against |
 | [`docs/knowledge-gaps.md`](docs/knowledge-gaps.md) | gaps that set direction: the tropical and Southeast Asian frontier, *Melittia*, the trapping blind spot |
@@ -52,8 +54,8 @@ generated machine-readable releases.
 
 ## Related projects
 
-- [espmap](https://github.com/Azuromalachite/espmap) — electrostatic potential on molecular surfaces, with per-site statistics. The Atlas will store espmap records as derived, replaceable computation.
-- Arrowfield (planned) — an educational environment for mechanistic reasoning, which will consume Atlas records.
+- [espmap](https://github.com/Azuromalachite/espmap) — electrostatic potential on molecular surfaces, with per-site statistics. espmap computes; the Atlas keeps the checked index of results for its compounds in `computed/espmap/` (none yet).
+- [Arrowfield](https://github.com/Azuromalachite/arrowfield) — an educational environment for mechanistic reasoning. It reads the teaching bundles in `derived/teaching/` and adds only teaching metadata.
 
 ## Licence
 

@@ -3,3 +3,6 @@ __pycache__/
 *.pyc
 # release bundles are built from a tagged commit, never committed
 dist/
+
+# NPZ surfaces ship as release-bundle assets (scripts/build_release.py --npz-dir), never in git
+computed/**/*.npz

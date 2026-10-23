@@ -1,0 +1,14 @@
+case_id: fixture_case
+title: Fixture ‮case
+compounds:
+- spa.cmpd.z3_z13_18_oac
+- spa.cmpd.z3_z13_18_oh
+- spa.cmpd.e2_z13_18_oac
+observations:
+- spa.obs.fixture_species_a.fixture_2026.ead
+- spa.obs.fixture_species_a.fixture_2026.gland.pooled
+- spa.obs.fixture_species_a.fixture_2026.trap.population_b
+comparisons:
+- label: gland content and lure response
+  a: spa.obs.fixture_species_a.fixture_2026.gland.pooled
+  b: spa.obs.fixture_species_a.fixture_2026.trap.population_b

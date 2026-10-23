@@ -1,2 +1,5 @@
 # derived/ is checked byte for byte (scripts/build_release.py --check): never convert its line endings
 derived/** -text
+# computed/ and teaching/ are checksummed byte for byte, and their hashes reach derived/teaching/
+computed/** -text
+teaching/** -text

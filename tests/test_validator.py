@@ -2,7 +2,10 @@
 the stated reason. A gate that has never been seen to fail is not a gate.
 
 Each directory under fixtures/bad/ overlays one or more files on a copy of
-fixtures/good/ and names, in EXPECT, the error code it must produce.
+fixtures/good/ and names, in EXPECT, the error code it must produce. The data
+root's siblings are validated too, as in the repository: fixtures/computed/
+and fixtures/teaching/ are the good copies of computed/ and teaching/, and a
+bad case's files under computed/ or teaching/ overlay those.
 """
 
 import json
@@ -25,11 +28,17 @@ def codes(root):
     return {f.code for f in av.validate(root)}
 
 
+SIBLINGS = ("computed", "teaching")
+
+
 def overlay(tmp_path, case):
     root = tmp_path / "root"
     shutil.copytree(GOOD, root)
+    for sib in SIBLINGS:
+        shutil.copytree(FIX / sib, tmp_path / sib)
     for src in (p for p in (FIX / "bad" / case).rglob("*") if p.is_file() and p.name != "EXPECT"):
-        dst = root / src.relative_to(FIX / "bad" / case)
+        rel = src.relative_to(FIX / "bad" / case)
+        dst = (tmp_path if rel.parts[0] in SIBLINGS else root) / rel
         dst.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy(src, dst)
     return root
@@ -274,3 +283,138 @@ def test_analysis_reports_are_current():
     for script in sorted((ROOT / "analyses").glob("*.py")):
         r = subprocess.run([sys.executable, str(script), "--check"], capture_output=True, text=True)
         assert r.returncode == 0, f"{script.name}: {r.stderr}"
+
+
+# ---- computed/espmap: the siblings of the data root are part of the gate
+
+def test_good_siblings_exist_and_are_read():
+    # the good fixtures include a computed tree and a teaching case, so a gate
+    # that silently skipped the siblings would not pass the bad cases above
+    assert (FIX / "computed" / "espmap").is_dir() and any((FIX / "teaching" / "cases").glob("*.yaml"))
+
+
+def test_npz_assets_are_verified_before_bundling(tmp_path):
+    br = _load("build_release")
+    computed = FIX / "computed"
+    assert {p.code for p in br.npz_problems(computed, tmp_path)} == {"BUNDLE_NPZ_MISSING"}
+    ens = json.loads((computed / "espmap/z13_18_sme/b3lyp_def2-svp_gas_espmap-v0.2.1/ensemble.json").read_text(encoding="utf-8"))
+    for slug, proto, members in br.listed_npz(computed):
+        for m in members:
+            p = tmp_path / slug / proto / m["npz"]
+            p.parent.mkdir(parents=True, exist_ok=True)
+            p.write_bytes(f"npz-{slug}-{m['conformer'][-1]}".encode())   # the fixture's stand-in contents
+    assert br.npz_problems(computed, tmp_path) == []
+    wrong = tmp_path / "z13_18_sme" / "b3lyp_def2-svp_gas_espmap-v0.2.1" / ens["members"][0]["npz"]
+    wrong.write_bytes(b"changed")
+    assert {p.code for p in br.npz_problems(computed, tmp_path)} == {"BUNDLE_NPZ_CHECKSUM"}
+
+
+# ---- teaching bundles: built from records only, and valid against their schema
+
+def _bundle_schema():
+    from jsonschema import Draft202012Validator
+    return Draft202012Validator(json.loads((ROOT / "schemas" / "teaching-bundle.schema.json").read_text(encoding="utf-8")))
+
+
+def test_fixture_teaching_bundle_is_valid_and_complete():
+    tb = _load("export_teaching_bundle")
+    b = tb.build(GOOD, "fixture_case")
+    assert list(_bundle_schema().iter_errors(b)) == []
+    assert "atlas_version" not in b
+    keys = {c["atlas_id"]: c["inchikey"] for c in b["compounds"]}
+    for p in (GOOD / "compounds").glob("*.yaml"):
+        rec = yaml.safe_load(p.read_text(encoding="utf-8"))
+        if rec["compound_id"] in keys:
+            assert keys[rec["compound_id"]] == rec["generated"]["inchikey"]
+    # the ensemble of a case compound is listed with the hash of its index; the model's is not
+    assert [(e["atlas_id"], e["protocol"]) for e in b["espmap"]] == [("spa.cmpd.z3_z13_18_oac", "b3lyp_def2-svp_gas_espmap-v0.2.1")]
+    path = FIX / b["espmap"][0]["path"]
+    import hashlib
+    assert b["espmap"][0]["sha256"] == hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def test_teaching_statements_come_from_record_fields(tmp_path):
+    tb = _load("export_teaching_bundle")
+    root = overlay(tmp_path, "teaching_unknown_observation")   # any overlay: a writable copy
+    shutil.copy(FIX / "teaching" / "cases" / "fixture_case.yaml", tmp_path / "teaching" / "cases" / "fixture_case.yaml")
+    before = tb.build(root, "fixture_case")
+    trap = root / "observations" / "trap.yaml"
+    rec = yaml.safe_load(trap.read_text(encoding="utf-8"))
+    rec["significance"] = "not_tested"
+    trap.write_text(yaml.safe_dump(rec, sort_keys=False), encoding="utf-8")
+    after = tb.build(root, "fixture_case")
+    oid = rec["observation_id"]
+    s_before = next(o["statement"] for o in before["observations"] if o["observation_id"] == oid)
+    s_after = next(o["statement"] for o in after["observations"] if o["observation_id"] == oid)
+    assert "not_tested" in s_after and s_before != s_after
+    comp = after["comparisons"][0]
+    assert comp["observed_contrast"]["b"] == s_after and comp["observation_ids"][1] == oid
+
+
+def test_real_teaching_bundles_are_valid():
+    tb = _load("export_teaching_bundle")
+    cases = sorted(p.stem for p in (ROOT / "teaching" / "cases").glob("*.yaml"))
+    assert cases
+    for case in cases:
+        assert list(_bundle_schema().iter_errors(tb.build(ROOT / "data", case))) == [], case
+
+
+def test_exported_copy_carries_its_version_and_derived_does_not():
+    tb = _load("export_teaching_bundle")
+    b = tb.build(GOOD, "fixture_case", atlas_version="e8ca212")
+    assert b["atlas_version"] == "e8ca212" and list(_bundle_schema().iter_errors(b)) == []
+    br = _load("build_release")
+    for name, data in br.derived_files(ROOT / "data").items():
+        if name.startswith("teaching/"):
+            assert "atlas_version" not in json.loads(data), name
+
+
+def test_a_symlink_under_computed_is_refused_and_never_read(tmp_path):
+    import os
+    root = overlay(tmp_path, "computed_npz_in_git")   # a writable copy; drop the overlay's NPZ
+    proto = tmp_path / "computed/espmap/z3_z13_18_oac/b3lyp_def2-svp_gas_espmap-v0.2.1"
+    (proto / "conf_00.npz").unlink()
+    elsewhere = tmp_path / "elsewhere"
+    shutil.move(str(proto), str(elsewhere))
+    try:
+        os.symlink(elsewhere, proto, target_is_directory=True)
+    except OSError:
+        pytest.skip("symlinks not available here")
+    assert "COMPUTED_LAYOUT" in codes(root)
+    assert all("z3_z13_18_oac" not in str(p) for p in av.ensemble_paths(tmp_path / "computed"))
+
+
+def test_bundle_ships_only_verified_npz_bytes(tmp_path):
+    br = _load("build_release")
+    computed = FIX / "computed"
+    with pytest.raises(SystemExit, match="--npz-dir"):
+        br.computed_contents(computed, None)
+    with pytest.raises(SystemExit, match="do not match"):
+        br.computed_contents(computed, tmp_path)
+    expected = {}
+    for slug, proto, members in br.listed_npz(computed):
+        for m in members:
+            p = tmp_path / slug / proto / m["npz"]
+            p.parent.mkdir(parents=True, exist_ok=True)
+            data = f"npz-{slug}-{int(m['conformer'][5:])}".encode()   # the fixture's stand-in contents
+            p.write_bytes(data)
+            expected[f"computed/espmap/{slug}/{proto}/{m['npz']}"] = data
+    contents = br.computed_contents(computed, tmp_path)
+    assert {k: v for k, v in contents.items() if k.endswith(".npz")} == expected
+    assert all(not k.endswith(".npz") or k in expected for k in contents)
+    first = next(iter(expected))
+    (tmp_path / first.removeprefix("computed/espmap/")).write_bytes(b"swapped")
+    with pytest.raises(SystemExit, match="do not match"):
+        br.computed_contents(computed, tmp_path)
+
+
+def test_statement_is_exactly_the_record_fields():
+    tb = _load("export_teaching_bundle")
+    b = tb.build(GOOD, "fixture_case")
+    trap = next(o for o in b["observations"] if o["observation_id"].endswith(".trap.population_b"))
+    assert trap["statement"] == ("Fixturia testa (population_b), field_trapping: E2,Z13-18:OAc 100 parts + E3,Z13-18:OAc 3 parts "
+                                 "vs E2,Z13-18:OAc 100 parts: decreased, not_reported; 0.5 vs 1 fold_change_vs_comparator (trap_catch, approximate)")
+    assert tb.num(1234567) == "1234567" and tb.num(1.2345678e-05) == "1.2345678e-05"
+    roles = {c["atlas_id"]: c["occurrences"] for c in b["compounds"]}
+    gland_roles = {o["observation_id"]: o["roles"] for o in roles["spa.cmpd.z3_z13_18_oac"]}
+    assert gland_roles["spa.obs.fixture_species_a.fixture_2026.ead"] == ["antennal_active"]

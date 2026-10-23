@@ -17,7 +17,10 @@ What is checked, in order (concept §12, §13, §35):
    every chain double bond's position and E/Z read from the structure by map
    number and compared with the shorthand; and the generated block
    regenerated and compared at the same generator versions;
-4. observations: semantic rules the schema cannot express.
+4. observations: semantic rules the schema cannot express;
+5. the data root's siblings, when present: computed/espmap/ (espmap
+   ensembles indexed against Atlas compounds, checksummed, no NPZ in git)
+   and teaching/cases/ (which records a teaching bundle may assert).
 
 Exit status 1 if any error is found. Every error carries a code, so tests
 can assert *which* check failed, not just that something did.
@@ -25,6 +28,7 @@ can assert *which* check failed, not just that something did.
 
 import argparse
 import copy
+import hashlib
 import json
 import re
 import sys
@@ -522,19 +526,273 @@ def entry_findings(records):
     return out
 
 
+# ---------------------------------------------------------------- computed/espmap
+
+ENSEMBLE_SCHEMA = "spa.espmap_ensemble/0"
+ESPMAP_RECORD = "espmap.record/1"
+SLUG = re.compile(r"^[a-z0-9_]+$")
+PROTOCOL = re.compile(r"^[a-z0-9_.-]+$")
+CONFORMER_FILE = re.compile(r"^conf_[0-9]{2,}\.json$")
+
+
+def file_sha256(path):
+    return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+
+SUMS_LINE = re.compile(r"^([0-9a-f]{64})  (\S+)$")
+MAX_RECORD_BYTES = 1_000_000  # a member record is metadata; surfaces belong in NPZ assets
+
+
+def read_sums(path):
+    """({name: sha256}, problems) from a SHA256SUMS file: exactly
+    '<64 lowercase hex>  <name>' per line, each name once, as sha256sum writes it."""
+    out, problems = {}, []
+    for n, line in enumerate(Path(path).read_text(encoding="utf-8").splitlines(), start=1):
+        m = SUMS_LINE.match(line)
+        if not m:
+            problems.append(f"line {n} is not '<sha256>  <name>'")
+        elif m[2] in out:
+            problems.append(f"line {n}: {m[2]} listed twice")
+        else:
+            out[m[2]] = m[1]
+    return out, problems
+
+
+def computed_layout(computed):
+    """({(slug, protocol): [names]}, findings) for every file under computed/.
+    espmap computes; the Atlas keeps an index of what was computed for its
+    compounds. NPZ surfaces are refused here: they ship as release assets.
+    A symlink anywhere is refused: what the gate does not walk, nothing may read."""
+    out, dirs = [], {}
+    computed = Path(computed)
+    if not computed.is_dir():
+        return dirs, [Finding("COMPUTED_LAYOUT", str(computed), "computed must be a directory")]
+    for p in sorted(computed.rglob("*")):
+        if p.is_symlink():
+            out.append(Finding("COMPUTED_LAYOUT", str(p), "symlinks are not allowed under computed/"))
+            continue
+        if not p.is_file():
+            continue
+        rel = p.relative_to(computed).parts
+        if p.suffix == ".npz":
+            out.append(Finding("COMPUTED_NPZ_IN_GIT", str(p), "NPZ surfaces ship as release-bundle assets; keep only their sha256 in ensemble.json"))
+            continue
+        ok = (len(rel) in (4, 5) and rel[0] == "espmap" and SLUG.match(rel[1]) and PROTOCOL.match(rel[2])
+              and ((len(rel) == 4 and rel[3] in ("ensemble.json", "SHA256SUMS"))
+                   or (len(rel) == 5 and rel[3] == "conformers" and CONFORMER_FILE.match(rel[4]))))
+        if not ok:
+            out.append(Finding("COMPUTED_LAYOUT", str(p),
+                               "computed/ holds only espmap/<slug>/<protocol>/{ensemble.json, SHA256SUMS, conformers/conf_NN.json}, "
+                               "slug [a-z0-9_], protocol [a-z0-9_.-]"))
+            continue
+        dirs.setdefault((rel[1], rel[2]), []).append("/".join(rel[3:]))
+    return dirs, out
+
+
+def ensemble_paths(computed):
+    """The ensemble.json files the gate reads, in order. The exporter and the
+    bundle builder use this list, so they never read a path the gate skipped."""
+    if not Path(computed).exists():
+        return []
+    dirs, _ = computed_layout(computed)
+    return [Path(computed) / "espmap" / slug / proto / "ensemble.json"
+            for (slug, proto), names in sorted(dirs.items()) if "ensemble.json" in names]
+
+
+def computed_findings(computed, records, crossref=True):
+    """crossref=False when the records themselves failed: the layout,
+    checksums and record shapes are still checked, the links to records not."""
+    computed = Path(computed)
+    if not computed.exists():
+        return []
+    dirs, out = computed_layout(computed)
+    validator = Draft202012Validator(json.loads((SCHEMAS / "espmap-ensemble.schema.json").read_text(encoding="utf-8")))
+    by_slug = {}
+    for cid in records["compounds"]:
+        by_slug.setdefault(str(cid).split(".")[-1], []).append(cid)
+    for (slug, proto), names in sorted(dirs.items()):
+        d = computed / "espmap" / slug / proto
+        present = sorted(n for n in names if n != "SHA256SUMS")
+        if "SHA256SUMS" not in names:
+            out.append(Finding("COMPUTED_CHECKSUM", str(d), "no SHA256SUMS"))
+        else:
+            listed, bad_lines = read_sums(d / "SHA256SUMS")
+            out += [Finding("COMPUTED_CHECKSUM", str(d / "SHA256SUMS"), b) for b in bad_lines]
+            for n in present:
+                if n not in listed:
+                    out.append(Finding("COMPUTED_CHECKSUM", str(d / n), "not listed in SHA256SUMS"))
+                elif file_sha256(d / n) != listed[n]:
+                    out.append(Finding("COMPUTED_CHECKSUM", str(d / n), "sha256 differs from SHA256SUMS"))
+            for n in sorted(set(listed) - set(present)):
+                out.append(Finding("COMPUTED_CHECKSUM", str(d / n), "listed in SHA256SUMS but absent"))
+        if "ensemble.json" not in names:
+            out.append(Finding("COMPUTED_SCHEMA", str(d), "no ensemble.json"))
+            continue
+        path = d / "ensemble.json"
+        try:
+            ens = json.loads(path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as e:
+            out.append(Finding("COMPUTED_SCHEMA", str(path), f"not JSON: {e}"))
+            continue
+        errs = sorted(validator.iter_errors(ens), key=lambda e: list(e.path))
+        if errs:
+            out += [Finding("COMPUTED_SCHEMA", str(path), f"{'/'.join(map(str, e.path)) or '(record)'}: {e.message[:200]}") for e in errs]
+            continue
+        aid = ens["atlas_id"]
+        want = None   # the record's canonical structure, when the record can be trusted
+        if aid.split(".")[-1] != slug:
+            out.append(Finding("COMPUTED_ID", str(path), f"atlas_id {aid} does not match the directory slug {slug!r}"))
+            continue
+        if crossref:
+            if aid not in records["compounds"]:
+                out.append(Finding("COMPUTED_ID", str(path), f"{aid} has no compound or model record"))
+                continue
+            if len(by_slug.get(slug, [])) > 1:
+                out.append(Finding("COMPUTED_ID", str(path), f"slug {slug!r} names {sorted(by_slug[slug])}; rename one record"))
+            target = records["compounds"][aid][1]
+            got, want = canonical_structure(ens["smiles"]), canonical_structure(target.get("mapped_smiles", ""))
+            if got is None or got != want:
+                out.append(Finding("COMPUTED_STRUCTURE", str(path),
+                                   f"smiles canonicalises to {got!r}, {aid} is {want!r}: a different molecule was computed"))
+            key = (target.get("generated") or {}).get("inchikey")
+            if ens["inchikey"] != key:
+                out.append(Finding("COMPUTED_INCHIKEY", str(path), f"InChIKey {ens['inchikey']} is not {aid}'s {key}: a different molecule was computed"))
+        if ens["protocol"] != proto:
+            out.append(Finding("COMPUTED_PROTOCOL", str(path), f"protocol {ens['protocol']!r} is not the directory {proto!r}"))
+        seen, records_used, npz_hashes = set(), set(), set()
+        for m in ens["members"]:
+            c = m["conformer"]
+            if c in seen:
+                out.append(Finding("COMPUTED_MEMBER", str(path), f"{c} listed twice"))
+            seen.add(c)
+            if m["npz_sha256"] in npz_hashes:
+                out.append(Finding("COMPUTED_MEMBER", str(path), f"{c}: npz_sha256 repeats another member's; one surface cannot be two conformers"))
+            npz_hashes.add(m["npz_sha256"])
+            if m["record"] != f"conformers/{c}.json" or m["npz"] != f"{c}.npz":
+                out.append(Finding("COMPUTED_MEMBER", str(path), f"{c}: record must be conformers/{c}.json and npz {c}.npz"))
+                continue
+            records_used.add(m["record"])
+            rec_path = d / m["record"]
+            if not rec_path.exists():
+                out.append(Finding("COMPUTED_MEMBER", str(path), f"{c}: {m['record']} is missing"))
+                continue
+            if file_sha256(rec_path) != m["record_sha256"]:
+                out.append(Finding("COMPUTED_CHECKSUM", str(rec_path), "sha256 differs from record_sha256 in ensemble.json"))
+            if rec_path.stat().st_size > MAX_RECORD_BYTES:
+                out.append(Finding("COMPUTED_RECORD", str(rec_path), f"larger than {MAX_RECORD_BYTES} bytes: surfaces belong in NPZ assets, not in git"))
+                continue
+            try:
+                rec = json.loads(rec_path.read_text(encoding="utf-8"))
+            except json.JSONDecodeError:
+                out.append(Finding("COMPUTED_RECORD", str(rec_path), "not JSON"))
+                continue
+            if not isinstance(rec, dict) or rec.get("schema") != ESPMAP_RECORD:
+                out.append(Finding("COMPUTED_RECORD", str(rec_path), f"not an {ESPMAP_RECORD}"))
+                continue
+            if rec.get("analysis_key") != m["analysis_key"]:
+                out.append(Finding("COMPUTED_RECORD", str(rec_path), "analysis_key differs from the ensemble's"))
+            inp = rec.get("input") if isinstance(rec.get("input"), dict) else {}
+            if inp.get("structure_verified") is not True or (rec.get("validity") or {}).get("input") is not True:
+                out.append(Finding("COMPUTED_RECORD", str(rec_path), "espmap did not verify this structure (input.structure_verified and validity.input must be true)"))
+            if want is not None and canonical_structure(inp.get("computed_smiles") or "") != want:
+                out.append(Finding("COMPUTED_STRUCTURE", str(rec_path),
+                                   f"input.computed_smiles {inp.get('computed_smiles')!r} is not {aid}: this conformer is another molecule"))
+            settings = rec.get("settings") if isinstance(rec.get("settings"), dict) else {}
+            wrong = [k for k in ("xc", "basis", "solvent", "solvent_esp") if settings.get(k) != ens["settings"][k]]
+            if wrong:
+                out.append(Finding("COMPUTED_PROTOCOL", str(rec_path), f"settings {wrong} differ from the ensemble's protocol settings"))
+        for n in present:
+            if n.startswith("conformers/") and n not in records_used:
+                out.append(Finding("COMPUTED_MEMBER", str(d / n), "conformer record not listed in ensemble.json members"))
+    return out
+
+
+# ---------------------------------------------------------------- teaching/cases
+
+def teaching_findings(teaching, records, crossref=True):
+    """A teaching case may name only records that exist, compounds that occur
+    in its own observations, and comparisons between two of its observations,
+    each pair once. crossref=False when the records themselves failed."""
+    teaching = Path(teaching)
+    if not teaching.exists():
+        return []
+    if not teaching.is_dir():
+        return [Finding("TEACH_LAYOUT", str(teaching), "teaching must be a directory")]
+    out = []
+    validator = Draft202012Validator(json.loads((SCHEMAS / "teaching-case.schema.json").read_text(encoding="utf-8")))
+    obs = records["observations"]
+    for p in sorted(teaching.rglob("*")):
+        if p.is_symlink():
+            out.append(Finding("TEACH_LAYOUT", str(p), "symlinks are not allowed under teaching/"))
+            continue
+        if not p.is_file():
+            continue
+        rel = p.relative_to(teaching).parts
+        if not (len(rel) == 2 and rel[0] == "cases" and p.suffix == ".yaml"):
+            out.append(Finding("TEACH_LAYOUT", str(p), "teaching/ holds only cases/<case_id>.yaml"))
+            continue
+        try:
+            case = strict_load(p.read_text(encoding="utf-8"))
+        except DuplicateKey as e:
+            out.append(Finding("YAML_DUPLICATE_KEY", str(p), str(e)))
+            continue
+        except yaml.YAMLError as e:
+            out.append(Finding("YAML", str(p), str(e).splitlines()[0]))
+            continue
+        errs = sorted(validator.iter_errors(case), key=lambda e: list(e.path))
+        if errs:
+            out += [Finding("TEACH_SCHEMA", str(p), f"{'/'.join(map(str, e.path)) or '(record)'}: {e.message[:200]}") for e in errs]
+            continue
+        if case["case_id"] != p.stem:
+            out.append(Finding("TEACH_CASE_ID", str(p), f"case_id {case['case_id']!r} must equal the file name {p.stem!r}"))
+        listed = case["observations"]
+        if crossref:
+            for oid in listed:
+                if oid not in obs:
+                    out.append(Finding("TEACH_REF", str(p), f"observation {oid} has no record"))
+            observed = {cid for oid in listed if oid in obs for cid in observed_compounds(obs[oid][1])}
+            for cid in case["compounds"]:
+                if cid not in records["compounds"]:
+                    out.append(Finding("TEACH_REF", str(p), f"compound {cid} has no record"))
+                elif cid not in observed:
+                    out.append(Finding("TEACH_COMPOUND_UNOBSERVED", str(p), f"{cid} occurs in none of the case's observations"))
+        pairs = set()
+        for c in case["comparisons"]:
+            pair = frozenset((c["a"], c["b"]))
+            if pair in pairs:
+                out.append(Finding("TEACH_COMPARISON", str(p), f"{c['label']!r}: {c['a']} and {c['b']} are already compared"))
+            pairs.add(pair)
+            if c["a"] == c["b"]:
+                out.append(Finding("TEACH_COMPARISON", str(p), f"{c['label']!r} compares {c['a']} with itself"))
+            for side in ("a", "b"):
+                if c[side] not in listed:
+                    out.append(Finding("TEACH_COMPARISON", str(p), f"{c['label']!r}: {c[side]} is not among the case's observations"))
+    return out
+
+
 # ---------------------------------------------------------------- driver
+
+def siblings(root):
+    """computed/ and teaching/ sit beside the data root, as in the repository."""
+    parent = Path(root).resolve().parent
+    return parent / "computed", parent / "teaching"
+
 
 def validate(root):
     records, findings = load_root(root)
     findings += schema_findings(records)
-    if findings:  # cross-checks on malformed records only add noise
-        return findings
-    findings += taxon_name_findings(records)
-    findings += reference_findings(records)
-    findings += observation_findings(records)
-    findings += compound_findings(records, load_headgroups())
-    findings += identity_findings(records)
-    findings += entry_findings(records)
+    if not findings:  # cross-checks on malformed records only add noise
+        findings += taxon_name_findings(records)
+        findings += reference_findings(records)
+        findings += observation_findings(records)
+        findings += compound_findings(records, load_headgroups())
+        findings += identity_findings(records)
+        findings += entry_findings(records)
+    # the siblings are always checked; their links to records only when the records are sound
+    sound = not findings
+    computed, teaching = siblings(root)
+    findings += computed_findings(computed, records, crossref=sound)
+    findings += teaching_findings(teaching, records, crossref=sound)
     return findings
 
 
