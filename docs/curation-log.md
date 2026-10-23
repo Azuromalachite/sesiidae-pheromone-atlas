@@ -1,9 +1,36 @@
 # Curation log
 
+## 2026-10-23 (5) — adversarial review of entries (3) and (4)
+
+Every record from Yang 2011, Naka 2006 and Kwon 2021 was re-read against the
+PDFs by a reviewer working without the curator's notes. **No number or
+significance letter was wrong.** The defects were in what was left out, in
+what was attributed, and in inferences not marked as such.
+
+| defect | fix |
+|---|---|
+| **Kwon's purity labelled "chemical".** The paper says only "purity". Fig. 4 shows minor peaks 0.07–0.37 min after each main peak, and E3 and Z3 eluted 0.035 min apart (separate runs), so the impurities could be isomers | `kind: unspecified`; the notes give the peak times; narrative §3 rewritten |
+| **Significant contrasts missing.** Kwon Exp. 4 was recorded only as yellow vs green and yellow vs white. At Gongju neither is significant; the only significant contrast there is yellow vs blue (6.0 vs 0) | yellow against all five other colours at each site (15 records) |
+| **Yang Fig. 2 and Naka Table 4 rows missing**, including Yang's 2:8, which Kwon contrast with their own result | Yang 2:8, 5:5, 6:4, 8:2, 9:1; Naka Z3 alone, 1:9 (Test I), 5:5 and 9:1 vs E3 alone (Test II) |
+| **Verbatim quotes on the wrong contrast**: Kwon 1:9, 3:7 and 5:5 (2018) and Naka 9:1 vs E3 alone | replaced with the sentence about that contrast, or left out where the paper has none |
+| **Unmarked inferences**: "second flight" (Naka 2005), "spring" and "autumn" (Kwon), one female per injection (Naka gland), calling females (Yang gland), "Japanese vine clearwing" and the authority (*N. pernix*) | labelled as Atlas inferences, set to null, or credited to GBIF |
+| **"Not reported" for a test that was not run.** Yang excluded zero-catch lures from the ANOVA | new `significance: not_tested` |
+| **Kwon's headline 4.3:5.7 recorded nowhere** | kept out of the observations on purpose (it is a correction, not a lure anyone tested) and explained in the reference's notes |
+| **The identical-comparator check depended on list order** (found in the validator audit) | blends compared as sets; new fixture `comparator_reordered` |
+
+The narrative also overclaimed twice. Naka's major-component swaps do not show
+that "geometry matters more": those lures had no natural major at all. And
+the Kwon 1:9 reversal kept the site fixed at Gongju, so only season and trap
+colour changed. Both are rewritten.
+
+Kwon's Discussion says Yang 2011's lures were isomer mixtures; Yang's
+Methods state isomeric purity above 99 %. Both statements are kept, each in
+its own paper's records.
+
 ## 2026-10-23 (4) — Kwon et al. 2021
 
 Full text of Kwon, Huh, Lee, Seo & Park 2021 (*S. bicingulata*, Korea,
-2017–2019): 1 reference (no PubMed record), 25 observations. These are:
+2017–2019): 1 reference (no PubMed record), 25 observations (34 after the review in (5)). These are:
 - 16 ratio contrasts against 4:6 (Gongju 2017; Jinju, Gongju and Gapyeong 2018);
 - bucket vs delta trap;
 - yellow vs green bucket (two spring sites);
@@ -20,9 +47,10 @@ Values are read from bar charts except the bucket/delta means (abstract).
   isomeric information is still wrong. Neither paper shows a separation of
   the 3,13 geometric isomers on the column used for the lure check: Kwon's
   is a non-polar HP-5MS. That last point is an Atlas inference and is
-  marked as one in the records.
+  marked as one in the records. *Corrected in (5): Kwon do not say the
+  purity is chemical, and the impurity peaks could be isomers.*
 - **4.3:5.7 is not a tested lure.** It is the nominal 4:6 lure corrected for
-  the two chemical purities: 0.4 × 94.18 : 0.6 × 82.8 ≈ 43 : 57.
+  the two purities: 0.4 × 94.18 : 0.6 × 82.8 ≈ 43 : 57.
 - **Text and figure disagree on where 4:6 beat 3:7.** The text says Gongju
   2018; in Fig. 5, Gongju 3:7 shares a letter with 4:6 (ab), and Jinju 3:7
   does not (bc). The records follow the figure.

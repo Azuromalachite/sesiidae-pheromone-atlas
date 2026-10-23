@@ -52,7 +52,7 @@
         },
         "effect": {"enum": ["increased", "decreased", "no_effect", "caught_without_control"],
                    "description": "relative to the comparator; caught_without_control means males were caught and no comparator was run"},
-        "significance": {"enum": ["significant", "not_significant", "not_reported"]},
+        "significance": {"enum": ["significant", "not_significant", "not_tested", "not_reported"], "description": "not_tested: the paper ran no test on this contrast, e.g. a zero-catch treatment left out of the ANOVA"},
         "dose": {"$ref": "#/$defs/quantity", "description": "total load per lure, when given"},
         "response": {
           "type": "object",

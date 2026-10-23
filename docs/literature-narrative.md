@@ -56,34 +56,38 @@ not always agree.
   4:6 (`spa.obs.bicingulata.2011.yang.gland`). Males came most to a 4:6
   lure, but 3:7 and 2:8 were not significantly worse
   (`…yang.trap_ratio_3_7`), while 7:3 and 1:9 were (`…trap_ratio_7_3`,
-  `…trap_ratio_1_9`). Kwon et al. 2021 also found 4:6 best, at four sites in
-  two years (`spa.obs.bicingulata.2021.kwon.trap_ratio_*`), with a sharper
-  response than Yang's: 2:8 was significantly worse at all three 2018 sites.
-  They attribute Yang's flatter response to isomer-contaminated lures and say
-  Yang gave no isomeric information. Yang's Methods do give it: isomeric
-  purity above 99 %, stated, not shown. Kwon's own lures were 94 % (E3) and
-  83 % (Z3) **chemically** pure by their GC-MS trace, and they state the
-  lures held no isomers. Their headline optimum, 4.3:5.7, is not a tested
-  lure: it is the nominal 4:6 lure corrected for those two purities. So the
-  two papers report different kinds of purity, and neither paper's claim
-  about isomers rests on data from a column shown to separate them. **Lure
-  purity is a hidden variable in any attraction record, a purity must say
-  which kind it is, and a claim about another paper's lures has to be
-  checked against that paper.** Records now carry `purity` with its `kind`
-  and `basis`.
-- Kwon et al. 2021 also show a ratio's effect is not fixed: 1:9 caught 8.5
-  males per trap in spring 2017 (green traps, Gongju) and almost none in
-  autumn 2018 (yellow traps, three sites). Season, trap colour and site all
-  changed at once, so the records hold the contrast without explaining it.
+  `…trap_ratio_1_9`). Kwon et al. 2021 also found 4:6 best, in four
+  site-years at three sites (`spa.obs.bicingulata.2021.kwon.trap_ratio_*`),
+  with a sharper response than Yang's: 2:8 was significantly worse at all
+  three 2018 sites. They attribute Yang's flatter response to
+  isomer-contaminated lures and say Yang gave no isomeric information.
+  Yang's Methods do give it: isomeric purity above 99 %, stated, not shown.
+  Kwon's own lures were 94 % (E3) and 83 % (Z3) pure by GC-MS peak area,
+  without saying what the impurities are, and they state the lures held no
+  isomers. Their trace shows minor peaks 0.07–0.37 min after each main peak,
+  on a column where E3 and Z3 themselves eluted only 0.035 min apart, so
+  isomers among them are not excluded (Atlas reading of their Fig. 4).
+  Their headline optimum, 4.3:5.7, is not a tested lure: it is the nominal
+  4:6 lure corrected for those two purities. Neither paper shows that its
+  lures are free of geometric isomers. **Lure purity is a hidden variable
+  in any attraction record, a purity must say which kind it is, and a claim
+  about another paper's lures has to be checked against that paper.**
+  Records carry `purity` with its `kind` and `basis`.
+- Kwon et al. 2021 also show a ratio's effect is not fixed: at Gongju, 1:9
+  caught 8.5 males per trap in spring 2017 (green traps) and none in autumn
+  2018 (yellow traps), and almost none at the other two 2018 sites. Season
+  and trap colour changed together, so the records hold the contrast
+  without explaining it.
 - *Nokona pernix*: Naka et al. 2006 found two EAG-active alcohols, E3- and
   Z3,Z13-18:OH, at about 9:1 (12.3 and 1.4 ng per female), and no acetate
   (`spa.obs.pernix.2006.naka.gland`, `…gcead`). The 9:1 lure caught 49.7 males
   per trap against 0.5 for E3 alone; 5:5 and 99:1 caught almost nothing
-  (`…trap_z3_added`, `…trap_ratio_5_5`, `…trap_ratio_99_1`). Swapping a
-  natural isomer for an unnatural 13E isomer showed that the major
-  component's geometry matters more than the minor's. As the minor component,
-  a 13E isomer still caught some males (not significantly fewer). As the major
-  component, it caught none
+  (`…trap_z3_added`, `…trap_ratio_5_5`, `…trap_ratio_99_1`). Unnatural 13E
+  isomers were then swapped in. In place of the minor component, a 13E
+  isomer still caught some males (not significantly fewer). In place of the
+  major component, it caught none; but those lures had no E3,Z13-18:OH at
+  all, so they show the natural major is required, not how much its
+  geometry matters
   (`…trap_e3e13_for_e3`, `…trap_z3e13_for_e3`).
 
 Specificity is not one species, one molecule. It is encoded in which isomer,

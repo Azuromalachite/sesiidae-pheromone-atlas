@@ -1,0 +1,19 @@
+observation_id: spa.obs.pernix.2006.naka.trap_z3_added.test2
+observation_type: behavioural_response
+taxon: spa.tax.nokona_pernix
+context: {sex: male, habitat: university experimental farm, population: "Aichi population", locality: "Kasugai City, Aichi Prefecture, Japan"}
+assay: field_trapping
+trap: {design: sticky_board, colour: null, supplier: Takeda Chemical Industries}
+blend: [{compound: spa.cmpd.e3_z13_18_oh, amount: {value: 0.9, unit: milligram}}, {compound: spa.cmpd.z3_z13_18_oh, amount: {value: 0.1, unit: milligram}}]
+comparator:
+  description: E3,Z13-18:OH alone, 1 mg
+  blend: [{compound: spa.cmpd.e3_z13_18_oh, amount: {value: 1.0, unit: milligram}}]
+effect: increased
+significance: significant
+dose: {value: 1.0, unit: milligram}
+response: {measure: trap_catch, unit: mean_catch_per_trap, treatment_value: 20.7, comparator_value: 0.0, qualifier: as_reported}
+evidence:
+  reference: spa.ref.naka_2006
+  source_location: "Table 4, Test II"
+  author_statement: "Single E3,Z13-18:OH proved slightly attractive, whereas single Z3,Z13-18:OH attracted no males."
+  notes: "Test II, Experimental Farm of Meijo University, Kasugai, 15 June - 12 July 2004, 3 traps per treatment, sticky board traps, rubber septa, positions rotated (Latin square), log-transformed one-way ANOVA and Tukey-Kramer test. Lure alcohols made by hydrolysing Shin-Etsu acetates of stated purity above 98 percent. Letters a vs b. Mean +- SD per trap: treatment 13.4, comparator 0.0."

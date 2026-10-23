@@ -174,6 +174,12 @@ def observed_compounds(o):
 
 # ---------------------------------------------------------------- observations
 
+def same_blend(a, b):
+    """Blends are sets of components: listing order means nothing."""
+    key = lambda item: json.dumps(item, sort_keys=True)
+    return sorted(map(key, a)) == sorted(map(key, b))
+
+
 def observation_findings(records):
     """Rules the schema cannot say: amounts belong to detections, a
     detection limit belongs to a negative, and a comparator differs from the
@@ -189,7 +195,8 @@ def observation_findings(records):
                 out.append(Finding("OBS_FIELD_CONFLICT", path,
                                    f"{name}: detection_limit belongs to detected: false"))
         comp = o.get("comparator") or {}
-        if (o.get("blend") is not None and comp.get("blend") == o.get("blend")
+        if (o.get("blend") is not None and comp.get("blend") is not None
+                and same_blend(comp["blend"], o["blend"])
                 and comp.get("trap", o.get("trap")) == o.get("trap")):
             out.append(Finding("OBS_FIELD_CONFLICT", path,
                                "comparator has the treatment's blend and trap: nothing was compared"))
