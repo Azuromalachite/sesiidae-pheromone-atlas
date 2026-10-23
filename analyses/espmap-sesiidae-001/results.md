@@ -175,7 +175,7 @@ The analysis and report scripts were tested during the run, on the pilot's K = 1
 ## Provenance
 
 - espmap v0.2.1 (41a989d), each member an espmap.record/1 with its sha256 in the Atlas index.
-- Atlas commit (records): base 30c4a11; records added by the PR that adds this file; plan frozen at 7e34658.
+- Atlas commit (records): dabaf15 (Atlas PR #1 merged; records at 6b66c10); plan frozen at 7e34658.
 - Arrowfield commit: 4711f9f (main); control records in Arrowfield controls/ (PR #6).
 - Folded: an intramolecular contact (espmap master 5175515's provisional rule) or surface genus > 0.
 - Partition sensitivity: section 4's definition decides; on 2026-10-23, before any analysis, the user chose to keep it and to report the pilot's max-member number beside it. The plan's pilot table quotes that pilot-style number (1.43 at C4-H); section 4's gives 0.77 on the same data.
