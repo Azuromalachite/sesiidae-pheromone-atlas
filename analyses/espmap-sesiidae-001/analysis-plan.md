@@ -167,4 +167,28 @@ the members' V_min and V_max.
 
 ## Deviations
 
-_(none yet)_
+### 2026-10-23, clarification (not a change to the decision rule)
+
+The decision rule and its thresholds in section 4 are unchanged. This note
+says how two numbers in section 4 are to be read.
+
+The 20 members per molecule are a designed coverage set: the lowest-MMFF
+conformer plus 19 spread over Rg, chosen from 100 embeddings (section 3).
+They are not independent random draws from an equilibrium population. Range
+non-overlap (condition 1) is therefore a deterministic robustness criterion
+over this prespecified, shape-diverse ensemble.
+
+- The combinatorial probability in section 4, 2/C(40,20) ≈ 1.5 × 10⁻¹¹,
+  assumes exchangeable random observations. It is not a p-value or a
+  false-positive probability for this study.
+- The bootstrap interval in section 4 resamples the selected conformer set.
+  It describes that set, not a population, and "different on average"
+  remains descriptive.
+
+Study verdicts are labelled `espmap-sesiidae-001/range_partition_sign_v1`,
+never espmap.compare/1's generic `resolved_under`.
+
+Requested by the user through the Arrowfield session; the user approved it
+directly in the Atlas session on 2026-10-24. Run facts (espmap v0.2.1 at
+41a989d, seed, selection, folded definition) go in `execution-manifest.json`,
+not here.
