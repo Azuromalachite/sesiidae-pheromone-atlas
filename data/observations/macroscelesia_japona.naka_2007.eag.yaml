@@ -1,0 +1,38 @@
+observation_id: spa.obs.macroscelesia_japona.naka_2007.eag
+observation_type: electrophysiology
+taxon: spa.tax.macroscelesia_japona
+context:
+  sex: male
+  population: null
+  locality: null
+responses:
+- compound: spa.cmpd.e2_z13_18_oh
+  method: GC-EAD
+  preparation: male antenna; gland extract, 0.5 FE, DB-23
+  response: active
+  notes: component I
+- compound: spa.cmpd.e2_z13_18_al
+  method: GC-EAD
+  preparation: male antenna; gland extract, 0.5 FE, DB-23
+  response: active
+  notes: component II
+- compound: spa.cmpd.e2_z13_18_al
+  method: EAG
+  preparation: male antenna; synthetic, 1 ng
+  response: active
+  notes: letter a, the largest
+- compound: spa.cmpd.e2_z13_18_oh
+  method: EAG
+  preparation: male antenna; synthetic, 1 ng
+  response: active
+  notes: letter b
+evidence:
+  reference: spa.ref.naka_2007
+  taxon_name_as_reported: Macroscelesia japona
+  source_location: Results; Fig. 1a; Fig. 3a
+  author_statement: Responses to both compounds were greater than responses to all other compounds tested
+  unresolved:
+  - origin of the males
+  notes: 'GC-EAD: components I (E2,Z13-18:OH) and II (E2,Z13-18:Ald). EAG to 1 ng synthetics, means of at least ten antennae, Tukey-Kramer (Fig. 3a): Ald a (about 100 mV), E2,Z13-18:OH b (about 65), and
+    E2,Z13-18:OAc, E3,Z13-18:OAc, E3,Z13-18:OH, Z3,Z13-18:OAc, Z3,Z13-18:OH all c (about 5-30). The c group is not recorded: it is the lower group, and nothing in the paper supports either active or inactive
+    for it, although E2,Z13-18:OAc (about 30 mV) affects behaviour in Tests II and IV.'

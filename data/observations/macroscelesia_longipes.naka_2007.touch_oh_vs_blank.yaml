@@ -1,0 +1,39 @@
+observation_id: spa.obs.macroscelesia_longipes.naka_2007.touch_oh_vs_blank
+observation_type: behavioural_response
+taxon: spa.tax.macroscelesia_longipes
+context:
+  sex: male
+  habitat: riverbed
+  population: Japanese population
+  locality: Fujimi City, Saitama Prefecture, Japan
+assay: other
+dispenser:
+  design: rubber_septum
+  description: rubber septum pinned to a riverside plant, 50 cm above the ground
+blend:
+- compound: spa.cmpd.e2_z13_18_oh
+  amount:
+    value: 1000
+    unit: microgram
+comparator:
+  description: blank septum (0 ug of each compound)
+effect: increased
+significance: not_tested
+dose:
+  value: 1000
+  unit: microgram
+response:
+  measure: other
+  unit: count
+  treatment_value: 3.0
+  comparator_value: 0
+  qualifier: as_reported
+evidence:
+  reference: spa.ref.naka_2007
+  experiment_id: spa.exp.naka_2007.longipes_2004
+  taxon_name_as_reported: Macroscelesia longipes
+  source_location: Table 2; Results
+  author_statement: Males only approached lures containing E2,Z13-18:OH (Table 2).
+  notes: 'The blank, E2,Z13-18:Ald alone and E2,Z13-18:OAc alone drew no males and carry no letter; effect from the raw means. Riverbed of the Bin-Numa oxbow, Fujimi City, 4 days between 12 and 23 August
+    2004. No traps (an endangered species): septa pinned to riverside plants 50 cm up, males watched. Table 2, mean +- SD per day over the 4 days; ''attracted'' = within 5 cm, ''touched'' = touched the
+    lure with the forelegs. The printed column headers are read swapped (see the reference notes); this record uses the text''s sense. Tukey-Kramer at 5 percent.'

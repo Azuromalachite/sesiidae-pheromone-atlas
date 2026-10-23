@@ -1,0 +1,72 @@
+observation_id: spa.obs.paranthrene_tabaniformis.mozuraitis_2007.gland
+observation_type: chemical_measurement
+taxon: spa.tax.paranthrene_tabaniformis
+context:
+  sex: female
+  life_stage: adult
+  mating_status: virgin
+  behavioural_state: calling
+  sampling_unit: pooled
+  n_individuals: 3
+  population: null
+  locality: Kandagash, 10 km south of Urda, Sajkhin district, European Kazakhstan
+  rearing: field_collected_reared
+sample:
+  materials:
+  - gland_extract
+  material_as_reported: abdominal tips of 3 calling virgin females, washed twice with 20 ul hexane for 2 min
+  result_scope: single_material
+components:
+- compound: spa.cmpd.e3_z13_18_oh
+  detected: true
+  method: gland_extract_gc_ms_ei_db5_diagnostic_ions_and_retention_vs_synthetic
+  identification: confirmed
+  abundance_class: major
+  measurements:
+  - value: 64.0
+    unit: percent
+    qualifier: as_reported
+- compound: spa.cmpd.z3_z13_18_oh
+  detected: true
+  method: gland_extract_gc_ms_ei_db5_diagnostic_ions_and_retention_vs_synthetic
+  identification: confirmed
+  measurements:
+  - value: 32.4
+    unit: percent
+    qualifier: as_reported
+- compound: spa.cmpd.e2_z13_18_oh
+  detected: true
+  method: gland_extract_gc_ms_ei_db5_diagnostic_ions_and_retention_vs_synthetic
+  identification: confirmed
+  measurements:
+  - value: 1.4
+    unit: percent
+    qualifier: as_reported
+- compound: spa.cmpd.z13_18_oh
+  detected: true
+  method: gland_extract_gc_ms_ei_db5_diagnostic_ions_and_retention_vs_synthetic
+  identification: confirmed
+  measurements:
+  - value: 0.9
+    unit: percent
+    qualifier: as_reported
+- compound: spa.cmpd.18_oh
+  detected: true
+  method: gland_extract_gc_ms_ei_db5_diagnostic_ions_and_retention_vs_synthetic
+  identification: confirmed
+  measurements:
+  - value: 1.3
+    unit: percent
+    qualifier: as_reported
+evidence:
+  reference: spa.ref.mozuraitis_2007
+  taxon_name_as_reported: Paranthrene tabaniformis
+  source_location: Results and Discussion; Figs. 1-2
+  author_statement: 'the percentages of E3,Z13-18:OH; Z3,Z13-18:OH; E2,Z13-18:OH; Z13-18:OH and 18:OH from the sex pheromone gland extracts of 3 females were found to be 64.0 : 32.4 : 1.4 : 0.9 :1.3'
+  unresolved:
+  - titre per female
+  - whether acetates and aldehydes were absent (the screen used m/z 61 but no negative is stated)
+  notes: Pupae from Populus spp. at Kandagash (Rynkum sandy-hill steppe), 29 May - 1 June 2001, adults emerged in individual cages. Abdominal tips of calling females (afternoon) pushed out, excised and
+    washed twice in 20 ul hexane for 2 min; three glands extracted in all, concentrated to about 10 ul. One DB-5 column; chromatograms screened by diagnostic ions (m/z 61, 248, 250, 252), then identity
+    by mass spectrum and retention against synthetic standards. Geometry therefore rests on retention on one non-polar column (Atlas reading). abundance_class 'major' for E3,Z13-18:OH is the Atlas reading
+    of 64 percent and of the title's 'minor' components for the rest. The Chinese identification (Zhang et al. 1986) found only E3,Z13-18:OH.

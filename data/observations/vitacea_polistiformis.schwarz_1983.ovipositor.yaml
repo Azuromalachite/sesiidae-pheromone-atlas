@@ -1,0 +1,37 @@
+observation_id: spa.obs.vitacea_polistiformis.schwarz_1983.ovipositor
+observation_type: chemical_measurement
+taxon: spa.tax.vitacea_polistiformis
+context:
+  sex: female
+  life_stage: adult
+  mating_status: null
+  sampling_unit: null
+  n_individuals: 7
+  population: null
+  locality: null
+  rearing: field_collected_reared
+sample:
+  materials:
+  - ovipositor_extract
+  material_as_reported: excised ovipositors extracted with heptane
+  result_scope: single_material
+components:
+- compound: spa.cmpd.e2_z13_18_oac
+  detected: true
+  method: ovipositor_extract_gc_ms_microozonolysis_retention_sp2340_sp1000_db1_vs_synthetic
+  identification: confirmed
+  abundance_class: major
+evidence:
+  reference: spa.ref.schwarz_1983
+  taxon_name_as_reported: Vitacea polistiformis
+  source_location: Text pp. 1007-1009
+  author_statement: (E,Z)-2,13-Octadecadien-1-ol acetate was identified from ovipositor extracts of the grape root borer
+  unresolved:
+  - whether the seven extracts were pooled
+  - mating status of the females (emerged in the laboratory from field-collected pupae)
+  - position and geometry of the minor octadecenyl acetate (not recorded as a compound)
+  - amounts
+  notes: 'Field-collected female pupae; adults emerged in the laboratory and ovipositors were extracted with heptane (method of Klun et al. 1980); seven females in all. One major peak: GC-MS M+ 308 and
+    M-60 at 248 (octadecadienyl acetate); microozonolysis gave undecanedial (nine carbons between the double bonds) and no identifiable short aldehyde. Candidates Z,Z-3,14, Z,Z-4,15, Z,Z-5,16 (all four
+    isomers), Z-6,17 and Z,Z-2,13 were excluded by retention; synthetic E,Z-2,13-18:OAc matched on SP2340, SP1000 and DB-1 with no difference in mass spectrum, and only one of the four isomers from thiol
+    equilibration of Z,Z-2,13 co-eluted with it. A minor component eluting after it on non-polar columns had the spectrum of an octadecenyl acetate (position not determined).'

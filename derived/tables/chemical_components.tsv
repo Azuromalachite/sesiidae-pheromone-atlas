@@ -9,6 +9,7 @@ spa.obs.eichlinia_cucurbitae.klun_1990.ovipositor	spa.cmpd.z2_z13_18_oac	true	co
 spa.obs.eichlinia_cucurbitae.klun_1990.ovipositor	spa.cmpd.z3_z13_18_oac	true	tentative	trace	retention_on_shared_peak_2_12_ms_octadecadienyl_acetate_assigned_by_field_tests		
 spa.obs.eichlinia_cucurbitae.klun_1990.ovipositor	spa.cmpd.z9_16_oac	true	confirmed		acetate_fraction_gc_ms_db1_and_retention_supelcowax_db1		
 spa.obs.eichlinia_cucurbitae.klun_1990.ovipositor	spa.cmpd.z9_16_oh	true	confirmed		alcohol_fraction_acetylated_gc_ms_db1_and_retention_supelcowax_db1		
+spa.obs.eichlinia_cucurbitae.schwarz_1983.ovipositor	spa.cmpd.e2_z13_18_oac	true	confirmed	major	ovipositor_extract_analysis_not_described		
 spa.obs.glossosphecia_romanovi.naka_2010.gland	spa.cmpd.e3_e13_18_oac	false			gland_extract_gc_ms_mass_chromatograms_m308_m266_db23		
 spa.obs.glossosphecia_romanovi.naka_2010.gland	spa.cmpd.e3_e13_18_oh	false			gland_extract_gc_ms_mass_chromatograms_m308_m266_db23		
 spa.obs.glossosphecia_romanovi.naka_2010.gland	spa.cmpd.e3_z13_18_oac	true	tentative	minor	gland_extract_gc_ms_ei_db23_tic_vs_synthetic		
@@ -18,10 +19,21 @@ spa.obs.glossosphecia_romanovi.naka_2010.gland	spa.cmpd.z3_e13_18_oac	false			gl
 spa.obs.glossosphecia_romanovi.naka_2010.gland	spa.cmpd.z3_e13_18_oh	false			gland_extract_gc_ms_mass_chromatograms_m308_m266_db23		
 spa.obs.glossosphecia_romanovi.naka_2010.gland	spa.cmpd.z3_z13_18_oac	true	confirmed		gland_extract_gc_ms_ei_db23_tic_vs_synthetic		
 spa.obs.glossosphecia_romanovi.naka_2010.gland	spa.cmpd.z3_z13_18_oh	true	confirmed	major	gland_extract_gc_ms_ei_db23_tic_vs_synthetic		
+spa.obs.macroscelesia_japona.naka_2007.gland	spa.cmpd.e2_z13_18_al	true	confirmed	major	gland_extract_gc_ms_ei_db23_florisil_nabh4_reduction_vs_synthetic		
+spa.obs.macroscelesia_japona.naka_2007.gland	spa.cmpd.e2_z13_18_oac	false			gland_extract_gc_ms_ei_db23_mass_chromatograms		
+spa.obs.macroscelesia_japona.naka_2007.gland	spa.cmpd.e2_z13_18_oh	true	confirmed	minor	gland_extract_gc_ms_ei_db23_florisil_retention_vs_four_2_13_isomers		
+spa.obs.macroscelesia_longipes.naka_2007.gland	spa.cmpd.e2_z13_18_al	true	confirmed		gland_extract_gc_ms_ei_db23_vs_synthetic		
+spa.obs.macroscelesia_longipes.naka_2007.gland	spa.cmpd.e2_z13_18_oac	false			gland_extract_gc_ms_ei_db23_mass_chromatograms		
+spa.obs.macroscelesia_longipes.naka_2007.gland	spa.cmpd.e2_z13_18_oh	true	confirmed	major	gland_extract_gc_ms_ei_db23_vs_synthetic		
 spa.obs.nokona_pernix.naka_2006.gland	spa.cmpd.e3_z13_18_oac	false			gland_extract_gc_ms		
 spa.obs.nokona_pernix.naka_2006.gland	spa.cmpd.e3_z13_18_oh	true	confirmed	major	gland_extract_gc_ead_florisil_gc_ms_ri_vs_synthetic_isomers_db23		
 spa.obs.nokona_pernix.naka_2006.gland	spa.cmpd.z3_z13_18_oac	false			gland_extract_gc_ms		
 spa.obs.nokona_pernix.naka_2006.gland	spa.cmpd.z3_z13_18_oh	true	confirmed	minor	gland_extract_gc_ead_florisil_gc_ms_ri_vs_synthetic_isomers_db23		
+spa.obs.paranthrene_tabaniformis.mozuraitis_2007.gland	spa.cmpd.18_oh	true	confirmed		gland_extract_gc_ms_ei_db5_diagnostic_ions_and_retention_vs_synthetic		
+spa.obs.paranthrene_tabaniformis.mozuraitis_2007.gland	spa.cmpd.e2_z13_18_oh	true	confirmed		gland_extract_gc_ms_ei_db5_diagnostic_ions_and_retention_vs_synthetic		
+spa.obs.paranthrene_tabaniformis.mozuraitis_2007.gland	spa.cmpd.e3_z13_18_oh	true	confirmed	major	gland_extract_gc_ms_ei_db5_diagnostic_ions_and_retention_vs_synthetic		
+spa.obs.paranthrene_tabaniformis.mozuraitis_2007.gland	spa.cmpd.z13_18_oh	true	confirmed		gland_extract_gc_ms_ei_db5_diagnostic_ions_and_retention_vs_synthetic		
+spa.obs.paranthrene_tabaniformis.mozuraitis_2007.gland	spa.cmpd.z3_z13_18_oh	true	confirmed		gland_extract_gc_ms_ei_db5_diagnostic_ions_and_retention_vs_synthetic		
 spa.obs.sesia_apiformis.francke_2004.gland_pooled	spa.cmpd.e2_z13_18_al	true		major	pooled_gland_extract_gc_ms_with_dmds_and_methyl_sulfide_derivatives		
 spa.obs.sesia_apiformis.francke_2004.gland_pooled	spa.cmpd.e2_z13_18_oh	true		trace	pooled_gland_extract_gc_ms_with_dmds_and_methyl_sulfide_derivatives		
 spa.obs.sesia_apiformis.francke_2004.gland_pooled	spa.cmpd.z3_z13_18_oh	true		major	pooled_gland_extract_gc_ms_with_dmds_and_methyl_sulfide_derivatives		
@@ -104,3 +116,4 @@ spa.obs.synanthedon_vespiformis.levizada_2011.gland	spa.cmpd.z2_z13_18_oac	false
 spa.obs.synanthedon_vespiformis.levizada_2011.gland	spa.cmpd.z3_e13_18_oac	false			gland_extract_gc_ms_and_fid_ri_on_rtx5_and_db23_vs_standards		
 spa.obs.synanthedon_vespiformis.levizada_2011.gland	spa.cmpd.z3_z13_18_oac	true	confirmed	minor	gland_extract_gc_ms_and_fid_ri_on_rtx5_and_db23_vs_standards		
 spa.obs.synanthedon_vespiformis.levizada_2011.gland	spa.cmpd.z3_z13_18_oh	false			gland_extract_gc_ms_without_alcohol_standards		
+spa.obs.vitacea_polistiformis.schwarz_1983.ovipositor	spa.cmpd.e2_z13_18_oac	true	confirmed	major	ovipositor_extract_gc_ms_microozonolysis_retention_sp2340_sp1000_db1_vs_synthetic		

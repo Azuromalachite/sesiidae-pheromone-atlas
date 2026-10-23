@@ -184,6 +184,13 @@ observation should keep the name its source used (`taxon_name_as_reported`,
 planned): if the Korean population is ever split off, these records must
 still say what each paper called its moth.
 
+*Paranthrene tabaniformis* may be a third case. Females from European
+Kazakhstan make three dienols, E3:Z3:E2,Z13-18:OH at about 64:32:1.4
+(`spa.obs.paranthrene_tabaniformis.mozuraitis_2007.gland`). The Chinese
+identification found only the first, E3,Z13-18:OH. The authors offer both
+explanations: lower sensitivity then, or regional dialects. The Chinese
+paper is not yet curated.
+
 The Atlas keeps all of these and decides none of them.
 
 ## 5. Evidence layers come apart (2000s)
@@ -228,6 +235,18 @@ The Atlas keeps all of these and decides none of them.
 
   The 50:50 lure that works best for one species shuts the other down. **The
   same molecules carry different messages in different ratios.**
+- Two *Macroscelesia* species repeat the pattern with an alcohol and an
+  aldehyde (Naka et al. 2007, `spa.obs.macroscelesia_*.naka_2007.*`).
+  - *M. japona* glands hold E2,Z13-18:OH and E2,Z13-18:Ald at roughly
+    1:10, and the aldehyde alone catches males.
+  - *M. longipes* glands are mostly the alcohol, with the aldehyde in one
+    female of three. Males approach the alcohol alone, and approach more
+    when a little aldehyde is added.
+
+  *M. japona* males were also caught by the aldehyde with E2,Z13-18:OAc, an
+  acetate their females do not make, while the natural aldehyde-alcohol
+  blends caught nothing in that test. **A male's response is not a map of
+  its female's gland.**
 
 ## 6. The signal is more than chemistry
 

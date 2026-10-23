@@ -1,0 +1,30 @@
+observation_id: spa.obs.macroscelesia_longipes.naka_2007.eag
+observation_type: electrophysiology
+taxon: spa.tax.macroscelesia_longipes
+context:
+  sex: male
+  population: null
+  locality: null
+responses:
+- compound: spa.cmpd.e2_z13_18_oh
+  method: GC-EAD
+  preparation: male antenna; gland extract, 0.5 FE, DB-23
+  response: active
+- compound: spa.cmpd.e2_z13_18_al
+  method: GC-EAD
+  preparation: male antenna; gland extract, 0.5 FE, DB-23
+  response: active
+- compound: spa.cmpd.e2_z13_18_oh
+  method: EAG
+  preparation: male antenna; synthetic, 1 ng
+  response: active
+  notes: letter a, greater than all others
+evidence:
+  reference: spa.ref.naka_2007
+  taxon_name_as_reported: Macroscelesia longipes
+  source_location: Results; Fig. 2a; Fig. 3c
+  author_statement: Antennae of M. longipes males exhibited consistent EAG responses to two compounds with the same retention times as components I and II of M. japona
+  unresolved:
+  - origin of the males
+  notes: 'EAG to 1 ng synthetics, means of at least four antennae (Fig. 3c): E2,Z13-18:OH a (about 190 mV); E2,Z13-18:Ald and the five other compounds b (about 0-45; E2,Z13-18:OAc about 0). Only the alcohol
+    is recorded from the synthetic series: the b group is the lower group, and nothing in the paper supports either active or inactive for it.'

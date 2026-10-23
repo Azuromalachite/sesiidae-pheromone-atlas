@@ -1,0 +1,52 @@
+observation_id: spa.obs.macroscelesia_japona.naka_2007.trap_oh_300_added.test2
+observation_type: behavioural_response
+taxon: spa.tax.macroscelesia_japona
+context:
+  sex: male
+  habitat: coppice
+  population: Japanese population
+  locality: Tsukuba City, Ibaraki Prefecture, Japan
+assay: field_trapping
+trap:
+  design: sticky_board
+  colour: null
+  supplier: Takeda Chemical Industries
+dispenser:
+  design: rubber_septum
+  description: white rubber septum (Sigma-Aldrich)
+blend:
+- compound: spa.cmpd.e2_z13_18_al
+  amount:
+    value: 1000
+    unit: microgram
+- compound: spa.cmpd.e2_z13_18_oh
+  amount:
+    value: 300
+    unit: microgram
+comparator:
+  description: E2,Z13-18:Ald alone, 1000 ug
+  blend:
+  - compound: spa.cmpd.e2_z13_18_al
+    amount:
+      value: 1000
+      unit: microgram
+effect: no_effect
+significance: not_tested
+dose:
+  value: 1300
+  unit: microgram
+response:
+  measure: trap_catch
+  unit: mean_catch_per_trap
+  treatment_value: 0
+  comparator_value: 0
+  qualifier: as_reported
+evidence:
+  reference: spa.ref.naka_2007
+  experiment_id: spa.exp.naka_2007.japona_test2
+  taxon_name_as_reported: Macroscelesia japona
+  source_location: Table 1, Test II
+  author_statement: When different amounts of E2,Z13-18:OH or E2,Z13-18:OAc were added to E2,Z13-18:Ald, surprisingly, only traps baited with both E2,Z13-18:OAc and E2,Z13-18:Ald caught males
+  notes: E2,Z13-18:Ald alone caught nothing in this test, so no letter and no test for this contrast; effect from the raw means. Test II, June 25 - July 10 2003, Tsukuba (NIAES, NIES, Yukari-no-Mori), N
+    = 4. Coppices in Ibaraki Prefecture; traps 1.5 m up, at least 10 m apart, counted every few days and rotated in a Latin square; mean +- SD per trap; log-transformed one-way ANOVA, Tukey-Kramer at 5
+    percent. E2,Z13-18:OAc from Shin-Etsu with under 2 percent unknown impurities and no alcohol; the alcohol made from it by hydrolysis and the aldehyde by PCC oxidation, no purity stated.

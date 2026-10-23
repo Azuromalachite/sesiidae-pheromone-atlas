@@ -1,0 +1,54 @@
+observation_id: spa.obs.macroscelesia_longipes.naka_2007.gland
+observation_type: chemical_measurement
+taxon: spa.tax.macroscelesia_longipes
+context:
+  sex: female
+  life_stage: adult
+  mating_status: virgin
+  behavioural_state: null
+  sampling_unit: individual
+  n_individuals: 3
+  population: Japanese population
+  locality: near Lake Sanaru, Hamamatsu City, Shizuoka Prefecture, Japan
+  rearing: field_collected_reared
+sample:
+  materials:
+  - gland_extract
+  material_as_reported: abdominal tips excised 4 h after the start of photophase, extracted as for M. japona
+  result_scope: single_material
+components:
+- compound: spa.cmpd.e2_z13_18_oh
+  detected: true
+  method: gland_extract_gc_ms_ei_db23_vs_synthetic
+  identification: confirmed
+  abundance_class: major
+  measurements:
+  - value: 16.8
+    unit: ng_per_female
+    qualifier: mean
+    spread:
+      value: 8.0
+      kind: sd
+- compound: spa.cmpd.e2_z13_18_al
+  detected: true
+  method: gland_extract_gc_ms_ei_db23_vs_synthetic
+  identification: confirmed
+  measurements:
+  - value: 0.4
+    unit: ng_per_female
+    qualifier: as_reported
+- compound: spa.cmpd.e2_z13_18_oac
+  detected: false
+  method: gland_extract_gc_ms_ei_db23_mass_chromatograms
+evidence:
+  reference: spa.ref.naka_2007
+  taxon_name_as_reported: Macroscelesia longipes
+  source_location: Results; Fig. 2
+  author_statement: Three GC-MS injections (1 FE each) of M. longipes extract gave a mean titer of E2,Z13-18:OH of 16.8±8.0 ng/female. E2,Z13-18:Ald was detected in one sample (0.4 ng/female), but not in
+    the other two.
+  unresolved:
+  - detection limit for the aldehyde in the two negative samples and for E2,Z13-18:OAc
+  - whether the extracted females were calling
+  notes: About 20 galls with larvae from a riverbed near Lake Sanaru, August 2003; adults after 15-20 days at 25 C, 15L:9D. Females called 1-4 h after lights on; abdominal tips excised 4 h after lights
+    on, extracted as for M. japona (virgin is the Atlas reading of that procedure). GC-MS 'confirmed' both compounds by comparison with M. japona's components and the synthetics; the aldehyde was not reduced
+    here. The aldehyde was found in one of three females only. E2,Z13-18:OAc not detected (Fig. 2b).

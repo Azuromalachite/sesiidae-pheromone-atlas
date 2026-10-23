@@ -40,7 +40,7 @@ Those papers count about 20 identified sesiid pheromones. The first list had
 16. **The gap is stated, not hidden.** A dated census search record is added
 when a complete list is read, and only then can the scope say "all".
 
-### Curated (16)
+### Curated (19)
 
 | species | female chemistry from |
 |---|---|
@@ -55,25 +55,31 @@ when a complete list is read, and only then can the scope say "all".
 | *S. hector* | Naka 2008 |
 | *S. pictipes*, *S. exitiosa* | Tumlinson 1974 |
 | *S. scitula* | Zhang 2005 (gland and effluvia) |
-| *Eichlinia cucurbitae* (as *Melittia cucurbitae*) | Klun 1990 |
+| *Eichlinia cucurbitae* (as *Melittia cucurbitae*) | Klun 1990; Schwarz 1983 (one female) |
 | *Glossosphecia romanovi* | Naka 2010 |
 | *S. haitangvora* | Yang 2009 |
-| *Vitacea polistiformis* | **attraction only** (Snow 1987); the female identification is still to curate |
+| *Vitacea polistiformis* | Schwarz 1983; attraction in Snow 1987 |
+| *Macroscelesia japona*, *M. longipes* | Naka 2007 |
+| *Paranthrene tabaniformis* | Mozūraitis & Karalius 2007 (Kazakhstan) |
 
 ### Still to curate
 
-The newly curated papers cite three more identifications, which would bring
-the list to 18 species.
+Every identification on the list so far is curated (`docs/curation-log.md`,
+entries 15 and 16). Mozūraitis & Karalius 2007 cite the Chinese
+identification of *P. tabaniformis*, which found only E3,Z13-18:OH. It is the
+geographic counterpart to their Kazakh three-alcohol blend.
 
 | species | reference | DOI |
 |---|---|---|
-| *Vitacea polistiformis* (female identification) | Schwarz M, Klun JA, Leonhardt BA, Johnson DT (1983) (E,Z)-2,13-Octadecadien-1-ol acetate. A new pheromone structure for sesiid moths. *Tetrahedron Lett* 24:1007–1010 | [10.1016/S0040-4039(00)81588-9](https://doi.org/10.1016/S0040-4039(00)81588-9) |
-| *Macroscelesia japona* and *M. longipes* | Naka H, Inomata S, Matsuoka K, Yamamoto M, Sugie H, Tsuchida K, Arita Y, Ando T (2007) Sex pheromones of two Melittini species, *Macroscelesia japona* and *M. longipes*: identification and field attraction. *J Chem Ecol* 33:591–601 | [10.1007/s10886-006-9242-5](https://doi.org/10.1007/s10886-006-9242-5) |
-| *Paranthrene tabaniformis* | Mozūraitis R, Karalius V (2007) Identification of minor sex pheromone components of the poplar clearwing moth *Paranthrene tabaniformis* (Lepidoptera, Sesiidae). *Z Naturforsch C* 62:138–142 | [10.1515/znc-2007-1-223](https://doi.org/10.1515/znc-2007-1-223) |
+| *Paranthrene tabaniformis* (China) | Zhang X-H, Guo G-Z, Lin G-Q, Wu Y-W, Wu P-H, Li Z-Y, Wei K-N (1986) Studies on identification and syntheses of insect pheromones XXII. Sex pheromone of poplar twig clearwing moth *Paranthrene tabaniformis* Rott. — structure and synthesis. *J Chem Ecol* 12:1263–1271 | [10.1007/BF01012346](https://doi.org/10.1007/BF01012346) |
 
 Naka et al. 2010 also cite Guo et al. 1990 (*Youji Huaxue* 10:504–506) among
 the reports of Japanese sesiid pheromones. The citation names no species, so
-it is not listed until it is read.
+it is not listed until it is read. It shares two authors with Zhang et al.
+1986 (G.-Z. Guo and G.-Q. Lin).
+
+The list still comes from citations, not from a census, so "every
+identification on the list" is not "every identification".
 
 ### Curated on 2026-10-23 from the first list (six papers, seven species)
 
@@ -91,11 +97,22 @@ borer is *Eichlinia cucurbitae* in the Atlas, following GBIF; Klun's
 *Melittia cucurbitae* is kept as a synonym and as the name each record
 reports.
 
+### Curated on 2026-10-23 from the second list (three papers, four species)
+
+Schwarz et al. 1983 (*V. polistiformis*; one squash vine borer female, as
+*Melittia satyriniformis*), Naka et al. 2007 (*Macroscelesia japona*, *M.
+longipes*), Mozūraitis & Karalius 2007 (*P. tabaniformis*). See
+`docs/curation-log.md`, entry 16.
+
 ### Also wanted, outside the target definition
 
 - **Szöcs, Henderson & McNeil 1998**, *S. tipuliformis* in Canada
   ([10.4039/ent130231-2](https://doi.org/10.4039/ent130231-2)). An attractant
   study that completes the geographic contrast. Deferred: no access.
+- **Karalius, Mozūraitis, Miatleuski, Būda & Ivinskis 2001**, field tests of
+  *P. tabaniformis* in Kazakhstan, where Z3,Z13- and E2,Z13-18:OH enhanced
+  E3,Z13-18:OH ([10.1515/znc-2001-11-1233](https://doi.org/10.1515/znc-2001-11-1233)).
+  The behavioural side of Mozūraitis & Karalius 2007.
 
 ### Genome layer: complete
 

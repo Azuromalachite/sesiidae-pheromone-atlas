@@ -1,0 +1,35 @@
+observation_id: spa.obs.eichlinia_cucurbitae.schwarz_1983.ovipositor
+observation_type: chemical_measurement
+taxon: spa.tax.eichlinia_cucurbitae
+context:
+  sex: female
+  life_stage: adult
+  mating_status: null
+  sampling_unit: individual
+  n_individuals: 1
+  population: null
+  locality: null
+  rearing: null
+sample:
+  materials:
+  - ovipositor_extract
+  material_as_reported: ovipositor extract of a field-collected female
+  result_scope: single_material
+components:
+- compound: spa.cmpd.e2_z13_18_oac
+  detected: true
+  method: ovipositor_extract_analysis_not_described
+  identification: confirmed
+  abundance_class: major
+evidence:
+  reference: spa.ref.schwarz_1983
+  taxon_name_as_reported: Melittia satyriniformis
+  source_location: Text p. 1009
+  author_statement: analysis of the ovipositor extract of a field-collected female squash vine borer, Melittia satyriniformis (Hübner), revealed the presence of the same compound as its major constituent
+  unresolved:
+  - method of analysis
+  - whether the female was collected as an adult or a pupa
+  - mating status
+  - amount
+  notes: 'One sentence in a paper on the grape root borer; the analysis is not described. Klun et al. 1990 (spa.ref.klun_1990) cite it as the GC-MS finding that the female produces E,Z-2,13-18:OAc. rearing
+    is left null: ''field-collected female'' could be an adult or a pupa reared out, as Schwarz''s grape root borer females were.'

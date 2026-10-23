@@ -1,0 +1,58 @@
+observation_id: spa.obs.macroscelesia_japona.naka_2007.gland
+observation_type: chemical_measurement
+taxon: spa.tax.macroscelesia_japona
+context:
+  sex: female
+  life_stage: adult
+  mating_status: virgin
+  behavioural_state: calling
+  sampling_unit: individual
+  n_individuals: 10
+  population: Japanese population
+  locality: Maihara City, Shiga Prefecture, Japan
+  rearing: field_collected_reared
+sample:
+  materials:
+  - gland_extract
+  material_as_reported: abdominal tips of calling 1- or 2-day-old virgin females, each in 250 ul hexane for 5 min
+  result_scope: single_material
+components:
+- compound: spa.cmpd.e2_z13_18_al
+  detected: true
+  method: gland_extract_gc_ms_ei_db23_florisil_nabh4_reduction_vs_synthetic
+  identification: confirmed
+  abundance_class: major
+  measurements:
+  - value: 4.2
+    unit: ng_per_female
+    qualifier: mean
+    spread:
+      value: 5.4
+      kind: sd
+- compound: spa.cmpd.e2_z13_18_oh
+  detected: true
+  method: gland_extract_gc_ms_ei_db23_florisil_retention_vs_four_2_13_isomers
+  identification: confirmed
+  abundance_class: minor
+  measurements:
+  - value: 0.3
+    unit: ng_per_female
+    qualifier: mean
+    spread:
+      value: 1.2
+      kind: sd
+- compound: spa.cmpd.e2_z13_18_oac
+  detected: false
+  method: gland_extract_gc_ms_ei_db23_mass_chromatograms
+evidence:
+  reference: spa.ref.naka_2007
+  taxon_name_as_reported: Macroscelesia japona
+  source_location: Results; Fig. 1
+  author_statement: Two GC-EAD-active components were found in a crude extract of M. japona female pheromone gland, and identified as (2E,13Z)-2,13-octadecadien-1-ol (E2,Z13-18:OH) and (2E,13Z)-2,13-octadecadienal
+  unresolved:
+  - detection limit for E2,Z13-18:OAc
+  notes: 'About 40 overwintering larvae from Maihara City, November 2003, vernalised 2 months at 8 C, then 25 C, 15L:9D. Abdominal tips of 1- or 2-day-old virgin females excised when calling, each in 250
+    ul hexane for 5 min. Ten GC-MS injections (1 FE each) of different extracts: E2,Z13-18:OH 0.3 +- 1.2 and E2,Z13-18:Ald 4.2 +- 5.4 ng per female (mean +- SD), ''roughly 1:10'' with ''considerable variation''.
+    Alcohol: Florisil 10 percent ether fraction, mass spectrum like synthetic E2,Z13-18:OH (M+ vs M-18 intensities separate 2,13 from 3,13 dienols), retention equal to it and unlike the other three 2,13
+    isomers on DB-23. Aldehyde: 5 percent ether fraction, spectrum like synthetic E2,Z13-18:Ald, and NaBH4 reduction of the fraction gave E2,Z13-18:OH. The authors note identification was by comparison
+    with known compounds, not direct chemistry. E2,Z13-18:OAc not detected (Fig. 1b mass chromatograms).'

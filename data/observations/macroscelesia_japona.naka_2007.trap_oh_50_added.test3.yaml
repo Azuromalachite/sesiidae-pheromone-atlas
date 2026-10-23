@@ -1,0 +1,52 @@
+observation_id: spa.obs.macroscelesia_japona.naka_2007.trap_oh_50_added.test3
+observation_type: behavioural_response
+taxon: spa.tax.macroscelesia_japona
+context:
+  sex: male
+  habitat: coppice
+  population: Japanese population
+  locality: Tsukuba City, Ibaraki Prefecture, Japan
+assay: field_trapping
+trap:
+  design: sticky_board
+  colour: null
+  supplier: Takeda Chemical Industries
+dispenser:
+  design: rubber_septum
+  description: white rubber septum (Sigma-Aldrich)
+blend:
+- compound: spa.cmpd.e2_z13_18_al
+  amount:
+    value: 1000
+    unit: microgram
+- compound: spa.cmpd.e2_z13_18_oh
+  amount:
+    value: 50
+    unit: microgram
+comparator:
+  description: E2,Z13-18:Ald alone, 1000 ug
+  blend:
+  - compound: spa.cmpd.e2_z13_18_al
+    amount:
+      value: 1000
+      unit: microgram
+effect: no_effect
+significance: not_significant
+dose:
+  value: 1050
+  unit: microgram
+response:
+  measure: trap_catch
+  unit: mean_catch_per_trap
+  treatment_value: 2.3
+  comparator_value: 1.0
+  qualifier: as_reported
+evidence:
+  reference: spa.ref.naka_2007
+  experiment_id: spa.exp.naka_2007.japona_test3
+  taxon_name_as_reported: Macroscelesia japona
+  source_location: Table 1, Test III
+  notes: 'Letters: Ald alone b, +10 a, +50 b, +100 b; +300 and +500 caught nothing and carry none. Test III, June 17 - July 16 2004, N = 3; the text says about 4 km from the aldehyde-acetate field, the
+    footnote says the same fields as Test II. Coppices in Ibaraki Prefecture; traps 1.5 m up, at least 10 m apart, counted every few days and rotated in a Latin square; mean +- SD per trap; log-transformed
+    one-way ANOVA, Tukey-Kramer at 5 percent. E2,Z13-18:OAc from Shin-Etsu with under 2 percent unknown impurities and no alcohol; the alcohol made from it by hydrolysis and the aldehyde by PCC oxidation,
+    no purity stated.'

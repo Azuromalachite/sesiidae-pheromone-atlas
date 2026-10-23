@@ -1,5 +1,63 @@
 # Curation log
 
+## 2026-10-23 (16) — the second list: Schwarz 1983, Naka 2007, Mozūraitis & Karalius 2007
+
+| paper | taxon | records |
+|---|---|---|
+| Schwarz, Klun, Leonhardt & Johnson 1983 | *V. polistiformis*; one squash vine borer female (as *Melittia satyriniformis*) | 2 |
+| Naka et al. 2007 | *Macroscelesia japona*, *M. longipes* | 39 |
+| Mozūraitis & Karalius 2007 | *Paranthrene tabaniformis* (Kazakhstan) | 1 |
+
+- **New records:** 3 taxa, 3 references, 42 observations and no new
+  compounds.
+- **Totals now:** 26 taxa, 29 references, 24 compounds and 482
+  observations.
+- **Taxa:** *M. japona* and *M. longipes* have no NCBI Taxonomy entry. GBIF
+  prints the *P. tabaniformis* authority as "(Rottemburg & von, 1775)", a
+  parsing artefact; the record uses the paper's "(Rottemburg, 1775)".
+
+**Every species on the target list now has female chemistry.**
+*V. polistiformis* moves from attraction only to female chemistry curated.
+The list is still built from citations, not from a census.
+
+**Two readings of Naka 2007, both upheld by the reviewer:**
+- **Table 1, Test III.** It prints 100 µg of alcohol twice. The 13.0 a row
+  is recorded as 10 µg, because the text gives the best blend as 1:100
+  three times and the rows then ascend like Test IV's. The paper is
+  inconsistent either way: the female ratio is "roughly 1:10", yet the
+  Discussion calls the 1:100 optimum similar to it. The schema cannot flag
+  an inferred amount, so each record's notes say it.
+- **Table 2.** The "Touched" and "Attracted" headers are read as swapped.
+  Four separate checks against the text agree, among them that a touching
+  male must first have come within 5 cm.
+
+**Review.** No number, letter or significance label was wrong. Fixed:
+- **Quotes.** Two quotes did not describe their contrast and were replaced.
+  Two were cut without "...".
+- **Notes.** One had a copy-paste error.
+- **Rearing.** `rearing: wild` on the one-sentence squash vine borer record
+  is now null.
+- **Stated reasons.** The reason given for leaving out the lower EAG groups
+  was untrue; it is reworded.
+- **Missing contrasts added:**
+  - Test III, 10 µg vs 50 and 100 µg alcohol (the authors say
+    "significantly greater than for all other treatments");
+  - the 1,000:50 touch contrasts against the other two blends;
+  - the touch versions of the alcohol-vs-blank and aldehyde-alone records;
+  - the Test IV aldehyde-vs-blank record.
+
+**What the papers add.**
+- **Two Macroscelesia species share two compounds in opposite ratios.**
+  *M. japona* makes mostly the aldehyde (about 1:10), *M. longipes* mostly
+  the alcohol (one of three females had any aldehyde). Each species' males
+  answer their own ratio.
+- ***M. japona* males take an unnatural blend.** They are caught by the
+  aldehyde with E2,Z13-18:OAc, an acetate their females do not make; the
+  natural aldehyde-alcohol blends caught nothing in that test.
+- ***P. tabaniformis* differs by region.** In Kazakhstan it makes three
+  dienols (E3:Z3:E2 at 64:32:1.4). The Chinese identification it cites found
+  only E3,Z13-18:OH; that paper is listed to curate.
+
 ## 2026-10-23 (15) — the six target papers, with independent review
 
 | paper | taxon | records |
