@@ -100,6 +100,18 @@ def uncovered_files(root):
     return sorted(p for p in root.rglob("*") if p.suffix in (".yaml", ".yml") and p not in covered)
 
 
+def nonfinite(node, where=""):
+    """Paths of NaN or infinite numbers: YAML reads .nan and .inf as floats,
+    and JSON Schema's minimum and maximum never reject NaN."""
+    if isinstance(node, float) and (node != node or node in (float("inf"), float("-inf"))):
+        return [where or "(record)"]
+    if isinstance(node, dict):
+        return [p for k, v in node.items() for p in nonfinite(v, f"{where}/{k}")]
+    if isinstance(node, list):
+        return [p for i, v in enumerate(node) for p in nonfinite(v, f"{where}/{i}")]
+    return []
+
+
 def load_root(root):
     """{kind: {id: (path, record)}} plus findings for unreadable files."""
     records, findings = {k: {} for k in KINDS}, []
@@ -112,9 +124,11 @@ def load_root(root):
             except DuplicateKey as e:
                 findings.append(Finding("YAML_DUPLICATE_KEY", str(path), str(e)))
                 continue
-            except yaml.YAMLError as e:
+            except (yaml.YAMLError, UnicodeDecodeError) as e:
                 findings.append(Finding("YAML", str(path), str(e).splitlines()[0]))
                 continue
+            for where in nonfinite(rec):
+                findings.append(Finding("NUMBER_NOT_FINITE", str(path), f"{where}: NaN or infinity is not a measurement"))
             rid = rec.get(id_field) if isinstance(rec, dict) else None
             if rid in records[kind]:
                 findings.append(Finding("DUPLICATE_ID", str(path), f"{rid} also in {records[kind][rid][0]}"))
@@ -540,14 +554,49 @@ def file_sha256(path):
 
 
 SUMS_LINE = re.compile(r"^([0-9a-f]{64})  (\S+)$")
-MAX_RECORD_BYTES = 1_000_000  # a member record is metadata; surfaces belong in NPZ assets
+MAX_RECORD_BYTES = 1_000_000  # a C18 espmap record with its site table is about 175 kB; surfaces belong in NPZ assets
+
+
+class StrictJSONError(ValueError):
+    pass
+
+
+def _no_duplicate_keys(pairs):
+    out = {}
+    for k, v in pairs:
+        if k in out:
+            raise StrictJSONError(f"duplicate key {k!r}")
+        out[k] = v
+    return out
+
+
+def _no_constant(name):
+    raise StrictJSONError(f"{name} is not a number JSON allows")
+
+
+def strict_json(path):
+    """JSON as the gate reads it: UTF-8, no repeated key (the last would win
+    silently, as in YAML), no NaN or Infinity (not JSON, and every comparison
+    with NaN is false). Raises StrictJSONError with the reason."""
+    try:
+        text = Path(path).read_text(encoding="utf-8")
+    except UnicodeDecodeError as e:
+        raise StrictJSONError(f"not UTF-8: {e.reason}") from None
+    try:
+        return json.loads(text, object_pairs_hook=_no_duplicate_keys, parse_constant=_no_constant)
+    except json.JSONDecodeError as e:
+        raise StrictJSONError(f"not JSON: {e}") from None
 
 
 def read_sums(path):
-    """({name: sha256}, problems) from a SHA256SUMS file: exactly
+    """({name: sha256}, problems) from a SHA256SUMS file: UTF-8, exactly
     '<64 lowercase hex>  <name>' per line, each name once, as sha256sum writes it."""
     out, problems = {}, []
-    for n, line in enumerate(Path(path).read_text(encoding="utf-8").splitlines(), start=1):
+    try:
+        lines = Path(path).read_text(encoding="utf-8").splitlines()
+    except UnicodeDecodeError:
+        return out, ["not UTF-8"]
+    for n, line in enumerate(lines, start=1):
         m = SUMS_LINE.match(line)
         if not m:
             problems.append(f"line {n} is not '<sha256>  <name>'")
@@ -562,9 +611,12 @@ def computed_layout(computed):
     """({(slug, protocol): [names]}, findings) for every file under computed/.
     espmap computes; the Atlas keeps an index of what was computed for its
     compounds. NPZ surfaces are refused here: they ship as release assets.
-    A symlink anywhere is refused: what the gate does not walk, nothing may read."""
+    A symlink anywhere, the root included, is refused: what the gate does not
+    walk, nothing may read."""
     out, dirs = [], {}
     computed = Path(computed)
+    if computed.is_symlink():
+        return dirs, [Finding("COMPUTED_LAYOUT", str(computed), "computed/ must not be a symlink")]
     if not computed.is_dir():
         return dirs, [Finding("COMPUTED_LAYOUT", str(computed), "computed must be a directory")]
     for p in sorted(computed.rglob("*")):
@@ -574,7 +626,7 @@ def computed_layout(computed):
         if not p.is_file():
             continue
         rel = p.relative_to(computed).parts
-        if p.suffix == ".npz":
+        if p.suffix.lower() == ".npz":
             out.append(Finding("COMPUTED_NPZ_IN_GIT", str(p), "NPZ surfaces ship as release-bundle assets; keep only their sha256 in ensemble.json"))
             continue
         ok = (len(rel) in (4, 5) and rel[0] == "espmap" and SLUG.match(rel[1]) and PROTOCOL.match(rel[2])
@@ -591,7 +643,8 @@ def computed_layout(computed):
 
 def ensemble_paths(computed):
     """The ensemble.json files the gate reads, in order. The exporter and the
-    bundle builder use this list, so they never read a path the gate skipped."""
+    bundle builder use this list, so they never read a path the gate skipped.
+    Both run the full validator first, so a listed ensemble has also passed."""
     if not Path(computed).exists():
         return []
     dirs, _ = computed_layout(computed)
@@ -599,11 +652,39 @@ def ensemble_paths(computed):
             for (slug, proto), names in sorted(dirs.items()) if "ensemble.json" in names]
 
 
+def _as_dict(x):
+    return x if isinstance(x, dict) else {}
+
+
+def member_findings(rec_path, rec, m, ens, aid, want):
+    """One member record against its ensemble: the same espmap protocol
+    (analysis_key and key_fields.analysis, espmap's own normalised form), the
+    same espmap version, espmap's own verification, a neutral closed-shell
+    input, the stated geometry, and the Atlas molecule."""
+    out = []
+    if rec.get("analysis_key") != ens["analysis_key"] or _as_dict(rec.get("key_fields")).get("analysis") != ens["analysis"]:
+        out.append(Finding("COMPUTED_PROTOCOL", str(rec_path), "analysis_key or key_fields.analysis differs from the ensemble's: another protocol"))
+    if _as_dict(rec.get("provenance")).get("espmap_version") != ens["espmap"]["version"]:
+        out.append(Finding("COMPUTED_PROTOCOL", str(rec_path),
+                           f"computed with espmap {_as_dict(rec.get('provenance')).get('espmap_version')!r}, the ensemble says {ens['espmap']['version']!r}"))
+    inp, geom = _as_dict(rec.get("input")), _as_dict(rec.get("geometry"))
+    if inp.get("structure_verified") is not True or _as_dict(rec.get("validity")).get("input") is not True:
+        out.append(Finding("COMPUTED_RECORD", str(rec_path), "espmap did not verify this structure (input.structure_verified and validity.input must be true)"))
+    if any(x.get(k) != 0 for x in (inp, geom) for k in ("charge", "spin")):
+        out.append(Finding("COMPUTED_RECORD", str(rec_path), "v0.1 compounds are neutral closed-shell: input and geometry charge and spin must be 0"))
+    if geom.get("sha1") != m["geometry_sha1"]:
+        out.append(Finding("COMPUTED_MEMBER", str(rec_path), f"geometry.sha1 {geom.get('sha1')!r} is not the member's geometry_sha1"))
+    smiles = inp.get("computed_smiles")
+    if want is not None and (not isinstance(smiles, str) or canonical_structure(smiles) != want):
+        out.append(Finding("COMPUTED_STRUCTURE", str(rec_path), f"input.computed_smiles {smiles!r} is not {aid}: this conformer is another molecule"))
+    return out
+
+
 def computed_findings(computed, records, crossref=True):
     """crossref=False when the records themselves failed: the layout,
     checksums and record shapes are still checked, the links to records not."""
     computed = Path(computed)
-    if not computed.exists():
+    if not computed.exists() and not computed.is_symlink():
         return []
     dirs, out = computed_layout(computed)
     validator = Draft202012Validator(json.loads((SCHEMAS / "espmap-ensemble.schema.json").read_text(encoding="utf-8")))
@@ -630,9 +711,9 @@ def computed_findings(computed, records, crossref=True):
             continue
         path = d / "ensemble.json"
         try:
-            ens = json.loads(path.read_text(encoding="utf-8"))
-        except json.JSONDecodeError as e:
-            out.append(Finding("COMPUTED_SCHEMA", str(path), f"not JSON: {e}"))
+            ens = strict_json(path)
+        except StrictJSONError as e:
+            out.append(Finding("COMPUTED_SCHEMA", str(path), str(e)))
             continue
         errs = sorted(validator.iter_errors(ens), key=lambda e: list(e.path))
         if errs:
@@ -659,7 +740,7 @@ def computed_findings(computed, records, crossref=True):
                 out.append(Finding("COMPUTED_INCHIKEY", str(path), f"InChIKey {ens['inchikey']} is not {aid}'s {key}: a different molecule was computed"))
         if ens["protocol"] != proto:
             out.append(Finding("COMPUTED_PROTOCOL", str(path), f"protocol {ens['protocol']!r} is not the directory {proto!r}"))
-        seen, records_used, npz_hashes = set(), set(), set()
+        seen, records_used, npz_hashes, geometries = set(), set(), set(), set()
         for m in ens["members"]:
             c = m["conformer"]
             if c in seen:
@@ -668,12 +749,15 @@ def computed_findings(computed, records, crossref=True):
             if m["npz_sha256"] in npz_hashes:
                 out.append(Finding("COMPUTED_MEMBER", str(path), f"{c}: npz_sha256 repeats another member's; one surface cannot be two conformers"))
             npz_hashes.add(m["npz_sha256"])
+            if m["geometry_sha1"] in geometries:
+                out.append(Finding("COMPUTED_MEMBER", str(path), f"{c}: geometry_sha1 repeats another member's; one geometry cannot be two conformers"))
+            geometries.add(m["geometry_sha1"])
             if m["record"] != f"conformers/{c}.json" or m["npz"] != f"{c}.npz":
                 out.append(Finding("COMPUTED_MEMBER", str(path), f"{c}: record must be conformers/{c}.json and npz {c}.npz"))
                 continue
             records_used.add(m["record"])
             rec_path = d / m["record"]
-            if not rec_path.exists():
+            if not rec_path.is_file():
                 out.append(Finding("COMPUTED_MEMBER", str(path), f"{c}: {m['record']} is missing"))
                 continue
             if file_sha256(rec_path) != m["record_sha256"]:
@@ -682,25 +766,14 @@ def computed_findings(computed, records, crossref=True):
                 out.append(Finding("COMPUTED_RECORD", str(rec_path), f"larger than {MAX_RECORD_BYTES} bytes: surfaces belong in NPZ assets, not in git"))
                 continue
             try:
-                rec = json.loads(rec_path.read_text(encoding="utf-8"))
-            except json.JSONDecodeError:
-                out.append(Finding("COMPUTED_RECORD", str(rec_path), "not JSON"))
+                rec = strict_json(rec_path)
+            except StrictJSONError as e:
+                out.append(Finding("COMPUTED_RECORD", str(rec_path), str(e)))
                 continue
             if not isinstance(rec, dict) or rec.get("schema") != ESPMAP_RECORD:
                 out.append(Finding("COMPUTED_RECORD", str(rec_path), f"not an {ESPMAP_RECORD}"))
                 continue
-            if rec.get("analysis_key") != m["analysis_key"]:
-                out.append(Finding("COMPUTED_RECORD", str(rec_path), "analysis_key differs from the ensemble's"))
-            inp = rec.get("input") if isinstance(rec.get("input"), dict) else {}
-            if inp.get("structure_verified") is not True or (rec.get("validity") or {}).get("input") is not True:
-                out.append(Finding("COMPUTED_RECORD", str(rec_path), "espmap did not verify this structure (input.structure_verified and validity.input must be true)"))
-            if want is not None and canonical_structure(inp.get("computed_smiles") or "") != want:
-                out.append(Finding("COMPUTED_STRUCTURE", str(rec_path),
-                                   f"input.computed_smiles {inp.get('computed_smiles')!r} is not {aid}: this conformer is another molecule"))
-            settings = rec.get("settings") if isinstance(rec.get("settings"), dict) else {}
-            wrong = [k for k in ("xc", "basis", "solvent", "solvent_esp") if settings.get(k) != ens["settings"][k]]
-            if wrong:
-                out.append(Finding("COMPUTED_PROTOCOL", str(rec_path), f"settings {wrong} differ from the ensemble's protocol settings"))
+            out += member_findings(rec_path, rec, m, ens, aid, want)
         for n in present:
             if n.startswith("conformers/") and n not in records_used:
                 out.append(Finding("COMPUTED_MEMBER", str(d / n), "conformer record not listed in ensemble.json members"))
@@ -714,8 +787,10 @@ def teaching_findings(teaching, records, crossref=True):
     in its own observations, and comparisons between two of its observations,
     each pair once. crossref=False when the records themselves failed."""
     teaching = Path(teaching)
-    if not teaching.exists():
+    if not teaching.exists() and not teaching.is_symlink():
         return []
+    if teaching.is_symlink() or (teaching / "cases").is_symlink():
+        return [Finding("TEACH_LAYOUT", str(teaching), "teaching/ and teaching/cases/ must not be symlinks")]
     if not teaching.is_dir():
         return [Finding("TEACH_LAYOUT", str(teaching), "teaching must be a directory")]
     out = []
@@ -736,7 +811,7 @@ def teaching_findings(teaching, records, crossref=True):
         except DuplicateKey as e:
             out.append(Finding("YAML_DUPLICATE_KEY", str(p), str(e)))
             continue
-        except yaml.YAMLError as e:
+        except (yaml.YAMLError, UnicodeDecodeError) as e:
             out.append(Finding("YAML", str(p), str(e).splitlines()[0]))
             continue
         errs = sorted(validator.iter_errors(case), key=lambda e: list(e.path))

@@ -29,35 +29,49 @@ refuses any file it did not write. Computed results are inputs that the
 Atlas checks, not outputs it builds.
 
 **What `atlas_validate.py` checks.** It runs these whenever `computed/`
-exists beside `data/`; failing fixtures are in `tests/fixtures/bad/computed_*`.
+exists beside `data/`. Layout, checksums and record shapes are checked even
+when the data records fail; the links to records are checked only once the
+records are sound. Failing fixtures are in `tests/fixtures/bad/computed_*`.
 
 | code | what it refuses |
 |---|---|
-| `COMPUTED_LAYOUT` | any file outside the layout above |
-| `COMPUTED_NPZ_IN_GIT` | an NPZ surface; these ship as release assets |
-| `COMPUTED_SCHEMA` | an `ensemble.json` that is missing, not JSON, or fails its schema |
+| `COMPUTED_LAYOUT` | any file outside the layout above, any symlink (the `computed` root included), or a `computed` that is not a directory |
+| `COMPUTED_NPZ_IN_GIT` | an NPZ surface (any case of `.npz`); these ship as release assets |
+| `COMPUTED_SCHEMA` | an `ensemble.json` that is missing, not UTF-8, not strict JSON (a repeated key, NaN or Infinity), or fails its schema |
 | `COMPUTED_ID` | an `atlas_id` with no record, one that does not match the slug, or a slug that names two records |
-| `COMPUTED_STRUCTURE` | `smiles` that, re-canonicalised with the validator's RDKit, is not the record's structure |
+| `COMPUTED_STRUCTURE` | `smiles`, or a member record's `input.computed_smiles`, that is not the record's structure once re-canonicalised with the validator's RDKit |
 | `COMPUTED_INCHIKEY` | an InChIKey that differs from the record's generated one (the second identity check) |
-| `COMPUTED_PROTOCOL` | a `protocol` that is not the directory name |
-| `COMPUTED_CHECKSUM` | `SHA256SUMS` missing, a file unlisted, absent or changed, or a `record_sha256` that does not match |
-| `COMPUTED_MEMBER` | a member listed twice, a record or NPZ name that is not `<conformer>.json` / `<conformer>.npz`, a missing record, or a conformer file no member lists |
-| `COMPUTED_RECORD` | a member file that is not an `espmap.record/1`, or whose `analysis_key` is not the member's |
+| `COMPUTED_PROTOCOL` | a `protocol` that is not the directory name; a member whose `analysis_key` or `key_fields.analysis` is not the ensemble's (espmap's normalised protocol: xc, basis, solvent with vacuum as null, grid, density fitting, geometry method, surface); or one computed with another espmap version |
+| `COMPUTED_CHECKSUM` | `SHA256SUMS` missing or not UTF-8; a line not exactly `<64 lowercase hex>  <name>`; a name listed twice; a file unlisted, absent or changed; or a `record_sha256` that does not match |
+| `COMPUTED_MEMBER` | a member listed twice; a record or NPZ name that is not `<conformer>.json` / `<conformer>.npz`; a missing record; a conformer file no member lists; two members with one `npz_sha256` or one `geometry_sha1`; or a record whose `geometry.sha1` is not its member's |
+| `COMPUTED_RECORD` | a member file larger than 1 MB (a C18 record with its site table is about 175 kB), not UTF-8 or strict JSON, not an `espmap.record/1`, not verified by espmap (`input.structure_verified` and `validity.input` true), or not neutral and closed-shell |
+
+YAML records and cases holding NaN or infinity are refused too
+(`NUMBER_NOT_FINITE`): YAML reads `.nan` as a number, and JSON Schema's
+bounds never reject it. The good fixtures use espmap's own records
+(`espmap/fixtures/records/Z3Z13-18OAc_{extended,folded}.json`).
 
 **Why identity rests on SMILES first.** A standard InChIKey merges some
 tautomers (2-hydroxypyridine and 2-pyridone share one), so it is only the
-second check.
+second check. Each member record is checked too, so an ensemble cannot index
+a conformer computed from another molecule.
 
 **What the Atlas does not check.** The gate checks these files as an index:
-present, unchanged, the right molecule. It does not re-validate espmap's own
-record schema or recompute anything. Atlas CI never needs espmap installed.
+present, unchanged, the right molecule, espmap's own verification, the stated
+settings. It does not re-validate espmap's full record schema or recompute
+anything. Atlas CI never needs espmap installed.
 
 **NPZ surfaces.** They are not in git (`.gitignore` excludes them, and the
 gate refuses one if it appears). `ensemble.json` records each surface's
 `npz_sha256`. A release bundle ships them from
-`--npz-dir <dir>/<slug>/<protocol>/conf_NN.npz`. `build_release.py --bundle`
-refuses to build if `computed/` lists any NPZ and one is missing or its
-sha256 differs.
+`--npz-dir <dir>/<slug>/<protocol>/conf_NN.npz`. Each file is read once,
+hashed, and those same bytes are written to the bundle.
+`build_release.py --bundle` refuses to build if `computed/` lists any NPZ and
+one is missing or its sha256 differs. The exporter and the bundle builder
+read only the ensembles the gate read (`atlas_validate.ensemble_paths`).
+
+`computed/**` and `teaching/**` are marked `-text` in `.gitattributes`, so a
+checkout on any platform keeps the bytes the checksums were taken of.
 
 **When espmap's own ensemble record ships** (v0.3), it replaces this index as
 a new schema version. The `/0` file is never edited in place.
@@ -70,23 +84,49 @@ A case (`schemas/teaching-case.schema.json`) names:
 - comparisons, each between two of its own observations.
 
 It names records only. `scripts/export_teaching_bundle.py` builds the
-bundle (`schemas/teaching-bundle.schema.json`, `spa.teaching/0`). Every
-observation's `statement`, and both sides of every comparison's
-`observed_contrast`, are assembled from record fields: taxon, place, lure
-and comparator, effect, significance, response values and qualifier,
-detections and negatives, antennal readings. The bundle draws no conclusion.
-A comparison label names the pair; it does not interpret it.
+bundle (`schemas/teaching-bundle.schema.json`, `spa.teaching/0`).
+
+**What a statement contains.** Every observation's `statement`, and both
+sides of every comparison's `observed_contrast`, are one-line summaries
+assembled from record fields, with numbers exactly as recorded:
+- taxon, population and locality;
+- lure, and comparator with its description;
+- dose, and whether the comparator's trap or dispenser differs;
+- effect, significance, both response values (or "not given") and the
+  qualifier;
+- detections with identification, abundance and measurements (with their
+  qualifiers), negatives with their detection limits, and untested
+  compounds;
+- antennal readings with their preparation.
+
+A statement is a summary, not the record. Each observation also carries:
+- the full `context`;
+- the structured lure, setup and outcome fields;
+- `evidence`: the authors' statement, `unresolved` (what the record says its
+  source does not give) and `atlas_notes` (the curator's notes, labelled as
+  such).
+
+A consumer that shows a statement should be able to show these too. The
+bundle draws no conclusion.
+
+**Roles.** Each compound lists its occurrences with their roles (`treatment`,
+`comparator`, `detected`, `not_detected`, `not_tested`, `antennal_<response>`),
+so a compound that was looked for and absent is never shown as produced.
+
+**The case author's words.** Only two pieces of text are not built from
+records, and the bundle names them `case_title` and `case_label`. The case
+schema refuses control and bidirectional-override characters in them.
 
 **Validator codes** (fixtures in `tests/fixtures/bad/teaching_*`):
 
 | code | what it refuses |
 |---|---|
-| `TEACH_LAYOUT` | anything in `teaching/` other than `cases/<case_id>.yaml` |
-| `TEACH_SCHEMA` | a case that fails its schema |
+| `TEACH_LAYOUT` | anything in `teaching/` other than `cases/<case_id>.yaml`, any symlink, or a `teaching` that is not a directory |
+| `TEACH_SCHEMA` | a case that fails its schema, including control or bidirectional characters in its own text |
 | `TEACH_CASE_ID` | a `case_id` that is not the file name |
 | `TEACH_REF` | an observation or compound with no record |
-| `TEACH_COMPOUND_UNOBSERVED` | a compound that occurs in none of the case's observations (blends and comparator blends included) |
-| `TEACH_COMPARISON` | a comparison of an observation with itself, or with one outside the case |
+| `TEACH_COMPOUND_UNOBSERVED` | a compound that occurs in none of the case's observations, in any role |
+| `TEACH_COMPARISON` | a comparison of an observation with itself, with one outside the case, or of a pair already compared |
 
 **Where bundles live:**
 - `build_release.py` writes `derived/teaching/<case_id>.json`, with no

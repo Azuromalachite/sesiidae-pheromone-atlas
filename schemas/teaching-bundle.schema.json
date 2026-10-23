@@ -106,6 +106,7 @@
           "taxon",
           "reference",
           "context",
+          "evidence",
           "source_location",
           "statement"
         ],
@@ -164,7 +165,8 @@
             }
           },
           "context": {
-            "type": "object"
+            "type": "object",
+            "description": "the record's context, every field"
           },
           "experiment_id": {
             "type": [
@@ -222,7 +224,7 @@
           },
           "statement": {
             "type": "string",
-            "description": "one line assembled from the fields above"
+            "description": "one line built from the outcome fields: taxon, population and locality, lure and comparator (description included), dose, setup differences, effect, significance, response values and qualifier; or detections, negatives and untested compounds; or antennal readings. A summary: the structured fields and evidence carry the rest"
           },
           "trap": {
             "type": [
@@ -241,6 +243,44 @@
               "object",
               "null"
             ]
+          },
+          "evidence": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "author_statement",
+              "author_statement_form",
+              "unresolved",
+              "atlas_notes"
+            ],
+            "properties": {
+              "author_statement": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "author_statement_form": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "unresolved": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "what the record says its source does not give"
+              },
+              "atlas_notes": {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "description": "the Atlas curator's notes and inferences, never the authors'"
+              }
+            }
           }
         }
       }

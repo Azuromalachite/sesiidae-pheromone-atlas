@@ -21,8 +21,8 @@
     "title": {
       "type": "string",
       "minLength": 1,
-      "pattern": "^[^\\u0000-\\u001f\\u007f\\u202a-\\u202e\\u2066-\\u2069]+$",
-      "description": "the case author's words; no control or bidirectional-override characters"
+      "pattern": "^[^\\u0000-\\u001f\\u007f-\\u009f\\u061c\\u200b-\\u200f\\u2028-\\u202e\\u2060-\\u2069\\ufeff]+$",
+      "description": "the case author's words; no control, invisible-format or bidirectional characters"
     },
     "compounds": {
       "type": "array",
@@ -58,7 +58,7 @@
             "type": "string",
             "minLength": 1,
             "description": "a neutral name for the pair, never a conclusion",
-            "pattern": "^[^\\u0000-\\u001f\\u007f\\u202a-\\u202e\\u2066-\\u2069]+$"
+            "pattern": "^[^\\u0000-\\u001f\\u007f-\\u009f\\u061c\\u200b-\\u200f\\u2028-\\u202e\\u2060-\\u2069\\ufeff]+$"
           },
           "a": {
             "type": "string",

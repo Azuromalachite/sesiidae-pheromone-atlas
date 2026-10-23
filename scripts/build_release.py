@@ -51,7 +51,7 @@ def sha256(data):
 
 
 def jsonl(records):
-    return "".join(json.dumps(r, sort_keys=True, ensure_ascii=False, separators=(",", ":")) + "\n" for r in records)
+    return "".join(json.dumps(r, sort_keys=True, ensure_ascii=False, separators=(",", ":"), allow_nan=False) + "\n" for r in records)
 
 
 def derived_files(data):

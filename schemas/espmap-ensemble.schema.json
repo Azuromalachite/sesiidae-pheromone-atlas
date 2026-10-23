@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/Azuromalachite/sesiidae-pheromone-atlas/schemas/espmap-ensemble.schema.json",
   "title": "espmap conformer ensemble (Atlas index)",
-  "description": "computed/espmap/<slug>/<protocol>/ensemble.json: the Atlas's index of one espmap conformer ensemble for one Atlas compound or model. espmap computes; the Atlas checks that each member record is present, unchanged (sha256), an espmap.record/1 with the stated analysis_key, computed from this molecule (input.computed_smiles), structure-verified and input-valid, with the protocol's settings, and that the molecule is the Atlas compound (InChIKey). NPZ surfaces are not in git: they ship as release-bundle assets, verified against npz_sha256 when a bundle is built. When espmap's own ensemble record ships (v0.3), this file will be replaced by a new schema version, never edited in place.",
+  "description": "computed/espmap/<slug>/<protocol>/ensemble.json: the Atlas's index of one espmap conformer ensemble for one Atlas compound or model. espmap computes; the Atlas checks that the molecule is the Atlas compound (canonical SMILES, then InChIKey), and that each member record is present, unchanged (sha256), an espmap.record/1 of this molecule (input.computed_smiles), verified by espmap (input.structure_verified, validity.input), neutral and closed-shell, of the stated geometry (geometry.sha1), computed with this ensemble's single protocol (analysis_key and key_fields.analysis) and espmap version. NPZ surfaces are not in git: they ship as release-bundle assets, verified against npz_sha256 when a bundle is built. When espmap's own ensemble record ships (v0.3), this file is replaced by a new schema version, never edited in place.",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -11,7 +11,8 @@
     "smiles",
     "inchikey",
     "protocol",
-    "settings",
+    "analysis_key",
+    "analysis",
     "espmap",
     "selection",
     "members"
@@ -40,36 +41,15 @@
       "pattern": "^[a-z0-9_.-]+$",
       "description": "must equal the directory name, e.g. b3lyp_def2-svp_gas_espmap-v0.2.1"
     },
-    "settings": {
+    "analysis_key": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$",
+      "description": "espmap's analysis_key: the hash of its normalised calculation protocol, the same for every conformer of one ensemble; every member record must carry it"
+    },
+    "analysis": {
       "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "xc",
-        "basis",
-        "solvent",
-        "solvent_esp"
-      ],
-      "description": "the protocol's settings; every member record's settings.xc, basis, solvent and solvent_esp must equal these",
-      "properties": {
-        "xc": {
-          "type": "string"
-        },
-        "basis": {
-          "type": "string"
-        },
-        "solvent": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "solvent_esp": {
-          "type": [
-            "string",
-            "null"
-          ]
-        }
-      }
+      "minProperties": 1,
+      "description": "espmap's key_fields.analysis (normalised: xc, basis, solvent with vacuum as null, solvent_esp, grid, density fitting, geometry method, surface definition); every member record's key_fields.analysis must equal it"
     },
     "espmap": {
       "type": "object",
@@ -80,7 +60,8 @@
       "properties": {
         "version": {
           "type": "string",
-          "minLength": 1
+          "minLength": 1,
+          "description": "must equal every member record's provenance.espmap_version"
         },
         "commit": {
           "type": [
@@ -118,7 +99,7 @@
           "conformer",
           "record",
           "record_sha256",
-          "analysis_key",
+          "geometry_sha1",
           "npz",
           "npz_sha256",
           "rg_angstrom",
@@ -138,11 +119,6 @@
             "type": "string",
             "pattern": "^[0-9a-f]{64}$"
           },
-          "analysis_key": {
-            "type": "string",
-            "minLength": 1,
-            "description": "must equal the record's analysis_key"
-          },
           "npz": {
             "type": "string",
             "pattern": "^conf_[0-9]{2,}\\.npz$",
@@ -160,6 +136,11 @@
           "folded": {
             "type": "boolean",
             "description": "the producer's extended/folded call; its rule goes in selection.notes"
+          },
+          "geometry_sha1": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{40}$",
+            "description": "the member record's geometry.sha1; distinct across members"
           }
         }
       }

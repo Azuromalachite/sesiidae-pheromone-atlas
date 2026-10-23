@@ -1,0 +1,51 @@
+{
+  "analysis": {
+    "basis": "def2svp",
+    "density_fit": true,
+    "geometry_method": "etkdg_mmff94s",
+    "solvent": null,
+    "solvent_esp": null,
+    "spacing_bohr": 0.26,
+    "surface_definition": {
+      "isovalue_e_bohr3": 0.002,
+      "property": "electron_density"
+    },
+    "xc": "b3lyp"
+  },
+  "analysis_key": "d0f5ed136cda12ada8c6324a79ec9f7e79134d2f",
+  "atlas_id": "spa.cmpd.z3_z13_18_oac",
+  "espmap": {
+    "commit": null,
+    "version": "0.2.0"
+  },
+  "inchikey": "VVJPJXKHBZNADP-DNNFRFAMSA-N",
+  "members": [
+    {
+      "conformer": "conf_00",
+      "folded": false,
+      "geometry_sha1": "6db5dc8428d714ede5ae7055e6e27fa7a5f7c337",
+      "npz": "conf_00.npz",
+      "npz_sha256": "9b181dba10c00101023fc781a47f7da815cba28a591703016164e0c8a953e673",
+      "record": "conformers/conf_00.json",
+      "record_sha256": "00b613d3b693d7841a460a0aed8969e282512b22a9c9c6f5368f9ebce4434a98",
+      "rg_angstrom": 5.2
+    },
+    {
+      "conformer": "conf_01",
+      "folded": true,
+      "geometry_sha1": "ebf76f85b2722a951a618c6d4788b9b3df1e17a8",
+      "npz": "conf_01.npz",
+      "npz_sha256": "c0d005901c888be7b202891ea41be658986ce192695a844901d412d5856663e8",
+      "record": "conformers/conf_01.json",
+      "record_sha256": "e36a12cd6dcad3bb7933abdc00cbbeb0773430e4c14d41c5e579ca8660ef49a9",
+      "rg_angstrom": 6.2
+    }
+  ],
+  "protocol": "b3lyp_def2-svp_gas_espmap-v0.2.0",
+  "schema": "spa.espmap_ensemble/0",
+  "selection": {
+    "method": "fixture: espmap's extended and folded Z3,Z13-18:OAc records",
+    "notes": "folded: the producer's call (fixture)"
+  },
+  "smiles": "CCCC/C=C\\CCCCCCCC/C=C\\CCOC(C)=O"
+}

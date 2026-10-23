@@ -60,6 +60,17 @@ nothing here is a release, and no DOI has been minted
   (GBIF), with *Melittia cucurbitae* as a synonym. Then the second list
   (42 observations): Schwarz 1983, Naka 2007 and Mozūraitis & Karalius 2007;
   then Zhang 1986 and Karalius 2001 (42 observations).
+- **`computed/espmap/`**: the checked index of espmap ensembles for Atlas
+  compounds (`schemas/espmap-ensemble.schema.json`, `spa.espmap_ensemble/0`),
+  validated by `atlas_validate.py` with ten new codes (`COMPUTED_*`). NPZ
+  surfaces are release-bundle assets: `build_release.py --bundle --npz-dir`
+  verifies and ships them. None is computed yet.
+- **Teaching bundles**: `teaching/cases/` names records
+  (`schemas/teaching-case.schema.json`); `scripts/export_teaching_bundle.py`
+  builds `spa.teaching/0` bundles from record fields only
+  (`schemas/teaching-bundle.schema.json`), committed as
+  `derived/teaching/<case_id>.json`. Six new codes (`TEACH_*`). First case:
+  `sesiidae-homework-1`. Contract: `docs/computed-and-teaching.md`.
 
 ### Frozen
 

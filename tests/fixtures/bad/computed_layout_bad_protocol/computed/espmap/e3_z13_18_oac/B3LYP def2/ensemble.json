@@ -1,33 +1,41 @@
 {
+  "analysis": {
+    "basis": "def2svp",
+    "density_fit": true,
+    "geometry_method": "etkdg_mmff94s",
+    "solvent": null,
+    "solvent_esp": null,
+    "spacing_bohr": 0.26,
+    "surface_definition": {
+      "isovalue_e_bohr3": 0.002,
+      "property": "electron_density"
+    },
+    "xc": "b3lyp"
+  },
+  "analysis_key": "d0f5ed136cda12ada8c6324a79ec9f7e79134d2f",
   "atlas_id": "spa.cmpd.e3_z13_18_oac",
   "espmap": {
-    "commit": "41a989d",
-    "version": "0.2.1"
+    "commit": null,
+    "version": "0.2.0"
   },
   "inchikey": "VVJPJXKHBZNADP-ZSTZHTMOSA-N",
   "members": [
     {
-      "analysis_key": "b0f33fcfb88970c53c6eb1050e2c823dd0802875",
       "conformer": "conf_00",
       "folded": false,
+      "geometry_sha1": "4f031a67fdbbfe80011f6b70da80ad3315beea26",
       "npz": "conf_00.npz",
       "npz_sha256": "3d2f558f0358dda3eedc09d6c1701d3e71991186a29be870d2b41ece5852c4b4",
       "record": "conformers/conf_00.json",
-      "record_sha256": "0cdbfe1c1091eef9c26dfc4eb20c649f7eea98ea1912ba7191326c5e047de48f",
+      "record_sha256": "ab8fae70ba29c26fe8b1d0d5a25c37a88e2f9750be7f00427648b121c9591645",
       "rg_angstrom": 5.2
     }
   ],
-  "protocol": "b3lyp_def2-svp_gas_espmap-v0.2.1",
+  "protocol": "b3lyp_def2-svp_gas_espmap-v0.2.0",
   "schema": "spa.espmap_ensemble/0",
   "selection": {
-    "method": "fixture: lowest MMFF conformers",
-    "notes": "folded: Rg below the extended median (fixture)"
-  },
-  "settings": {
-    "basis": "def2-svp",
-    "solvent": null,
-    "solvent_esp": null,
-    "xc": "b3lyp"
+    "method": "fixture: espmap's extended and folded Z3,Z13-18:OAc records",
+    "notes": "folded: the producer's call (fixture)"
   },
   "smiles": "CCCC/C=C\\CCCCCCCC/C=C/CCOC(C)=O"
 }

@@ -297,14 +297,14 @@ def test_npz_assets_are_verified_before_bundling(tmp_path):
     br = _load("build_release")
     computed = FIX / "computed"
     assert {p.code for p in br.npz_problems(computed, tmp_path)} == {"BUNDLE_NPZ_MISSING"}
-    ens = json.loads((computed / "espmap/z13_18_sme/b3lyp_def2-svp_gas_espmap-v0.2.1/ensemble.json").read_text(encoding="utf-8"))
+    ens = json.loads((computed / "espmap/z13_18_sme/b3lyp_def2-svp_gas_espmap-v0.2.0/ensemble.json").read_text(encoding="utf-8"))
     for slug, proto, members in br.listed_npz(computed):
         for m in members:
             p = tmp_path / slug / proto / m["npz"]
             p.parent.mkdir(parents=True, exist_ok=True)
             p.write_bytes(f"npz-{slug}-{m['conformer'][-1]}".encode())   # the fixture's stand-in contents
     assert br.npz_problems(computed, tmp_path) == []
-    wrong = tmp_path / "z13_18_sme" / "b3lyp_def2-svp_gas_espmap-v0.2.1" / ens["members"][0]["npz"]
+    wrong = tmp_path / "z13_18_sme" / "b3lyp_def2-svp_gas_espmap-v0.2.0" / ens["members"][0]["npz"]
     wrong.write_bytes(b"changed")
     assert {p.code for p in br.npz_problems(computed, tmp_path)} == {"BUNDLE_NPZ_CHECKSUM"}
 
@@ -327,7 +327,7 @@ def test_fixture_teaching_bundle_is_valid_and_complete():
         if rec["compound_id"] in keys:
             assert keys[rec["compound_id"]] == rec["generated"]["inchikey"]
     # the ensemble of a case compound is listed with the hash of its index; the model's is not
-    assert [(e["atlas_id"], e["protocol"]) for e in b["espmap"]] == [("spa.cmpd.z3_z13_18_oac", "b3lyp_def2-svp_gas_espmap-v0.2.1")]
+    assert [(e["atlas_id"], e["protocol"]) for e in b["espmap"]] == [("spa.cmpd.z3_z13_18_oac", "b3lyp_def2-svp_gas_espmap-v0.2.0")]
     path = FIX / b["espmap"][0]["path"]
     import hashlib
     assert b["espmap"][0]["sha256"] == hashlib.sha256(path.read_bytes()).hexdigest()
@@ -372,7 +372,7 @@ def test_exported_copy_carries_its_version_and_derived_does_not():
 def test_a_symlink_under_computed_is_refused_and_never_read(tmp_path):
     import os
     root = overlay(tmp_path, "computed_npz_in_git")   # a writable copy; drop the overlay's NPZ
-    proto = tmp_path / "computed/espmap/z3_z13_18_oac/b3lyp_def2-svp_gas_espmap-v0.2.1"
+    proto = tmp_path / "computed/espmap/z3_z13_18_oac/b3lyp_def2-svp_gas_espmap-v0.2.0"
     (proto / "conf_00.npz").unlink()
     elsewhere = tmp_path / "elsewhere"
     shutil.move(str(proto), str(elsewhere))
@@ -413,8 +413,31 @@ def test_statement_is_exactly_the_record_fields():
     b = tb.build(GOOD, "fixture_case")
     trap = next(o for o in b["observations"] if o["observation_id"].endswith(".trap.population_b"))
     assert trap["statement"] == ("Fixturia testa (population_b), field_trapping: E2,Z13-18:OAc 100 parts + E3,Z13-18:OAc 3 parts "
-                                 "vs E2,Z13-18:OAc 100 parts: decreased, not_reported; 0.5 vs 1 fold_change_vs_comparator (trap_catch, approximate)")
+                                 "vs E2,Z13-18:OAc 100 parts (major component alone): decreased, not_reported; 0.5 vs 1 fold_change_vs_comparator (trap_catch, approximate)")
     assert tb.num(1234567) == "1234567" and tb.num(1.2345678e-05) == "1.2345678e-05"
     roles = {c["atlas_id"]: c["occurrences"] for c in b["compounds"]}
     gland_roles = {o["observation_id"]: o["roles"] for o in roles["spa.cmpd.z3_z13_18_oac"]}
     assert gland_roles["spa.obs.fixture_species_a.fixture_2026.ead"] == ["antennal_active"]
+
+
+@pytest.mark.parametrize("sibling", ["computed", "teaching"])
+def test_a_symlinked_sibling_root_is_refused(tmp_path, sibling):
+    import os
+    root = overlay(tmp_path, "computed_npz_in_git")
+    (tmp_path / "computed/espmap/z3_z13_18_oac/b3lyp_def2-svp_gas_espmap-v0.2.0/conf_00.npz").unlink()
+    real = tmp_path / f"{sibling}_real"
+    shutil.move(str(tmp_path / sibling), str(real))
+    try:
+        os.symlink(real, tmp_path / sibling, target_is_directory=True)
+    except OSError:
+        pytest.skip("symlinks not available here")
+    got = codes(root)
+    assert ("COMPUTED_LAYOUT" if sibling == "computed" else "TEACH_LAYOUT") in got
+    if sibling == "computed":
+        assert av.ensemble_paths(tmp_path / "computed") == []
+
+
+def test_exporter_refuses_a_case_outside_the_gate(tmp_path):
+    tb = _load("export_teaching_bundle")
+    with pytest.raises(SystemExit, match="not a case"):
+        tb.build(GOOD, "../../fixture_case")

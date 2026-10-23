@@ -46,7 +46,8 @@ def lure(blend, shorthand):
 
 
 def where(ctx):
-    return ctx.get("population") or ctx.get("locality") or "place not given"
+    parts = [ctx[k] for k in ("population", "locality") if ctx.get(k)]
+    return "; ".join(parts) or "place not given"
 
 
 def measured(m):
@@ -61,7 +62,8 @@ def statement(o, shorthand, taxon_name):
     t = o["observation_type"]
     if t == "behavioural_response":
         comp = o.get("comparator") or {}
-        vs = lure(comp["blend"], shorthand) if comp.get("blend") else comp.get("description", "no comparator")
+        desc = comp.get("description", "no comparator")
+        vs = f"{lure(comp['blend'], shorthand)} ({desc})" if comp.get("blend") else desc
         differs = [part for part in ("trap", "dispenser") if part in comp]
         s = f"{head}, {o['assay']}: {lure(o['blend'], shorthand)} vs {vs}"
         if differs:
@@ -79,7 +81,7 @@ def statement(o, shorthand, taxon_name):
         pos, neg, untested = [], [], []
         for c in o["components"]:
             name = shorthand(c["compound"])
-            notes = [c["identification"]] if c.get("identification") == "tentative" else []
+            notes = [c["identification"]] if c.get("identification") else []
             if c.get("abundance_class"):
                 notes.append(c["abundance_class"])
             notes += [measured(m) for m in c.get("measurements") or []]
@@ -112,7 +114,9 @@ def summary(o, records, shorthand):
     out = {"observation_id": o["observation_id"], "observation_type": o["observation_type"],
            "taxon": {"atlas_id": o["taxon"], "accepted_name": tax["accepted_name"], "name_as_reported": ev["taxon_name_as_reported"]},
            "reference": {"atlas_id": ev["reference"], "citation": ref["citation"], "doi": ref.get("doi")},
-           "context": {k: ctx.get(k) for k in ("sex", "population", "locality", "habitat")},
+           "context": dict(ctx),
+           "evidence": {"author_statement": ev.get("author_statement"), "author_statement_form": ev.get("author_statement_form"),
+                        "unresolved": list(ev.get("unresolved") or []), "atlas_notes": ev.get("notes")},
            "experiment_id": ev.get("experiment_id"), "source_location": ev["source_location"]}
     t = o["observation_type"]
     if t == "behavioural_response":
@@ -167,6 +171,8 @@ def build(data, case_id, atlas_version=None, validated=False):
     findings = [] if validated else av.validate(data)
     if findings:
         raise SystemExit(f"records or cases do not validate ({len(findings)} findings); run atlas_validate.py first")
+    if case_id not in cases(data):
+        raise SystemExit(f"{case_id!r} is not a case in teaching/cases/; only gated cases are exported")
     records, _ = av.load_root(data)
     computed, teaching = av.siblings(data)
     case = av.strict_load((teaching / "cases" / f"{case_id}.yaml").read_text(encoding="utf-8"))
@@ -192,12 +198,16 @@ def build(data, case_id, atlas_version=None, validated=False):
 
 
 def dumps(bundle):
-    return json.dumps(bundle, sort_keys=True, indent=2, ensure_ascii=False) + "\n"
+    return json.dumps(bundle, sort_keys=True, indent=2, ensure_ascii=False, allow_nan=False) + "\n"
 
 
 def cases(data):
+    """The case files the gate reads: plain files, not symlinks."""
     _, teaching = av.siblings(data)
-    return sorted(p.stem for p in (teaching / "cases").glob("*.yaml")) if (teaching / "cases").is_dir() else []
+    d = teaching / "cases"
+    if not d.is_dir() or d.is_symlink() or teaching.is_symlink():
+        return []
+    return sorted(p.stem for p in d.glob("*.yaml") if p.is_file() and not p.is_symlink())
 
 
 def main(argv=None):

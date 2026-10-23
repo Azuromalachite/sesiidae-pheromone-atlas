@@ -1,0 +1,41 @@
+{
+  "analysis": {
+    "basis": "def2svp",
+    "density_fit": true,
+    "geometry_method": "etkdg_mmff94s",
+    "solvent": null,
+    "solvent_esp": null,
+    "spacing_bohr": 0.26,
+    "surface_definition": {
+      "isovalue_e_bohr3": 0.002,
+      "property": "electron_density"
+    },
+    "xc": "b3lyp"
+  },
+  "analysis_key": "d0f5ed136cda12ada8c6324a79ec9f7e79134d2f",
+  "atlas_id": "spa.model.z13_18_sme",
+  "espmap": {
+    "commit": null,
+    "version": "0.2.0"
+  },
+  "inchikey": "NQNKJOBSFCTOFM-SREVYHEPSA-N",
+  "members": [
+    {
+      "conformer": "conf_00",
+      "folded": false,
+      "geometry_sha1": "4035e5df620a67009c3d36e01b9f3e441922d3a7",
+      "npz": "conf_00.npz",
+      "npz_sha256": "fa697d4058c9d5eb7a2eda0a1c7f7cfa8c53d683a5fc027524957553d6528ab7",
+      "record": "conformers/conf_00.json",
+      "record_sha256": "85a9f70fd8684c75fbf0b1d82af3cfe29a3a910843f9ed1b5b784f85ebec96f9",
+      "rg_angstrom": 5.2
+    }
+  ],
+  "protocol": "b3lyp_def2-svp_gas_espmap-v0.2.0",
+  "schema": "spa.espmap_ensemble/0",
+  "selection": {
+    "method": "fixture: espmap's extended and folded Z3,Z13-18:OAc records",
+    "notes": "folded: the producer's call (fixture)"
+  },
+  "smiles": "CCCC/C=C\\CCCCCCCCCCCC(=O)SC"
+}
