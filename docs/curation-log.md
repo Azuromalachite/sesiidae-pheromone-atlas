@@ -1,5 +1,45 @@
 # Curation log
 
+## 2026-10-23 (11) — stage D: schema acceptance test, Naka et al. 2013 (*S. tenuis*)
+
+**What the paper adds.** It is the Japanese *S. tenuis* gland identification,
+the first gland data from Japan. 26 records: gland, GC-EAD, 22 *S. tenuis*
+trap contrasts, and 3 *S. hector* records from the cross-attraction test.
+Japanese females make Z3,Z13-18:OAc (about 2 ng) and no Z3,Z13-18:OH, and
+10 % of the alcohol cuts catches by about 75 %. Korean females (Yang 2012)
+show the exact reverse. The narrative's *S. tenuis* passage was rewritten
+around this reciprocal reversal; it still decides between neither one
+species with two pheromone races nor two taxa under one name.
+
+**Acceptance questions, answered:**
+
+| question | answer |
+|---|---|
+| Does `chemical_measurement` hold the gland data without awkward free text? | Yes: one sample material, one detection, eight tested negatives with methods, and the source wording in `material_as_reported` |
+| Does `entity_type` stay neutral? | Yes: no compound record changed, and the unnatural isomers needed no class |
+| Can every behavioural conclusion be read from the records? | Yes, with one exception: tests II and III print the same Z3,Z13-18:OAc-alone row from the same orchards and dates, so they probably share traps, and the records cannot link them. **This is the case for R5 (`experiment_id`)**, now no longer hypothetical |
+| Are trap, dispenser and purity enough? | Yes; the alcohols carry no purity because the paper states none |
+| Any new ambiguity? | Table 5 prints one significance mark per test in an ambiguous column, and for V-2 the "n.s." conflicts with the means under either reading. The `unresolved` field and `significance: not_reported` hold this without a schema change |
+
+All 18 first-draft records validated on the first run. The schema took the
+paper without change, so the v0.1 shape can be frozen once R5 and R6 land.
+
+**The independent check against the PDF** found no wrong value. It found
+one wrong note (on which zero-catch treatments the paper excludes) and
+several overstated or mis-anchored items. All are fixed:
+- the Z2,Z13 and E2,E13 negatives are dropped, because their standards
+  co-elute with the Z3,Z13 peak;
+- the GC-EAD males' origin is unstated in the paper, so it is not recorded;
+- quotes are moved to the contrast they describe;
+- the five unrecorded blanks are added, and so is *S. hector*'s own
+  attraction to its 50:50 blend;
+- the Tamaki 5 % conflict is noted;
+- the printed coordinate swap and the caption-versus-text ion mismatch are
+  in the reference notes.
+
+The reference is `naka_2013`, matching the printed citation (online
+2012-11-07).
+
 ## 2026-10-23 (10) — the database gate catches up with the structure gate
 
 An outside adversarial review (against `origin/main`, then checked against

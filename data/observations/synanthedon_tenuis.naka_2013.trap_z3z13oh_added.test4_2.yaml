@@ -1,0 +1,24 @@
+observation_id: spa.obs.synanthedon_tenuis.naka_2013.trap_z3z13oh_added.test4_2
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_tenuis
+context: {sex: male, habitat: persimmon orchard, population: Japanese population, locality: 'Motosu City, Gifu Prefecture, Japan'}
+assay: field_trapping
+trap: {design: sticky_board, colour: null, supplier: Takeda Chemical Industries}
+dispenser: {design: rubber_septum, description: 'white rubber septum, 8 mm o.d. (Sigma-Aldrich)'}
+blend:
+- compound: spa.cmpd.z3_z13_18_oac
+  amount: {value: 1000, unit: microgram}
+  purity: {value: 98, kind: unspecified, basis: stated, qualifier: more_than}
+- compound: spa.cmpd.z3_z13_18_oh
+  amount: {value: 100, unit: microgram}
+comparator:
+  description: Z3,Z13-18:OAc alone, 1000 ug
+  blend:
+  - compound: spa.cmpd.z3_z13_18_oac
+    amount: {value: 1000, unit: microgram}
+    purity: {value: 98, kind: unspecified, basis: stated, qualifier: more_than}
+effect: decreased
+significance: significant
+dose: {value: 1100, unit: microgram}
+response: {measure: trap_catch, unit: mean_catch_per_trap, treatment_value: 7.8, comparator_value: 32.2, qualifier: as_reported}
+evidence: {reference: spa.ref.naka_2013, source_location: 'Table 4, test IV', author_statement: 'Addition of 10 % Z3,Z13-18:OH to Z3,Z13-18:OAc significantly decreased male captures (Table 4).', notes: 'Test IV, Motosu, 20 May - 6 November 2005, N = 12, t test P < 0.001. Mean +- SE per trap: 7.8 +- 1.2 vs 32.2 +- 3.1. Atlas note: in Korea the alcohol is the pheromone and the acetate inhibits (spa.obs.synanthedon_tenuis.yang_2012.*). Traps 1.5 m up, rotated after each count, checked about weekly; log(x + 0.5) transformed, one-way ANOVA with Tukey-Kramer HSD or t test; control treatments that caught nothing were left out of the analyses. Shin-Etsu acetates and the authors'' synthetic isomers stated above 98 percent pure; alcohols made by saponifying the acetates, purity not stated.'}

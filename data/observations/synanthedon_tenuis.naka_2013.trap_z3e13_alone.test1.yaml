@@ -1,0 +1,22 @@
+observation_id: spa.obs.synanthedon_tenuis.naka_2013.trap_z3e13_alone.test1
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_tenuis
+context: {sex: male, habitat: persimmon orchard, population: Japanese population, locality: 'Motosu City, Gifu Prefecture, Japan'}
+assay: field_trapping
+trap: {design: sticky_board, colour: null, supplier: Takeda Chemical Industries}
+dispenser: {design: rubber_septum, description: 'white rubber septum, 8 mm o.d. (Sigma-Aldrich)'}
+blend:
+- compound: spa.cmpd.z3_e13_18_oac
+  amount: {value: 1000, unit: microgram}
+  purity: {value: 98, kind: unspecified, basis: stated, qualifier: more_than}
+comparator:
+  description: Z3,Z13-18:OAc alone, 1000 ug
+  blend:
+  - compound: spa.cmpd.z3_z13_18_oac
+    amount: {value: 1000, unit: microgram}
+    purity: {value: 98, kind: unspecified, basis: stated, qualifier: more_than}
+effect: decreased
+significance: significant
+dose: {value: 1000, unit: microgram}
+response: {measure: trap_catch, unit: mean_catch_per_trap, treatment_value: 0.2, comparator_value: 16.8, qualifier: as_reported}
+evidence: {reference: spa.ref.naka_2013, source_location: 'Table 1, test I', author_statement: 'only Z3,Z13-18:OAc strongly attracted males of S. tenuis (Table 1)', notes: 'Test I, Motosu, 9 June - 2 September 2005, N = 6. Mean +- SE per trap: 0.2 +- 0.2 (b) vs 16.8 +- 2.8 (a). Each lure is one geometrical isomer alone. Traps 1.5 m up, rotated after each count, checked about weekly; log(x + 0.5) transformed, one-way ANOVA with Tukey-Kramer HSD or t test; control treatments that caught nothing were left out of the analyses. Shin-Etsu acetates and the authors'' synthetic isomers stated above 98 percent pure; alcohols made by saponifying the acetates, purity not stated.'}

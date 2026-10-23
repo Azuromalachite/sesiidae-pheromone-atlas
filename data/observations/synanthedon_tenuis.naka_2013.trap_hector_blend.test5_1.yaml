@@ -1,0 +1,25 @@
+observation_id: spa.obs.synanthedon_tenuis.naka_2013.trap_hector_blend.test5_1
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_tenuis
+context: {sex: male, habitat: persimmon orchard, population: Japanese population, locality: 'Motosu City, Gifu Prefecture, Japan'}
+assay: field_trapping
+trap: {design: sticky_board, colour: null, supplier: Takeda Chemical Industries}
+dispenser: {design: rubber_septum, description: 'white rubber septum, 8 mm o.d. (Sigma-Aldrich)'}
+blend:
+- compound: spa.cmpd.z3_z13_18_oac
+  amount: {value: 500, unit: microgram}
+  purity: {value: 98, kind: unspecified, basis: stated, qualifier: more_than}
+- compound: spa.cmpd.e3_z13_18_oac
+  amount: {value: 500, unit: microgram}
+  purity: {value: 98, kind: unspecified, basis: stated, qualifier: more_than}
+comparator:
+  description: Z3,Z13-18:OAc alone, 1000 ug
+  blend:
+  - compound: spa.cmpd.z3_z13_18_oac
+    amount: {value: 1000, unit: microgram}
+    purity: {value: 98, kind: unspecified, basis: stated, qualifier: more_than}
+effect: decreased
+significance: significant
+dose: {value: 1000, unit: microgram}
+response: {measure: trap_catch, unit: mean_catch_per_trap, treatment_value: 1.8, comparator_value: 32.9, qualifier: as_reported}
+evidence: {reference: spa.ref.naka_2013, source_location: 'Table 5, test V-1', author_statement: 'However, most of the males were attracted to single-component lures baited only with Z3,Z13-18:OAc.', notes: 'Test V-1, Motosu persimmon orchards, 27 May - 28 September 2004 and 20 May - 6 November 2005, N = 14; S. hector was shown present by puparia, gum and frass on its food plants. Mean +- SE: 1.8 +- 0.7 vs 32.9 +- 3.6, *** (t test). Table 5 prints one significance mark per test, after the S. hector value on its first row. For V-1, where S. hector caught nothing, the *** can only refer to S. tenuis. For V-2 the ''n.s.'' conflicts with the printed means under either column (S. hector 5.7 +- 0.4 vs 0; S. tenuis 0.3 +- 0.1 vs 2.3 +- 0.4, N = 7), so the V-2 records say not_reported. The paper leaves out only controls that caught nothing, so a zero-catch lure is not by that rule excluded. Traps 1.5 m up, rotated after each count, checked about weekly; log(x + 0.5) transformed, one-way ANOVA with Tukey-Kramer HSD or t test; control treatments that caught nothing were left out of the analyses. Shin-Etsu acetates and the authors'' synthetic isomers stated above 98 percent pure; alcohols made by saponifying the acetates, purity not stated.'}

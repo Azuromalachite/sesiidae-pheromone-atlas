@@ -1,0 +1,29 @@
+observation_id: spa.obs.synanthedon_tenuis.naka_2013.gland
+observation_type: chemical_measurement
+taxon: spa.tax.synanthedon_tenuis
+context: {sex: female, life_stage: adult, mating_status: virgin, behavioural_state: calling, sampling_unit: individual, n_individuals: 9, population: Japanese population, locality: 'Toyota City (formerly Fujioka Town), Aichi Prefecture, Japan', rearing: field_collected_reared}
+sample:
+  materials: [gland_extract]
+  material_as_reported: abdominal ends of calling females, each in 250 ul hexane for 5 min
+  result_scope: single_material
+components:
+- compound: spa.cmpd.z3_z13_18_oac
+  detected: true
+  method: gland_extract_gc_ead_florisil_and_gc_ms_db23_vs_four_3_13_isomers
+  identification: confirmed
+  abundance_class: major
+  measurements:
+  - {value: 2, unit: ng_per_female, qualifier: approximate}
+- {compound: spa.cmpd.e3_z13_18_oac, detected: false, method: gland_extract_gc_ms_mass_chromatograms_db23}
+- {compound: spa.cmpd.z3_e13_18_oac, detected: false, method: gland_extract_gc_ms_mass_chromatograms_db23}
+- {compound: spa.cmpd.e3_e13_18_oac, detected: false, method: gland_extract_gc_ms_mass_chromatograms_db23}
+- {compound: spa.cmpd.e2_z13_18_oac, detected: false, method: gland_extract_gc_ms_mass_chromatograms_db23}
+- {compound: spa.cmpd.e3_z13_18_oh, detected: false, method: gland_extract_gc_ms_mass_chromatograms_db23}
+- {compound: spa.cmpd.z3_z13_18_oh, detected: false, method: gland_extract_gc_ms_mass_chromatograms_db23}
+- {compound: spa.cmpd.e2_z13_18_al, detected: false, method: gland_extract_gc_ms_mass_chromatograms_db23}
+evidence:
+  reference: spa.ref.naka_2013
+  source_location: Results; Figs. 1-2
+  author_statement: The extract included only Z3,Z13-18:OAc, but no alcohols or aldehydes were detected.
+  unresolved: [detection limit for the negatives, dispersion of the 2 ng titre]
+  notes: 'About 20 larvae from a persimmon orchard, January 2002, reared at 25 C, 15L:9D; nine females emerged and all were extracted, 1-2 days old, calling 12-15 h after lights on. Titre ''about 2 ng/female'' from five 1-female-equivalent GC-MS runs (N = 5). Geometry from retention on DB-23 (KI 2639) against all four 3,13 isomers; the authors note the EI spectra of the isomers are quite similar, and the diagnostic ions suggested the 3,13 positions. Negatives: no peaks at the retention times of the other three 3,13 acetates, E2,Z13-18:OAc, E3,Z13- and Z3,Z13-18:OH, or E2,Z13-18:Al (Fig. 2). Z2,Z13- and E2,E13-18:OAc are not recorded as negatives: their standards elute at or beside the Z3,Z13-18:OAc peak in Fig. 2a, so retention alone cannot exclude them (Atlas reading). Atlas note: Korean S. tenuis glands showed the reverse, Z3,Z13-18:OH present and Z3,Z13-18:OAc absent below about 100 pg (spa.obs.synanthedon_tenuis.yang_2012.gland).'

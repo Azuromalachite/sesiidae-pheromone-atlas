@@ -13,8 +13,8 @@ nothing here is a release, and no DOI has been minted
 
 ### Added
 
-- **Records:** 16 taxa, 19 references, 17 compounds, 11 genomes,
-  252 observations and 6 searches. Every observation is from a primary full
+- **Records:** 16 taxa, 20 references, 17 compounds, 11 genomes,
+  278 observations and 6 searches. Every observation is from a primary full
   text, and every batch was re-read against the PDFs by an independent
   reviewer.
 - **Record kinds and observation types:**

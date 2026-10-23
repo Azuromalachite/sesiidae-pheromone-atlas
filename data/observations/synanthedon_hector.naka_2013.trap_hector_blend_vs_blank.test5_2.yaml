@@ -1,0 +1,20 @@
+observation_id: spa.obs.synanthedon_hector.naka_2013.trap_hector_blend_vs_blank.test5_2
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_hector
+context: {sex: male, habitat: peach and ume orchard, population: Japanese population, locality: 'Kasugai City, Aichi Prefecture, Japan'}
+assay: field_trapping
+trap: {design: sticky_board, colour: null, supplier: Takeda Chemical Industries}
+dispenser: {design: rubber_septum, description: 'white rubber septum, 8 mm o.d. (Sigma-Aldrich)'}
+blend:
+- compound: spa.cmpd.z3_z13_18_oac
+  amount: {value: 500, unit: microgram}
+  purity: {value: 98, kind: unspecified, basis: stated, qualifier: more_than}
+- compound: spa.cmpd.e3_z13_18_oac
+  amount: {value: 500, unit: microgram}
+  purity: {value: 98, kind: unspecified, basis: stated, qualifier: more_than}
+comparator: {description: unbaited trap}
+effect: increased
+significance: not_tested
+dose: {value: 1000, unit: microgram}
+response: {measure: trap_catch, unit: mean_catch_per_trap, treatment_value: 5.7, comparator_value: 0, qualifier: as_reported}
+evidence: {reference: spa.ref.naka_2013, source_location: 'Table 5, test V-2', author_statement: 'All captured males of S. hector were attracted only to 50:50 blend of Z3,Z13-18:OAc and E3,Z13-18:OAc.', notes: 'Test V-2, Meijo University farm (peach and ume), Kasugai, 31 May - 7 November 2004 and 1 June - 31 October 2005, N = 7; both species shown present. Mean +- SE: 5.7 +- 0.4 vs 0. The blank caught nothing and was left out of the analysis; effect from the raw means. Traps 1.5 m up, rotated after each count, checked about weekly; log(x + 0.5) transformed, one-way ANOVA with Tukey-Kramer HSD or t test; control treatments that caught nothing were left out of the analyses. Shin-Etsu acetates and the authors'' synthetic isomers stated above 98 percent pure; alcohols made by saponifying the acetates, purity not stated.'}

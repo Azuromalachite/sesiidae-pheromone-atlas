@@ -4,9 +4,9 @@
 genomes, biosynthetic hypotheses, and candidate enzyme families.*
 
 **Status: building v0.1.** This repository holds the design documents, the
-record schemas and the validator with its failing fixtures, and 321 curated
+record schemas and the validator with its failing fixtures, and 348 curated
 records:
-- 16 taxa, 19 references, 17 compounds, 11 genomes and 252 observations,
+- 16 taxa, 20 references, 17 compounds, 11 genomes and 278 observations,
   the observations all from full texts
   ([`docs/curation-log.md`](docs/curation-log.md));
 - 6 dated searches, the only basis for "not found".
@@ -43,6 +43,7 @@ generated machine-readable releases.
 | [`docs/literature-narrative.md`](docs/literature-narrative.md) | the literature as a story, from synthetic lures to blend, context and evidence layers, each claim tied to its record |
 | [`docs/identifiers.md`](docs/identifiers.md) | the permanent `spa.` ID scheme and its rules |
 | [`docs/releases-and-occurrences.md`](docs/releases-and-occurrences.md) | decisions on citable releases, the GBIF occurrence layer and roadmap order |
+| [`docs/direction-type1-grammar.md`](docs/direction-type1-grammar.md) | v0.2 direction: a Type-I moth reaction grammar from primary experiments, applied to Sesiidae (not built) |
 | [`docs/reviews/`](docs/reviews/) | the two adversarial reviews the concept was revised against |
 | [`docs/knowledge-gaps.md`](docs/knowledge-gaps.md) | gaps that set direction: the tropical and Southeast Asian frontier, *Melittia*, the trapping blind spot |
 | [`derived/taxon_layers.tsv`](derived/taxon_layers.tsv) | the taxon × layer matrix, generated from the records by `scripts/build_taxon_layers.py`: genomes, gene sets, curated chemistry and dated searches ([column guide](derived/README.md)) |

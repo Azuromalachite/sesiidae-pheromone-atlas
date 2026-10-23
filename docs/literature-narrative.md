@@ -123,12 +123,30 @@ It did not hold up:
   component as one that increased catches "in some studies, but not in
   others".
 
-*S. tenuis* gives a second geographic contrast. The acetate attracted
-Japanese males in 1976, but in 2011 it was absent from Korean glands (below
-about 100 pg), caught nothing on its own, and blocked attraction to the real
-pheromone, Z3,Z13-18:OH (`spa.obs.synanthedon_tenuis.yang_2012.*`). The two studies also
-differ in dose, dispenser and trap, so this is a contrast between records,
-not yet evidence of a population difference.
+*S. tenuis* gives a second geographic contrast, and the second one holds up
+better. The comparison now rests on gland chemistry from both sides, not only
+on Tamaki's uncontrolled 1976 screen:
+
+| | Japan (Naka et al. 2013, Aichi and Gifu) | Korea (Yang et al. 2012, Gimhae) |
+|---|---|---|
+| female gland | Z3,Z13-18:OAc, about 2 ng per female; no Z3,Z13-18:OH | Z3,Z13-18:OH; no Z3,Z13-18:OAc (below about 100 pg) |
+| antennae (GC-EAD) | respond only to the acetate | — |
+| acetate alone | attracts (10.7–32.9 per trap across tests) | catches nothing |
+| 10 % of the other compound added | the alcohol cuts catches by about 75 % | the acetate blocks attraction to the alcohol |
+
+The records are `spa.obs.synanthedon_tenuis.naka_2013.*` and
+`spa.obs.synanthedon_tenuis.yang_2012.*`. Each population makes one compound
+and is inhibited by the other's. That is a reciprocal reversal, well beyond a
+ratio shift.
+
+The records do not decide between two explanations:
+- one species with two pheromone races;
+- two taxa under one name.
+
+Doses, dispensers and traps also differ between the studies. This is why an
+observation should keep the name its source used (`taxon_name_as_reported`,
+planned): if the Korean population is ever split off, these records must
+still say what each paper called its moth.
 
 The Atlas keeps all of these and decides none of them.
 

@@ -1,0 +1,25 @@
+observation_id: spa.obs.synanthedon_tenuis.naka_2013.trap_e3z13_100_added.test2
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_tenuis
+context: {sex: male, habitat: persimmon orchard, population: Japanese population, locality: 'Gifu City, Gifu Prefecture, Japan'}
+assay: field_trapping
+trap: {design: sticky_board, colour: null, supplier: Takeda Chemical Industries}
+dispenser: {design: rubber_septum, description: 'white rubber septum, 8 mm o.d. (Sigma-Aldrich)'}
+blend:
+- compound: spa.cmpd.z3_z13_18_oac
+  amount: {value: 1000, unit: microgram}
+  purity: {value: 98, kind: unspecified, basis: stated, qualifier: more_than}
+- compound: spa.cmpd.e3_z13_18_oac
+  amount: {value: 100, unit: microgram}
+  purity: {value: 98, kind: unspecified, basis: stated, qualifier: more_than}
+comparator:
+  description: Z3,Z13-18:OAc alone, 1000 ug
+  blend:
+  - compound: spa.cmpd.z3_z13_18_oac
+    amount: {value: 1000, unit: microgram}
+    purity: {value: 98, kind: unspecified, basis: stated, qualifier: more_than}
+effect: decreased
+significance: significant
+dose: {value: 1100, unit: microgram}
+response: {measure: trap_catch, unit: mean_catch_per_trap, treatment_value: 0.3, comparator_value: 10.7, qualifier: as_reported}
+evidence: {reference: spa.ref.naka_2013, source_location: 'Table 2, test II', notes: 'Test II, Gifu City, 7 May - 28 October 2003, N = 6. Mean +- SE per trap: 0.3 +- 0.2 (b) vs 10.7 +- 4.0 (a). 100 ug is exactly 10 percent of the Z3,Z13-18:OAc, and its letter (b) makes it significant, although the text says ''more than 10 %''. Traps 1.5 m up, rotated after each count, checked about weekly; log(x + 0.5) transformed, one-way ANOVA with Tukey-Kramer HSD or t test; control treatments that caught nothing were left out of the analyses. Shin-Etsu acetates and the authors'' synthetic isomers stated above 98 percent pure; alcohols made by saponifying the acetates, purity not stated.'}
