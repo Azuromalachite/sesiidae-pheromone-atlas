@@ -497,6 +497,22 @@ def test_evidence_classes_are_documented_and_traceable():
             assert r["population_match"] == ""
 
 
+def test_bundle_evidence_classes_are_the_derived_rows():
+    # the bundle's rows, flattened, are exactly the table's rows for the case's taxa and compounds: none added, none dropped
+    bev, tb = _load("build_evidence"), _load("export_teaching_bundle")
+    lines = bev.build(ROOT / "data")["tables/evidence_classes.tsv"].splitlines()
+    table = [dict(zip(bev.COLUMNS, line.split("\t"))) for line in lines[1:]]
+    cell = lambda v: ";".join(v) if isinstance(v, list) else "" if v is None else str(v)
+    for case in sorted(p.stem for p in (ROOT / "teaching" / "cases").glob("*.yaml")):
+        b = tb.build(ROOT / "data", case)
+        taxa = {o["taxon"]["atlas_id"] for o in b["observations"]}
+        got = sorted((c["atlas_id"], tuple(cell(r[k]) for k in bev.COLUMNS if k != "compound_id"))
+                     for c in b["compounds"] for r in c["evidence_classes"])
+        want = sorted((r["compound_id"], tuple(r[k] for k in bev.COLUMNS if k != "compound_id"))
+                      for r in table if r["taxon_id"] in taxa and r["compound_id"] in {c["atlas_id"] for c in b["compounds"]})
+        assert got == want and got, case
+
+
 def test_evidence_classes_keep_contradictions():
     # S. tenuis: the Japanese gland has the acetate and not the alcohol; the Korean one the reverse
     bev = _load("build_evidence")

@@ -17,7 +17,8 @@ nothing here is a release, and no DOI has been minted
   `derived/tables/evidence_classes.tsv`): 13 classes derived from record
   fields, one row per taxon × compound × class with its observations. The
   derived `female_pheromone_component` reports `population_match` rather
-  than assuming it.
+  than assuming it. Teaching bundles carry each compound's rows for the
+  case's taxa (`compounds[].evidence_classes`, additive to `spa.teaching/0`).
 - **CI** runs `actions/checkout@v7` and `actions/setup-python@v7` (Node 24).
 - **Human spot-check** (`review/`, `scripts/spot_check.py`): a seeded
   random sample of observations plus hand-picked hard cases, a sheet of the

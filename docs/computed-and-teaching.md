@@ -113,6 +113,17 @@ bundle draws no conclusion.
 `comparator`, `detected`, `not_detected`, `not_tested`, `antennal_<response>`),
 so a compound that was looked for and absent is never shown as produced.
 
+**Evidence classes.** Each compound also carries `evidence_classes`: its rows
+of `derived/tables/evidence_classes.tsv` (`docs/evidence-classes.md`) in every
+taxon that the case's observations cover. The rows come from all Atlas records,
+not only the case's, so a class can cite an observation the case leaves out.
+The values are typed: counts are integers, a count that does not apply is
+`null`, and populations and observation IDs are lists. `population_match`
+(`yes` / `no` / `unknown`) is set only on `female_pheromone_component`. A
+consumer reads these values and does not assert a class itself.
+Contradictions keep both rows. A test checks that the bundle's rows equal the
+table's, with none added and none dropped.
+
 **The case author's words.** Only two pieces of text are not built from
 records, and the bundle names them `case_title` and `case_label`. The case
 schema refuses control and bidirectional-override characters in them.

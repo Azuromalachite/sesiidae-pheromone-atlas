@@ -25,7 +25,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
+sys.path.insert(0, str(ROOT / "scripts"))
 import atlas_validate as av  # noqa: E402
+import build_evidence as bev  # noqa: E402
 
 BUNDLE = "spa.teaching/0"
 SCHEMA_VERSION = "0.1"
@@ -180,11 +182,16 @@ def build(data, case_id, atlas_version=None, validated=False):
     shorthand = lambda cid: comps[cid][1]["names"]["shorthand"]
     obs = {oid: records["observations"][oid][1] for oid in case["observations"]}
     entries = {oid: summary(o, records, shorthand) for oid, o in obs.items()}
+    # evidence classes (docs/evidence-classes.md) of the case's compounds in the case's taxa,
+    # the same rows as derived/tables/evidence_classes.tsv, over all Atlas records, not only the case's
+    taxa = {o["taxon"] for o in obs.values()}
+    evidence = [r for r in bev.rows(records) if r["taxon_id"] in taxa]
     bundle = {
         "bundle": BUNDLE, "case_id": case["case_id"], "case_title": case["title"], "schema_version": SCHEMA_VERSION,
         "compounds": [{"atlas_id": cid, "inchikey": comps[cid][1]["generated"]["inchikey"],
                        "shorthand": comps[cid][1]["names"]["shorthand"], "systematic": comps[cid][1]["names"].get("systematic"),
-                       "occurrences": [{"observation_id": oid, "roles": roles(o, cid)} for oid, o in obs.items() if roles(o, cid)]}
+                       "occurrences": [{"observation_id": oid, "roles": roles(o, cid)} for oid, o in obs.items() if roles(o, cid)],
+                       "evidence_classes": [{k: v for k, v in r.items() if k != "compound_id"} for r in evidence if r["compound_id"] == cid]}
                       for cid in case["compounds"]],
         "observations": [entries[oid] for oid in case["observations"]],
         "comparisons": [{"case_label": c["label"], "observation_ids": [c["a"], c["b"]],

@@ -40,7 +40,8 @@
           "inchikey",
           "shorthand",
           "systematic",
-          "occurrences"
+          "occurrences",
+          "evidence_classes"
         ],
         "properties": {
           "atlas_id": {
@@ -87,6 +88,86 @@
                       "antennal_inactive",
                       "antennal_not_tested"
                     ]
+                  }
+                }
+              }
+            }
+          },
+          "evidence_classes": {
+            "type": "array",
+            "description": "the compound's evidence classes (docs/evidence-classes.md) in the taxa of the case's observations: the rows of derived/tables/evidence_classes.tsv, computed over all Atlas records, not only the case's. Contradictions keep both rows",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "taxon_id",
+                "evidence_class",
+                "n_observations",
+                "n_significant",
+                "n_tentative",
+                "populations",
+                "population_match",
+                "observation_ids"
+              ],
+              "properties": {
+                "taxon_id": {
+                  "type": "string"
+                },
+                "evidence_class": {
+                  "enum": [
+                    "female_detected_gland",
+                    "female_detected_emission",
+                    "female_detected_combined",
+                    "female_not_detected",
+                    "antennal_active",
+                    "antennal_inconsistent",
+                    "antennal_inactive",
+                    "attractant_alone",
+                    "attractive_lure_component",
+                    "addition_increased",
+                    "addition_decreased",
+                    "addition_no_effect",
+                    "female_pheromone_component"
+                  ]
+                },
+                "n_observations": {
+                  "type": "integer",
+                  "minimum": 1
+                },
+                "n_significant": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "description": "behavioural classes and the derived class only"
+                },
+                "n_tentative": {
+                  "type": [
+                    "integer",
+                    "null"
+                  ],
+                  "description": "chemistry classes and the derived class only"
+                },
+                "populations": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "population_match": {
+                  "enum": [
+                    "yes",
+                    "no",
+                    "unknown",
+                    null
+                  ],
+                  "description": "female_pheromone_component only: whether its chemistry and behaviour share a named population"
+                },
+                "observation_ids": {
+                  "type": "array",
+                  "minItems": 1,
+                  "items": {
+                    "type": "string"
                   }
                 }
               }

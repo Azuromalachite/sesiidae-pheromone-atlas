@@ -112,24 +112,32 @@ def place(o):
     return ctx.get("population") or ctx.get("locality")
 
 
-def build(data):
-    records, findings = av.load_root(data)
-    if findings:
-        raise SystemExit("records do not load")
+def rows(records):
+    """The evidence rows with typed values: counts as int (None where a count
+    does not apply), populations and observation IDs as sorted lists. The
+    derived table and the teaching bundle are both built from this list."""
     obs = {k: v[1] for k, v in records["observations"].items()}
     where = lambda oid: place(obs[oid]) or "not given"
-    rows = []
     classes = classify(records)
     chem_ids = lambda t, c: {e[0] for k in ("female_detected_gland", "female_detected_emission", "female_detected_combined") for e in classes.get((t, c, k), [])}
     beh_ids = lambda t, c: {e[0] for k in ("attractive_lure_component", "addition_increased") for e in classes.get((t, c, k), [])}
+    out = []
     for (taxon, cid, cls), support in classes.items():
         ids = sorted({oid for oid, _, _ in support})
         behaviour = cls.startswith(("attract", "addition")) or cls == "female_pheromone_component"
         chemistry = cls.startswith("female_detected") or cls == "female_pheromone_component"
-        rows.append({"taxon_id": taxon, "compound_id": cid, "evidence_class": cls, "n_observations": len(ids),
-                     "n_significant": len({oid for oid, s, _ in support if s}) if behaviour else "",
-                     "n_tentative": len({oid for oid, _, t in support if t}) if chemistry else "",
-                     "populations": ";".join(sorted({where(oid) for oid in ids})),
-                     "population_match": population_match(obs, chem_ids(taxon, cid), beh_ids(taxon, cid)) if cls == "female_pheromone_component" else "",
-                     "observation_ids": ";".join(ids)})
-    return {"tables/evidence_classes.tsv": bt.tsv(COLUMNS, rows)}
+        out.append({"taxon_id": taxon, "compound_id": cid, "evidence_class": cls, "n_observations": len(ids),
+                    "n_significant": len({oid for oid, s, _ in support if s}) if behaviour else None,
+                    "n_tentative": len({oid for oid, _, t in support if t}) if chemistry else None,
+                    "populations": sorted({where(oid) for oid in ids}),
+                    "population_match": population_match(obs, chem_ids(taxon, cid), beh_ids(taxon, cid)) if cls == "female_pheromone_component" else None,
+                    "observation_ids": ids})
+    return sorted(out, key=lambda r: (r["taxon_id"], r["compound_id"], r["evidence_class"]))
+
+
+def build(data):
+    records, findings = av.load_root(data)
+    if findings:
+        raise SystemExit("records do not load")
+    flat = [{k: ";".join(v) if isinstance(v, list) else v for k, v in r.items()} for r in rows(records)]
+    return {"tables/evidence_classes.tsv": bt.tsv(COLUMNS, flat)}
