@@ -1,0 +1,116 @@
+observation_id: spa.obs.eichlinia_cucurbitae.klun_1990.trap_b_vs_d.test1
+observation_type: behavioural_response
+taxon: spa.tax.eichlinia_cucurbitae
+context:
+  sex: male
+  habitat: farmland and squash plantings
+  population: null
+  locality: Beltsville, Maryland, USA
+assay: field_trapping
+trap:
+  design: other
+  colour: null
+  supplier: null
+dispenser:
+  design: rubber_septum
+  description: rubber septum, compounds in 50 ul methylene chloride, replaced weekly
+blend:
+- compound: spa.cmpd.e2_z13_18_oac
+  amount:
+    value: 68.5
+    unit: ratio_part
+- compound: spa.cmpd.z2_z13_18_oac
+  amount:
+    value: 0.1
+    unit: ratio_part
+- compound: spa.cmpd.e2_z13_18_oh
+  amount:
+    value: 9.1
+    unit: ratio_part
+- compound: spa.cmpd.z13_18_oh
+  amount:
+    value: 3.4
+    unit: ratio_part
+- compound: spa.cmpd.z9_16_oac
+  amount:
+    value: 0.7
+    unit: ratio_part
+- compound: spa.cmpd.16_oac
+  amount:
+    value: 0.8
+    unit: ratio_part
+- compound: spa.cmpd.z11_16_oac
+  amount:
+    value: 0.2
+    unit: ratio_part
+- compound: spa.cmpd.z9_16_oh
+  amount:
+    value: 0.1
+    unit: ratio_part
+- compound: spa.cmpd.z13_18_oac
+  amount:
+    value: 16.5
+    unit: ratio_part
+- compound: spa.cmpd.z3_z13_18_oac
+  amount:
+    value: 0.1
+    unit: ratio_part
+- compound: spa.cmpd.e3_z13_18_oac
+  amount:
+    value: 0.2
+    unit: ratio_part
+comparator:
+  description: 'treatment D: Table 1 compounds 1,4-10'
+  blend:
+  - compound: spa.cmpd.e2_z13_18_oac
+    amount:
+      value: 68.5
+      unit: ratio_part
+  - compound: spa.cmpd.e2_z13_18_oh
+    amount:
+      value: 9.1
+      unit: ratio_part
+  - compound: spa.cmpd.z13_18_oh
+    amount:
+      value: 3.4
+      unit: ratio_part
+  - compound: spa.cmpd.z9_16_oac
+    amount:
+      value: 0.7
+      unit: ratio_part
+  - compound: spa.cmpd.16_oac
+    amount:
+      value: 0.8
+      unit: ratio_part
+  - compound: spa.cmpd.z11_16_oac
+    amount:
+      value: 0.2
+      unit: ratio_part
+  - compound: spa.cmpd.z9_16_oh
+    amount:
+      value: 0.1
+      unit: ratio_part
+  - compound: spa.cmpd.z13_18_oac
+    amount:
+      value: 16.5
+      unit: ratio_part
+effect: increased
+significance: significant
+dose:
+  value: 997.0
+  unit: microgram
+response:
+  measure: trap_catch
+  unit: mean_catch_per_trap_per_day
+  treatment_value: 3.9
+  comparator_value: 1.1
+  qualifier: as_reported
+evidence:
+  reference: spa.ref.klun_1990
+  experiment_id: spa.exp.klun_1990.test1_1986
+  taxon_name_as_reported: Melittia cucurbitae
+  source_location: Table 3, Test 1
+  notes: 'Test 1, June 12-25 1986, 4 replicates. Treatment B (compounds 1,3-10,12,13) vs D (compounds 1,4-10), numbers as in Table 1. Table 3: mean male capture per day, Duncan''s multiple range test (alpha
+    0.05). Each lure held 685 ug E,Z-2,13-18:OAc plus the other compounds in their Table 1 proportions, so the amounts here are Table 1 percentages as ratio parts (685 ug per 68.5 parts, i.e. 10 ug per
+    part), and dose is that arithmetic (Atlas reading). Conical traps of Webster et al. 1986, 30 m apart, 1 m up, at the Beltsville Agricultural Research Center and in community-garden squash plantings;
+    usually checked daily. Unsaturated compounds made geometrically pure by argentation HPLC (no figure). No virgin-female comparison was possible.'

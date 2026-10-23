@@ -1,0 +1,74 @@
+observation_id: spa.obs.vitacea_polistiformis.snow_1987.trap_e3z13_1.table1
+observation_type: behavioural_response
+taxon: spa.tax.vitacea_polistiformis
+context:
+  sex: male
+  habitat: commercial grape vineyard
+  population: null
+  locality: Georgia, USA
+assay: field_trapping
+trap:
+  design: wing
+  colour: null
+  supplier: Zoecon (Pherocon 1C)
+dispenser:
+  design: rubber_septum
+  description: rubber septum (Thomas Scientific, No. 1780J12)
+blend:
+- compound: spa.cmpd.e2_z13_18_oac
+  amount:
+    value: 0.99
+    unit: milligram
+  purity:
+    value: 99.5
+    kind: unspecified
+    basis: measured
+    qualifier: as_reported
+    method: glass capillary GC, SP 2340
+- compound: spa.cmpd.e3_z13_18_oac
+  amount:
+    value: 0.01
+    unit: milligram
+  purity:
+    value: 99.5
+    kind: unspecified
+    basis: measured
+    qualifier: as_reported
+    method: glass capillary GC, SP 2340
+comparator:
+  description: (E,Z)-2,13-18:OAc alone, 1 mg
+  blend:
+  - compound: spa.cmpd.e2_z13_18_oac
+    amount:
+      value: 1
+      unit: milligram
+    purity:
+      value: 99.5
+      kind: unspecified
+      basis: measured
+      qualifier: as_reported
+      method: glass capillary GC, SP 2340
+effect: decreased
+significance: not_tested
+dose:
+  value: 1
+  unit: milligram
+response:
+  measure: trap_catch
+  unit: total_catch
+  treatment_value: 1
+  comparator_value: 9
+  qualifier: as_reported
+evidence:
+  reference: spa.ref.snow_1987
+  experiment_id: spa.exp.snow_1987.table1
+  taxon_name_as_reported: Vitacea polistiformis
+  source_location: Table 1; Results
+  unresolved:
+  - year, site and replicate number of each Table 1 test (the Methods say only that tests were replicated 3 to 5 times)
+  - whether the treatments ran side by side
+  notes: 'Table 1: total males captured. ''A series of tests run over a period of time because the vineyard was not large enough for all tests at once. Because of this, analysis has not been applied'';
+    effect from the raw numbers. The tests followed the 1984 season, so probably Byron 1985 (Atlas reading; the Methods list Byron 1983 and 1985, Gainesville 1984, Moultrie 1986). All isomers bought commercially
+    and found 99.5 percent pure on SP 2340 before blending; total load held at 1 mg per septum, so each blend replaces E,Z-2,13-18:OAc rather than adding to it. Septa hung from the tops of Pherocon 1C sticky
+    traps on the top trellis wire, about 1 m up; traps at least 50 m apart.'
+  author_statement: we concluded that the (E,Z)-3,13 ODDA did not contribute to capture since only one insect was captured

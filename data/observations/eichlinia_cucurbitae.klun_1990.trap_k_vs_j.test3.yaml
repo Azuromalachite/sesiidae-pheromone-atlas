@@ -1,0 +1,53 @@
+observation_id: spa.obs.eichlinia_cucurbitae.klun_1990.trap_k_vs_j.test3
+observation_type: behavioural_response
+taxon: spa.tax.eichlinia_cucurbitae
+context:
+  sex: male
+  habitat: farmland and squash plantings
+  population: null
+  locality: Beltsville, Maryland, USA
+assay: field_trapping
+trap:
+  design: other
+  colour: null
+  supplier: null
+dispenser:
+  design: rubber_septum
+  description: rubber septum, compounds in 50 ul methylene chloride, replaced weekly
+blend:
+- compound: spa.cmpd.e2_z13_18_oac
+  amount:
+    value: 68.5
+    unit: ratio_part
+- compound: spa.cmpd.z3_z13_18_oac
+  amount:
+    value: 0.1
+    unit: ratio_part
+comparator:
+  description: 'treatment J: Table 1 compounds 1'
+  blend:
+  - compound: spa.cmpd.e2_z13_18_oac
+    amount:
+      value: 68.5
+      unit: ratio_part
+effect: increased
+significance: significant
+dose:
+  value: 686.0
+  unit: microgram
+response:
+  measure: trap_catch
+  unit: mean_catch_per_trap_per_day
+  treatment_value: 2.6
+  comparator_value: 0.02
+  qualifier: as_reported
+evidence:
+  reference: spa.ref.klun_1990
+  experiment_id: spa.exp.klun_1990.test3_1987
+  taxon_name_as_reported: Melittia cucurbitae
+  source_location: Table 3, Test 3
+  notes: 'Test 3, June 22 - July 13 1987, 3 replicates. Treatment K (compounds 1,12) vs J (compounds 1), numbers as in Table 1. Table 3: mean male capture per day, Duncan''s multiple range test (alpha 0.05).
+    Each lure held 685 ug E,Z-2,13-18:OAc plus the other compounds in their Table 1 proportions, so the amounts here are Table 1 percentages as ratio parts (685 ug per 68.5 parts, i.e. 10 ug per part),
+    and dose is that arithmetic (Atlas reading). Conical traps of Webster et al. 1986, 30 m apart, 1 m up, at the Beltsville Agricultural Research Center and in community-garden squash plantings; usually
+    checked daily. Unsaturated compounds made geometrically pure by argentation HPLC (no figure). No virgin-female comparison was possible.'
+  author_statement: a mixture of E,Z-2,13-18:OAc (1) and ZZ-3,13-18:OAc (12) proved to be as effective as the mixture of all 13 compounds and was significantly more effective than E,Z-2,13-18:OAc alone

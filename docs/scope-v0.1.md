@@ -36,11 +36,11 @@ identifications that the curated papers themselves cite:
 - Yang 2011, Introduction and Discussion;
 - Naka 2008.
 
-Those papers count about 20 identified sesiid pheromones. The list below has
+Those papers count about 20 identified sesiid pheromones. The first list had
 16. **The gap is stated, not hidden.** A dated census search record is added
 when a complete list is read, and only then can the scope say "all".
 
-### Curated (9)
+### Curated (16)
 
 | species | female chemistry from |
 |---|---|
@@ -53,8 +53,29 @@ when a complete list is read, and only then can the scope say "all".
 | *S. tenuis* | Yang 2012 (Korea); Naka 2013 (Japan) |
 | *Nokona pernix* | Naka 2006 |
 | *S. hector* | Naka 2008 |
+| *S. pictipes*, *S. exitiosa* | Tumlinson 1974 |
+| *S. scitula* | Zhang 2005 (gland and effluvia) |
+| *Eichlinia cucurbitae* (as *Melittia cucurbitae*) | Klun 1990 |
+| *Glossosphecia romanovi* | Naka 2010 |
+| *S. haitangvora* | Yang 2009 |
+| *Vitacea polistiformis* | **attraction only** (Snow 1987); the female identification is still to curate |
 
-### To curate (7)
+### Still to curate
+
+The newly curated papers cite three more identifications, which would bring
+the list to 18 species.
+
+| species | reference | DOI |
+|---|---|---|
+| *Vitacea polistiformis* (female identification) | Schwarz M, Klun JA, Leonhardt BA, Johnson DT (1983) (E,Z)-2,13-Octadecadien-1-ol acetate. A new pheromone structure for sesiid moths. *Tetrahedron Lett* 24:1007–1010 | [10.1016/S0040-4039(00)81588-9](https://doi.org/10.1016/S0040-4039(00)81588-9) |
+| *Macroscelesia japona* and *M. longipes* | Naka H, Inomata S, Matsuoka K, Yamamoto M, Sugie H, Tsuchida K, Arita Y, Ando T (2007) Sex pheromones of two Melittini species, *Macroscelesia japona* and *M. longipes*: identification and field attraction. *J Chem Ecol* 33:591–601 | [10.1007/s10886-006-9242-5](https://doi.org/10.1007/s10886-006-9242-5) |
+| *Paranthrene tabaniformis* | Mozūraitis R, Karalius V (2007) Identification of minor sex pheromone components of the poplar clearwing moth *Paranthrene tabaniformis* (Lepidoptera, Sesiidae). *Z Naturforsch C* 62:138–142 | [10.1515/znc-2007-1-223](https://doi.org/10.1515/znc-2007-1-223) |
+
+Naka et al. 2010 also cite Guo et al. 1990 (*Youji Huaxue* 10:504–506) among
+the reports of Japanese sesiid pheromones. The citation names no species, so
+it is not listed until it is read.
+
+### Curated on 2026-10-23 from the first list (six papers, seven species)
 
 | species | reference | DOI |
 |---|---|---|
@@ -63,10 +84,12 @@ when a complete list is read, and only then can the scope say "all".
 | *Melittia cucurbitae* | Klun JA, Schwarz M, Leonhardt BA, Cantelo WW (1990) Sex pheromone of the female squash vine borer. *J Entomol Sci* 25:64–72 | [10.18474/0749-8004-25.1.64](https://doi.org/10.18474/0749-8004-25.1.64) |
 | *Glossosphecia romanovi* | Naka H, Mochizuki M, Nakada K, Do ND, Yamauchi T, Arita Y, Ando T (2010) Female sex pheromone of *Glossosphecia romanovi*: identification and field attraction. *Biosci Biotechnol Biochem* 74:1943–1946 | [10.1271/bbb.100232](https://doi.org/10.1271/bbb.100232) |
 | *Synanthedon haitangvora* | Yang CY, Kim J, Kang TJ, Jeon HY (2009) Identification and field bioassays of the sex pheromone of *Synanthedon haitangvora*. *J Chem Ecol* 35:1197–1201 | [10.1007/s10886-009-9694-5](https://doi.org/10.1007/s10886-009-9694-5) |
-| *Vitacea polistiformis* | Snow WJ, Schwarz M, Klun JA (1987) The attraction of the grape root borer to (E,Z)-2,13-octadecadienyl acetate and the effects of related isomers on attraction. *J Entomol Sci* 22:371–374. **Attraction only**; the female identification it rests on (Schwarz et al. 1983, *Tetrahedron Lett*) is still to be found | [10.18474/0749-8004-22.4.371](https://doi.org/10.18474/0749-8004-22.4.371) |
+| *Vitacea polistiformis* | Snow WJ, Schwarz M, Klun JA (1987) The attraction of the grape root borer to (E,Z)-2,13-octadecadienyl acetate and the effects of related isomers on attraction. *J Entomol Sci* 22:371–374. **Attraction only**; the female identification is Schwarz et al. 1983, above | [10.18474/0749-8004-22.4.371](https://doi.org/10.18474/0749-8004-22.4.371) |
 
-The Tumlinson paper covers two species, which is why the 7 target rows add
-up to 16 species with the 9 curated.
+All six are curated (`docs/curation-log.md`, entry 15). The squash vine
+borer is *Eichlinia cucurbitae* in the Atlas, following GBIF; Klun's
+*Melittia cucurbitae* is kept as a synonym and as the name each record
+reports.
 
 ### Also wanted, outside the target definition
 

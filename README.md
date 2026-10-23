@@ -4,9 +4,9 @@
 genomes, biosynthetic hypotheses, and candidate enzyme families.*
 
 **Status: building v0.1.** This repository holds the design documents, the
-record schemas and the validator with its failing fixtures, and 348 curated
+record schemas and the validator with its failing fixtures, and 530 curated
 records:
-- 16 taxa, 20 references, 17 compounds, 11 genomes and 278 observations,
+- 23 taxa, 26 references, 24 compounds, 11 genomes and 440 observations,
   the observations all from full texts
   ([`docs/curation-log.md`](docs/curation-log.md));
 - 6 dated searches, the only basis for "not found".

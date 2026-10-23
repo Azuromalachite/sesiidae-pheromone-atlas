@@ -1,0 +1,63 @@
+observation_id: spa.obs.synanthedon_scitula.zhang_2005.trap_ternary_vs_female.fig6_wv
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_scitula
+context:
+  sex: male
+  habitat: commercial apple orchard
+  population: null
+  locality: West Virginia, USA
+assay: field_trapping
+trap:
+  design: wing
+  colour: null
+  supplier: Trece (Pherocon 1C)
+dispenser:
+  design: rubber_septum
+  description: red natural rubber septum, 5 mm (Wheaton)
+blend:
+- compound: spa.cmpd.z3_z13_18_oac
+  amount:
+    value: 88
+    unit: ratio_part
+- compound: spa.cmpd.e2_z13_18_oac
+  amount:
+    value: 6
+    unit: ratio_part
+  purity:
+    value: 97
+    kind: unspecified
+    basis: measured
+    qualifier: more_than
+    method: 60 m DB-WAXETR GC
+- compound: spa.cmpd.z3_e13_18_oac
+  amount:
+    value: 6
+    unit: ratio_part
+  purity:
+    value: 97
+    kind: unspecified
+    basis: measured
+    qualifier: more_than
+    method: 60 m DB-WAXETR GC
+comparator:
+  description: one caged virgin female
+effect: increased
+significance: significant
+dose:
+  value: 1
+  unit: milligram
+response:
+  measure: trap_catch
+  unit: mean_catch_per_trap_per_week
+  treatment_value: 112
+  comparator_value: 3.8
+  qualifier: approximate
+evidence:
+  reference: spa.ref.zhang_2005
+  experiment_id: spa.exp.zhang_2005.fig6_wv
+  taxon_name_as_reported: Synanthedon scitula
+  source_location: Fig. 6
+  notes: 'Fig. 6, August 16 - September 13 2004, 763 males, N = 4, F = 25.72; letters: virgin female b, binary a, ternary a. Caged 2- to 4-day-old virgin female, one per cage. Commercial apple orchards;
+    traps about 1.2 m up, randomized within three to five rows separated by buffer rows, at least about 20 m apart, rotated weekly; 1 mg per septum, compounds as the parts printed under each bar. Z,Z-3,13-ODDA
+    (Bedoukian, about 90 percent) purified on silver-nitrate silica to under 0.3 percent E,Z-3,13-ODDA; the other isomers (PheroBank) checked above 97 percent on DB-WAXETR. Means read from the bar chart.'
+  author_statement: Traps baited with the ternary blend ... captured ~28 times more male DWB than traps baited with caged, virgin female DWB.

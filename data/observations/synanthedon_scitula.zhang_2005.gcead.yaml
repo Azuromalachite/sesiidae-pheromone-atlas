@@ -1,0 +1,60 @@
+observation_id: spa.obs.synanthedon_scitula.zhang_2005.gcead
+observation_type: electrophysiology
+taxon: spa.tax.synanthedon_scitula
+context:
+  sex: male
+  population: null
+  locality: null
+responses:
+- compound: spa.cmpd.z3_z13_18_oac
+  method: GC-EAD
+  preparation: male antenna; female gland extract and effluvia, DB-WAXETR and DB-5
+  response: active
+  notes: peak 1, the largest response
+- compound: spa.cmpd.e2_z13_18_oac
+  method: GC-EAD
+  preparation: male antenna; female gland extract and effluvia, DB-WAXETR and DB-5
+  response: active
+  notes: peak 2
+- compound: spa.cmpd.z3_e13_18_oac
+  method: GC-EAD
+  preparation: male antenna; female effluvia, DB-WAXETR and DB-5
+  response: inconsistent
+  notes: peak 3, effluvia only, 'sometimes'
+- compound: spa.cmpd.e3_e13_18_oac
+  method: GC-EAD
+  preparation: male antenna; synthetic, 10 ng (column not stated)
+  response: active
+  notes: 0.13 +- 0.03 mV
+- compound: spa.cmpd.z3_e13_18_oac
+  method: GC-EAD
+  preparation: male antenna; synthetic, 10 ng (column not stated)
+  response: active
+  notes: 0.24 +- 0.04 mV
+- compound: spa.cmpd.e3_z13_18_oac
+  method: GC-EAD
+  preparation: male antenna; synthetic, 10 ng (column not stated)
+  response: active
+  notes: 0.30 +- 0.09 mV
+- compound: spa.cmpd.z3_z13_18_oac
+  method: GC-EAD
+  preparation: male antenna; synthetic, 10 ng (column not stated)
+  response: active
+  notes: 0.30 +- 0.10 mV
+- compound: spa.cmpd.e2_z13_18_oac
+  method: GC-EAD
+  preparation: male antenna; synthetic, 10 ng (column not stated)
+  response: active
+  notes: 0.20 +- 0.13 mV
+evidence:
+  reference: spa.ref.zhang_2005
+  taxon_name_as_reported: Synanthedon scitula
+  source_location: Results; Fig. 1; Table 1
+  author_statement: GC-EAD analyses of the four synthetic geometric isomers of 3,13-ODDA revealed that all elicited significant EAD responses
+  unresolved:
+  - number of antennae for the extracts
+  - whether the 0.03-0.05 mV readings to the other three 2,13 isomers count as responses (not recorded)
+  notes: 'Fig. 1: two EAD responses in a gland extract of two females, three in effluvia of seven; the third (Z,E-3,13-ODDA) ''sometimes elicited EAD responses''. Table 1, synthetic 10 ng, N = 3, mean +-
+    SD mV: E,E-3,13 0.13 +- 0.03 ab, Z,E-3,13 0.24 +- 0.04 a, E,Z-3,13 0.30 +- 0.09 a, Z,Z-3,13 0.30 +- 0.10 a, E,Z-2,13 0.20 +- 0.13 ab; Z,E-, Z,Z- and E,E-2,13 0.03-0.05 b. Fig. 1C: synthetic Z,Z-3,13
+    and E,Z-2,13 ''also elicited strong antennal responses''. ''Active'' for the synthetics follows the text (all four 3,13 isomers ''significant''; E,Z-2,13 ''strong'' in Fig. 1C); by the Table 1 letters
+    alone, the ''ab'' responses (E,E-3,13, E,Z-2,13) are not separable from the ''b'' group.'

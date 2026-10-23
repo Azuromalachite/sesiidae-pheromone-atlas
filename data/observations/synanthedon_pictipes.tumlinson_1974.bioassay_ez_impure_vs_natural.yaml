@@ -1,0 +1,40 @@
+observation_id: spa.obs.synanthedon_pictipes.tumlinson_1974.bioassay_ez_impure_vs_natural
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_pictipes
+context:
+  sex: male
+  habitat: peach orchard
+  population: null
+  locality: null
+assay: other
+dispenser:
+  design: other
+  description: glass petri dish on the ground; material in 0.5 ml pentane (note 8)
+blend:
+- compound: spa.cmpd.e3_z13_18_oac
+  purity:
+    value: 95
+    kind: isomeric
+    basis: stated
+    qualifier: more_than
+comparator:
+  description: purified natural S. pictipes pheromone, equivalent amount (about 30 female equivalents)
+effect: decreased
+significance: not_tested
+response:
+  measure: other
+  unit: count
+  treatment_value: 2
+  comparator_value: 30
+  qualifier: as_reported
+evidence:
+  reference: spa.ref.tumlinson_1974
+  experiment_id: spa.exp.tumlinson_1974.isomer_bioassay
+  taxon_name_as_reported: Synanthedon pictipes
+  source_location: Text p. 615
+  author_statement: the (E,Z)-isomer attracted an average of only two S. pictipes males though an equivalent amount ... of the purified natural S. pictipes pheromone attracted an average of 30 males
+  unresolved:
+  - 'amount: the text says 120 ug, the Fig. 2 legend implies 120 ng'
+  notes: Simultaneous field bioassay; the paper places it 'in the field in Byron, Georgia'. The synthetic isomer was GC-purified (over 99.5 percent chemically) but held about 3 to 5 percent of other 3,13
+    isomers (isomeric purity about 95-97 percent; recorded as more than 95); after silver-nitrate purification it was as attractive as the natural pheromone (no numbers, not recorded). Means of an unstated
+    number of replicates.

@@ -1,0 +1,42 @@
+observation_id: spa.obs.synanthedon_scitula.zhang_2005.effluvium
+observation_type: chemical_measurement
+taxon: spa.tax.synanthedon_scitula
+context:
+  sex: female
+  life_stage: adult
+  mating_status: virgin
+  sampling_unit: pooled
+  n_individuals: 7
+  population: null
+  locality: null
+  rearing: field_collected_reared
+sample:
+  materials:
+  - effluvium
+  material_as_reported: volatiles from groups of 3-10 virgin females trapped on Super Q and eluted with methylene chloride
+  result_scope: single_material
+components:
+- compound: spa.cmpd.z3_z13_18_oac
+  detected: true
+  method: effluvium_super_q_gc_ead_fid_retention_db_waxetr_and_db5
+  identification: confirmed
+- compound: spa.cmpd.e2_z13_18_oac
+  detected: true
+  method: effluvium_super_q_gc_ead_fid_retention_db_waxetr_and_db5
+  identification: confirmed
+- compound: spa.cmpd.z3_e13_18_oac
+  detected: true
+  method: effluvium_super_q_gc_ead_fid_retention_db_waxetr_and_db5
+  identification: tentative
+evidence:
+  reference: spa.ref.zhang_2005
+  taxon_name_as_reported: Synanthedon scitula
+  source_location: Results; Fig. 1B; Table 1
+  author_statement: the minor component in the effluvial extract (peak 3) that elicited antennal responses was tentatively determined to be Z,E-3,13-ODDA
+  unresolved:
+  - amounts and ratio in the effluvia (the 88:6:6 'estimated' ternary ratio is not tied to a stated analysis)
+  - whether the effluvia were analysed by GC-MS
+  notes: Six groups of 3-10 virgin females (1-13 days old) aerated 3-7 days on Super Q, eluted with methylene chloride; Fig. 1B is 48 h of effluvia from seven females aged 3-13 days. The three EAD-active
+    FID peaks matched the retention times of Z,Z-3,13-, E,Z-2,13- and Z,E-3,13-ODDA on DB-WAXETR and DB-5; the first two were identified by co-injection in the gland extract, and their 'confirmed' here
+    rests on the effluvium peaks being the same compounds (retention on two columns; Atlas reading, no GC-MS of the effluvia is reported); the third only by retention, so tentative as the authors say. n_individuals
+    is the Fig. 1B run (seven females); the identification drew on all six groups.

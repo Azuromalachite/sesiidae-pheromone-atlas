@@ -1,0 +1,99 @@
+observation_id: spa.obs.synanthedon_scitula.zhang_2005.trap_ez3_3_added.fig5_va
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_scitula
+context:
+  sex: male
+  habitat: commercial apple orchard
+  population: null
+  locality: Virginia, USA
+assay: field_trapping
+trap:
+  design: delta
+  colour: null
+  supplier: Trece
+dispenser:
+  design: rubber_septum
+  description: red natural rubber septum, 5 mm (Wheaton)
+blend:
+- compound: spa.cmpd.z3_z13_18_oac
+  amount:
+    value: 88
+    unit: ratio_part
+- compound: spa.cmpd.e2_z13_18_oac
+  amount:
+    value: 6
+    unit: ratio_part
+  purity:
+    value: 97
+    kind: unspecified
+    basis: measured
+    qualifier: more_than
+    method: 60 m DB-WAXETR GC
+- compound: spa.cmpd.z3_e13_18_oac
+  amount:
+    value: 6
+    unit: ratio_part
+  purity:
+    value: 97
+    kind: unspecified
+    basis: measured
+    qualifier: more_than
+    method: 60 m DB-WAXETR GC
+- compound: spa.cmpd.e3_z13_18_oac
+  amount:
+    value: 3
+    unit: ratio_part
+  purity:
+    value: 97
+    kind: unspecified
+    basis: measured
+    qualifier: more_than
+    method: 60 m DB-WAXETR GC
+comparator:
+  description: 'ternary Z,Z-3,13 : E,Z-2,13 : Z,E-3,13-18:OAc 88:6:6, 1 mg'
+  blend:
+  - compound: spa.cmpd.z3_z13_18_oac
+    amount:
+      value: 88
+      unit: ratio_part
+  - compound: spa.cmpd.e2_z13_18_oac
+    amount:
+      value: 6
+      unit: ratio_part
+    purity:
+      value: 97
+      kind: unspecified
+      basis: measured
+      qualifier: more_than
+      method: 60 m DB-WAXETR GC
+  - compound: spa.cmpd.z3_e13_18_oac
+    amount:
+      value: 6
+      unit: ratio_part
+    purity:
+      value: 97
+      kind: unspecified
+      basis: measured
+      qualifier: more_than
+      method: 60 m DB-WAXETR GC
+effect: decreased
+significance: significant
+dose:
+  value: 1
+  unit: milligram
+response:
+  measure: trap_catch
+  unit: mean_catch_per_trap_per_week
+  treatment_value: 0.1
+  comparator_value: 54.2
+  qualifier: approximate
+evidence:
+  reference: spa.ref.zhang_2005
+  experiment_id: spa.exp.zhang_2005.fig5_va
+  taxon_name_as_reported: Synanthedon scitula
+  source_location: Fig. 5B
+  notes: 'Every lure, the baseline included, carried up to 0.3 percent E,Z-3,13-ODDA as an impurity of the Z,Z-3,13-ODDA (up to about 0.26 parts in 88), so the doses here are additions on top of that (Atlas
+    reading). Fig. 5, July 15 - August 12 2004, 861 males, N = 15, F = 156.7; letters ternary, +0.5, +1, +2, +3: a, b, b, b, b. Commercial apple orchards; traps about 1.2 m up, randomized within three to
+    five rows separated by buffer rows, at least about 20 m apart, rotated weekly; 1 mg per septum, compounds as the parts printed under each bar. Z,Z-3,13-ODDA (Bedoukian, about 90 percent) purified on
+    silver-nitrate silica to under 0.3 percent E,Z-3,13-ODDA; the other isomers (PheroBank) checked above 97 percent on DB-WAXETR. Means read from the bar chart.'
+  author_statement: the addition of as little as 0.5% of the geometric isomer, E,Z-3,13-ODDA, to the most attractive ternary blend ... strongly antagonized the attraction of male DWB to traps

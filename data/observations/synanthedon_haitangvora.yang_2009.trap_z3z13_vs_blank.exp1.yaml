@@ -1,0 +1,48 @@
+observation_id: spa.obs.synanthedon_haitangvora.yang_2009.trap_z3z13_vs_blank.exp1
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_haitangvora
+context:
+  sex: male
+  habitat: apple orchard
+  population: Korean population
+  locality: Suwon, Republic of Korea
+assay: field_trapping
+trap:
+  design: delta
+  colour: null
+  supplier: Green Agro Tech
+dispenser:
+  design: rubber_septum
+  description: rubber septum (Aldrich)
+blend:
+- compound: spa.cmpd.z3_z13_18_oac
+  amount:
+    value: 1000
+    unit: microgram
+  purity:
+    value: 99
+    kind: isomeric
+    basis: stated
+    qualifier: more_than
+comparator:
+  description: unbaited control
+effect: no_effect
+significance: not_significant
+dose:
+  value: 1000
+  unit: microgram
+response:
+  measure: trap_catch
+  unit: mean_catch_per_trap
+  treatment_value: 1.0
+  comparator_value: 0
+  qualifier: approximate
+evidence:
+  reference: spa.ref.yang_2009
+  experiment_id: spa.exp.yang_2009.exp1
+  taxon_name_as_reported: Synanthedon haitangvora
+  source_location: Experiment 1; Fig. 2
+  notes: 'Z3,Z13-18:OAc alone (bc) shares letter c with the control, so by the figure it did not differ from it, although the text calls it attractive. Experiment 1, 27-30 August 2008, N = 4, 37 males in
+    total, none in control traps. Letters: 1000:0 bc, 900:100 ab, 500:500 a, 100:900 bc, 0:1000 c, control c. Sticky delta traps 1-1.5 m up, complete randomized blocks of four, traps at least 10 m apart,
+    counted daily; log(x + 1) one-way ANOVA, Tukey''s test at alpha 0.05. Pherobank synthetics, isomeric purity stated as above 99 percent. Means read from the bar chart.'
+  author_statement: Z3,Z13-18:OAc as a single component was attractive to males

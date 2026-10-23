@@ -1,0 +1,116 @@
+observation_id: spa.obs.eichlinia_cucurbitae.klun_1990.ovipositor
+observation_type: chemical_measurement
+taxon: spa.tax.eichlinia_cucurbitae
+context:
+  sex: female
+  life_stage: adult
+  mating_status: virgin
+  behavioural_state: calling
+  sampling_unit: pooled
+  n_individuals: 4
+  population: null
+  locality: null
+  rearing: field_collected_reared
+sample:
+  materials:
+  - ovipositor_extract
+  material_as_reported: ovipositors of calling females soaked individually in 40 ul heptane for 1 h; four extracts combined
+  result_scope: single_material
+components:
+- compound: spa.cmpd.e2_z13_18_oac
+  detected: true
+  method: acetate_fraction_gc_ms_db1_and_retention_supelcowax_db1
+  identification: confirmed
+  abundance_class: major
+  measurements:
+  - value: 68.5
+    unit: percent
+    qualifier: as_reported
+- compound: spa.cmpd.z2_z13_18_oac
+  detected: true
+  method: retention_coincidence_supelcowax_unique_db1_coelutes_with_z2e13
+  identification: confirmed
+  abundance_class: trace
+  measurements:
+  - value: 0.1
+    unit: percent
+    qualifier: as_reported
+- compound: spa.cmpd.e2_z13_18_oh
+  detected: true
+  method: alcohol_fraction_acetylated_gc_ms_db1_and_retention_supelcowax_db1
+  identification: confirmed
+  measurements:
+  - value: 9.1
+    unit: percent
+    qualifier: as_reported
+- compound: spa.cmpd.z13_18_oh
+  detected: true
+  method: alcohol_fraction_acetylated_gc_ms_db1_and_retention_supelcowax_db1
+  identification: confirmed
+  measurements:
+  - value: 3.4
+    unit: percent
+    qualifier: as_reported
+- compound: spa.cmpd.z9_16_oac
+  detected: true
+  method: acetate_fraction_gc_ms_db1_and_retention_supelcowax_db1
+  identification: confirmed
+  measurements:
+  - value: 0.7
+    unit: percent
+    qualifier: as_reported
+- compound: spa.cmpd.16_oac
+  detected: true
+  method: acetate_fraction_gc_ms_db1_and_retention_supelcowax_db1
+  identification: confirmed
+  measurements:
+  - value: 0.8
+    unit: percent
+    qualifier: as_reported
+- compound: spa.cmpd.z11_16_oac
+  detected: true
+  method: acetate_fraction_gc_ms_db1_and_retention_supelcowax_db1
+  identification: confirmed
+  measurements:
+  - value: 0.2
+    unit: percent
+    qualifier: as_reported
+- compound: spa.cmpd.z9_16_oh
+  detected: true
+  method: alcohol_fraction_acetylated_gc_ms_db1_and_retention_supelcowax_db1
+  identification: confirmed
+  measurements:
+  - value: 0.1
+    unit: percent
+    qualifier: as_reported
+- compound: spa.cmpd.z13_18_oac
+  detected: true
+  method: acetate_fraction_gc_ms_db1_and_retention_supelcowax_db1
+  identification: confirmed
+  measurements:
+  - value: 16.5
+    unit: percent
+    qualifier: as_reported
+- compound: spa.cmpd.z3_z13_18_oac
+  detected: true
+  method: retention_on_shared_peak_2_12_ms_octadecadienyl_acetate_assigned_by_field_tests
+  identification: tentative
+  abundance_class: trace
+  measurements:
+  - value: 0.1
+    unit: percent
+    qualifier: as_reported
+evidence:
+  reference: spa.ref.klun_1990
+  taxon_name_as_reported: Melittia cucurbitae
+  source_location: Table 1; Table 2; Results; Fig. 1
+  author_statement: a major component in the extracts was (E,Z)-2,13-octadecadien-1-ol acetate along with traces of (Z,Z)- and (Z,E)-isomers
+  unresolved:
+  - peak 2,12 is one peak, Z,E-2,13-18:OAc or Z,Z-3,13-18:OAc; Table 1 lists both at 0.1 percent. Recorded once, as Z,Z-3,13-18:OAc, the authors' assignment 'by inference only' from the field tests; the
+    abstract instead lists traces of the (Z,Z)- and (Z,E)-2,13 isomers
+  - peak 11,13 is one peak (0.2 percent), Z,E- or E,Z-3,13-18:OAc, which the authors leave unassigned; not recorded as either
+  - where the larvae were collected
+  notes: About 100 prepupal larvae collected from Cucurbita pepo, overwintered outdoors in soil, moved to 16L, 24 C in March; about 15 females emerged. Females held about 48 h, calling 13:00-14:00; ovipositors
+    excised and soaked individually in 40 ul heptane for 1 h. Only 4 extracts had enough titre; these were combined (Table 1 percentages). Others showed negligible E,Z-2,13-18:OAc. Identity by retention
+    on Supelcowax and DB-1; GC-MS of the silica acetate fraction confirmed 1, 6, 7, 8 and 10 and showed a trace octadecadienyl acetate at peak 2,12; the alcohol fraction, acetylated, gave spectra identical
+    to the acetates of 4, 5 and 9. Peak 2,12 is assigned to Z,Z-3,13-18:OAc 'by inference only' from the field tests. The abstract calls all minor compounds probable. Hydrocarbons C23, C25, C27 also present.

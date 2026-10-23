@@ -1,0 +1,42 @@
+observation_id: spa.obs.synanthedon_pictipes.tumlinson_1974.trap_ez_vs_females
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_pictipes
+context:
+  sex: male
+  habitat: peach orchard
+  population: null
+  locality: near Byron, Georgia, USA
+assay: field_trapping
+trap:
+  design: wing
+  colour: null
+  supplier: Zoecon (Pherocon 1C)
+dispenser:
+  design: other
+  description: glass petri dish in the bottom of the trap
+blend:
+- compound: spa.cmpd.e3_z13_18_oac
+  amount:
+    value: 10
+    unit: microgram
+comparator:
+  description: three virgin female S. pictipes per trap
+effect: increased
+significance: not_tested
+dose:
+  value: 10
+  unit: microgram
+response:
+  measure: trap_catch
+  unit: total_catch
+  treatment_value: 1335
+  comparator_value: 114
+  qualifier: as_reported
+evidence:
+  reference: spa.ref.tumlinson_1974
+  experiment_id: spa.exp.tumlinson_1974.trap_oct_1973
+  taxon_name_as_reported: Synanthedon pictipes
+  source_location: Text p. 616
+  author_statement: the traps containing females caught 114 males
+  notes: 'October 1973, peach orchard near Byron; 36 Pherocon 1C traps in a complete randomized block, 12 per treatment. Synthetic lure: 10 ug in a glass petri dish on the trap floor; purity of this batch
+    not stated. Catches are the totals of 12 traps between 10:30 and 15:00 EDT on the first day; the synthetic traps caught 263 more males over the next 4 days (none given for the other treatments).'

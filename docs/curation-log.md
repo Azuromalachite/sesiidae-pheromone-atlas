@@ -1,5 +1,125 @@
 # Curation log
 
+## 2026-10-23 (15) — the six target papers, with independent review
+
+| paper | taxon | records |
+|---|---|---|
+| Tumlinson et al. 1974 | *S. pictipes*, *S. exitiosa* (as *Sanninoidea exitiosa*) | 17 |
+| Snow, Schwarz & Klun 1987 | *Vitacea polistiformis* (attraction only) | 17 |
+| Klun, Schwarz, Leonhardt & Cantelo 1990 | *Eichlinia cucurbitae* (as *Melittia cucurbitae*) | 20 |
+| Naka et al. 2010 | *Glossosphecia romanovi* | 29 |
+| Yang, Kim, Kang & Jeon 2009 | *S. haitangvora* | 22 |
+| Zhang, Leskey, Bergh & Walgenbach 2005 | *S. scitula* | 57 |
+
+- **New records:** 7 taxa, 6 references and 162 observations.
+- **New compounds (7):** 16:OAc, Z9-16:OAc, Z11-16:OAc, Z9-16:OH,
+  Z9-18:OAc, Z3-18:OAc and Z2,E13-18:OAc. All InChIKeys resolve in PubChem
+  to the expected isomers.
+- **Totals now:** 23 taxa, 26 references, 24 compounds and 440 observations.
+
+**Taxonomy.** GBIF accepts *Eichlinia cucurbitae* for the squash vine borer,
+so that is the accepted name. *Melittia cucurbitae* (NCBI 655047; Klun's
+name) and *M. satyriniformis* are recorded as synonyms. *Sanninoidea
+exitiosa* is a synonym of *S. exitiosa*: GBIF lists only the genus
+*Sanninoidea* as a synonym of *Synanthedon*. *G. romanovi* and *S.
+haitangvora* have no NCBI Taxonomy entry.
+
+**Schema (additive).** Response unit `mean_catch_per_trap_per_day`, for Klun
+1990's Table 3. The frozen-shape test accepts the change.
+
+**Review.** Three reviewers re-read every record against the PDFs and page
+images. Bar readings were checked against the printed totals. No mean,
+letter or significance label derived from letters was wrong. They found:
+- **Double counting (Klun 1990).** Peaks 2,12 and 11,13 are each one peak,
+  yet both candidates were recorded as detected. Now 2,12 is recorded once,
+  as the authors' assignment (Z,Z-3,13-18:OAc, "by inference only"), and
+  11,13 is left unassigned.
+- **Quotes on the wrong contrast.** These were moved, or new records were
+  added to carry them:
+  - Snow's "did not differ significantly from the 2 %" now sits on a 99:1
+    vs 98:2 record;
+  - Snow's "almost as good" now sits on a 0.5:0.5 vs 1 % record;
+  - Yang's "unattractive alone" now sits on an E2-vs-control record;
+  - Zhang's "most of the ternary blends" was removed from its three
+    non-significant contrasts;
+  - Naka's "alcohol alone could attract" was removed from Test B, where the
+    alcohol alone caught nothing.
+- **Setup details carried over without warrant.** Naka 2010's 2006 trap
+  model, septum and trap height were on the 2009 records; they are now
+  stated only for 2006. Tumlinson's Fig. 2 locality and lure purity are
+  dropped, because the paper states neither for that test.
+- **Inconsistent significance.** Tumlinson's Fig. 2 records had mixed
+  labels. All 1–50 % (Z,Z) contrasts for *S. pictipes* are now `significant`
+  as the authors state, with the missing test listed under `unresolved`.
+- **Missing contrasts added (14):**
+  - Klun Test 1, A vs D and B vs C;
+  - Klun Test 2, E vs I and G vs I;
+  - Zhang Fig. 2, binary vs the Z,Z/Z,E lure at three sites;
+  - Yang 9:1 vs control;
+  - Naka 2010, the alcohol alone vs control in Tests A and C;
+  - three Snow contrasts against the best lure.
+- **Overclaims softened:**
+  - Tumlinson's abundance class is removed;
+  - the ozonolysis product seen only in the synthetic is now labelled so;
+  - Zhang's effluvium identifications are marked as resting on retention
+    matches to the gland peaks;
+  - Zhang's synthetic GC-EAD column is "not stated";
+  - Naka's `n_individuals` is null, because the paper does not say how many
+    of its three extracts were analysed.
+
+### Internal inconsistencies found in these papers
+
+- **Tumlinson 1974:**
+  - The natural *S. pictipes* pheromone is "120 µg" in the text and 120 ng
+    in the Fig. 2 legend. The internal evidence favours ng.
+  - The IR band absent in *S. exitiosa* is called 960 cm⁻¹, after the trans
+    band was given as 970.
+- **Klun 1990:**
+  - The abstract's binary is 99.7:0.3; the lures were about 99.85:0.15.
+  - Compound 9 is named as an acetate with an alcohol acronym.
+  - The abstract hedges every minor compound as "probably"; the Results
+    call five of them confirmed.
+- **Naka 2010:**
+  - Table 2's totals do not follow from its means (132 vs 144 printed).
+  - The five-component lure holds the 3Z,13E isomers and Z3-18:OAc, where
+    the gland had E3,Z13 compounds and Z13-18:OH. Its amounts match the
+    gland ratio position by position, and the table title names
+    3-octadecenyl compounds, so this is not one typo. Recorded as printed.
+- **Yang 2009:** by the Fig. 2 letters, Z3,Z13-18:OAc alone did not differ
+  from the control, although the text calls it attractive.
+- **Zhang 2005:**
+  - The Discussion cites Fig. 3 for an 88:6:6 lure that Fig. 3 did not
+    test.
+  - The abstract gives the binary as 1–3 % E,Z-2,13; every binary lure had
+    6 parts.
+  - The Methods give log transformation; the Fig. 2 legend gives arcsine
+    square root.
+  - The lure-longevity dates and state in Table 2 conflict with the text.
+
+### Not recorded, by design
+
+- **Results stated without numbers:**
+  - Tumlinson's isomer purity tests and cross-species claims;
+  - Snow's 1983–1984 isomer screens;
+  - Yang's "other geometrical isomers" (data not shown).
+- **Non-target catches:** Klun's *S. acerrubri* totals; the non-target
+  species in Zhang's and Yang's traps.
+- **Zhang's lure longevity** and species-specificity percentages.
+- **Zhang's 0.03–0.05 mV synthetic 2,13-isomer readings.** The paper does
+  not call them responses.
+
+**Analysis.** The single-addition analysis now finds 156 contrasts in 15
+species: 98 additions and 58 replacements.
+- **E2,Z13-18:OAc** no longer looks inert; entry 14's "never changed
+  catches of the 3,13-diene users" does not survive *S. scitula*, a
+  Z3,Z13-18:OAc user. It raised catches in 13
+  contrasts, all in the two species whose glands contain it (12 in *S.
+  scitula*, 1 in *S. haitangvora*). It never lowered catches.
+- **E3,Z13-18:OAc** is now mostly an antagonist: 28 of 46 contrasts went
+  down: 12 in *S. scitula*, 6 in Japanese *S. tenuis*, 5 in *S. exitiosa*,
+  2 each in *V. polistiformis* and *S. tipuliformis*, 1 in *S.
+  scoliaeformis*.
+
 ## 2026-10-23 (14) — scope statement and the first analysis
 
 **`docs/scope-v0.1.md`** states what v0.1 is complete for: species with a

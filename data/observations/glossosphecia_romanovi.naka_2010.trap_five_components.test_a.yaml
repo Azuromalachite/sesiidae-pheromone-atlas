@@ -1,0 +1,71 @@
+observation_id: spa.obs.glossosphecia_romanovi.naka_2010.trap_five_components.test_a
+observation_type: behavioural_response
+taxon: spa.tax.glossosphecia_romanovi
+context:
+  sex: male
+  habitat: ridge of coppices near a vineyard
+  population: Japanese population
+  locality: Kotoura Town, Tottori Prefecture, Japan
+assay: field_trapping
+trap:
+  design: sticky_board
+  colour: null
+  supplier: null
+dispenser:
+  design: rubber_septum
+  description: rubber septum (type not restated for 2009)
+blend:
+- compound: spa.cmpd.z3_z13_18_oh
+  amount:
+    value: 1000
+    unit: microgram
+- compound: spa.cmpd.z3_z13_18_oac
+  amount:
+    value: 50
+    unit: microgram
+- compound: spa.cmpd.z3_e13_18_oh
+  amount:
+    value: 10
+    unit: microgram
+- compound: spa.cmpd.z3_e13_18_oac
+  amount:
+    value: 10
+    unit: microgram
+- compound: spa.cmpd.z3_18_oac
+  amount:
+    value: 20
+    unit: microgram
+comparator:
+  description: Z3,Z13-18:OH 1000 ug + Z3,Z13-18:OAc 50 ug
+  blend:
+  - compound: spa.cmpd.z3_z13_18_oh
+    amount:
+      value: 1000
+      unit: microgram
+  - compound: spa.cmpd.z3_z13_18_oac
+    amount:
+      value: 50
+      unit: microgram
+effect: no_effect
+significance: not_significant
+dose:
+  value: 1090
+  unit: microgram
+response:
+  measure: trap_catch
+  unit: mean_catch_per_trap
+  treatment_value: 33.5
+  comparator_value: 42.0
+  qualifier: as_reported
+evidence:
+  reference: spa.ref.naka_2010
+  experiment_id: spa.exp.naka_2010.test_a
+  taxon_name_as_reported: Glossosphecia romanovi
+  source_location: Table 2, Test A
+  author_statement: the three other minor components did not significantly affect the male attraction at the same mixing ratio as that found in the pheromone extract
+  unresolved:
+  - the printed five-component lure (Z3,E13-18:OH, Z3,E13-18:OAc, Z3-18:OAc) is not the gland's minor components (E3,Z13-18:OH, E3,Z13-18:OAc, Z13-18:OH), although its 1000:50:10:10:20 matches the gland
+    ratio 100:5:1:1:2 position by position; the Table 2 title ('3-Octadecenyl Compounds') supports the printed Z3-18:OAc, so this is not one typo in the footnote
+  notes: 'Both lures letter a. Test A: two traps per lure at the ridge of coppices near a vineyard, Kotoura Town, June 17 - September 14 2009. Table 2, mean +- SE males per trap; letters within each test
+    column. GLMM with Poisson errors on lures whose total catch was not zero, Tukey pairwise comparisons with adjusted P values. No purity stated. Shin-Etsu synthetics and the authors'' own isomers. For
+    2009 the paper says only ''sticky-type traps'' and ''a rubber septum''; trap model, septum type and height are given only for the 2006 test, so they are not carried over.'

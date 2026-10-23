@@ -1,0 +1,28 @@
+observation_id: spa.obs.glossosphecia_romanovi.naka_2010.gcead
+observation_type: electrophysiology
+taxon: spa.tax.glossosphecia_romanovi
+context:
+  sex: male
+  population: null
+  locality: null
+responses:
+- compound: spa.cmpd.z3_z13_18_oac
+  method: GC-EAD
+  preparation: male antenna; gland extract, 0.5 FE, DB-23
+  response: active
+  notes: component II
+- compound: spa.cmpd.z3_z13_18_oh
+  method: GC-EAD
+  preparation: male antenna; gland extract, 0.5 FE, DB-23
+  response: active
+  notes: component III, the FID major peak
+evidence:
+  reference: spa.ref.naka_2010
+  taxon_name_as_reported: Glossosphecia romanovi
+  source_location: Results; Fig. 1A
+  author_statement: The male antennae responded to three components
+  unresolved:
+  - number of antennae
+  - origin of the males (two males emerged with the females; not said to be the ones used)
+  - identity of component I (tR 23.35 min), which 'might have been E3,Z13-18:OAc'; not recorded as a response
+  notes: Gland extract, 0.5 FE, DB-23, FID:EAD split 1:1. Component II (tR 23.55) and III (tR 24.05) had the retention times of synthetic Z3,Z13-18:OAc and Z3,Z13-18:OH.

@@ -1,0 +1,52 @@
+observation_id: spa.obs.synanthedon_pictipes.tumlinson_1974.bioassay_ez_zz_99_1
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_pictipes
+context:
+  sex: male
+  habitat: peach orchard
+  population: null
+  locality: null
+assay: other
+dispenser:
+  design: other
+  description: glass petri dish on the ground; material in 0.5 ml pentane (note 8)
+blend:
+- compound: spa.cmpd.e3_z13_18_oac
+  amount:
+    value: 118.8
+    unit: nanogram
+- compound: spa.cmpd.z3_z13_18_oac
+  amount:
+    value: 1.2
+    unit: nanogram
+comparator:
+  description: (E,Z)-3,13-18:OAc alone, 120 ng
+  blend:
+  - compound: spa.cmpd.e3_z13_18_oac
+    amount:
+      value: 120
+      unit: nanogram
+effect: decreased
+significance: significant
+dose:
+  value: 120
+  unit: nanogram
+response:
+  measure: other
+  unit: count
+  treatment_value: 2.5
+  comparator_value: 36
+  qualifier: approximate
+evidence:
+  reference: spa.ref.tumlinson_1974
+  experiment_id: spa.exp.tumlinson_1974.fig2_mixtures
+  taxon_name_as_reported: Synanthedon pictipes
+  source_location: Fig. 2; text p. 615-616
+  unresolved:
+  - the test behind the authors' 'significantly' (none is shown)
+  notes: 'Significance as the authors state it for 1 percent and above. Fig. 2: average number of males responding, five replicates, read from the bar chart; bars below 1 are about the drawn baseline thickness
+    and may be zero. The figure does not label which axis row is the (E,Z)-isomer; the Atlas reads the top row as (E,Z) because S. pictipes peaks at 100. Total 120 ng per test is the Atlas reading of the
+    legend, which gives an equivalence (about 30 FE of S. pictipes, about 1 FE of S. exitiosa), not a stated load; the text''s units differ, see the reference notes. Assay of note 8, as the Atlas reads
+    it: material in pentane in a glass petri dish on the ground, males responding counted over 35 min; the paper names Byron, Georgia only for the earlier bioassays, so locality is left null. The text says
+    the mixtures were compared with the 99.5+ percent pure isomers, not that they were made from them; no purity is recorded. No test statistic or per-ratio comparison is printed.'
+  author_statement: even very low concentrations of the (Z,Z)-isomer (1 percent) in the (E,Z)-isomer significantly inhibited the response of Synanthedon pictipes males

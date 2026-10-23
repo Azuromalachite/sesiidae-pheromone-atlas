@@ -1,0 +1,44 @@
+observation_id: spa.obs.synanthedon_scitula.zhang_2005.trap_single_vs_blank.fig2_va
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_scitula
+context:
+  sex: male
+  habitat: commercial apple orchard
+  population: null
+  locality: Virginia, USA
+assay: field_trapping
+trap:
+  design: delta
+  colour: null
+  supplier: Trece
+dispenser:
+  design: rubber_septum
+  description: red natural rubber septum, 5 mm (Wheaton)
+blend:
+- compound: spa.cmpd.z3_z13_18_oac
+  amount:
+    value: 100
+    unit: ratio_part
+comparator:
+  description: hexane control septum
+effect: increased
+significance: not_tested
+dose:
+  value: 1
+  unit: milligram
+response:
+  measure: trap_catch
+  unit: mean_catch_per_trap_per_week
+  treatment_value: 10
+  comparator_value: 0
+  qualifier: approximate
+evidence:
+  reference: spa.ref.zhang_2005
+  experiment_id: spa.exp.zhang_2005.fig2_va
+  taxon_name_as_reported: Synanthedon scitula
+  source_location: Fig. 2B
+  notes: 'Control traps caught nothing and were left out of the analyses (Statistics); the figure shows no control bar. Fig. 2, June 2 - August 25 2004, 11,917 males, N = 130, df = 3,516, F = 112.1; letters:
+    single c, ZZ/EZ-2 94:6 b, ZZ/ZE 94:6 c, ternary 88:6:6 a. Commercial apple orchards; traps about 1.2 m up, randomized within three to five rows separated by buffer rows, at least about 20 m apart, rotated
+    weekly; 1 mg per septum, compounds as the parts printed under each bar. Z,Z-3,13-ODDA (Bedoukian, about 90 percent) purified on silver-nitrate silica to under 0.3 percent E,Z-3,13-ODDA; the other isomers
+    (PheroBank) checked above 97 percent on DB-WAXETR. Means read from the bar chart.'
+  author_statement: The major sex pheromone component, Z,Z-3,13-ODDA, was attractive as a single component.

@@ -1,0 +1,82 @@
+observation_id: spa.obs.synanthedon_haitangvora.yang_2009.trap_z9_16oac_added.exp2
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_haitangvora
+context:
+  sex: male
+  habitat: apple orchard
+  population: Korean population
+  locality: Suwon, Republic of Korea
+assay: field_trapping
+trap:
+  design: delta
+  colour: null
+  supplier: Green Agro Tech
+dispenser:
+  design: rubber_septum
+  description: rubber septum (Aldrich)
+blend:
+- compound: spa.cmpd.z3_z13_18_oac
+  amount:
+    value: 500
+    unit: microgram
+  purity:
+    value: 99
+    kind: isomeric
+    basis: stated
+    qualifier: more_than
+- compound: spa.cmpd.e2_z13_18_oac
+  amount:
+    value: 500
+    unit: microgram
+  purity:
+    value: 99
+    kind: isomeric
+    basis: stated
+    qualifier: more_than
+- compound: spa.cmpd.z9_16_oac
+  purity:
+    value: 99
+    kind: isomeric
+    basis: stated
+    qualifier: more_than
+comparator:
+  description: standard, Z3,Z13-18:OAc and E2,Z13-18:OAc 1:1, 1 mg
+  blend:
+  - compound: spa.cmpd.z3_z13_18_oac
+    amount:
+      value: 500
+      unit: microgram
+    purity:
+      value: 99
+      kind: isomeric
+      basis: stated
+      qualifier: more_than
+  - compound: spa.cmpd.e2_z13_18_oac
+    amount:
+      value: 500
+      unit: microgram
+    purity:
+      value: 99
+      kind: isomeric
+      basis: stated
+      qualifier: more_than
+effect: no_effect
+significance: not_significant
+response:
+  measure: trap_catch
+  unit: mean_catch_per_trap
+  treatment_value: 9.7
+  comparator_value: 19.0
+  qualifier: approximate
+evidence:
+  reference: spa.ref.yang_2009
+  experiment_id: spa.exp.yang_2009.exp2
+  taxon_name_as_reported: Synanthedon haitangvora
+  source_location: Experiment 2; Fig. 3
+  unresolved:
+  - the standard read as 500 ug of each acetate (1 mg in all); the caption ('1 mg/septum of Z3,Z13-18:OAc and E2,Z13-18:OAc') could also mean 1 mg of each
+  notes: 'Experiment 2, 2-5 September 2008, N = 4, 394 males in total. Each minor compound added at 2 percent to the standard; the added amount is not given (20 ug if 2 percent of 1 mg, Atlas reading).
+    Letters: standard a, Z9-16:OAc ab, Z11-16:OAc ab, Z9-18:OAc a, Z13-18:OAc a, E3,Z13-18:OAc ab, Z3,Z13-18:OH bc, E2,Z13-18:OH ab, complete ab, control c. Sticky delta traps 1-1.5 m up, complete randomized
+    blocks of four, traps at least 10 m apart, counted daily; log(x + 1) one-way ANOVA, Tukey''s test at alpha 0.05. Pherobank synthetics, isomeric purity stated as above 99 percent. Means read from the
+    bar chart.'
+  author_statement: Minor components identified in gland extracts showed no synergistic effect.

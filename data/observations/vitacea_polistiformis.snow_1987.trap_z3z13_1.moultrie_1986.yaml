@@ -1,0 +1,70 @@
+observation_id: spa.obs.vitacea_polistiformis.snow_1987.trap_z3z13_1.moultrie_1986
+observation_type: behavioural_response
+taxon: spa.tax.vitacea_polistiformis
+context:
+  sex: male
+  habitat: large commercial vineyard
+  population: null
+  locality: near Moultrie, Georgia, USA
+assay: field_trapping
+trap:
+  design: wing
+  colour: null
+  supplier: Zoecon (Pherocon 1C)
+dispenser:
+  design: rubber_septum
+  description: rubber septum (Thomas Scientific, No. 1780J12)
+blend:
+- compound: spa.cmpd.e2_z13_18_oac
+  amount:
+    value: 0.99
+    unit: milligram
+  purity:
+    value: 99.5
+    kind: unspecified
+    basis: measured
+    qualifier: as_reported
+    method: glass capillary GC, SP 2340
+- compound: spa.cmpd.z3_z13_18_oac
+  amount:
+    value: 0.01
+    unit: milligram
+  purity:
+    value: 99.5
+    kind: unspecified
+    basis: measured
+    qualifier: as_reported
+    method: glass capillary GC, SP 2340
+comparator:
+  description: (E,Z)-2,13-18:OAc alone, 1 mg
+  blend:
+  - compound: spa.cmpd.e2_z13_18_oac
+    amount:
+      value: 1
+      unit: milligram
+    purity:
+      value: 99.5
+      kind: unspecified
+      basis: measured
+      qualifier: as_reported
+      method: glass capillary GC, SP 2340
+effect: increased
+significance: significant
+dose:
+  value: 1
+  unit: milligram
+response:
+  measure: trap_catch
+  unit: mean_catch_per_trap
+  treatment_value: 37.0
+  comparator_value: 12.0
+  qualifier: as_reported
+evidence:
+  reference: spa.ref.snow_1987
+  experiment_id: spa.exp.snow_1987.moultrie_1986
+  taxon_name_as_reported: Vitacea polistiformis
+  source_location: Table 2; Results
+  notes: 'Table 2: 1986, near Moultrie, five replicates over 6 days, traps not rotated; mean males per trap over the whole period; Duncan''s multiple range test, P = 0.05. Letters: 95:5 a, 96:4 b, 97:3
+    b, 98:2 bc, 99:1 c, 100:0 b; the blank has no letter. All isomers bought commercially and found 99.5 percent pure on SP 2340 before blending; total load held at 1 mg per septum, so each blend replaces
+    E,Z-2,13-18:OAc rather than adding to it. Septa hung from the tops of Pherocon 1C sticky traps on the top trellis wire, about 1 m up; traps at least 50 m apart.'
+  author_statement: it did attract 3 times more insects than the pure (E,Z)-2,13 ODDA

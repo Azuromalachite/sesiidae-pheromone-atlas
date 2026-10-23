@@ -1,0 +1,93 @@
+observation_id: spa.obs.vitacea_polistiformis.snow_1987.trap_e3z13_z3z13_0_5_vs_z3z13_1.table1
+observation_type: behavioural_response
+taxon: spa.tax.vitacea_polistiformis
+context:
+  sex: male
+  habitat: commercial grape vineyard
+  population: null
+  locality: Georgia, USA
+assay: field_trapping
+trap:
+  design: wing
+  colour: null
+  supplier: Zoecon (Pherocon 1C)
+dispenser:
+  design: rubber_septum
+  description: rubber septum (Thomas Scientific, No. 1780J12)
+blend:
+- compound: spa.cmpd.e2_z13_18_oac
+  amount:
+    value: 0.99
+    unit: milligram
+  purity:
+    value: 99.5
+    kind: unspecified
+    basis: measured
+    qualifier: as_reported
+    method: glass capillary GC, SP 2340
+- compound: spa.cmpd.e3_z13_18_oac
+  amount:
+    value: 0.005
+    unit: milligram
+  purity:
+    value: 99.5
+    kind: unspecified
+    basis: measured
+    qualifier: as_reported
+    method: glass capillary GC, SP 2340
+- compound: spa.cmpd.z3_z13_18_oac
+  amount:
+    value: 0.005
+    unit: milligram
+  purity:
+    value: 99.5
+    kind: unspecified
+    basis: measured
+    qualifier: as_reported
+    method: glass capillary GC, SP 2340
+comparator:
+  description: (E,Z)-2,13-18:OAc 0.99 mg + (Z,Z)-3,13-18:OAc 0.01 mg
+  blend:
+  - compound: spa.cmpd.e2_z13_18_oac
+    amount:
+      value: 0.99
+      unit: milligram
+    purity:
+      value: 99.5
+      kind: unspecified
+      basis: measured
+      qualifier: as_reported
+      method: glass capillary GC, SP 2340
+  - compound: spa.cmpd.z3_z13_18_oac
+    amount:
+      value: 0.01
+      unit: milligram
+    purity:
+      value: 99.5
+      kind: unspecified
+      basis: measured
+      qualifier: as_reported
+      method: glass capillary GC, SP 2340
+effect: decreased
+significance: not_tested
+dose:
+  value: 1
+  unit: milligram
+response:
+  measure: trap_catch
+  unit: total_catch
+  treatment_value: 52
+  comparator_value: 63
+  qualifier: as_reported
+evidence:
+  reference: spa.ref.snow_1987
+  experiment_id: spa.exp.snow_1987.table1
+  taxon_name_as_reported: Vitacea polistiformis
+  source_location: Table 1; Results
+  unresolved:
+  - year, site and replicate number of each Table 1 test (the Methods say only that tests were replicated 3 to 5 times)
+  - whether the treatments ran side by side
+  notes: 'Table 1: total males captured; no analysis applied (''a series of tests run over a period of time''), so effect is from the raw numbers. Compared here with the best lure, 99:1 E,Z-2,13 : Z,Z-3,13
+    (63). All isomers bought commercially and found 99.5 percent pure on SP 2340 before blending; total load held at 1 mg per septum, so each blend replaces E,Z-2,13-18:OAc rather than adding to it. Septa
+    hung from the tops of Pherocon 1C sticky traps on the top trellis wire, about 1 m up; traps at least 50 m apart.'
+  author_statement: The 99% (E,Z)-2,13 ODDA plus 0.5% (E,Z)-3,13 ODDA and 0.5% (Z,Z)-3,13 ODDA was almost as good

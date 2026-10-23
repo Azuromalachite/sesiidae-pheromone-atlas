@@ -1,0 +1,56 @@
+observation_id: spa.obs.synanthedon_haitangvora.yang_2009.trap_dose_100ug_vs_blank.exp3
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_haitangvora
+context:
+  sex: male
+  habitat: apple orchard
+  population: Korean population
+  locality: Suwon, Republic of Korea
+assay: field_trapping
+trap:
+  design: delta
+  colour: null
+  supplier: Green Agro Tech
+dispenser:
+  design: rubber_septum
+  description: rubber septum (Aldrich)
+blend:
+- compound: spa.cmpd.z3_z13_18_oac
+  amount:
+    value: 50
+    unit: microgram
+  purity:
+    value: 99
+    kind: isomeric
+    basis: stated
+    qualifier: more_than
+- compound: spa.cmpd.e2_z13_18_oac
+  amount:
+    value: 50
+    unit: microgram
+  purity:
+    value: 99
+    kind: isomeric
+    basis: stated
+    qualifier: more_than
+comparator:
+  description: unbaited control
+effect: increased
+significance: significant
+dose:
+  value: 100
+  unit: microgram
+response:
+  measure: trap_catch
+  unit: mean_catch_per_trap
+  treatment_value: 2.8
+  comparator_value: 0
+  qualifier: approximate
+evidence:
+  reference: spa.ref.yang_2009
+  experiment_id: spa.exp.yang_2009.exp3
+  taxon_name_as_reported: Synanthedon haitangvora
+  source_location: Experiment 3; Fig. 4
+  notes: 'Experiment 3, 7-10 September 2008, N = 4, 98 males in total. 1:1 blend at 0.1, 0.5, 1 and 2 mg per septum. Letters: 0.1 mg b, 0.5 mg b, 1 mg ab, 2 mg a, control c. Each dose is compared with the
+    lowest, 0.1 mg. Dose and catch correlated (r2 = 0.91, P < 0.01). Sticky delta traps 1-1.5 m up, complete randomized blocks of four, traps at least 10 m apart, counted daily; log(x + 1) one-way ANOVA,
+    Tukey''s test at alpha 0.05. Pherobank synthetics, isomeric purity stated as above 99 percent. Means read from the bar chart.'

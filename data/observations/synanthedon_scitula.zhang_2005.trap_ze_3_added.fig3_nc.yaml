@@ -1,0 +1,79 @@
+observation_id: spa.obs.synanthedon_scitula.zhang_2005.trap_ze_3_added.fig3_nc
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_scitula
+context:
+  sex: male
+  habitat: commercial apple orchard
+  population: null
+  locality: North Carolina, USA
+assay: field_trapping
+trap:
+  design: wing
+  colour: null
+  supplier: Trece (Pherocon 1C)
+dispenser:
+  design: rubber_septum
+  description: red natural rubber septum, 5 mm (Wheaton)
+blend:
+- compound: spa.cmpd.z3_z13_18_oac
+  amount:
+    value: 94
+    unit: ratio_part
+- compound: spa.cmpd.e2_z13_18_oac
+  amount:
+    value: 6
+    unit: ratio_part
+  purity:
+    value: 97
+    kind: unspecified
+    basis: measured
+    qualifier: more_than
+    method: 60 m DB-WAXETR GC
+- compound: spa.cmpd.z3_e13_18_oac
+  amount:
+    value: 3
+    unit: ratio_part
+  purity:
+    value: 97
+    kind: unspecified
+    basis: measured
+    qualifier: more_than
+    method: 60 m DB-WAXETR GC
+comparator:
+  description: Z,Z-3,13-18:OAc and E,Z-2,13-18:OAc 94:6, 1 mg
+  blend:
+  - compound: spa.cmpd.z3_z13_18_oac
+    amount:
+      value: 94
+      unit: ratio_part
+  - compound: spa.cmpd.e2_z13_18_oac
+    amount:
+      value: 6
+      unit: ratio_part
+    purity:
+      value: 97
+      kind: unspecified
+      basis: measured
+      qualifier: more_than
+      method: 60 m DB-WAXETR GC
+effect: no_effect
+significance: not_significant
+dose:
+  value: 1
+  unit: milligram
+response:
+  measure: trap_catch
+  unit: mean_catch_per_trap_per_week
+  treatment_value: 32.1
+  comparator_value: 25.4
+  qualifier: approximate
+evidence:
+  reference: spa.ref.zhang_2005
+  experiment_id: spa.exp.zhang_2005.fig3_nc
+  taxon_name_as_reported: Synanthedon scitula
+  source_location: Fig. 3A
+  notes: The Discussion's 'in other trials (Figures 3 and 6), it was no better than the 94:6 binary' cannot refer to this figure for the 88:6:6 ternary, which Fig. 3 did not test. Fig. 3 (ratio 1), July
+    13 - August 24 2004, 2,915 males, N = 21, F = 0.79, P = 0.53; all treatments letter a. Commercial apple orchards; traps about 1.2 m up, randomized within three to five rows separated by buffer rows,
+    at least about 20 m apart, rotated weekly; 1 mg per septum, compounds as the parts printed under each bar. Z,Z-3,13-ODDA (Bedoukian, about 90 percent) purified on silver-nitrate silica to under 0.3
+    percent E,Z-3,13-ODDA; the other isomers (PheroBank) checked above 97 percent on DB-WAXETR. Means read from the bar chart.
+  author_statement: addition of 0.5 to 10% of Z,E-3,13-ODDA to the binary blend of Z,Z-3,13-ODDA and E,Z-2,13-ODDA (94:6) had no effect (Figure 3)

@@ -22,8 +22,20 @@ says nothing about what females make.
 
 ## 2. Reading the female (1980s)
 
-Gland analyses started to say what females produce:
+Gland analyses started to say what females produce. The first came earlier
+than this section's title:
 
+- *S. pictipes* and *S. exitiosa*: Tumlinson et al. 1974 isolated
+  E3,Z13-18:OAc from the ovipositors of 25,000 *S. pictipes* females, and
+  Z3,Z13-18:OAc from 800 *S. exitiosa* (published as *Sanninoidea
+  exitiosa*). They fixed the structures by mass and IR spectra, ozonolysis
+  and synthesis of all four isomers
+  (`spa.obs.synanthedon_{pictipes,exitiosa}.tumlinson_1974.ovipositor`).
+  The two species use geometric isomers of one molecule. 1 % of the
+  *S. exitiosa* isomer cut the *S. pictipes* response (2.5 vs 36 males,
+  `…bioassay_ez_zz_99_1`); a few percent of the *S. pictipes* isomer did not
+  stop *S. exitiosa*. **Reproductive isolation by geometric isomers** was
+  the field's first finding, not a later one.
 - *S. tipuliformis*: Szöcs et al. 1985 found E2,Z13-18:OAc and Z13-18:OAc at
   93:7 in pooled extracts of 19 Hungarian females, and no E3 isomer
   (`spa.obs.synanthedon_tipuliformis.szocs_1985.gland`). Z13-18:OAc gave a significant
@@ -102,6 +114,30 @@ not always agree.
   all, so they show the natural major is required, not how much its
   geometry matters
   (`…trap_e3e13_for_e3`, `…trap_z3e13_for_e3`).
+
+- **2,13 and 3,13 together.** In North America, the E2,Z13-18:OAc users
+  needed a trace of a 3,13 isomer:
+  - *Vitacea polistiformis*: 1 % Z3,Z13-18:OAc multiplied catches about
+    seven-fold (63 vs 9, no statistics) and three-fold (37.0 vs 12.0,
+    significant) on the E2,Z13 lure. 5 % was worse than none
+    (`spa.obs.vitacea_polistiformis.snow_1987.*`).
+  - The squash vine borer (*Eichlinia cucurbitae*, Klun's *Melittia*):
+    gland extracts held about 0.1 % of an octadecadienyl acetate that the
+    authors assigned to Z3,Z13-18:OAc only from the field results. Lures
+    without it caught almost nothing (2.6 vs 0.02 per day,
+    `spa.obs.eichlinia_cucurbitae.klun_1990.trap_k_vs_j.test3`).
+  - *S. scitula* reverses the proportions: Z3,Z13-18:OAc with 6 %
+    E2,Z13-18:OAc in the gland. The 6 % raised catches at three sites, and
+    0.5 % E3,Z13-18:OAc nearly abolished them
+    (`spa.obs.synanthedon_scitula.zhang_2005.*`).
+  - *S. haitangvora* (Korea) uses the two at about 1:1. Adding 2 %
+    Z3,Z13-18:OH to that lure cut catches to about a tenth
+    (`spa.obs.synanthedon_haitangvora.yang_2009.*`).
+- *Glossosphecia romanovi*: the alcohol Z3,Z13-18:OH with its acetate at
+  about 20:1. The authors note that no sesiid pheromone combining an
+  alcohol and an acetate had been characterised before. 50 µg of the acetate on 1 mg of the alcohol raised catches
+  six-fold at two sites
+  (`spa.obs.glossosphecia_romanovi.naka_2010.trap_z3z13oac_added.*`).
 
 Specificity is not one species, one molecule. It is encoded in which isomer,
 how much of it, and what else is present.

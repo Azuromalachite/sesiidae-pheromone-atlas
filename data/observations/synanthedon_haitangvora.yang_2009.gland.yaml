@@ -1,0 +1,116 @@
+observation_id: spa.obs.synanthedon_haitangvora.yang_2009.gland
+observation_type: chemical_measurement
+taxon: spa.tax.synanthedon_haitangvora
+context:
+  sex: female
+  life_stage: adult
+  mating_status: virgin
+  behavioural_state: null
+  sampling_unit: individual
+  n_individuals: 15
+  population: Korean population
+  locality: Suwon, Republic of Korea
+  rearing: field_collected_reared
+sample:
+  materials:
+  - gland_extract
+  material_as_reported: pheromone gland extruded by gentle pressure, excised and extracted in 10 ul hexane with 10 ng 13:OAc for 10 min
+  result_scope: single_material
+components:
+- compound: spa.cmpd.z9_16_oac
+  detected: true
+  method: gland_extract_gc_ms_ri_db_wax_and_db23_vs_standards
+  identification: confirmed
+  abundance_class: minor
+  measurements:
+  - value: 0.2
+    unit: relative_to_major
+    qualifier: as_reported
+- compound: spa.cmpd.z11_16_oac
+  detected: true
+  method: gland_extract_gc_ms_ri_db_wax_and_db23_vs_standards
+  identification: confirmed
+  abundance_class: minor
+  measurements:
+  - value: 1.5
+    unit: relative_to_major
+    qualifier: as_reported
+- compound: spa.cmpd.z9_18_oac
+  detected: true
+  method: gland_extract_gc_ms_ri_db_wax_and_db23_vs_standards
+  identification: confirmed
+  abundance_class: minor
+  measurements:
+  - value: 0.4
+    unit: relative_to_major
+    qualifier: as_reported
+- compound: spa.cmpd.z13_18_oac
+  detected: true
+  method: gland_extract_gc_ms_ri_db_wax_and_db23_vs_standards
+  identification: confirmed
+  abundance_class: minor
+  measurements:
+  - value: 3
+    unit: relative_to_major
+    qualifier: as_reported
+- compound: spa.cmpd.e3_z13_18_oac
+  detected: true
+  method: gland_extract_gc_ms_ri_db_wax_and_db23_vs_standards
+  identification: confirmed
+  abundance_class: minor
+  measurements:
+  - value: 2
+    unit: relative_to_major
+    qualifier: as_reported
+- compound: spa.cmpd.z3_z13_18_oac
+  detected: true
+  method: gland_extract_gc_ms_ri_db_wax_and_db23_vs_standards
+  identification: confirmed
+  abundance_class: major
+  measurements:
+  - value: 87
+    unit: relative_to_major
+    qualifier: as_reported
+- compound: spa.cmpd.e2_z13_18_oac
+  detected: true
+  method: gland_extract_gc_ms_ri_db_wax_and_db23_vs_standards
+  identification: confirmed
+  abundance_class: major
+  measurements:
+  - value: 100
+    unit: relative_to_major
+    qualifier: as_reported
+  - value: 21.5
+    unit: ng_per_female
+    qualifier: mean
+    method: internal standard 13:OAc
+- compound: spa.cmpd.z3_z13_18_oh
+  detected: true
+  method: gland_extract_gc_ms_ri_db_wax_and_db23_vs_standards
+  identification: confirmed
+  abundance_class: minor
+  measurements:
+  - value: 1
+    unit: relative_to_major
+    qualifier: as_reported
+- compound: spa.cmpd.e2_z13_18_oh
+  detected: true
+  method: gland_extract_gc_ms_ri_db_wax_and_db23_vs_standards
+  identification: confirmed
+  abundance_class: minor
+  measurements:
+  - value: 1.5
+    unit: relative_to_major
+    qualifier: as_reported
+evidence:
+  reference: spa.ref.yang_2009
+  taxon_name_as_reported: Synanthedon haitangvora
+  source_location: Results; Fig. 1; Table 1
+  author_statement: Two major components from pheromone gland extracts of Synanthedon haitangvora females were identified as (Z,Z)-3,13-octadecadienyl acetate ... and (E,Z)-2,13-octadecadienyl acetate
+  unresolved:
+  - dispersion of the ratio and the titre
+  - whether the extracted females were calling
+  notes: Late-instar larvae dug from apple trunks at Suwon (37.2 N, 127.1 E), May-June 2008, reared on artificial diet at 23 C, 16L:8D; sexes separated at eclosion (virgin is the Atlas reading). Females
+    call during the photophase; glands of 1- to 2-day-old females were taken 4 h into photophase, extruded and excised, each extracted 10 min in 10 ul hexane with 10 ng 13:OAc. Identity from MS library
+    match, then retention indices and spectra against authentic standards on DB-Wax and DB-23 (Table 1 lists all four 3,13 and 2,13 isomers of the acetates and alcohols). DMDS derivatisation did not locate
+    the double bonds. Ratio of peaks 1-9 0.2:1.5:0.4:3:2:87:100:1:1.5; E2,Z13-18:OAc 'estimated as 21.5 ng per female' (N = 15). Also C21, C23, C25 and C27 alkanes.

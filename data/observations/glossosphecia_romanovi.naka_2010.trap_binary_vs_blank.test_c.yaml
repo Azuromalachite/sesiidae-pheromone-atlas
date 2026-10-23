@@ -1,0 +1,47 @@
+observation_id: spa.obs.glossosphecia_romanovi.naka_2010.trap_binary_vs_blank.test_c
+observation_type: behavioural_response
+taxon: spa.tax.glossosphecia_romanovi
+context:
+  sex: male
+  habitat: ridge of coppices near a vineyard
+  population: Japanese population
+  locality: Tottori City, Tottori Prefecture, Japan
+assay: field_trapping
+trap:
+  design: sticky_board
+  colour: null
+  supplier: null
+dispenser:
+  design: rubber_septum
+  description: rubber septum (type not restated for 2009)
+blend:
+- compound: spa.cmpd.z3_z13_18_oh
+  amount:
+    value: 1000
+    unit: microgram
+- compound: spa.cmpd.z3_z13_18_oac
+  amount:
+    value: 50
+    unit: microgram
+comparator:
+  description: control (as printed)
+effect: increased
+significance: not_tested
+dose:
+  value: 1050
+  unit: microgram
+response:
+  measure: trap_catch
+  unit: mean_catch_per_trap
+  treatment_value: 11.5
+  comparator_value: 0
+  qualifier: as_reported
+evidence:
+  reference: spa.ref.naka_2010
+  experiment_id: spa.exp.naka_2010.test_c
+  taxon_name_as_reported: Glossosphecia romanovi
+  source_location: Table 2, Test C
+  notes: 'The control caught nothing and carries no letter; effect from the raw means. Test C: four traps per lure at the ridge of coppices near a vineyard, Tottori City, June 27 - September 9 2009 (the
+    text says outside two vineyards). Table 2, mean +- SE males per trap; letters within each test column. GLMM with Poisson errors on lures whose total catch was not zero, Tukey pairwise comparisons with
+    adjusted P values. No purity stated. Shin-Etsu synthetics and the authors'' own isomers. For 2009 the paper says only ''sticky-type traps'' and ''a rubber septum''; trap model, septum type and height
+    are given only for the 2006 test, so they are not carried over.'

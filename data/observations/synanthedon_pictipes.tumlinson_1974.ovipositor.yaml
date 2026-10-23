@@ -1,0 +1,36 @@
+observation_id: spa.obs.synanthedon_pictipes.tumlinson_1974.ovipositor
+observation_type: chemical_measurement
+taxon: spa.tax.synanthedon_pictipes
+context:
+  sex: female
+  life_stage: adult
+  mating_status: virgin
+  sampling_unit: pooled
+  n_individuals: 25000
+  population: null
+  locality: null
+  rearing: null
+sample:
+  materials:
+  - ovipositor_extract
+  material_as_reported: ovipositors clipped from 1- to 3-day-old unmated females, extracted with methylene chloride
+  result_scope: single_material
+components:
+- compound: spa.cmpd.e3_z13_18_oac
+  detected: true
+  method: ovipositor_extract_lc_gc_isolation_ci_ms_ir_hydrogenation_microozonolysis_vs_synthetic_isomers
+  identification: confirmed
+evidence:
+  reference: spa.ref.tumlinson_1974
+  taxon_name_as_reported: Synanthedon pictipes
+  source_location: Text (isolation and identification); Fig. 1
+  author_statement: One compound obtained from each species retained all the activity of the original extract
+  unresolved:
+  - origin and rearing of the females
+  - amount per female
+  - minor components (none sought beyond the active compound)
+  notes: 'Ovipositors of 25,000 1- to 3-day-old unmated females ground three times with methylene chloride; silicic-acid LC (pentane-ether 95:5 fraction active), then sequential packed-column GC on SE-30,
+    OV-101 and Carbowax 20M, guided by a field bioassay. The active compound was over 99.5 percent pure on SP-2300, Dexsil and DEGS. Structure from CI-MS, IR (trans band at 970/cm in S. pictipes; the text
+    says the ''960'' band was absent in S. exitiosa), hydrogenation to octadecyl acetate, microozonolysis (valeraldehyde and 1,10-decanedial; the middle product decomposed, and its spectrum, consistent
+    with 3-oxopropyl acetate, came only from the synthetic) and comparison with all four synthetic 3,13 isomers, of which DEGS completely resolved only the (E,E)-isomer. No abundance class: nothing else
+    in the extract was characterised.'

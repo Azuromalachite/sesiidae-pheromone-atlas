@@ -1,0 +1,47 @@
+observation_id: spa.obs.glossosphecia_romanovi.naka_2010.trap_z3z13oac_alone.hiroshima_2006
+observation_type: behavioural_response
+taxon: spa.tax.glossosphecia_romanovi
+context:
+  sex: male
+  habitat: vineyard (farm-road side)
+  population: Japanese population
+  locality: Akitsu, Higashi-Hiroshima City, Hiroshima Prefecture, Japan
+assay: field_trapping
+trap:
+  design: sticky_board
+  colour: null
+  supplier: Sankei Chemical (SE-trap, 30 x 27 cm bottom plate with a roof)
+dispenser:
+  design: rubber_septum
+  description: white rubber septum, 8 mm o.d. (Sigma-Aldrich)
+blend:
+- compound: spa.cmpd.z3_z13_18_oac
+  amount:
+    value: 1000
+    unit: microgram
+comparator:
+  description: Z3,Z13-18:OH alone, 1000 ug
+  blend:
+  - compound: spa.cmpd.z3_z13_18_oh
+    amount:
+      value: 1000
+      unit: microgram
+effect: decreased
+significance: not_tested
+dose:
+  value: 1000
+  unit: microgram
+response:
+  measure: trap_catch
+  unit: mean_catch_per_trap
+  treatment_value: 0
+  comparator_value: 1.8
+  qualifier: as_reported
+evidence:
+  reference: spa.ref.naka_2010
+  experiment_id: spa.exp.naka_2010.hiroshima_2006
+  taxon_name_as_reported: Glossosphecia romanovi
+  source_location: Table 1
+  notes: 'Z3,Z13-18:OAc alone caught nothing and was left out of the analysis; effect from the raw means. Table 1: June 12 - July 30 2006, four traps per lure, mean +- SE males per trap; one part of a larger
+    screening. GLMM with Poisson errors on lures whose total catch was not zero, Tukey pairwise comparisons with adjusted P values. No purity stated. SE-traps on farm-road sides about 1.5 m up, white 8
+    mm Sigma-Aldrich septa. The source of the 2006 compounds is not stated (Shin-Etsu and the authors'' isomers are named for the 2009 tests).'

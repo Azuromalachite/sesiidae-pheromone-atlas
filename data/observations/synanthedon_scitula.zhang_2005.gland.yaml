@@ -1,0 +1,50 @@
+observation_id: spa.obs.synanthedon_scitula.zhang_2005.gland
+observation_type: chemical_measurement
+taxon: spa.tax.synanthedon_scitula
+context:
+  sex: female
+  life_stage: adult
+  mating_status: virgin
+  sampling_unit: pooled
+  n_individuals: 20
+  population: null
+  locality: null
+  rearing: field_collected_reared
+sample:
+  materials:
+  - gland_extract
+  material_as_reported: ovipositors excised into about 100 ul methylene chloride-methanol (3:1), soaked at least 2 h, re-extracted; 20 glands combined
+  result_scope: single_material
+components:
+- compound: spa.cmpd.z3_z13_18_oac
+  detected: true
+  method: gland_extract_gc_ms_sim_m248_db_waxetr_coinjection
+  identification: confirmed
+  abundance_class: major
+  measurements:
+  - value: 94
+    unit: percent
+    qualifier: as_reported
+- compound: spa.cmpd.e2_z13_18_oac
+  detected: true
+  method: gland_extract_gc_ms_sim_m248_db_waxetr_coinjection
+  identification: confirmed
+  abundance_class: minor
+  measurements:
+  - value: 6
+    unit: percent
+    qualifier: as_reported
+- compound: spa.cmpd.z3_e13_18_oac
+  detected: false
+  method: gland_extract_gc_ms_sim_m248_db_waxetr
+evidence:
+  reference: spa.ref.zhang_2005
+  taxon_name_as_reported: Synanthedon scitula
+  source_location: Results; Fig. 1A; Table 1
+  author_statement: only two peaks were deleted, at the retention times of Z,Z-3,13-ODDA and E,Z-2,13-ODDA, and with a ratio of 94:6
+  unresolved:
+  - detection limit of the SIM negative
+  notes: Larvae dug from apple burrknots in Jefferson and Berkeley Counties (WV) and Frederick County (VA), October-November 2002 and 2003, reared on diet at 25 C, 16L:8D; adults emerged at Beltsville.
+    Glands of 2- to 13-day-old virgin females (previously aerated), everted ovipositors soaked at least 2 h in methylene chloride-methanol 3:1 and re-extracted; combined extract of 20 females on GC-MS (DB-WAXETR).
+    Z,Z-3,13-ODDA confirmed by GC-EAD retention on DB-WAXETR and DB-5 and co-injection; E,Z-2,13-ODDA by co-injection on GC-MS. 'Deleted' in the source is read as 'detected'. Z,E-3,13-ODDA, seen in effluvia,
+    was not detected in gland extracts by SIM.

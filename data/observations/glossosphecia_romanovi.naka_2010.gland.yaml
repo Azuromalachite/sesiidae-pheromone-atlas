@@ -1,0 +1,88 @@
+observation_id: spa.obs.glossosphecia_romanovi.naka_2010.gland
+observation_type: chemical_measurement
+taxon: spa.tax.glossosphecia_romanovi
+context:
+  sex: female
+  life_stage: adult
+  mating_status: virgin
+  behavioural_state: calling
+  sampling_unit: individual
+  n_individuals: null
+  population: Japanese population
+  locality: Tottori Prefecture, Japan
+  rearing: field_collected_reared
+sample:
+  materials:
+  - gland_extract
+  material_as_reported: abdominal ends of one-day-old virgin females in the calling posture, each immersed in hexane for 5 min
+  result_scope: single_material
+components:
+- compound: spa.cmpd.z3_z13_18_oh
+  detected: true
+  method: gland_extract_gc_ms_ei_db23_tic_vs_synthetic
+  identification: confirmed
+  abundance_class: major
+  measurements:
+  - value: 100
+    unit: ratio_part
+    qualifier: approximate
+- compound: spa.cmpd.z3_z13_18_oac
+  detected: true
+  method: gland_extract_gc_ms_ei_db23_tic_vs_synthetic
+  identification: confirmed
+  measurements:
+  - value: 5
+    unit: ratio_part
+    qualifier: approximate
+- compound: spa.cmpd.e3_z13_18_oh
+  detected: true
+  method: gland_extract_gc_ms_ei_db23_tic_vs_synthetic
+  identification: tentative
+  abundance_class: minor
+  measurements:
+  - value: 1
+    unit: ratio_part
+    qualifier: approximate
+- compound: spa.cmpd.e3_z13_18_oac
+  detected: true
+  method: gland_extract_gc_ms_ei_db23_tic_vs_synthetic
+  identification: tentative
+  abundance_class: minor
+  measurements:
+  - value: 1
+    unit: ratio_part
+    qualifier: approximate
+- compound: spa.cmpd.z13_18_oh
+  detected: true
+  method: gland_extract_gc_ms_ei_db23_tic_vs_synthetic
+  identification: tentative
+  abundance_class: minor
+  measurements:
+  - value: 2
+    unit: ratio_part
+    qualifier: approximate
+- compound: spa.cmpd.e3_e13_18_oac
+  detected: false
+  method: gland_extract_gc_ms_mass_chromatograms_m308_m266_db23
+- compound: spa.cmpd.z3_e13_18_oac
+  detected: false
+  method: gland_extract_gc_ms_mass_chromatograms_m308_m266_db23
+- compound: spa.cmpd.e3_e13_18_oh
+  detected: false
+  method: gland_extract_gc_ms_mass_chromatograms_m308_m266_db23
+- compound: spa.cmpd.z3_e13_18_oh
+  detected: false
+  method: gland_extract_gc_ms_mass_chromatograms_m308_m266_db23
+evidence:
+  reference: spa.ref.naka_2010
+  taxon_name_as_reported: Glossosphecia romanovi
+  source_location: Results; Fig. 1
+  author_statement: the female moths produced the alcohol and acetate in a ratio of about 20:1, in addition to three other minor structure-related components
+  unresolved:
+  - how many of the three females' extracts were analysed (Fig. 1 shows one 1.0 FE GC-MS injection and one 0.5 FE GC-EAD run)
+  - titre per female
+  - detection limit for the negatives
+  notes: 'Muddy cocoons from a vineyard in Tottori Prefecture in winter; three females and two males emerged after about two months. Abdominal ends of one-day-old calling virgin females, each in hexane
+    for 5 min. 1.0 FE on GC-MS (DB-23). Z3,Z13-18:OH and Z3,Z13-18:OAc: retention equal to the synthetics in GC-EAD and spectra ''quite similar'' to them. The three minor compounds: ''the chromatographic
+    behavior and spectral data of these compounds suggested the following chemical structures'', with no further chemistry because the extract was limited, so tentative. Ratio about 100:5:1:1:2 (Z3,Z13-OH
+    : Z3,Z13-OAc : E3,Z13-OH : E3,Z13-OAc : Z13-OH) from the TIC. The (3E,13E)- and (3Z,13E)-isomers of the acetate and alcohol were undetectable in the mass chromatograms (Fig. 1C, D).'
