@@ -29,6 +29,7 @@ generated machine-readable releases.
 |---|---|
 | [`docs/concept.md`](docs/concept.md) | the technical concept: data model, curation rules, invariants, roadmap. Revision 3; earlier revisions are in this file's git history |
 | [`docs/context.md`](docs/context.md) | the natural-history and scientific motivation, from *Amegilla* to Sesiidae to lipid-derived signalling |
+| [`docs/literature-narrative.md`](docs/literature-narrative.md) | the literature as a story, from synthetic lures to blend, context and evidence layers, each claim tied to its record |
 | [`docs/reviews/`](docs/reviews/) | the two adversarial reviews the concept was revised against |
 | [`docs/knowledge-gaps.md`](docs/knowledge-gaps.md) | gaps that set direction: the tropical and Southeast Asian frontier, *Melittia*, the trapping blind spot |
 | [`releases/taxon_layers.tsv`](releases/taxon_layers.tsv) | the taxon × layer matrix: which species have genomes, gene sets and identified pheromones ([column guide](releases/README.md)) |
