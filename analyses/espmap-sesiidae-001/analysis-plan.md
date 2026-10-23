@@ -162,7 +162,7 @@ the members' V_min and V_max.
 - Approved by: the user, 2026-10-23, as drafted: K = 20, seed 20261024,
   def2-SVP gas, and the range non-overlap + partition + sign rule. Freeze
   once the Atlas has filled the motivating observations.
-- Commit SHA: the commit that adds this file to the Atlas (recorded here in the next commit)
+- Commit SHA: 7e3465859bc2b8950078238f0bffb0ea6b4dd512 (Atlas)
 - Date: 2026-10-23
 
 ## Deviations
