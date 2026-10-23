@@ -123,7 +123,7 @@ def decide(mx, my, site, rng):
     return dict(outcome=outcome, delta=delta, delta_other_rule=delta_other, partition_sensitivity=sens,
                 partition_sensitivity_max_member=sens_member,
                 range_x=[float(x.min()), float(x.max())], range_y=[float(y.min()), float(y.max())],
-                mean_x=float(x.mean()), mean_y=float(y.mean()), ci95=ci, n=[len(x), len(y)],
+                mean_x=float(x.mean()), mean_y=float(y.mean()), bootstrap_interval=ci, n=[len(x), len(y)],
                 conditions={"1_ranges_disjoint": c1, "2_beyond_partition": c2, "3_same_sign": c3})
 
 
@@ -151,7 +151,7 @@ def fmt(r):
     c = r["conditions"]
     return (f"**{r['outcome']}** | Δ {r['delta']:+.2f} (radius-scaled {r['delta_other_rule']:+.2f}) | "
             f"ranges X {r['range_x'][0]:.2f}…{r['range_x'][1]:.2f}, Y {r['range_y'][0]:.2f}…{r['range_y'][1]:.2f} | "
-            f"partition {r['partition_sensitivity']:.2f} (pilot-style {r['partition_sensitivity_max_member']:.2f}) | CI95 {r['ci95'][0]:+.2f}…{r['ci95'][1]:+.2f} | "
+            f"partition {r['partition_sensitivity']:.2f} (pilot-style {r['partition_sensitivity_max_member']:.2f}) | bootstrap (selected set) {r['bootstrap_interval'][0]:+.2f}…{r['bootstrap_interval'][1]:+.2f} | "
             f"1 {'✓' if c['1_ranges_disjoint'] else '✗'} 2 {'✓' if c['2_beyond_partition'] else '✗'} "
             f"3 {'✓' if c['3_same_sign'] else '✗'} | n {r['n']}")
 

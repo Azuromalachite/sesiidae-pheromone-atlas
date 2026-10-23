@@ -126,9 +126,15 @@ No deviation from the decision rule, its thresholds, the protocol, the sites or 
 
 One dated clarification is recorded under the plan's "Deviations" (Atlas 30c4a11, approved by the user on 2026-10-24): the 20 members are a designed coverage set, range non-overlap is a deterministic robustness criterion, the plan's 2/C(40,20) is not a p-value, and the bootstrap interval describes the selected set. This report reads its numbers that way (see "How to read the statistics" above).
 
-Implementation choices the plan left open are recorded, before the analysis ran, in `execution-manifest.json`: espmap v0.2.1 (v0.3 `--ensemble` was not released), the pilot's selection code, and the folded rule (contact by espmap master 5175515's provisional parameters, 5 bonds and Bondi + 0.5 A, OR genus > 0). espmap has since measured its contact threshold at 6 bonds (§8.2). The flags here keep the recorded rule; they were not recomputed after the results were seen.
+Implementation choices the plan left open are recorded in `execution-manifest.json`, with exact times (its `chronology`):
+- **Fixed during selection, before any member calculation began** (selection ended 2026-10-23 18:19:16 KST): espmap v0.2.1 (v0.3 `--ensemble` was not released), the pilot's selection code, seed, embeddings, K, and the method.
+- **Pinned at 18:29:50, during the run, when 2 member records existed:** the folded rule's contact parameters (espmap master 5175515's provisional rule, ≥ 5 bonds and Bondi + 0.5 Å, OR genus > 0, as the plan defines folded). Of those two records, only the trial's validity and protocol fields had been read; no site value had been seen. The folded calls use geometry only.
+- **Written later:** the manifest itself, at 20:20:12, after 30 member calculations had completed, recording choices already fixed. espmap has since measured its contact threshold at 6 bonds (§8.2). The flags here keep the recorded rule; they were not recomputed after the results were seen.
 
-The analysis and report scripts were tested during the run on partial data (from 1 to about 30 of 100 members, printed "PARTIAL: a test of the script, not a result"), and on the pilot's K = 10 data, which they reproduce. Nothing in the protocol, the rule or the folded definition changed after those tests; the partition-definition choice was made by the user before any member of this study was analysed.
+The analysis and report scripts were tested during the run, on the pilot's K = 10 data (which they reproduce) and on partial data, headed "PARTIAL: a test of the script, not a result".
+- **The partial outputs read:** those with too few members to compare (fewer than two on one side, printed "no data").
+- **Later partial outputs:** these could have contained contrast-B numbers. They were checked only for the presence of their labels, and their numbers were not read.
+- **Before the run ended:** no difference between molecules was seen. Nothing in the protocol, the rule or the folded definition changed after those tests. The partition-definition choice was made by the user before any member of this study was analysed.
 
 ## No outcome of this study means
 
@@ -142,6 +148,6 @@ The analysis and report scripts were tested during the run on partial data (from
 
 - espmap v0.2.1 (41a989d), each member an espmap.record/1 with its sha256 in the Atlas index.
 - Atlas commit (records): base 30c4a11; records added by the PR that adds this file; plan frozen at 7e34658.
-- Arrowfield commit: 63f10c1 (main); control records in Arrowfield PR #6.
+- Arrowfield commit: 9d7720b (main); control records in Arrowfield controls/ (PR #6).
 - Folded: an intramolecular contact (espmap master 5175515's provisional rule) or surface genus > 0.
 - Partition sensitivity: section 4's definition decides; on 2026-10-23, before any analysis, the user chose to keep it and to report the pilot's max-member number beside it. The plan's pilot table quotes that pilot-style number (1.43 at C4-H); section 4's gives 0.77 on the same data.

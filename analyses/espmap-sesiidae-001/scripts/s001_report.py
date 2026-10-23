@@ -58,7 +58,7 @@ def row(site, r):
     return (f"| {site} | **{r['outcome']}** | {r['delta']:+.2f} | "
             f"{r['range_x'][0]:.2f}…{r['range_x'][1]:.2f} / {r['range_y'][0]:.2f}…{r['range_y'][1]:.2f} | "
             f"{r['partition_sensitivity']:.2f} ({r['partition_sensitivity_max_member']:.2f}) | "
-            f"{r['ci95'][0]:+.2f}…{r['ci95'][1]:+.2f} | {tick} |")
+            f"{r['bootstrap_interval'][0]:+.2f}…{r['bootstrap_interval'][1]:+.2f} | {tick} |")
 
 
 HEAD = ("| site | outcome | Δ (Y − X) | range X / Y | partition (pilot-style) | bootstrap interval (selected set) | 1 2 3 |\n"
