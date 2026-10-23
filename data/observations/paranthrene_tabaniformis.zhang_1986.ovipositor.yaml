@@ -1,0 +1,47 @@
+observation_id: spa.obs.paranthrene_tabaniformis.zhang_1986.ovipositor
+observation_type: chemical_measurement
+taxon: spa.tax.paranthrene_tabaniformis
+context:
+  sex: female
+  life_stage: adult
+  mating_status: virgin
+  sampling_unit: pooled
+  n_individuals: 50
+  population: Chinese population
+  locality: null
+  rearing: null
+sample:
+  materials:
+  - ovipositor_extract
+  material_as_reported: ovipositor areas of 1- to 2-day-old unmated females (50 FE) clipped and extracted with CH2Cl2
+  result_scope: single_material
+components:
+- compound: spa.cmpd.e3_z13_18_oh
+  detected: true
+  method: ovipositor_extract_gc_ms_se54_and_mass_fragmentography_ffap_vs_four_isomers_coinjection
+  identification: confirmed
+- compound: spa.cmpd.e3_e13_18_oh
+  detected: false
+  method: mass_fragmentography_m266_ffap_vs_synthetic_isomers_figure_read
+- compound: spa.cmpd.z3_e13_18_oh
+  detected: false
+  method: mass_fragmentography_m266_ffap_vs_synthetic_isomers_figure_read
+- compound: spa.cmpd.z3_z13_18_oh
+  detected: false
+  method: mass_fragmentography_m266_ffap_vs_synthetic_isomers_figure_read
+evidence:
+  reference: spa.ref.zhang_1986
+  taxon_name_as_reported: Paranthrene tabaniformis
+  source_location: Results; Figs. 1-2
+  author_statement: The natural pheromone was shown to be identical to 1a with Rt of 17.05 min
+  unresolved:
+  - whether any other compound, including the other 3,13 isomers, was absent (no negative is stated)
+  - amount per female
+  - origin of the reared insects
+  - detection limit of the m/z 266 negatives
+  - a large unassigned m/z 248 peak just after the EZ peak (about 17.2-18 min) and a smaller one near 18.8 min in Fig. 2B
+  notes: 'Ovipositor areas of 1- to 2-day-old unmated females (50 FE), clipped and extracted with CH2Cl2; insects reared on artificial diet (origin not stated). GC-MS on SE-54: spectrum and retention identical
+    to synthetic E3,Z13-18:OH. Mass fragmentography (m/z 266, 248) on FFAP separated the four synthetic isomers (ZZ 18.12, ZE 17.40, EZ 17.05, EE 16.42 min); the natural peak matched EZ, and co-injection
+    enhanced only that peak. The text states no absence. The negatives here are read from Fig. 2B (Atlas reading): the extract''s m/z 266 (M+) trace is flat at the retention times of the EE, ZE and ZZ standards
+    in Fig. 2A, with only the EZ peak. The m/z 248 trace cannot exclude ZE or ZZ, because an unassigned, off-scale m/z 248 peak covers that window; Karalius et al. 2001 suggest minor compounds may have
+    been below detection. Beijing area is where the field tests ran; where the insects came from is not said.'

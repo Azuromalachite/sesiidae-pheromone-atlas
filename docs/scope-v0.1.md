@@ -60,18 +60,13 @@ when a complete list is read, and only then can the scope say "all".
 | *S. haitangvora* | Yang 2009 |
 | *Vitacea polistiformis* | Schwarz 1983; attraction in Snow 1987 |
 | *Macroscelesia japona*, *M. longipes* | Naka 2007 |
-| *Paranthrene tabaniformis* | Mozūraitis & Karalius 2007 (Kazakhstan) |
+| *Paranthrene tabaniformis* | Zhang 1986 (China); Mozūraitis & Karalius 2007 (Kazakhstan); attraction in Karalius 2001 |
 
 ### Still to curate
 
-Every identification on the list so far is curated (`docs/curation-log.md`,
-entries 15 and 16). Mozūraitis & Karalius 2007 cite the Chinese
-identification of *P. tabaniformis*, which found only E3,Z13-18:OH. It is the
-geographic counterpart to their Kazakh three-alcohol blend.
-
-| species | reference | DOI |
-|---|---|---|
-| *Paranthrene tabaniformis* (China) | Zhang X-H, Guo G-Z, Lin G-Q, Wu Y-W, Wu P-H, Li Z-Y, Wei K-N (1986) Studies on identification and syntheses of insect pheromones XXII. Sex pheromone of poplar twig clearwing moth *Paranthrene tabaniformis* Rott. — structure and synthesis. *J Chem Ecol* 12:1263–1271 | [10.1007/BF01012346](https://doi.org/10.1007/BF01012346) |
+Every identification the curated papers cite is curated
+(`docs/curation-log.md`, entries 15–17). No further identification is known
+to the Atlas until a census is read.
 
 Naka et al. 2010 also cite Guo et al. 1990 (*Youji Huaxue* 10:504–506) among
 the reports of Japanese sesiid pheromones. The citation names no species, so
@@ -102,17 +97,15 @@ reports.
 Schwarz et al. 1983 (*V. polistiformis*; one squash vine borer female, as
 *Melittia satyriniformis*), Naka et al. 2007 (*Macroscelesia japona*, *M.
 longipes*), Mozūraitis & Karalius 2007 (*P. tabaniformis*). See
-`docs/curation-log.md`, entry 16.
+`docs/curation-log.md`, entry 16. Then Zhang et al. 1986 (*P. tabaniformis*,
+China) and Karalius et al. 2001 (attraction; *P. tabaniformis*, *S. serica*,
+*Chamaesphecia bibioniformis*), entry 17.
 
 ### Also wanted, outside the target definition
 
 - **Szöcs, Henderson & McNeil 1998**, *S. tipuliformis* in Canada
   ([10.4039/ent130231-2](https://doi.org/10.4039/ent130231-2)). An attractant
   study that completes the geographic contrast. Deferred: no access.
-- **Karalius, Mozūraitis, Miatleuski, Būda & Ivinskis 2001**, field tests of
-  *P. tabaniformis* in Kazakhstan, where Z3,Z13- and E2,Z13-18:OH enhanced
-  E3,Z13-18:OH ([10.1515/znc-2001-11-1233](https://doi.org/10.1515/znc-2001-11-1233)).
-  The behavioural side of Mozūraitis & Karalius 2007.
 
 ### Genome layer: complete
 

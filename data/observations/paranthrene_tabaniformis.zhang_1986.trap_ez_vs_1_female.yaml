@@ -1,0 +1,48 @@
+observation_id: spa.obs.paranthrene_tabaniformis.zhang_1986.trap_ez_vs_1_female
+observation_type: behavioural_response
+taxon: spa.tax.paranthrene_tabaniformis
+context:
+  sex: male
+  habitat: null
+  population: Chinese population
+  locality: Beijing area, China
+assay: field_trapping
+trap:
+  design: delta
+  colour: null
+  supplier: null
+dispenser:
+  design: rubber_sleeve_stopper
+  description: red rubber sleeve stopper
+blend:
+- compound: spa.cmpd.e3_z13_18_oh
+  amount:
+    value: 200
+    unit: microgram
+  purity:
+    value: 95.1
+    kind: isomeric
+    basis: measured
+    qualifier: as_reported
+    method: capillary GC, DEGS
+comparator:
+  description: 1 live female moth
+effect: increased
+significance: not_tested
+dose:
+  value: 200
+  unit: microgram
+response:
+  measure: trap_catch
+  unit: total_catch
+  treatment_value: 48
+  comparator_value: 9
+  qualifier: as_reported
+evidence:
+  reference: spa.ref.zhang_1986
+  experiment_id: spa.exp.zhang_1986.table1_1984
+  taxon_name_as_reported: Paranthrene tabaniformis
+  source_location: Table 1; Results
+  author_statement: traps baited with 200 µg of synthetic 1a captured eight males per trap, while traps baited with one or two females caught 1.5 males per trap
+  notes: 'Table 1, 10-28 July 1984, six replicates: totals 48 (average 8) vs 9 (average 1.5). Delta-type adhesive traps about 1.5 m up on trees; lures on red rubber sleeve stoppers. No statistics; totals
+    per treatment over the replicates, so effect is the direction of the raw numbers. Isomeric purity by capillary GC on DEGS (EZ 95.1 percent with 2.9 EE, 1.1 ZZ, 0.9 ZE).'

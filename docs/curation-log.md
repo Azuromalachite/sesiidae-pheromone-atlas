@@ -1,5 +1,59 @@
 # Curation log
 
+## 2026-10-23 (17) — *P. tabaniformis* in China, and the Kazakh field screen
+
+| paper | taxon | records |
+|---|---|---|
+| Zhang et al. 1986 | *Paranthrene tabaniformis* (China) | 10 |
+| Karalius et al. 2001 | *P. tabaniformis*, *Synanthedon serica*, *Chamaesphecia bibioniformis* (Kazakhstan) | 32 |
+
+New: 2 taxa (attraction only), 2 references, 42 observations. Totals: 28
+taxa, 31 references, 24 compounds, 524 observations.
+
+**What "only E3,Z13-18:OH" rests on.** Karalius 2001 and Mozūraitis 2007
+say the Chinese identification found only E3,Z13-18:OH. Zhang 1986 states no
+absence. It shows the natural peak matches synthetic E3,Z13-18:OH. Its Fig.
+2B mass fragmentogram at m/z 266 is flat where the other three 3,13 isomers
+elute, and those three are now recorded as figure-read negatives. Its m/z 248
+channel carries a large unassigned peak over the Z,E and Z,Z window, which
+the paper does not discuss. E2,Z13-18:OH, a Kazakh minor compound, was never
+a standard there.
+
+**A behavioural contrast, not a test.**
+- Kazakhstan (Karalius 2001): 10 % Z3,Z13-18:OH in E3,Z13-18:OH was the best
+  lure, 29 vs 5 males, significant.
+- China (Zhang 1986): 25 µg Z3,Z13-18:OH on 200 µg E3,Z13-18:OH, about
+  11 %, caught 14 against 22 for the alcohol alone. No statistics; the
+  authors read it as no effect.
+
+Lures, doses, dispensers and years all differ. The records hold the
+contrast; they do not make it a dialect.
+
+**Review.** No table value or letter was wrong. Fixed:
+- **An NCBI taxid.** *S. serica* had 360075, the scarab genus *Serica*,
+  because my unrestricted name search matched the genus. It is now null.
+  Every other NCBI taxid from entries 15–17 was rechecked by scientific
+  name and matches.
+- **Zhang's EAG.** E,E and Z,E (printed 0 mV, at blank height) are now
+  recorded as inactive, with the text's "rather weak" in `unresolved`. The
+  sex of the antennae is not stated, so it is null.
+- **Missing contrasts:**
+  - three *P. tabaniformis* lures against the control, which the authors
+    state;
+  - *C. bibioniformis* 9:1 against E3,Z13-18:OAc alone.
+- **Trials.** Table I pools three sites, so every Karalius record lists all
+  three trials. Each species' locality is where the text says it was
+  caught.
+- **Quotes.** The authors' synergy sentence now sits on the two 10 %
+  contrasts. Inferences in the notes are labelled.
+
+**Not recorded:**
+- the three Tineidae;
+- *Chamaesphecia crassicornis* and *C. astatiformis* (preliminary, not in
+  Table I);
+- flight hours;
+- Zhang's Z,Z isomer attracting *Aegeria apiformis* (no numbers).
+
 ## 2026-10-23 (16) — the second list: Schwarz 1983, Naka 2007, Mozūraitis & Karalius 2007
 
 | paper | taxon | records |

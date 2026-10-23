@@ -13,8 +13,8 @@ nothing here is a release, and no DOI has been minted
 
 ### Added
 
-- **Records:** 26 taxa, 29 references, 24 compounds, 11 genomes,
-  482 observations and 6 searches. Every observation is from a primary full
+- **Records:** 28 taxa, 31 references, 24 compounds, 11 genomes,
+  524 observations and 6 searches. Every observation is from a primary full
   text, and every batch was re-read against the PDFs by an independent
   reviewer.
 - **Record kinds and observation types:**
@@ -58,7 +58,8 @@ nothing here is a release, and no DOI has been minted
   observations): Tumlinson 1974, Snow 1987, Klun 1990, Naka 2010, Yang 2009
   and Zhang 2005. The squash vine borer is `spa.tax.eichlinia_cucurbitae`
   (GBIF), with *Melittia cucurbitae* as a synonym. Then the second list
-  (42 observations): Schwarz 1983, Naka 2007 and Mozūraitis & Karalius 2007.
+  (42 observations): Schwarz 1983, Naka 2007 and Mozūraitis & Karalius 2007;
+  then Zhang 1986 and Karalius 2001 (42 observations).
 
 ### Frozen
 

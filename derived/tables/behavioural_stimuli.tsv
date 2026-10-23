@@ -1,4 +1,23 @@
 observation_id	role	compound_id	amount_value	amount_unit	purity_value	purity_kind	purity_basis	purity_qualifier
+spa.obs.chamaesphecia_bibioniformis.karalius_2001.trap_e3oac_vs_blank	treatment	spa.cmpd.e3_z13_18_oac	300	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.chamaesphecia_bibioniformis.karalius_2001.trap_z3oac_e3oac_9_1_vs_5_5	comparator	spa.cmpd.e3_z13_18_oac	150.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.chamaesphecia_bibioniformis.karalius_2001.trap_z3oac_e3oac_9_1_vs_5_5	comparator	spa.cmpd.z3_z13_18_oac	150.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.chamaesphecia_bibioniformis.karalius_2001.trap_z3oac_e3oac_9_1_vs_5_5	treatment	spa.cmpd.e3_z13_18_oac	30.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.chamaesphecia_bibioniformis.karalius_2001.trap_z3oac_e3oac_9_1_vs_5_5	treatment	spa.cmpd.z3_z13_18_oac	270.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.chamaesphecia_bibioniformis.karalius_2001.trap_z3oac_e3oac_9_1_vs_blank	treatment	spa.cmpd.e3_z13_18_oac	30.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.chamaesphecia_bibioniformis.karalius_2001.trap_z3oac_e3oac_9_1_vs_blank	treatment	spa.cmpd.z3_z13_18_oac	270.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.chamaesphecia_bibioniformis.karalius_2001.trap_z3oac_e3oac_9_1_vs_e3oac_alone	comparator	spa.cmpd.e3_z13_18_oac	300	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.chamaesphecia_bibioniformis.karalius_2001.trap_z3oac_e3oac_9_1_vs_e3oac_alone	treatment	spa.cmpd.e3_z13_18_oac	30.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.chamaesphecia_bibioniformis.karalius_2001.trap_z3oac_e3oac_9_1_vs_e3oac_alone	treatment	spa.cmpd.z3_z13_18_oac	270.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.chamaesphecia_bibioniformis.karalius_2001.trap_z3oac_e3oac_9_1_vs_z3oac_alone	comparator	spa.cmpd.z3_z13_18_oac	300	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.chamaesphecia_bibioniformis.karalius_2001.trap_z3oac_e3oac_9_1_vs_z3oac_alone	treatment	spa.cmpd.e3_z13_18_oac	30.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.chamaesphecia_bibioniformis.karalius_2001.trap_z3oac_e3oac_9_1_vs_z3oac_alone	treatment	spa.cmpd.z3_z13_18_oac	270.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.chamaesphecia_bibioniformis.karalius_2001.trap_z3oac_e3oac_9_1_vs_z3oac_e3oh_5_5	comparator	spa.cmpd.e3_z13_18_oh	150.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.chamaesphecia_bibioniformis.karalius_2001.trap_z3oac_e3oac_9_1_vs_z3oac_e3oh_5_5	comparator	spa.cmpd.z3_z13_18_oac	150.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.chamaesphecia_bibioniformis.karalius_2001.trap_z3oac_e3oac_9_1_vs_z3oac_e3oh_5_5	treatment	spa.cmpd.e3_z13_18_oac	30.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.chamaesphecia_bibioniformis.karalius_2001.trap_z3oac_e3oac_9_1_vs_z3oac_e3oh_5_5	treatment	spa.cmpd.z3_z13_18_oac	270.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.chamaesphecia_bibioniformis.karalius_2001.trap_z3oac_e3oh_5_5_vs_blank	treatment	spa.cmpd.e3_z13_18_oh	150.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.chamaesphecia_bibioniformis.karalius_2001.trap_z3oac_e3oh_5_5_vs_blank	treatment	spa.cmpd.z3_z13_18_oac	150.0	microgram	99	chemical_and_isomeric	measured	more_than
 spa.obs.eichlinia_cucurbitae.klun_1990.trap_a_vs_b.test1	comparator	spa.cmpd.16_oac	0.8	ratio_part				
 spa.obs.eichlinia_cucurbitae.klun_1990.trap_a_vs_b.test1	comparator	spa.cmpd.e2_z13_18_oac	68.5	ratio_part				
 spa.obs.eichlinia_cucurbitae.klun_1990.trap_a_vs_b.test1	comparator	spa.cmpd.e2_z13_18_oh	9.1	ratio_part				
@@ -454,6 +473,79 @@ spa.obs.nokona_pernix.naka_2006.trap_z3e13_for_z3	comparator	spa.cmpd.e3_z13_18_
 spa.obs.nokona_pernix.naka_2006.trap_z3e13_for_z3	comparator	spa.cmpd.z3_z13_18_oh	0.1	milligram				
 spa.obs.nokona_pernix.naka_2006.trap_z3e13_for_z3	treatment	spa.cmpd.e3_z13_18_oh	0.9	milligram				
 spa.obs.nokona_pernix.naka_2006.trap_z3e13_for_z3	treatment	spa.cmpd.z3_e13_18_oh	0.1	milligram				
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oac_1_9_with_e3oh	comparator	spa.cmpd.e3_z13_18_oh	300	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oac_1_9_with_e3oh	treatment	spa.cmpd.e2_z13_18_oac	30.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oac_1_9_with_e3oh	treatment	spa.cmpd.e3_z13_18_oh	270.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oac_5_5_with_e3oh	comparator	spa.cmpd.e3_z13_18_oh	300	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oac_5_5_with_e3oh	treatment	spa.cmpd.e2_z13_18_oac	150.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oac_5_5_with_e3oh	treatment	spa.cmpd.e3_z13_18_oh	150.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oac_9_1_with_e3oh	comparator	spa.cmpd.e3_z13_18_oh	300	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oac_9_1_with_e3oh	treatment	spa.cmpd.e2_z13_18_oac	270.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oac_9_1_with_e3oh	treatment	spa.cmpd.e3_z13_18_oh	30.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oh_1_9_with_e3oh	comparator	spa.cmpd.e3_z13_18_oh	300	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oh_1_9_with_e3oh	treatment	spa.cmpd.e2_z13_18_oh	30.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oh_1_9_with_e3oh	treatment	spa.cmpd.e3_z13_18_oh	270.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oh_1_9_with_e3oh_vs_blank	treatment	spa.cmpd.e2_z13_18_oh	30.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oh_1_9_with_e3oh_vs_blank	treatment	spa.cmpd.e3_z13_18_oh	270.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oh_5_5_with_e3oh	comparator	spa.cmpd.e3_z13_18_oh	300	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oh_5_5_with_e3oh	treatment	spa.cmpd.e2_z13_18_oh	150.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oh_5_5_with_e3oh	treatment	spa.cmpd.e3_z13_18_oh	150.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oh_5_5_with_e3oh_vs_blank	treatment	spa.cmpd.e2_z13_18_oh	150.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oh_5_5_with_e3oh_vs_blank	treatment	spa.cmpd.e3_z13_18_oh	150.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oh_9_1_with_e3oh	comparator	spa.cmpd.e3_z13_18_oh	300	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oh_9_1_with_e3oh	treatment	spa.cmpd.e2_z13_18_oh	270.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oh_9_1_with_e3oh	treatment	spa.cmpd.e3_z13_18_oh	30.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e3oac_1_9_with_e3oh	comparator	spa.cmpd.e3_z13_18_oh	300	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e3oac_1_9_with_e3oh	treatment	spa.cmpd.e3_z13_18_oac	30.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e3oac_1_9_with_e3oh	treatment	spa.cmpd.e3_z13_18_oh	270.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e3oac_5_5_with_e3oh	comparator	spa.cmpd.e3_z13_18_oh	300	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e3oac_5_5_with_e3oh	treatment	spa.cmpd.e3_z13_18_oac	150.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e3oac_5_5_with_e3oh	treatment	spa.cmpd.e3_z13_18_oh	150.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e3oac_9_1_with_e3oh	comparator	spa.cmpd.e3_z13_18_oh	300	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e3oac_9_1_with_e3oh	treatment	spa.cmpd.e3_z13_18_oac	270.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e3oac_9_1_with_e3oh	treatment	spa.cmpd.e3_z13_18_oh	30.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e3oh_vs_blank	treatment	spa.cmpd.e3_z13_18_oh	300	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oac_1_9_with_e3oh	comparator	spa.cmpd.e3_z13_18_oh	300	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oac_1_9_with_e3oh	treatment	spa.cmpd.e3_z13_18_oh	270.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oac_1_9_with_e3oh	treatment	spa.cmpd.z3_z13_18_oac	30.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oac_5_5_with_e3oh	comparator	spa.cmpd.e3_z13_18_oh	300	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oac_5_5_with_e3oh	treatment	spa.cmpd.e3_z13_18_oh	150.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oac_5_5_with_e3oh	treatment	spa.cmpd.z3_z13_18_oac	150.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oac_9_1_with_e3oh	comparator	spa.cmpd.e3_z13_18_oh	300	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oac_9_1_with_e3oh	treatment	spa.cmpd.e3_z13_18_oh	30.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oac_9_1_with_e3oh	treatment	spa.cmpd.z3_z13_18_oac	270.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oh_1_9_vs_e2oh_1_9	comparator	spa.cmpd.e2_z13_18_oh	30.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oh_1_9_vs_e2oh_1_9	comparator	spa.cmpd.e3_z13_18_oh	270.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oh_1_9_vs_e2oh_1_9	treatment	spa.cmpd.e3_z13_18_oh	270.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oh_1_9_vs_e2oh_1_9	treatment	spa.cmpd.z3_z13_18_oh	30.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oh_1_9_with_e3oh	comparator	spa.cmpd.e3_z13_18_oh	300	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oh_1_9_with_e3oh	treatment	spa.cmpd.e3_z13_18_oh	270.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oh_1_9_with_e3oh	treatment	spa.cmpd.z3_z13_18_oh	30.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oh_1_9_with_e3oh_vs_blank	treatment	spa.cmpd.e3_z13_18_oh	270.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oh_1_9_with_e3oh_vs_blank	treatment	spa.cmpd.z3_z13_18_oh	30.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oh_5_5_with_e3oh	comparator	spa.cmpd.e3_z13_18_oh	300	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oh_5_5_with_e3oh	treatment	spa.cmpd.e3_z13_18_oh	150.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oh_5_5_with_e3oh	treatment	spa.cmpd.z3_z13_18_oh	150.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oh_9_1_with_e3oh	comparator	spa.cmpd.e3_z13_18_oh	300	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oh_9_1_with_e3oh	treatment	spa.cmpd.e3_z13_18_oh	30.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oh_9_1_with_e3oh	treatment	spa.cmpd.z3_z13_18_oh	270.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.zhang_1986.trap_ee_25_added	comparator	spa.cmpd.e3_z13_18_oh	200	microgram	95.1	isomeric	measured	as_reported
+spa.obs.paranthrene_tabaniformis.zhang_1986.trap_ee_25_added	treatment	spa.cmpd.e3_e13_18_oh	25	microgram	95	isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.zhang_1986.trap_ee_25_added	treatment	spa.cmpd.e3_z13_18_oh	200	microgram	95.1	isomeric	measured	as_reported
+spa.obs.paranthrene_tabaniformis.zhang_1986.trap_ee_alone	comparator	spa.cmpd.e3_z13_18_oh	200	microgram	95.1	isomeric	measured	as_reported
+spa.obs.paranthrene_tabaniformis.zhang_1986.trap_ee_alone	treatment	spa.cmpd.e3_e13_18_oh	200	microgram	95	isomeric	measured	more_than
+spa.obs.paranthrene_tabaniformis.zhang_1986.trap_ez_vs_1_female	treatment	spa.cmpd.e3_z13_18_oh	200	microgram	95.1	isomeric	measured	as_reported
+spa.obs.paranthrene_tabaniformis.zhang_1986.trap_ez_vs_2_females	treatment	spa.cmpd.e3_z13_18_oh	200	microgram	95.1	isomeric	measured	as_reported
+spa.obs.paranthrene_tabaniformis.zhang_1986.trap_ze_25_added	comparator	spa.cmpd.e3_z13_18_oh	200	microgram	95.1	isomeric	measured	as_reported
+spa.obs.paranthrene_tabaniformis.zhang_1986.trap_ze_25_added	treatment	spa.cmpd.e3_z13_18_oh	200	microgram	95.1	isomeric	measured	as_reported
+spa.obs.paranthrene_tabaniformis.zhang_1986.trap_ze_25_added	treatment	spa.cmpd.z3_e13_18_oh	25	microgram	95.2	isomeric	measured	as_reported
+spa.obs.paranthrene_tabaniformis.zhang_1986.trap_ze_alone	comparator	spa.cmpd.e3_z13_18_oh	200	microgram	95.1	isomeric	measured	as_reported
+spa.obs.paranthrene_tabaniformis.zhang_1986.trap_ze_alone	treatment	spa.cmpd.z3_e13_18_oh	200	microgram	95.2	isomeric	measured	as_reported
+spa.obs.paranthrene_tabaniformis.zhang_1986.trap_zz_25_added	comparator	spa.cmpd.e3_z13_18_oh	200	microgram	95.1	isomeric	measured	as_reported
+spa.obs.paranthrene_tabaniformis.zhang_1986.trap_zz_25_added	treatment	spa.cmpd.e3_z13_18_oh	200	microgram	95.1	isomeric	measured	as_reported
+spa.obs.paranthrene_tabaniformis.zhang_1986.trap_zz_25_added	treatment	spa.cmpd.z3_z13_18_oh	25	microgram	95.2	isomeric	measured	as_reported
+spa.obs.paranthrene_tabaniformis.zhang_1986.trap_zz_alone	comparator	spa.cmpd.e3_z13_18_oh	200	microgram	95.1	isomeric	measured	as_reported
+spa.obs.paranthrene_tabaniformis.zhang_1986.trap_zz_alone	treatment	spa.cmpd.z3_z13_18_oh	200	microgram	95.2	isomeric	measured	as_reported
 spa.obs.sesia_apiformis.francke_2004.trap_blend.denmark	treatment	spa.cmpd.e2_z13_18_al	300	microgram				
 spa.obs.sesia_apiformis.francke_2004.trap_blend.denmark	treatment	spa.cmpd.z3_z13_18_oh	200	microgram				
 spa.obs.sesia_apiformis.francke_2004.trap_blend.lithuania	treatment	spa.cmpd.e2_z13_18_al	300	microgram				
@@ -1338,6 +1430,20 @@ spa.obs.synanthedon_scoliaeformis.mozuraitis_2013.trap_z3oac_fivefold.zemaitelia
 spa.obs.synanthedon_scoliaeformis.mozuraitis_2013.trap_z3oac_fivefold.zemaiteliai	treatment	spa.cmpd.e2_z13_18_oac	150	microgram	99	chemical_and_isomeric	stated	more_than
 spa.obs.synanthedon_scoliaeformis.mozuraitis_2013.trap_z3oac_fivefold.zemaiteliai	treatment	spa.cmpd.e2_z13_18_oh	12	microgram	99	chemical_and_isomeric	stated	more_than
 spa.obs.synanthedon_scoliaeformis.mozuraitis_2013.trap_z3oac_fivefold.zemaiteliai	treatment	spa.cmpd.z3_z13_18_oac	1.5	microgram	99	chemical_and_isomeric	stated	more_than
+spa.obs.synanthedon_serica.karalius_2001.trap_e3oac_e2oac_5_5_vs_9_1	comparator	spa.cmpd.e2_z13_18_oac	30.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.synanthedon_serica.karalius_2001.trap_e3oac_e2oac_5_5_vs_9_1	comparator	spa.cmpd.e3_z13_18_oac	270.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.synanthedon_serica.karalius_2001.trap_e3oac_e2oac_5_5_vs_9_1	treatment	spa.cmpd.e2_z13_18_oac	150.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.synanthedon_serica.karalius_2001.trap_e3oac_e2oac_5_5_vs_9_1	treatment	spa.cmpd.e3_z13_18_oac	150.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.synanthedon_serica.karalius_2001.trap_e3oac_e2oac_5_5_vs_blank	treatment	spa.cmpd.e2_z13_18_oac	150.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.synanthedon_serica.karalius_2001.trap_e3oac_e2oac_5_5_vs_blank	treatment	spa.cmpd.e3_z13_18_oac	150.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.synanthedon_serica.karalius_2001.trap_e3oac_e2oac_5_5_vs_e2oac_alone	comparator	spa.cmpd.e2_z13_18_oac	300	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.synanthedon_serica.karalius_2001.trap_e3oac_e2oac_5_5_vs_e2oac_alone	treatment	spa.cmpd.e2_z13_18_oac	150.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.synanthedon_serica.karalius_2001.trap_e3oac_e2oac_5_5_vs_e2oac_alone	treatment	spa.cmpd.e3_z13_18_oac	150.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.synanthedon_serica.karalius_2001.trap_e3oac_e2oac_5_5_vs_e3oac_alone	comparator	spa.cmpd.e3_z13_18_oac	300	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.synanthedon_serica.karalius_2001.trap_e3oac_e2oac_5_5_vs_e3oac_alone	treatment	spa.cmpd.e2_z13_18_oac	150.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.synanthedon_serica.karalius_2001.trap_e3oac_e2oac_5_5_vs_e3oac_alone	treatment	spa.cmpd.e3_z13_18_oac	150.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.synanthedon_serica.karalius_2001.trap_e3oac_e2oac_9_1_vs_blank	treatment	spa.cmpd.e2_z13_18_oac	30.0	microgram	99	chemical_and_isomeric	measured	more_than
+spa.obs.synanthedon_serica.karalius_2001.trap_e3oac_e2oac_9_1_vs_blank	treatment	spa.cmpd.e3_z13_18_oac	270.0	microgram	99	chemical_and_isomeric	measured	more_than
 spa.obs.synanthedon_tenuis.naka_2013.trap_e2z13_100_added.test3	comparator	spa.cmpd.z3_z13_18_oac	1000	microgram	98	unspecified	stated	more_than
 spa.obs.synanthedon_tenuis.naka_2013.trap_e2z13_100_added.test3	treatment	spa.cmpd.e2_z13_18_oac	100	microgram	98	unspecified	stated	more_than
 spa.obs.synanthedon_tenuis.naka_2013.trap_e2z13_100_added.test3	treatment	spa.cmpd.z3_z13_18_oac	1000	microgram	98	unspecified	stated	more_than

@@ -1,4 +1,11 @@
 observation_id	assay	effect	significance	dose_value	dose_unit	response_measure	response_unit	treatment_value	comparator_value	response_qualifier	comparator_description
+spa.obs.chamaesphecia_bibioniformis.karalius_2001.trap_e3oac_vs_blank	field_trapping	no_effect	not_significant	300	microgram	trap_catch	total_catch	2	0	as_reported	trap without a dispenser
+spa.obs.chamaesphecia_bibioniformis.karalius_2001.trap_z3oac_e3oac_9_1_vs_5_5	field_trapping	increased	significant	300.0	microgram	trap_catch	total_catch	35	0	as_reported	Z3,Z13-18:OAc : E3,Z13-18:OAc 5:5, 0.3 mg
+spa.obs.chamaesphecia_bibioniformis.karalius_2001.trap_z3oac_e3oac_9_1_vs_blank	field_trapping	increased	significant	300.0	microgram	trap_catch	total_catch	35	0	as_reported	trap without a dispenser
+spa.obs.chamaesphecia_bibioniformis.karalius_2001.trap_z3oac_e3oac_9_1_vs_e3oac_alone	field_trapping	increased	significant	300.0	microgram	trap_catch	total_catch	35	2	as_reported	E3,Z13-18:OAc alone, 300 ug
+spa.obs.chamaesphecia_bibioniformis.karalius_2001.trap_z3oac_e3oac_9_1_vs_z3oac_alone	field_trapping	increased	significant	300.0	microgram	trap_catch	total_catch	35	0	as_reported	Z3,Z13-18:OAc alone, 300 ug
+spa.obs.chamaesphecia_bibioniformis.karalius_2001.trap_z3oac_e3oac_9_1_vs_z3oac_e3oh_5_5	field_trapping	increased	significant	300.0	microgram	trap_catch	total_catch	35	10	as_reported	Z3,Z13-18:OAc : E3,Z13-18:OH 5:5, 0.3 mg
+spa.obs.chamaesphecia_bibioniformis.karalius_2001.trap_z3oac_e3oh_5_5_vs_blank	field_trapping	increased	significant	300.0	microgram	trap_catch	total_catch	10	0	as_reported	trap without a dispenser
 spa.obs.eichlinia_cucurbitae.klun_1990.trap_a_vs_b.test1	field_trapping	no_effect	not_significant	1000.0	microgram	trap_catch	mean_catch_per_trap_per_day	4.9	3.9	as_reported	treatment B: Table 1 compounds 1,3-10,12,13
 spa.obs.eichlinia_cucurbitae.klun_1990.trap_a_vs_c.test1	field_trapping	increased	significant	1000.0	microgram	trap_catch	mean_catch_per_trap_per_day	4.9	1.3	as_reported	treatment C: Table 1 compounds 1,2,4-11
 spa.obs.eichlinia_cucurbitae.klun_1990.trap_a_vs_d.test1	field_trapping	increased	significant	1000.0	microgram	trap_catch	mean_catch_per_trap_per_day	4.9	1.1	as_reported	treatment D: Table 1 compounds 1,4-10
@@ -94,6 +101,34 @@ spa.obs.nokona_pernix.naka_2006.trap_z3_added.test2	field_trapping	increased	sig
 spa.obs.nokona_pernix.naka_2006.trap_z3_alone	field_trapping	no_effect	not_significant	1.0	milligram	trap_catch	mean_catch_per_trap	0.0	0.0	as_reported	unbaited trap
 spa.obs.nokona_pernix.naka_2006.trap_z3e13_for_e3	field_trapping	decreased	significant	1.0	milligram	trap_catch	mean_catch_per_trap	0.0	4.7	as_reported	E3:Z3,Z13-18:OH 9:1, 1 mg
 spa.obs.nokona_pernix.naka_2006.trap_z3e13_for_z3	field_trapping	no_effect	not_significant	1.0	milligram	trap_catch	mean_catch_per_trap	1.3	4.7	as_reported	E3:Z3,Z13-18:OH 9:1, 1 mg
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oac_1_9_with_e3oh	field_trapping	no_effect	not_significant	300.0	microgram	trap_catch	total_catch	1	5	as_reported	E3,Z13-18:OH alone, 300 ug
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oac_5_5_with_e3oh	field_trapping	no_effect	not_significant	300.0	microgram	trap_catch	total_catch	1	5	as_reported	E3,Z13-18:OH alone, 300 ug
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oac_9_1_with_e3oh	field_trapping	decreased	significant	300.0	microgram	trap_catch	total_catch	0	5	as_reported	E3,Z13-18:OH alone, 300 ug
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oh_1_9_with_e3oh	field_trapping	increased	significant	300.0	microgram	trap_catch	total_catch	12	5	as_reported	E3,Z13-18:OH alone, 300 ug
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oh_1_9_with_e3oh_vs_blank	field_trapping	increased	significant	300.0	microgram	trap_catch	total_catch	12	0	as_reported	trap without a dispenser
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oh_5_5_with_e3oh	field_trapping	no_effect	not_significant	300.0	microgram	trap_catch	total_catch	5	5	as_reported	E3,Z13-18:OH alone, 300 ug
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oh_5_5_with_e3oh_vs_blank	field_trapping	increased	significant	300.0	microgram	trap_catch	total_catch	5	0	as_reported	trap without a dispenser
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e2oh_9_1_with_e3oh	field_trapping	decreased	significant	300.0	microgram	trap_catch	total_catch	0	5	as_reported	E3,Z13-18:OH alone, 300 ug
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e3oac_1_9_with_e3oh	field_trapping	no_effect	not_significant	300.0	microgram	trap_catch	total_catch	2	5	as_reported	E3,Z13-18:OH alone, 300 ug
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e3oac_5_5_with_e3oh	field_trapping	decreased	significant	300.0	microgram	trap_catch	total_catch	0	5	as_reported	E3,Z13-18:OH alone, 300 ug
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e3oac_9_1_with_e3oh	field_trapping	decreased	significant	300.0	microgram	trap_catch	total_catch	0	5	as_reported	E3,Z13-18:OH alone, 300 ug
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_e3oh_vs_blank	field_trapping	increased	significant	300	microgram	trap_catch	total_catch	5	0	as_reported	trap without a dispenser
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oac_1_9_with_e3oh	field_trapping	no_effect	not_significant	300.0	microgram	trap_catch	total_catch	1	5	as_reported	E3,Z13-18:OH alone, 300 ug
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oac_5_5_with_e3oh	field_trapping	decreased	significant	300.0	microgram	trap_catch	total_catch	0	5	as_reported	E3,Z13-18:OH alone, 300 ug
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oac_9_1_with_e3oh	field_trapping	decreased	significant	300.0	microgram	trap_catch	total_catch	0	5	as_reported	E3,Z13-18:OH alone, 300 ug
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oh_1_9_vs_e2oh_1_9	field_trapping	increased	significant	300.0	microgram	trap_catch	total_catch	29	12	as_reported	E3,Z13-18:OH : E2,Z13-18:OH 9:1, 0.3 mg
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oh_1_9_with_e3oh	field_trapping	increased	significant	300.0	microgram	trap_catch	total_catch	29	5	as_reported	E3,Z13-18:OH alone, 300 ug
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oh_1_9_with_e3oh_vs_blank	field_trapping	increased	significant	300.0	microgram	trap_catch	total_catch	29	0	as_reported	trap without a dispenser
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oh_5_5_with_e3oh	field_trapping	no_effect	not_significant	300.0	microgram	trap_catch	total_catch	3	5	as_reported	E3,Z13-18:OH alone, 300 ug
+spa.obs.paranthrene_tabaniformis.karalius_2001.trap_z3oh_9_1_with_e3oh	field_trapping	no_effect	not_significant	300.0	microgram	trap_catch	total_catch	1	5	as_reported	E3,Z13-18:OH alone, 300 ug
+spa.obs.paranthrene_tabaniformis.zhang_1986.trap_ee_25_added	field_trapping	decreased	not_tested	225	microgram	trap_catch	total_catch	9	22	as_reported	E3,Z13-18:OH alone, 200 ug
+spa.obs.paranthrene_tabaniformis.zhang_1986.trap_ee_alone	field_trapping	decreased	not_tested	200	microgram	trap_catch	total_catch	0	86	as_reported	E3,Z13-18:OH alone, 200 ug
+spa.obs.paranthrene_tabaniformis.zhang_1986.trap_ez_vs_1_female	field_trapping	increased	not_tested	200	microgram	trap_catch	total_catch	48	9	as_reported	1 live female moth
+spa.obs.paranthrene_tabaniformis.zhang_1986.trap_ez_vs_2_females	field_trapping	increased	not_tested	200	microgram	trap_catch	total_catch	48	9	as_reported	2 live female moths
+spa.obs.paranthrene_tabaniformis.zhang_1986.trap_ze_25_added	field_trapping	decreased	not_tested	225	microgram	trap_catch	total_catch	4	22	as_reported	E3,Z13-18:OH alone, 200 ug
+spa.obs.paranthrene_tabaniformis.zhang_1986.trap_ze_alone	field_trapping	decreased	not_tested	200	microgram	trap_catch	total_catch	0	86	as_reported	E3,Z13-18:OH alone, 200 ug
+spa.obs.paranthrene_tabaniformis.zhang_1986.trap_zz_25_added	field_trapping	decreased	not_tested	225	microgram	trap_catch	total_catch	14	22	as_reported	E3,Z13-18:OH alone, 200 ug
+spa.obs.paranthrene_tabaniformis.zhang_1986.trap_zz_alone	field_trapping	decreased	not_tested	200	microgram	trap_catch	total_catch	0	86	as_reported	E3,Z13-18:OH alone, 200 ug
 spa.obs.sesia_apiformis.francke_2004.trap_blend.denmark	field_trapping	increased	not_reported			trap_catch	mean_catch_per_trap	3.4	0	as_reported	each compound alone (200 micrograms alcohol; 300 micrograms aldehyde); neither caught males
 spa.obs.sesia_apiformis.francke_2004.trap_blend.lithuania	field_trapping	increased	not_reported			trap_catch	mean_catch_per_trap	2.4	0	as_reported	each compound alone (200 micrograms alcohol; 300 micrograms aldehyde); neither caught males
 spa.obs.sesia_apiformis.francke_2004.trap_e2oh_added	field_trapping	decreased	not_significant			trap_catch	mean_catch_per_trap	2.5	4.7	as_reported	binary alcohol 200 + aldehyde 300 micrograms, without E2,Z13-18:OH
@@ -339,6 +374,11 @@ spa.obs.synanthedon_scoliaeformis.mozuraitis_2013.trap_z13oac_alone.visoriai	fie
 spa.obs.synanthedon_scoliaeformis.mozuraitis_2013.trap_z3oac_added.visoriai	field_trapping	no_effect	not_significant			trap_catch	total_catch	18	24	as_reported	E2,Z13-18:OAc alone, 150 ug
 spa.obs.synanthedon_scoliaeformis.mozuraitis_2013.trap_z3oac_alone.visoriai	field_trapping	decreased	not_tested			trap_catch	total_catch	0	24	as_reported	E2,Z13-18:OAc alone, 150 ug
 spa.obs.synanthedon_scoliaeformis.mozuraitis_2013.trap_z3oac_fivefold.zemaiteliai	field_trapping	decreased	significant			trap_catch	total_catch	12	52	as_reported	the same ternary blend with 0.3 ug Z3,Z13-18:OAc
+spa.obs.synanthedon_serica.karalius_2001.trap_e3oac_e2oac_5_5_vs_9_1	field_trapping	increased	significant	300.0	microgram	trap_catch	total_catch	95	11	as_reported	E3,Z13-18:OAc : E2,Z13-18:OAc 9:1, 0.3 mg
+spa.obs.synanthedon_serica.karalius_2001.trap_e3oac_e2oac_5_5_vs_blank	field_trapping	increased	significant	300.0	microgram	trap_catch	total_catch	95	0	as_reported	trap without a dispenser
+spa.obs.synanthedon_serica.karalius_2001.trap_e3oac_e2oac_5_5_vs_e2oac_alone	field_trapping	increased	significant	300.0	microgram	trap_catch	total_catch	95	0	as_reported	E2,Z13-18:OAc alone, 300 ug
+spa.obs.synanthedon_serica.karalius_2001.trap_e3oac_e2oac_5_5_vs_e3oac_alone	field_trapping	increased	significant	300.0	microgram	trap_catch	total_catch	95	0	as_reported	E3,Z13-18:OAc alone, 300 ug
+spa.obs.synanthedon_serica.karalius_2001.trap_e3oac_e2oac_9_1_vs_blank	field_trapping	increased	significant	300.0	microgram	trap_catch	total_catch	11	0	as_reported	trap without a dispenser
 spa.obs.synanthedon_tenuis.naka_2013.trap_e2z13_100_added.test3	field_trapping	no_effect	not_significant	1100	microgram	trap_catch	mean_catch_per_trap	10.2	10.7	as_reported	Z3,Z13-18:OAc alone, 1000 ug
 spa.obs.synanthedon_tenuis.naka_2013.trap_e2z13_500_added.test3	field_trapping	no_effect	not_significant	1500	microgram	trap_catch	mean_catch_per_trap	9.7	10.7	as_reported	Z3,Z13-18:OAc alone, 1000 ug
 spa.obs.synanthedon_tenuis.naka_2013.trap_e2z13_50_added.test3	field_trapping	no_effect	not_significant	1050	microgram	trap_catch	mean_catch_per_trap	12.0	10.7	as_reported	Z3,Z13-18:OAc alone, 1000 ug

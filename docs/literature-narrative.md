@@ -186,10 +186,18 @@ still say what each paper called its moth.
 
 *Paranthrene tabaniformis* may be a third case. Females from European
 Kazakhstan make three dienols, E3:Z3:E2,Z13-18:OH at about 64:32:1.4
-(`spa.obs.paranthrene_tabaniformis.mozuraitis_2007.gland`). The Chinese
-identification found only the first, E3,Z13-18:OH. The authors offer both
-explanations: lower sensitivity then, or regional dialects. The Chinese
-paper is not yet curated.
+(`spa.obs.paranthrene_tabaniformis.mozuraitis_2007.gland`).
+- Chinese females (Zhang et al. 1986) gave a peak matching E3,Z13-18:OH.
+  Their m/z 266 trace is flat where the Z3,Z13 isomer elutes
+  (`…zhang_1986.ovipositor`). The paper never states that anything was
+  absent, and an unassigned m/z 248 peak covers that window.
+- In the field, 10 % Z3,Z13-18:OH raised Kazakh catches about six-fold
+  (29 vs 5, `…karalius_2001.trap_z3oh_1_9_with_e3oh`).
+- In Beijing, a similar share lowered the raw total, 14 vs 22, with no
+  statistics (`…zhang_1986.trap_zz_25_added`).
+
+The authors offer both explanations: lower sensitivity then, or regional
+dialects. The records cannot choose.
 
 The Atlas keeps all of these and decides none of them.
 

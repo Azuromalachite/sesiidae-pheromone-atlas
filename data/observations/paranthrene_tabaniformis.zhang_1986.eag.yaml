@@ -1,0 +1,38 @@
+observation_id: spa.obs.paranthrene_tabaniformis.zhang_1986.eag
+observation_type: electrophysiology
+taxon: spa.tax.paranthrene_tabaniformis
+context:
+  sex: null
+  population: Chinese population
+  locality: null
+responses:
+- compound: spa.cmpd.e3_z13_18_oh
+  method: EAG
+  preparation: antenna; synthetic, 1 and 0.1 ug
+  response: active
+  notes: 1.5 and 0.5 mV
+- compound: spa.cmpd.z3_z13_18_oh
+  method: EAG
+  preparation: antenna; synthetic, 1 and 0.1 ug
+  response: active
+  notes: 1.5 and 0.5 mV
+- compound: spa.cmpd.e3_e13_18_oh
+  method: EAG
+  preparation: antenna; synthetic, 1 and 0.1 ug
+  response: inactive
+  notes: 0 and 0 mV
+- compound: spa.cmpd.z3_e13_18_oh
+  method: EAG
+  preparation: antenna; synthetic, 1 and 0.1 ug
+  response: inactive
+  notes: 0 and 0 mV
+evidence:
+  reference: spa.ref.zhang_1986
+  taxon_name_as_reported: Paranthrene tabaniformis
+  source_location: Results; Fig. 3
+  author_statement: both 1a and 1d gave strong EAG responses, while the other two appeared rather weak
+  unresolved:
+  - number of antennae
+  - sex of the antennae (not stated; male is the usual preparation)
+  - 'E,E and Z,E: printed 0 mV at both doses and at blank height in Fig. 3, but called ''rather weak'' in the text'
+  notes: 'Synthetic isomers at 1 and 0.1 ug: EZ 1.5 and 0.5 mV, ZZ 1.5 and 0.5 mV, EE and ZE 0 and 0. EE and ZE are recorded inactive on the printed numbers and Fig. 3; the text''s wording is in unresolved.'

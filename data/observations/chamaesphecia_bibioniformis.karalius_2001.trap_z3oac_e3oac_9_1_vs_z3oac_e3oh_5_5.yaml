@@ -1,0 +1,84 @@
+observation_id: spa.obs.chamaesphecia_bibioniformis.karalius_2001.trap_z3oac_e3oac_9_1_vs_z3oac_e3oh_5_5
+observation_type: behavioural_response
+taxon: spa.tax.chamaesphecia_bibioniformis
+context:
+  sex: male
+  habitat: steppe
+  population: Kazakh population
+  locality: Kandagash, European Kazakhstan
+assay: field_trapping
+trap:
+  design: delta
+  colour: white
+  supplier: Atracon A
+dispenser:
+  design: rubber_tube
+  description: red rubber tube septum, 8 x 15 mm
+blend:
+- compound: spa.cmpd.z3_z13_18_oac
+  amount:
+    value: 270.0
+    unit: microgram
+  purity:
+    value: 99
+    kind: chemical_and_isomeric
+    basis: measured
+    qualifier: more_than
+    method: GC, after AgNO3-silica preparative LC
+- compound: spa.cmpd.e3_z13_18_oac
+  amount:
+    value: 30.0
+    unit: microgram
+  purity:
+    value: 99
+    kind: chemical_and_isomeric
+    basis: measured
+    qualifier: more_than
+    method: GC, after AgNO3-silica preparative LC
+comparator:
+  description: 'Z3,Z13-18:OAc : E3,Z13-18:OH 5:5, 0.3 mg'
+  blend:
+  - compound: spa.cmpd.z3_z13_18_oac
+    amount:
+      value: 150.0
+      unit: microgram
+    purity:
+      value: 99
+      kind: chemical_and_isomeric
+      basis: measured
+      qualifier: more_than
+      method: GC, after AgNO3-silica preparative LC
+  - compound: spa.cmpd.e3_z13_18_oh
+    amount:
+      value: 150.0
+      unit: microgram
+    purity:
+      value: 99
+      kind: chemical_and_isomeric
+      basis: measured
+      qualifier: more_than
+      method: GC, after AgNO3-silica preparative LC
+effect: increased
+significance: significant
+dose:
+  value: 300.0
+  unit: microgram
+response:
+  measure: trap_catch
+  unit: total_catch
+  treatment_value: 35
+  comparator_value: 10
+  qualifier: as_reported
+evidence:
+  reference: spa.ref.karalius_2001
+  experiment_id:
+  - spa.exp.karalius_2001.kandagash_1999
+  - spa.exp.karalius_2001.dzhanibek_1999
+  - spa.exp.karalius_2001.zemaiteliai_2000
+  taxon_name_as_reported: Chamaesphecia bibioniformis
+  source_location: Table I; Results
+  author_statement: The attractivity of 3Z,13Z-18:OAc mixed with 3E,13Z-18:OH in the ratio 5:5 was significantly lower than that of the 9:1 mixture of the two acetates
+  notes: 'All 47 C. bibioniformis males were at Kandagash (text). Letters: this lure c, comparator b. Table I pools all three sites (Kandagash, Dzhanibek, Zemaiteliai in Lithuania), so the letters belong
+    to the three-site design and every record lists all three trials: total males over three replicates per site, 0.3 mg per lure; letters by Duncan''s test on sqrt(x+1), a dot is 0 with letter a. Opaque
+    white Atracon A delta traps 1-2 m up, at least 10 m apart, inspected twice a week, replicate sets moved weekly; a trap without a dispenser was the control. Compounds from Flora (Tartu), purified on
+    AgNO3-silica; isomeric and chemical purity by GC above 99 percent.'
