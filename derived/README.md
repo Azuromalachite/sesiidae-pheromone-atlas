@@ -1,13 +1,22 @@
 # derived/
 
-Tables computed from the records in `data/`. **Never edit them by hand.**
-Regenerate with `python scripts/build_taxon_layers.py`; CI runs it with
-`--check` and fails if a committed table is stale. The outputs depend on the
-records alone, with no dates, commits or versions, so the check is stable
-across commits. Release metadata (tag, commit, DOI) belongs only in a tagged
-release bundle (`docs/releases-and-occurrences.md`).
+Exports computed from the records in `data/`. **Never edit them by hand.**
+Regenerate with `python scripts/build_release.py`; CI runs it with `--check`
+and fails if anything here is stale or was not built by the script. The
+outputs depend on the records alone, with no dates, commits or versions, so
+the check is stable across commits. Release metadata (tag, commit, DOI)
+belongs only in a release bundle's `manifest.json`
+(`docs/releases-and-occurrences.md`).
 
-`derived/` is not a release. Releases will be tagged bundles built from it.
+| file | content |
+|---|---|
+| `taxa.jsonl`, `references.jsonl`, `compounds.jsonl`, `genomes.jsonl`, `observations.jsonl`, `searches.jsonl` | one record per line, sorted by ID, keys sorted, UTF-8 |
+| `taxon_layers.tsv` | the taxon × layer matrix, below |
+| `summary.json` | schema version, record counts, compound generator versions (RDKit, InChI), SHA-256 of each schema |
+| `SHA256SUMS` | checksums of the files above, in `sha256sum -c` format |
+
+`derived/` is not a release. Releases are tagged bundles built from it, and
+none exists yet.
 
 ## `taxon_layers.tsv`: the taxon × layer matrix
 

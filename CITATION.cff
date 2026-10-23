@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: >-
+  If you use the Sesiidae Pheromone Atlas, cite the tagged release you used
+  and the IDs of the records you relied on (spa.obs....), and cite the
+  original paper behind each record: the Atlas does not replace it. No
+  release has been tagged and no DOI minted yet; until then, cite the
+  repository and the commit.
+type: dataset
+title: "Sesiidae Pheromone Atlas"
+abstract: >-
+  A curated, machine-readable resource on clearwing-moth (Sesiidae)
+  pheromones. Observation-level records from primary full texts keep female
+  chemistry, male behaviour and antennal responses apart, each with its
+  experimental context (sample material, lure purity, trap, dispenser), and
+  are linked to atom-mapped compound structures and genome assemblies.
+authors:
+  - given-names: Thanakrit
+    family-names: Wongsatit
+    alias: Austin
+repository-code: "https://github.com/Azuromalachite/sesiidae-pheromone-atlas"
+license:
+  - CC-BY-4.0
+  - MIT
+keywords:
+  - Sesiidae
+  - clearwing moths
+  - sex pheromones
+  - chemical ecology
+  - curated dataset
+version: 0.1.0-dev

@@ -1,7 +1,12 @@
 # Releases, citation and the occurrence layer
 
-Design decisions of 2026-10-23. Nothing here is built yet except the
-identifier scheme (`docs/identifiers.md`).
+Design decisions of 2026-10-23. Built so far:
+- the identifier scheme (`docs/identifiers.md`);
+- the release builder (`scripts/build_release.py`);
+- the lockfile;
+- `CITATION.cff` and `CHANGELOG.md`.
+
+No release is tagged and no DOI minted.
 
 ## Citable releases
 
@@ -19,18 +24,26 @@ identifier scheme (`docs/identifiers.md`).
   authoritative.** Every observation keeps its own reference, source location,
   author statement and unresolved items.
 
-### What the release builder must produce (not built yet)
+### What the release builder produces
+
+`python scripts/build_release.py --bundle X.Y.Z` writes the following, from a
+clean tree whose HEAD is tagged `vX.Y.Z`. `--allow-untagged` builds a test
+bundle; `manifest.json` then says `tag: null`.
 
 ```text
-sesiidae-atlas-vX.Y.Z/
-├── taxa/ compounds/ references/ observations/ genomes/   records, deterministically serialised
+dist/sesiidae-atlas-vX.Y.Z/
+├── derived/       taxa, references, compounds, genomes, observations, searches (.jsonl),
+│                  taxon_layers.tsv, summary.json, SHA256SUMS — identical to the committed derived/
 ├── schemas/
-├── derived/                  each product with generated_by + input_release
-├── CITATION.cff
-├── CHANGELOG.md
-├── datapackage.json
-└── MANIFEST.sha256           SHA-256 of every file, plus the exact git commit
+├── CITATION.cff  CHANGELOG.md  LICENSE  LICENSE-DATA.md  README.md  requirements.lock.txt
+├── manifest.json  version, tag, git commit, commit date, doi: null, SHA-256 of every file
+└── SHA256SUMS
 ```
+
+The bundle refuses to build if `derived/` is stale at that commit. The date
+in the manifest is the commit's, never the build's, so rebuilding a tag gives
+the same bytes. `datapackage.json` from the original plan is not built: no
+consumer needs it yet.
 
 Deterministic means: the same commit always produces byte-identical files, so
 the manifest can be re-checked by anyone without GitHub.

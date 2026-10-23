@@ -1,0 +1,26 @@
+{
+  "compound_generators": [
+    {
+      "inchi": "1.07.3",
+      "rdkit": "2026.09.1"
+    }
+  ],
+  "note": "Content-derived only: no date, commit, tag or DOI. Release metadata is in a bundle's manifest.json.",
+  "record_counts": {
+    "compounds": 17,
+    "genomes": 11,
+    "observations": 252,
+    "references": 19,
+    "searches": 6,
+    "taxa": 16
+  },
+  "schema_version": "0.1.0-dev",
+  "schemas_sha256": {
+    "compound.schema.json": "79334d0b8872e653bf6e79b6124c049a4ce539b29c62e890cc2ce650b3a34555",
+    "genome.schema.json": "2c2dc8dad24073ef27441b9ca7e70727ef9a3515dd1876496594518c71c249e3",
+    "observation.schema.json": "179d8622bb1613ae13297adad61d52a9282c72ac225a0ff0bc4f9a08afb99a6f",
+    "reference.schema.json": "b44fde9f51af7e5ff7f418df453c9f65dc5757161f07308fe4b60d50080d29ff",
+    "search.schema.json": "681e3c4aeb8c74ae7ad6381e32ca1604a7ead7cb984765e58000d8c4f0e0759c",
+    "taxon.schema.json": "d3888ed6598e04428d8edc60f9abcfd8552d31ef2a06bc388b871655603ed7e9"
+  }
+}

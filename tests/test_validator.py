@@ -5,6 +5,7 @@ Each directory under fixtures/bad/ overlays one or more files on a copy of
 fixtures/good/ and names, in EXPECT, the error code it must produce.
 """
 
+import json
 import re
 import shutil
 from pathlib import Path
@@ -158,3 +159,54 @@ def test_taxon_layers_never_infers_not_found():
         # a status that rests on a search names the search
         if r[col["pheromone_status"]] in ("searched_not_found", "found_not_curated") or r[col["genome_status"]] == "no_assembly_in_census":
             assert r[col["search_basis"]], r[col["species"]]
+
+
+# ---- release machinery: derived/ is current and byte-deterministic; the lock covers the constraints
+
+def _load(name):
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(name, ROOT / "scripts" / f"{name}.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def test_derived_is_current():
+    import subprocess, sys
+    r = subprocess.run([sys.executable, str(ROOT / "scripts" / "build_release.py"), "--check"], capture_output=True, text=True)
+    assert r.returncode == 0, r.stderr
+
+
+def test_derived_is_deterministic():
+    br = _load("build_release")
+    assert br.derived_files(ROOT / "data") == br.derived_files(ROOT / "data")
+
+
+def test_derived_carries_no_release_metadata():
+    br = _load("build_release")
+    files = br.derived_files(ROOT / "data")
+    summary = json.loads(files["summary.json"])
+    for key in ("git_commit", "tag", "doi", "date", "commit_date", "atlas_version"):
+        assert key not in summary, key
+
+
+def test_lock_pins_every_constraint():
+    from packaging.requirements import Requirement
+    lock = {}
+    for line in (ROOT / "requirements.lock.txt").read_text(encoding="utf-8").splitlines():
+        if line and not line.startswith("#"):
+            name, version = line.split("==")
+            lock[name.lower().replace("_", "-")] = version
+    for line in (ROOT / "requirements.in").read_text(encoding="utf-8").splitlines():
+        if line.strip() and not line.startswith("#"):
+            req = Requirement(line)
+            name = req.name.lower().replace("_", "-")
+            assert name in lock, f"{name} is not in requirements.lock.txt"
+            assert req.specifier.contains(lock[name]), f"{name}=={lock[name]} does not satisfy {req.specifier}"
+
+
+def test_citation_cff_is_complete():
+    cff = yaml.safe_load((ROOT / "CITATION.cff").read_text(encoding="utf-8"))
+    for key in ("cff-version", "message", "title", "authors", "type", "license", "version"):
+        assert cff.get(key), key
+    assert "doi" not in cff, "no DOI until one is minted (docs/releases-and-occurrences.md)"

@@ -15,10 +15,17 @@ The taxon × layer matrix is generated from these records. There are no reaction
 pathway records yet: this corpus records what was observed, not how it is made.
 
 ```bash
-pip install -r requirements.txt
-pytest -q                          # the validator accepts good fixtures and refuses every bad one
-python atlas_validate.py data      # validate curated records
+pip install -r requirements.lock.txt   # exact versions; constraints are in requirements.in
+pytest -q                              # the validator accepts good fixtures and refuses every bad one
+python atlas_validate.py data          # validate curated records
+python scripts/build_release.py        # regenerate derived/ (CI runs it with --check)
 ```
+
+`derived/` holds machine-readable exports: one JSONL file per record kind,
+the taxon × layer matrix, and checksums. They are generated from the records,
+never edited by hand. No release has been tagged and no DOI minted yet; to
+cite the Atlas meanwhile, see [`CITATION.cff`](CITATION.cff) and
+[`CHANGELOG.md`](CHANGELOG.md).
 
 See [`docs/validation.md`](docs/validation.md) for what is checked.
 

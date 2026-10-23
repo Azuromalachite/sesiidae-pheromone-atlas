@@ -1,5 +1,30 @@
 # Curation log
 
+## 2026-10-23 (9) — stage C: release machinery, no release
+
+- **`scripts/build_release.py` writes `derived/`:**
+  - one JSONL file per record kind;
+  - the taxon × layer matrix;
+  - `summary.json` (counts, generator versions, schema hashes);
+  - `SHA256SUMS`.
+
+  It refuses records that do not validate. `--check` runs in CI and in the
+  tests, and flags stale files and files the script did not write.
+  `.gitattributes` keeps line-ending conversion off `derived/`, so the
+  byte-exact check holds on Windows checkouts too.
+- **`--bundle VERSION` builds `dist/sesiidae-atlas-v<VERSION>/`** from a clean
+  tree at the matching tag. Only its `manifest.json` carries the version, tag,
+  commit and commit date, with `doi: null`. `dist/` is ignored by git.
+- **Environment:** `requirements.txt` became `requirements.in` (constraints)
+  plus `requirements.lock.txt`, resolved in a fresh Python 3.12 venv by
+  `scripts/lock_requirements.sh`. CI installs the lock and runs on
+  `ubuntu-24.04` rather than `ubuntu-latest`. A test checks that the lock
+  satisfies every constraint.
+- **`CITATION.cff`** has no DOI, and a test keeps it that way until one
+  exists. **`CHANGELOG.md`** starts with the unreleased breaking changes.
+- **No tag, no release, no DOI**, as decided
+  (`docs/releases-and-occurrences.md`).
+
 ## 2026-10-23 (8) — stage B: the matrix is generated, and "not found" is a record
 
 `releases/taxon_layers.tsv` was a hand-made second source of truth. It is now

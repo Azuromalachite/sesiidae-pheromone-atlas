@@ -1,3 +1,5 @@
 __pycache__/
 .pytest_cache/
 *.pyc
+# release bundles are built from a tagged commit, never committed
+dist/

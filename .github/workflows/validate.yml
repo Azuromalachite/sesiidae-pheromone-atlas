@@ -6,15 +6,16 @@ on:
 
 jobs:
   validate:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install -r requirements.txt
+      # the exact environment releases are built with
+      - run: pip install -r requirements.lock.txt
       # the gate must be seen to fail: every bad fixture is refused for its stated reason
       - run: pytest -q
       - run: python atlas_validate.py data
-      # derived tables are a function of the records: a stale committed table fails
-      - run: python scripts/build_taxon_layers.py --check
+      # derived/ is a function of the records: a stale committed export fails
+      - run: python scripts/build_release.py --check

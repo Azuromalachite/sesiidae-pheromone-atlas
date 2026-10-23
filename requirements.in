@@ -1,3 +1,7 @@
+# Human-edited constraints. The environment CI and releases use is the
+# resolved requirements.lock.txt; regenerate it with scripts/lock_requirements.sh
+# after changing this file.
+#
 # rdkit is pinned exactly: the generated block of every compound records the
 # RDKit and InChI versions it was made with, and CI compares at the same
 # versions. Upgrading is one dedicated commit that regenerates every record.
