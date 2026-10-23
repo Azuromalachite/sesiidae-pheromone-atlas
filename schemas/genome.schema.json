@@ -29,6 +29,7 @@
         "locality": {"type": ["string", "null"]}
       }
     },
+    "notes": {"type": "string", "description": "where values not in the assembly record come from, e.g. a genome note's gene count or finer locality"},
     "bioproject": {"type": ["string", "null"], "pattern": "^PRJ[A-Z]{2}[0-9]+$"},
     "biosample": {"type": ["string", "null"], "pattern": "^SAM[A-Z]{1,2}[0-9]+$"},
     "annotations": {

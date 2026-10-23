@@ -1,0 +1,17 @@
+genome_id: spa.genome.synanthedon_vespiformis.GCA_918317495.1
+taxon: spa.tax.synanthedon_vespiformis
+assembly: {accession: GCA_918317495, version: 1, name: ilSynVesp1.1, level: chromosome, source: NCBI}
+specimen: {sex: null, locality: United Kingdom}
+bioproject: PRJEB48303
+biosample: SAMEA7701494
+annotations:
+  - annotation_id: spa.annot.ensembl_rr.braker.2022_09
+    provider: Ensembl Rapid Release (archived)
+    method: braker
+    geneset: "2022_09"
+    protein_coding_genes: null
+    files:
+      protein_fasta: {url: "https://ftp.ensembl.org/pub/rapid-release/species/Synanthedon_vespiformis/GCA_918317495.1/braker/geneset/2022_09/Synanthedon_vespiformis-GCA_918317495.1-2022_09-pep.fa.gz", md5: 3021041ab8961d04159798ed472f1dc6}
+      gff3: {url: "https://ftp.ensembl.org/pub/rapid-release/species/Synanthedon_vespiformis/GCA_918317495.1/braker/geneset/2022_09/Synanthedon_vespiformis-GCA_918317495.1-2022_09-genes.gff3.gz", md5: 250d0a5027c868a7eeab15215d9a660c}
+    current_platform_id: null
+notes: "Specimen from BioSample SAMEA7701494 (collected 2020-07-20; sex recorded as not collected). Gene count not taken from a source yet."

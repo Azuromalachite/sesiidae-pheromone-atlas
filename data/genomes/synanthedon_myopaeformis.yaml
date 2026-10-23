@@ -1,0 +1,17 @@
+genome_id: spa.genome.synanthedon_myopaeformis.GCA_944738685.1
+taxon: spa.tax.synanthedon_myopaeformis
+assembly: {accession: GCA_944738685, version: 1, name: ilSynMyop1.1, level: chromosome, source: NCBI}
+specimen: {sex: male, locality: United Kingdom}
+bioproject: PRJEB53873
+biosample: SAMEA10979197
+annotations:
+  - annotation_id: spa.annot.ensembl_rr.braker.2022_08
+    provider: Ensembl Rapid Release (archived)
+    method: braker
+    geneset: "2022_08"
+    protein_coding_genes: null
+    files:
+      protein_fasta: {url: "https://ftp.ensembl.org/pub/rapid-release/species/Synanthedon_myopaeformis/GCA_944738685.1/braker/geneset/2022_08/Synanthedon_myopaeformis-GCA_944738685.1-2022_08-pep.fa.gz", md5: f17a259a540fe06912ae61c0a6998c17}
+      gff3: {url: "https://ftp.ensembl.org/pub/rapid-release/species/Synanthedon_myopaeformis/GCA_944738685.1/braker/geneset/2022_08/Synanthedon_myopaeformis-GCA_944738685.1-2022_08-genes.gff3.gz", md5: 61071ebd9e9a8f88d3f96498c35b1fe8}
+    current_platform_id: null
+notes: "Specimen from BioSample SAMEA10979197 (collected 2021-06-16). Gene count not taken from a source yet."

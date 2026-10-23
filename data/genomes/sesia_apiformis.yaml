@@ -1,0 +1,17 @@
+genome_id: spa.genome.sesia_apiformis.GCA_914767545.1
+taxon: spa.tax.sesia_apiformis
+assembly: {accession: GCA_914767545, version: 1, name: ilSesApif2.1, level: chromosome, source: NCBI}
+specimen: {sex: male, locality: United Kingdom}
+bioproject: PRJEB47347
+biosample: SAMEA7701281
+annotations:
+  - annotation_id: spa.annot.ensembl_rr.braker.2021_12
+    provider: Ensembl Rapid Release (archived)
+    method: braker
+    geneset: "2021_12"
+    protein_coding_genes: 16358
+    files:
+      protein_fasta: {url: "https://ftp.ensembl.org/pub/rapid-release/species/Sesia_apiformis/GCA_914767545.1/braker/geneset/2021_12/Sesia_apiformis-GCA_914767545.1-2021_12-pep.fa.gz", md5: 3374e8a0fed7881df103a5476bd119c1}
+      gff3: {url: "https://ftp.ensembl.org/pub/rapid-release/species/Sesia_apiformis/GCA_914767545.1/braker/geneset/2021_12/Sesia_apiformis-GCA_914767545.1-2021_12-genes.gff3.gz", md5: fe397a32576f46ea516efc9711cf644c}
+    current_platform_id: null
+notes: "Specimen from BioSample SAMEA7701281 (collected 2020-06-23). Gene count from the genome note (Wellcome Open Res, 2023, doi:10.12688/wellcomeopenres.20236.1), not counted here. A BRAKER gene set, unlike the Ensembl-pipeline set of S. tipuliformis: family sizes are not comparable between the two without allowing for the method."

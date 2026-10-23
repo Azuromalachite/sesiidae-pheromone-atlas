@@ -1,0 +1,17 @@
+genome_id: spa.genome.synanthedon_tipuliformis.GCA_947623395.1
+taxon: spa.tax.synanthedon_tipuliformis
+assembly: {accession: GCA_947623395, version: 1, name: ilSynTipu2.1, level: chromosome, source: NCBI}
+specimen: {sex: male, locality: United Kingdom}
+bioproject: PRJEB58317
+biosample: SAMEA10978931
+annotations:
+  - annotation_id: spa.annot.ensembl_rr.ensembl.2023_05
+    provider: Ensembl Rapid Release (archived)
+    method: ensembl
+    geneset: "2023_05"
+    protein_coding_genes: 11878
+    files:
+      protein_fasta: {url: "https://ftp.ensembl.org/pub/rapid-release/species/Synanthedon_tipuliformis/GCA_947623395.1/ensembl/geneset/2023_05/Synanthedon_tipuliformis-GCA_947623395.1-2023_05-pep.fa.gz", md5: 603fa594cef9d9054d42bc1e955320f7}
+      gff3: {url: "https://ftp.ensembl.org/pub/rapid-release/species/Synanthedon_tipuliformis/GCA_947623395.1/ensembl/geneset/2023_05/Synanthedon_tipuliformis-GCA_947623395.1-2023_05-genes.gff3.gz", md5: 782a2ada7af022078b2877a86d6214f2}
+    current_platform_id: null
+notes: "Specimen from BioSample SAMEA10978931 (collected 2021-07-17); the genome note gives Wytham Woods, Oxfordshire. Gene count from the genome note (Boyes and Holland, Wellcome Open Res 8:300, v2), not counted here."
