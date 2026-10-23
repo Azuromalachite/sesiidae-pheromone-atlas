@@ -1,0 +1,66 @@
+# Fill checker, date and one verdict per record (ok | error | unclear). Do not change observation_id, part, record_sha256 or covered_by.
+spot_check: case-check-sesiidae-homework-1
+case: sesiidae-homework-1
+checker: null
+date: null
+records:
+- observation_id: spa.obs.synanthedon_tenuis.naka_2013.gland
+  part: complete
+  record_sha256: ab2b30f02f106ffc0d99efeab6afbe894ff60996c2d37b0e5ec5f4ff523dc12c
+  covered_by: spot-check-001, entry 33
+- observation_id: spa.obs.synanthedon_tenuis.yang_2012.gland
+  part: complete
+  record_sha256: cf3dbe081fe576db2f73a97d6751c3826e228fca3513305574167064f4a3d08f
+  covered_by: spot-check-001, entry 34
+- observation_id: spa.obs.synanthedon_tenuis.naka_2013.trap_z3z13oh_added.test4_1
+  part: complete
+  record_sha256: be712def03e4baeb20afbdb78c95967ff2f927d28d7ff9a9b04de3496b40deaa
+  verdict: null
+  wrong_rows: []
+  notes: ''
+- observation_id: spa.obs.synanthedon_tenuis.yang_2012.trap_acetate_added
+  part: complete
+  record_sha256: 1f93799fb5e5f31e07971bd864e0d9decda00a67bc746073df66cc81216c8f45
+  verdict: null
+  wrong_rows: []
+  notes: ''
+- observation_id: spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.hungary
+  part: complete
+  record_sha256: 4a5e4d9a03e3934f61db8501486bbe159b0ddc959ccb58a8c7bc029dee3a714d
+  verdict: null
+  wrong_rows: []
+  notes: ''
+- observation_id: spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.tasmania_1986
+  part: complete
+  record_sha256: 82a812b930f9d6e1c8ce83e02114e11edceb9d5d2f52161a0596b45402d67d4e
+  covered_by: spot-check-001, entry 35
+- observation_id: spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.tasmania_1987
+  part: complete
+  record_sha256: 289ddb1fa18150d0ea6051e3d29962efbcf896f6abcef2fe7f43642644e8a9fc
+  verdict: null
+  wrong_rows: []
+  notes: ''
+- observation_id: spa.obs.synanthedon_tipuliformis.suckling_2005.trap_e3.tasmania
+  part: complete
+  record_sha256: 012d0795b408a7630bfaf69fb9abb4b2c81af5ee0fa85bd880862913946cab39
+  verdict: null
+  wrong_rows: []
+  notes: ''
+- observation_id: spa.obs.synanthedon_tipuliformis.suckling_2005.trap_e3.new_zealand
+  part: complete
+  record_sha256: dc370564e4803e38a1c1ee5128d950c2c10e3f773a9744dece5ed15734350d44
+  verdict: null
+  wrong_rows: []
+  notes: ''
+- observation_id: spa.obs.synanthedon_tipuliformis.mozuraitis_2006.gland
+  part: complete
+  record_sha256: 4ff12f6c16d03b49dd75fee1cd87238324212b4966977fdc4d0f36b87b418e3b
+  verdict: null
+  wrong_rows: []
+  notes: ''
+- observation_id: spa.obs.synanthedon_tipuliformis.mozuraitis_2006.trap_six
+  part: complete
+  record_sha256: 88d2ae1695715c106207d49094af81a39a35f58226b70196fbd3f83191df7867
+  verdict: null
+  wrong_rows: []
+  notes: ''

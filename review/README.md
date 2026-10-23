@@ -15,6 +15,21 @@ hand-picked selections of publications deemed possibly difficult".
 | directory | drawn | sample | status |
 |---|---|---|---|
 | `spot-check-001/` | 2026-10-23, seed 20261023 | 24 random observations of 524 plus 14 hard cases | not started |
+| `case-check-sesiidae-homework-1/` | 2026-10-24 | all 11 observations of the homework case: 8 checked here, 3 taking their verdicts from spot-check-001 | not started |
+
+A **case check** (`scripts/spot_check.py case`) covers every observation a
+teaching case uses, so that what is taught has been read by a person. It is
+complete, not a sample, and gives no error rate. A record already in a
+spot-check is listed with `covered_by` and is not checked twice.
+
+**Check, then fix.** Do not repair a record while checking it. Finish the
+check and record the verdicts; fixes come afterwards, each in its own
+commit.
+
+**The page packet** (`C:\Users\user\Documents\atlas-spot-check-packet\`,
+outside git) holds, for each record to check, the pages of its paper that
+hold the named table or figure. The pages are the publishers'. They are
+never committed.
 
 ## How to do one
 

@@ -464,8 +464,33 @@ def test_spot_check_draw_is_deterministic(tmp_path):
 
 def test_committed_spot_checks_are_well_formed():
     sc = _load("spot_check")
-    for d in sorted((ROOT / "review").glob("spot-check-*")):
+    dirs = sorted((ROOT / "review").glob("spot-check-*")) + sorted((ROOT / "review").glob("case-check-*"))
+    assert dirs
+    for d in dirs:
         assert sc.summarise(d)[1] == [], d.name
+
+
+def test_spot_check_001_is_reproduced_by_its_draw(tmp_path):
+    # the committed draw is what the script draws from its seed: nothing was picked by hand after the fact
+    sc = _load("spot_check")
+    sc.draw(tmp_path / "spot-check-001", 20261023, 24)
+    for name in ("sheet.md", "results.yaml"):
+        assert (tmp_path / "spot-check-001" / name).read_text(encoding="utf-8") == \
+               (ROOT / "review" / "spot-check-001" / name).read_text(encoding="utf-8"), name
+
+
+def test_case_check_covers_every_case_observation_once():
+    # what the homework teaches is read by a person: every observation is checked here or in a spot-check, never both
+    sc = _load("spot_check")
+    for d in sorted((ROOT / "review").glob("case-check-*")):
+        res = yaml.safe_load((d / "results.yaml").read_text(encoding="utf-8"))
+        case = yaml.safe_load((ROOT / "teaching" / "cases" / f"{res['case']}.yaml").read_text(encoding="utf-8"))
+        assert [r["observation_id"] for r in res["records"]] == case["observations"], d.name
+        for r in res["records"]:
+            if "covered_by" in r:
+                assert "verdict" not in r
+                other = yaml.safe_load((ROOT / "review" / r["covered_by"].split(",")[0] / "results.yaml").read_text(encoding="utf-8"))
+                assert r["observation_id"] in {x["observation_id"] for x in other["records"]}
 
 
 # ---- evidence classes: every class documented, every row traceable to its records

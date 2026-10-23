@@ -106,13 +106,58 @@ def fields(o, records):
     return rows
 
 
-def draw(out, seed, n_random):
-    out = Path(out)
-    if (out / "sheet.md").exists() or (out / "results.yaml").exists():
-        raise SystemExit(f"{out} already holds a draw; a sample is drawn once")
+INSTRUCTIONS = [
+    "For each record, open the paper, find the place named under *where in the paper*, and check each row against it. "
+    "Write the verdict in `results.yaml`:",
+    "- `ok`: every row matches the paper;",
+    "- `error`: name the rows that do not, with what the paper says;",
+    "- `unclear`: the paper does not settle it; say why.",
+    "", "Record what you see, not what you think the curator meant. A record whose notes explain a reading is still checked against the paper.", ""]
+
+
+def loaded():
     records, findings = av.load_root(ROOT / "data")
     if findings:
         raise SystemExit("records do not load; run atlas_validate.py first")
+    return records
+
+
+def write(out, header, sample, results, records):
+    """sample: [(observation_id, part, why, covered_by)]; covered_by names an entry of
+    another check that already holds this record's verdict, so it is not checked twice."""
+    obs, refs = records["observations"], records["references"]
+    lines = [f"# {header}", ""] + results.pop("_intro") + [""] + INSTRUCTIONS
+    for i, (oid, part, why, covered) in enumerate(sample, start=1):
+        path, o = obs[oid]
+        ref = refs[o["evidence"]["reference"]][1]
+        lines += [f"## {i}. {oid}", "", f"*{part}*" + (f": {why}" if why else ""), ""]
+        if covered:
+            lines += [f"Checked in {covered}: no separate verdict here.", ""]
+            continue
+        lines += [f"{ref['citation']} [doi:{ref['doi']}](https://doi.org/{ref['doi']})" if ref.get("doi") else ref["citation"], "",
+                  "| field | Atlas value |", "|---|---|"]
+        lines += [f"| {f} | {str(v).replace('None', 'not given').replace('|', '/')} |" for f, v in fields(o, records)]
+        lines += [""]
+    results["records"] = [{"observation_id": oid, "part": part, "record_sha256": record_sha(obs[oid][0]),
+                           **({"covered_by": covered} if covered else {"verdict": None, "wrong_rows": [], "notes": ""})}
+                          for oid, part, _, covered in sample]
+    out.mkdir(parents=True, exist_ok=True)
+    (out / "sheet.md").write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
+    fixed = "observation_id, part, record_sha256 or covered_by" if any(s[3] for s in sample) else "observation_id, part or record_sha256"
+    (out / "results.yaml").write_text(
+        f"# Fill checker, date and one verdict per record (ok | error | unclear). Do not change {fixed}.\n"
+        + yaml.safe_dump(results, sort_keys=False, allow_unicode=True, width=200), encoding="utf-8", newline="\n")
+
+
+def refuse_existing(out):
+    if (out / "sheet.md").exists() or (out / "results.yaml").exists():
+        raise SystemExit(f"{out} already holds a draw; a sample is drawn once")
+
+
+def draw(out, seed, n_random):
+    out = Path(out)
+    refuse_existing(out)
+    records = loaded()
     obs = records["observations"]
     missing = [k for k in HARD if k not in obs]
     if missing:
@@ -120,32 +165,35 @@ def draw(out, seed, n_random):
     pool = sorted(k for k in obs if k not in HARD)
     picked = random.Random(seed).sample(pool, n_random)
     sample = [(k, "random", None) for k in sorted(picked)] + [(k, "hard", why) for k, why in HARD.items()]
-    refs = records["references"]
-    lines = [f"# Spot-check {out.name}", "",
-             f"Drawn by `scripts/spot_check.py draw` with seed {seed}: {n_random} observations at random from {len(obs)} "
-             f"(simple random sample over all observations, hard cases excluded from the pool), and {len(HARD)} hard cases picked by hand.",
-             "", "For each record, open the paper, find the place named under *where in the paper*, and check each row against it. "
-             "Write the verdict in `results.yaml`:",
-             "- `ok`: every row matches the paper;",
-             "- `error`: name the rows that do not, with what the paper says;",
-             "- `unclear`: the paper does not settle it; say why.",
-             "", "Record what you see, not what you think the curator meant. A record whose notes explain a reading is still checked against the paper.", ""]
-    for i, (oid, part, why) in enumerate(sample, start=1):
-        path, o = obs[oid]
-        ref = refs[o["evidence"]["reference"]][1]
-        lines += [f"## {i}. {oid}", "", f"*{part}*" + (f": {why}" if why else ""), "",
-                  f"{ref['citation']} [doi:{ref['doi']}](https://doi.org/{ref['doi']})" if ref.get("doi") else ref["citation"], "",
-                  "| field | Atlas value |", "|---|---|"]
-        lines += [f"| {f} | {str(v).replace('None', 'not given').replace('|', '/')} |" for f, v in fields(o, records)]
-        lines += [""]
-    results = {"spot_check": out.name, "seed": seed, "n_random": n_random, "checker": None, "date": None,
-               "records": [{"observation_id": oid, "part": part, "record_sha256": record_sha(obs[oid][0]),
-                            "verdict": None, "wrong_rows": [], "notes": ""} for oid, part, _ in sample]}
-    out.mkdir(parents=True, exist_ok=True)
-    (out / "sheet.md").write_text("\n".join(lines) + "\n", encoding="utf-8", newline="\n")
-    (out / "results.yaml").write_text(
-        "# Fill checker, date and one verdict per record (ok | error | unclear). Do not change observation_id, part or record_sha256.\n"
-        + yaml.safe_dump(results, sort_keys=False, allow_unicode=True, width=200), encoding="utf-8", newline="\n")
+    intro = [f"Drawn by `scripts/spot_check.py draw` with seed {seed}: {n_random} observations at random from {len(obs)} "
+             f"(simple random sample over all observations, hard cases excluded from the pool), and {len(HARD)} hard cases picked by hand."]
+    results = {"spot_check": out.name, "seed": seed, "n_random": n_random, "checker": None, "date": None, "_intro": intro}
+    write(out, f"Spot-check {out.name}", [s + (None,) for s in sample], results, records)
+    return sample
+
+
+def case_check(out, case_id, covered_dirs):
+    """Every observation a teaching case uses, so that what is taught has been read by a
+    person. Not a sample and no rate: a record already in a committed spot-check is
+    listed with covered_by and takes its verdict from there."""
+    out = Path(out)
+    refuse_existing(out)
+    records = loaded()
+    case = av.strict_load((ROOT / "teaching" / "cases" / f"{case_id}.yaml").read_text(encoding="utf-8"))
+    elsewhere = {}
+    for d in covered_dirs:
+        res = av.strict_load((Path(d) / "results.yaml").read_text(encoding="utf-8"))
+        for i, r in enumerate(res["records"], start=1):
+            if "covered_by" not in r:
+                elsewhere.setdefault(r["observation_id"], f"{Path(d).name}, entry {i}")
+    sample = [(oid, "complete", None, elsewhere.get(oid)) for oid in case["observations"]]
+    n_here = sum(1 for s in sample if not s[3])
+    intro = [f"Every observation of the teaching case `{case_id}` ({len(sample)}), written by `scripts/spot_check.py case`. "
+             f"{len(sample) - n_here} are already in {', '.join(Path(d).name for d in covered_dirs)} and take their verdict from there; "
+             f"{n_here} are checked here. This is a complete check of what the case teaches, not a sample: it gives no error rate.",
+             "", "Do not repair a record while checking it: fixes come after the check, in their own commits."]
+    results = {"spot_check": out.name, "case": case_id, "checker": None, "date": None, "_intro": intro}
+    write(out, f"Case check {out.name}", sample, results, records)
     return sample
 
 
@@ -164,6 +212,10 @@ def summarise(out):
     obs = records["observations"]
     lines, problems = [], []
     for r in res["records"]:
+        if "covered_by" in r:
+            other = ROOT / "review" / r["covered_by"].split(",")[0]
+            got = {x["observation_id"]: x for x in av.strict_load((other / "results.yaml").read_text(encoding="utf-8"))["records"]}
+            r.update({k: got[r["observation_id"]].get(k) for k in ("verdict", "wrong_rows")})
         if r["verdict"] not in VERDICTS + (None,):
             problems.append(f"{r['observation_id']}: verdict {r['verdict']!r} is not one of {VERDICTS}")
         if r["verdict"] == "error" and not r["wrong_rows"]:
@@ -172,8 +224,10 @@ def summarise(out):
             problems.append(f"{r['observation_id']}: no longer a record")
         elif record_sha(obs[r["observation_id"]][0]) != r["record_sha256"]:
             lines.append(f"changed since the draw: {r['observation_id']}")
-    for part in ("random", "hard"):
+    for part in ("random", "hard", "complete"):
         rows = [r for r in res["records"] if r["part"] == part]
+        if not rows:
+            continue
         done = [r for r in rows if r["verdict"] in VERDICTS]
         err = sum(r["verdict"] == "error" for r in done)
         unc = sum(r["verdict"] == "unclear" for r in done)
@@ -193,11 +247,15 @@ def main(argv=None):
     d.add_argument("out")
     d.add_argument("--seed", type=int, required=True)
     d.add_argument("--random", type=int, default=24)
+    c = sub.add_parser("case")
+    c.add_argument("out")
+    c.add_argument("--case", required=True)
+    c.add_argument("--covered-by", nargs="*", default=[], help="committed spot-checks whose verdicts are reused")
     s = sub.add_parser("summarise")
     s.add_argument("out")
     a = ap.parse_args(argv)
-    if a.cmd == "draw":
-        sample = draw(a.out, a.seed, a.random)
+    if a.cmd in ("draw", "case"):
+        sample = draw(a.out, a.seed, a.random) if a.cmd == "draw" else case_check(a.out, a.case, a.covered_by)
         print(f"wrote {a.out}/sheet.md and results.yaml: {len(sample)} records")
         return 0
     lines, problems = summarise(a.out)

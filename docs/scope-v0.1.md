@@ -2,7 +2,45 @@
 
 Written 2026-10-23. This is the scope statement that a v0.1.0 tag, and later a
 DOI, will claim (`docs/releases-and-occurrences.md`). The tag is cut when every
-target row below is curated or recorded as unobtainable.
+target row below is curated or recorded as unobtainable, and the release gate
+holds.
+
+## Release gate for v0.1.0 (decided 2026-10-24)
+
+v0.1.0 is tagged, with no DOI, only when all four hold:
+
+- [ ] **computed/:** the four Atlas compounds' espmap v0.2.1 ensembles
+  (espmap-sesiidae-001) are merged and pass the gate.
+- [ ] **Human spot-check:** `review/spot-check-001` is complete, and every
+  error it finds is fixed afterwards in its own traceable commit. Records
+  are not repaired during the check.
+- [ ] **What is taught is checked:** every observation of
+  `sesiidae-homework-1` has a human verdict
+  (`review/case-check-sesiidae-homework-1`, which reuses spot-check-001's
+  verdicts for the three records drawn there). The random sample says how
+  reliable the Atlas is; this check says whether every fact the homework
+  teaches has been read by a person.
+- [ ] **Census:** generated from the records, with no curated taxon–compound
+  status field. It counts what the Atlas holds, not what each species
+  "uses":
+  - taxon × evidence layer (chemistry, behaviour, electrophysiology, genome),
+    with observation, compound, reference and population counts;
+  - taxon × compound × evidence type (detected / not detected; behaviour
+    positive / negative; electrophysiology positive / negative);
+  - a headline: taxa, compounds, primary references and observations, and
+    how many taxa have female chemistry, behaviour, electrophysiology, and
+    two or more layers.
+
+  "Species with a known pheromone" is not a census number: it needs a
+  definition of "known pheromone".
+
+**No status layer in v0.1.** There is no `status: pheromone | synergist |
+antagonist | inactive` per taxon and compound. Those labels depend on
+population, assay, dose, blend and study, and the Atlas already holds
+compounds whose apparent role changes between them. The evidence classes
+(`docs/evidence-classes.md`) are the furthest summary v0.1 makes. A later
+summary, if an interface needs one, is a derived output with a named,
+versioned rule and its evidence IDs, never hand-curated.
 
 ## The statement
 
