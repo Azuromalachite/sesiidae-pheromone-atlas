@@ -1,0 +1,171 @@
+{
+ "slug": "z3_z13_18_al",
+ "smiles": "[O:32]=[CH:1][CH2:2]/[CH:3]=[CH:4]\\[CH2:5][CH2:6][CH2:7][CH2:8][CH2:9][CH2:10][CH2:11][CH2:12]/[CH:13]=[CH:14]\\[CH2:15][CH2:16][CH2:17][CH3:18]",
+ "expected": "CCCC/C=C\\CCCCCCCC/C=C\\CC=O",
+ "seed": 20261024,
+ "n_embedded": 100,
+ "k": 20,
+ "method": "espmap v0.2.1 from_smiles (ETKDGv3 + MMFF94s), seed 20261024, 100 embeddings; bench/conformers.select: lowest MMFF94s + spread over Rg (RDKit RadiusOfGyration)",
+ "members": [
+  {
+   "conformer": "conf_00",
+   "embed_conf_id": 97,
+   "is_lowest_mmff": true,
+   "mmff_dE": 0.0,
+   "rg_selection": 5.61995837430672,
+   "rg_heavy": 5.553918651890373
+  },
+  {
+   "conformer": "conf_01",
+   "embed_conf_id": 66,
+   "is_lowest_mmff": false,
+   "mmff_dE": 3.3879310577712687,
+   "rg_selection": 3.5359492458125596,
+   "rg_heavy": 3.464623863865094
+  },
+  {
+   "conformer": "conf_02",
+   "embed_conf_id": 21,
+   "is_lowest_mmff": false,
+   "mmff_dE": 4.104782272243014,
+   "rg_selection": 4.527855659151606,
+   "rg_heavy": 4.473818757051374
+  },
+  {
+   "conformer": "conf_03",
+   "embed_conf_id": 96,
+   "is_lowest_mmff": false,
+   "mmff_dE": 5.173759317069113,
+   "rg_selection": 4.700889453876137,
+   "rg_heavy": 4.634136777834505
+  },
+  {
+   "conformer": "conf_04",
+   "embed_conf_id": 16,
+   "is_lowest_mmff": false,
+   "mmff_dE": 2.4988314577889312,
+   "rg_selection": 4.817848557314845,
+   "rg_heavy": 4.757623857464321
+  },
+  {
+   "conformer": "conf_05",
+   "embed_conf_id": 19,
+   "is_lowest_mmff": false,
+   "mmff_dE": 2.9554871622408854,
+   "rg_selection": 4.951034078204408,
+   "rg_heavy": 4.878739252702193
+  },
+  {
+   "conformer": "conf_06",
+   "embed_conf_id": 1,
+   "is_lowest_mmff": false,
+   "mmff_dE": 5.599415917957856,
+   "rg_selection": 5.070205672813472,
+   "rg_heavy": 5.0148887434635245
+  },
+  {
+   "conformer": "conf_07",
+   "embed_conf_id": 20,
+   "is_lowest_mmff": false,
+   "mmff_dE": 4.5558374724437485,
+   "rg_selection": 5.112449121725726,
+   "rg_heavy": 5.046799996467393
+  },
+  {
+   "conformer": "conf_08",
+   "embed_conf_id": 56,
+   "is_lowest_mmff": false,
+   "mmff_dE": 9.054473252760154,
+   "rg_selection": 5.148425779972685,
+   "rg_heavy": 5.078287093433867
+  },
+  {
+   "conformer": "conf_09",
+   "embed_conf_id": 47,
+   "is_lowest_mmff": false,
+   "mmff_dE": 3.419195249633951,
+   "rg_selection": 5.266484042725776,
+   "rg_heavy": 5.212304931030908
+  },
+  {
+   "conformer": "conf_10",
+   "embed_conf_id": 76,
+   "is_lowest_mmff": false,
+   "mmff_dE": 2.0724645375575825,
+   "rg_selection": 5.291777692046538,
+   "rg_heavy": 5.240186642765901
+  },
+  {
+   "conformer": "conf_11",
+   "embed_conf_id": 44,
+   "is_lowest_mmff": false,
+   "mmff_dE": 1.3534296999833124,
+   "rg_selection": 5.312438675823387,
+   "rg_heavy": 5.259693049284714
+  },
+  {
+   "conformer": "conf_12",
+   "embed_conf_id": 38,
+   "is_lowest_mmff": false,
+   "mmff_dE": 1.5657903886749764,
+   "rg_selection": 5.342752614454348,
+   "rg_heavy": 5.280458321582505
+  },
+  {
+   "conformer": "conf_13",
+   "embed_conf_id": 83,
+   "is_lowest_mmff": false,
+   "mmff_dE": 3.5590045103225805,
+   "rg_selection": 5.411266619344468,
+   "rg_heavy": 5.344837054314652
+  },
+  {
+   "conformer": "conf_14",
+   "embed_conf_id": 95,
+   "is_lowest_mmff": false,
+   "mmff_dE": 5.70440207154644,
+   "rg_selection": 5.430367890560086,
+   "rg_heavy": 5.36554261655551
+  },
+  {
+   "conformer": "conf_15",
+   "embed_conf_id": 98,
+   "is_lowest_mmff": false,
+   "mmff_dE": 1.9756424847229823,
+   "rg_selection": 5.483849204810557,
+   "rg_heavy": 5.421672528974259
+  },
+  {
+   "conformer": "conf_16",
+   "embed_conf_id": 79,
+   "is_lowest_mmff": false,
+   "mmff_dE": 3.0678600426621685,
+   "rg_selection": 5.538655941647229,
+   "rg_heavy": 5.481574675312167
+  },
+  {
+   "conformer": "conf_17",
+   "embed_conf_id": 7,
+   "is_lowest_mmff": false,
+   "mmff_dE": 2.7589918509848417,
+   "rg_selection": 5.578644045977245,
+   "rg_heavy": 5.511696334234179
+  },
+  {
+   "conformer": "conf_18",
+   "embed_conf_id": 41,
+   "is_lowest_mmff": false,
+   "mmff_dE": 2.4796092909410916,
+   "rg_selection": 5.621145333175635,
+   "rg_heavy": 5.551464876751352
+  },
+  {
+   "conformer": "conf_19",
+   "embed_conf_id": 81,
+   "is_lowest_mmff": false,
+   "mmff_dE": 2.382156568428833,
+   "rg_selection": 5.963502869592805,
+   "rg_heavy": 5.8962254039903765
+  }
+ ]
+}

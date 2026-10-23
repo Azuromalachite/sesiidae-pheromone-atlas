@@ -1,0 +1,232 @@
+{
+ "schema": "spa.espmap_ensemble/0",
+ "atlas_id": "spa.cmpd.e2_z13_18_oac",
+ "smiles": "CCCC/C=C\\CCCCCCCCC/C=C/COC(C)=O",
+ "inchikey": "NWRSOYAGXTXEMK-NHRIVICHSA-N",
+ "protocol": "b3lyp_def2-svp_gas_espmap-v0.2.1",
+ "analysis_key": "d0f5ed136cda12ada8c6324a79ec9f7e79134d2f",
+ "analysis": {
+  "xc": "b3lyp",
+  "basis": "def2svp",
+  "solvent": null,
+  "solvent_esp": null,
+  "spacing_bohr": 0.26,
+  "density_fit": true,
+  "geometry_method": "etkdg_mmff94s",
+  "surface_definition": {
+   "property": "electron_density",
+   "isovalue_e_bohr3": 0.002
+  }
+ },
+ "espmap": {
+  "version": "0.2.1",
+  "commit": "41a989d6240b56e3c17938dac2084dfc5e1423e4"
+ },
+ "selection": {
+  "method": "lowest MMFF94s + 19 spread over Rg of 100 ETKDGv3 + MMFF94s embeddings, seed 20261024 (espmap v0.2.1 from_smiles; bench/conformers.select); folded members kept",
+  "notes": "folded = an intramolecular contact OR surface genus > 0 (frozen plan section 3). Contact: heavy atoms at least 5 bonds apart and closer than their Bondi radii + 0.5 A, espmap master's intramolecular_contacts at 5175515 (provisional in espmap; v0.2.1 has none), applied to each member's SDF. rg_angstrom: heavy atoms, unweighted, from the record's geometry. Selection used RDKit RadiusOfGyration (mass-weighted, all atoms)."
+ },
+ "members": [
+  {
+   "conformer": "conf_00",
+   "record": "conformers/conf_00.json",
+   "record_sha256": "84f44e9f37f3f2134117f87c589b0baa1564a4659860e52181e2b406c961767c",
+   "geometry_sha1": "dd040935abd8a29098d3b180dcec580c8894e79c",
+   "npz": "conf_00.npz",
+   "npz_sha256": "3a1fff3680d7caeafebfba789a23b2b5c44f30692b3e1dc513c07232256f068f",
+   "rg_angstrom": 6.094,
+   "folded": false
+  },
+  {
+   "conformer": "conf_01",
+   "record": "conformers/conf_01.json",
+   "record_sha256": "124d531ea0464bf1510cbb6eef9066014244c41379dfab6f75de9f7da5cf4548",
+   "geometry_sha1": "4ca20e1c73828684ee7e1470fac64a2810a4e3a4",
+   "npz": "conf_01.npz",
+   "npz_sha256": "daab8d961e355d5f28e43e3c303c390cb985f7f125015b69805f444ce9fd4a8c",
+   "rg_angstrom": 4.6314,
+   "folded": false
+  },
+  {
+   "conformer": "conf_02",
+   "record": "conformers/conf_02.json",
+   "record_sha256": "a556bb5c8d5d46b3c29f01e76ac942b135bb77fa40d50a27c693af7ee8e7e26e",
+   "geometry_sha1": "d2f7a079a2dd03a20c13a22c0ae174c9719d5c8c",
+   "npz": "conf_02.npz",
+   "npz_sha256": "94733f59a9b3508e63171d3e961a4e2ab8926fe82f378c4bbca4ff2bef8628a0",
+   "rg_angstrom": 5.1866,
+   "folded": true
+  },
+  {
+   "conformer": "conf_03",
+   "record": "conformers/conf_03.json",
+   "record_sha256": "e32d69bb5eda9b5009225be2c0e64cb9d6a2191be1c5f9938b3be30e8fd75435",
+   "geometry_sha1": "8a98ea5e58a01bfb051810bb75df59a0f47b9985",
+   "npz": "conf_03.npz",
+   "npz_sha256": "a3e35bd520e8d616ec147833df688b8e67a9fb63c47287595660181c31d465ed",
+   "rg_angstrom": 5.2591,
+   "folded": false
+  },
+  {
+   "conformer": "conf_04",
+   "record": "conformers/conf_04.json",
+   "record_sha256": "b69c5e3e3567ff49311000c048bdea80e3643b3e4735d24ce4e66e14d0db0bbd",
+   "geometry_sha1": "bc01f44c823e6047f281a5809e4c852804c9f03e",
+   "npz": "conf_04.npz",
+   "npz_sha256": "44993575d46f74a50b81f1f9269494e07c3f96ef51aede9bb2713388685f0459",
+   "rg_angstrom": 5.3325,
+   "folded": true
+  },
+  {
+   "conformer": "conf_05",
+   "record": "conformers/conf_05.json",
+   "record_sha256": "25e98b4b3c42204d1fe0ab509123a43f8e18e3fb92195d4b11bca1312e0a5d69",
+   "geometry_sha1": "c50d02db2794649111df17adad8ff92269a566a8",
+   "npz": "conf_05.npz",
+   "npz_sha256": "0b9d49666a15cc642cc2b3f166fbbba9965ac294fcfaca50f1486ee4594ab816",
+   "rg_angstrom": 5.463,
+   "folded": false
+  },
+  {
+   "conformer": "conf_06",
+   "record": "conformers/conf_06.json",
+   "record_sha256": "5a78e6f523ff8e32f302688eb27fb704b2f677bf08f38f52ff761d5cd361b43c",
+   "geometry_sha1": "78a972aa967466f60b15ce5f34f10218fbb79456",
+   "npz": "conf_06.npz",
+   "npz_sha256": "ee119c0427277fc24e7531e9e948c0534b6a11e9a8d36a536557a89a54e1847e",
+   "rg_angstrom": 5.551,
+   "folded": true
+  },
+  {
+   "conformer": "conf_07",
+   "record": "conformers/conf_07.json",
+   "record_sha256": "1b0d634c1419c51a317924c9c6a4a0a6ab517c74baac500cedfa93adaf748ecd",
+   "geometry_sha1": "eacd6da6f7029afbb529e1cbde1b9e8295ee559b",
+   "npz": "conf_07.npz",
+   "npz_sha256": "3392a7195361c59016cd75d0b06c70d5bea8726034a1203cd612b64108b73f5c",
+   "rg_angstrom": 5.6249,
+   "folded": false
+  },
+  {
+   "conformer": "conf_08",
+   "record": "conformers/conf_08.json",
+   "record_sha256": "20ea101131a34b3673bf7ad39f3ad954c1847b1a2844d8f0ad74af55d54c4c2d",
+   "geometry_sha1": "bc1b79b621475e64d6e1657f5bab7a29b171ce72",
+   "npz": "conf_08.npz",
+   "npz_sha256": "5ee14f900de01df02af7d7c91fb9f8a12de85ddac1191ed88ecdf8c044f7a2eb",
+   "rg_angstrom": 5.6494,
+   "folded": true
+  },
+  {
+   "conformer": "conf_09",
+   "record": "conformers/conf_09.json",
+   "record_sha256": "3f3ebbd7b7a6b2ca8327c1f99ea37695c36932bbc7740e68b33f0a37296aa5fd",
+   "geometry_sha1": "1272aa15f72b78e370acb0e1e99dcf20dbaf1c16",
+   "npz": "conf_09.npz",
+   "npz_sha256": "8e1baa43d0985ad046d7641c7bebb48a37858b945a8dcadc5f2c2e7420c8df6e",
+   "rg_angstrom": 5.7669,
+   "folded": true
+  },
+  {
+   "conformer": "conf_10",
+   "record": "conformers/conf_10.json",
+   "record_sha256": "b1a4a70eb58f8e3b478e5af53192d37d78f267b209b426d2af14b91c63158c8c",
+   "geometry_sha1": "47248986875080ceb9e58435cf11e83eed4b2cf2",
+   "npz": "conf_10.npz",
+   "npz_sha256": "b93a00db29715d9ff46035e1724876f0ecc91865fec63fca6793f65d7b3004bb",
+   "rg_angstrom": 5.8326,
+   "folded": false
+  },
+  {
+   "conformer": "conf_11",
+   "record": "conformers/conf_11.json",
+   "record_sha256": "b8d7085b6cf65967d7bae73af4ab40dbf60ac46c9d5b2a96e021edd1482e23b6",
+   "geometry_sha1": "3742a533c99cd65c78890602a5f360346d075960",
+   "npz": "conf_11.npz",
+   "npz_sha256": "582ffbec787464defd3eed4d6bf4035ebbbc1f0075299f81bda1aa77fff6a0fa",
+   "rg_angstrom": 5.8684,
+   "folded": false
+  },
+  {
+   "conformer": "conf_12",
+   "record": "conformers/conf_12.json",
+   "record_sha256": "3b50ab74d8905b5626cc4e09a7bd2d75ead314d92927a0308182cfcc3579ce6d",
+   "geometry_sha1": "991c2b983593a75b75c86e0ff0f0c21f0cc83abe",
+   "npz": "conf_12.npz",
+   "npz_sha256": "1d3fc61c4ed6ff4e4d1ef834d826e6f9856bc1cf8e372e53339ad29ad70b4ab6",
+   "rg_angstrom": 5.8923,
+   "folded": false
+  },
+  {
+   "conformer": "conf_13",
+   "record": "conformers/conf_13.json",
+   "record_sha256": "9ddaa70e1ea1a9815109090d523b5fe3facf3327e09bd707e1b53927b5ef1ddb",
+   "geometry_sha1": "0bf3c14beb6654961ab0cacfb9f01196fb2ae478",
+   "npz": "conf_13.npz",
+   "npz_sha256": "c43e2e4b4d62ec617d480df6f9c2bf8799ccbc218ef79dbef5ad39b872f9ca82",
+   "rg_angstrom": 5.9658,
+   "folded": false
+  },
+  {
+   "conformer": "conf_14",
+   "record": "conformers/conf_14.json",
+   "record_sha256": "ec868225a2e8a23b9cb3d8f801c93cb6ce440628e566a7a47144a6e7a37db602",
+   "geometry_sha1": "bd9cdb1ce5480b7548f69a1d7fed98090102cb4e",
+   "npz": "conf_14.npz",
+   "npz_sha256": "9a32663d87b9f06eb234b9bf311502ab45244bb76719007a5905227395ebd348",
+   "rg_angstrom": 6.1708,
+   "folded": false
+  },
+  {
+   "conformer": "conf_15",
+   "record": "conformers/conf_15.json",
+   "record_sha256": "3bf053d94d5c1f9075872394df833544ffb4ecac230af75df5a3e5d9fdff7017",
+   "geometry_sha1": "2206c8063653c35c85e56c043bac1092e1752137",
+   "npz": "conf_15.npz",
+   "npz_sha256": "2a8a6408ae262cbb8f87a6725cfe3f08a19b1c851d87302961e43510dedb4b7e",
+   "rg_angstrom": 6.2174,
+   "folded": false
+  },
+  {
+   "conformer": "conf_16",
+   "record": "conformers/conf_16.json",
+   "record_sha256": "8c8e9141877991535cdcc49c19b731170de93f9e4b33359c4f56a5fd8adc81e6",
+   "geometry_sha1": "482b06e28570beeda121b67ecf10c75b989dad64",
+   "npz": "conf_16.npz",
+   "npz_sha256": "b6a614eeaa1b3601bb109329f56807ef537c24b27a27742dc1a9d75c0ea71988",
+   "rg_angstrom": 6.3621,
+   "folded": false
+  },
+  {
+   "conformer": "conf_17",
+   "record": "conformers/conf_17.json",
+   "record_sha256": "25210bc3820a20877fb6a39861670675e9eb0b6016736bedb7d36938da3df788",
+   "geometry_sha1": "53e415c12633b99304b223f5e0f4b21487d50ca1",
+   "npz": "conf_17.npz",
+   "npz_sha256": "ce3872fa3dfe13d66f4536a971498081c13a3b8ec58ea80213c4b9739482f80b",
+   "rg_angstrom": 6.4024,
+   "folded": false
+  },
+  {
+   "conformer": "conf_18",
+   "record": "conformers/conf_18.json",
+   "record_sha256": "cc05a5b80b9b8a2ddf96e571e514c27f6ad872361c9a4d7471991c2e2ea407ec",
+   "geometry_sha1": "9c0d6eed278e640051ab254cb00fe09b66769e72",
+   "npz": "conf_18.npz",
+   "npz_sha256": "5937fd2b82d13da3c45bc97a60063dbed05725937cd154d579c9b3d6db3ce402",
+   "rg_angstrom": 6.8052,
+   "folded": false
+  },
+  {
+   "conformer": "conf_19",
+   "record": "conformers/conf_19.json",
+   "record_sha256": "fefde5459e50be7b488601f0be86c2f123572c3fa21d6f8dfd23b66f78d83afa",
+   "geometry_sha1": "dc0e9a8c1eb44e41e6d2be106b8a21ea67d8b0a6",
+   "npz": "conf_19.npz",
+   "npz_sha256": "bdf94aeb18fe151d9e63927b6a08f7e90845c8312cad437f57f0b8f4a1e20ea3",
+   "rg_angstrom": 4.7166,
+   "folded": true
+  }
+ ],
+ "notes": "espmap-sesiidae-001 (Atlas analyses/espmap-sesiidae-001, frozen at 7e34658)."
+}

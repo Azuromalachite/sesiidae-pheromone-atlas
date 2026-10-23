@@ -1,0 +1,5579 @@
+{
+  "schema": "espmap.record/1",
+  "validity": {
+    "input": true,
+    "surface": true,
+    "electronic": true,
+    "sites": true
+  },
+  "analysis_key": "d0f5ed136cda12ada8c6324a79ec9f7e79134d2f",
+  "render_key": "e96338fba0ef7cde626264325543ec4c75e97599",
+  "key_fields": {
+    "analysis": {
+      "xc": "b3lyp",
+      "basis": "def2svp",
+      "solvent": null,
+      "solvent_esp": null,
+      "spacing_bohr": 0.26,
+      "density_fit": true,
+      "geometry_method": "etkdg_mmff94s",
+      "surface_definition": {
+        "property": "electron_density",
+        "isovalue_e_bohr3": 0.002
+      }
+    },
+    "render": {
+      "cmap": "vik",
+      "kind": "diverging",
+      "vmin": -40.677921,
+      "vmax": 40.677921,
+      "elev": 20.0,
+      "azim": 172.0,
+      "size": 700,
+      "ambient": 0.62
+    }
+  },
+  "geometry": {
+    "symbols": [
+      "C",
+      "C",
+      "O",
+      "O",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "C",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H",
+      "H"
+    ],
+    "xyz_angstrom": [
+      [
+        9.3179,
+        1.4222999999999997,
+        1.5058
+      ],
+      [
+        7.886,
+        1.7993,
+        1.735
+      ],
+      [
+        7.4457,
+        2.9332,
+        1.6116
+      ],
+      [
+        7.1709,
+        0.699,
+        2.0885
+      ],
+      [
+        5.7767,
+        0.9109999999999999,
+        2.3439
+      ],
+      [
+        5.0036,
+        0.6114,
+        1.0942
+      ],
+      [
+        4.1008,
+        -0.3767,
+        0.979
+      ],
+      [
+        3.2818,
+        -0.7322,
+        -0.23589999999999997
+      ],
+      [
+        3.5472,
+        0.0822,
+        -1.5049
+      ],
+      [
+        2.7859,
+        -0.4152,
+        -2.7408
+      ],
+      [
+        1.2590999999999999,
+        -0.3217,
+        -2.6326
+      ],
+      [
+        0.6094,
+        -1.6536,
+        -2.242
+      ],
+      [
+        -0.9216,
+        -1.5918999999999999,
+        -2.1948
+      ],
+      [
+        -1.4551,
+        -0.754,
+        -1.0294
+      ],
+      [
+        -2.9876,
+        -0.6747,
+        -0.9847
+      ],
+      [
+        -3.6561,
+        -2.0117,
+        -0.6698
+      ],
+      [
+        -5.144599999999999,
+        -2.0655,
+        -0.443
+      ],
+      [
+        -6.1364,
+        -1.1624,
+        -0.5115
+      ],
+      [
+        -6.1323,
+        0.2942,
+        -0.8733
+      ],
+      [
+        -6.6238,
+        1.1904,
+        0.2695
+      ],
+      [
+        -5.662,
+        1.2309,
+        1.4589999999999999
+      ],
+      [
+        -6.1718,
+        2.1567999999999996,
+        2.5527
+      ],
+      [
+        9.7426,
+        1.0036,
+        2.4217
+      ],
+      [
+        9.384999999999998,
+        0.7027999999999999,
+        0.6858
+      ],
+      [
+        9.8889,
+        2.3149,
+        1.2343999999999997
+      ],
+      [
+        5.568499999999999,
+        1.929,
+        2.6925
+      ],
+      [
+        5.4946,
+        0.234,
+        3.1576
+      ],
+      [
+        5.2101,
+        1.273,
+        0.257
+      ],
+      [
+        3.915,
+        -1.0139,
+        1.8434999999999997
+      ],
+      [
+        2.229,
+        -0.6266,
+        0.04909999999999999
+      ],
+      [
+        3.453,
+        -1.7938,
+        -0.4522999999999999
+      ],
+      [
+        3.2945,
+        1.1355,
+        -1.329
+      ],
+      [
+        4.6182,
+        0.04889999999999999,
+        -1.7422
+      ],
+      [
+        3.1017,
+        0.2137,
+        -3.5833999999999997
+      ],
+      [
+        3.0988,
+        -1.4365999999999999,
+        -2.9879999999999995
+      ],
+      [
+        0.8642,
+        -0.0314,
+        -3.6146
+      ],
+      [
+        0.9808,
+        0.47619999999999996,
+        -1.9366999999999999
+      ],
+      [
+        0.9876,
+        -2.0051,
+        -1.2771
+      ],
+      [
+        0.8942,
+        -2.4117,
+        -2.9826
+      ],
+      [
+        -1.3057,
+        -1.1999,
+        -3.1441
+      ],
+      [
+        -1.2898,
+        -2.6198,
+        -2.1033
+      ],
+      [
+        -1.0795,
+        -1.1562,
+        -0.0807
+      ],
+      [
+        -1.0754,
+        0.2705,
+        -1.11
+      ],
+      [
+        -3.3486,
+        -0.2922,
+        -1.9460999999999997
+      ],
+      [
+        -3.253,
+        0.053,
+        -0.2099
+      ],
+      [
+        -3.4402999999999997,
+        -2.718,
+        -1.4802
+      ],
+      [
+        -3.1845,
+        -2.4255,
+        0.2312
+      ],
+      [
+        -5.4634,
+        -3.0723999999999996,
+        -0.1599
+      ],
+      [
+        -7.1359,
+        -1.5384999999999998,
+        -0.2815
+      ],
+      [
+        -5.1627,
+        0.6483,
+        -1.2198
+      ],
+      [
+        -6.8141,
+        0.4204,
+        -1.7240999999999997
+      ],
+      [
+        -6.7524,
+        2.2076999999999996,
+        -0.1212
+      ],
+      [
+        -7.6137,
+        0.8563,
+        0.6054
+      ],
+      [
+        -5.5294,
+        0.2277,
+        1.8787
+      ],
+      [
+        -4.6771,
+        1.5790999999999997,
+        1.1278
+      ],
+      [
+        -7.1432,
+        1.821,
+        2.9295
+      ],
+      [
+        -5.469399999999999,
+        2.1746,
+        3.3919
+      ],
+      [
+        -6.2822,
+        3.1804,
+        2.1805999999999996
+      ]
+    ],
+    "sha1": "eacd6da6f7029afbb529e1cbde1b9e8295ee559b",
+    "sha1_covers": "symbols and xyz_angstrom at %.8f, one 'Sym x y z' line per atom, newline-joined; not charge or spin",
+    "charge": 0,
+    "spin": 0,
+    "optimised_from_sha1": null,
+    "bonds": [
+      [
+        0,
+        1,
+        1
+      ],
+      [
+        0,
+        22,
+        1
+      ],
+      [
+        0,
+        23,
+        1
+      ],
+      [
+        0,
+        24,
+        1
+      ],
+      [
+        1,
+        2,
+        2
+      ],
+      [
+        1,
+        3,
+        1
+      ],
+      [
+        3,
+        4,
+        1
+      ],
+      [
+        4,
+        5,
+        1
+      ],
+      [
+        4,
+        25,
+        1
+      ],
+      [
+        4,
+        26,
+        1
+      ],
+      [
+        5,
+        6,
+        2
+      ],
+      [
+        5,
+        27,
+        1
+      ],
+      [
+        6,
+        7,
+        1
+      ],
+      [
+        6,
+        28,
+        1
+      ],
+      [
+        7,
+        8,
+        1
+      ],
+      [
+        7,
+        29,
+        1
+      ],
+      [
+        7,
+        30,
+        1
+      ],
+      [
+        8,
+        9,
+        1
+      ],
+      [
+        8,
+        31,
+        1
+      ],
+      [
+        8,
+        32,
+        1
+      ],
+      [
+        9,
+        10,
+        1
+      ],
+      [
+        9,
+        33,
+        1
+      ],
+      [
+        9,
+        34,
+        1
+      ],
+      [
+        10,
+        11,
+        1
+      ],
+      [
+        10,
+        35,
+        1
+      ],
+      [
+        10,
+        36,
+        1
+      ],
+      [
+        11,
+        12,
+        1
+      ],
+      [
+        11,
+        37,
+        1
+      ],
+      [
+        11,
+        38,
+        1
+      ],
+      [
+        12,
+        13,
+        1
+      ],
+      [
+        12,
+        39,
+        1
+      ],
+      [
+        12,
+        40,
+        1
+      ],
+      [
+        13,
+        14,
+        1
+      ],
+      [
+        13,
+        41,
+        1
+      ],
+      [
+        13,
+        42,
+        1
+      ],
+      [
+        14,
+        15,
+        1
+      ],
+      [
+        14,
+        43,
+        1
+      ],
+      [
+        14,
+        44,
+        1
+      ],
+      [
+        15,
+        16,
+        1
+      ],
+      [
+        15,
+        45,
+        1
+      ],
+      [
+        15,
+        46,
+        1
+      ],
+      [
+        16,
+        17,
+        2
+      ],
+      [
+        16,
+        47,
+        1
+      ],
+      [
+        17,
+        18,
+        1
+      ],
+      [
+        17,
+        48,
+        1
+      ],
+      [
+        18,
+        19,
+        1
+      ],
+      [
+        18,
+        49,
+        1
+      ],
+      [
+        18,
+        50,
+        1
+      ],
+      [
+        19,
+        20,
+        1
+      ],
+      [
+        19,
+        51,
+        1
+      ],
+      [
+        19,
+        52,
+        1
+      ],
+      [
+        20,
+        21,
+        1
+      ],
+      [
+        20,
+        53,
+        1
+      ],
+      [
+        20,
+        54,
+        1
+      ],
+      [
+        21,
+        55,
+        1
+      ],
+      [
+        21,
+        56,
+        1
+      ],
+      [
+        21,
+        57,
+        1
+      ]
+    ]
+  },
+  "input": {
+    "smiles": null,
+    "file": "/home/austintw/s001/e2_z13_18_oac/conformers/conf_07.sdf",
+    "record": {
+      "index": 1,
+      "of": 1
+    },
+    "gate_smiles": "[CH2:1](/[CH:2]=[CH:3]/[CH2:4][CH2:5][CH2:6][CH2:7][CH2:8][CH2:9][CH2:10][CH2:11][CH2:12]/[CH:13]=[CH:14]\\[CH2:15][CH2:16][CH2:17][CH3:18])[O:31][C:22]([CH3:21])=[O:32]",
+    "approved_smiles": "[CH2:1](/[CH:2]=[CH:3]/[CH2:4][CH2:5][CH2:6][CH2:7][CH2:8][CH2:9][CH2:10][CH2:11][CH2:12]/[CH:13]=[CH:14]\\[CH2:15][CH2:16][CH2:17][CH3:18])[O:31][C:22]([CH3:21])=[O:32]",
+    "gate": {
+      "verdict": "INFO",
+      "forced": false,
+      "findings": [
+        [
+          "INFO",
+          "TAUTOMERS"
+        ]
+      ]
+    },
+    "computed_smiles": "CCCC/C=C\\CCCCCCCCC/C=C/COC(C)=O",
+    "structure_verified": true,
+    "formula": "C20H36O2",
+    "charge": 0,
+    "spin": 0
+  },
+  "settings": {
+    "xc": "b3lyp",
+    "basis": "def2-svp",
+    "solvent": "vacuum",
+    "solvent_esp": null,
+    "include_reaction_field": false,
+    "density_fit": true,
+    "gpu": false,
+    "gpu_validated": null,
+    "iso": 0.002,
+    "spacing_bohr": 0.26,
+    "margin_bohr": 5.0,
+    "grids_level": 3,
+    "conv_tol": 1e-09,
+    "seed": 12648430,
+    "nconfs": 20,
+    "optimize": false,
+    "geometry": "file 3D coordinates used as-is"
+  },
+  "results": {
+    "e_tot_Ha": -933.5635151937456,
+    "nao": 488,
+    "dipole": {
+      "vector_D": [
+        -0.03850147622032063,
+        -1.8880661184204601,
+        -0.2567971525077574
+      ],
+      "magnitude_D": 1.9058386103588465,
+      "origin": {
+        "kind": "centre_of_nuclear_charge",
+        "xyz_angstrom": [
+          0.5564058139534883,
+          0.08790697674418597,
+          -0.022911627906976675
+        ]
+      }
+    },
+    "V_min_kcal_mol": -40.67792095329843,
+    "V_max_kcal_mol": 19.15474912344799,
+    "sigma_hole": null,
+    "sigma_hole_reason": "no Cl/Br/I",
+    "electronic": {
+      "homo_eV": -6.52410511704917,
+      "lumo_eV": 0.05602913961905202,
+      "problems": []
+    },
+    "n_verts": 32696,
+    "surface": {
+      "definition": {
+        "property": "electron_density",
+        "isovalue_e_bohr3": 0.002
+      },
+      "closed": true,
+      "open_edges": 0,
+      "nonmanifold_edges": 0,
+      "components": 1,
+      "genus": 0,
+      "chi": 2,
+      "face_max_rho": 7.825873770165138e-06,
+      "margin_bohr": 5.0,
+      "strict": true,
+      "problems": [],
+      "valid": true
+    },
+    "surface_stats": {
+      "area_A2": 415.47572585357807,
+      "area_pos_A2": 341.23010732805193,
+      "area_neg_A2": 74.24561852552614,
+      "V_area_mean_kcal_mol": 3.6201615467592134,
+      "V_area_sd_kcal_mol": 9.349839965406002,
+      "V_p05_kcal_mol": -15.569599529443265,
+      "V_p50_kcal_mol": 5.880298188149485,
+      "V_p95_kcal_mol": 13.315226067258791,
+      "V_min_kcal_mol": -40.67792095329843,
+      "V_min_at_A": [
+        7.7116369195725705,
+        4.46308336238175,
+        1.3067476578258281
+      ],
+      "V_max_kcal_mol": 19.15474912344799,
+      "V_max_at_A": [
+        10.17784487981688,
+        0.7482590994852463,
+        3.508124774506994
+      ]
+    },
+    "gipf": {
+      "V_pos_mean_kcal_mol": 7.015403228203639,
+      "V_neg_mean_kcal_mol": -11.984243216407195,
+      "sigma2_pos_kcal2_mol2": 12.927142680114057,
+      "sigma2_neg_kcal2_mol2": 133.30547748210668,
+      "sigma2_tot_kcal2_mol2": 146.23262016222074,
+      "nu": 0.08058644798399106,
+      "reason": null,
+      "min_area_fraction": 0.05,
+      "weighting": "triangle area, V averaged per triangle"
+    }
+  },
+  "sites": {
+    "schema": "espmap.sites/1",
+    "partition": {
+      "primary": "nearest_nucleus",
+      "compared": "radius_scaled",
+      "unit": "triangle",
+      "radii": "Bondi; Mantina 2009 for B"
+    },
+    "atoms": [
+      {
+        "index": 0,
+        "atom_map": 21,
+        "element": "C",
+        "parent": null,
+        "h_source": null,
+        "nearest_nucleus": {
+          "area_A2": 0.011730329594988414,
+          "area_pos_A2": 0.011730329594988414,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 10.13756732196081,
+          "V_area_sd_kcal_mol": 0.0,
+          "V_p05_kcal_mol": 10.13756732196081,
+          "V_p50_kcal_mol": 10.13756732196081,
+          "V_p95_kcal_mol": 10.13756732196081,
+          "V_min_kcal_mol": 9.027765150202049,
+          "V_min_at_A": [
+            9.140050416981168,
+            2.6744643289126238,
+            2.7193167646379934
+          ],
+          "V_max_kcal_mol": 11.405711916016166,
+          "V_max_at_A": [
+            9.140050416981168,
+            2.5476163462016292,
+            2.820194804041166
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 11.312030151266885,
+          "area_pos_A2": 10.582860246944573,
+          "area_neg_A2": 0.7291699043223107,
+          "V_area_mean_kcal_mol": 7.46910790900024,
+          "V_area_sd_kcal_mol": 3.990381545921459,
+          "V_p05_kcal_mol": -0.8172736550821278,
+          "V_p50_kcal_mol": 8.30015685645636,
+          "V_p95_kcal_mol": 13.298843090463263,
+          "V_min_kcal_mol": -14.302383358972053,
+          "V_min_at_A": [
+            8.864878025064664,
+            3.224808608082915,
+            0.6091937693872023
+          ],
+          "V_max_kcal_mol": 17.178481349544715,
+          "V_max_at_A": [
+            8.864878025064664,
+            1.902673041126726,
+            3.232952382590491
+          ]
+        },
+        "delta": {
+          "area_A2": 11.300299821671898,
+          "V_area_mean_kcal_mol": -2.668459412960571,
+          "V_p05_kcal_mol": -10.954840977042938,
+          "V_p95_kcal_mol": 3.1612757685024526,
+          "V_min_kcal_mol": -23.3301485091741,
+          "V_max_kcal_mol": 5.772769433528548
+        }
+      },
+      {
+        "index": 1,
+        "atom_map": 22,
+        "element": "C",
+        "parent": null,
+        "h_source": null,
+        "nearest_nucleus": {
+          "area_A2": 3.383868262893508,
+          "area_pos_A2": 3.3834750396066475,
+          "area_neg_A2": 0.0003932232868605794,
+          "V_area_mean_kcal_mol": 10.722701872747624,
+          "V_area_sd_kcal_mol": 4.764205848597094,
+          "V_p05_kcal_mol": 2.09575367129369,
+          "V_p50_kcal_mol": 11.27753919209988,
+          "V_p95_kcal_mol": 17.668649857051903,
+          "V_min_kcal_mol": -2.8949914518825404,
+          "V_min_at_A": [
+            8.314533241231658,
+            2.536878132954372,
+            0.12491993284924878
+          ],
+          "V_max_kcal_mol": 18.58665308247333,
+          "V_max_at_A": [
+            8.589705633148162,
+            1.848947657825829,
+            3.2743246319565085
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 7.573668158548347,
+          "area_pos_A2": 6.035031185959906,
+          "area_neg_A2": 1.5386369725884417,
+          "V_area_mean_kcal_mol": 7.350217082151036,
+          "V_area_sd_kcal_mol": 7.606517788352204,
+          "V_p05_kcal_mol": -6.775064277009652,
+          "V_p50_kcal_mol": 8.696129560754928,
+          "V_p95_kcal_mol": 17.612267838051547,
+          "V_min_kcal_mol": -13.844730233560755,
+          "V_min_at_A": [
+            8.45212044651534,
+            2.949636216166412,
+            0.23806279021219567
+          ],
+          "V_max_kcal_mol": 18.58665308247333,
+          "V_max_at_A": [
+            8.589705633148162,
+            1.848947657825829,
+            3.2743246319565085
+          ]
+        },
+        "delta": {
+          "area_A2": 4.18979989565484,
+          "V_area_mean_kcal_mol": -3.3724847905965882,
+          "V_p05_kcal_mol": -8.870817948303342,
+          "V_p95_kcal_mol": -0.05638201900035611,
+          "V_min_kcal_mol": -10.949738781678214,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 2,
+        "atom_map": 32,
+        "element": "O",
+        "parent": null,
+        "h_source": null,
+        "nearest_nucleus": {
+          "area_A2": 16.855161594702913,
+          "area_pos_A2": 0.05424451732679467,
+          "area_neg_A2": 16.80091707737612,
+          "V_area_mean_kcal_mol": -28.38357081622632,
+          "V_area_sd_kcal_mol": 10.47957351639889,
+          "V_p05_kcal_mol": -39.75991801481813,
+          "V_p50_kcal_mol": -31.44988771164775,
+          "V_p95_kcal_mol": -5.817377635113168,
+          "V_min_kcal_mol": -40.67792095329843,
+          "V_min_at_A": [
+            7.7116369195725705,
+            4.46308336238175,
+            1.3067476578258281
+          ],
+          "V_max_kcal_mol": 4.189790657678129,
+          "V_max_at_A": [
+            6.938673300300002,
+            1.848947657825829,
+            0.23334066118904576
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 17.390437234016282,
+          "area_pos_A2": 0.0,
+          "area_neg_A2": 17.390437234016282,
+          "V_area_mean_kcal_mol": -29.058412342015927,
+          "V_area_sd_kcal_mol": 8.848255542505349,
+          "V_p05_kcal_mol": -39.740083515615886,
+          "V_p50_kcal_mol": -31.085556178755855,
+          "V_p95_kcal_mol": -12.466947680281292,
+          "V_min_kcal_mol": -40.67792095329843,
+          "V_min_at_A": [
+            7.7116369195725705,
+            4.46308336238175,
+            1.3067476578258281
+          ],
+          "V_max_kcal_mol": -3.1582663917980085,
+          "V_max_at_A": [
+            6.388328516466996,
+            2.1241200497423325,
+            0.3734128256808056
+          ]
+        },
+        "delta": {
+          "area_A2": 0.5352756393133689,
+          "V_area_mean_kcal_mol": -0.6748415257896063,
+          "V_p05_kcal_mol": 0.019834499202247002,
+          "V_p95_kcal_mol": -6.649570045168124,
+          "V_min_kcal_mol": 0.0,
+          "V_max_kcal_mol": -7.348057049476138
+        }
+      },
+      {
+        "index": 3,
+        "atom_map": 31,
+        "element": "O",
+        "parent": null,
+        "h_source": null,
+        "nearest_nucleus": {
+          "area_A2": 9.787864709953304,
+          "area_pos_A2": 1.2117962024390914,
+          "area_neg_A2": 8.576068507514213,
+          "V_area_mean_kcal_mol": -11.881938990889937,
+          "V_area_sd_kcal_mol": 8.431095574188884,
+          "V_p05_kcal_mol": -22.175867463902247,
+          "V_p50_kcal_mol": -13.764319927723129,
+          "V_p95_kcal_mol": 5.838157678363221,
+          "V_min_kcal_mol": -22.99409238821962,
+          "V_min_at_A": [
+            7.6266032707658304,
+            -0.8595529091349977,
+            1.9946781329543712
+          ],
+          "V_max_kcal_mol": 11.520159885372756,
+          "V_max_at_A": [
+            8.277745347967628,
+            1.2986033786555378,
+            3.3705385785487425
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 9.594183197097655,
+          "area_pos_A2": 0.5656002083603007,
+          "area_neg_A2": 9.028582988737355,
+          "V_area_mean_kcal_mol": -12.53876169725667,
+          "V_area_sd_kcal_mol": 7.256655165372883,
+          "V_p05_kcal_mol": -22.194764429305945,
+          "V_p50_kcal_mol": -13.70616932510665,
+          "V_p95_kcal_mol": 0.6154488652828142,
+          "V_min_kcal_mol": -22.99409238821962,
+          "V_min_at_A": [
+            7.6266032707658304,
+            -0.8595529091349977,
+            1.9946781329543712
+          ],
+          "V_max_kcal_mol": 8.819717980492767,
+          "V_max_at_A": [
+            7.076258486932824,
+            1.6620210928962893,
+            3.508124774506994
+          ]
+        },
+        "delta": {
+          "area_A2": -0.19368151285564927,
+          "V_area_mean_kcal_mol": -0.6568227063667322,
+          "V_p05_kcal_mol": -0.01889696540369812,
+          "V_p95_kcal_mol": -5.222708813080407,
+          "V_min_kcal_mol": 0.0,
+          "V_max_kcal_mol": -2.7004419048799893
+        }
+      },
+      {
+        "index": 4,
+        "atom_map": 1,
+        "element": "C",
+        "parent": null,
+        "h_source": null,
+        "nearest_nucleus": {
+          "area_A2": 0.0,
+          "area_pos_A2": 0.0,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": null,
+          "V_area_sd_kcal_mol": null,
+          "V_p05_kcal_mol": null,
+          "V_p50_kcal_mol": null,
+          "V_p95_kcal_mol": null,
+          "V_min_kcal_mol": null,
+          "V_min_at_A": null,
+          "V_max_kcal_mol": null,
+          "V_max_at_A": null
+        },
+        "radius_scaled": {
+          "area_A2": 6.476476758260747,
+          "area_pos_A2": 5.881078608206334,
+          "area_neg_A2": 0.5953981500544135,
+          "V_area_mean_kcal_mol": 7.515027455418216,
+          "V_area_sd_kcal_mol": 5.136535211441732,
+          "V_p05_kcal_mol": -2.9341466632971023,
+          "V_p50_kcal_mol": 9.349073981786004,
+          "V_p95_kcal_mol": 13.312660525744485,
+          "V_min_kcal_mol": -18.91579551742863,
+          "V_min_at_A": [
+            5.700398546001168,
+            2.8033244018678523,
+            1.4443338537840797
+          ],
+          "V_max_kcal_mol": 14.06043376234027,
+          "V_max_at_A": [
+            4.324537595744082,
+            1.1610176873600009,
+            3.151407971794444
+          ]
+        },
+        "delta": {
+          "area_A2": 6.476476758260747,
+          "V_area_mean_kcal_mol": null,
+          "V_p05_kcal_mol": null,
+          "V_p95_kcal_mol": null,
+          "V_min_kcal_mol": null,
+          "V_max_kcal_mol": null
+        }
+      },
+      {
+        "index": 5,
+        "atom_map": 2,
+        "element": "C",
+        "parent": null,
+        "h_source": null,
+        "nearest_nucleus": {
+          "area_A2": 3.410642163459585,
+          "area_pos_A2": 0.03679408747466649,
+          "area_neg_A2": 3.3738480759849185,
+          "V_area_mean_kcal_mol": -9.817642968208409,
+          "V_area_sd_kcal_mol": 3.8997549052305374,
+          "V_p05_kcal_mol": -15.213807480328773,
+          "V_p50_kcal_mol": -10.205703396896325,
+          "V_p95_kcal_mol": -2.4704625345857085,
+          "V_min_kcal_mol": -15.650506069420631,
+          "V_min_at_A": [
+            6.113156124550493,
+            -0.9027737380256281,
+            0.6804768732015554
+          ],
+          "V_max_kcal_mol": 3.37605076750813,
+          "V_max_at_A": [
+            3.9117790078693266,
+            1.0234314914017495,
+            2.589372171508484
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 8.699431994548123,
+          "area_pos_A2": 1.4624764549881748,
+          "area_neg_A2": 7.236955539559949,
+          "V_area_mean_kcal_mol": -5.403852444034953,
+          "V_area_sd_kcal_mol": 5.423270008442232,
+          "V_p05_kcal_mol": -14.720220885236612,
+          "V_p50_kcal_mol": -4.859466104804836,
+          "V_p95_kcal_mol": 2.6141637403438587,
+          "V_min_kcal_mol": -16.67924254853987,
+          "V_min_at_A": [
+            6.663500908383499,
+            -0.5509536776355772,
+            1.0315757705720399
+          ],
+          "V_max_kcal_mol": 9.026069676762036,
+          "V_max_at_A": [
+            6.663500908383499,
+            1.4361895746137892,
+            0.3245180738867581
+          ]
+        },
+        "delta": {
+          "area_A2": 5.288789831088538,
+          "V_area_mean_kcal_mol": 4.413790524173455,
+          "V_p05_kcal_mol": 0.49358659509216096,
+          "V_p95_kcal_mol": 5.084626274929567,
+          "V_min_kcal_mol": -1.0287364791192406,
+          "V_max_kcal_mol": 5.650018909253906
+        }
+      },
+      {
+        "index": 6,
+        "atom_map": 3,
+        "element": "C",
+        "parent": null,
+        "h_source": null,
+        "nearest_nucleus": {
+          "area_A2": 3.2538276515666986,
+          "area_pos_A2": 0.08676076384079623,
+          "area_neg_A2": 3.1670668877259023,
+          "V_area_mean_kcal_mol": -7.693439074075177,
+          "V_area_sd_kcal_mol": 3.6787816844108616,
+          "V_p05_kcal_mol": -13.61547866969824,
+          "V_p50_kcal_mol": -7.828057477729009,
+          "V_p95_kcal_mol": -1.5969723574807144,
+          "V_min_kcal_mol": -15.447207012070152,
+          "V_min_at_A": [
+            5.975569928592241,
+            -1.0403594293211649,
+            0.5946443433171572
+          ],
+          "V_max_kcal_mol": 3.1082556622580912,
+          "V_max_at_A": [
+            2.535918057612241,
+            0.0603291290194181,
+            1.6413375238043812
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 10.11102826596171,
+          "area_pos_A2": 4.7714552031296895,
+          "area_neg_A2": 5.33957306283202,
+          "V_area_mean_kcal_mol": -0.5833964193251535,
+          "V_area_sd_kcal_mol": 6.758956852841511,
+          "V_p05_kcal_mol": -11.509382522770112,
+          "V_p50_kcal_mol": -0.6001067693414153,
+          "V_p95_kcal_mol": 10.566085022811103,
+          "V_min_kcal_mol": -15.447207012070152,
+          "V_min_at_A": [
+            5.975569928592241,
+            -1.0403594293211649,
+            0.5946443433171572
+          ],
+          "V_max_kcal_mol": 13.002288524734336,
+          "V_max_at_A": [
+            4.178295424900176,
+            -0.21484326289708505,
+            3.0953671959576687
+          ]
+        },
+        "delta": {
+          "area_A2": 6.857200614395012,
+          "V_area_mean_kcal_mol": 7.110042654750023,
+          "V_p05_kcal_mol": 2.1060961469281274,
+          "V_p95_kcal_mol": 12.163057380291818,
+          "V_min_kcal_mol": 0.0,
+          "V_max_kcal_mol": 9.894032862476244
+        }
+      },
+      {
+        "index": 7,
+        "atom_map": 4,
+        "element": "C",
+        "parent": null,
+        "h_source": null,
+        "nearest_nucleus": {
+          "area_A2": 0.0,
+          "area_pos_A2": 0.0,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": null,
+          "V_area_sd_kcal_mol": null,
+          "V_p05_kcal_mol": null,
+          "V_p50_kcal_mol": null,
+          "V_p95_kcal_mol": null,
+          "V_min_kcal_mol": null,
+          "V_min_at_A": null,
+          "V_max_kcal_mol": null,
+          "V_max_at_A": null
+        },
+        "radius_scaled": {
+          "area_A2": 4.287705243056209,
+          "area_pos_A2": 4.232851893264678,
+          "area_neg_A2": 0.05485334979153045,
+          "V_area_mean_kcal_mol": 7.218799643895162,
+          "V_area_sd_kcal_mol": 3.200110901380797,
+          "V_p05_kcal_mol": 1.4777373397973081,
+          "V_p50_kcal_mol": 7.675288855072708,
+          "V_p95_kcal_mol": 11.82825154635369,
+          "V_min_kcal_mol": -2.7753068882429215,
+          "V_min_at_A": [
+            5.287639958126412,
+            -0.7651875420673765,
+            -0.5256251283608433
+          ],
+          "V_max_kcal_mol": 12.785858299952455,
+          "V_max_at_A": [
+            2.9486766454869953,
+            -1.8378562171522868,
+            1.3067476578258281
+          ]
+        },
+        "delta": {
+          "area_A2": 4.287705243056209,
+          "V_area_mean_kcal_mol": null,
+          "V_p05_kcal_mol": null,
+          "V_p95_kcal_mol": null,
+          "V_min_kcal_mol": null,
+          "V_max_kcal_mol": null
+        }
+      },
+      {
+        "index": 8,
+        "atom_map": 5,
+        "element": "C",
+        "parent": null,
+        "h_source": null,
+        "nearest_nucleus": {
+          "area_A2": 0.0,
+          "area_pos_A2": 0.0,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": null,
+          "V_area_sd_kcal_mol": null,
+          "V_p05_kcal_mol": null,
+          "V_p50_kcal_mol": null,
+          "V_p95_kcal_mol": null,
+          "V_min_kcal_mol": null,
+          "V_min_at_A": null,
+          "V_max_kcal_mol": null,
+          "V_max_at_A": null
+        },
+        "radius_scaled": {
+          "area_A2": 3.8568815149145657,
+          "area_pos_A2": 3.8568815149145657,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 4.772608812518555,
+          "V_area_sd_kcal_mol": 2.0750164184614057,
+          "V_p05_kcal_mol": 2.040894783448722,
+          "V_p50_kcal_mol": 4.120191031983014,
+          "V_p95_kcal_mol": 8.438441726421395,
+          "V_min_kcal_mol": 1.7090360104171107,
+          "V_min_at_A": [
+            4.599708978335155,
+            1.4990574276574866,
+            -1.9953180171959204
+          ],
+          "V_max_kcal_mol": 9.648546367424549,
+          "V_max_at_A": [
+            1.710401891188161,
+            0.5629146521668612,
+            -0.6194570669388344
+          ]
+        },
+        "delta": {
+          "area_A2": 3.8568815149145657,
+          "V_area_mean_kcal_mol": null,
+          "V_p05_kcal_mol": null,
+          "V_p95_kcal_mol": null,
+          "V_min_kcal_mol": null,
+          "V_max_kcal_mol": null
+        }
+      },
+      {
+        "index": 9,
+        "atom_map": 6,
+        "element": "C",
+        "parent": null,
+        "h_source": null,
+        "nearest_nucleus": {
+          "area_A2": 0.0,
+          "area_pos_A2": 0.0,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": null,
+          "V_area_sd_kcal_mol": null,
+          "V_p05_kcal_mol": null,
+          "V_p50_kcal_mol": null,
+          "V_p95_kcal_mol": null,
+          "V_min_kcal_mol": null,
+          "V_min_at_A": null,
+          "V_max_kcal_mol": null,
+          "V_max_at_A": null
+        },
+        "radius_scaled": {
+          "area_A2": 5.394654010358396,
+          "area_pos_A2": 5.394654010358396,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 4.224583252284949,
+          "V_area_sd_kcal_mol": 1.745519337322125,
+          "V_p05_kcal_mol": 1.3749877417489573,
+          "V_p50_kcal_mol": 4.364086790495968,
+          "V_p95_kcal_mol": 6.791146553353226,
+          "V_min_kcal_mol": 1.0537216695858522,
+          "V_min_at_A": [
+            3.6366066159528234,
+            -0.9027737380256281,
+            -4.320263944432457
+          ],
+          "V_max_kcal_mol": 8.031268430708936,
+          "V_max_at_A": [
+            2.9486766454869953,
+            -2.2553313827603274,
+            -1.7201456252794174
+          ]
+        },
+        "delta": {
+          "area_A2": 5.394654010358396,
+          "V_area_mean_kcal_mol": null,
+          "V_p05_kcal_mol": null,
+          "V_p95_kcal_mol": null,
+          "V_min_kcal_mol": null,
+          "V_max_kcal_mol": null
+        }
+      },
+      {
+        "index": 10,
+        "atom_map": 7,
+        "element": "C",
+        "parent": null,
+        "h_source": null,
+        "nearest_nucleus": {
+          "area_A2": 0.0,
+          "area_pos_A2": 0.0,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": null,
+          "V_area_sd_kcal_mol": null,
+          "V_p05_kcal_mol": null,
+          "V_p50_kcal_mol": null,
+          "V_p95_kcal_mol": null,
+          "V_min_kcal_mol": null,
+          "V_min_at_A": null,
+          "V_max_kcal_mol": null,
+          "V_max_at_A": null
+        },
+        "radius_scaled": {
+          "area_A2": 4.479119654423834,
+          "area_pos_A2": 4.479119654423834,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 4.810446726193778,
+          "V_area_sd_kcal_mol": 1.6976860232262843,
+          "V_p05_kcal_mol": 2.123025240043605,
+          "V_p50_kcal_mol": 5.028476807555999,
+          "V_p95_kcal_mol": 6.90626423306774,
+          "V_min_kcal_mol": 1.7997213938513104,
+          "V_min_at_A": [
+            0.334540940931075,
+            1.2222398352904686,
+            -3.0960065755365034
+          ],
+          "V_max_kcal_mol": 10.277953849906341,
+          "V_max_at_A": [
+            1.022471920722333,
+            -0.21484326289708505,
+            -0.5630226541844514
+          ]
+        },
+        "delta": {
+          "area_A2": 4.479119654423834,
+          "V_area_mean_kcal_mol": null,
+          "V_p05_kcal_mol": null,
+          "V_p95_kcal_mol": null,
+          "V_min_kcal_mol": null,
+          "V_max_kcal_mol": null
+        }
+      },
+      {
+        "index": 11,
+        "atom_map": 8,
+        "element": "C",
+        "parent": null,
+        "h_source": null,
+        "nearest_nucleus": {
+          "area_A2": 0.0,
+          "area_pos_A2": 0.0,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": null,
+          "V_area_sd_kcal_mol": null,
+          "V_p05_kcal_mol": null,
+          "V_p50_kcal_mol": null,
+          "V_p95_kcal_mol": null,
+          "V_min_kcal_mol": null,
+          "V_min_at_A": null,
+          "V_max_kcal_mol": null,
+          "V_max_at_A": null
+        },
+        "radius_scaled": {
+          "area_A2": 4.700822734661763,
+          "area_pos_A2": 4.700822734661763,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 4.774768265084721,
+          "V_area_sd_kcal_mol": 1.708971403938475,
+          "V_p05_kcal_mol": 2.2682624049779108,
+          "V_p50_kcal_mol": 4.906163982573227,
+          "V_p95_kcal_mol": 8.277521365108429,
+          "V_min_kcal_mol": 1.9278042917328044,
+          "V_min_at_A": [
+            1.5728156952299095,
+            -3.2244785951415142,
+            -1.9953180171959204
+          ],
+          "V_max_kcal_mol": 10.544763304359742,
+          "V_max_at_A": [
+            0.8848857247640813,
+            -0.8248866179243305,
+            -0.3442851796850461
+          ]
+        },
+        "delta": {
+          "area_A2": 4.700822734661763,
+          "V_area_mean_kcal_mol": null,
+          "V_p05_kcal_mol": null,
+          "V_p95_kcal_mol": null,
+          "V_min_kcal_mol": null,
+          "V_max_kcal_mol": null
+        }
+      },
+      {
+        "index": 12,
+        "atom_map": 9,
+        "element": "C",
+        "parent": null,
+        "h_source": null,
+        "nearest_nucleus": {
+          "area_A2": 0.0,
+          "area_pos_A2": 0.0,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": null,
+          "V_area_sd_kcal_mol": null,
+          "V_p05_kcal_mol": null,
+          "V_p50_kcal_mol": null,
+          "V_p95_kcal_mol": null,
+          "V_min_kcal_mol": null,
+          "V_min_at_A": null,
+          "V_max_kcal_mol": null,
+          "V_max_at_A": null
+        },
+        "radius_scaled": {
+          "area_A2": 4.974207170105338,
+          "area_pos_A2": 4.974207170105338,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 4.462240487830738,
+          "V_area_sd_kcal_mol": 1.6752882860914475,
+          "V_p05_kcal_mol": 1.7283166063768232,
+          "V_p50_kcal_mol": 4.614812512526517,
+          "V_p95_kcal_mol": 6.970909555241698,
+          "V_min_kcal_mol": 1.3930468030882084,
+          "V_min_at_A": [
+            -1.866835671087376,
+            -2.5538065755365023,
+            -3.461974350475553
+          ],
+          "V_max_kcal_mol": 7.344579809243728,
+          "V_max_at_A": [
+            -0.21580283357650157,
+            -2.278634183619999,
+            -0.3803953109229905
+          ]
+        },
+        "delta": {
+          "area_A2": 4.974207170105338,
+          "V_area_mean_kcal_mol": null,
+          "V_p05_kcal_mol": null,
+          "V_p95_kcal_mol": null,
+          "V_min_kcal_mol": null,
+          "V_max_kcal_mol": null
+        }
+      },
+      {
+        "index": 13,
+        "atom_map": 10,
+        "element": "C",
+        "parent": null,
+        "h_source": null,
+        "nearest_nucleus": {
+          "area_A2": 0.0,
+          "area_pos_A2": 0.0,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": null,
+          "V_area_sd_kcal_mol": null,
+          "V_p05_kcal_mol": null,
+          "V_p50_kcal_mol": null,
+          "V_p95_kcal_mol": null,
+          "V_min_kcal_mol": null,
+          "V_min_at_A": null,
+          "V_max_kcal_mol": null,
+          "V_max_at_A": null
+        },
+        "radius_scaled": {
+          "area_A2": 4.929330468709195,
+          "area_pos_A2": 4.929330468709195,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 5.141696475727185,
+          "V_area_sd_kcal_mol": 1.3952986743468707,
+          "V_p05_kcal_mol": 2.8123367186981647,
+          "V_p50_kcal_mol": 5.169288772104919,
+          "V_p95_kcal_mol": 7.010714431510714,
+          "V_min_kcal_mol": 2.455378342255208,
+          "V_min_at_A": [
+            -0.6285614214512563,
+            0.1979148203149548,
+            0.31512680542552085
+          ],
+          "V_max_kcal_mol": 8.145169640263022,
+          "V_max_at_A": [
+            0.47212713688932656,
+            -1.1779456252794163,
+            -0.2227861170890848
+          ]
+        },
+        "delta": {
+          "area_A2": 4.929330468709195,
+          "V_area_mean_kcal_mol": null,
+          "V_p05_kcal_mol": null,
+          "V_p95_kcal_mol": null,
+          "V_min_kcal_mol": null,
+          "V_max_kcal_mol": null
+        }
+      },
+      {
+        "index": 14,
+        "atom_map": 11,
+        "element": "C",
+        "parent": null,
+        "h_source": null,
+        "nearest_nucleus": {
+          "area_A2": 0.0,
+          "area_pos_A2": 0.0,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": null,
+          "V_area_sd_kcal_mol": null,
+          "V_p05_kcal_mol": null,
+          "V_p50_kcal_mol": null,
+          "V_p95_kcal_mol": null,
+          "V_min_kcal_mol": null,
+          "V_min_at_A": null,
+          "V_max_kcal_mol": null,
+          "V_max_at_A": null
+        },
+        "radius_scaled": {
+          "area_A2": 3.6196195633552106,
+          "area_pos_A2": 3.5925427682092366,
+          "area_neg_A2": 0.02707679514597369,
+          "V_area_mean_kcal_mol": 4.957992387665844,
+          "V_area_sd_kcal_mol": 1.181232106481896,
+          "V_p05_kcal_mol": 3.271970749545355,
+          "V_p50_kcal_mol": 5.005416532408199,
+          "V_p95_kcal_mol": 6.950703752410228,
+          "V_min_kcal_mol": -1.4343015597979198,
+          "V_min_at_A": [
+            -4.756143262897084,
+            -0.9027737380256281,
+            -2.0772717094537363
+          ],
+          "V_max_kcal_mol": 7.520260127647602,
+          "V_max_at_A": [
+            -2.2795937542994156,
+            -1.4531180171959195,
+            0.7946820455793286
+          ]
+        },
+        "delta": {
+          "area_A2": 3.6196195633552106,
+          "V_area_mean_kcal_mol": null,
+          "V_p05_kcal_mol": null,
+          "V_p95_kcal_mol": null,
+          "V_min_kcal_mol": null,
+          "V_max_kcal_mol": null
+        }
+      },
+      {
+        "index": 15,
+        "atom_map": 12,
+        "element": "C",
+        "parent": null,
+        "h_source": null,
+        "nearest_nucleus": {
+          "area_A2": 0.0,
+          "area_pos_A2": 0.0,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": null,
+          "V_area_sd_kcal_mol": null,
+          "V_p05_kcal_mol": null,
+          "V_p50_kcal_mol": null,
+          "V_p95_kcal_mol": null,
+          "V_min_kcal_mol": null,
+          "V_min_at_A": null,
+          "V_max_kcal_mol": null,
+          "V_max_at_A": null
+        },
+        "radius_scaled": {
+          "area_A2": 5.176545524862841,
+          "area_pos_A2": 4.555345911251189,
+          "area_neg_A2": 0.6211996136116519,
+          "V_area_mean_kcal_mol": 3.8458415783880744,
+          "V_area_sd_kcal_mol": 2.603415359877508,
+          "V_p05_kcal_mol": -1.5231503404557014,
+          "V_p50_kcal_mol": 4.547208507645884,
+          "V_p95_kcal_mol": 6.82021256126265,
+          "V_min_kcal_mol": -5.132076392136061,
+          "V_min_at_A": [
+            -4.756143262897084,
+            -1.7282899044497078,
+            -2.2305680557262613
+          ],
+          "V_max_kcal_mol": 7.2430362969234094,
+          "V_max_at_A": [
+            -4.068212787768542,
+            -3.6970885408474388,
+            -0.20669898372679457
+          ]
+        },
+        "delta": {
+          "area_A2": 5.176545524862841,
+          "V_area_mean_kcal_mol": null,
+          "V_p05_kcal_mol": null,
+          "V_p95_kcal_mol": null,
+          "V_min_kcal_mol": null,
+          "V_max_kcal_mol": null
+        }
+      },
+      {
+        "index": 16,
+        "atom_map": 13,
+        "element": "C",
+        "parent": null,
+        "h_source": null,
+        "nearest_nucleus": {
+          "area_A2": 2.5890419890116227,
+          "area_pos_A2": 0.0,
+          "area_neg_A2": 2.5890419890116227,
+          "V_area_mean_kcal_mol": -12.22036262505671,
+          "V_area_sd_kcal_mol": 3.2921382308307923,
+          "V_p05_kcal_mol": -17.09762758737614,
+          "V_p50_kcal_mol": -12.49586531967026,
+          "V_p95_kcal_mol": -6.683855982578426,
+          "V_min_kcal_mol": -17.82904501188042,
+          "V_min_at_A": [
+            -5.994418017195919,
+            -2.0884803006287895,
+            -2.270489904449709
+          ],
+          "V_max_kcal_mol": -2.908193865358461,
+          "V_max_at_A": [
+            -5.031315654813588,
+            -3.104150854706794,
+            -1.8707309234475968
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 9.868277355766608,
+          "area_pos_A2": 1.5116732863518756,
+          "area_neg_A2": 8.356604069414733,
+          "V_area_mean_kcal_mol": -6.747361399458005,
+          "V_area_sd_kcal_mol": 5.903948227645802,
+          "V_p05_kcal_mol": -15.606073327988334,
+          "V_p50_kcal_mol": -6.861662339164845,
+          "V_p95_kcal_mol": 3.7265340607181945,
+          "V_min_kcal_mol": -17.82904501188042,
+          "V_min_at_A": [
+            -5.994418017195919,
+            -2.0884803006287895,
+            -2.270489904449709
+          ],
+          "V_max_kcal_mol": 7.143074298064884,
+          "V_max_at_A": [
+            -4.205798983726793,
+            -3.7174771668600246,
+            -0.06911278776854299
+          ]
+        },
+        "delta": {
+          "area_A2": 7.279235366754985,
+          "V_area_mean_kcal_mol": 5.473001225598705,
+          "V_p05_kcal_mol": 1.491554259387808,
+          "V_p95_kcal_mol": 10.410390043296621,
+          "V_min_kcal_mol": 0.0,
+          "V_max_kcal_mol": 10.051268163423345
+        }
+      },
+      {
+        "index": 17,
+        "atom_map": 14,
+        "element": "C",
+        "parent": null,
+        "h_source": null,
+        "nearest_nucleus": {
+          "area_A2": 1.71340446745947,
+          "area_pos_A2": 0.0,
+          "area_neg_A2": 1.71340446745947,
+          "V_area_mean_kcal_mol": -13.53102264380072,
+          "V_area_sd_kcal_mol": 2.8833805765224616,
+          "V_p05_kcal_mol": -17.410843946908773,
+          "V_p50_kcal_mol": -13.946569513487816,
+          "V_p95_kcal_mol": -8.351430652918944,
+          "V_min_kcal_mol": -17.82904501188042,
+          "V_min_at_A": [
+            -5.994418017195919,
+            -2.0884803006287895,
+            -2.270489904449709
+          ],
+          "V_max_kcal_mol": -4.97886329716632,
+          "V_max_at_A": [
+            -7.071676347341323,
+            -1.3155318212376679,
+            -1.9953180171959204
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 7.751942609622143,
+          "area_pos_A2": 0.9521292038688902,
+          "area_neg_A2": 6.7998134057532535,
+          "V_area_mean_kcal_mol": -7.200003860144213,
+          "V_area_sd_kcal_mol": 5.808353265721195,
+          "V_p05_kcal_mol": -16.18017430827997,
+          "V_p50_kcal_mol": -7.367156284269309,
+          "V_p95_kcal_mol": 3.0238457844274707,
+          "V_min_kcal_mol": -17.82904501188042,
+          "V_min_at_A": [
+            -5.994418017195919,
+            -2.0884803006287895,
+            -2.270489904449709
+          ],
+          "V_max_kcal_mol": 7.163734439025063,
+          "V_max_at_A": [
+            -7.894281114563249,
+            -0.3524294588553366,
+            -0.6194570669388344
+          ]
+        },
+        "delta": {
+          "area_A2": 6.038538142162673,
+          "V_area_mean_kcal_mol": 6.331018783656506,
+          "V_p05_kcal_mol": 1.2306696386288039,
+          "V_p95_kcal_mol": 11.375276437346415,
+          "V_min_kcal_mol": 0.0,
+          "V_max_kcal_mol": 12.142597736191384
+        }
+      },
+      {
+        "index": 18,
+        "atom_map": 15,
+        "element": "C",
+        "parent": null,
+        "h_source": null,
+        "nearest_nucleus": {
+          "area_A2": 0.0,
+          "area_pos_A2": 0.0,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": null,
+          "V_area_sd_kcal_mol": null,
+          "V_p05_kcal_mol": null,
+          "V_p50_kcal_mol": null,
+          "V_p95_kcal_mol": null,
+          "V_min_kcal_mol": null,
+          "V_min_at_A": null,
+          "V_max_kcal_mol": null,
+          "V_max_at_A": null
+        },
+        "radius_scaled": {
+          "area_A2": 5.257462897457758,
+          "area_pos_A2": 3.938200355384332,
+          "area_neg_A2": 1.3192625420734259,
+          "V_area_mean_kcal_mol": 1.9089312988565088,
+          "V_area_sd_kcal_mol": 3.018040948647897,
+          "V_p05_kcal_mol": -3.59461860762009,
+          "V_p50_kcal_mol": 2.1889446923392906,
+          "V_p95_kcal_mol": 6.4298367350168055,
+          "V_min_kcal_mol": -7.731717786899698,
+          "V_min_at_A": [
+            -5.719245625279416,
+            -0.9027737380256281,
+            -2.3200813431216507
+          ],
+          "V_max_kcal_mol": 7.163734439025063,
+          "V_max_at_A": [
+            -7.894281114563249,
+            -0.3524294588553366,
+            -0.6194570669388344
+          ]
+        },
+        "delta": {
+          "area_A2": 5.257462897457758,
+          "V_area_mean_kcal_mol": null,
+          "V_p05_kcal_mol": null,
+          "V_p95_kcal_mol": null,
+          "V_min_kcal_mol": null,
+          "V_max_kcal_mol": null
+        }
+      },
+      {
+        "index": 19,
+        "atom_map": 16,
+        "element": "C",
+        "parent": null,
+        "h_source": null,
+        "nearest_nucleus": {
+          "area_A2": 0.0,
+          "area_pos_A2": 0.0,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": null,
+          "V_area_sd_kcal_mol": null,
+          "V_p05_kcal_mol": null,
+          "V_p50_kcal_mol": null,
+          "V_p95_kcal_mol": null,
+          "V_min_kcal_mol": null,
+          "V_min_at_A": null,
+          "V_max_kcal_mol": null,
+          "V_max_at_A": null
+        },
+        "radius_scaled": {
+          "area_A2": 5.0118712413171185,
+          "area_pos_A2": 4.591042947471233,
+          "area_neg_A2": 0.4208282938458856,
+          "V_area_mean_kcal_mol": 2.464063586523252,
+          "V_area_sd_kcal_mol": 1.9163666358843479,
+          "V_p05_kcal_mol": -0.16799816035770113,
+          "V_p50_kcal_mol": 2.02713179771993,
+          "V_p95_kcal_mol": 5.615920087398881,
+          "V_min_kcal_mol": -2.2261228234762602,
+          "V_min_at_A": [
+            -6.682348239993105,
+            -0.5637201303339446,
+            1.3067476578258281
+          ],
+          "V_max_kcal_mol": 5.979830144480425,
+          "V_max_at_A": [
+            -4.922893917148361,
+            1.848947657825829,
+            -0.6194570669388344
+          ]
+        },
+        "delta": {
+          "area_A2": 5.0118712413171185,
+          "V_area_mean_kcal_mol": null,
+          "V_p05_kcal_mol": null,
+          "V_p95_kcal_mol": null,
+          "V_min_kcal_mol": null,
+          "V_max_kcal_mol": null
+        }
+      },
+      {
+        "index": 20,
+        "atom_map": 17,
+        "element": "C",
+        "parent": null,
+        "h_source": null,
+        "nearest_nucleus": {
+          "area_A2": 0.0,
+          "area_pos_A2": 0.0,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": null,
+          "V_area_sd_kcal_mol": null,
+          "V_p05_kcal_mol": null,
+          "V_p50_kcal_mol": null,
+          "V_p95_kcal_mol": null,
+          "V_min_kcal_mol": null,
+          "V_min_at_A": null,
+          "V_max_kcal_mol": null,
+          "V_max_at_A": null
+        },
+        "radius_scaled": {
+          "area_A2": 5.115046335344661,
+          "area_pos_A2": 3.9713519315481505,
+          "area_neg_A2": 1.1436944037965107,
+          "V_area_mean_kcal_mol": 1.8168781303218933,
+          "V_area_sd_kcal_mol": 2.3514973124743217,
+          "V_p05_kcal_mol": -2.2276552075530596,
+          "V_p50_kcal_mol": 2.0598378967085544,
+          "V_p95_kcal_mol": 5.075569525740616,
+          "V_min_kcal_mol": -7.917752857882886,
+          "V_min_at_A": [
+            -4.586043666869852,
+            -0.6276013461091249,
+            0.8939895746137884
+          ],
+          "V_max_kcal_mol": 5.493306191450945,
+          "V_max_at_A": [
+            -5.031315654813588,
+            2.1241200497423325,
+            -0.1672989562505351
+          ]
+        },
+        "delta": {
+          "area_A2": 5.115046335344661,
+          "V_area_mean_kcal_mol": null,
+          "V_p05_kcal_mol": null,
+          "V_p95_kcal_mol": null,
+          "V_min_kcal_mol": null,
+          "V_max_kcal_mol": null
+        }
+      },
+      {
+        "index": 21,
+        "atom_map": 18,
+        "element": "C",
+        "parent": null,
+        "h_source": null,
+        "nearest_nucleus": {
+          "area_A2": 0.0,
+          "area_pos_A2": 0.0,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": null,
+          "V_area_sd_kcal_mol": null,
+          "V_p05_kcal_mol": null,
+          "V_p50_kcal_mol": null,
+          "V_p95_kcal_mol": null,
+          "V_min_kcal_mol": null,
+          "V_min_at_A": null,
+          "V_max_kcal_mol": null,
+          "V_max_at_A": null
+        },
+        "radius_scaled": {
+          "area_A2": 11.220451259848394,
+          "area_pos_A2": 5.348786359815859,
+          "area_neg_A2": 5.871664900032535,
+          "V_area_mean_kcal_mol": 0.22735232292555516,
+          "V_area_sd_kcal_mol": 1.85398388321455,
+          "V_p05_kcal_mol": -1.9721764772330097,
+          "V_p50_kcal_mol": -0.27426319975316327,
+          "V_p95_kcal_mol": 3.3673438333955263,
+          "V_min_kcal_mol": -2.2841855247661242,
+          "V_min_at_A": [
+            -6.682348239993105,
+            2.3992919369961205,
+            4.265334842471809
+          ],
+          "V_max_kcal_mol": 4.916822651058783,
+          "V_max_at_A": [
+            -5.856831821237668,
+            3.0872224121246634,
+            0.7741881973906897
+          ]
+        },
+        "delta": {
+          "area_A2": 11.220451259848394,
+          "V_area_mean_kcal_mol": null,
+          "V_p05_kcal_mol": null,
+          "V_p95_kcal_mol": null,
+          "V_min_kcal_mol": null,
+          "V_max_kcal_mol": null
+        }
+      },
+      {
+        "index": 22,
+        "atom_map": null,
+        "element": "H",
+        "parent": 0,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 12.520352564893294,
+          "area_pos_A2": 12.044589332399896,
+          "area_neg_A2": 0.4757632324933972,
+          "V_area_mean_kcal_mol": 11.424018495579238,
+          "V_area_sd_kcal_mol": 4.985440190534326,
+          "V_p05_kcal_mol": 2.0180782052924915,
+          "V_p50_kcal_mol": 11.895990064808693,
+          "V_p95_kcal_mol": 18.088139369385527,
+          "V_min_kcal_mol": -11.91435821821378,
+          "V_min_at_A": [
+            8.45212044651534,
+            -0.17170217071540608,
+            2.6826086080829143
+          ],
+          "V_max_kcal_mol": 19.15474912344799,
+          "V_max_at_A": [
+            10.17784487981688,
+            0.7482590994852463,
+            3.508124774506994
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 7.857952254200237,
+          "area_pos_A2": 7.857952254200237,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 13.385530828212028,
+          "V_area_sd_kcal_mol": 3.4409882352056687,
+          "V_p05_kcal_mol": 7.181105270929707,
+          "V_p50_kcal_mol": 13.835138726311007,
+          "V_p95_kcal_mol": 18.34338703449931,
+          "V_min_kcal_mol": -0.722223469113949,
+          "V_min_at_A": [
+            8.589705633148162,
+            0.3355010162732064,
+            3.053136010650922
+          ],
+          "V_max_kcal_mol": 19.15474912344799,
+          "V_max_at_A": [
+            10.17784487981688,
+            0.7482590994852463,
+            3.508124774506994
+          ]
+        },
+        "delta": {
+          "area_A2": -4.662400310693057,
+          "V_area_mean_kcal_mol": 1.9615123326327897,
+          "V_p05_kcal_mol": 5.163027065637215,
+          "V_p95_kcal_mol": 0.25524766511378516,
+          "V_min_kcal_mol": 11.19213474909983,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 23,
+        "atom_map": null,
+        "element": "H",
+        "parent": 0,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 12.593122358448483,
+          "area_pos_A2": 12.152105565437424,
+          "area_neg_A2": 0.44101679301105917,
+          "V_area_mean_kcal_mol": 11.403665290843804,
+          "V_area_sd_kcal_mol": 4.990331860015874,
+          "V_p05_kcal_mol": 1.83519741355021,
+          "V_p50_kcal_mol": 11.816406571643206,
+          "V_p95_kcal_mol": 18.099223044871664,
+          "V_min_kcal_mol": -12.252176189572152,
+          "V_min_at_A": [
+            8.039360849315155,
+            -0.3524294588553366,
+            1.1487963026712324
+          ],
+          "V_max_kcal_mol": 19.117356037177153,
+          "V_max_at_A": [
+            9.41522280889767,
+            0.09124981356023193,
+            -0.3442851796850461
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 7.882835246500587,
+          "area_pos_A2": 7.882835246500587,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 13.349318008920768,
+          "V_area_sd_kcal_mol": 3.4940396691052116,
+          "V_p05_kcal_mol": 6.869396816274421,
+          "V_p50_kcal_mol": 13.804418185148313,
+          "V_p95_kcal_mol": 18.428988757921665,
+          "V_min_kcal_mol": -1.5494210605396923,
+          "V_min_at_A": [
+            8.176948054598837,
+            -0.10360348863195779,
+            0.8939895746137884
+          ],
+          "V_max_kcal_mol": 19.117356037177153,
+          "V_max_at_A": [
+            9.41522280889767,
+            0.09124981356023193,
+            -0.3442851796850461
+          ]
+        },
+        "delta": {
+          "area_A2": -4.7102871119478955,
+          "V_area_mean_kcal_mol": 1.945652718076964,
+          "V_p05_kcal_mol": 5.0341994027242105,
+          "V_p95_kcal_mol": 0.32976571305000135,
+          "V_min_kcal_mol": 10.70275512903246,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 24,
+        "atom_map": null,
+        "element": "H",
+        "parent": 0,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 12.440134537980978,
+          "area_pos_A2": 10.547446842906657,
+          "area_neg_A2": 1.8926876950743199,
+          "V_area_mean_kcal_mol": 5.776337495964364,
+          "V_area_sd_kcal_mol": 7.336377218656582,
+          "V_p05_kcal_mol": -11.467415804340868,
+          "V_p50_kcal_mol": 8.073140078976875,
+          "V_p95_kcal_mol": 13.082488111828889,
+          "V_min_kcal_mol": -27.804437077505487,
+          "V_min_at_A": [
+            8.864878025064664,
+            3.7722727771393756,
+            1.3067476578258281
+          ],
+          "V_max_kcal_mol": 14.162218143308678,
+          "V_max_at_A": [
+            10.791082749829327,
+            3.0872224121246634,
+            1.0461332712455231
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 7.745083711618457,
+          "area_pos_A2": 6.914275065533142,
+          "area_neg_A2": 0.8308086460853139,
+          "V_area_mean_kcal_mol": 7.5379075805912965,
+          "V_area_sd_kcal_mol": 5.538774841794074,
+          "V_p05_kcal_mol": -5.199470619565443,
+          "V_p50_kcal_mol": 9.050894730591315,
+          "V_p95_kcal_mol": 13.448672829012333,
+          "V_min_kcal_mol": -18.11162003940131,
+          "V_min_at_A": [
+            9.002463211697487,
+            3.4926633906336306,
+            1.0315757705720399
+          ],
+          "V_max_kcal_mol": 14.162218143308678,
+          "V_max_at_A": [
+            10.791082749829327,
+            3.0872224121246634,
+            1.0461332712455231
+          ]
+        },
+        "delta": {
+          "area_A2": -4.695050826362521,
+          "V_area_mean_kcal_mol": 1.7615700846269329,
+          "V_p05_kcal_mol": 6.267945184775425,
+          "V_p95_kcal_mol": 0.3661847171834438,
+          "V_min_kcal_mol": 9.692817038104177,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 25,
+        "atom_map": null,
+        "element": "H",
+        "parent": 4,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 11.29642158676268,
+          "area_pos_A2": 8.671933734698339,
+          "area_neg_A2": 2.62448785206434,
+          "V_area_mean_kcal_mol": 3.728321378687312,
+          "V_area_sd_kcal_mol": 9.765473840835336,
+          "V_p05_kcal_mol": -19.339845057743574,
+          "V_p50_kcal_mol": 7.654188264991578,
+          "V_p95_kcal_mol": 12.569190747262176,
+          "V_min_kcal_mol": -31.30757509020149,
+          "V_min_at_A": [
+            5.974618134711974,
+            3.4999809999994183,
+            2.1322643289126226
+          ],
+          "V_max_kcal_mol": 14.06043376234027,
+          "V_max_at_A": [
+            4.324537595744082,
+            1.1610176873600009,
+            3.151407971794444
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 6.699163584304007,
+          "area_pos_A2": 5.386942824258041,
+          "area_neg_A2": 1.312220760045966,
+          "V_area_mean_kcal_mol": 5.3455372967798365,
+          "V_area_sd_kcal_mol": 7.395257446277851,
+          "V_p05_kcal_mol": -11.047764601320223,
+          "V_p50_kcal_mol": 7.882926802634169,
+          "V_p95_kcal_mol": 12.529592629017145,
+          "V_min_kcal_mol": -24.398949347224125,
+          "V_min_at_A": [
+            5.975569928592241,
+            3.3418035559485557,
+            2.407436216166411
+          ],
+          "V_max_kcal_mol": 12.850178607791083,
+          "V_max_at_A": [
+            4.599708978335155,
+            2.2530548127793635,
+            3.3705385785487425
+          ]
+        },
+        "delta": {
+          "area_A2": -4.597258002458672,
+          "V_area_mean_kcal_mol": 1.6172159180925245,
+          "V_p05_kcal_mol": 8.292080456423351,
+          "V_p95_kcal_mol": -0.039598118245031344,
+          "V_min_kcal_mol": 6.908625742977364,
+          "V_max_kcal_mol": -1.2102551545491878
+        }
+      },
+      {
+        "index": 26,
+        "atom_map": null,
+        "element": "H",
+        "parent": 4,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 11.63029007299478,
+          "area_pos_A2": 10.916593531416911,
+          "area_neg_A2": 0.7136965415778688,
+          "V_area_mean_kcal_mol": 10.58965387230364,
+          "V_area_sd_kcal_mol": 5.359541797884138,
+          "V_p05_kcal_mol": -1.0548853404323202,
+          "V_p50_kcal_mol": 11.855777233269679,
+          "V_p95_kcal_mol": 16.971230638838907,
+          "V_min_kcal_mol": -10.553172140305865,
+          "V_min_at_A": [
+            7.076258486932824,
+            -0.4509431534392871,
+            3.232952382590491
+          ],
+          "V_max_kcal_mol": 17.72094188357338,
+          "V_max_at_A": [
+            4.880182347408778,
+            -0.4900156548135882,
+            3.9208833623817485
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 7.541390211109034,
+          "area_pos_A2": 7.541390211109034,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 13.044325985880334,
+          "V_area_sd_kcal_mol": 3.195492591538339,
+          "V_p05_kcal_mol": 6.747364264891858,
+          "V_p50_kcal_mol": 13.56629979016362,
+          "V_p95_kcal_mol": 17.217417400584363,
+          "V_min_kcal_mol": 0.26671502976547423,
+          "V_min_at_A": [
+            6.663500908383499,
+            -0.5039463643951881,
+            3.232952382590491
+          ],
+          "V_max_kcal_mol": 17.72094188357338,
+          "V_max_at_A": [
+            4.880182347408778,
+            -0.4900156548135882,
+            3.9208833623817485
+          ]
+        },
+        "delta": {
+          "area_A2": -4.088899861885746,
+          "V_area_mean_kcal_mol": 2.454672113576695,
+          "V_p05_kcal_mol": 7.802249605324178,
+          "V_p95_kcal_mol": 0.24618676174545584,
+          "V_min_kcal_mol": 10.81988717007134,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 27,
+        "atom_map": null,
+        "element": "H",
+        "parent": 5,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 10.733854334403315,
+          "area_pos_A2": 6.799474398318029,
+          "area_neg_A2": 3.934379936085286,
+          "V_area_mean_kcal_mol": 2.2343707470189407,
+          "V_area_sd_kcal_mol": 5.925981836704963,
+          "V_p05_kcal_mol": -7.841263620668997,
+          "V_p50_kcal_mol": 2.844860184280439,
+          "V_p95_kcal_mol": 10.166946794958491,
+          "V_min_kcal_mol": -19.223553337568756,
+          "V_min_at_A": [
+            6.113156124550493,
+            2.6744643289126238,
+            0.6163347468027811
+          ],
+          "V_max_kcal_mol": 11.207106332379468,
+          "V_max_at_A": [
+            5.532907046884445,
+            1.848947657825829,
+            -0.757043262897086
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 6.275573225773927,
+          "area_pos_A2": 5.677935810413129,
+          "area_neg_A2": 0.5976374153607975,
+          "V_area_mean_kcal_mol": 5.517909317146352,
+          "V_area_sd_kcal_mol": 3.819993302452933,
+          "V_p05_kcal_mol": -1.553813662418974,
+          "V_p50_kcal_mol": 6.3809307215391895,
+          "V_p95_kcal_mol": 10.553743981079768,
+          "V_min_kcal_mol": -14.010733777822248,
+          "V_min_at_A": [
+            5.975569928592241,
+            2.523628718037863,
+            0.7564033786555368
+          ],
+          "V_max_kcal_mol": 11.207106332379468,
+          "V_max_at_A": [
+            5.532907046884445,
+            1.848947657825829,
+            -0.757043262897086
+          ]
+        },
+        "delta": {
+          "area_A2": -4.458281108629388,
+          "V_area_mean_kcal_mol": 3.2835385701274116,
+          "V_p05_kcal_mol": 6.287449958250023,
+          "V_p95_kcal_mol": 0.3867971861212762,
+          "V_min_kcal_mol": 5.212819559746508,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 28,
+        "atom_map": null,
+        "element": "H",
+        "parent": 6,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 12.454079801684685,
+          "area_pos_A2": 11.010241967878391,
+          "area_neg_A2": 1.4438378338062912,
+          "V_area_mean_kcal_mol": 8.805752801968483,
+          "V_area_sd_kcal_mol": 6.104317448690537,
+          "V_p05_kcal_mol": -3.3751249497719775,
+          "V_p50_kcal_mol": 10.633690083143591,
+          "V_p95_kcal_mol": 15.971739987284616,
+          "V_min_kcal_mol": -11.068689226816586,
+          "V_min_at_A": [
+            5.700398546001168,
+            -1.3610453328420067,
+            1.1691614618675765
+          ],
+          "V_max_kcal_mol": 16.733667964780338,
+          "V_max_at_A": [
+            3.769895104231141,
+            -1.7282899044497078,
+            2.820194804041166
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 7.55803421690165,
+          "area_pos_A2": 7.55803421690165,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 12.39954712787693,
+          "V_area_sd_kcal_mol": 2.995173610344275,
+          "V_p05_kcal_mol": 6.61158651018546,
+          "V_p50_kcal_mol": 12.977941370743919,
+          "V_p95_kcal_mol": 16.249386374937664,
+          "V_min_kcal_mol": 2.36683949529742,
+          "V_min_at_A": [
+            5.150053762168161,
+            -1.580831748794294,
+            1.9946781329543712
+          ],
+          "V_max_kcal_mol": 16.733667964780338,
+          "V_max_at_A": [
+            3.769895104231141,
+            -1.7282899044497078,
+            2.820194804041166
+          ]
+        },
+        "delta": {
+          "area_A2": -4.896045584783035,
+          "V_area_mean_kcal_mol": 3.5937943259084477,
+          "V_p05_kcal_mol": 9.986711459957437,
+          "V_p95_kcal_mol": 0.27764638765304817,
+          "V_min_kcal_mol": 13.435528722114006,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 29,
+        "atom_map": null,
+        "element": "H",
+        "parent": 7,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 8.869329305812435,
+          "area_pos_A2": 8.676720598578436,
+          "area_neg_A2": 0.19260870723399984,
+          "V_area_mean_kcal_mol": 9.813304592660899,
+          "V_area_sd_kcal_mol": 3.3621645762929853,
+          "V_p05_kcal_mol": 2.5673435255032016,
+          "V_p50_kcal_mol": 10.619270004279615,
+          "V_p95_kcal_mol": 13.773195885471523,
+          "V_min_kcal_mol": -4.172196931185225,
+          "V_min_at_A": [
+            2.7678953584365726,
+            0.8858452954434978,
+            1.0315757705720399
+          ],
+          "V_max_kcal_mol": 14.353757905003446,
+          "V_max_at_A": [
+            1.1600581166805846,
+            -0.45278416302317626,
+            0.61881768736
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 6.165851813988416,
+          "area_pos_A2": 6.165851813988416,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 11.264263402702554,
+          "V_area_sd_kcal_mol": 1.841032364471907,
+          "V_p05_kcal_mol": 7.759397030291662,
+          "V_p50_kcal_mol": 11.415055294625658,
+          "V_p95_kcal_mol": 13.897433524711687,
+          "V_min_kcal_mol": 5.171354750372347,
+          "V_min_at_A": [
+            2.2607466750211676,
+            0.44136209532312237,
+            0.8939895746137884
+          ],
+          "V_max_kcal_mol": 14.353757905003446,
+          "V_max_at_A": [
+            1.1600581166805846,
+            -0.45278416302317626,
+            0.61881768736
+          ]
+        },
+        "delta": {
+          "area_A2": -2.703477491824019,
+          "V_area_mean_kcal_mol": 1.450958810041655,
+          "V_p05_kcal_mol": 5.192053504788461,
+          "V_p95_kcal_mol": 0.12423763924016384,
+          "V_min_kcal_mol": 9.343551681557573,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 30,
+        "atom_map": null,
+        "element": "H",
+        "parent": 7,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 10.337640151685243,
+          "area_pos_A2": 10.138281230132801,
+          "area_neg_A2": 0.19935892155244303,
+          "V_area_mean_kcal_mol": 9.280094315274797,
+          "V_area_sd_kcal_mol": 3.0590695783839594,
+          "V_p05_kcal_mol": 2.929741000418364,
+          "V_p50_kcal_mol": 9.73989829252659,
+          "V_p95_kcal_mol": 13.236298283735735,
+          "V_min_kcal_mol": -5.238529758833996,
+          "V_min_at_A": [
+            5.269898035722025,
+            -1.3155318212376679,
+            -0.06911278776854299
+          ],
+          "V_max_kcal_mol": 13.957409582683587,
+          "V_max_at_A": [
+            3.774192811911075,
+            -2.9665646587485424,
+            -0.5731325623516804
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 7.538790209687303,
+          "area_pos_A2": 7.538790209687303,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 10.387197960868946,
+          "V_area_sd_kcal_mol": 1.905618076174275,
+          "V_p05_kcal_mol": 7.197381602919601,
+          "V_p50_kcal_mol": 10.379906736982825,
+          "V_p95_kcal_mol": 13.371180585969183,
+          "V_min_kcal_mol": 4.149019938707143,
+          "V_min_at_A": [
+            4.805353988022379,
+            -1.8658761004079594,
+            -0.20669898372679457
+          ],
+          "V_max_kcal_mol": 13.957409582683587,
+          "V_max_at_A": [
+            3.774192811911075,
+            -2.9665646587485424,
+            -0.5731325623516804
+          ]
+        },
+        "delta": {
+          "area_A2": -2.79884994199794,
+          "V_area_mean_kcal_mol": 1.1071036455941492,
+          "V_p05_kcal_mol": 4.2676406025012374,
+          "V_p95_kcal_mol": 0.13488230223344821,
+          "V_min_kcal_mol": 9.38754969754114,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 31,
+        "atom_map": null,
+        "element": "H",
+        "parent": 8,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 9.797870785969238,
+          "area_pos_A2": 9.471818797280765,
+          "area_neg_A2": 0.32605198868847285,
+          "V_area_mean_kcal_mol": 5.832521406256006,
+          "V_area_sd_kcal_mol": 2.6569902639365077,
+          "V_p05_kcal_mol": 1.2813419829764463,
+          "V_p50_kcal_mol": 6.339692389821124,
+          "V_p95_kcal_mol": 9.1603786125721,
+          "V_min_kcal_mol": -6.92378332696354,
+          "V_min_at_A": [
+            3.3142815679340454,
+            1.4361895746137892,
+            0.61881768736
+          ],
+          "V_max_kcal_mol": 9.790366877392849,
+          "V_max_at_A": [
+            2.811090449528744,
+            2.2617062457005837,
+            -1.2397551683324801
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 7.5130038267916905,
+          "area_pos_A2": 7.5130038267916905,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 6.56846023774369,
+          "V_area_sd_kcal_mol": 1.9670617115082873,
+          "V_p05_kcal_mol": 3.0134307513169034,
+          "V_p50_kcal_mol": 6.899305148123349,
+          "V_p95_kcal_mol": 9.265298834107767,
+          "V_min_kcal_mol": -0.4844821372665723,
+          "V_min_at_A": [
+            3.6366066159528234,
+            1.6065248481288719,
+            0.06847290352699371
+          ],
+          "V_max_kcal_mol": 9.790366877392849,
+          "V_max_at_A": [
+            2.811090449528744,
+            2.2617062457005837,
+            -1.2397551683324801
+          ]
+        },
+        "delta": {
+          "area_A2": -2.2848669591775472,
+          "V_area_mean_kcal_mol": 0.735938831487684,
+          "V_p05_kcal_mol": 1.732088768340457,
+          "V_p95_kcal_mol": 0.10492022153566793,
+          "V_min_kcal_mol": 6.439301189696968,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 32,
+        "atom_map": null,
+        "element": "H",
+        "parent": 8,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 10.185257063551596,
+          "area_pos_A2": 9.59334721959463,
+          "area_neg_A2": 0.5919098439569662,
+          "V_area_mean_kcal_mol": 5.177121469577507,
+          "V_area_sd_kcal_mol": 3.0109418183941457,
+          "V_p05_kcal_mol": -0.9374689389387215,
+          "V_p50_kcal_mol": 5.769298804937196,
+          "V_p95_kcal_mol": 8.884409263850982,
+          "V_min_kcal_mol": -9.875303965641661,
+          "V_min_at_A": [
+            5.700398546001168,
+            -0.6276013461091249,
+            -0.2367718349066068
+          ],
+          "V_max_kcal_mol": 9.479115999182662,
+          "V_max_at_A": [
+            5.700398546001168,
+            -0.20179722705467312,
+            -2.270489904449709
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 7.366188541399833,
+          "area_pos_A2": 7.266369447361754,
+          "area_neg_A2": 0.09981909403807918,
+          "V_area_mean_kcal_mol": 6.067003972541306,
+          "V_area_sd_kcal_mol": 2.069305963805452,
+          "V_p05_kcal_mol": 2.3707409895743097,
+          "V_p50_kcal_mol": 6.232790176399548,
+          "V_p95_kcal_mol": 8.99405569851445,
+          "V_min_kcal_mol": -2.908819422497928,
+          "V_min_at_A": [
+            5.5069946351261185,
+            -0.3524294588553366,
+            -0.6194570669388344
+          ],
+          "V_max_kcal_mol": 9.479115999182662,
+          "V_max_at_A": [
+            5.700398546001168,
+            -0.20179722705467312,
+            -2.270489904449709
+          ]
+        },
+        "delta": {
+          "area_A2": -2.8190685221517633,
+          "V_area_mean_kcal_mol": 0.8898825029637987,
+          "V_p05_kcal_mol": 3.308209928513031,
+          "V_p95_kcal_mol": 0.10964643466346757,
+          "V_min_kcal_mol": 6.966484543143734,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 33,
+        "atom_map": null,
+        "element": "H",
+        "parent": 9,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 10.978018496535016,
+          "area_pos_A2": 10.978018496535016,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 5.7252276333191245,
+          "V_area_sd_kcal_mol": 2.0956708165975604,
+          "V_p05_kcal_mol": 1.9687156006034314,
+          "V_p50_kcal_mol": 5.917936320412708,
+          "V_p95_kcal_mol": 9.048735986518777,
+          "V_min_kcal_mol": 1.0537216695858522,
+          "V_min_at_A": [
+            3.6366066159528234,
+            -0.9027737380256281,
+            -4.320263944432457
+          ],
+          "V_max_kcal_mol": 9.611723518369748,
+          "V_max_at_A": [
+            3.3759755755029275,
+            1.0234314914017495,
+            -4.471867147296553
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 7.958284657118739,
+          "area_pos_A2": 7.958284657118739,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 6.368138054243515,
+          "V_area_sd_kcal_mol": 1.8649497628002172,
+          "V_p05_kcal_mol": 3.0381876130060057,
+          "V_p50_kcal_mol": 6.477953116779637,
+          "V_p95_kcal_mol": 9.197987312374162,
+          "V_min_kcal_mol": 1.2965371450614218,
+          "V_min_at_A": [
+            3.6366066159528234,
+            -0.7651875420673765,
+            -4.395699539230537
+          ],
+          "V_max_kcal_mol": 9.611723518369748,
+          "V_max_at_A": [
+            3.3759755755029275,
+            1.0234314914017495,
+            -4.471867147296553
+          ]
+        },
+        "delta": {
+          "area_A2": -3.0197338394162774,
+          "V_area_mean_kcal_mol": 0.6429104209243901,
+          "V_p05_kcal_mol": 1.0694720124025743,
+          "V_p95_kcal_mol": 0.14925132585538492,
+          "V_min_kcal_mol": 0.2428154754755696,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 34,
+        "atom_map": null,
+        "element": "H",
+        "parent": 9,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 9.677870832526116,
+          "area_pos_A2": 9.677870832526116,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 6.753132027976296,
+          "V_area_sd_kcal_mol": 2.340365077446546,
+          "V_p05_kcal_mol": 2.434187892012961,
+          "V_p50_kcal_mol": 6.898287016210616,
+          "V_p95_kcal_mol": 10.181379033817263,
+          "V_min_kcal_mol": 1.0537216695858522,
+          "V_min_at_A": [
+            3.6366066159528234,
+            -0.9027737380256281,
+            -4.320263944432457
+          ],
+          "V_max_kcal_mol": 10.792551774405736,
+          "V_max_at_A": [
+            3.5593336703755374,
+            -2.5538065755365023,
+            -3.2335925191633974
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 7.280881505903819,
+          "area_pos_A2": 7.280881505903819,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 7.523692894202748,
+          "V_area_sd_kcal_mol": 1.9451629985108982,
+          "V_p05_kcal_mol": 3.822693820803264,
+          "V_p50_kcal_mol": 7.776378281363499,
+          "V_p95_kcal_mol": 10.31397150874365,
+          "V_min_kcal_mol": 1.7893893674887662,
+          "V_min_at_A": [
+            3.774192811911075,
+            -1.1779456252794163,
+            -4.158414195971077
+          ],
+          "V_max_kcal_mol": 10.792551774405736,
+          "V_max_at_A": [
+            3.5593336703755374,
+            -2.5538065755365023,
+            -3.2335925191633974
+          ]
+        },
+        "delta": {
+          "area_A2": -2.396989326622297,
+          "V_area_mean_kcal_mol": 0.770560866226452,
+          "V_p05_kcal_mol": 1.3885059287903032,
+          "V_p95_kcal_mol": 0.13259247492638693,
+          "V_min_kcal_mol": 0.735667697902914,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 35,
+        "atom_map": null,
+        "element": "H",
+        "parent": 10,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 10.37657370288129,
+          "area_pos_A2": 10.37657370288129,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 6.460847802072111,
+          "V_area_sd_kcal_mol": 1.9708448537711942,
+          "V_p05_kcal_mol": 2.6841545922260885,
+          "V_p50_kcal_mol": 6.508763503723323,
+          "V_p95_kcal_mol": 9.514083901446467,
+          "V_min_kcal_mol": 1.7997213938513104,
+          "V_min_at_A": [
+            0.334540940931075,
+            1.2222398352904686,
+            -3.0960065755365034
+          ],
+          "V_max_kcal_mol": 10.096128254185134,
+          "V_max_at_A": [
+            0.47212713688932656,
+            0.26460145612216357,
+            -4.747039286881699
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 7.765696412698211,
+          "area_pos_A2": 7.765696412698211,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 7.028640658275802,
+          "V_area_sd_kcal_mol": 1.7431401326315143,
+          "V_p05_kcal_mol": 3.6935804952803006,
+          "V_p50_kcal_mol": 7.042316953882692,
+          "V_p95_kcal_mol": 9.608823318650048,
+          "V_min_kcal_mol": 2.2123740744598344,
+          "V_min_at_A": [
+            0.47212713688932656,
+            1.2520260380482278,
+            -3.3711784627902914
+          ],
+          "V_max_kcal_mol": 10.096128254185134,
+          "V_max_at_A": [
+            0.47212713688932656,
+            0.26460145612216357,
+            -4.747039286881699
+          ]
+        },
+        "delta": {
+          "area_A2": -2.610877290183079,
+          "V_area_mean_kcal_mol": 0.5677928562036909,
+          "V_p05_kcal_mol": 1.009425903054212,
+          "V_p95_kcal_mol": 0.0947394172035807,
+          "V_min_kcal_mol": 0.412652680608524,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 36,
+        "atom_map": null,
+        "element": "H",
+        "parent": 10,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 7.765307191541714,
+          "area_pos_A2": 7.765307191541714,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 7.886229332007617,
+          "V_area_sd_kcal_mol": 2.6485361074305307,
+          "V_p05_kcal_mol": 3.053799340079248,
+          "V_p50_kcal_mol": 8.460231471056426,
+          "V_p95_kcal_mol": 11.417292309244816,
+          "V_min_kcal_mol": 1.7997213938513104,
+          "V_min_at_A": [
+            0.334540940931075,
+            1.2222398352904686,
+            -3.0960065755365034
+          ],
+          "V_max_kcal_mol": 11.821797913969593,
+          "V_max_at_A": [
+            0.7865612786982116,
+            1.2986033786555378,
+            -1.0322156548135892
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 5.900690670960934,
+          "area_pos_A2": 5.900690670960934,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 8.801398630010324,
+          "V_area_sd_kcal_mol": 2.1235340916876515,
+          "V_p05_kcal_mol": 4.607075793133977,
+          "V_p50_kcal_mol": 9.344492670196656,
+          "V_p95_kcal_mol": 11.49429154112475,
+          "V_min_kcal_mol": 2.630717092626603,
+          "V_min_at_A": [
+            0.334540940931075,
+            1.3078033799478346,
+            -2.82083418362
+          ],
+          "V_max_kcal_mol": 11.821797913969593,
+          "V_max_at_A": [
+            0.7865612786982116,
+            1.2986033786555378,
+            -1.0322156548135892
+          ]
+        },
+        "delta": {
+          "area_A2": -1.86461652058078,
+          "V_area_mean_kcal_mol": 0.9151692980027066,
+          "V_p05_kcal_mol": 1.5532764530547292,
+          "V_p95_kcal_mol": 0.07699923187993463,
+          "V_min_kcal_mol": 0.8309956987752927,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 37,
+        "atom_map": null,
+        "element": "H",
+        "parent": 11,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 7.644056010084434,
+          "area_pos_A2": 7.644056010084434,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 7.511225700211392,
+          "V_area_sd_kcal_mol": 2.565511501943994,
+          "V_p05_kcal_mol": 3.033021686946327,
+          "V_p50_kcal_mol": 7.829766623428585,
+          "V_p95_kcal_mol": 11.18619763064144,
+          "V_min_kcal_mol": 1.9278042917328044,
+          "V_min_at_A": [
+            1.5728156952299095,
+            -3.2244785951415142,
+            -1.9953180171959204
+          ],
+          "V_max_kcal_mol": 11.65531362119175,
+          "V_max_at_A": [
+            1.171802627381316,
+            -2.278634183619999,
+            -0.06911278776854299
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 5.627132744356375,
+          "area_pos_A2": 5.627132744356375,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 8.399424386004624,
+          "V_area_sd_kcal_mol": 2.1190962107315103,
+          "V_p05_kcal_mol": 4.460334017728709,
+          "V_p50_kcal_mol": 8.676799657252275,
+          "V_p95_kcal_mol": 11.237678010301103,
+          "V_min_kcal_mol": 2.6579589471203393,
+          "V_min_at_A": [
+            1.710401891188161,
+            -3.0951022522289615,
+            -1.7201456252794174
+          ],
+          "V_max_kcal_mol": 11.65531362119175,
+          "V_max_at_A": [
+            1.171802627381316,
+            -2.278634183619999,
+            -0.06911278776854299
+          ]
+        },
+        "delta": {
+          "area_A2": -2.0169232657280585,
+          "V_area_mean_kcal_mol": 0.888198685793232,
+          "V_p05_kcal_mol": 1.4273123307823816,
+          "V_p95_kcal_mol": 0.051480379659663456,
+          "V_min_kcal_mol": 0.7301546553875349,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 38,
+        "atom_map": null,
+        "element": "H",
+        "parent": 11,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 10.202785146576641,
+          "area_pos_A2": 10.202785146576641,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 6.354951937674282,
+          "V_area_sd_kcal_mol": 1.9243347111649542,
+          "V_p05_kcal_mol": 2.8280037907056723,
+          "V_p50_kcal_mol": 6.386977273894328,
+          "V_p95_kcal_mol": 9.471226292597978,
+          "V_min_kcal_mol": 1.9278042917328044,
+          "V_min_at_A": [
+            1.5728156952299095,
+            -3.2244785951415142,
+            -1.9953180171959204
+          ],
+          "V_max_kcal_mol": 9.9703538601249,
+          "V_max_at_A": [
+            1.1600581166805846,
+            -3.173994155795589,
+            -3.921522741960583
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 7.659606403870126,
+          "area_pos_A2": 7.659606403870126,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 6.969373660565853,
+          "V_area_sd_kcal_mol": 1.6667395014376765,
+          "V_p05_kcal_mol": 4.003998188453184,
+          "V_p50_kcal_mol": 6.915762282664937,
+          "V_p95_kcal_mol": 9.596461153307873,
+          "V_min_kcal_mol": 2.407199881573403,
+          "V_min_at_A": [
+            1.297644312638836,
+            -3.4087852035867447,
+            -2.1329039608228144
+          ],
+          "V_max_kcal_mol": 9.9703538601249,
+          "V_max_at_A": [
+            1.1600581166805846,
+            -3.173994155795589,
+            -3.921522741960583
+          ]
+        },
+        "delta": {
+          "area_A2": -2.543178742706515,
+          "V_area_mean_kcal_mol": 0.6144217228915707,
+          "V_p05_kcal_mol": 1.1759943977475116,
+          "V_p95_kcal_mol": 0.1252348607098952,
+          "V_min_kcal_mol": 0.4793955898405986,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 39,
+        "atom_map": null,
+        "element": "H",
+        "parent": 12,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 9.968960640062615,
+          "area_pos_A2": 9.968960640062615,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 6.281700168013659,
+          "V_area_sd_kcal_mol": 2.045957983336491,
+          "V_p05_kcal_mol": 2.502991879064334,
+          "V_p50_kcal_mol": 6.40297720652728,
+          "V_p95_kcal_mol": 9.484283255049839,
+          "V_min_kcal_mol": 1.3930468030882084,
+          "V_min_at_A": [
+            -1.866835671087376,
+            -2.5538065755365023,
+            -3.461974350475553
+          ],
+          "V_max_kcal_mol": 10.0457070210585,
+          "V_max_at_A": [
+            -1.7292499797918393,
+            -0.7094324053272245,
+            -4.196695007711408
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 7.509560668946624,
+          "area_pos_A2": 7.509560668946624,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 6.942032843807377,
+          "V_area_sd_kcal_mol": 1.7294251117314623,
+          "V_p05_kcal_mol": 3.685842661140088,
+          "V_p50_kcal_mol": 6.994393466446031,
+          "V_p95_kcal_mol": 9.604236700534356,
+          "V_min_kcal_mol": 1.8316553888861093,
+          "V_min_at_A": [
+            -2.086809064575527,
+            -2.278634183619999,
+            -3.508764658748543
+          ],
+          "V_max_kcal_mol": 10.0457070210585,
+          "V_max_at_A": [
+            -1.7292499797918393,
+            -0.7094324053272245,
+            -4.196695007711408
+          ]
+        },
+        "delta": {
+          "area_A2": -2.4593999711159915,
+          "V_area_mean_kcal_mol": 0.6603326757937182,
+          "V_p05_kcal_mol": 1.1828507820757541,
+          "V_p95_kcal_mol": 0.11995344548451747,
+          "V_min_kcal_mol": 0.43860858579790096,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 40,
+        "atom_map": null,
+        "element": "H",
+        "parent": 12,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 9.08357497423596,
+          "area_pos_A2": 9.08357497423596,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 6.76102352615893,
+          "V_area_sd_kcal_mol": 2.2715113202107253,
+          "V_p05_kcal_mol": 2.6074137616218986,
+          "V_p50_kcal_mol": 6.737292023117976,
+          "V_p95_kcal_mol": 10.210127571335455,
+          "V_min_kcal_mol": 1.3930468030882084,
+          "V_min_at_A": [
+            -1.866835671087376,
+            -2.5538065755365023,
+            -3.461974350475553
+          ],
+          "V_max_kcal_mol": 10.752341286071026,
+          "V_max_at_A": [
+            -1.6739974871157095,
+            -3.7920810775039793,
+            -1.9953180171959204
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 6.568659497451757,
+          "area_pos_A2": 6.568659497451757,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 7.556016040712896,
+          "V_area_sd_kcal_mol": 1.9325525196222053,
+          "V_p05_kcal_mol": 3.9918420573887317,
+          "V_p50_kcal_mol": 7.566506594254008,
+          "V_p95_kcal_mol": 10.304137123800889,
+          "V_min_kcal_mol": 2.13452081817647,
+          "V_min_at_A": [
+            -2.068126450870599,
+            -2.6913925191633967,
+            -3.2335925191633974
+          ],
+          "V_max_kcal_mol": 10.752341286071026,
+          "V_max_at_A": [
+            -1.6739974871157095,
+            -3.7920810775039793,
+            -1.9953180171959204
+          ]
+        },
+        "delta": {
+          "area_A2": -2.5149154767842026,
+          "V_area_mean_kcal_mol": 0.7949925145539654,
+          "V_p05_kcal_mol": 1.384428295766833,
+          "V_p95_kcal_mol": 0.09400955246543319,
+          "V_min_kcal_mol": 0.7414740150882615,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 41,
+        "atom_map": null,
+        "element": "H",
+        "parent": 13,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 9.889371587454384,
+          "area_pos_A2": 9.889371587454384,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 7.554997254494316,
+          "V_area_sd_kcal_mol": 2.1093763966242767,
+          "V_p05_kcal_mol": 3.6252018035197726,
+          "V_p50_kcal_mol": 7.638932628640482,
+          "V_p95_kcal_mol": 10.812288661392612,
+          "V_min_kcal_mol": 2.455378342255208,
+          "V_min_at_A": [
+            -0.6285614214512563,
+            0.1979148203149548,
+            0.31512680542552085
+          ],
+          "V_max_kcal_mol": 11.333184428666465,
+          "V_max_at_A": [
+            -0.572747743836178,
+            -1.7282899044497078,
+            0.8939895746137884
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 7.565936470304473,
+          "area_pos_A2": 7.565936470304473,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 8.239958241161235,
+          "V_area_sd_kcal_mol": 1.7551903349705522,
+          "V_p05_kcal_mol": 4.91869006362047,
+          "V_p50_kcal_mol": 8.339394552975456,
+          "V_p95_kcal_mol": 10.885673273980744,
+          "V_min_kcal_mol": 3.2795300043468782,
+          "V_min_at_A": [
+            -0.34421224272734074,
+            -0.07725706693883347,
+            0.34364529544349687
+          ],
+          "V_max_kcal_mol": 11.333184428666465,
+          "V_max_at_A": [
+            -0.572747743836178,
+            -1.7282899044497078,
+            0.8939895746137884
+          ]
+        },
+        "delta": {
+          "area_A2": -2.323435117149911,
+          "V_area_mean_kcal_mol": 0.6849609866669191,
+          "V_p05_kcal_mol": 1.293488260100697,
+          "V_p95_kcal_mol": 0.07338461258813211,
+          "V_min_kcal_mol": 0.8241516620916705,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 42,
+        "atom_map": null,
+        "element": "H",
+        "parent": 13,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 9.092154239614944,
+          "area_pos_A2": 9.092154239614944,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 6.975172631122862,
+          "V_area_sd_kcal_mol": 2.164374143884658,
+          "V_p05_kcal_mol": 3.46882340277006,
+          "V_p50_kcal_mol": 6.548739113651016,
+          "V_p95_kcal_mol": 10.69539757797564,
+          "V_min_kcal_mol": 2.455378342255208,
+          "V_min_at_A": [
+            -0.6285614214512563,
+            0.1979148203149548,
+            0.31512680542552085
+          ],
+          "V_max_kcal_mol": 11.171211114367425,
+          "V_max_at_A": [
+            0.05936955834000159,
+            1.1610176873600009,
+            -1.20809162027536
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 6.552959112056954,
+          "area_pos_A2": 6.552959112056954,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 7.769847837364243,
+          "V_area_sd_kcal_mol": 1.9182567221209896,
+          "V_p05_kcal_mol": 4.70817110172461,
+          "V_p50_kcal_mol": 7.625909572580912,
+          "V_p95_kcal_mol": 10.85091489809526,
+          "V_min_kcal_mol": 3.063515972014309,
+          "V_min_at_A": [
+            -0.6285614214512563,
+            0.47308721223145794,
+            0.16103763402791638
+          ],
+          "V_max_kcal_mol": 11.171211114367425,
+          "V_max_at_A": [
+            0.05936955834000159,
+            1.1610176873600009,
+            -1.20809162027536
+          ]
+        },
+        "delta": {
+          "area_A2": -2.5391951275579894,
+          "V_area_mean_kcal_mol": 0.7946752062413811,
+          "V_p05_kcal_mol": 1.2393476989545502,
+          "V_p95_kcal_mol": 0.15551732011961938,
+          "V_min_kcal_mol": 0.608137629759101,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 43,
+        "atom_map": null,
+        "element": "H",
+        "parent": 14,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 9.05629476096361,
+          "area_pos_A2": 8.660181076115945,
+          "area_neg_A2": 0.39611368484766535,
+          "V_area_mean_kcal_mol": 6.072614091579052,
+          "V_area_sd_kcal_mol": 2.8505538204864056,
+          "V_p05_kcal_mol": 0.4560856734935,
+          "V_p50_kcal_mol": 6.472642591490742,
+          "V_p95_kcal_mol": 9.656309459088591,
+          "V_min_kcal_mol": -7.4424521046002585,
+          "V_min_at_A": [
+            -5.168901346109124,
+            -1.0403594293211649,
+            -2.178078086751395
+          ],
+          "V_max_kcal_mol": 10.256861659197268,
+          "V_max_at_A": [
+            -3.600135091739293,
+            0.0603291290194181,
+            -3.0960065755365034
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 6.821496866704894,
+          "area_pos_A2": 6.816666792988132,
+          "area_neg_A2": 0.004830073716761236,
+          "V_area_mean_kcal_mol": 7.000579746325186,
+          "V_area_sd_kcal_mol": 2.001786852583425,
+          "V_p05_kcal_mol": 3.115360226620435,
+          "V_p50_kcal_mol": 7.217701528762131,
+          "V_p95_kcal_mol": 9.743420710070742,
+          "V_min_kcal_mol": -0.5868583593837562,
+          "V_min_at_A": [
+            -4.617939359775818,
+            -1.0403594293211649,
+            -2.1329039608228144
+          ],
+          "V_max_kcal_mol": 10.256861659197268,
+          "V_max_at_A": [
+            -3.600135091739293,
+            0.0603291290194181,
+            -3.0960065755365034
+          ]
+        },
+        "delta": {
+          "area_A2": -2.2347978942587154,
+          "V_area_mean_kcal_mol": 0.9279656547461341,
+          "V_p05_kcal_mol": 2.6592745531269353,
+          "V_p95_kcal_mol": 0.08711125098215078,
+          "V_min_kcal_mol": 6.8555937452165026,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 44,
+        "atom_map": null,
+        "element": "H",
+        "parent": 14,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 7.988463848624299,
+          "area_pos_A2": 7.442262684837866,
+          "area_neg_A2": 0.5462011637864338,
+          "V_area_mean_kcal_mol": 5.1498879048485255,
+          "V_area_sd_kcal_mol": 2.838361955209674,
+          "V_p05_kcal_mol": -1.0624220328045537,
+          "V_p50_kcal_mol": 5.635062288778928,
+          "V_p95_kcal_mol": 8.738056746819945,
+          "V_min_kcal_mol": -7.850525342170735,
+          "V_min_at_A": [
+            -4.480970870980581,
+            -0.8320492958366492,
+            0.8939895746137884
+          ],
+          "V_max_kcal_mol": 9.245275488061104,
+          "V_max_at_A": [
+            -3.242696621344462,
+            1.1610176873600009,
+            0.43953524857277637
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 5.566286886603011,
+          "area_pos_A2": 5.403927928906863,
+          "area_neg_A2": 0.16235895769614794,
+          "V_area_mean_kcal_mol": 5.944473657521761,
+          "V_area_sd_kcal_mol": 2.2609940294954263,
+          "V_p05_kcal_mol": 1.146146374274562,
+          "V_p50_kcal_mol": 6.176615692563019,
+          "V_p95_kcal_mol": 8.89332368260562,
+          "V_min_kcal_mol": -3.896949114784246,
+          "V_min_at_A": [
+            -4.480970870980581,
+            -0.3524294588553366,
+            0.667206262451021
+          ],
+          "V_max_kcal_mol": 9.245275488061104,
+          "V_max_at_A": [
+            -3.242696621344462,
+            1.1610176873600009,
+            0.43953524857277637
+          ]
+        },
+        "delta": {
+          "area_A2": -2.422176962021288,
+          "V_area_mean_kcal_mol": 0.7945857526732354,
+          "V_p05_kcal_mol": 2.208568407079116,
+          "V_p95_kcal_mol": 0.15526693578567574,
+          "V_min_kcal_mol": 3.9535762273864887,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 45,
+        "atom_map": null,
+        "element": "H",
+        "parent": 15,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 9.662756037695189,
+          "area_pos_A2": 8.81758823525947,
+          "area_neg_A2": 0.8451678024357198,
+          "V_area_mean_kcal_mol": 5.891293691987736,
+          "V_area_sd_kcal_mol": 3.862503022845019,
+          "V_p05_kcal_mol": -2.5818169675223537,
+          "V_p50_kcal_mol": 6.2707323201075615,
+          "V_p95_kcal_mol": 10.87273343291758,
+          "V_min_kcal_mol": -9.914821781186326,
+          "V_min_at_A": [
+            -5.168901346109124,
+            -2.4162203795782506,
+            -2.229691961253226
+          ],
+          "V_max_kcal_mol": 11.383140654370857,
+          "V_max_at_A": [
+            -3.242696621344462,
+            -3.5019953977000013,
+            -2.4080761004079605
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 6.616892878649459,
+          "area_pos_A2": 6.616892878649459,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 7.586831113675383,
+          "V_area_sd_kcal_mol": 2.3376658224887206,
+          "V_p05_kcal_mol": 3.4050381917154837,
+          "V_p50_kcal_mol": 7.592092199402523,
+          "V_p95_kcal_mol": 11.009221891979488,
+          "V_min_kcal_mol": -0.48861430224376334,
+          "V_min_at_A": [
+            -4.572512650158439,
+            -2.5538065755365023,
+            -2.270489904449709
+          ],
+          "V_max_kcal_mol": 11.383140654370857,
+          "V_max_at_A": [
+            -3.242696621344462,
+            -3.5019953977000013,
+            -2.4080761004079605
+          ]
+        },
+        "delta": {
+          "area_A2": -3.04586315904573,
+          "V_area_mean_kcal_mol": 1.6955374216876473,
+          "V_p05_kcal_mol": 5.986855159237837,
+          "V_p95_kcal_mol": 0.13648845906190843,
+          "V_min_kcal_mol": 9.426207478942564,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 46,
+        "atom_map": null,
+        "element": "H",
+        "parent": 15,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 10.8006065258514,
+          "area_pos_A2": 10.077068108075395,
+          "area_neg_A2": 0.7235384177760056,
+          "V_area_mean_kcal_mol": 6.359592398383933,
+          "V_area_sd_kcal_mol": 3.469265458689022,
+          "V_p05_kcal_mol": -0.9286379030685058,
+          "V_p50_kcal_mol": 6.794068639076382,
+          "V_p95_kcal_mol": 10.78802895480664,
+          "V_min_kcal_mol": -8.348147318269326,
+          "V_min_at_A": [
+            -4.618557066938833,
+            -1.7282899044497078,
+            1.2622071359357816
+          ],
+          "V_max_kcal_mol": 11.42112238108267,
+          "V_max_at_A": [
+            -2.554766146215919,
+            -2.918570729900559,
+            1.1691614618675765
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 7.6105095778477345,
+          "area_pos_A2": 7.6105095778477345,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 7.796712971170834,
+          "V_area_sd_kcal_mol": 2.119656236180053,
+          "V_p05_kcal_mol": 4.019993223202515,
+          "V_p50_kcal_mol": 7.950495977911184,
+          "V_p95_kcal_mol": 10.93969541442837,
+          "V_min_kcal_mol": 0.4017681901458922,
+          "V_min_at_A": [
+            -4.068212787768542,
+            -2.003462296366211,
+            1.2152901573213564
+          ],
+          "V_max_kcal_mol": 11.42112238108267,
+          "V_max_at_A": [
+            -2.554766146215919,
+            -2.918570729900559,
+            1.1691614618675765
+          ]
+        },
+        "delta": {
+          "area_A2": -3.1900969480036654,
+          "V_area_mean_kcal_mol": 1.4371205727869008,
+          "V_p05_kcal_mol": 4.94863112627102,
+          "V_p95_kcal_mol": 0.15166645962172964,
+          "V_min_kcal_mol": 8.749915508415219,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 47,
+        "atom_map": null,
+        "element": "H",
+        "parent": 16,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 12.796044831889994,
+          "area_pos_A2": 8.526791423371732,
+          "area_neg_A2": 4.269253408518262,
+          "V_area_mean_kcal_mol": 1.7196739259307814,
+          "V_area_sd_kcal_mol": 6.403411529676559,
+          "V_p05_kcal_mol": -11.194543169661719,
+          "V_p50_kcal_mol": 3.594022744012656,
+          "V_p95_kcal_mol": 9.283264707503376,
+          "V_min_kcal_mol": -15.778696362852704,
+          "V_min_at_A": [
+            -6.451332826303338,
+            -2.5538065755365023,
+            -1.8577318212376688
+          ],
+          "V_max_kcal_mol": 10.168714997339292,
+          "V_max_at_A": [
+            -5.744239046233941,
+            -4.204839286881698,
+            0.20605909948524528
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 7.995506250134025,
+          "area_pos_A2": 7.318941646742701,
+          "area_neg_A2": 0.6765646033913235,
+          "V_area_mean_kcal_mol": 5.313412731967228,
+          "V_area_sd_kcal_mol": 3.217314855295967,
+          "V_p05_kcal_mol": -0.8749030136327643,
+          "V_p50_kcal_mol": 6.000153288350667,
+          "V_p95_kcal_mol": 9.529798273627351,
+          "V_min_kcal_mol": -5.376345215145057,
+          "V_min_at_A": [
+            -6.17929741782254,
+            -3.379322741960582,
+            -1.3073875420673775
+          ],
+          "V_max_kcal_mol": 10.168714997339292,
+          "V_max_at_A": [
+            -5.744239046233941,
+            -4.204839286881698,
+            0.20605909948524528
+          ]
+        },
+        "delta": {
+          "area_A2": -4.800538581755968,
+          "V_area_mean_kcal_mol": 3.5937388060364466,
+          "V_p05_kcal_mol": 10.319640156028955,
+          "V_p95_kcal_mol": 0.2465335661239756,
+          "V_min_kcal_mol": 10.402351147707648,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 48,
+        "atom_map": null,
+        "element": "H",
+        "parent": 17,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 12.252417999977649,
+          "area_pos_A2": 8.12074647890146,
+          "area_neg_A2": 4.131671521076187,
+          "V_area_mean_kcal_mol": 1.6719502290534387,
+          "V_area_sd_kcal_mol": 6.3772819101650855,
+          "V_p05_kcal_mol": -11.10376460914235,
+          "V_p50_kcal_mol": 3.578864283860625,
+          "V_p95_kcal_mol": 9.251590443233018,
+          "V_min_kcal_mol": -15.778696362852704,
+          "V_min_at_A": [
+            -6.451332826303338,
+            -2.5538065755365023,
+            -1.8577318212376688
+          ],
+          "V_max_kcal_mol": 10.037176250228459,
+          "V_max_at_A": [
+            -8.33338107750398,
+            -1.7282899044497078,
+            -0.10497563427619523
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 7.8694360316640255,
+          "area_pos_A2": 7.26592215411568,
+          "area_neg_A2": 0.603513877548346,
+          "V_area_mean_kcal_mol": 5.2798116614352795,
+          "V_area_sd_kcal_mol": 3.180696716930697,
+          "V_p05_kcal_mol": -1.0106470293986811,
+          "V_p50_kcal_mol": 5.915727929939844,
+          "V_p95_kcal_mol": 9.479900438923506,
+          "V_min_kcal_mol": -4.7473155102764135,
+          "V_min_at_A": [
+            -7.37027846279029,
+            -2.278634183619999,
+            -1.4128781986845702
+          ],
+          "V_max_kcal_mol": 10.037176250228459,
+          "V_max_at_A": [
+            -8.33338107750398,
+            -1.7282899044497078,
+            -0.10497563427619523
+          ]
+        },
+        "delta": {
+          "area_A2": -4.382981968313623,
+          "V_area_mean_kcal_mol": 3.6078614323818408,
+          "V_p05_kcal_mol": 10.09311757974367,
+          "V_p95_kcal_mol": 0.2283099956904877,
+          "V_min_kcal_mol": 11.03138085257629,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 49,
+        "atom_map": null,
+        "element": "H",
+        "parent": 18,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 6.863890159634966,
+          "area_pos_A2": 6.3026790328895865,
+          "area_neg_A2": 0.561211126745379,
+          "V_area_mean_kcal_mol": 4.788089312394012,
+          "V_area_sd_kcal_mol": 3.2530012018585013,
+          "V_p05_kcal_mol": -1.3464819324235349,
+          "V_p50_kcal_mol": 5.576204481852607,
+          "V_p95_kcal_mol": 8.767753703640764,
+          "V_min_kcal_mol": -8.509925439646674,
+          "V_min_at_A": [
+            -5.3064875420673765,
+            -1.0403594293211649,
+            -2.2250836336722823
+          ],
+          "V_max_kcal_mol": 9.24412916818945,
+          "V_max_at_A": [
+            -4.343385179685045,
+            1.4361895746137892,
+            -1.7229899043404917
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 4.570467855644877,
+          "area_pos_A2": 4.570467855644877,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 6.426214331230691,
+          "V_area_sd_kcal_mol": 1.8326882012710854,
+          "V_p05_kcal_mol": 2.8352759863471135,
+          "V_p50_kcal_mol": 6.62125103207983,
+          "V_p95_kcal_mol": 8.930095218554449,
+          "V_min_kcal_mol": 1.4332604301945968,
+          "V_min_at_A": [
+            -5.031315654813588,
+            -0.07725706693883347,
+            -2.375263435349054
+          ],
+          "V_max_kcal_mol": 9.24412916818945,
+          "V_max_at_A": [
+            -4.343385179685045,
+            1.4361895746137892,
+            -1.7229899043404917
+          ]
+        },
+        "delta": {
+          "area_A2": -2.2934223039900896,
+          "V_area_mean_kcal_mol": 1.6381250188366785,
+          "V_p05_kcal_mol": 4.181757918770648,
+          "V_p95_kcal_mol": 0.16234151491368465,
+          "V_min_kcal_mol": 9.94318586984127,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 50,
+        "atom_map": null,
+        "element": "H",
+        "parent": 18,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 11.790686026364112,
+          "area_pos_A2": 9.9929014272311,
+          "area_neg_A2": 1.7977845991330104,
+          "V_area_mean_kcal_mol": 3.5872911469134388,
+          "V_area_sd_kcal_mol": 3.735351695460988,
+          "V_p05_kcal_mol": -4.390248948941738,
+          "V_p50_kcal_mol": 4.327866188312001,
+          "V_p95_kcal_mol": 8.286175228089931,
+          "V_min_kcal_mol": -11.438006050629639,
+          "V_min_at_A": [
+            -6.269589904449707,
+            -1.3155318212376679,
+            -2.3318152559053695
+          ],
+          "V_max_kcal_mol": 8.877908875813215,
+          "V_max_at_A": [
+            -7.645450854706794,
+            0.8092289160582729,
+            -2.5456622963662117
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 7.932252556912645,
+          "area_pos_A2": 7.67273803989236,
+          "area_neg_A2": 0.259514517020285,
+          "V_area_mean_kcal_mol": 5.094800197936947,
+          "V_area_sd_kcal_mol": 2.3905440388106682,
+          "V_p05_kcal_mol": 0.5330770257042038,
+          "V_p50_kcal_mol": 5.415711370494965,
+          "V_p95_kcal_mol": 8.46119786153929,
+          "V_min_kcal_mol": -3.2296118294239053,
+          "V_min_at_A": [
+            -6.54476229636621,
+            -0.7651875420673765,
+            -2.4187232220351813
+          ],
+          "V_max_kcal_mol": 8.877908875813215,
+          "V_max_at_A": [
+            -7.645450854706794,
+            0.8092289160582729,
+            -2.5456622963662117
+          ]
+        },
+        "delta": {
+          "area_A2": -3.858433469451467,
+          "V_area_mean_kcal_mol": 1.5075090510235083,
+          "V_p05_kcal_mol": 4.923325974645942,
+          "V_p95_kcal_mol": 0.17502263344935898,
+          "V_min_kcal_mol": 8.208394221205733,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 51,
+        "atom_map": null,
+        "element": "H",
+        "parent": 19,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 10.561857221295977,
+          "area_pos_A2": 10.348660509614795,
+          "area_neg_A2": 0.21319671168118082,
+          "V_area_mean_kcal_mol": 4.783702254251138,
+          "V_area_sd_kcal_mol": 2.234142534566282,
+          "V_p05_kcal_mol": 0.6003276864733175,
+          "V_p50_kcal_mol": 5.074702451428803,
+          "V_p95_kcal_mol": 8.16918387567537,
+          "V_min_kcal_mol": -0.44021168172033853,
+          "V_min_at_A": [
+            -8.136375641164175,
+            2.2617062457005837,
+            0.34364529544349687
+          ],
+          "V_max_kcal_mol": 8.771349207064329,
+          "V_max_at_A": [
+            -6.682348239993105,
+            3.3623948040411666,
+            -0.5567502013011844
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 7.849621955739931,
+          "area_pos_A2": 7.849621955739931,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 5.432994419059594,
+          "V_area_sd_kcal_mol": 1.9385291290790851,
+          "V_p05_kcal_mol": 1.707427156963652,
+          "V_p50_kcal_mol": 5.539892146462201,
+          "V_p95_kcal_mol": 8.285530893534245,
+          "V_min_kcal_mol": 0.1356788289422623,
+          "V_min_at_A": [
+            -8.058208937918833,
+            2.428166214228088,
+            0.20605909948524528
+          ],
+          "V_max_kcal_mol": 8.771349207064329,
+          "V_max_at_A": [
+            -6.682348239993105,
+            3.3623948040411666,
+            -0.5567502013011844
+          ]
+        },
+        "delta": {
+          "area_A2": -2.712235265556046,
+          "V_area_mean_kcal_mol": 0.6492921648084558,
+          "V_p05_kcal_mol": 1.1070994704903345,
+          "V_p95_kcal_mol": 0.11634701785887458,
+          "V_min_kcal_mol": 0.5758905106626009,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 52,
+        "atom_map": null,
+        "element": "H",
+        "parent": 19,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 10.189301718614844,
+          "area_pos_A2": 9.988262392910066,
+          "area_neg_A2": 0.20103932570477853,
+          "V_area_mean_kcal_mol": 4.433704017871147,
+          "V_area_sd_kcal_mol": 2.2559646422739603,
+          "V_p05_kcal_mol": 0.5470249103507704,
+          "V_p50_kcal_mol": 4.572832244633176,
+          "V_p95_kcal_mol": 7.855035847474973,
+          "V_min_kcal_mol": -1.9032062577767739,
+          "V_min_at_A": [
+            -6.819934183619999,
+            -0.6276013461091249,
+            1.1575860131763305
+          ],
+          "V_max_kcal_mol": 8.47461334777202,
+          "V_max_at_A": [
+            -8.746139286881698,
+            0.47308721223145794,
+            0.9191086565843198
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 7.6829495440915885,
+          "area_pos_A2": 7.6829495440915885,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 5.179182877947071,
+          "V_area_sd_kcal_mol": 1.8611560979130675,
+          "V_p05_kcal_mol": 1.9122268549501455,
+          "V_p50_kcal_mol": 5.359303284501849,
+          "V_p95_kcal_mol": 7.974559106929387,
+          "V_min_kcal_mol": 0.18079884567733703,
+          "V_min_at_A": [
+            -8.336889114200801,
+            1.9865338537840806,
+            0.34364529544349687
+          ],
+          "V_max_kcal_mol": 8.47461334777202,
+          "V_max_at_A": [
+            -8.746139286881698,
+            0.47308721223145794,
+            0.9191086565843198
+          ]
+        },
+        "delta": {
+          "area_A2": -2.506352174523256,
+          "V_area_mean_kcal_mol": 0.7454788600759246,
+          "V_p05_kcal_mol": 1.365201944599375,
+          "V_p95_kcal_mol": 0.11952325945441444,
+          "V_min_kcal_mol": 2.084005103454111,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 53,
+        "atom_map": null,
+        "element": "H",
+        "parent": 20,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 10.868918887774612,
+          "area_pos_A2": 6.688459552279542,
+          "area_neg_A2": 4.180459335495069,
+          "V_area_mean_kcal_mol": -0.5305816783134709,
+          "V_area_sd_kcal_mol": 5.1614111871051405,
+          "V_p05_kcal_mol": -12.626434735004887,
+          "V_p50_kcal_mol": 1.510576075188804,
+          "V_p95_kcal_mol": 4.786432958574486,
+          "V_min_kcal_mol": -15.863190115929685,
+          "V_min_at_A": [
+            -5.609380047586912,
+            -1.5907039608228137,
+            1.4443338537840797
+          ],
+          "V_max_kcal_mol": 5.407609069496069,
+          "V_max_at_A": [
+            -5.444073738025628,
+            -0.5656600538099507,
+            2.820194804041166
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 6.954726289081103,
+          "area_pos_A2": 4.9150447444398635,
+          "area_neg_A2": 2.0396815446412395,
+          "V_area_mean_kcal_mol": 0.9864777677207375,
+          "V_area_sd_kcal_mol": 3.654284240299949,
+          "V_p05_kcal_mol": -7.357076749946775,
+          "V_p50_kcal_mol": 2.1840464209434463,
+          "V_p95_kcal_mol": 5.019632450215152,
+          "V_min_kcal_mol": -14.087879257865689,
+          "V_min_at_A": [
+            -5.444073738025628,
+            -1.3155318212376679,
+            1.4815012534097016
+          ],
+          "V_max_kcal_mol": 5.407609069496069,
+          "V_max_at_A": [
+            -5.444073738025628,
+            -0.5656600538099507,
+            2.820194804041166
+          ]
+        },
+        "delta": {
+          "area_A2": -3.914192598693509,
+          "V_area_mean_kcal_mol": 1.5170594460342084,
+          "V_p05_kcal_mol": 5.269357985058112,
+          "V_p95_kcal_mol": 0.2331994916406659,
+          "V_min_kcal_mol": 1.775310858063996,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 54,
+        "atom_map": null,
+        "element": "H",
+        "parent": 20,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 9.259738051612516,
+          "area_pos_A2": 8.992878907627766,
+          "area_neg_A2": 0.2668591439847494,
+          "V_area_mean_kcal_mol": 5.463341545830257,
+          "V_area_sd_kcal_mol": 2.5381648060762236,
+          "V_p05_kcal_mol": 0.7363740887863376,
+          "V_p50_kcal_mol": 5.568631071419484,
+          "V_p95_kcal_mol": 9.137798117332087,
+          "V_min_kcal_mol": -1.4180172546925036,
+          "V_min_at_A": [
+            -4.205798983726793,
+            0.07586920799877636,
+            1.1691614618675765
+          ],
+          "V_max_kcal_mol": 9.661774868423793,
+          "V_max_at_A": [
+            -3.655454704556502,
+            2.1241200497423325,
+            0.6968329917908777
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 6.850216463786794,
+          "area_pos_A2": 6.850216463786794,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 6.380310073073562,
+          "V_area_sd_kcal_mol": 2.0297989573806987,
+          "V_p05_kcal_mol": 2.7013900225603984,
+          "V_p50_kcal_mol": 6.476887254194142,
+          "V_p95_kcal_mol": 9.263291613763705,
+          "V_min_kcal_mol": 0.2943784203790019,
+          "V_min_at_A": [
+            -3.896877272752563,
+            0.47308721223145794,
+            1.4443338537840797
+          ],
+          "V_max_kcal_mol": 9.661774868423793,
+          "V_max_at_A": [
+            -3.655454704556502,
+            2.1241200497423325,
+            0.6968329917908777
+          ]
+        },
+        "delta": {
+          "area_A2": -2.4095215878257212,
+          "V_area_mean_kcal_mol": 0.9169685272433048,
+          "V_p05_kcal_mol": 1.965015933774061,
+          "V_p95_kcal_mol": 0.1254934964316181,
+          "V_min_kcal_mol": 1.7123956750715055,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 55,
+        "atom_map": null,
+        "element": "H",
+        "parent": 21,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 11.371741831355507,
+          "area_pos_A2": 9.061699995819588,
+          "area_neg_A2": 2.3100418355359182,
+          "V_area_mean_kcal_mol": 3.023520410993079,
+          "V_area_sd_kcal_mol": 2.9893947028555976,
+          "V_p05_kcal_mol": -1.6268653337475147,
+          "V_p50_kcal_mol": 2.970563767103407,
+          "V_p95_kcal_mol": 7.942779435097056,
+          "V_min_kcal_mol": -2.2841855247661242,
+          "V_min_at_A": [
+            -6.682348239993105,
+            2.3992919369961205,
+            4.265334842471809
+          ],
+          "V_max_kcal_mol": 8.74806697869849,
+          "V_max_at_A": [
+            -8.195795007711405,
+            1.2986033786555378,
+            3.2782468705765706
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 7.917441634816754,
+          "area_pos_A2": 7.5488835039560405,
+          "area_neg_A2": 0.3685581308607144,
+          "V_area_mean_kcal_mol": 4.315480407524817,
+          "V_area_sd_kcal_mol": 2.4552799956065727,
+          "V_p05_kcal_mol": 0.061874106871923795,
+          "V_p50_kcal_mol": 4.423565824269507,
+          "V_p95_kcal_mol": 8.139499386292801,
+          "V_min_kcal_mol": -1.276681404434746,
+          "V_min_at_A": [
+            -7.095106575536502,
+            2.3992919369961205,
+            4.162302902601521
+          ],
+          "V_max_kcal_mol": 8.74806697869849,
+          "V_max_at_A": [
+            -8.195795007711405,
+            1.2986033786555378,
+            3.2782468705765706
+          ]
+        },
+        "delta": {
+          "area_A2": -3.454300196538753,
+          "V_area_mean_kcal_mol": 1.2919599965317383,
+          "V_p05_kcal_mol": 1.6887394406194385,
+          "V_p95_kcal_mol": 0.19671995119574515,
+          "V_min_kcal_mol": 1.0075041203313782,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 56,
+        "atom_map": null,
+        "element": "H",
+        "parent": 21,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 12.029250846211703,
+          "area_pos_A2": 9.618252421348789,
+          "area_neg_A2": 2.410998424862914,
+          "V_area_mean_kcal_mol": 2.8173783250985065,
+          "V_area_sd_kcal_mol": 2.9124536022095153,
+          "V_p05_kcal_mol": -1.835666119782797,
+          "V_p50_kcal_mol": 2.6391124641773502,
+          "V_p95_kcal_mol": 7.800037825720099,
+          "V_min_kcal_mol": -2.2841855247661242,
+          "V_min_at_A": [
+            -6.682348239993105,
+            2.3992919369961205,
+            4.265334842471809
+          ],
+          "V_max_kcal_mol": 8.494985162528208,
+          "V_max_at_A": [
+            -4.618557066938833,
+            2.1241200497423325,
+            4.278983950258505
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 8.010809474773012,
+          "area_pos_A2": 7.562627952223556,
+          "area_neg_A2": 0.44818152254945715,
+          "V_area_mean_kcal_mol": 4.114700217039933,
+          "V_area_sd_kcal_mol": 2.4657396094834922,
+          "V_p05_kcal_mol": -0.10018429877795891,
+          "V_p50_kcal_mol": 4.0020434438208445,
+          "V_p95_kcal_mol": 7.996262758031942,
+          "V_min_kcal_mol": -1.3102279779346646,
+          "V_min_at_A": [
+            -6.269589904449707,
+            2.7193505447623645,
+            4.333640940931073
+          ],
+          "V_max_kcal_mol": 8.494985162528208,
+          "V_max_at_A": [
+            -4.618557066938833,
+            2.1241200497423325,
+            4.278983950258505
+          ]
+        },
+        "delta": {
+          "area_A2": -4.018441371438691,
+          "V_area_mean_kcal_mol": 1.2973218919414262,
+          "V_p05_kcal_mol": 1.7354818210048382,
+          "V_p95_kcal_mol": 0.1962249323118428,
+          "V_min_kcal_mol": 0.9739575468314596,
+          "V_max_kcal_mol": 0.0
+        }
+      },
+      {
+        "index": 57,
+        "atom_map": null,
+        "element": "H",
+        "parent": 21,
+        "h_source": "supplied",
+        "nearest_nucleus": {
+          "area_A2": 11.441190551369754,
+          "area_pos_A2": 9.105648101330436,
+          "area_neg_A2": 2.335542450039318,
+          "V_area_mean_kcal_mol": 3.1770935327330005,
+          "V_area_sd_kcal_mol": 3.063143807129901,
+          "V_p05_kcal_mol": -1.645313536217386,
+          "V_p50_kcal_mol": 3.3078219332976744,
+          "V_p95_kcal_mol": 8.00960726173701,
+          "V_min_kcal_mol": -2.2364420469362543,
+          "V_min_at_A": [
+            -5.994418017195919,
+            3.564649489609814,
+            3.6457109704652453
+          ],
+          "V_max_kcal_mol": 8.797747612627715,
+          "V_max_at_A": [
+            -6.269589904449707,
+            4.325497166423498,
+            1.7404749815039258
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 7.89264325768126,
+          "area_pos_A2": 7.524465100685815,
+          "area_neg_A2": 0.36817815699544393,
+          "V_area_mean_kcal_mol": 4.477195894681036,
+          "V_area_sd_kcal_mol": 2.4980577412254186,
+          "V_p05_kcal_mol": 0.08374867072185786,
+          "V_p50_kcal_mol": 4.788872661690834,
+          "V_p95_kcal_mol": 8.228701871114403,
+          "V_min_kcal_mol": -1.2049494957210625,
+          "V_min_at_A": [
+            -7.452759022922443,
+            3.4999809999994183,
+            2.820194804041166
+          ],
+          "V_max_kcal_mol": 8.797747612627715,
+          "V_max_at_A": [
+            -6.269589904449707,
+            4.325497166423498,
+            1.7404749815039258
+          ]
+        },
+        "delta": {
+          "area_A2": -3.548547293688494,
+          "V_area_mean_kcal_mol": 1.3001023619480354,
+          "V_p05_kcal_mol": 1.7290622069392438,
+          "V_p95_kcal_mol": 0.2190946093773931,
+          "V_min_kcal_mol": 1.0314925512151918,
+          "V_max_kcal_mol": 0.0
+        }
+      }
+    ],
+    "reaction_sites": [
+      {
+        "label": "C1-H",
+        "source": "caller:map",
+        "atoms": [
+          4,
+          25,
+          26
+        ],
+        "h_generated_polar": false,
+        "nearest_nucleus": {
+          "area_A2": 22.92671165975746,
+          "area_pos_A2": 19.58852726611525,
+          "area_neg_A2": 3.3381843936422086,
+          "V_area_mean_kcal_mol": 7.208946440505127,
+          "V_area_sd_kcal_mol": 8.563080076206058,
+          "V_p05_kcal_mol": -11.25826962238124,
+          "V_p50_kcal_mol": 9.764817289885887,
+          "V_p95_kcal_mol": 16.345020984728226,
+          "V_min_kcal_mol": -31.30757509020149,
+          "V_min_at_A": [
+            5.974618134711974,
+            3.4999809999994183,
+            2.1322643289126226
+          ],
+          "V_max_kcal_mol": 17.72094188357338,
+          "V_max_at_A": [
+            4.880182347408778,
+            -0.4900156548135882,
+            3.9208833623817485
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 20.717030553673787,
+          "area_pos_A2": 18.80941164357341,
+          "area_neg_A2": 1.9076189101003795,
+          "V_area_mean_kcal_mol": 8.826259211064453,
+          "V_area_sd_kcal_mol": 6.370380770263527,
+          "V_p05_kcal_mol": -4.55835463414556,
+          "V_p50_kcal_mol": 10.21829113467459,
+          "V_p95_kcal_mol": 16.43649372286377,
+          "V_min_kcal_mol": -24.398949347224125,
+          "V_min_at_A": [
+            5.975569928592241,
+            3.3418035559485557,
+            2.407436216166411
+          ],
+          "V_max_kcal_mol": 17.72094188357338,
+          "V_max_at_A": [
+            4.880182347408778,
+            -0.4900156548135882,
+            3.9208833623817485
+          ]
+        },
+        "delta": {
+          "area_A2": -2.2096811060836714,
+          "V_area_mean_kcal_mol": 1.6173127705593267,
+          "V_p05_kcal_mol": 6.6999149882356805,
+          "V_p95_kcal_mol": 0.09147273813554335,
+          "V_min_kcal_mol": 6.908625742977364,
+          "V_max_kcal_mol": 0.0
+        },
+        "overlaps": []
+      },
+      {
+        "label": "C2-H",
+        "source": "caller:map",
+        "atoms": [
+          5,
+          27
+        ],
+        "h_generated_polar": false,
+        "nearest_nucleus": {
+          "area_A2": 14.1444964978629,
+          "area_pos_A2": 6.836268485792695,
+          "area_neg_A2": 7.308228012070204,
+          "V_area_mean_kcal_mol": -0.6717140427760301,
+          "V_area_sd_kcal_mol": 7.542906301025733,
+          "V_p05_kcal_mol": -14.166951305004295,
+          "V_p50_kcal_mol": -0.3271764474815751,
+          "V_p95_kcal_mol": 9.872785131569593,
+          "V_min_kcal_mol": -19.223553337568756,
+          "V_min_at_A": [
+            6.113156124550493,
+            2.6744643289126238,
+            0.6163347468027811
+          ],
+          "V_max_kcal_mol": 11.207106332379468,
+          "V_max_at_A": [
+            5.532907046884445,
+            1.848947657825829,
+            -0.757043262897086
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 14.97500522032205,
+          "area_pos_A2": 7.140412265401304,
+          "area_neg_A2": 7.834592954920748,
+          "V_area_mean_kcal_mol": -0.8268713559925094,
+          "V_area_sd_kcal_mol": 7.227820514424464,
+          "V_p05_kcal_mol": -14.006833368172869,
+          "V_p50_kcal_mol": -0.43549465648421687,
+          "V_p95_kcal_mol": 9.817230145976781,
+          "V_min_kcal_mol": -16.67924254853987,
+          "V_min_at_A": [
+            6.663500908383499,
+            -0.5509536776355772,
+            1.0315757705720399
+          ],
+          "V_max_kcal_mol": 11.207106332379468,
+          "V_max_at_A": [
+            5.532907046884445,
+            1.848947657825829,
+            -0.757043262897086
+          ]
+        },
+        "delta": {
+          "area_A2": 0.8305087224591503,
+          "V_area_mean_kcal_mol": -0.1551573132164793,
+          "V_p05_kcal_mol": 0.16011793683142628,
+          "V_p95_kcal_mol": -0.05555498559281169,
+          "V_min_kcal_mol": 2.5443107890288843,
+          "V_max_kcal_mol": 0.0
+        },
+        "overlaps": []
+      },
+      {
+        "label": "C3-H",
+        "source": "caller:map",
+        "atoms": [
+          6,
+          28
+        ],
+        "h_generated_polar": false,
+        "nearest_nucleus": {
+          "area_A2": 15.70790745325138,
+          "area_pos_A2": 11.097002731719188,
+          "area_neg_A2": 4.610904721532194,
+          "V_area_mean_kcal_mol": 5.3880138755997065,
+          "V_area_sd_kcal_mol": 8.778169836805725,
+          "V_p05_kcal_mol": -10.228903790774885,
+          "V_p50_kcal_mol": 8.055002906369227,
+          "V_p95_kcal_mol": 15.78193977995086,
+          "V_min_kcal_mol": -15.447207012070152,
+          "V_min_at_A": [
+            5.975569928592241,
+            -1.0403594293211649,
+            0.5946443433171572
+          ],
+          "V_max_kcal_mol": 16.733667964780338,
+          "V_max_at_A": [
+            3.769895104231141,
+            -1.7282899044497078,
+            2.820194804041166
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 17.66906248286336,
+          "area_pos_A2": 12.32948942003134,
+          "area_neg_A2": 5.33957306283202,
+          "V_area_mean_kcal_mol": 4.970125826748995,
+          "V_area_sd_kcal_mol": 8.440320988806063,
+          "V_p05_kcal_mol": -10.04001416436848,
+          "V_p50_kcal_mol": 6.625617768465342,
+          "V_p95_kcal_mol": 15.701935317542073,
+          "V_min_kcal_mol": -15.447207012070152,
+          "V_min_at_A": [
+            5.975569928592241,
+            -1.0403594293211649,
+            0.5946443433171572
+          ],
+          "V_max_kcal_mol": 16.733667964780338,
+          "V_max_at_A": [
+            3.769895104231141,
+            -1.7282899044497078,
+            2.820194804041166
+          ]
+        },
+        "delta": {
+          "area_A2": 1.9611550296119802,
+          "V_area_mean_kcal_mol": -0.4178880488507115,
+          "V_p05_kcal_mol": 0.18888962640640372,
+          "V_p95_kcal_mol": -0.08000446240878745,
+          "V_min_kcal_mol": 0.0,
+          "V_max_kcal_mol": 0.0
+        },
+        "overlaps": []
+      },
+      {
+        "label": "C4-H",
+        "source": "caller:map",
+        "atoms": [
+          7,
+          29,
+          30
+        ],
+        "h_generated_polar": false,
+        "nearest_nucleus": {
+          "area_A2": 19.206969457497678,
+          "area_pos_A2": 18.815001828711235,
+          "area_neg_A2": 0.39196762878644287,
+          "V_area_mean_kcal_mol": 9.526318351286621,
+          "V_area_sd_kcal_mol": 3.2136116033127564,
+          "V_p05_kcal_mol": 2.6541816281878283,
+          "V_p50_kcal_mol": 10.152686045912512,
+          "V_p95_kcal_mol": 13.465025079233143,
+          "V_min_kcal_mol": -5.238529758833996,
+          "V_min_at_A": [
+            5.269898035722025,
+            -1.3155318212376679,
+            -0.06911278776854299
+          ],
+          "V_max_kcal_mol": 14.353757905003446,
+          "V_max_at_A": [
+            1.1600581166805846,
+            -0.45278416302317626,
+            0.61881768736
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 17.992347266731926,
+          "area_pos_A2": 17.937493916940397,
+          "area_neg_A2": 0.05485334979153045,
+          "V_area_mean_kcal_mol": 9.932710149521364,
+          "V_area_sd_kcal_mol": 2.751884223976332,
+          "V_p05_kcal_mol": 4.386522435636334,
+          "V_p50_kcal_mol": 10.390076898165102,
+          "V_p95_kcal_mol": 13.52369363925277,
+          "V_min_kcal_mol": -2.7753068882429215,
+          "V_min_at_A": [
+            5.287639958126412,
+            -0.7651875420673765,
+            -0.5256251283608433
+          ],
+          "V_max_kcal_mol": 14.353757905003446,
+          "V_max_at_A": [
+            1.1600581166805846,
+            -0.45278416302317626,
+            0.61881768736
+          ]
+        },
+        "delta": {
+          "area_A2": -1.214622190765752,
+          "V_area_mean_kcal_mol": 0.40639179823474336,
+          "V_p05_kcal_mol": 1.732340807448506,
+          "V_p95_kcal_mol": 0.05866856001962617,
+          "V_min_kcal_mol": 2.463222870591075,
+          "V_max_kcal_mol": 0.0
+        },
+        "overlaps": []
+      },
+      {
+        "label": "C5-H",
+        "source": "caller:map",
+        "atoms": [
+          8,
+          31,
+          32
+        ],
+        "h_generated_polar": false,
+        "nearest_nucleus": {
+          "area_A2": 19.983127849520834,
+          "area_pos_A2": 19.065166016875395,
+          "area_neg_A2": 0.917961832645439,
+          "V_area_mean_kcal_mol": 5.49846875520088,
+          "V_area_sd_kcal_mol": 2.861726116544138,
+          "V_p05_kcal_mol": 0.38399908116084774,
+          "V_p50_kcal_mol": 5.983298539771281,
+          "V_p95_kcal_mol": 9.025559134772116,
+          "V_min_kcal_mol": -9.875303965641661,
+          "V_min_at_A": [
+            5.700398546001168,
+            -0.6276013461091249,
+            -0.2367718349066068
+          ],
+          "V_max_kcal_mol": 9.790366877392849,
+          "V_max_at_A": [
+            2.811090449528744,
+            2.2617062457005837,
+            -1.2397551683324801
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 18.736073883106087,
+          "area_pos_A2": 18.636254789068012,
+          "area_neg_A2": 0.09981909403807918,
+          "V_area_mean_kcal_mol": 6.001628166815172,
+          "V_area_sd_kcal_mol": 2.1360872809966223,
+          "V_p05_kcal_mol": 2.262872904461633,
+          "V_p50_kcal_mol": 6.214020026969979,
+          "V_p95_kcal_mol": 9.046037844117928,
+          "V_min_kcal_mol": -2.908819422497928,
+          "V_min_at_A": [
+            5.5069946351261185,
+            -0.3524294588553366,
+            -0.6194570669388344
+          ],
+          "V_max_kcal_mol": 9.790366877392849,
+          "V_max_at_A": [
+            2.811090449528744,
+            2.2617062457005837,
+            -1.2397551683324801
+          ]
+        },
+        "delta": {
+          "area_A2": -1.2470539664147466,
+          "V_area_mean_kcal_mol": 0.5031594116142912,
+          "V_p05_kcal_mol": 1.8788738233007851,
+          "V_p95_kcal_mol": 0.020478709345811197,
+          "V_min_kcal_mol": 6.966484543143734,
+          "V_max_kcal_mol": 0.0
+        },
+        "overlaps": []
+      },
+      {
+        "label": "C6-H",
+        "source": "caller:map",
+        "atoms": [
+          9,
+          33,
+          34
+        ],
+        "h_generated_polar": false,
+        "nearest_nucleus": {
+          "area_A2": 20.655889329061132,
+          "area_pos_A2": 20.655889329061132,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 6.206830037418092,
+          "V_area_sd_kcal_mol": 2.2723360736099285,
+          "V_p05_kcal_mol": 2.189400139244699,
+          "V_p50_kcal_mol": 6.280551799009669,
+          "V_p95_kcal_mol": 9.706537177371896,
+          "V_min_kcal_mol": 1.0537216695858522,
+          "V_min_at_A": [
+            3.6366066159528234,
+            -0.9027737380256281,
+            -4.320263944432457
+          ],
+          "V_max_kcal_mol": 10.792551774405736,
+          "V_max_at_A": [
+            3.5593336703755374,
+            -2.5538065755365023,
+            -3.2335925191633974
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 20.633820173380954,
+          "area_pos_A2": 20.633820173380954,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 6.215462562307415,
+          "V_area_sd_kcal_mol": 2.2632536219613306,
+          "V_p05_kcal_mol": 2.189400139244699,
+          "V_p50_kcal_mol": 6.289700122852864,
+          "V_p95_kcal_mol": 9.706537177371896,
+          "V_min_kcal_mol": 1.0537216695858522,
+          "V_min_at_A": [
+            3.6366066159528234,
+            -0.9027737380256281,
+            -4.320263944432457
+          ],
+          "V_max_kcal_mol": 10.792551774405736,
+          "V_max_at_A": [
+            3.5593336703755374,
+            -2.5538065755365023,
+            -3.2335925191633974
+          ]
+        },
+        "delta": {
+          "area_A2": -0.0220691556801782,
+          "V_area_mean_kcal_mol": 0.008632524889323534,
+          "V_p05_kcal_mol": 0.0,
+          "V_p95_kcal_mol": 0.0,
+          "V_min_kcal_mol": 0.0,
+          "V_max_kcal_mol": 0.0
+        },
+        "overlaps": []
+      },
+      {
+        "label": "C7-H",
+        "source": "caller:map",
+        "atoms": [
+          10,
+          35,
+          36
+        ],
+        "h_generated_polar": false,
+        "nearest_nucleus": {
+          "area_A2": 18.141880894423004,
+          "area_pos_A2": 18.141880894423004,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 7.07095683704552,
+          "V_area_sd_kcal_mol": 2.391985584034331,
+          "V_p05_kcal_mol": 2.8238640407351507,
+          "V_p50_kcal_mol": 6.938325225624729,
+          "V_p95_kcal_mol": 10.981133068208422,
+          "V_min_kcal_mol": 1.7997213938513104,
+          "V_min_at_A": [
+            0.334540940931075,
+            1.2222398352904686,
+            -3.0960065755365034
+          ],
+          "V_max_kcal_mol": 11.821797913969593,
+          "V_max_at_A": [
+            0.7865612786982116,
+            1.2986033786555378,
+            -1.0322156548135892
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 18.14550673808298,
+          "area_pos_A2": 18.14550673808298,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 7.0575701555199615,
+          "V_area_sd_kcal_mol": 2.3903820554937214,
+          "V_p05_kcal_mol": 2.8238640407351507,
+          "V_p50_kcal_mol": 6.89447764256085,
+          "V_p95_kcal_mol": 10.981133068208422,
+          "V_min_kcal_mol": 1.7997213938513104,
+          "V_min_at_A": [
+            0.334540940931075,
+            1.2222398352904686,
+            -3.0960065755365034
+          ],
+          "V_max_kcal_mol": 11.821797913969593,
+          "V_max_at_A": [
+            0.7865612786982116,
+            1.2986033786555378,
+            -1.0322156548135892
+          ]
+        },
+        "delta": {
+          "area_A2": 0.003625843659975203,
+          "V_area_mean_kcal_mol": -0.01338668152555833,
+          "V_p05_kcal_mol": 0.0,
+          "V_p95_kcal_mol": 0.0,
+          "V_min_kcal_mol": 0.0,
+          "V_max_kcal_mol": 0.0
+        },
+        "overlaps": []
+      },
+      {
+        "label": "C8-H",
+        "source": "caller:map",
+        "atoms": [
+          11,
+          37,
+          38
+        ],
+        "h_generated_polar": false,
+        "nearest_nucleus": {
+          "area_A2": 17.84684115666107,
+          "area_pos_A2": 17.84684115666107,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 6.850200442787237,
+          "V_area_sd_kcal_mol": 2.2942232909149256,
+          "V_p05_kcal_mol": 2.8945241567867903,
+          "V_p50_kcal_mol": 6.75742541234888,
+          "V_p95_kcal_mol": 10.74539924876634,
+          "V_min_kcal_mol": 1.9278042917328044,
+          "V_min_at_A": [
+            1.5728156952299095,
+            -3.2244785951415142,
+            -1.9953180171959204
+          ],
+          "V_max_kcal_mol": 11.65531362119175,
+          "V_max_at_A": [
+            1.171802627381316,
+            -2.278634183619999,
+            -0.06911278776854299
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 17.987561882888265,
+          "area_pos_A2": 17.987561882888265,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 6.843210610328297,
+          "V_area_sd_kcal_mol": 2.2876938787319054,
+          "V_p05_kcal_mol": 2.908988940217467,
+          "V_p50_kcal_mol": 6.669562720355902,
+          "V_p95_kcal_mol": 10.73631668116922,
+          "V_min_kcal_mol": 1.9278042917328044,
+          "V_min_at_A": [
+            1.5728156952299095,
+            -3.2244785951415142,
+            -1.9953180171959204
+          ],
+          "V_max_kcal_mol": 11.65531362119175,
+          "V_max_at_A": [
+            1.171802627381316,
+            -2.278634183619999,
+            -0.06911278776854299
+          ]
+        },
+        "delta": {
+          "area_A2": 0.1407207262271939,
+          "V_area_mean_kcal_mol": -0.006989832458939915,
+          "V_p05_kcal_mol": 0.014464783430676587,
+          "V_p95_kcal_mol": -0.009082567597120672,
+          "V_min_kcal_mol": 0.0,
+          "V_max_kcal_mol": 0.0
+        },
+        "overlaps": []
+      },
+      {
+        "label": "C9-H",
+        "source": "caller:map",
+        "atoms": [
+          12,
+          39,
+          40
+        ],
+        "h_generated_polar": false,
+        "nearest_nucleus": {
+          "area_A2": 19.052535614298577,
+          "area_pos_A2": 19.052535614298577,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 6.510224588529507,
+          "V_area_sd_kcal_mol": 2.169686726380718,
+          "V_p05_kcal_mol": 2.5205757361333756,
+          "V_p50_kcal_mol": 6.619716866495668,
+          "V_p95_kcal_mol": 9.881425179201072,
+          "V_min_kcal_mol": 1.3930468030882084,
+          "V_min_at_A": [
+            -1.866835671087376,
+            -2.5538065755365023,
+            -3.461974350475553
+          ],
+          "V_max_kcal_mol": 10.752341286071026,
+          "V_max_at_A": [
+            -1.6739974871157095,
+            -3.7920810775039793,
+            -1.9953180171959204
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 19.05242733650372,
+          "area_pos_A2": 19.05242733650372,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 6.506290236673221,
+          "V_area_sd_kcal_mol": 2.178260359420034,
+          "V_p05_kcal_mol": 2.5205757361333756,
+          "V_p50_kcal_mol": 6.6446685072886496,
+          "V_p95_kcal_mol": 9.881425179201072,
+          "V_min_kcal_mol": 1.3930468030882084,
+          "V_min_at_A": [
+            -1.866835671087376,
+            -2.5538065755365023,
+            -3.461974350475553
+          ],
+          "V_max_kcal_mol": 10.752341286071026,
+          "V_max_at_A": [
+            -1.6739974871157095,
+            -3.7920810775039793,
+            -1.9953180171959204
+          ]
+        },
+        "delta": {
+          "area_A2": -0.00010827779485822475,
+          "V_area_mean_kcal_mol": -0.003934351856285545,
+          "V_p05_kcal_mol": 0.0,
+          "V_p95_kcal_mol": 0.0,
+          "V_min_kcal_mol": 0.0,
+          "V_max_kcal_mol": 0.0
+        },
+        "overlaps": []
+      },
+      {
+        "label": "C10-H",
+        "source": "caller:map",
+        "atoms": [
+          13,
+          41,
+          42
+        ],
+        "h_generated_polar": false,
+        "nearest_nucleus": {
+          "area_A2": 18.981525827069326,
+          "area_pos_A2": 18.981525827069326,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 7.277261157004103,
+          "V_area_sd_kcal_mol": 2.1554482269283066,
+          "V_p05_kcal_mol": 3.5267434753217977,
+          "V_p50_kcal_mol": 7.204848768181702,
+          "V_p95_kcal_mol": 10.75540213538818,
+          "V_min_kcal_mol": 2.455378342255208,
+          "V_min_at_A": [
+            -0.6285614214512563,
+            0.1979148203149548,
+            0.31512680542552085
+          ],
+          "V_max_kcal_mol": 11.333184428666465,
+          "V_max_at_A": [
+            -0.572747743836178,
+            -1.7282899044497078,
+            0.8939895746137884
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 19.04822605107062,
+          "area_pos_A2": 19.04822605107062,
+          "area_neg_A2": 0.0,
+          "V_area_mean_kcal_mol": 7.276458001011915,
+          "V_area_sd_kcal_mol": 2.1506163148678925,
+          "V_p05_kcal_mol": 3.536574782838224,
+          "V_p50_kcal_mol": 7.200136301532258,
+          "V_p95_kcal_mol": 10.748221211464928,
+          "V_min_kcal_mol": 2.455378342255208,
+          "V_min_at_A": [
+            -0.6285614214512563,
+            0.1979148203149548,
+            0.31512680542552085
+          ],
+          "V_max_kcal_mol": 11.333184428666465,
+          "V_max_at_A": [
+            -0.572747743836178,
+            -1.7282899044497078,
+            0.8939895746137884
+          ]
+        },
+        "delta": {
+          "area_A2": 0.06670022400129483,
+          "V_area_mean_kcal_mol": -0.0008031559921883868,
+          "V_p05_kcal_mol": 0.009831307516426246,
+          "V_p95_kcal_mol": -0.007180923923252536,
+          "V_min_kcal_mol": 0.0,
+          "V_max_kcal_mol": 0.0
+        },
+        "overlaps": []
+      },
+      {
+        "label": "C11-H",
+        "source": "caller:map",
+        "atoms": [
+          14,
+          43,
+          44
+        ],
+        "h_generated_polar": false,
+        "nearest_nucleus": {
+          "area_A2": 17.044758609587912,
+          "area_pos_A2": 16.10244376095381,
+          "area_neg_A2": 0.9423148486340991,
+          "V_area_mean_kcal_mol": 5.640154767647682,
+          "V_area_sd_kcal_mol": 2.8818693446758066,
+          "V_p05_kcal_mol": -0.43526121165107606,
+          "V_p50_kcal_mol": 5.968411262671371,
+          "V_p95_kcal_mol": 9.276026000414642,
+          "V_min_kcal_mol": -7.850525342170735,
+          "V_min_at_A": [
+            -4.480970870980581,
+            -0.8320492958366492,
+            0.8939895746137884
+          ],
+          "V_max_kcal_mol": 10.256861659197268,
+          "V_max_at_A": [
+            -3.600135091739293,
+            0.0603291290194181,
+            -3.0960065755365034
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 16.007403316663115,
+          "area_pos_A2": 15.813137490104232,
+          "area_neg_A2": 0.19426582655888286,
+          "V_area_mean_kcal_mol": 6.171464719129122,
+          "V_area_sd_kcal_mol": 2.108224837817746,
+          "V_p05_kcal_mol": 2.723902207187502,
+          "V_p50_kcal_mol": 6.182780556717571,
+          "V_p95_kcal_mol": 9.32475268773676,
+          "V_min_kcal_mol": -3.896949114784246,
+          "V_min_at_A": [
+            -4.480970870980581,
+            -0.3524294588553366,
+            0.667206262451021
+          ],
+          "V_max_kcal_mol": 10.256861659197268,
+          "V_max_at_A": [
+            -3.600135091739293,
+            0.0603291290194181,
+            -3.0960065755365034
+          ]
+        },
+        "delta": {
+          "area_A2": -1.0373552929247971,
+          "V_area_mean_kcal_mol": 0.5313099514814397,
+          "V_p05_kcal_mol": 3.159163418838578,
+          "V_p95_kcal_mol": 0.04872668732211771,
+          "V_min_kcal_mol": 3.9535762273864887,
+          "V_max_kcal_mol": 0.0
+        },
+        "overlaps": []
+      },
+      {
+        "label": "C12-H",
+        "source": "caller:map",
+        "atoms": [
+          15,
+          45,
+          46
+        ],
+        "h_generated_polar": false,
+        "nearest_nucleus": {
+          "area_A2": 20.46336256354659,
+          "area_pos_A2": 18.894656343334866,
+          "area_neg_A2": 1.5687062202117255,
+          "V_area_mean_kcal_mol": 6.138462750769927,
+          "V_area_sd_kcal_mol": 3.667678493062852,
+          "V_p05_kcal_mol": -1.9237870664977479,
+          "V_p50_kcal_mol": 6.526797111823833,
+          "V_p95_kcal_mol": 10.827309231001337,
+          "V_min_kcal_mol": -9.914821781186326,
+          "V_min_at_A": [
+            -5.168901346109124,
+            -2.4162203795782506,
+            -2.229691961253226
+          ],
+          "V_max_kcal_mol": 11.42112238108267,
+          "V_max_at_A": [
+            -2.554766146215919,
+            -2.918570729900559,
+            1.1691614618675765
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 19.403947981360034,
+          "area_pos_A2": 18.782748367748383,
+          "area_neg_A2": 0.6211996136116519,
+          "V_area_mean_kcal_mol": 6.671136288692697,
+          "V_area_sd_kcal_mol": 2.888977888964492,
+          "V_p05_kcal_mol": 0.9777992019234368,
+          "V_p50_kcal_mol": 6.74798945811257,
+          "V_p95_kcal_mol": 10.848470566374305,
+          "V_min_kcal_mol": -5.132076392136061,
+          "V_min_at_A": [
+            -4.756143262897084,
+            -1.7282899044497078,
+            -2.2305680557262613
+          ],
+          "V_max_kcal_mol": 11.42112238108267,
+          "V_max_at_A": [
+            -2.554766146215919,
+            -2.918570729900559,
+            1.1691614618675765
+          ]
+        },
+        "delta": {
+          "area_A2": -1.0594145821865553,
+          "V_area_mean_kcal_mol": 0.5326735379227703,
+          "V_p05_kcal_mol": 2.901586268421185,
+          "V_p95_kcal_mol": 0.021161335372967827,
+          "V_min_kcal_mol": 4.782745389050265,
+          "V_max_kcal_mol": 0.0
+        },
+        "overlaps": []
+      },
+      {
+        "label": "C13-H",
+        "source": "caller:map",
+        "atoms": [
+          16,
+          47
+        ],
+        "h_generated_polar": false,
+        "nearest_nucleus": {
+          "area_A2": 15.385086820901616,
+          "area_pos_A2": 8.526791423371732,
+          "area_neg_A2": 6.858295397529885,
+          "V_area_mean_kcal_mol": -0.6261912862064032,
+          "V_area_sd_kcal_mol": 7.9451692006899775,
+          "V_p05_kcal_mol": -14.778088654481332,
+          "V_p50_kcal_mol": 1.5245947878166284,
+          "V_p95_kcal_mol": 9.09592134679008,
+          "V_min_kcal_mol": -17.82904501188042,
+          "V_min_at_A": [
+            -5.994418017195919,
+            -2.0884803006287895,
+            -2.270489904449709
+          ],
+          "V_max_kcal_mol": 10.168714997339292,
+          "V_max_at_A": [
+            -5.744239046233941,
+            -4.204839286881698,
+            0.20605909948524528
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 17.863783605900633,
+          "area_pos_A2": 8.830614933094576,
+          "area_neg_A2": 9.033168672806056,
+          "V_area_mean_kcal_mol": -1.3491771694714465,
+          "V_area_sd_kcal_mol": 7.736554702803836,
+          "V_p05_kcal_mol": -14.783400314346956,
+          "V_p50_kcal_mol": -0.21116288298374206,
+          "V_p95_kcal_mol": 9.02522226165066,
+          "V_min_kcal_mol": -17.82904501188042,
+          "V_min_at_A": [
+            -5.994418017195919,
+            -2.0884803006287895,
+            -2.270489904449709
+          ],
+          "V_max_kcal_mol": 10.168714997339292,
+          "V_max_at_A": [
+            -5.744239046233941,
+            -4.204839286881698,
+            0.20605909948524528
+          ]
+        },
+        "delta": {
+          "area_A2": 2.4786967849990162,
+          "V_area_mean_kcal_mol": -0.7229858832650433,
+          "V_p05_kcal_mol": -0.0053116598656242076,
+          "V_p95_kcal_mol": -0.07069908513942025,
+          "V_min_kcal_mol": 0.0,
+          "V_max_kcal_mol": 0.0
+        },
+        "overlaps": []
+      },
+      {
+        "label": "C14-H",
+        "source": "caller:map",
+        "atoms": [
+          17,
+          48
+        ],
+        "h_generated_polar": false,
+        "nearest_nucleus": {
+          "area_A2": 13.965822467437118,
+          "area_pos_A2": 8.12074647890146,
+          "area_neg_A2": 5.845075988535658,
+          "V_area_mean_kcal_mol": -0.19323470364560125,
+          "V_area_sd_kcal_mol": 7.847137812257002,
+          "V_p05_kcal_mol": -14.84336482871653,
+          "V_p50_kcal_mol": 2.1275206670682,
+          "V_p95_kcal_mol": 9.139490868995816,
+          "V_min_kcal_mol": -17.82904501188042,
+          "V_min_at_A": [
+            -5.994418017195919,
+            -2.0884803006287895,
+            -2.270489904449709
+          ],
+          "V_max_kcal_mol": 10.037176250228459,
+          "V_max_at_A": [
+            -8.33338107750398,
+            -1.7282899044497078,
+            -0.10497563427619523
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 15.621378641286169,
+          "area_pos_A2": 8.218051357984569,
+          "area_neg_A2": 7.403327283301598,
+          "V_area_mean_kcal_mol": -0.9131637425582979,
+          "V_area_sd_kcal_mol": 7.795660236465703,
+          "V_p05_kcal_mol": -14.78985054072803,
+          "V_p50_kcal_mol": 0.6283253428491706,
+          "V_p95_kcal_mol": 9.049713146361553,
+          "V_min_kcal_mol": -17.82904501188042,
+          "V_min_at_A": [
+            -5.994418017195919,
+            -2.0884803006287895,
+            -2.270489904449709
+          ],
+          "V_max_kcal_mol": 10.037176250228459,
+          "V_max_at_A": [
+            -8.33338107750398,
+            -1.7282899044497078,
+            -0.10497563427619523
+          ]
+        },
+        "delta": {
+          "area_A2": 1.6555561738490514,
+          "V_area_mean_kcal_mol": -0.7199290389126967,
+          "V_p05_kcal_mol": 0.053514287988498666,
+          "V_p95_kcal_mol": -0.08977772263426331,
+          "V_min_kcal_mol": 0.0,
+          "V_max_kcal_mol": 0.0
+        },
+        "overlaps": []
+      },
+      {
+        "label": "C15-H",
+        "source": "caller:map",
+        "atoms": [
+          18,
+          49,
+          50
+        ],
+        "h_generated_polar": false,
+        "nearest_nucleus": {
+          "area_A2": 18.654576185999076,
+          "area_pos_A2": 16.29558046012069,
+          "area_neg_A2": 2.3589957258783896,
+          "V_area_mean_kcal_mol": 4.029120895794888,
+          "V_area_sd_kcal_mol": 3.6121875992244896,
+          "V_p05_kcal_mol": -3.3718802072522194,
+          "V_p50_kcal_mol": 4.735056871194076,
+          "V_p95_kcal_mol": 8.500592331802233,
+          "V_min_kcal_mol": -11.438006050629639,
+          "V_min_at_A": [
+            -6.269589904449707,
+            -1.3155318212376679,
+            -2.3318152559053695
+          ],
+          "V_max_kcal_mol": 9.24412916818945,
+          "V_max_at_A": [
+            -4.343385179685045,
+            1.4361895746137892,
+            -1.7229899043404917
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 17.76018331001528,
+          "area_pos_A2": 16.18140625092157,
+          "area_neg_A2": 1.5787770590937105,
+          "V_area_mean_kcal_mol": 4.494333308144441,
+          "V_area_sd_kcal_mol": 3.0353403473825256,
+          "V_p05_kcal_mol": -1.2858657319889562,
+          "V_p50_kcal_mol": 4.993052520849952,
+          "V_p95_kcal_mol": 8.534602347424974,
+          "V_min_kcal_mol": -7.731717786899698,
+          "V_min_at_A": [
+            -5.719245625279416,
+            -0.9027737380256281,
+            -2.3200813431216507
+          ],
+          "V_max_kcal_mol": 9.24412916818945,
+          "V_max_at_A": [
+            -4.343385179685045,
+            1.4361895746137892,
+            -1.7229899043404917
+          ]
+        },
+        "delta": {
+          "area_A2": -0.8943928759837974,
+          "V_area_mean_kcal_mol": 0.4652124123495529,
+          "V_p05_kcal_mol": 2.086014475263263,
+          "V_p95_kcal_mol": 0.03401001562274075,
+          "V_min_kcal_mol": 3.706288263729941,
+          "V_max_kcal_mol": 0.0
+        },
+        "overlaps": []
+      },
+      {
+        "label": "C16-H",
+        "source": "caller:map",
+        "atoms": [
+          19,
+          51,
+          52
+        ],
+        "h_generated_polar": false,
+        "nearest_nucleus": {
+          "area_A2": 20.751158939910823,
+          "area_pos_A2": 20.33692290252486,
+          "area_neg_A2": 0.41423603738595927,
+          "V_area_mean_kcal_mol": 4.611844979108792,
+          "V_area_sd_kcal_mol": 2.2516926772706625,
+          "V_p05_kcal_mol": 0.5758617303539855,
+          "V_p50_kcal_mol": 4.984072464447929,
+          "V_p95_kcal_mol": 8.019046427483495,
+          "V_min_kcal_mol": -1.9032062577767739,
+          "V_min_at_A": [
+            -6.819934183619999,
+            -0.6276013461091249,
+            1.1575860131763305
+          ],
+          "V_max_kcal_mol": 8.771349207064329,
+          "V_max_at_A": [
+            -6.682348239993105,
+            3.3623948040411666,
+            -0.5567502013011844
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 20.544442741148636,
+          "area_pos_A2": 20.12361444730275,
+          "area_neg_A2": 0.4208282938458856,
+          "V_area_mean_kcal_mol": 4.613798662174185,
+          "V_area_sd_kcal_mol": 2.2650500605730257,
+          "V_p05_kcal_mol": 0.5470249103507704,
+          "V_p50_kcal_mol": 4.9979706489089635,
+          "V_p95_kcal_mol": 8.019961569472486,
+          "V_min_kcal_mol": -2.2261228234762602,
+          "V_min_at_A": [
+            -6.682348239993105,
+            -0.5637201303339446,
+            1.3067476578258281
+          ],
+          "V_max_kcal_mol": 8.771349207064329,
+          "V_max_at_A": [
+            -6.682348239993105,
+            3.3623948040411666,
+            -0.5567502013011844
+          ]
+        },
+        "delta": {
+          "area_A2": -0.20671619876218728,
+          "V_area_mean_kcal_mol": 0.001953683065393008,
+          "V_p05_kcal_mol": -0.02883682000321508,
+          "V_p95_kcal_mol": 0.0009151419889903423,
+          "V_min_kcal_mol": -0.32291656569948635,
+          "V_max_kcal_mol": 0.0
+        },
+        "overlaps": []
+      },
+      {
+        "label": "C17-H",
+        "source": "caller:map",
+        "atoms": [
+          20,
+          53,
+          54
+        ],
+        "h_generated_polar": false,
+        "nearest_nucleus": {
+          "area_A2": 20.128656939387128,
+          "area_pos_A2": 15.681338459907309,
+          "area_neg_A2": 4.447318479479819,
+          "V_area_mean_kcal_mol": 2.226788528957674,
+          "V_area_sd_kcal_mol": 5.125715120712774,
+          "V_p05_kcal_mol": -9.760661280367614,
+          "V_p50_kcal_mol": 3.0706172754916934,
+          "V_p95_kcal_mol": 8.740749448945392,
+          "V_min_kcal_mol": -15.863190115929685,
+          "V_min_at_A": [
+            -5.609380047586912,
+            -1.5907039608228137,
+            1.4443338537840797
+          ],
+          "V_max_kcal_mol": 9.661774868423793,
+          "V_max_at_A": [
+            -3.655454704556502,
+            2.1241200497423325,
+            0.6968329917908777
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 18.91998908821256,
+          "area_pos_A2": 15.736613139774809,
+          "area_neg_A2": 3.18337594843775,
+          "V_area_mean_kcal_mol": 3.1638815178260122,
+          "V_area_sd_kcal_mol": 3.724820737995245,
+          "V_p05_kcal_mol": -3.773148843487055,
+          "V_p50_kcal_mol": 3.4220228055058013,
+          "V_p95_kcal_mol": 8.774188013852248,
+          "V_min_kcal_mol": -14.087879257865689,
+          "V_min_at_A": [
+            -5.444073738025628,
+            -1.3155318212376679,
+            1.4815012534097016
+          ],
+          "V_max_kcal_mol": 9.661774868423793,
+          "V_max_at_A": [
+            -3.655454704556502,
+            2.1241200497423325,
+            0.6968329917908777
+          ]
+        },
+        "delta": {
+          "area_A2": -1.2086678511745674,
+          "V_area_mean_kcal_mol": 0.9370929888683381,
+          "V_p05_kcal_mol": 5.987512436880559,
+          "V_p95_kcal_mol": 0.03343856490685582,
+          "V_min_kcal_mol": 1.775310858063996,
+          "V_max_kcal_mol": 0.0
+        },
+        "overlaps": []
+      },
+      {
+        "label": "C18-H",
+        "source": "caller:map",
+        "atoms": [
+          21,
+          55,
+          56,
+          57
+        ],
+        "h_generated_polar": false,
+        "nearest_nucleus": {
+          "area_A2": 34.84218322893696,
+          "area_pos_A2": 27.785600518498814,
+          "area_neg_A2": 7.05658271043815,
+          "V_area_mean_kcal_mol": 3.0027790152245215,
+          "V_area_sd_kcal_mol": 2.991365127877966,
+          "V_p05_kcal_mol": -1.7006524636127385,
+          "V_p50_kcal_mol": 2.902688373835305,
+          "V_p95_kcal_mol": 7.9162317712189,
+          "V_min_kcal_mol": -2.2841855247661242,
+          "V_min_at_A": [
+            -6.682348239993105,
+            2.3992919369961205,
+            4.265334842471809
+          ],
+          "V_max_kcal_mol": 8.797747612627715,
+          "V_max_at_A": [
+            -6.269589904449707,
+            4.325497166423498,
+            1.7404749815039258
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 35.04134562711942,
+          "area_pos_A2": 27.98476291668127,
+          "area_neg_A2": 7.05658271043815,
+          "V_area_mean_kcal_mol": 2.9969610900354007,
+          "V_area_sd_kcal_mol": 2.980997049849292,
+          "V_p05_kcal_mol": -1.7006524636127385,
+          "V_p50_kcal_mol": 2.902688373835305,
+          "V_p95_kcal_mol": 7.916139750901901,
+          "V_min_kcal_mol": -2.2841855247661242,
+          "V_min_at_A": [
+            -6.682348239993105,
+            2.3992919369961205,
+            4.265334842471809
+          ],
+          "V_max_kcal_mol": 8.797747612627715,
+          "V_max_at_A": [
+            -6.269589904449707,
+            4.325497166423498,
+            1.7404749815039258
+          ]
+        },
+        "delta": {
+          "area_A2": 0.19916239818245884,
+          "V_area_mean_kcal_mol": -0.005817925189120832,
+          "V_p05_kcal_mol": 0.0,
+          "V_p95_kcal_mol": -9.202031699917512e-05,
+          "V_min_kcal_mol": 0.0,
+          "V_max_kcal_mol": 0.0
+        },
+        "overlaps": []
+      },
+      {
+        "label": "head O",
+        "source": "caller:map",
+        "atoms": [
+          3
+        ],
+        "h_generated_polar": false,
+        "nearest_nucleus": {
+          "area_A2": 9.787864709953304,
+          "area_pos_A2": 1.2117962024390914,
+          "area_neg_A2": 8.576068507514213,
+          "V_area_mean_kcal_mol": -11.881938990889937,
+          "V_area_sd_kcal_mol": 8.431095574188884,
+          "V_p05_kcal_mol": -22.175867463902247,
+          "V_p50_kcal_mol": -13.764319927723129,
+          "V_p95_kcal_mol": 5.838157678363221,
+          "V_min_kcal_mol": -22.99409238821962,
+          "V_min_at_A": [
+            7.6266032707658304,
+            -0.8595529091349977,
+            1.9946781329543712
+          ],
+          "V_max_kcal_mol": 11.520159885372756,
+          "V_max_at_A": [
+            8.277745347967628,
+            1.2986033786555378,
+            3.3705385785487425
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 9.594183197097655,
+          "area_pos_A2": 0.5656002083603007,
+          "area_neg_A2": 9.028582988737355,
+          "V_area_mean_kcal_mol": -12.53876169725667,
+          "V_area_sd_kcal_mol": 7.256655165372883,
+          "V_p05_kcal_mol": -22.194764429305945,
+          "V_p50_kcal_mol": -13.70616932510665,
+          "V_p95_kcal_mol": 0.6154488652828142,
+          "V_min_kcal_mol": -22.99409238821962,
+          "V_min_at_A": [
+            7.6266032707658304,
+            -0.8595529091349977,
+            1.9946781329543712
+          ],
+          "V_max_kcal_mol": 8.819717980492767,
+          "V_max_at_A": [
+            7.076258486932824,
+            1.6620210928962893,
+            3.508124774506994
+          ]
+        },
+        "delta": {
+          "area_A2": -0.19368151285564927,
+          "V_area_mean_kcal_mol": -0.6568227063667322,
+          "V_p05_kcal_mol": -0.01889696540369812,
+          "V_p95_kcal_mol": -5.222708813080407,
+          "V_min_kcal_mol": 0.0,
+          "V_max_kcal_mol": -2.7004419048799893
+        },
+        "overlaps": []
+      },
+      {
+        "label": "carbonyl O",
+        "source": "caller:map",
+        "atoms": [
+          2
+        ],
+        "h_generated_polar": false,
+        "nearest_nucleus": {
+          "area_A2": 16.855161594702913,
+          "area_pos_A2": 0.05424451732679467,
+          "area_neg_A2": 16.80091707737612,
+          "V_area_mean_kcal_mol": -28.38357081622632,
+          "V_area_sd_kcal_mol": 10.47957351639889,
+          "V_p05_kcal_mol": -39.75991801481813,
+          "V_p50_kcal_mol": -31.44988771164775,
+          "V_p95_kcal_mol": -5.817377635113168,
+          "V_min_kcal_mol": -40.67792095329843,
+          "V_min_at_A": [
+            7.7116369195725705,
+            4.46308336238175,
+            1.3067476578258281
+          ],
+          "V_max_kcal_mol": 4.189790657678129,
+          "V_max_at_A": [
+            6.938673300300002,
+            1.848947657825829,
+            0.23334066118904576
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 17.390437234016282,
+          "area_pos_A2": 0.0,
+          "area_neg_A2": 17.390437234016282,
+          "V_area_mean_kcal_mol": -29.058412342015927,
+          "V_area_sd_kcal_mol": 8.848255542505349,
+          "V_p05_kcal_mol": -39.740083515615886,
+          "V_p50_kcal_mol": -31.085556178755855,
+          "V_p95_kcal_mol": -12.466947680281292,
+          "V_min_kcal_mol": -40.67792095329843,
+          "V_min_at_A": [
+            7.7116369195725705,
+            4.46308336238175,
+            1.3067476578258281
+          ],
+          "V_max_kcal_mol": -3.1582663917980085,
+          "V_max_at_A": [
+            6.388328516466996,
+            2.1241200497423325,
+            0.3734128256808056
+          ]
+        },
+        "delta": {
+          "area_A2": 0.5352756393133689,
+          "V_area_mean_kcal_mol": -0.6748415257896063,
+          "V_p05_kcal_mol": 0.019834499202247002,
+          "V_p95_kcal_mol": -6.649570045168124,
+          "V_min_kcal_mol": 0.0,
+          "V_max_kcal_mol": -7.348057049476138
+        },
+        "overlaps": [
+          "acetyl"
+        ]
+      },
+      {
+        "label": "acetyl",
+        "source": "caller:map",
+        "atoms": [
+          0,
+          1,
+          2,
+          22,
+          23,
+          24
+        ],
+        "h_generated_polar": false,
+        "nearest_nucleus": {
+          "area_A2": 57.80436964851417,
+          "area_pos_A2": 38.19359162727241,
+          "area_neg_A2": 19.610778021241757,
+          "V_area_mean_kcal_mol": -1.4446596076186868,
+          "V_area_sd_kcal_mol": 18.949943446149792,
+          "V_p05_kcal_mol": -38.211336189546714,
+          "V_p50_kcal_mol": 8.198503387851941,
+          "V_p95_kcal_mol": 17.164652443976692,
+          "V_min_kcal_mol": -40.67792095329843,
+          "V_min_at_A": [
+            7.7116369195725705,
+            4.46308336238175,
+            1.3067476578258281
+          ],
+          "V_max_kcal_mol": 19.15474912344799,
+          "V_max_at_A": [
+            10.17784487981688,
+            0.7482590994852463,
+            3.508124774506994
+          ]
+        },
+        "radius_scaled": {
+          "area_A2": 59.7620067561508,
+          "area_pos_A2": 39.27295399913844,
+          "area_neg_A2": 20.48905275701235,
+          "V_area_mean_kcal_mol": -1.6128065364218358,
+          "V_area_sd_kcal_mol": 18.847264708004488,
+          "V_p05_kcal_mol": -38.14297032016407,
+          "V_p50_kcal_mol": 8.085668820845568,
+          "V_p95_kcal_mol": 17.141930916504204,
+          "V_min_kcal_mol": -40.67792095329843,
+          "V_min_at_A": [
+            7.7116369195725705,
+            4.46308336238175,
+            1.3067476578258281
+          ],
+          "V_max_kcal_mol": 19.15474912344799,
+          "V_max_at_A": [
+            10.17784487981688,
+            0.7482590994852463,
+            3.508124774506994
+          ]
+        },
+        "delta": {
+          "area_A2": 1.9576371076366286,
+          "V_area_mean_kcal_mol": -0.16814692880314897,
+          "V_p05_kcal_mol": 0.06836586938264588,
+          "V_p95_kcal_mol": -0.02272152747248768,
+          "V_min_kcal_mol": 0.0,
+          "V_max_kcal_mol": 0.0
+        },
+        "overlaps": [
+          "carbonyl O"
+        ]
+      }
+    ],
+    "sites_tile_surface": false,
+    "solvent_esp": null,
+    "geometry_provenance": {
+      "heavy_atoms": "supplied_frozen",
+      "hydrogens": {
+        "supplied": 36,
+        "generated": 0,
+        "generated_relaxed": 0,
+        "optimised": 0
+      },
+      "relaxation": "none",
+      "caveat": "hydrogens not supplied were placed for the isolated molecule, without any protein or other environment"
+    },
+    "conformer_scope": "single conformer; 15 rotatable bond(s)",
+    "topology": {
+      "genus": 0,
+      "components": 1
+    },
+    "identity": {
+      "chemical_smiles": "CCCC/C=C\\CCCCCCCCC/C=C/COC(C)=O",
+      "mapped_smiles": "[CH2:1](/[CH:2]=[CH:3]/[CH2:4][CH2:5][CH2:6][CH2:7][CH2:8][CH2:9][CH2:10][CH2:11][CH2:12]/[CH:13]=[CH:14]\\[CH2:15][CH2:16][CH2:17][CH3:18])[O:31][C:22]([CH3:21])=[O:32]",
+      "chemical_match": true,
+      "mapped_match": true
+    },
+    "budget": [
+      {
+        "id": "basis",
+        "axis": "basis def2-SVP -> def2-TZVPP",
+        "statistic": "shift, sigma-hole V_max",
+        "kcal_mol": 3.54,
+        "measured_on": "chlorobenzene",
+        "source": "bench/error_budget.jsonl"
+      },
+      {
+        "id": "solvent water",
+        "axis": "solvent gas -> PCM water, polarised solute only",
+        "statistic": "shift, sigma-hole V_max",
+        "kcal_mol": -3.6,
+        "measured_on": "chlorobenzene",
+        "source": "bench/solvent_convention.jsonl"
+      },
+      {
+        "id": "solvent chloroform",
+        "axis": "solvent gas -> PCM chloroform, polarised solute only",
+        "statistic": "shift, sigma-hole V_max",
+        "kcal_mol": -2.69,
+        "measured_on": "chlorobenzene",
+        "source": "bench/solvent_convention.jsonl"
+      },
+      {
+        "id": "functional",
+        "axis": "functional B3LYP / PBE0 / M06-2X / HF",
+        "statistic": "spread, sigma-hole V_max",
+        "kcal_mol": 0.69,
+        "measured_on": "chlorobenzene",
+        "source": "bench/error_budget.jsonl"
+      },
+      {
+        "id": "grid",
+        "axis": "grid spacing 0.26 -> 0.16 bohr",
+        "statistic": "shift, sigma-hole V_max",
+        "kcal_mol": 0.04,
+        "measured_on": "chlorobenzene",
+        "source": "bench/error_budget.jsonl"
+      },
+      {
+        "id": "partition small anions",
+        "axis": "partition rule, radius_scaled - nearest_nucleus",
+        "statistic": "max |delta|, site area-weighted mean",
+        "kcal_mol": 3.0,
+        "measured_on": "nitrite, thiocyanate, enolate",
+        "source": "bench/site_partition.jsonl"
+      },
+      {
+        "id": "partition C18",
+        "axis": "partition rule, radius_scaled - nearest_nucleus",
+        "statistic": "max |delta|, site area-weighted mean",
+        "kcal_mol": 3.95,
+        "measured_on": "Z3Z13-18:OAc, 10 conformers",
+        "source": "bench/site_partition.jsonl"
+      },
+      {
+        "id": "conformer C18",
+        "axis": "conformer, extended and folded",
+        "statistic": "median site range, site area-weighted mean",
+        "kcal_mol": 5.1,
+        "measured_on": "Z3Z13-18:OAc, 10 conformers",
+        "source": "bench/site_partition.jsonl"
+      },
+      {
+        "id": "grid mean",
+        "axis": "grid spacing 0.26 -> 0.16 bohr",
+        "statistic": "max |shift|, site area-weighted mean",
+        "kcal_mol": 0.15,
+        "measured_on": "nitrite, thiocyanate, enolate, chlorobenzene",
+        "source": "bench/site_partition.jsonl"
+      }
+    ]
+  },
+  "sites_reason": null,
+  "scale": {
+    "kind": "diverging",
+    "vmin": -40.67792095329843,
+    "vmax": 40.67792095329843,
+    "sign_change_ratio": 0.4708881052559004,
+    "sign_change_threshold": 0.05,
+    "cmap": "vik",
+    "cmap_requested": null,
+    "cmap_substituted": false,
+    "cmap_forced": false,
+    "source": "auto",
+    "colour_scale_fixed": false
+  },
+  "provenance": {
+    "espmap_version": "0.2.1",
+    "code": "v0.2.1",
+    "installed_distribution_version": "0.2.0",
+    "python": "3.12.15",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit_image": "0.26.0",
+    "pyscf": "2.14.0",
+    "rdkit": "2026.9.1",
+    "matplotlib": "3.11.2",
+    "threads": 4,
+    "blas": null
+  },
+  "caveat": "Measured error budget (README): basis def2-SVP -> def2-TZVPP moves the chlorobenzene sigma-hole by +3.54 kcal/mol; solvent gas -> water by -3.60. Quote numbers only against those margins."
+}
