@@ -175,8 +175,9 @@ def observed_compounds(o):
 # ---------------------------------------------------------------- observations
 
 def observation_findings(records):
-    """Rules the schema cannot say: amounts belong to detections, and a
-    detection limit belongs to a negative."""
+    """Rules the schema cannot say: amounts belong to detections, a
+    detection limit belongs to a negative, and a comparator differs from the
+    treatment in its blend or its trap."""
     out = []
     for path, o in records["observations"].values():
         for c in o.get("components") or []:
@@ -187,6 +188,11 @@ def observation_findings(records):
             if "detection_limit" in c and c.get("detected") is not False:
                 out.append(Finding("OBS_FIELD_CONFLICT", path,
                                    f"{name}: detection_limit belongs to detected: false"))
+        comp = o.get("comparator") or {}
+        if (o.get("blend") is not None and comp.get("blend") == o.get("blend")
+                and comp.get("trap", o.get("trap")) == o.get("trap")):
+            out.append(Finding("OBS_FIELD_CONFLICT", path,
+                               "comparator has the treatment's blend and trap: nothing was compared"))
     return out
 
 

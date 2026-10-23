@@ -3,10 +3,11 @@ observation_type: behavioural_response
 taxon: spa.tax.synanthedon_bicingulata
 context: {sex: male, habitat: peach orchard, population: "Korean population", locality: "Jeonju, Republic of Korea"}
 assay: field_trapping
-blend: [{compound: spa.cmpd.e3_z13_18_oac, amount: {value: 0.7, unit: milligram}}, {compound: spa.cmpd.z3_z13_18_oac, amount: {value: 0.3, unit: milligram}}]
+trap: {design: delta, colour: null, supplier: Green Agro Tech}
+blend: [{compound: spa.cmpd.e3_z13_18_oac, amount: {value: 0.7, unit: milligram}, purity: {value: 99, kind: isomeric, basis: stated, qualifier: more_than}}, {compound: spa.cmpd.z3_z13_18_oac, amount: {value: 0.3, unit: milligram}, purity: {value: 99, kind: isomeric, basis: stated, qualifier: more_than}}]
 comparator:
   description: E3:Z3,Z13-18:OAc 4:6, 1 mg
-  blend: [{compound: spa.cmpd.e3_z13_18_oac, amount: {value: 0.4, unit: milligram}}, {compound: spa.cmpd.z3_z13_18_oac, amount: {value: 0.6, unit: milligram}}]
+  blend: [{compound: spa.cmpd.e3_z13_18_oac, amount: {value: 0.4, unit: milligram}, purity: {value: 99, kind: isomeric, basis: stated, qualifier: more_than}}, {compound: spa.cmpd.z3_z13_18_oac, amount: {value: 0.6, unit: milligram}, purity: {value: 99, kind: isomeric, basis: stated, qualifier: more_than}}]
 effect: decreased
 significance: significant
 dose: {value: 1, unit: milligram}

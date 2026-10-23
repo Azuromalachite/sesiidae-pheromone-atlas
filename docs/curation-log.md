@@ -1,5 +1,49 @@
 # Curation log
 
+## 2026-10-23 (4) — Kwon et al. 2021
+
+Full text of Kwon, Huh, Lee, Seo & Park 2021 (*S. bicingulata*, Korea,
+2017–2019): 1 reference (no PubMed record), 25 observations. These are:
+- 16 ratio contrasts against 4:6 (Gongju 2017; Jinju, Gongju and Gapyeong 2018);
+- bucket vs delta trap;
+- yellow vs green bucket (two spring sites);
+- yellow vs green and yellow vs white bucket (three autumn sites).
+
+Values are read from bar charts except the bucket/delta means (abstract).
+
+### What this paper corrected, including the entry above
+
+- **Entry (3) said the less pure lures were Kwon's. That mixes two kinds
+  of purity.** Kwon's 94.18 % and 82.8 % are *chemical* purity from a GC-MS
+  trace, and they state their lures held no isomers. Yang's > 99 % is
+  *isomeric* purity, stated without data. Kwon's claim that Yang gave no
+  isomeric information is still wrong. Neither paper shows a separation of
+  the 3,13 geometric isomers on the column used for the lure check: Kwon's
+  is a non-polar HP-5MS. That last point is an Atlas inference and is
+  marked as one in the records.
+- **4.3:5.7 is not a tested lure.** It is the nominal 4:6 lure corrected for
+  the two chemical purities: 0.4 × 94.18 : 0.6 × 82.8 ≈ 43 : 57.
+- **Text and figure disagree on where 4:6 beat 3:7.** The text says Gongju
+  2018; in Fig. 5, Gongju 3:7 shares a letter with 4:6 (ab), and Jinju 3:7
+  does not (bc). The records follow the figure.
+- **Bucket vs delta confounds design with colour** (green bucket, white
+  delta).
+- **1:9 reverses between seasons:** 8.5 per trap in spring 2017 (green
+  traps), close to zero in autumn 2018 (yellow traps) at all three sites.
+
+### Schema changes forced by this paper
+
+| change | forced by |
+|---|---|
+| blend `purity`: value, `kind` (chemical / isomeric / unspecified), `basis` (measured / stated) | Kwon measures chemical purity; Yang states isomeric purity |
+| `trap` on the treatment and, when it differs, on the comparator: design, colour, CIE L*a*b*, supplier | trap-type and trap-colour experiments compare traps, not blends |
+| validator: a comparator must differ from the treatment in blend or trap (`OBS_FIELD_CONFLICT`) | the trap experiments are the first records whose blends are identical |
+
+Yang 2011 and Naka 2006 records were backfilled with their traps (delta;
+sticky board), and Yang's with the stated isomeric purity. Older records
+are not backfilled yet. Four failing fixtures: `purity_over_100`,
+`purity_without_kind`, `trap_design_unknown`, `comparator_identical`.
+
 ## 2026-10-23 (3) — Yang et al. 2011 and Naka et al. 2006
 
 Two more full texts: Yang, Kim & Lee 2011 (*S. bicingulata*, Korea) and

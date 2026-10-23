@@ -33,14 +33,17 @@ CIP label is the chain geometry that lipid shorthand names.
 ## Observations, genomes and references
 
 JSON Schema (`schemas/`) enforces the shapes, including: `method` on every
-component whose `detected` is true or false; three observation types and no
-`role` field. The validator adds:
+component whose `detected` is true or false; `identification` only on a
+detected component; a lure `purity` that names its `kind` (chemical,
+isomeric or unspecified) and `basis` (measured or stated); a trap `design`
+from a fixed list; three observation types and no `role` field. The
+validator adds:
 
 | check | error code |
 |---|---|
 | every taxon, compound, reference and `represents` id resolves | `REF_MISSING` |
 | observations are of real compounds, never computational models | `OBS_MODEL_COMPOUND` |
-| amounts only on detections; a detection limit only on a negative | `OBS_FIELD_CONFLICT` |
+| amounts only on detections; a detection limit only on a negative; a comparator differs from the treatment in blend or trap | `OBS_FIELD_CONFLICT` |
 | `genome_id` ends with the assembly accession.version | `GENOME_ID` |
 | ids unique | `DUPLICATE_ID` |
 | no two taxa share an accepted name; a synonym spelling another accepted name carries both authorities | `TAXON_NAME_DUPLICATE`, `NAME_AMBIGUOUS` |

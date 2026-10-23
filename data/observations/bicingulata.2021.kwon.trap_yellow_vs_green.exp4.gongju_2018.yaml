@@ -1,0 +1,20 @@
+observation_id: spa.obs.bicingulata.2021.kwon.trap_yellow_vs_green.exp4.gongju_2018
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_bicingulata
+context: {sex: male, habitat: roadside cherry trees, population: "Korean population", locality: "Gongju, Republic of Korea"}
+assay: field_trapping
+trap: {design: bucket, colour: yellow, colour_lab: {L: 59.29, a: 6.88, b: 45.80}, supplier: Korea Institute of Insect Pheromone}
+blend: [{compound: spa.cmpd.e3_z13_18_oac, amount: {value: 0.4, unit: milligram}, purity: {value: 94.18, kind: chemical, basis: measured, method: GC-MS TIC on HP-5MS}}, {compound: spa.cmpd.z3_z13_18_oac, amount: {value: 0.6, unit: milligram}, purity: {value: 82.8, kind: chemical, basis: measured, method: GC-MS TIC on HP-5MS}}]
+comparator:
+  description: same lure in a green bucket trap
+  blend: [{compound: spa.cmpd.e3_z13_18_oac, amount: {value: 0.4, unit: milligram}, purity: {value: 94.18, kind: chemical, basis: measured, method: GC-MS TIC on HP-5MS}}, {compound: spa.cmpd.z3_z13_18_oac, amount: {value: 0.6, unit: milligram}, purity: {value: 82.8, kind: chemical, basis: measured, method: GC-MS TIC on HP-5MS}}]
+  trap: {design: bucket, colour: green, colour_lab: {L: 33.41, a: -11.28, b: 0.46}, supplier: Korea Institute of Insect Pheromone}
+effect: no_effect
+significance: not_significant
+dose: {value: 1, unit: milligram}
+response: {measure: trap_catch, unit: mean_catch_per_trap, treatment_value: 6.0, comparator_value: 2.0, qualifier: approximate}
+evidence:
+  reference: spa.ref.kwon_2021
+  source_location: "Experiment 4; Fig. 9b"
+  author_statement: "Yellow bucket traps caught the largest number of male"
+  notes: "Experiment 4, Gongju, 27 August - 28 September 2018, 3 blocks, F5,12 = 5.305, P = 0.0084, Tukey HSD. Six colours tested (black, blue, green, red, yellow, white); L*a*b* from Table 1. Across sites capture rose with b* (R2 = 0.389, P < 0.001), weakly with L* (R2 = 0.085) and not with a*. Lures synthesised by the authors: 1 mg per sleeve-stopper septum with 1 mg BHT, changed monthly; traps 3 m up on roadside cherry trees, at least 15 m apart, re-randomised every two weeks. Purity is chemical purity from the GC-MS trace; the authors state the lures held no isomeric compounds, but that rests on a non-polar HP-5MS column, and whether it separates the 3,13 geometric isomers is not shown (Atlas inference). Means read from bar charts. Letters a vs ab."

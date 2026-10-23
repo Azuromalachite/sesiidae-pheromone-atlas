@@ -39,13 +39,15 @@
         "taxon": true, "context": true, "evidence": true,
         "assay": {"enum": ["field_trapping", "wind_tunnel", "other"]},
         "blend": {"$ref": "#/$defs/blend"},
+        "trap": {"$ref": "#/$defs/trap"},
         "comparator": {
           "type": "object",
           "additionalProperties": false,
           "required": ["description"],
           "properties": {
             "description": {"type": "string"},
-            "blend": {"$ref": "#/$defs/blend"}
+            "blend": {"$ref": "#/$defs/blend"},
+            "trap": {"$ref": "#/$defs/trap", "description": "only when the comparator's trap differs from the treatment's"}
           }
         },
         "effect": {"enum": ["increased", "decreased", "no_effect", "caught_without_control"],
@@ -182,8 +184,43 @@
         "required": ["compound"],
         "properties": {
           "compound": {"type": "string"},
-          "amount": {"$ref": "#/$defs/quantity"}
+          "amount": {"$ref": "#/$defs/quantity"},
+          "purity": {"$ref": "#/$defs/purity"}
         }
+      }
+    },
+    "purity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["value", "kind", "basis"],
+      "description": "purity of the synthetic in the lure. Chemical and isomeric purity are different claims: a compound can be free of geometric isomers and still only 83 % pure",
+      "properties": {
+        "value": {"type": "number", "minimum": 0, "maximum": 100, "description": "percent"},
+        "kind": {"enum": ["chemical", "isomeric", "unspecified"]},
+        "basis": {"enum": ["measured", "stated"], "description": "measured by the authors, or stated by them or a supplier without data"},
+        "qualifier": {"enum": ["as_reported", "more_than"]},
+        "method": {"type": "string"}
+      }
+    },
+    "trap": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["design"],
+      "properties": {
+        "design": {"enum": ["delta", "bucket", "sticky_board", "wing", "other"]},
+        "colour": {"type": ["string", "null"], "description": "as named by the authors"},
+        "colour_lab": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["L", "a", "b"],
+          "description": "CIE L*a*b* of the trap surface, when measured",
+          "properties": {
+            "L": {"type": "number", "minimum": 0, "maximum": 100},
+            "a": {"type": "number"},
+            "b": {"type": "number"}
+          }
+        },
+        "supplier": {"type": ["string", "null"]}
       }
     }
   }

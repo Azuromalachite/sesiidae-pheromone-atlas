@@ -56,14 +56,25 @@ not always agree.
   4:6 (`spa.obs.bicingulata.2011.yang.gland`). Males came most to a 4:6
   lure, but 3:7 and 2:8 were not significantly worse
   (`…yang.trap_ratio_3_7`), while 7:3 and 1:9 were (`…trap_ratio_7_3`,
-  `…trap_ratio_1_9`). Kwon et al. 2021 **(not yet curated)** also found a 4:6
-  optimum, then corrected it to about 4.3:5.7 for the purity of their own
-  synthetics, which they measured at 94 % (E3) and 83 % (Z3). They suggest
-  Yang's flatter response came from impure lures and say Yang gave no purity.
-  Yang et al. 2011 state the opposite in their Methods: isomeric purity above
-  99 %. On the papers as written, the less pure lures are Kwon's. **Lure
-  purity is a hidden variable in any attraction record, and a claim about
-  another paper's lures has to be checked against that paper.**
+  `…trap_ratio_1_9`). Kwon et al. 2021 also found 4:6 best, at four sites in
+  two years (`spa.obs.bicingulata.2021.kwon.trap_ratio_*`), with a sharper
+  response than Yang's: 2:8 was significantly worse at all three 2018 sites.
+  They attribute Yang's flatter response to isomer-contaminated lures and say
+  Yang gave no isomeric information. Yang's Methods do give it: isomeric
+  purity above 99 %, stated, not shown. Kwon's own lures were 94 % (E3) and
+  83 % (Z3) **chemically** pure by their GC-MS trace, and they state the
+  lures held no isomers. Their headline optimum, 4.3:5.7, is not a tested
+  lure: it is the nominal 4:6 lure corrected for those two purities. So the
+  two papers report different kinds of purity, and neither paper's claim
+  about isomers rests on data from a column shown to separate them. **Lure
+  purity is a hidden variable in any attraction record, a purity must say
+  which kind it is, and a claim about another paper's lures has to be
+  checked against that paper.** Records now carry `purity` with its `kind`
+  and `basis`.
+- Kwon et al. 2021 also show a ratio's effect is not fixed: 1:9 caught 8.5
+  males per trap in spring 2017 (green traps, Gongju) and almost none in
+  autumn 2018 (yellow traps, three sites). Season, trap colour and site all
+  changed at once, so the records hold the contrast without explaining it.
 - *Nokona pernix*: Naka et al. 2006 found two EAG-active alcohols, E3- and
   Z3,Z13-18:OH, at about 9:1 (12.3 and 1.4 ng per female), and no acetate
   (`spa.obs.pernix.2006.naka.gland`, `…gcead`). The 9:1 lure caught 49.7 males
@@ -130,11 +141,16 @@ The Atlas keeps all of these and decides none of them.
 ## 6. The signal is more than chemistry
 
 - **Colour.** Yellow or green traps out-caught other colours for *S.
-  tipuliformis* (Suckling et al. 2005). Kwon et al. 2021 found the same for *S.
-  bicingulata*, linked to the trap's b* colour value. They cite the same
-  result for *S. myopaeformis*.
-- **Lure and trap.** Catch rose with lure loading (Suckling et al. 2005), and
-  bucket traps beat delta traps (Kwon et al. 2021).
+  tipuliformis* (Suckling et al. 2005). For *S. bicingulata*, yellow buckets
+  beat green ones in spring at two sites and in autumn at two of three, and
+  beat white ones at one site of three
+  (`spa.obs.bicingulata.2021.kwon.trap_yellow_vs_*`). Across sites, catch
+  rose with the trap's b* (yellowness) value (Kwon et al. 2021). They cite
+  the same result for *S. myopaeformis*.
+- **Lure and trap.** Catch rose with lure loading (Suckling et al. 2005).
+  Green buckets out-caught white deltas, 13.2 vs 7.6 per trap
+  (`…kwon.trap_bucket_vs_delta.exp2_2017.chuncheon`), but design and colour
+  changed together, so that record cannot separate them.
 
 Behaviour is chemistry × release × trap × light × population. An attraction
 record without its trap, dose and lure purity is incomplete.
@@ -214,7 +230,6 @@ literature defines the space; it does not explain how it is made.
 
 ## Sources not yet curated
 
-- Kwon J-H, Huh M-J, Lee D-H, Seo S-M, Park I-K (2021) Effect of pheromone blends, trap type and color on the capture of male clearwing moths, *Synanthedon bicingulata*. *Chemoecology* 31:289–299. https://doi.org/10.1007/s00049-021-00352-6
 - Chiluwal K, Kim J, Park CG, Roh GH (2020) Disruption of chemical communication of *Synanthedon tenuis* by sex pheromone dispensers in sweet persimmon orchards. *Korean J Appl Entomol* 59:333–339. https://doi.org/10.5656/KSAE.2020.10.0.057
 - Anderbrant O, Huynh H, Isaksson A-K, et al. (2025) Development of pheromone-based mating disruption for three lepidopteran pests of currant in northern Europe. *J Appl Entomol* 149:1227–1236. https://doi.org/10.1111/jen.13446
 - Kim WJ, Lee SH, Pyo J-Y, Park JS, Kim I (2025) Occurrence patterns and population genetic analysis of the clearwing moth, *Synanthedon bicingulata*, in Jeollanam-do, South Korea. *Int J Indust Entomol Biomater* 49:84–100. https://doi.org/10.7852/ijie.2025.49.3.84
