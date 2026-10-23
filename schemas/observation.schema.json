@@ -40,6 +40,7 @@
         "assay": {"enum": ["field_trapping", "wind_tunnel", "other"]},
         "blend": {"$ref": "#/$defs/blend"},
         "trap": {"$ref": "#/$defs/trap"},
+        "dispenser": {"$ref": "#/$defs/dispenser"},
         "comparator": {
           "type": "object",
           "additionalProperties": false,
@@ -47,11 +48,12 @@
           "properties": {
             "description": {"type": "string"},
             "blend": {"$ref": "#/$defs/blend"},
-            "trap": {"$ref": "#/$defs/trap", "description": "only when the comparator's trap differs from the treatment's"}
+            "trap": {"$ref": "#/$defs/trap", "description": "only when the comparator's trap differs from the treatment's"},
+            "dispenser": {"$ref": "#/$defs/dispenser", "description": "only when the comparator's dispenser differs from the treatment's"}
           }
         },
         "effect": {"enum": ["increased", "decreased", "no_effect", "caught_without_control"],
-                   "description": "relative to the comparator; caught_without_control means males were caught and no comparator was run"},
+                   "description": "relative to the comparator; caught_without_control means males were caught and no comparator was run. With significance not_tested, effect is the authors' stated reading, or else the direction of the raw means, and the notes say which"},
         "significance": {"enum": ["significant", "not_significant", "not_tested", "not_reported"], "description": "not_tested: the paper ran no test on this contrast, e.g. a zero-catch treatment left out of the ANOVA"},
         "dose": {"$ref": "#/$defs/quantity", "description": "total load per lure, when given"},
         "response": {
@@ -92,7 +94,7 @@
               "compound": {"type": "string"},
               "method": {"enum": ["EAG", "GC-EAD", "SSR"], "description": "SSR = single-sensillum recording"},
               "preparation": {"type": "string"},
-              "response": {"enum": ["active", "inactive", "not_tested"]},
+              "response": {"enum": ["active", "inconsistent", "inactive", "not_tested"], "description": "inconsistent: the authors report responses in some recordings and not others"},
               "notes": {"type": "string"}
             }
           }
@@ -196,10 +198,20 @@
       "description": "purity of the synthetic in the lure. Chemical and isomeric purity are different claims: a compound can be free of geometric isomers and still only 83 % pure",
       "properties": {
         "value": {"type": "number", "minimum": 0, "maximum": 100, "description": "percent"},
-        "kind": {"enum": ["chemical", "isomeric", "unspecified"]},
+        "kind": {"enum": ["chemical", "isomeric", "chemical_and_isomeric", "unspecified"]},
         "basis": {"enum": ["measured", "stated"], "description": "measured by the authors, or stated by them or a supplier without data"},
         "qualifier": {"enum": ["as_reported", "more_than"]},
         "method": {"type": "string"}
+      }
+    },
+    "dispenser": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["design"],
+      "description": "what carries the lure; release rate depends on it as much as on the load",
+      "properties": {
+        "design": {"enum": ["rubber_septum", "rubber_sleeve_stopper", "rubber_tube", "polyethylene_vial", "other"]},
+        "description": {"type": ["string", "null"], "description": "as given, e.g. 'red rubber sleeve stopper, 7 x 11 mm'"}
       }
     },
     "trap": {
@@ -207,7 +219,7 @@
       "additionalProperties": false,
       "required": ["design"],
       "properties": {
-        "design": {"enum": ["delta", "bucket", "sticky_board", "wing", "other"]},
+        "design": {"enum": ["delta", "bucket", "funnel", "bottle", "sticky_board", "wing", "other"], "description": "funnel includes the universal moth trap (Unitrap); bucket is a bucket trap as the authors name it"},
         "colour": {"type": ["string", "null"], "description": "as named by the authors"},
         "colour_lab": {
           "type": "object",

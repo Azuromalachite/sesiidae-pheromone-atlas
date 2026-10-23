@@ -183,7 +183,7 @@ def same_blend(a, b):
 def observation_findings(records):
     """Rules the schema cannot say: amounts belong to detections, a
     detection limit belongs to a negative, and a comparator differs from the
-    treatment in its blend or its trap."""
+    treatment in its blend, trap or dispenser."""
     out = []
     for path, o in records["observations"].values():
         for c in o.get("components") or []:
@@ -197,9 +197,10 @@ def observation_findings(records):
         comp = o.get("comparator") or {}
         if (o.get("blend") is not None and comp.get("blend") is not None
                 and same_blend(comp["blend"], o["blend"])
-                and comp.get("trap", o.get("trap")) == o.get("trap")):
+                and comp.get("trap", o.get("trap")) == o.get("trap")
+                and comp.get("dispenser", o.get("dispenser")) == o.get("dispenser")):
             out.append(Finding("OBS_FIELD_CONFLICT", path,
-                               "comparator has the treatment's blend and trap: nothing was compared"))
+                               "comparator has the treatment's blend, trap and dispenser: nothing was compared"))
     return out
 
 
