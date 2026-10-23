@@ -35,6 +35,26 @@ sesiidae-atlas-vX.Y.Z/
 Deterministic means: the same commit always produces byte-identical files, so
 the manifest can be re-checked by anyone without GitHub.
 
+**Two layers, decided 2026-10-23:**
+- **Source-derived outputs** (`derived/`, e.g. `taxon_layers.tsv`) depend on
+  the records only. They are committed, and CI checks them with `--check`.
+  They carry no tag, commit, DOI or date, otherwise every commit would make
+  them stale.
+- **Release metadata** (version, tag, git commit, release date, DOI) is
+  written only into the tagged release bundle and its manifest, when a
+  release is built.
+
+**The DOI is deferred.** The machinery is built so that a release is
+possible, but none is minted until:
+- the breaking migrations are done and further change is mostly additive;
+- a coherent scope is substantially curated;
+- at least one real analysis has used the data;
+- a v0.1 scope statement can be written without caveats swallowing it.
+
+A paper, a public invitation to reuse, or another project needing a frozen
+version would also trigger it. An internal `v0.1-rc` tag can test the
+process without a deposit.
+
 Derived products record their provenance:
 
 ```yaml

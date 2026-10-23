@@ -1,0 +1,17 @@
+genome_id: spa.genome.synanthedon_formicaeformis.GCA_945859745.1
+taxon: spa.tax.synanthedon_formicaeformis
+assembly: {accession: GCA_945859745, version: 1, name: ilSynForm1.1, level: chromosome, source: NCBI}
+specimen: {sex: null, locality: United Kingdom}
+bioproject: PRJEB54854
+biosample: SAMEA10979079
+annotations:
+- annotation_id: spa.annot.synanthedon_formicaeformis.ensembl_rr.ensembl.2023_07
+  provider: Ensembl Rapid Release (archived)
+  method: ensembl
+  geneset: '2023_07'
+  protein_coding_genes: null
+  files:
+    protein_fasta: {url: 'https://ftp.ensembl.org/pub/rapid-release/species/Synanthedon_formicaeformis/GCA_945859745.1/ensembl/geneset/2023_07/Synanthedon_formicaeformis-GCA_945859745.1-2023_07-pep.fa.gz', md5: 595d2b266baf9f6be60e78316d671c04}
+    gff3: {url: 'https://ftp.ensembl.org/pub/rapid-release/species/Synanthedon_formicaeformis/GCA_945859745.1/ensembl/geneset/2023_07/Synanthedon_formicaeformis-GCA_945859745.1-2023_07-genes.gff3.gz', md5: 3ec494d12d77ca80d70b742734a83cd9}
+  current_platform_id: null
+notes: Assembly, BioProject, BioSample and specimen from the NCBI Datasets report, 2026-10-23; MD5s from the gene set's md5sum.txt. Specimen sex 'not collected' in the BioSample.

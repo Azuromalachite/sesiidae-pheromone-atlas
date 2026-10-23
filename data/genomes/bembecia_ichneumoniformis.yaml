@@ -1,0 +1,17 @@
+genome_id: spa.genome.bembecia_ichneumoniformis.GCA_910589475.2
+taxon: spa.tax.bembecia_ichneumoniformis
+assembly: {accession: GCA_910589475, version: 2, name: ilBemIchn1.2, level: chromosome, source: NCBI}
+specimen: {sex: male, locality: United Kingdom}
+bioproject: PRJEB45319
+biosample: SAMEA7701282
+annotations:
+- annotation_id: spa.annot.bembecia_ichneumoniformis.ensembl_rr.ensembl.2023_05
+  provider: Ensembl Rapid Release (archived)
+  method: ensembl
+  geneset: '2023_05'
+  protein_coding_genes: null
+  files:
+    protein_fasta: {url: 'https://ftp.ensembl.org/pub/rapid-release/species/Bembecia_ichneumoniformis/GCA_910589475.2/ensembl/geneset/2023_05/Bembecia_ichneumoniformis-GCA_910589475.2-2023_05-pep.fa.gz', md5: b8db3178983a778d61cf80845727899a}
+    gff3: {url: 'https://ftp.ensembl.org/pub/rapid-release/species/Bembecia_ichneumoniformis/GCA_910589475.2/ensembl/geneset/2023_05/Bembecia_ichneumoniformis-GCA_910589475.2-2023_05-genes.gff3.gz', md5: 90238de8773838bb9acf693baba22c82}
+  current_platform_id: null
+notes: Assembly, BioProject, BioSample and specimen from the NCBI Datasets report, 2026-10-23; MD5s from the gene set's md5sum.txt.

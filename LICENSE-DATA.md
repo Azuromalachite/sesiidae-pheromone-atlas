@@ -3,7 +3,7 @@
 Copyright (c) 2026 Thanakrit (Austin) Wongsatit
 
 Everything in this repository **except source code** — curated records under
-`data/`, schemas under `schemas/`, generated releases under `releases/`, and
+`data/`, schemas under `schemas/`, derived tables under `derived/`, release bundles, and
 documentation under `docs/` — is licensed under the
 **Creative Commons Attribution 4.0 International licence (CC BY 4.0)**:
 <https://creativecommons.org/licenses/by/4.0/legalcode>

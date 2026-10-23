@@ -9,7 +9,7 @@ the project's boundary.
 
 Sesiidae have more than 1,500 described species, with the highest diversity
 in the Afrotropical and Oriental realms. Every genome in
-`releases/taxon_layers.tsv` and nearly every characterised pheromone comes
+`derived/taxon_layers.tsv` and nearly every characterised pheromone comes
 from Palaearctic or East Asian species. The Southeast Asian clearwings
 studied for flight and acoustic mimicry of bees have, as far as this
 snapshot knows, neither genomes nor identified pheromones.

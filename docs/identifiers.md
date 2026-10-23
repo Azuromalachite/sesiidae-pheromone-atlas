@@ -15,7 +15,8 @@ Every primary record has a permanent ID in the `spa.` namespace:
 | reference | `spa.ref.<first author>_<year>` | `spa.ref.mozuraitis_2006` |
 | observation | `spa.obs.<taxon slug>.<reference slug>.<what was measured>` | `spa.obs.synanthedon_tipuliformis.mozuraitis_2006.gland` |
 | genome | `spa.genome.<taxon>.<accession.version>` | `spa.genome.synanthedon_tipuliformis.GCA_947623395.1` |
-| annotation | `spa.annot.<provider>.<method>.<geneset>` | `spa.annot.ensembl_rr.ensembl.2023_05` |
+| annotation | `spa.annot.<taxon slug>.<provider>.<method>.<geneset>` | `spa.annot.synanthedon_tipuliformis.ensembl_rr.ensembl.2023_05` |
+| search | `spa.search.<taxon slug or family>.<layer>.<yyyy_mm_dd>` | `spa.search.sesiidae.genome.2026_10_23` |
 
 The schemas enforce each form. A compound's prefix follows its
 `entity_type` (`spa.model.` only for computational models). A fatty acid that

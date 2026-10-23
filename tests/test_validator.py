@@ -16,6 +16,7 @@ import atlas_validate as av
 
 FIX = Path(__file__).parent / "fixtures"
 GOOD = FIX / "good"
+ROOT = Path(__file__).parent.parent
 BAD_CASES = sorted(p.name for p in (FIX / "bad").iterdir() if p.is_dir())
 
 
@@ -135,3 +136,25 @@ def test_headgroup_oxygen_keeps_map_101():
     for token, g in av.load_headgroups().items():
         on_c1 = [m for pair in g["bonds"] for m in pair if 1 in pair and m != 1]
         assert 101 in on_c1 and g["atoms"][101] == "O", token
+
+
+# ---- derived tables are a function of the records, and say why a cell is empty
+
+def test_taxon_layers_is_current():
+    import subprocess, sys
+    r = subprocess.run([sys.executable, str(ROOT / "scripts" / "build_taxon_layers.py"), "--check"], capture_output=True, text=True)
+    assert r.returncode == 0, r.stderr
+
+
+def test_taxon_layers_never_infers_not_found():
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("btl", ROOT / "scripts" / "build_taxon_layers.py")
+    btl = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(btl)
+    rows = [line.split("\t") for line in btl.build(ROOT / "data").splitlines()]
+    head, body = rows[0], rows[1:]
+    col = {name: i for i, name in enumerate(head)}
+    for r in body:
+        # a status that rests on a search names the search
+        if r[col["pheromone_status"]] in ("searched_not_found", "found_not_curated") or r[col["genome_status"]] == "no_assembly_in_census":
+            assert r[col["search_basis"]], r[col["species"]]

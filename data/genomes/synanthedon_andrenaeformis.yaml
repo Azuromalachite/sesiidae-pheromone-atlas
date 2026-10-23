@@ -1,0 +1,17 @@
+genome_id: spa.genome.synanthedon_andrenaeformis.GCA_936446665.2
+taxon: spa.tax.synanthedon_andrenaeformis
+assembly: {accession: GCA_936446665, version: 2, name: ilSynAndr1.2, level: chromosome, source: NCBI}
+specimen: {sex: male, locality: United Kingdom}
+bioproject: PRJEB52078
+biosample: SAMEA7701283
+annotations:
+- annotation_id: spa.annot.synanthedon_andrenaeformis.ensembl_rr.ensembl.2023_05
+  provider: Ensembl Rapid Release (archived)
+  method: ensembl
+  geneset: '2023_05'
+  protein_coding_genes: null
+  files:
+    protein_fasta: {url: 'https://ftp.ensembl.org/pub/rapid-release/species/Synanthedon_andrenaeformis/GCA_936446665.2/ensembl/geneset/2023_05/Synanthedon_andrenaeformis-GCA_936446665.2-2023_05-pep.fa.gz', md5: 23bd505d27cc46e007884917dfd2b465}
+    gff3: {url: 'https://ftp.ensembl.org/pub/rapid-release/species/Synanthedon_andrenaeformis/GCA_936446665.2/ensembl/geneset/2023_05/Synanthedon_andrenaeformis-GCA_936446665.2-2023_05-genes.gff3.gz', md5: 2f77c0abad841e006ec4bfb272e8df93}
+  current_platform_id: null
+notes: Assembly, BioProject, BioSample and specimen from the NCBI Datasets report, 2026-10-23; MD5s from the gene set's md5sum.txt. The superseded version GCA_936446665.1 also has an Ensembl Rapid Release braker gene set (2022_06; pep md5 a42ac18e27f34564241a0cd148fd0306); not recorded as a genome because NCBI Datasets no longer reports that version.

@@ -1,5 +1,40 @@
 # Curation log
 
+## 2026-10-23 (8) — stage B: the matrix is generated, and "not found" is a record
+
+`releases/taxon_layers.tsv` was a hand-made second source of truth. It is now
+`derived/taxon_layers.tsv`, built by `scripts/build_taxon_layers.py`.
+`releases/` became `derived/`, because a derived table is not a release.
+
+- **What the table needed to become records:**
+  - 5 taxa: *S. spheciformis*, *Sesia bembeciformis*, *Bembecia
+    ichneumoniformis*, *Pyropteron chrysidiforme* and *Sphecodoptera sheni*,
+    with NCBI and GBIF IDs and authorities from GBIF;
+  - 7 genome records, from the NCBI Datasets reports and the Ensembl
+    `md5sum.txt` files. All four gene-set MD5s match the old table;
+  - 6 searches, a new record kind (`data/searches/`, `schemas/search.schema.json`):
+    - one genome census of Sesiidae;
+    - five pheromone searches: three not found; *S. bembeciformis* and *B.
+      ichneumoniformis* found but not curated.
+- **"Not found" now comes only from a search record.** The generator
+  distinguishes curated evidence, a dated search that found nothing, and no
+  search at all. A test asserts that every not-found status names its search.
+  GBIF IDs were also filled in for *S. formicaeformis* and *S. andrenaeformis*.
+- **An ID defect found on the way.** Annotation IDs were
+  `spa.annot.<provider>.<method>.<geneset>`, and
+  `spa.annot.ensembl_rr.ensembl.2023_05` would have named the gene sets of
+  three species. They now carry the taxon slug. `ANNOT_ID` checks the prefix
+  and uniqueness.
+- **The generated table drops the old prose columns.** The facts in them
+  (populations, purity, ratios) are in the records, and the curatorial labels
+  ("flagship", "expansion taxon") are in `derived/README.md` as the v0.1 taxon
+  list. Genome-specific notes (haplotypes, frozen Rapid Release) are in the
+  genome records.
+- **Checks:** CI runs `build_taxon_layers.py --check`, and the test suite runs
+  it too.
+- **Fixtures:** `annot_id_wrong_taxon`, `search_id_mismatch`,
+  `search_not_found_with_find`, `search_census_of_taxon`.
+
 ## 2026-10-23 (7) — stage A migration: identities separate from observations
 
 One breaking commit, before anything is citable. The principle is that IDs

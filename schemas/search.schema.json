@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Azuromalachite/sesiidae-pheromone-atlas/schemas/search.schema.json",
+  "title": "Search",
+  "description": "A recorded search: what was looked for, where, when, and what came back. It is the only basis for 'not found' in the derived tables; the absence of records never is (docs/validation.md).",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["search_id", "layer", "scope", "date", "sources", "outcome"],
+  "properties": {
+    "search_id": {"type": "string", "pattern": "^spa\\.search\\.[a-z0-9_]+\\.(pheromone|genome)\\.[0-9]{4}_[0-9]{2}_[0-9]{2}$", "description": "spa.search.<taxon slug or family>.<layer>.<yyyy_mm_dd>; permanent"},
+    "layer": {"enum": ["pheromone", "genome"]},
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "one taxon, or a whole family for a census",
+      "properties": {
+        "taxon": {"type": "string"},
+        "family": {"type": "string"}
+      },
+      "minProperties": 1,
+      "maxProperties": 1
+    },
+    "date": {"type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+    "sources": {"type": "array", "minItems": 1, "items": {"type": "string"}, "description": "what was searched, e.g. 'PubMed', 'NCBI Datasets genome report'"},
+    "limits": {"type": "string", "description": "what the search could not reach, e.g. a database behind a bot check"},
+    "outcome": {"enum": ["not_found", "found_not_curated", "census"],
+                "description": "not_found: nothing on the date, which is not evidence that nothing exists; found_not_curated: literature exists but no Atlas record holds it yet; census: every item found in scope has an Atlas record"},
+    "found": {"type": "string", "description": "found_not_curated only: what was found"},
+    "found_doi": {"type": ["string", "null"], "pattern": "^10\\.[0-9]{4,}/\\S+$"},
+    "read": {"enum": ["abstract", "full_text", "secondary"], "description": "found_not_curated only: what of the find was read"},
+    "notes": {"type": "string"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"outcome": {"const": "census"}}, "required": ["outcome"]},
+      "then": {"required": ["scope"], "properties": {"scope": {"required": ["family"]}}},
+      "else": {"properties": {"scope": {"required": ["taxon"]}}}
+    },
+    {
+      "if": {"properties": {"outcome": {"const": "found_not_curated"}}, "required": ["outcome"]},
+      "then": {"required": ["found", "read"]},
+      "else": {"not": {"anyOf": [{"required": ["found"]}, {"required": ["found_doi"]}, {"required": ["read"]}]}}
+    }
+  ]
+}

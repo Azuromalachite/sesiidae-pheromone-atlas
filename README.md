@@ -4,10 +4,14 @@
 genomes, biosynthetic hypotheses, and candidate enzyme families.*
 
 **Status: building v0.1.** This repository holds the design documents, the
-first discovery table (the taxon × layer matrix), the record schemas and the
-validator with its failing fixtures, and the first 303 curated records
-(11 taxa, 19 references, 17 compounds, 4 genomes, 252 observations), all from full texts
-([`docs/curation-log.md`](docs/curation-log.md)). There are no reaction or
+record schemas and the validator with its failing fixtures, and 321 curated
+records:
+- 16 taxa, 19 references, 17 compounds, 11 genomes and 252 observations,
+  the observations all from full texts
+  ([`docs/curation-log.md`](docs/curation-log.md));
+- 6 dated searches, the only basis for "not found".
+
+The taxon × layer matrix is generated from these records. There are no reaction or
 pathway records yet: this corpus records what was observed, not how it is made.
 
 ```bash
@@ -34,7 +38,7 @@ generated machine-readable releases.
 | [`docs/releases-and-occurrences.md`](docs/releases-and-occurrences.md) | decisions on citable releases, the GBIF occurrence layer and roadmap order |
 | [`docs/reviews/`](docs/reviews/) | the two adversarial reviews the concept was revised against |
 | [`docs/knowledge-gaps.md`](docs/knowledge-gaps.md) | gaps that set direction: the tropical and Southeast Asian frontier, *Melittia*, the trapping blind spot |
-| [`releases/taxon_layers.tsv`](releases/taxon_layers.tsv) | the taxon × layer matrix: which species have genomes, gene sets and identified pheromones ([column guide](releases/README.md)) |
+| [`derived/taxon_layers.tsv`](derived/taxon_layers.tsv) | the taxon × layer matrix, generated from the records by `scripts/build_taxon_layers.py`: genomes, gene sets, curated chemistry and dated searches ([column guide](derived/README.md)) |
 
 ## Related projects
 

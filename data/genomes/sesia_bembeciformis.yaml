@@ -1,0 +1,17 @@
+genome_id: spa.genome.sesia_bembeciformis.GCA_943735995.1
+taxon: spa.tax.sesia_bembeciformis
+assembly: {accession: GCA_943735995, version: 1, name: ilSesBemb1.1, level: chromosome, source: NCBI}
+specimen: {sex: male, locality: United Kingdom}
+bioproject: PRJEB53303
+biosample: SAMEA10978929
+annotations:
+- annotation_id: spa.annot.sesia_bembeciformis.ensembl_rr.braker.2022_08
+  provider: Ensembl Rapid Release (archived)
+  method: braker
+  geneset: '2022_08'
+  protein_coding_genes: null
+  files:
+    protein_fasta: {url: 'https://ftp.ensembl.org/pub/rapid-release/species/Sesia_bembeciformis/GCA_943735995.1/braker/geneset/2022_08/Sesia_bembeciformis-GCA_943735995.1-2022_08-pep.fa.gz', md5: 845941ee7c8885e76ca0c57478fbf9c5}
+    gff3: {url: 'https://ftp.ensembl.org/pub/rapid-release/species/Sesia_bembeciformis/GCA_943735995.1/braker/geneset/2022_08/Sesia_bembeciformis-GCA_943735995.1-2022_08-genes.gff3.gz', md5: fd21cae97eb36b486f081d02f46ac1ba}
+  current_platform_id: null
+notes: Assembly, BioProject, BioSample and specimen from the NCBI Datasets report, 2026-10-23; MD5s from the gene set's md5sum.txt.

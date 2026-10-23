@@ -44,6 +44,7 @@ KINDS = {  # directory -> (schema file, id field)
     "compounds": ("compound.schema.json", "compound_id"),
     "genomes": ("genome.schema.json", "genome_id"),
     "observations": ("observation.schema.json", "observation_id"),
+    "searches": ("search.schema.json", "search_id"),
 }
 
 HEAD_MAP_MIN = 101
@@ -143,12 +144,29 @@ def reference_findings(records):
         if not ok:
             out.append(Finding("REF_MISSING", path, what))
 
+    seen_annot = {}
     for path, g in records["genomes"].values():
         need(g.get("taxon") in taxa, path, f"taxon {g.get('taxon')!r} has no record")
         a = g.get("assembly") or {}
         want = f".{a.get('accession')}.{a.get('version')}"
         if not str(g.get("genome_id", "")).endswith(want):
             out.append(Finding("GENOME_ID", path, f"genome_id must end with the assembly accession.version {want[1:]!r}"))
+        prefix = f"spa.annot.{str(g.get('taxon', '')).removeprefix('spa.tax.')}."
+        for a in g.get("annotations") or []:
+            aid = str(a.get("annotation_id", ""))
+            if not aid.startswith(prefix):
+                out.append(Finding("ANNOT_ID", path, f"{aid}: annotation_id must start with {prefix}"))
+            elif aid in seen_annot:
+                out.append(Finding("ANNOT_ID", path, f"{aid} also in {seen_annot[aid]}"))
+            seen_annot.setdefault(aid, path)
+    for path, s in records["searches"].values():
+        scope = s.get("scope") or {}
+        if "taxon" in scope:
+            need(scope["taxon"] in taxa, path, f"taxon {scope['taxon']!r} has no record")
+        slug = scope.get("taxon", "").removeprefix("spa.tax.") or str(scope.get("family", "")).lower()
+        want = f"spa.search.{slug}.{s.get('layer')}.{str(s.get('date', '')).replace('-', '_')}"
+        if s.get("search_id") != want:
+            out.append(Finding("SEARCH_ID", path, f"search_id must be {want}, from its scope, layer and date"))
     for path, c in comps.values():
         if c.get("entity_type") == "computational_model":
             need(c.get("represents") in comps, path, f"represents {c.get('represents')!r} has no record")

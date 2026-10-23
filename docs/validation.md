@@ -56,6 +56,8 @@ Two conventions the schema states but cannot check:
 | observations are of real compounds, never computational models | `OBS_MODEL_COMPOUND` |
 | amounts only on detections; a detection limit only on a negative; a comparator differs from the treatment in blend, trap or dispenser | `OBS_FIELD_CONFLICT` |
 | `genome_id` ends with the assembly accession.version | `GENOME_ID` |
+| an annotation ID starts with its genome's taxon slug and is unique; the old `provider.method.geneset` form named no gene set (`2023_05` was shared by three species) | `ANNOT_ID` |
+| a search ID is built from its scope, layer and date; a searched taxon exists | `SEARCH_ID`, `REF_MISSING` |
 | ids unique | `DUPLICATE_ID` |
 | no two taxa share an accepted name; a synonym spelling another accepted name carries both authorities | `TAXON_NAME_DUPLICATE`, `NAME_AMBIGUOUS` |
 
