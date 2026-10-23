@@ -1,0 +1,19 @@
+observation_id: spa.obs.nokona_pernix.naka_2006.trap_ratio_95_5
+observation_type: behavioural_response
+taxon: spa.tax.nokona_pernix
+context: {sex: male, habitat: university experimental farm, population: "Aichi population", locality: "Kasugai City, Aichi Prefecture, Japan"}
+assay: field_trapping
+trap: {design: sticky_board, colour: null, supplier: Takeda Chemical Industries}
+blend: [{compound: spa.cmpd.e3_z13_18_oh, amount: {value: 0.95, unit: milligram}}, {compound: spa.cmpd.z3_z13_18_oh, amount: {value: 0.05, unit: milligram}}]
+comparator:
+  description: E3:Z3,Z13-18:OH 9:1, 1 mg
+  blend: [{compound: spa.cmpd.e3_z13_18_oh, amount: {value: 0.9, unit: milligram}}, {compound: spa.cmpd.z3_z13_18_oh, amount: {value: 0.1, unit: milligram}}]
+effect: no_effect
+significance: not_significant
+dose: {value: 1.0, unit: milligram}
+response: {measure: trap_catch, unit: mean_catch_per_trap, treatment_value: 8.7, comparator_value: 20.7, qualifier: as_reported}
+evidence:
+  reference: spa.ref.naka_2006
+  source_location: "Table 4, Test II"
+  author_statement: "In both tests, 9:1 was the optimum ratio among the examined combinations"
+  notes: "Test II, same farm, 15 June - 12 July 2004, 3 traps per treatment, same design. All three share letter a; 9:1 is optimal by mean only in this test. Mean +- SD per trap: treatment 6.5, comparator 13.4."

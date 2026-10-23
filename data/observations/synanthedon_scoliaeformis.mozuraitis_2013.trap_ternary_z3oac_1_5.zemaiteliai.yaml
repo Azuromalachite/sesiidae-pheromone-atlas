@@ -1,0 +1,27 @@
+observation_id: spa.obs.synanthedon_scoliaeformis.mozuraitis_2013.trap_ternary_z3oac_1_5.zemaiteliai
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_scoliaeformis
+context: {sex: male, habitat: null, population: Lithuanian population, locality: 'Žemaitėliai, Lithuania'}
+assay: field_trapping
+trap: {design: delta, colour: white, supplier: Flora Co. (Atracon A)}
+dispenser: {design: rubber_tube, description: 'red rubber tube, 8 x 15 mm'}
+blend:
+- compound: spa.cmpd.e2_z13_18_oac
+  amount: {value: 150, unit: microgram}
+  purity: {value: 99, kind: chemical_and_isomeric, basis: stated, qualifier: more_than}
+- compound: spa.cmpd.e2_z13_18_oh
+  amount: {value: 12, unit: microgram}
+  purity: {value: 99, kind: chemical_and_isomeric, basis: stated, qualifier: more_than}
+- compound: spa.cmpd.z3_z13_18_oac
+  amount: {value: 1.5, unit: microgram}
+  purity: {value: 99, kind: chemical_and_isomeric, basis: stated, qualifier: more_than}
+comparator:
+  description: E2,Z13-18:OAc alone, 150 ug
+  blend:
+  - compound: spa.cmpd.e2_z13_18_oac
+    amount: {value: 150, unit: microgram}
+    purity: {value: 99, kind: chemical_and_isomeric, basis: stated, qualifier: more_than}
+effect: decreased
+significance: significant
+response: {measure: trap_catch, unit: total_catch, treatment_value: 12, comparator_value: 66, qualifier: as_reported}
+evidence: {reference: spa.ref.mozuraitis_2013, source_location: 'Table 1, Žemaitėliai 2011', notes: 'Žemaitėliai, 20 June - 11 July 2011, 7 replicates, total catch; same design and statistics. Letters b vs a.'}

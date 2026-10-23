@@ -105,7 +105,7 @@ A result is reported with the profile it used, and checked under the others.
   without explicit bias correction. Presence-only records follow observers.
 - **Phenology does not explain a zero that had a concurrent positive control.**
   The *S. tenuis* acetate caught nothing in the same replicated trial in which
-  the alcohol caught males (`spa.obs.tenuis.2012.yang.trap_acetate_alone`).
+  the alcohol caught males (`spa.obs.synanthedon_tenuis.yang_2012.trap_acetate_alone`).
   Phenology matters for comparisons between studies and for uncontrolled
   failures.
 

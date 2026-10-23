@@ -1,8 +1,9 @@
 # Test fixture: shapes of the three awkward cases, with made-up numbers.
-observation_id: spa.obs.fixture.gland.pooled
-observation_type: gland_composition
+observation_id: spa.obs.fixture_species_a.fixture_2026.gland.pooled
+observation_type: chemical_measurement
 taxon: spa.tax.fixture_species_a
-context: {sex: female, tissue: pheromone_gland, life_stage: adult, population: null, locality: null, rearing: wild, mating_status: virgin, sampling_unit: pooled, n_individuals: null}
+context: {sex: female, life_stage: adult, population: null, locality: null, rearing: wild, mating_status: virgin, sampling_unit: pooled, n_individuals: null}
+sample: {materials: [gland_extract], material_as_reported: pheromone_gland, result_scope: single_material}
 components:
   - compound: spa.cmpd.z3_z13_18_oh
     detected: true

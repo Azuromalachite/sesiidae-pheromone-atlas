@@ -1,5 +1,48 @@
 # Curation log
 
+## 2026-10-23 (7) — stage A migration: identities separate from observations
+
+One breaking commit, before anything is citable. The principle is that IDs
+and chemical entities identify things, while observations describe what was
+measured or done.
+
+1. **Observation IDs carry the full binomial and the reference slug:**
+   `spa.obs.<taxon slug>.<reference slug>.<what>`. For example,
+   `spa.obs.tipuliformis.2006.mozuraitis.gland` became
+   `spa.obs.synanthedon_tipuliformis.mozuraitis_2006.gland`.
+   - The epithet alone was already ambiguous here: `bicingulata` names both
+     *S. bicingulata* and Rebel's *Sesia bicingulata*, which is under *S.
+     myopaeformis*.
+   - All 252 IDs were derived mechanically from each record's `taxon` and
+     `evidence.reference`. The script asserted that every old year and author
+     matched the reference.
+   - Files are renamed to match. ID references in data notes and docs were
+     rewritten.
+   - New check `OBS_ID`, with fixture `obs_id_taxon_mismatch`.
+2. **`compound_class` is gone; `entity_type` is `chemical` or
+   `computational_model`.**
+   - `natural_product`, `synthetic_analogue` and the never-used `precursor`
+     all described occurrence or role, which belong to `chemical_measurement`,
+     behavioural and (later) reaction records, not to the molecule.
+   - All 17 compounds became `chemical`.
+   - Fixture `compound_class_legacy` keeps the old field out.
+3. **`gland_composition` is `chemical_measurement`, with a required `sample`:**
+   - `materials` comes from a fixed list: `gland_extract`,
+     `ovipositor_extract`, `effluvium` and `other`.
+   - `material_as_reported` keeps the source wording.
+   - `result_scope` must be `combined` exactly when more than one material is
+     listed, so a combined result cannot be read as shown in each matrix.
+   - `context.tissue` is removed. The 12 tissue strings mapped onto
+     15 × gland extract, 2 × effluvium (Judd 2011 effluvia; Francke 2004 SPME
+     near the calling gland), 1 × ovipositor extract (Szöcs 1985), and
+     1 × combined ovipositor extract + effluvium (James 2001).
+   - Fixtures: `sample_scope_mismatch`, `sample_material_unknown`.
+
+`docs/concept.md` revision 3 keeps its old examples and now opens with a note
+on what the implementation changed. The scratchpad generators used for
+earlier batches emit the old format and must not be re-run; the records are
+the source.
+
 ## 2026-10-23 (6) — six more full texts, with independent review
 
 | paper | taxon | records |

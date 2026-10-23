@@ -2,12 +2,12 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/Azuromalachite/sesiidae-pheromone-atlas/schemas/observation.schema.json",
   "title": "Observation",
-  "description": "One measurement event, typed by what was measured (concept §13). Gland contents, male behaviour and antennal responses are different observations, never one record with a 'role' field.",
+  "description": "One measurement event, typed by what was measured (concept §13). Chemical contents, male behaviour and antennal responses are different observations, never one record with a 'role' field.",
   "type": "object",
   "required": ["observation_id", "observation_type", "taxon", "context", "evidence"],
   "properties": {
-    "observation_id": {"type": "string", "pattern": "^spa\\.obs\\.[a-z0-9_.]+$", "description": "spa.obs.<taxon>.<year>.<first author>.<what was measured>; permanent (docs/identifiers.md)"},
-    "observation_type": {"enum": ["gland_composition", "behavioural_response", "electrophysiology"]},
+    "observation_id": {"type": "string", "pattern": "^spa\\.obs\\.[a-z0-9_]+\\.[a-z0-9_]+\\.[a-z0-9_.]+$", "description": "spa.obs.<taxon slug>.<reference slug>.<what was measured>, the slugs being the record's taxon_id and reference_id without their prefixes (checked: OBS_ID); permanent (docs/identifiers.md)"},
+    "observation_type": {"enum": ["chemical_measurement", "behavioural_response", "electrophysiology"]},
     "taxon": {"type": "string"},
     "context": {"$ref": "#/$defs/context"},
     "evidence": {
@@ -26,11 +26,12 @@
   "oneOf": [
     {
       "properties": {
-        "observation_id": true, "observation_type": {"const": "gland_composition"},
+        "observation_id": true, "observation_type": {"const": "chemical_measurement"},
         "taxon": true, "context": true, "evidence": true,
+        "sample": {"$ref": "#/$defs/sample"},
         "components": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/component"}}
       },
-      "required": ["components"],
+      "required": ["sample", "components"],
       "additionalProperties": false
     },
     {
@@ -110,7 +111,6 @@
       "additionalProperties": false,
       "properties": {
         "sex": {"enum": ["female", "male", null]},
-        "tissue": {"type": ["string", "null"]},
         "life_stage": {"type": ["string", "null"]},
         "population": {"type": ["string", "null"]},
         "locality": {"type": ["string", "null"]},
@@ -121,6 +121,26 @@
         "sampling_unit": {"enum": ["pooled", "individual", null], "description": "pooled extract or single insects; ratios can differ between the two"},
         "n_individuals": {"type": ["integer", "null"], "minimum": 1}
       }
+    },
+    "sample": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["materials", "material_as_reported", "result_scope"],
+      "description": "what was chemically measured. A paper that reports matrices separately gives one observation per matrix; several materials in one record mean the paper reports only a combined result, never that it was shown in each",
+      "properties": {
+        "materials": {"type": "array", "minItems": 1, "uniqueItems": true,
+                      "items": {"enum": ["gland_extract", "ovipositor_extract", "effluvium", "other"]},
+                      "description": "gland_extract: solvent extract of the gland or abdominal tip; effluvium: volatiles released by the insect, however collected (headspace, adsorbent, SPME near the gland); the collection method is in each component's method"},
+        "material_as_reported": {"type": "string", "description": "the source's own wording, kept because the vocabulary loses nuance"},
+        "result_scope": {"enum": ["single_material", "combined"]}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"materials": {"minItems": 2}}},
+          "then": {"properties": {"result_scope": {"const": "combined"}}},
+          "else": {"properties": {"result_scope": {"const": "single_material"}}}
+        }
+      ]
     },
     "quantity": {
       "type": "object",

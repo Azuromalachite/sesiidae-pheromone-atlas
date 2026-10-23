@@ -14,7 +14,7 @@ been read in full, but no records are made from them yet.
 Early sesiid work screened synthetic C18 dienyl acetates in the field.
 Tamaki et al. 1977 caught 51 Japanese *Synanthedon tenuis* males on
 Z3,Z13-18:OAc alone, and almost none once 5 % E3,Z13-18:OAc was added
-(`spa.obs.tenuis.1977.tamaki.*`). The trial ran no unbaited control, with two
+(`spa.obs.synanthedon_tenuis.tamaki_1977.*`). The trial ran no unbaited control, with two
 traps per lure and no statistics.
 
 That is one kind of observation: **males come to a synthetic compound.** It
@@ -26,17 +26,17 @@ Gland analyses started to say what females produce:
 
 - *S. tipuliformis*: Szöcs et al. 1985 found E2,Z13-18:OAc and Z13-18:OAc at
   93:7 in pooled extracts of 19 Hungarian females, and no E3 isomer
-  (`spa.obs.tipuliformis.1985.szocs.gland`). Z13-18:OAc gave a significant
+  (`spa.obs.synanthedon_tipuliformis.szocs_1985.gland`). Z13-18:OAc gave a significant
   increase in one trial (`…trap_z13oac`), not in later ones.
 - *Sesia apiformis*: Kovalev et al. 1988 isolated Z3,Z13-18:OH, EAG-active,
   from 370 abdominal tips and called it the sex pheromone
-  (`spa.obs.apiformis.1988.kovalev.*`). They followed only the alcohol fraction,
+  (`spa.obs.sesia_apiformis.kovalev_1988.*`). They followed only the alcohol fraction,
   so the aldehyde found in 2004 was never looked for.
 
 A year before Szöcs et al. 1985, Voerman et al. 1984 had found the *S.
 tipuliformis* attractant by screening synthetics: E2,Z13-18:OAc, 46 males
 per trap in a Dutch orchard, with no statistics in the paper
-(`spa.obs.tipuliformis.1984.voerman.*`). Single-cell recordings in the same
+(`spa.obs.synanthedon_tipuliformis.voerman_1984.*`). Single-cell recordings in the same
 paper found specialist receptor cells for E2,Z13-18:OAc, E3,Z13-18:OAc and
 Z3,Z13-18:OAc (`…voerman.ssr.*`), so the E3 isomer had a receptor before any
 gland was analysed. The same compound on a closed polyethylene vial caught 23
@@ -51,23 +51,23 @@ not always agree.
 - Priesner et al. 1986: a few percent of E3,Z13-18:OAc raised *S.
   tipuliformis* catches, while equal amounts caught none. The same two
   compounds attracted *S. formicaeformis* best at 100:100 and *S.
-  andrenaeformis* at 10:100 (`spa.obs.*.1986.priesner.*`). Receptor cells for E2
+  andrenaeformis* at 10:100 (`spa.obs.*.priesner_1986.*`). Receptor cells for E2
   and E3, and none for Z13-18:OAc, were reported without data
-  (`spa.obs.tipuliformis.1986.priesner.ssr`).
+  (`spa.obs.synanthedon_tipuliformis.priesner_1986.ssr`).
 - Szöcs et al. 1990: in Hungary, E2,Z13-18:OAc alone brought 20.6 % of
   arriving males to within 2 cm of the bait, and with E3 65.6 %
-  (`spa.obs.tipuliformis.1990.szocs.approach.hungary`). The minor component
+  (`spa.obs.synanthedon_tipuliformis.szocs_1990.approach.hungary`). The minor component
   works at close range, not only on trap catch.
 - Mozūraitis et al. 2006: E3,Z13-18:OAc, which synergises for *S.
   tipuliformis*, suppressed *S. scoliaeformis* males entirely at their own
-  site (`spa.obs.scoliaeformis.2006.mozuraitis.trap_e3.forest_edge`). One minor
+  site (`spa.obs.synanthedon_scoliaeformis.mozuraitis_2006.trap_e3.forest_edge`). One minor
   compound attracts one species and repels another.
 - *S. bicingulata*: the female gland holds E3:Z3,Z13-18:OAc at 58:100, about
-  4:6 (`spa.obs.bicingulata.2011.yang.gland`). Males came most to a 4:6
+  4:6 (`spa.obs.synanthedon_bicingulata.yang_2011.gland`). Males came most to a 4:6
   lure, but 3:7 and 2:8 were not significantly worse
   (`…yang.trap_ratio_3_7`), while 7:3 and 1:9 were (`…trap_ratio_7_3`,
   `…trap_ratio_1_9`). Kwon et al. 2021 also found 4:6 best, in four
-  site-years at three sites (`spa.obs.bicingulata.2021.kwon.trap_ratio_*`),
+  site-years at three sites (`spa.obs.synanthedon_bicingulata.kwon_2021.trap_ratio_*`),
   with a sharper response than Yang's: 2:8 was significantly worse at all
   three 2018 sites. They attribute Yang's flatter response to
   isomer-contaminated lures and say Yang gave no isomeric information.
@@ -90,7 +90,7 @@ not always agree.
   without explaining it.
 - *Nokona pernix*: Naka et al. 2006 found two EAG-active alcohols, E3- and
   Z3,Z13-18:OH, at about 9:1 (12.3 and 1.4 ng per female), and no acetate
-  (`spa.obs.pernix.2006.naka.gland`, `…gcead`). The 9:1 lure caught 49.7 males
+  (`spa.obs.nokona_pernix.naka_2006.gland`, `…gcead`). The 9:1 lure caught 49.7 males
   per trap against 0.5 for E3 alone; 5:5 and 99:1 caught almost nothing
   (`…trap_z3_added`, `…trap_ratio_5_5`, `…trap_ratio_99_1`). Unnatural 13E
   isomers were then swapped in. In place of the minor component, a 13E
@@ -106,7 +106,7 @@ how much of it, and what else is present.
 ## 4. Geography: a finding that did not hold
 
 Szöcs et al. 1990 found E3 synergistic in Hungary and New Zealand and
-inhibitory in Tasmania (`spa.obs.tipuliformis.1990.szocs.trap_e3.*`). It was
+inhibitory in Tasmania (`spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.*`). It was
 read as a Tasmanian pheromone strain.
 
 It did not hold up:
@@ -115,7 +115,7 @@ It did not hold up:
   (`…tasmania_1987`);
 - Suckling et al. 2005 found equivalent catches with and without E3 in **both**
   Tasmania (P = 0.83) and New Zealand (481 vs 490), and rejected the strain
-  (`spa.obs.tipuliformis.2005.suckling.trap_e3.*`);
+  (`spa.obs.synanthedon_tipuliformis.suckling_2005.trap_e3.*`);
 - in 2025, Anderbrant et al. **(not yet curated)** summarised the minor E3
   component as one that increased catches "in some studies, but not in
   others".
@@ -123,7 +123,7 @@ It did not hold up:
 *S. tenuis* gives a second geographic contrast. The acetate attracted
 Japanese males in 1976, but in 2011 it was absent from Korean glands (below
 about 100 pg), caught nothing on its own, and blocked attraction to the real
-pheromone, Z3,Z13-18:OH (`spa.obs.tenuis.2012.yang.*`). The two studies also
+pheromone, Z3,Z13-18:OH (`spa.obs.synanthedon_tenuis.yang_2012.*`). The two studies also
 differ in dose, dispenser and trap, so this is a contrast between records,
 not yet evidence of a population difference.
 
@@ -134,13 +134,13 @@ The Atlas keeps all of these and decides none of them.
 - James et al. 2001 joined female volatiles, SPME, ovipositor extracts,
   GC-MS and GC-EAD in one Washington population: E2 : E3 about 98.2 : 1.8
   (n = 3), with both compounds antennally active
-  (`spa.obs.tipuliformis.2001.james.*`). **Production, emission and perception**
+  (`spa.obs.synanthedon_tipuliformis.james_2001.*`). **Production, emission and perception**
   appear in a single study. The abstract's "100:3" is the lure ratio, not the
   measurement.
 - Francke et al. 2004 solved *S. apiformis*: Z3,Z13-18:OH plus
   E2,Z13-18:Al, the first aldehyde in a sesiid pheromone. Neither attracts
   alone; the blend does. Pooled extracts give 2:3, single calling females by
-  SPME 13:87 (`spa.obs.apiformis.2004.francke.*`). **The ratio is a property of
+  SPME 13:87 (`spa.obs.sesia_apiformis.francke_2004.*`). **The ratio is a property of
   the measurement, not only of the moth.** In this case it did not matter
   behaviourally: lures from 30:300 to 300:300 µg all worked.
 - Mozūraitis et al. 2006 found six compounds in *S. tipuliformis* glands, but
@@ -148,15 +148,15 @@ The Atlas keeps all of these and decides none of them.
   holds more than the behaviourally sufficient blend.** Yang et al. 2011 found
   the same for *S. bicingulata*: four minor compounds, three of them
   identified only tentatively, and none of them changed catches on the 4:6
-  pair, alone or all together (`spa.obs.bicingulata.2011.yang.trap_{z13oac,e2z13oac,e3oh,z3oh}_added`,
+  pair, alone or all together (`spa.obs.synanthedon_bicingulata.yang_2011.trap_{z13oac,e2z13oac,e3oh,z3oh}_added`,
   `…trap_complete`). Mozūraitis & Būda 2013 found six gland compounds in *S.
   scoliaeformis*, and E2,Z13-18:OAc alone was as good as any blend; a
   five-fold increase of the 0.2 % Z3,Z13-18:OAc cut catches
-  (`spa.obs.scoliaeformis.2013.mozuraitis.*`). Whether the extra compounds are
+  (`spa.obs.synanthedon_scoliaeformis.mozuraitis_2013.*`). Whether the extra compounds are
   biosynthetic intermediates is the authors' hypothesis, not an observation.
 - Judd et al. 2011 separated gland from emission in *S. myopaeformis*: three
   antennally active compounds in gland extracts, only two in the volatiles
-  of calling females (`spa.obs.myopaeformis.2011.judd.{gland,effluvia,gcead}`).
+  of calling females (`spa.obs.synanthedon_myopaeformis.judd_2011.{gland,effluvia,gcead}`).
   In the field, Z3,Z13-18:OAc alone was as good as any blend, and 5 %
   Z3,Z13-18:OH, which females do emit, cut catches by more than half
   (`…trap_z3oh_added.exp1`). **An emitted, antennally active compound can lower
@@ -164,10 +164,10 @@ The Atlas keeps all of these and decides none of them.
   do not measure.
 - Two species use the same two acetates with opposite ratio tolerances.
   - *S. hector* (Japan) makes E3:Z3,Z13-18:OAc at about 36:60, and lures from
-    70:30 to 30:70 all attract (`spa.obs.hector.2008.naka.*`).
+    70:30 to 30:70 all attract (`spa.obs.synanthedon_hector.naka_2008.*`).
   - *S. vespiformis* (Israel) makes them at 83:17. There, 9:1 and 4:1 attract,
     while 6:4 and 5:5 catch almost nothing
-    (`spa.obs.vespiformis.2011.levizada.*`).
+    (`spa.obs.synanthedon_vespiformis.levizada_2011.*`).
 
   The 50:50 lure that works best for one species shuts the other down. **The
   same molecules carry different messages in different ratios.**
@@ -178,12 +178,12 @@ The Atlas keeps all of these and decides none of them.
   tipuliformis* (Suckling et al. 2005). For *S. bicingulata*, yellow buckets
   beat green ones in spring at two sites and in autumn at two of three, and
   beat white ones at one site of three
-  (`spa.obs.bicingulata.2021.kwon.trap_yellow_vs_*`). Across sites, catch
+  (`spa.obs.synanthedon_bicingulata.kwon_2021.trap_yellow_vs_*`). Across sites, catch
   rose with the trap's b* (yellowness) value (Kwon et al. 2021). For *S.
   myopaeformis*, Judd & Eby 2014 found the effect depends on the trap. Males
   did not separate yellow, green, white and clear delta traps. But all-yellow
   unitraps out-caught green, white and red ones, and replacing any single part
-  with a green one lowered catch (`spa.obs.myopaeformis.2014.judd.*`).
+  with a green one lowered catch (`spa.obs.synanthedon_myopaeformis.judd_2014.*`).
 - **Lure and trap.** Catch rose with lure loading (Suckling et al. 2005).
   Green buckets out-caught white deltas, 13.2 vs 7.6 per trap
   (`…kwon.trap_bucket_vs_delta.exp2_2017.chuncheon`), but design and colour

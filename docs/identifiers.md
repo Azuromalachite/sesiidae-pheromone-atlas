@@ -13,13 +13,21 @@ Every primary record has a permanent ID in the `spa.` namespace:
 | compound | `spa.cmpd.<name>` | `spa.cmpd.e2_z13_18_oac` |
 | computational model | `spa.model.<name>` | `spa.model.z13_18_sme` |
 | reference | `spa.ref.<first author>_<year>` | `spa.ref.mozuraitis_2006` |
-| observation | `spa.obs.<taxon>.<year>.<first author>.<what was measured>` | `spa.obs.tipuliformis.2006.mozuraitis.gland` |
+| observation | `spa.obs.<taxon slug>.<reference slug>.<what was measured>` | `spa.obs.synanthedon_tipuliformis.mozuraitis_2006.gland` |
 | genome | `spa.genome.<taxon>.<accession.version>` | `spa.genome.synanthedon_tipuliformis.GCA_947623395.1` |
 | annotation | `spa.annot.<provider>.<method>.<geneset>` | `spa.annot.ensembl_rr.ensembl.2023_05` |
 
-The schemas enforce each form. A compound's prefix follows its class
-(`spa.model.` only for computational models), so a fatty acid that is both a
-gland product and a biosynthetic precursor needs no role in its ID.
+The schemas enforce each form. A compound's prefix follows its
+`entity_type` (`spa.model.` only for computational models). A fatty acid that
+is both a gland product and a biosynthetic precursor needs no role in its ID
+or its record: occurrence and role come from observations and reactions.
+
+An observation ID is built mechanically. The taxon slug is the record's
+`taxon_id` without `spa.tax.`, the full binomial, never the epithet alone. The
+reference slug is the `reference_id` without `spa.ref.`. The validator refuses
+any drift (`OBS_ID`). The file is named `<ID without spa.obs.>.yaml`. Like
+every ID, the binomial-looking slug is a permanent historical identifier: it
+is not renamed when the genus changes.
 
 ## Rules
 

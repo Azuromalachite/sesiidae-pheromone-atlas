@@ -1,0 +1,26 @@
+observation_id: spa.obs.nokona_pernix.naka_2006.gland
+observation_type: chemical_measurement
+taxon: spa.tax.nokona_pernix
+context: {sex: female, life_stage: adult, mating_status: virgin, behavioural_state: calling, sampling_unit: null, n_individuals: null, population: "Aichi population", locality: "Toyota City, Aichi Prefecture, Japan", rearing: field_collected_reared}
+sample: {materials: [gland_extract], material_as_reported: excised abdominal tip, result_scope: single_material}
+components:
+  - compound: spa.cmpd.e3_z13_18_oh
+    detected: true
+    method: gland_extract_gc_ead_florisil_gc_ms_ri_vs_synthetic_isomers_db23
+    identification: confirmed
+    abundance_class: major
+    measurements: [{value: 12.3, unit: ng_per_female, qualifier: mean}]
+  - compound: spa.cmpd.z3_z13_18_oh
+    detected: true
+    method: gland_extract_gc_ead_florisil_gc_ms_ri_vs_synthetic_isomers_db23
+    identification: confirmed
+    abundance_class: minor
+    measurements: [{value: 1.4, unit: ng_per_female, qualifier: mean}]
+  - {compound: spa.cmpd.e3_z13_18_oac, detected: false, method: gland_extract_gc_ms}
+  - {compound: spa.cmpd.z3_z13_18_oac, detected: false, method: gland_extract_gc_ms}
+evidence:
+  reference: spa.ref.naka_2006
+  source_location: "Results, Identification of pheromone components"
+  author_statement: "In these pheromone extracts, no acetate components were detected."
+  unresolved: [whether the reported spread (10.8 and 1.3 ng) is SD or SE; detection limit for the acetates; which acetates were looked for]
+  notes: "About 40 overwintering larvae collected at Toyota City, Aichi, December 2003, vernalised for a month, reared at 23 C, 13L:11D. Calling induced by direct sunlight; abdominal tips of 1-2-day-old virgin females extracted singly in 250 ul hexane for 5 min. Titres from eight GC-MS injections of 1 female equivalent each (whether each was one female is not stated; extracts were combined two female equivalents at a time for Florisil): 12.3 +- 10.8 and 1.4 +- 1.3 ng per female, a ratio of about 9:1 despite large individual variation. The acetates are recorded as negatives because the authors had synthetic 3,13 acetates as references and state none were detected; the detection limit is not given. The authors call it the first sesiid known to secrete these two alcohols as pheromone components without any acetate."

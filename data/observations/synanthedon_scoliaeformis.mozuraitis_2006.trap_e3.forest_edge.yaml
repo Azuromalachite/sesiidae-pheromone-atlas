@@ -1,0 +1,19 @@
+observation_id: spa.obs.synanthedon_scoliaeformis.mozuraitis_2006.trap_e3.forest_edge
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_scoliaeformis
+context: {sex: male, habitat: deciduous forest edge with birch, population: null, locality: "Visoriai and Žemaitėliai near Vilnius, Lithuania"}
+assay: field_trapping
+blend:
+  - {compound: spa.cmpd.e2_z13_18_oac, amount: {value: 280, unit: microgram}}
+  - {compound: spa.cmpd.e3_z13_18_oac, amount: {value: 2.3, unit: microgram}}
+comparator:
+  description: E2,Z13-18:OAc alone, 280 micrograms
+  blend: [{compound: spa.cmpd.e2_z13_18_oac, amount: {value: 280, unit: microgram}}]
+effect: decreased
+significance: not_reported
+response: {measure: trap_catch, unit: mean_catch_per_trap, treatment_value: 0, comparator_value: 3.4, qualifier: as_reported}
+evidence:
+  reference: spa.ref.mozuraitis_2006
+  source_location: "Table II"
+  author_statement: "suppressed the attractiveness of the latter acetate entirely"
+  notes: "Zero catches carry no letter in Table II, so no test is stated for this pair. 5 replicates."

@@ -1,0 +1,24 @@
+observation_id: spa.obs.synanthedon_tipuliformis.voerman_1984.trap_z2oac_added
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_tipuliformis
+context: {sex: male, habitat: currant orchard, population: Dutch population, locality: 'Boven-Leeuwen, Netherlands'}
+assay: field_trapping
+trap: {design: delta, colour: white, supplier: null}
+dispenser: {design: rubber_sleeve_stopper, description: 'red rubber sleeve stopper, 7 x 11 mm'}
+blend:
+- compound: spa.cmpd.e2_z13_18_oac
+  amount: {value: 1000, unit: microgram}
+  purity: {value: 99, kind: unspecified, basis: stated, qualifier: as_reported, method: 'estimated from the syntheses, argentation chromatography and HPLC; positional isomers not checked'}
+- compound: spa.cmpd.z2_z13_18_oac
+  amount: {value: 40, unit: microgram}
+  purity: {value: 99, kind: unspecified, basis: stated, qualifier: as_reported, method: 'estimated from the syntheses, argentation chromatography and HPLC; positional isomers not checked'}
+comparator:
+  description: E2,Z13-18:OAc alone, 1000 ug
+  blend:
+  - compound: spa.cmpd.e2_z13_18_oac
+    amount: {value: 1000, unit: microgram}
+    purity: {value: 99, kind: unspecified, basis: stated, qualifier: as_reported, method: 'estimated from the syntheses, argentation chromatography and HPLC; positional isomers not checked'}
+effect: decreased
+significance: not_tested
+response: {measure: trap_catch, unit: total_catch, treatment_value: 15, comparator_value: 17, qualifier: as_reported}
+evidence: {reference: spa.ref.voerman_1984, source_location: Table 2; Results, author_statement: 'adding 4% ZZ2,13-18:Ac or ZZ2,13-18:OH had no influence on trap captures.', notes: 'Table 2: Boven-Leeuwen, 1-20 July 1983 (end of the flight period), 4 traps per treatment, total catch in 4 traps. No statistics in the paper: effect is the direction of the raw numbers, and the authors'' own reading, where they give one, is the author_statement. Lures held 0.1 percent BHT as antioxidant. The stated 99 percent purity is for the synthetic acetates; the alcohols were synthesis intermediates of unstated purity.'}

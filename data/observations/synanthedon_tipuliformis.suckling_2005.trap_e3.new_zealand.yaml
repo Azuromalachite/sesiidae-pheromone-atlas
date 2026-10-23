@@ -1,0 +1,21 @@
+observation_id: spa.obs.synanthedon_tipuliformis.suckling_2005.trap_e3.new_zealand
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_tipuliformis
+context: {sex: male, habitat: black currant block without mating disruption, population: null, locality: "Edenfield, Canterbury, New Zealand"}
+assay: field_trapping
+blend:
+  - {compound: spa.cmpd.e2_z13_18_oac, amount: {value: 97, unit: ratio_part}}
+  - {compound: spa.cmpd.e3_z13_18_oac, amount: {value: 3, unit: ratio_part}}
+comparator:
+  description: E2,Z13-18:OAc alone, same 1 mg dose
+  blend: [{compound: spa.cmpd.e2_z13_18_oac}]
+effect: no_effect
+significance: not_reported
+dose: {value: 1, unit: milligram}
+response: {measure: trap_catch, unit: mean_catch_per_trap, treatment_value: 489.7, comparator_value: 481.0, qualifier: as_reported}
+evidence:
+  reference: spa.ref.suckling_2005
+  source_location: "Experiment 2; Table 1"
+  author_statement: "Equivalent catches with the single component and two component lures in both New Zealand and Tasmanian populations"
+  unresolved: [a test of the blend effect within the untreated block; the reported ANOVA tests disruption]
+  notes: "November 10, 2003 - January 23, 2004; 3 composite funnel traps per block. Contradicts the 4.6-fold synergism found in the same region in 1985-86 (spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.new_zealand). The Atlas records both and decides neither."

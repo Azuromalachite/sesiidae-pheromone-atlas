@@ -1,0 +1,60 @@
+observation_id: spa.obs.synanthedon_myopaeformis.judd_2014.trap_industry_standard_vs_all_yellow_unitrap.exp12
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_myopaeformis
+context:
+  sex: male
+  population: introduced British Columbia population
+  locality: near Cawston, Similkameen Valley, British Columbia, Canada
+  habitat: commercial organic apple orchards (dwarfing, high-density superspindle plantings, 2-3 m tall)
+  rearing: wild
+assay: field_trapping
+trap:
+  design: funnel
+  colour: green lid, yellow funnel, white bucket, translucent white lure basket
+  supplier: commercial unitrap components interchanged by the authors (Contech, AgBio)
+blend:
+- compound: spa.cmpd.z3_z13_18_oac
+  amount:
+    value: 1
+    unit: milligram
+  purity:
+    value: 95
+    kind: isomeric
+    basis: stated
+    qualifier: more_than
+    method: supplier figure (Pherobank) as quoted by the authors
+dispenser:
+  design: rubber_septum
+  description: grey halobutyl rubber septum
+comparator:
+  description: same lure in a unitrap with yellow lid, yellow funnel, yellow bucket, translucent white lure basket
+  blend:
+  - compound: spa.cmpd.z3_z13_18_oac
+    amount:
+      value: 1
+      unit: milligram
+    purity:
+      value: 95
+      kind: isomeric
+      basis: stated
+      qualifier: more_than
+      method: supplier figure (Pherobank) as quoted by the authors
+  trap:
+    design: funnel
+    colour: yellow lid, yellow funnel, yellow bucket, translucent white lure basket
+    supplier: commercial unitrap components interchanged by the authors (Contech, AgBio)
+effect: decreased
+significance: significant
+dose:
+  value: 1
+  unit: milligram
+response:
+  measure: trap_catch
+  unit: mean_catch_per_trap
+  treatment_value: 20.5
+  comparator_value: 32.7
+  qualifier: as_reported
+evidence:
+  reference: spa.ref.judd_2014
+  source_location: Experiment 12; Table 1
+  notes: 'Experiment 12, 12-24 July 2007, 9 linear blocks (Table 1 n), 3 unitraps 1 m apart east-west in one tree row, blocks at least 50 m apart, checked every 4 days and rotated clockwise one position, so each trap occupied each position at least once. Component varied in the experiment: lid and bucket. This treatment and comparator differ in the lid and bucket colours (two components), which the trap schema cannot express; it is in trap.colour. Two-way randomised block ANOVA F2,16 = 4.57, P = 0.027, Tukey (alpha 0.05). Means +- SE from Table 1: 20.5 +- 3.4 (G:Y:W:W, letter b) vs 32.7 +- 2.8 (Y:Y:Y:W, letter a). Unitraps (lid, funnel, bucket, lure basket); all-green and all-white from Contech Enterprises (embossed as the original Unitrap, made in the UK), all-yellow and all-red from AgBio Inc. (made by ChemTica International, Costa Rica); translucent white lure basket (AgBio) holding the septum unless stated; 2.5 x 5.0 cm 10% dichlorvos strip (Vaportape II) in every bucket. Lure: grey halobutyl rubber septum (West Co.) loaded with 1 mg Z3,Z13-18:OAc (Pherobank, >95% isomeric purity) in 200 µL hexane; the micro sign was checked in the PDF font stream: ''1 mg'' is set in the text font, ''200 µL'' uses the symbol font. G:Y:W:W is the industry standard multicolour unitrap (green lid, yellow funnel, white bucket) that two earlier sesiid studies found more attractive than all-yellow traps.'

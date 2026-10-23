@@ -1,0 +1,19 @@
+observation_id: spa.obs.synanthedon_tipuliformis.mozuraitis_2006.trap_binary
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_tipuliformis
+context: {sex: male, habitat: black currant plantation, population: null, locality: "Kairėnai near Vilnius, Lithuania"}
+assay: field_trapping
+blend:
+  - {compound: spa.cmpd.e2_z13_18_oac, amount: {value: 280, unit: microgram}}
+  - {compound: spa.cmpd.e3_z13_18_oac, amount: {value: 2.3, unit: microgram}}
+comparator:
+  description: E2,Z13-18:OAc alone, 280 micrograms
+  blend: [{compound: spa.cmpd.e2_z13_18_oac, amount: {value: 280, unit: microgram}}]
+effect: increased
+significance: significant
+response: {measure: trap_catch, unit: mean_catch_per_trap, treatment_value: 20.8, comparator_value: 2.8, qualifier: as_reported}
+evidence:
+  reference: spa.ref.mozuraitis_2006
+  source_location: "Table I"
+  author_statement: "increased the effectiveness of E2,Z13-18:OAc over seven times"
+  notes: "June 1-29, 2001; 5 replicates; Kruskal-Wallis then Mann-Whitney U, P < 0.05. Means ± SD: 20.8 ± 7.3 vs 2.8 ± 1.5."

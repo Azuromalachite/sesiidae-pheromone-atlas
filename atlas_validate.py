@@ -150,7 +150,7 @@ def reference_findings(records):
         if not str(g.get("genome_id", "")).endswith(want):
             out.append(Finding("GENOME_ID", path, f"genome_id must end with the assembly accession.version {want[1:]!r}"))
     for path, c in comps.values():
-        if c.get("compound_class") == "computational_model":
+        if c.get("entity_type") == "computational_model":
             need(c.get("represents") in comps, path, f"represents {c.get('represents')!r} has no record")
     for path, o in records["observations"].values():
         need(o.get("taxon") in taxa, path, f"taxon {o.get('taxon')!r} has no record")
@@ -158,7 +158,7 @@ def reference_findings(records):
              f"reference {(o.get('evidence') or {}).get('reference')!r} has no record")
         for cid in observed_compounds(o):
             need(cid in comps, path, f"compound {cid!r} has no record")
-            if cid in comps and comps[cid][1].get("compound_class") == "computational_model":
+            if cid in comps and comps[cid][1].get("entity_type") == "computational_model":
                 out.append(Finding("OBS_MODEL_COMPOUND", path,
                                    f"{cid} is a computational model; observations are of real compounds"))
     return out
@@ -181,11 +181,17 @@ def same_blend(a, b):
 
 
 def observation_findings(records):
-    """Rules the schema cannot say: amounts belong to detections, a
+    """Rules the schema cannot say: an observation_id is built from its taxon
+    and reference, amounts belong to detections, a
     detection limit belongs to a negative, and a comparator differs from the
     treatment in its blend, trap or dispenser."""
     out = []
     for path, o in records["observations"].values():
+        oid = str(o.get("observation_id", ""))
+        want = (f"spa.obs.{str(o.get('taxon', '')).removeprefix('spa.tax.')}."
+                f"{str((o.get('evidence') or {}).get('reference', '')).removeprefix('spa.ref.')}.")
+        if not oid.startswith(want) or len(oid) == len(want):
+            out.append(Finding("OBS_ID", path, f"observation_id must be {want}<what>, from its taxon and reference"))
         for c in o.get("components") or []:
             name = c.get("compound")
             if c.get("measurements") and c.get("detected") is not True:

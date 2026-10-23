@@ -1,0 +1,19 @@
+observation_id: spa.obs.synanthedon_tipuliformis.voerman_1984.trap_e3oac_added.starnberg
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_tipuliformis
+context: {sex: male, habitat: null, population: Bavarian population, locality: 'Starnberg, Bavaria, Germany'}
+assay: field_trapping
+trap: {design: other, colour: null, supplier: null}
+dispenser: {design: other, description: 'rubber cup (serum bottle cap, 18 mm)'}
+blend:
+- compound: spa.cmpd.e2_z13_18_oac
+  purity: {value: 99, kind: unspecified, basis: stated, qualifier: as_reported, method: 'estimated from the syntheses, argentation chromatography and HPLC; positional isomers not checked'}
+- {compound: spa.cmpd.e3_z13_18_oac}
+comparator:
+  description: E2,Z13-18:OAc alone
+  blend:
+  - compound: spa.cmpd.e2_z13_18_oac
+    purity: {value: 99, kind: unspecified, basis: stated, qualifier: as_reported, method: 'estimated from the syntheses, argentation chromatography and HPLC; positional isomers not checked'}
+effect: decreased
+significance: not_tested
+evidence: {reference: spa.ref.voerman_1984, source_location: Results and Discussion, author_statement: 'captures by this compound were found to decrease on addition of EZ3,13-18:Ac.', notes: 'End of the 1983 flight season. No numbers or amounts are given; the effect is the authors'' statement only. Trap and dispenser are the Starnberg setup in the Methods (Tetra traps, Arn et al. 1979; rubber cups); that this test series used them is an Atlas inference. Atlas note: Szöcs et al. 1990 (spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.*) later found E3 raised catches in Hungary and New Zealand.'}

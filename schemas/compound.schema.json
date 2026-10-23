@@ -5,10 +5,10 @@
   "description": "A compound with an explicit, fully mapped structure. Only names.shorthand and mapped_smiles are curated; the generated block is written by atlas_validate.py --write-generated and checked in CI (concept §10, §12).",
   "type": "object",
   "additionalProperties": false,
-  "required": ["compound_id", "compound_class", "names", "mapped_smiles", "external_ids", "generated"],
+  "required": ["compound_id", "entity_type", "names", "mapped_smiles", "external_ids", "generated"],
   "properties": {
     "compound_id": {"type": "string", "pattern": "^spa\\.(cmpd|model)\\.[a-z0-9_]+$", "description": "spa.model.* for computational models, spa.cmpd.* for everything else; permanent (docs/identifiers.md)"},
-    "compound_class": {"enum": ["natural_product", "precursor", "synthetic_analogue", "computational_model"], "description": "chemical state only; synthetic_analogue means no Atlas gland record holds the compound yet, and the class changes when one does. Whether a compound is a pheromone, synergist or antagonist is a conclusion from behavioural records, never a property of the compound (concept §35, 17)"},
+    "entity_type": {"enum": ["chemical", "computational_model"], "description": "what the record is, and nothing more. Natural occurrence comes from chemical_measurement records; precursor, product and intermediate from reaction records; pheromone, synergist and antagonist from behavioural records. None of these is a property of the molecule (concept §35, 17)"},
     "names": {
       "type": "object",
       "additionalProperties": false,
@@ -69,7 +69,7 @@
   },
   "allOf": [
     {
-      "if": {"properties": {"compound_class": {"const": "computational_model"}}},
+      "if": {"properties": {"entity_type": {"const": "computational_model"}}},
       "then": {"required": ["represents", "truncation"], "properties": {"compound_id": {"pattern": "^spa\\.model\\."}}},
       "else": {"not": {"anyOf": [{"required": ["represents"]}, {"required": ["truncation"]}]}, "properties": {"compound_id": {"pattern": "^spa\\.cmpd\\."}}}
     }

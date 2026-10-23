@@ -1,0 +1,18 @@
+observation_id: spa.obs.synanthedon_andrenaeformis.priesner_1986.trap
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_andrenaeformis
+context: {sex: male, population: null, locality: "Starnberg/Seewiesen, Germany"}
+assay: field_trapping
+blend:
+  - {compound: spa.cmpd.e2_z13_18_oac, amount: {value: 10, unit: microgram}}
+  - {compound: spa.cmpd.e3_z13_18_oac, amount: {value: 100, unit: microgram}}
+comparator:
+  description: each compound alone (100 micrograms); neither caught males
+effect: increased
+significance: not_reported
+response: {measure: trap_catch, unit: mean_catch_per_trap, treatment_value: 17.0, comparator_value: 0, qualifier: as_reported}
+evidence:
+  reference: spa.ref.priesner_1986
+  source_location: "Table 1, 1984"
+  author_statement: "strongly attracted male Synanthedon andrenaeformis"
+  notes: "A field attractant with the E3 isomer dominant, the reverse of S. tipuliformis's optimum. 3 replicates; 1985: 11.7. No gland analysis."

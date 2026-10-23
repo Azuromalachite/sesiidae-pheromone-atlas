@@ -1,0 +1,19 @@
+observation_id: spa.obs.synanthedon_tipuliformis.szocs_1985.trap_z13oac
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_tipuliformis
+context: {sex: male, habitat: currant plantation, population: null, locality: "Bernecebaráti, Hungary"}
+assay: field_trapping
+blend:
+  - {compound: spa.cmpd.e2_z13_18_oac, amount: {value: 500, unit: microgram}}
+  - {compound: spa.cmpd.z13_18_oac, amount: {value: 100, unit: microgram}}
+comparator:
+  description: E2,Z13-18:OAc alone, 500 micrograms
+  blend: [{compound: spa.cmpd.e2_z13_18_oac, amount: {value: 500, unit: microgram}}]
+effect: increased
+significance: significant
+response: {measure: trap_catch, unit: mean_catch_per_trap, treatment_value: 33.0, comparator_value: 17.2, qualifier: as_reported}
+evidence:
+  reference: spa.ref.szocs_1985
+  source_location: "Table 1, test A"
+  author_statement: "Statistically significant differences could be found, however, only in the case of the first test at 5:1 diene/monoene ratio"
+  notes: "June 8-22, 1984; 5 replicates; Duncan's test. Five other ratios in test A and all four in test B were not significant. The same group found no consistent Z13-18:OAc effect in 1985-87 (Szöcs et al. 1990)."

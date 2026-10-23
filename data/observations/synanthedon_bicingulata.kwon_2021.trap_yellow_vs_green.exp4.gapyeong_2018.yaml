@@ -1,0 +1,20 @@
+observation_id: spa.obs.synanthedon_bicingulata.kwon_2021.trap_yellow_vs_green.exp4.gapyeong_2018
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_bicingulata
+context: {sex: male, habitat: roadside cherry trees, population: "Korean population", locality: "Gapyeong, Republic of Korea"}
+assay: field_trapping
+trap: {design: bucket, colour: yellow, colour_lab: {L: 59.29, a: 6.88, b: 45.80}, supplier: Korea Institute of Insect Pheromone}
+blend: [{compound: spa.cmpd.e3_z13_18_oac, amount: {value: 0.4, unit: milligram}, purity: {value: 94.18, kind: unspecified, basis: measured, method: GC-MS peak area on HP-5MS (Fig. 4)}}, {compound: spa.cmpd.z3_z13_18_oac, amount: {value: 0.6, unit: milligram}, purity: {value: 82.8, kind: unspecified, basis: measured, method: GC-MS peak area on HP-5MS (Fig. 4)}}]
+comparator:
+  description: same lure in a green bucket trap
+  blend: [{compound: spa.cmpd.e3_z13_18_oac, amount: {value: 0.4, unit: milligram}, purity: {value: 94.18, kind: unspecified, basis: measured, method: GC-MS peak area on HP-5MS (Fig. 4)}}, {compound: spa.cmpd.z3_z13_18_oac, amount: {value: 0.6, unit: milligram}, purity: {value: 82.8, kind: unspecified, basis: measured, method: GC-MS peak area on HP-5MS (Fig. 4)}}]
+  trap: {design: bucket, colour: green, colour_lab: {L: 33.41, a: -11.28, b: 0.46}, supplier: Korea Institute of Insect Pheromone}
+effect: increased
+significance: significant
+dose: {value: 1, unit: milligram}
+response: {measure: trap_catch, unit: mean_catch_per_trap, treatment_value: 7.7, comparator_value: 2.3, qualifier: approximate}
+evidence:
+  reference: spa.ref.kwon_2021
+  source_location: "Experiment 4; Fig. 9a"
+  author_statement: "Yellow bucket traps caught the largest number of male"
+  notes: "Experiment 4, Gapyeong, 27 August - 28 September 2018, 3 blocks, F5,12 = 4.668, P = 0.0134, Tukey HSD. Six colours tested (black, blue, green, red, yellow, white); L*a*b* from Table 1. Across sites capture rose with b* (R2 = 0.389, P < 0.001), weakly with L* (R2 = 0.085) and not with a*. Lures synthesised by the authors: 1 mg per sleeve-stopper septum with 1 mg BHT, changed monthly; traps 3 m up on roadside cherry trees, at least 15 m apart, re-randomised every two weeks. Purity is GC-MS peak area; the authors do not say what the impurities are and state that the lures held no isomeric compounds. Atlas reading of Fig. 4: the impurities are minor peaks 0.07-0.37 min after each main peak (13.763 and 13.903 min for E3; 13.745, 13.903 and 14.037 min for Z3), on a column where E3 and Z3 eluted 0.035 min apart in separate runs, so geometric isomers among them are not excluded. Means read from bar charts. Letters a vs b."

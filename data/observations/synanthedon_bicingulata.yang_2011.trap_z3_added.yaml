@@ -1,0 +1,19 @@
+observation_id: spa.obs.synanthedon_bicingulata.yang_2011.trap_z3_added
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_bicingulata
+context: {sex: male, habitat: peach orchard, population: "Korean population", locality: "Jeonju, Republic of Korea"}
+assay: field_trapping
+trap: {design: delta, colour: null, supplier: Green Agro Tech}
+blend: [{compound: spa.cmpd.e3_z13_18_oac, amount: {value: 0.4, unit: milligram}, purity: {value: 99, kind: isomeric, basis: stated, qualifier: more_than}}, {compound: spa.cmpd.z3_z13_18_oac, amount: {value: 0.6, unit: milligram}, purity: {value: 99, kind: isomeric, basis: stated, qualifier: more_than}}]
+comparator:
+  description: E3,Z13-18:OAc alone, 1 mg
+  blend: [{compound: spa.cmpd.e3_z13_18_oac, amount: {value: 1, unit: milligram}, purity: {value: 99, kind: isomeric, basis: stated, qualifier: more_than}}]
+effect: increased
+significance: not_tested
+dose: {value: 1, unit: milligram}
+response: {measure: trap_catch, unit: mean_catch_per_trap, treatment_value: 10.3, comparator_value: 0, qualifier: approximate}
+evidence:
+  reference: spa.ref.yang_2011
+  source_location: "Experiment 1; Fig. 2"
+  author_statement: "no catch in controls or traps baited with single components"
+  notes: "Experiment 1, peach orchards at Jeonju, 10-18 June 2009, sticky delta traps, rubber septa, 4 randomised blocks, 181 males in total. Pherobank synthetics, isomeric purity stated as above 99 percent. Means read from the bar chart. Treatments that caught nothing were excluded from the log(x+1) ANOVA and Tukey test, so a contrast with a zero-catch treatment was not tested statistically."

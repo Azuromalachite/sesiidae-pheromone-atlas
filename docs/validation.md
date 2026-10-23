@@ -36,7 +36,10 @@ JSON Schema (`schemas/`) enforces the shapes, including: `method` on every
 component whose `detected` is true or false; `identification` only on a
 detected component; a lure `purity` that names its `kind` (chemical,
 isomeric, both or unspecified) and `basis` (measured or stated); a trap
-and a dispenser `design` from fixed lists; three observation types and no
+and a dispenser `design` from fixed lists; a `chemical_measurement` names
+its `sample` materials from a fixed list and, when it lists more than one,
+says the result is `combined`; a compound has an `entity_type` (chemical or
+computational model) and no class or role; three observation types and no
 `role` field. The validator adds the checks below.
 
 Two conventions the schema states but cannot check:
@@ -49,6 +52,7 @@ Two conventions the schema states but cannot check:
 | check | error code |
 |---|---|
 | every taxon, compound, reference and `represents` id resolves | `REF_MISSING` |
+| an observation ID is `spa.obs.<taxon slug>.<reference slug>.<what>`, from its own taxon and reference | `OBS_ID` |
 | observations are of real compounds, never computational models | `OBS_MODEL_COMPOUND` |
 | amounts only on detections; a detection limit only on a negative; a comparator differs from the treatment in blend, trap or dispenser | `OBS_FIELD_CONFLICT` |
 | `genome_id` ends with the assembly accession.version | `GENOME_ID` |
@@ -65,8 +69,8 @@ fixture keeps each one that way:
 - **No role on a compound.** Pheromone, synergist and antagonist are
   conclusions from behavioural records, per population (`compound_role_field`).
 - **A field attractant is not a gland component.** Synthetic-lure results are
-  `behavioural_response` records; only `gland_composition` records say a
-  female produces a compound. The two types share no fields that could carry
+  `behavioural_response` records; only `chemical_measurement` records say a
+  female produces or releases a compound. The two types share no fields that could carry
   one into the other.
 - **A catch without a control says so** (`effect: caught_without_control`,
   and then no comparator; `control_less_with_comparator`, `missing_comparator`).

@@ -1,0 +1,16 @@
+observation_id: spa.obs.synanthedon_myopaeformis.judd_2011.gland
+observation_type: chemical_measurement
+taxon: spa.tax.synanthedon_myopaeformis
+context: {sex: female, life_stage: adult, mating_status: null, behavioural_state: null, sampling_unit: null, n_individuals: null, population: introduced British Columbia population, locality: 'Cawston, British Columbia, Canada', rearing: field_collected_reared}
+sample: {materials: [gland_extract], material_as_reported: abdominal tip with the gland, result_scope: single_material}
+components:
+- {compound: spa.cmpd.z3_z13_18_oac, detected: true, method: gland_extract_gc_ead_retention_time_vs_16_isomer_standards_and_gc_ms, identification: confirmed, abundance_class: major}
+- {compound: spa.cmpd.z3_z13_18_oh, detected: true, method: gland_extract_gc_ead_retention_time_vs_16_isomer_standards, identification: confirmed}
+- {compound: spa.cmpd.e2_z13_18_oac, detected: true, method: gland_extract_gc_ead_retention_time_vs_16_isomer_standards, identification: confirmed}
+- {compound: spa.cmpd.e3_z13_18_oac, detected: true, method: gland_extract_gc_ead_db23_only}
+evidence:
+  reference: spa.ref.judd_2011
+  source_location: Results and discussion; Fig. 1; Table 1
+  author_statement: Components A and C were below the detection threshold of the mass spectrometer
+  unresolved: [number of females analysed, mating status of the extracted females, amounts and ratio]
+  notes: Larvae from infested apple trees near Cawston, spring 2006, reared on pinto-bean diet at 23 C, 16L:8D; abdominal tips of 1-2-day-old females, 20 ul hexane per gland for 15 min; one female equivalent per GC-EAD run, and a concentrated extract for GC-MS. Only Z3,Z13-18:OAc had a mass spectrum. Z3,Z13-18:OH and E2,Z13-18:OAc were below the MS threshold; the authors identify them ('identified as', Fig. 1) by retention time. The text says the match held on four columns, but Table 1 marks antennal responses for Z3,Z13-18:OH on DB-5, DB-17 and DB-23 only and for E2,Z13-18:OAc on DB-17 and DB-23 only. E3,Z13-18:OAc showed only on DB-23, with inconsistent antennal responses; the authors name it without calling it identified, so no identification is recorded. No amounts or ratios are given.

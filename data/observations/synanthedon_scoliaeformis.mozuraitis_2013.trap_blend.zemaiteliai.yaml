@@ -1,0 +1,16 @@
+observation_id: spa.obs.synanthedon_scoliaeformis.mozuraitis_2013.trap_blend.zemaiteliai
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_scoliaeformis
+context: {sex: male, habitat: null, population: Lithuanian population, locality: 'Žemaitėliai, Lithuania'}
+assay: field_trapping
+trap: {design: delta, colour: white, supplier: Flora Co. (Atracon A)}
+dispenser: {design: rubber_tube, description: 'red rubber tube, 8 x 15 mm'}
+blend:
+- compound: spa.cmpd.e2_z13_18_oac
+  amount: {value: 150, unit: microgram}
+  purity: {value: 99, kind: chemical_and_isomeric, basis: stated, qualifier: more_than}
+comparator: {description: hexane only}
+effect: increased
+significance: not_tested
+response: {measure: trap_catch, unit: total_catch, treatment_value: 66, comparator_value: 0, qualifier: as_reported}
+evidence: {reference: spa.ref.mozuraitis_2013, source_location: 'Table 1, Žemaitėliai 2011', notes: 'Žemaitėliai, 20 June - 11 July 2011, 7 replicates, total catch, traps on shrubs close to old birch trees. The control caught nothing and was excluded from the test; effect from the raw totals.'}

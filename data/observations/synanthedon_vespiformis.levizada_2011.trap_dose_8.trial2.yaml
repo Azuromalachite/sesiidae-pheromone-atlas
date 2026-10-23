@@ -1,0 +1,24 @@
+observation_id: spa.obs.synanthedon_vespiformis.levizada_2011.trap_dose_8.trial2
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_vespiformis
+context: {sex: male, habitat: null, population: Israeli population, locality: 'Kefar Tabor, Israel'}
+assay: field_trapping
+trap: {design: funnel, colour: null, supplier: International Pheromone Systems (IPS trap)}
+dispenser: {design: rubber_septum, description: rubber septum (Yogev Agricultural Services)}
+blend:
+- compound: spa.cmpd.e3_z13_18_oac
+  amount: {value: 6.4, unit: milligram}
+- compound: spa.cmpd.z3_z13_18_oac
+  amount: {value: 1.6, unit: milligram}
+comparator:
+  description: the same 4:1 blend at 1 mg
+  blend:
+  - compound: spa.cmpd.e3_z13_18_oac
+    amount: {value: 0.8, unit: milligram}
+  - compound: spa.cmpd.z3_z13_18_oac
+    amount: {value: 0.2, unit: milligram}
+effect: no_effect
+significance: not_significant
+dose: {value: 8, unit: milligram}
+response: {measure: trap_catch, unit: mean_catch_per_trap_per_week, treatment_value: 6.65, comparator_value: 3.5, qualifier: as_reported}
+evidence: {reference: spa.ref.levizada_2011, source_location: Table 3, notes: 'Trial 2, Kefar Tabor, 26 June - 24 August 2007 (mid-summer), five traps. 4:1 E3:Z3,Z13-18:OAc at 8 mg. Letters BC vs C. Catch correlated with dose (R2 = 0.9047 and 0.8634 for the two trials). Mean +- SE (as the Methods state) males per trap per week; traps 25 m apart, counted weekly and rotated one position; SNK test. Table 3 prints 1.9 +- 2.1 for 0.2 mg in trial 1; an SE larger than the mean is impossible for five non-negative counts, so the dispersion in Table 3 may not be an SE (Atlas reading). Habitat not stated for these trials. Lure purity: E3,Z13-18:OAc stock 99 percent E,Z and 1 percent Z,Z; Z3,Z13-18:OAc stock 93 percent Z,Z, 3.5 percent E,Z and 3.5 percent unidentified; the Shin-Etsu 4:1 mixture 77 percent E,Z, 18 Z,Z, 3.5 E,E and 0.5 Z,E. Which lures used which source is not stated, so no purity is attached to the blends.'}

@@ -1,0 +1,21 @@
+observation_id: spa.obs.synanthedon_myopaeformis.judd_2011.trap_e2oac_added.exp2
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_myopaeformis
+context: {sex: male, habitat: organic apple orchard, population: introduced British Columbia population, locality: 'Cawston, British Columbia, Canada'}
+assay: field_trapping
+trap: {design: delta, colour: white, supplier: null}
+dispenser: {design: rubber_septum, description: grey halobutyl rubber septum (West Pharmaceutical Services)}
+blend:
+- compound: spa.cmpd.z3_z13_18_oac
+  amount: {value: 100, unit: microgram}
+- compound: spa.cmpd.e2_z13_18_oac
+  amount: {value: 5, unit: microgram}
+comparator:
+  description: Z3,Z13-18:OAc alone, 100 ug
+  blend:
+  - compound: spa.cmpd.z3_z13_18_oac
+    amount: {value: 100, unit: microgram}
+effect: no_effect
+significance: not_significant
+response: {measure: trap_catch, unit: mean_catch_per_trap, treatment_value: 5.8, comparator_value: 7.1, qualifier: as_reported}
+evidence: {reference: spa.ref.judd_2011, source_location: 'Table 2, experiment 2', author_statement: 'traps baited with a binary blend of (3Z,13Z)-18:OAc and (2E,13Z)-18:OAc were no more attractive than (3Z,13Z)-18:OAc alone (Table 2)', notes: 'Experiment 2, Cawston, 26-30 July 2006, 10 blocks; same design and statistics. Mean +- SE per trap: 5.8 +- 1.1 (a) vs 7.1 +- 1.2 (a).'}

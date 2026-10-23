@@ -1,0 +1,14 @@
+observation_id: spa.obs.synanthedon_hector.naka_2008.gcead
+observation_type: electrophysiology
+taxon: spa.tax.synanthedon_hector
+context: {sex: male, population: Aichi population, locality: 'Kasugai City, Aichi Prefecture, Japan'}
+responses:
+- {compound: spa.cmpd.e3_z13_18_oac, method: GC-EAD, preparation: excised male antenna (1-4-day-old), response: active, notes: 'component I, Rt 14.91 min'}
+- {compound: spa.cmpd.z3_z13_18_oac, method: GC-EAD, preparation: excised male antenna (1-4-day-old), response: active, notes: 'component II, Rt 15.01 min'}
+- {compound: spa.cmpd.e2_z13_18_oac, method: GC-EAD, preparation: excised male antenna (1-4-day-old), response: active, notes: 'component III, Rt 15.17 min'}
+evidence:
+  reference: spa.ref.naka_2008
+  source_location: Results, GC-EAD; Fig. 1
+  author_statement: the antennae of male S. hector responded reproducibly to only three components (Comps. I–III)
+  unresolved: [number of antennae]
+  notes: Crude extract, 0.5 female equivalent, DB-23. All three active components eluted with 5 percent ether from Florisil, like the synthetic acetates.

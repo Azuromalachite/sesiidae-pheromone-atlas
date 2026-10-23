@@ -1,0 +1,15 @@
+observation_id: spa.obs.synanthedon_tipuliformis.voerman_1984.ssr.vienna
+observation_type: electrophysiology
+taxon: spa.tax.synanthedon_tipuliformis
+context: {sex: male, population: Austrian population, locality: 'near Vienna, Austria'}
+responses:
+- {compound: spa.cmpd.e2_z13_18_oac, method: SSR, preparation: antennal sensilla trichodea, response: active, notes: a specialist receptor cell type}
+- {compound: spa.cmpd.e3_z13_18_oac, method: SSR, preparation: antennal sensilla trichodea, response: active, notes: a specialist receptor cell type}
+- {compound: spa.cmpd.z3_z13_18_oac, method: SSR, preparation: antennal sensilla trichodea, response: active, notes: a specialist receptor cell type}
+- {compound: spa.cmpd.z2_z13_18_oac, method: SSR, preparation: antennal sensilla trichodea, response: not_tested, notes: 'the authors report no specialist cell for it; whether it excited other cell types is not reported, so it is not recorded as inactive'}
+evidence:
+  reference: spa.ref.voerman_1984
+  source_location: Results and Discussion
+  author_statement: 'These recordings revealed the presence of three types of receptor cells in these sensilla, specific to EZ2,13-18 : Ac, EZ3,13-18 : Ac, and ZZ3,13-18 : Ac.'
+  unresolved: [number of males and sensilla recorded, stimulus doses]
+  notes: Males from pupae collected in spring 1983; the authors report identical results to Starnberg. No recordings are shown. The authors also found no receptors for 'alcohol or aldehyde analogs' without naming them, so no alcohol or aldehyde is recorded here.

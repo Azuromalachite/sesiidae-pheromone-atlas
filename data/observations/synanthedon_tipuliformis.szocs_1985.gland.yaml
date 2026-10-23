@@ -1,0 +1,15 @@
+observation_id: spa.obs.synanthedon_tipuliformis.szocs_1985.gland
+observation_type: chemical_measurement
+taxon: spa.tax.synanthedon_tipuliformis
+context: {sex: female, life_stage: adult, mating_status: virgin, sampling_unit: pooled, n_individuals: 19, population: null, locality: "Fertőd, western Hungary", rearing: field_collected_reared}
+sample: {materials: [ovipositor_extract], material_as_reported: ovipositor, result_scope: single_material}
+components:
+  - {compound: spa.cmpd.e2_z13_18_oac, detected: true, method: ovipositor_extract_capillary_gc_two_columns_and_gc_ms, abundance_class: major, measurements: [{value: 93, unit: ratio_part, qualifier: as_reported}]}
+  - {compound: spa.cmpd.z13_18_oac, detected: true, method: ovipositor_extract_capillary_gc_two_columns_and_gc_ms, abundance_class: minor, measurements: [{value: 7, unit: ratio_part, qualifier: as_reported}]}
+evidence:
+  reference: spa.ref.szocs_1985
+  source_location: "Results and discussion"
+  author_statement: "The ratio of the compounds in the extract was 93:7 (ODDA:ODA) according to OTCC"
+  unresolved:
+    - "E3,Z13-18:OAc is not reported; the principal peaks were compared with 3,13-isomer standards, but whether minor peaks were searched for it is not stated"
+  notes: "Overwintering larvae collected March 1983, reared on diet; extracts of 19 virgin 1-3-day-old females. Cited later as 97:3 (Mozūraitis et al. 2006) and as a 100:3 E2:E3 blend (James et al. 2001); the paper says 93:7 E2,Z13-18:OAc : Z13-18:OAc."
