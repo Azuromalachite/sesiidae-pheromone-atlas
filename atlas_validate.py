@@ -210,6 +210,19 @@ def reference_findings(records):
             need(c.get("represents") in comps, path, f"represents {c.get('represents')!r} has no record")
     for path, o in records["observations"].values():
         need(o.get("taxon") in taxa, path, f"taxon {o.get('taxon')!r} has no record")
+        ev = o.get("evidence") or {}
+        reported = ev.get("taxon_name_as_reported")
+        if o.get("taxon") in taxa and reported:
+            t = taxa[o["taxon"]][1]
+            known = {t.get("accepted_name")} | {s.get("name") for s in t.get("synonyms") or []}
+            if reported not in known:
+                out.append(Finding("NAME_AS_REPORTED", path,
+                                   f"{reported!r} is neither the accepted name nor a listed synonym of {o['taxon']}; add the synonym, with its source"))
+        exps = ev.get("experiment_id")
+        prefix = f"spa.exp.{str(ev.get('reference', '')).removeprefix('spa.ref.')}."
+        for e in (exps if isinstance(exps, list) else [exps] if exps else []):
+            if not str(e).startswith(prefix):
+                out.append(Finding("EXP_ID", path, f"{e}: an experiment belongs to its paper and must start with {prefix}"))
         need((o.get("evidence") or {}).get("reference") in refs, path,
              f"reference {(o.get('evidence') or {}).get('reference')!r} has no record")
         for cid in observed_compounds(o):

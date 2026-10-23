@@ -42,6 +42,17 @@ nothing here is a release, and no DOI has been minted
 - **Validator checks:** `OBS_ID`, `ANNOT_ID`, `SEARCH_ID`, and the
   identical-comparator check in `OBS_FIELD_CONFLICT`, with a failing fixture
   for each.
+- **Database checks:** `YAML_DUPLICATE_KEY`, `DATA_OUTSIDE_GATE`,
+  `IDENTITY_DUPLICATE`, `OBS_DUPLICATE_ENTRY`, `NAME_AS_REPORTED`, `EXP_ID`.
+- **`evidence.taxon_name_as_reported`** on every observation, and
+  **`evidence.experiment_id`** on every behavioural record (backfilled across
+  all 278). `evidence.author_statement_form` marks translations.
+
+### Frozen
+
+- **The v0.1 record shape** (`schemas/frozen-v0.1.json`, schema version 0.1).
+  Later changes must be additive; `scripts/schema_shape.py`, run by the tests,
+  refuses anything else.
 
 ### Changed (breaking, all before any release)
 

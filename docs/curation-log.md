@@ -1,5 +1,27 @@
 # Curation log
 
+## 2026-10-23 (12) — R5 and R6 backfilled; the v0.1 shape is frozen
+
+- **`taxon_name_as_reported` is on all 278 observations,** each checked
+  against its source's full text. Every source uses the accepted combination
+  except Kovalev et al. 1988, which writes *Aegeria apiformis*. GBIF lists it
+  as a synonym of *Sesia apiformis* (10560630 → 5141493), and it is now in the
+  taxon's `synonyms`. The regex scan missed Priesner 1986's *S.
+  andrenaeformis* (hyphenated across a line) and could not read Tamaki 1977
+  (Japanese); both were confirmed by eye.
+- **`experiment_id` is on all 252 behavioural records.** It was proposed from
+  the existing ID suffixes and source locations, reviewed group by group, and
+  corrected where the mechanical rule merged or split wrongly:
+  - Szöcs 1990's Hungary records are three experiments;
+  - one Table I trap series at Kairėnai caught both species in Mozūraitis
+    2006;
+  - Priesner 1986's Table 1 is one series of four species;
+  - Naka 2013 tests II and III share traps;
+  - Yang 2012's acetate-alone record pools two trials, so it lists both.
+- **New checks:** `NAME_AS_REPORTED` and `EXP_ID`. Four failing fixtures.
+- **The record shape is frozen as v0.1** (`schemas/frozen-v0.1.json`). The
+  tests refuse any non-additive schema change.
+
 ## 2026-10-23 (11) — stage D: schema acceptance test, Naka et al. 2013 (*S. tenuis*)
 
 **What the paper adds.** It is the Japanese *S. tenuis* gland identification,

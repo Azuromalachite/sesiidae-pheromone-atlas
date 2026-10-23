@@ -13,9 +13,18 @@
     "evidence": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["reference", "source_location"],
+      "required": ["reference", "source_location", "taxon_name_as_reported"],
       "properties": {
         "reference": {"type": "string"},
+        "taxon_name_as_reported": {"type": "string", "pattern": "^[A-Z][a-z]+ [a-z]+$",
+                                   "description": "the binomial the source used, e.g. 'Aegeria apiformis' (Kovalev 1988) for spa.tax.sesia_apiformis; must be the taxon's accepted name or one of its synonyms (NAME_AS_REPORTED). A later change of combination never rewrites what a paper called its moth"},
+        "experiment_id": {
+          "description": "the field trial or run the record comes from, spa.exp.<reference slug>.<experiment>, so records sharing traps or controls can be joined (EXP_ID). A list only when the source pools trials into one result. Required on behavioural_response",
+          "oneOf": [
+            {"type": "string", "pattern": "^spa\\.exp\\.[a-z0-9_]+\\.[a-z0-9_]+$"},
+            {"type": "array", "minItems": 2, "uniqueItems": true, "items": {"type": "string", "pattern": "^spa\\.exp\\.[a-z0-9_]+\\.[a-z0-9_]+$"}}
+          ]
+        },
         "source_location": {"type": "string", "description": "where in the source this was read, e.g. 'abstract', 'Table 2'"},
         "author_statement": {"type": "string", "maxLength": 200, "description": "the authors' own short wording of the result, kept apart from the Atlas's reading. A short quotation from the source, under the source's own terms, not relicensed by the Atlas (LICENSE-DATA.md)"},
         "author_statement_form": {"enum": ["verbatim", "source_translation", "curator_translation", "paraphrase"], "description": "absent means verbatim. source_translation: the source's own translation (e.g. an English summary); curator_translation: the Atlas curator's; paraphrase: not the authors' words at all"},
@@ -38,7 +47,7 @@
     {
       "properties": {
         "observation_id": true, "observation_type": {"const": "behavioural_response"},
-        "taxon": true, "context": true, "evidence": true,
+        "taxon": true, "context": true, "evidence": {"required": ["experiment_id"]},
         "assay": {"enum": ["field_trapping", "wind_tunnel", "other"]},
         "blend": {"$ref": "#/$defs/blend"},
         "trap": {"$ref": "#/$defs/trap"},

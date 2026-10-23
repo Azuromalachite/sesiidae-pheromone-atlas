@@ -1,0 +1,956 @@
+{
+ "compound.schema.json": {
+  "/": {
+   "properties": [
+    "compound_id",
+    "entity_type",
+    "external_ids",
+    "generated",
+    "mapped_smiles",
+    "names",
+    "represents",
+    "truncation"
+   ],
+   "required": [
+    "compound_id",
+    "entity_type",
+    "external_ids",
+    "generated",
+    "mapped_smiles",
+    "names"
+   ]
+  },
+  "/allOf/0/else": {
+   "properties": [
+    "compound_id"
+   ]
+  },
+  "/allOf/0/else/not/anyOf/0": {
+   "required": [
+    "represents"
+   ]
+  },
+  "/allOf/0/else/not/anyOf/1": {
+   "required": [
+    "truncation"
+   ]
+  },
+  "/allOf/0/if": {
+   "properties": [
+    "entity_type"
+   ]
+  },
+  "/allOf/0/then": {
+   "properties": [
+    "compound_id"
+   ],
+   "required": [
+    "represents",
+    "truncation"
+   ]
+  },
+  "/properties/entity_type": {
+   "enum": [
+    "\"chemical\"",
+    "\"computational_model\""
+   ]
+  },
+  "/properties/external_ids": {
+   "properties": [
+    "chebi"
+   ]
+  },
+  "/properties/generated": {
+   "properties": [
+    "canonical_isomeric_smiles",
+    "generator",
+    "inchi",
+    "inchikey",
+    "lipid_annotation"
+   ],
+   "required": [
+    "canonical_isomeric_smiles",
+    "generator",
+    "inchi",
+    "inchikey",
+    "lipid_annotation"
+   ]
+  },
+  "/properties/generated/properties/generator": {
+   "properties": [
+    "inchi",
+    "rdkit"
+   ],
+   "required": [
+    "inchi",
+    "rdkit"
+   ]
+  },
+  "/properties/generated/properties/lipid_annotation": {
+   "properties": [
+    "chain_length",
+    "double_bonds",
+    "terminal_group",
+    "unsaturation_count"
+   ],
+   "required": [
+    "chain_length",
+    "double_bonds",
+    "terminal_group",
+    "unsaturation_count"
+   ]
+  },
+  "/properties/generated/properties/lipid_annotation/properties/double_bonds/items": {
+   "properties": [
+    "geometry",
+    "position"
+   ],
+   "required": [
+    "geometry",
+    "position"
+   ]
+  },
+  "/properties/generated/properties/lipid_annotation/properties/double_bonds/items/properties/geometry": {
+   "enum": [
+    "\"E\"",
+    "\"Z\""
+   ]
+  },
+  "/properties/names": {
+   "properties": [
+    "shorthand",
+    "systematic"
+   ],
+   "required": [
+    "shorthand"
+   ]
+  }
+ },
+ "genome.schema.json": {
+  "/": {
+   "properties": [
+    "annotations",
+    "assembly",
+    "bioproject",
+    "biosample",
+    "genome_id",
+    "notes",
+    "specimen",
+    "taxon"
+   ],
+   "required": [
+    "annotations",
+    "assembly",
+    "genome_id",
+    "taxon"
+   ]
+  },
+  "/$defs/file": {
+   "properties": [
+    "md5",
+    "url"
+   ],
+   "required": [
+    "md5",
+    "url"
+   ]
+  },
+  "/properties/annotations/items": {
+   "properties": [
+    "annotation_id",
+    "current_platform_id",
+    "files",
+    "geneset",
+    "method",
+    "protein_coding_genes",
+    "provider"
+   ],
+   "required": [
+    "annotation_id",
+    "files",
+    "geneset",
+    "method",
+    "provider"
+   ]
+  },
+  "/properties/annotations/items/properties/files": {
+   "properties": [
+    "gff3",
+    "protein_fasta"
+   ],
+   "required": [
+    "protein_fasta"
+   ]
+  },
+  "/properties/assembly": {
+   "properties": [
+    "accession",
+    "level",
+    "name",
+    "source",
+    "version"
+   ],
+   "required": [
+    "accession",
+    "level",
+    "name",
+    "source",
+    "version"
+   ]
+  },
+  "/properties/assembly/properties/level": {
+   "enum": [
+    "\"chromosome\"",
+    "\"complete\"",
+    "\"contig\"",
+    "\"scaffold\""
+   ]
+  },
+  "/properties/assembly/properties/source": {
+   "enum": [
+    "\"ENA\"",
+    "\"NCBI\""
+   ]
+  },
+  "/properties/specimen": {
+   "properties": [
+    "locality",
+    "sex"
+   ]
+  },
+  "/properties/specimen/properties/sex": {
+   "enum": [
+    "\"female\"",
+    "\"male\"",
+    "null"
+   ]
+  }
+ },
+ "observation.schema.json": {
+  "/": {
+   "properties": [
+    "context",
+    "evidence",
+    "observation_id",
+    "observation_type",
+    "taxon"
+   ],
+   "required": [
+    "context",
+    "evidence",
+    "observation_id",
+    "observation_type",
+    "taxon"
+   ]
+  },
+  "/$defs/blend/items": {
+   "properties": [
+    "amount",
+    "compound",
+    "purity"
+   ],
+   "required": [
+    "compound"
+   ]
+  },
+  "/$defs/component": {
+   "properties": [
+    "abundance_class",
+    "compound",
+    "detected",
+    "detection_limit",
+    "identification",
+    "measurements",
+    "method"
+   ],
+   "required": [
+    "compound",
+    "detected"
+   ]
+  },
+  "/$defs/component/allOf/0/if": {
+   "properties": [
+    "detected"
+   ]
+  },
+  "/$defs/component/allOf/0/if/properties/detected": {
+   "enum": [
+    "false",
+    "true"
+   ]
+  },
+  "/$defs/component/allOf/0/then": {
+   "required": [
+    "method"
+   ]
+  },
+  "/$defs/component/allOf/1/if": {
+   "required": [
+    "identification"
+   ]
+  },
+  "/$defs/component/allOf/1/then": {
+   "properties": [
+    "detected"
+   ]
+  },
+  "/$defs/component/properties/abundance_class": {
+   "enum": [
+    "\"major\"",
+    "\"minor\"",
+    "\"trace\""
+   ]
+  },
+  "/$defs/component/properties/detected": {
+   "enum": [
+    "\"not_tested\"",
+    "false",
+    "true"
+   ]
+  },
+  "/$defs/component/properties/identification": {
+   "enum": [
+    "\"confirmed\"",
+    "\"tentative\""
+   ]
+  },
+  "/$defs/component/properties/measurements/items": {
+   "properties": [
+    "method",
+    "qualifier",
+    "spread",
+    "unit",
+    "value"
+   ],
+   "required": [
+    "unit",
+    "value"
+   ]
+  },
+  "/$defs/component/properties/measurements/items/properties/qualifier": {
+   "enum": [
+    "\"approximate\"",
+    "\"as_reported\"",
+    "\"mean\"",
+    "\"range_midpoint\""
+   ]
+  },
+  "/$defs/component/properties/measurements/items/properties/spread": {
+   "properties": [
+    "kind",
+    "value"
+   ],
+   "required": [
+    "kind",
+    "value"
+   ]
+  },
+  "/$defs/component/properties/measurements/items/properties/spread/properties/kind": {
+   "enum": [
+    "\"sd\"",
+    "\"se\""
+   ]
+  },
+  "/$defs/component/properties/measurements/items/properties/unit": {
+   "enum": [
+    "\"ng_per_female\"",
+    "\"percent\"",
+    "\"ratio_part\"",
+    "\"relative_to_major\""
+   ]
+  },
+  "/$defs/context": {
+   "properties": [
+    "behavioural_state",
+    "habitat",
+    "life_stage",
+    "locality",
+    "mating_status",
+    "n_individuals",
+    "population",
+    "rearing",
+    "sampling_unit",
+    "sex"
+   ]
+  },
+  "/$defs/context/properties/behavioural_state": {
+   "enum": [
+    "\"calling\"",
+    "null"
+   ]
+  },
+  "/$defs/context/properties/mating_status": {
+   "enum": [
+    "\"mated\"",
+    "\"virgin\"",
+    "null"
+   ]
+  },
+  "/$defs/context/properties/rearing": {
+   "enum": [
+    "\"field_collected_reared\"",
+    "\"laboratory\"",
+    "\"wild\"",
+    "null"
+   ]
+  },
+  "/$defs/context/properties/sampling_unit": {
+   "enum": [
+    "\"individual\"",
+    "\"pooled\"",
+    "null"
+   ]
+  },
+  "/$defs/context/properties/sex": {
+   "enum": [
+    "\"female\"",
+    "\"male\"",
+    "null"
+   ]
+  },
+  "/$defs/dispenser": {
+   "properties": [
+    "description",
+    "design"
+   ],
+   "required": [
+    "design"
+   ]
+  },
+  "/$defs/dispenser/properties/design": {
+   "enum": [
+    "\"other\"",
+    "\"polyethylene_vial\"",
+    "\"rubber_septum\"",
+    "\"rubber_sleeve_stopper\"",
+    "\"rubber_tube\""
+   ]
+  },
+  "/$defs/purity": {
+   "properties": [
+    "basis",
+    "kind",
+    "method",
+    "qualifier",
+    "value"
+   ],
+   "required": [
+    "basis",
+    "kind",
+    "value"
+   ]
+  },
+  "/$defs/purity/properties/basis": {
+   "enum": [
+    "\"measured\"",
+    "\"stated\""
+   ]
+  },
+  "/$defs/purity/properties/kind": {
+   "enum": [
+    "\"chemical\"",
+    "\"chemical_and_isomeric\"",
+    "\"isomeric\"",
+    "\"unspecified\""
+   ]
+  },
+  "/$defs/purity/properties/qualifier": {
+   "enum": [
+    "\"as_reported\"",
+    "\"more_than\""
+   ]
+  },
+  "/$defs/quantity": {
+   "properties": [
+    "unit",
+    "value"
+   ],
+   "required": [
+    "unit",
+    "value"
+   ]
+  },
+  "/$defs/quantity/properties/unit": {
+   "enum": [
+    "\"gram\"",
+    "\"microgram\"",
+    "\"milligram\"",
+    "\"nanogram\"",
+    "\"picogram\"",
+    "\"ratio_part\""
+   ]
+  },
+  "/$defs/sample": {
+   "properties": [
+    "material_as_reported",
+    "materials",
+    "result_scope"
+   ],
+   "required": [
+    "material_as_reported",
+    "materials",
+    "result_scope"
+   ]
+  },
+  "/$defs/sample/allOf/0/else": {
+   "properties": [
+    "result_scope"
+   ]
+  },
+  "/$defs/sample/allOf/0/if": {
+   "properties": [
+    "materials"
+   ]
+  },
+  "/$defs/sample/allOf/0/then": {
+   "properties": [
+    "result_scope"
+   ]
+  },
+  "/$defs/sample/properties/materials/items": {
+   "enum": [
+    "\"effluvium\"",
+    "\"gland_extract\"",
+    "\"other\"",
+    "\"ovipositor_extract\""
+   ]
+  },
+  "/$defs/sample/properties/result_scope": {
+   "enum": [
+    "\"combined\"",
+    "\"single_material\""
+   ]
+  },
+  "/$defs/trap": {
+   "properties": [
+    "colour",
+    "colour_lab",
+    "design",
+    "supplier"
+   ],
+   "required": [
+    "design"
+   ]
+  },
+  "/$defs/trap/properties/colour_lab": {
+   "properties": [
+    "L",
+    "a",
+    "b"
+   ],
+   "required": [
+    "L",
+    "a",
+    "b"
+   ]
+  },
+  "/$defs/trap/properties/design": {
+   "enum": [
+    "\"bottle\"",
+    "\"bucket\"",
+    "\"delta\"",
+    "\"funnel\"",
+    "\"other\"",
+    "\"sticky_board\"",
+    "\"wing\""
+   ]
+  },
+  "/oneOf/0": {
+   "properties": [
+    "components",
+    "context",
+    "evidence",
+    "observation_id",
+    "observation_type",
+    "sample",
+    "taxon"
+   ],
+   "required": [
+    "components",
+    "sample"
+   ]
+  },
+  "/oneOf/1": {
+   "properties": [
+    "assay",
+    "blend",
+    "comparator",
+    "context",
+    "dispenser",
+    "dose",
+    "effect",
+    "evidence",
+    "observation_id",
+    "observation_type",
+    "response",
+    "significance",
+    "taxon",
+    "trap"
+   ],
+   "required": [
+    "assay",
+    "blend",
+    "effect"
+   ]
+  },
+  "/oneOf/1/allOf/0/else": {
+   "required": [
+    "comparator"
+   ]
+  },
+  "/oneOf/1/allOf/0/if": {
+   "properties": [
+    "effect"
+   ],
+   "required": [
+    "effect"
+   ]
+  },
+  "/oneOf/1/allOf/0/then/not": {
+   "required": [
+    "comparator"
+   ]
+  },
+  "/oneOf/1/properties/assay": {
+   "enum": [
+    "\"field_trapping\"",
+    "\"other\"",
+    "\"wind_tunnel\""
+   ]
+  },
+  "/oneOf/1/properties/comparator": {
+   "properties": [
+    "blend",
+    "description",
+    "dispenser",
+    "trap"
+   ],
+   "required": [
+    "description"
+   ]
+  },
+  "/oneOf/1/properties/effect": {
+   "enum": [
+    "\"caught_without_control\"",
+    "\"decreased\"",
+    "\"increased\"",
+    "\"no_effect\""
+   ]
+  },
+  "/oneOf/1/properties/evidence": {
+   "required": [
+    "experiment_id"
+   ]
+  },
+  "/oneOf/1/properties/response": {
+   "properties": [
+    "comparator_value",
+    "measure",
+    "qualifier",
+    "treatment_value",
+    "unit"
+   ],
+   "required": [
+    "measure",
+    "unit"
+   ]
+  },
+  "/oneOf/1/properties/response/properties/measure": {
+   "enum": [
+    "\"close_range_approach\"",
+    "\"landing\"",
+    "\"other\"",
+    "\"trap_catch\""
+   ]
+  },
+  "/oneOf/1/properties/response/properties/qualifier": {
+   "enum": [
+    "\"approximate\"",
+    "\"as_reported\"",
+    "\"less_than\"",
+    "\"more_than\""
+   ]
+  },
+  "/oneOf/1/properties/response/properties/unit": {
+   "enum": [
+    "\"count\"",
+    "\"fold_change_vs_comparator\"",
+    "\"mean_catch_per_trap\"",
+    "\"mean_catch_per_trap_per_week\"",
+    "\"percent_of_males\"",
+    "\"total_catch\""
+   ]
+  },
+  "/oneOf/1/properties/significance": {
+   "enum": [
+    "\"not_reported\"",
+    "\"not_significant\"",
+    "\"not_tested\"",
+    "\"significant\""
+   ]
+  },
+  "/oneOf/2": {
+   "properties": [
+    "context",
+    "evidence",
+    "observation_id",
+    "observation_type",
+    "responses",
+    "taxon"
+   ],
+   "required": [
+    "responses"
+   ]
+  },
+  "/oneOf/2/properties/responses/items": {
+   "properties": [
+    "compound",
+    "method",
+    "notes",
+    "preparation",
+    "response"
+   ],
+   "required": [
+    "compound",
+    "method",
+    "preparation",
+    "response"
+   ]
+  },
+  "/oneOf/2/properties/responses/items/properties/method": {
+   "enum": [
+    "\"EAG\"",
+    "\"GC-EAD\"",
+    "\"SSR\""
+   ]
+  },
+  "/oneOf/2/properties/responses/items/properties/response": {
+   "enum": [
+    "\"active\"",
+    "\"inactive\"",
+    "\"inconsistent\"",
+    "\"not_tested\""
+   ]
+  },
+  "/properties/evidence": {
+   "properties": [
+    "author_statement",
+    "author_statement_form",
+    "experiment_id",
+    "notes",
+    "reference",
+    "source_location",
+    "taxon_name_as_reported",
+    "unresolved"
+   ],
+   "required": [
+    "reference",
+    "source_location",
+    "taxon_name_as_reported"
+   ]
+  },
+  "/properties/evidence/properties/author_statement_form": {
+   "enum": [
+    "\"curator_translation\"",
+    "\"paraphrase\"",
+    "\"source_translation\"",
+    "\"verbatim\""
+   ]
+  },
+  "/properties/observation_type": {
+   "enum": [
+    "\"behavioural_response\"",
+    "\"chemical_measurement\"",
+    "\"electrophysiology\""
+   ]
+  }
+ },
+ "reference.schema.json": {
+  "/": {
+   "properties": [
+    "citation",
+    "doi",
+    "notes",
+    "pmid",
+    "read",
+    "reference_id"
+   ],
+   "required": [
+    "citation",
+    "read",
+    "reference_id"
+   ]
+  },
+  "/properties/read": {
+   "enum": [
+    "\"abstract\"",
+    "\"full_text\""
+   ]
+  }
+ },
+ "search.schema.json": {
+  "/": {
+   "properties": [
+    "date",
+    "found",
+    "found_doi",
+    "layer",
+    "limits",
+    "notes",
+    "outcome",
+    "read",
+    "scope",
+    "search_id",
+    "sources"
+   ],
+   "required": [
+    "date",
+    "layer",
+    "outcome",
+    "scope",
+    "search_id",
+    "sources"
+   ]
+  },
+  "/allOf/0/else": {
+   "properties": [
+    "scope"
+   ]
+  },
+  "/allOf/0/else/properties/scope": {
+   "required": [
+    "taxon"
+   ]
+  },
+  "/allOf/0/if": {
+   "properties": [
+    "outcome"
+   ],
+   "required": [
+    "outcome"
+   ]
+  },
+  "/allOf/0/then": {
+   "properties": [
+    "scope"
+   ],
+   "required": [
+    "scope"
+   ]
+  },
+  "/allOf/0/then/properties/scope": {
+   "required": [
+    "family"
+   ]
+  },
+  "/allOf/1/else/not/anyOf/0": {
+   "required": [
+    "found"
+   ]
+  },
+  "/allOf/1/else/not/anyOf/1": {
+   "required": [
+    "found_doi"
+   ]
+  },
+  "/allOf/1/else/not/anyOf/2": {
+   "required": [
+    "read"
+   ]
+  },
+  "/allOf/1/if": {
+   "properties": [
+    "outcome"
+   ],
+   "required": [
+    "outcome"
+   ]
+  },
+  "/allOf/1/then": {
+   "required": [
+    "found",
+    "read"
+   ]
+  },
+  "/properties/layer": {
+   "enum": [
+    "\"genome\"",
+    "\"pheromone\""
+   ]
+  },
+  "/properties/outcome": {
+   "enum": [
+    "\"census\"",
+    "\"found_not_curated\"",
+    "\"not_found\""
+   ]
+  },
+  "/properties/read": {
+   "enum": [
+    "\"abstract\"",
+    "\"full_text\"",
+    "\"secondary\""
+   ]
+  },
+  "/properties/scope": {
+   "properties": [
+    "family",
+    "taxon"
+   ]
+  }
+ },
+ "taxon.schema.json": {
+  "/": {
+   "properties": [
+    "accepted_name",
+    "authority",
+    "derived_from",
+    "identifiers",
+    "notes",
+    "synonyms",
+    "taxon_concept",
+    "taxon_id",
+    "taxonomy"
+   ],
+   "required": [
+    "accepted_name",
+    "identifiers",
+    "taxon_id",
+    "taxonomy"
+   ]
+  },
+  "/properties/identifiers": {
+   "properties": [
+    "gbif",
+    "inaturalist",
+    "ncbi_taxid"
+   ],
+   "required": [
+    "ncbi_taxid"
+   ]
+  },
+  "/properties/synonyms/items": {
+   "properties": [
+    "authority",
+    "name",
+    "notes",
+    "source"
+   ],
+   "required": [
+    "name"
+   ]
+  },
+  "/properties/taxonomy": {
+   "properties": [
+    "family",
+    "genus",
+    "species"
+   ],
+   "required": [
+    "family",
+    "genus",
+    "species"
+   ]
+  }
+ }
+}

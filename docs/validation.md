@@ -65,6 +65,20 @@ Two conventions the schema states but cannot check:
 | one real thing, one ID: no two compounds with the same molecular graph (maps stripped) or InChIKey; no two references with the same DOI (case-insensitive) or PMID; no two genomes of one assembly; no two taxa with one NCBI taxid or GBIF key | `IDENTITY_DUPLICATE` |
 | an observation does not contradict itself: a compound once per component list and per blend; an antennal reading once per compound, method and preparation | `OBS_DUPLICATE_ENTRY` |
 | an abundance class only on a detection | `OBS_FIELD_CONFLICT` |
+| the name a record says its source used is the taxon's accepted name or a listed synonym (with its own source) | `NAME_AS_REPORTED` |
+| an experiment ID belongs to the record's own paper: `spa.exp.<reference slug>.<experiment>` | `EXP_ID` |
+
+Every observation carries `taxon_name_as_reported`. So far one source
+differs from the accepted name: Kovalev et al. 1988, *Aegeria apiformis*,
+now a synonym of `spa.tax.sesia_apiformis` from GBIF. Every behavioural
+record carries `experiment_id`. Records sharing one names a trial whose
+traps or controls they share, for example:
+- Naka 2013 tests II and III;
+- the *S. tipuliformis* and *S. scoliaeformis* catches in Mozūraitis 2006's
+  Table I;
+- Priesner 1986's four species.
+
+A record that pools trials lists them all.
 
 Quantities (dose, amount, detection limit) are known or absent: a quantity has
 a number and one of `picogram`, `nanogram`, `microgram`, `milligram`, `gram`
@@ -106,10 +120,22 @@ CoA, NAC or other new head group:
 - **Enforce tetrahedral stereochemistry where a head group has stereocentres**
   (CoA). Today only chain E/Z is checked.
 
-**Deferred, additive before a public release:**
-- `experiment_id`, linking records from one trial;
-- `taxon_name_as_reported` on observations, so a record keeps the name the
-  source used when the accepted combination changes.
+## The v0.1 record shape is frozen (2026-10-23)
+
+From here, schema changes are **additive only**: new optional fields and new
+enumeration values. `schemas/frozen-v0.1.json` records, at every path of every
+schema, the required fields, the enumeration values and the property names.
+`scripts/schema_shape.py` (run by the tests) refuses:
+- a removed path or property;
+- a removed enumeration value;
+- any change to a required list, since a new required field breaks existing
+  records.
+
+A breaking change is still possible, but never quietly. It takes a new frozen
+file, a `SCHEMA_VERSION` bump in `scripts/build_release.py`, a CHANGELOG entry
+and a migration of every record, all in one commit. The v0.2 reaction layer is
+expected to be additive (new record kinds) apart from the chemistry gate
+above.
 
 ## The gate is seen to fail
 

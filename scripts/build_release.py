@@ -34,7 +34,7 @@ import atlas_validate as av  # noqa: E402
 import build_taxon_layers as btl  # noqa: E402
 
 DERIVED = ROOT / "derived"
-SCHEMA_VERSION = "0.1.0-dev"   # bump when a record shape changes; see CHANGELOG.md
+SCHEMA_VERSION = "0.1"   # the frozen record shape (schemas/frozen-v0.1.json); a breaking change bumps it
 BUNDLE_EXTRA = ["CITATION.cff", "CHANGELOG.md", "LICENSE", "LICENSE-DATA.md", "README.md", "requirements.lock.txt"]
 
 

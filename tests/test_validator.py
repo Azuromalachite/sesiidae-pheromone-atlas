@@ -213,3 +213,25 @@ def test_citation_cff_is_complete():
     for key in ("cff-version", "message", "title", "authors", "type", "license", "version"):
         assert cff.get(key), key
     assert "doi" not in cff, "no DOI until one is minted (docs/releases-and-occurrences.md)"
+
+
+# ---- the v0.1 record shape is frozen: schema changes must be additive
+
+def test_schema_shape_is_additive_over_v0_1():
+    ss = _load("schema_shape")
+    import json as _json
+    problems = ss.breaks(_json.loads(ss.FROZEN.read_text(encoding="utf-8")), ss.current())
+    assert not problems, problems
+
+
+def test_freeze_check_catches_a_breaking_change():
+    ss = _load("schema_shape")
+    import copy, json as _json
+    frozen = _json.loads(ss.FROZEN.read_text(encoding="utf-8"))
+    now = copy.deepcopy(ss.current())
+    obs = now["observation.schema.json"]
+    path = next(p for p, e in obs.items() if "unit" in p and "enum" in e)
+    obs[path]["enum"] = obs[path]["enum"][1:]               # drop one unit
+    obs["/"]["required"] = obs["/"]["required"] + ["new"]  # add a required field
+    problems = ss.breaks(frozen, now)
+    assert any("enum lost" in p for p in problems) and any("required changed" in p for p in problems), problems

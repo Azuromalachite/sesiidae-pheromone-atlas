@@ -1,0 +1,8 @@
+# every observation keeps the name its source used.
+observation_id: spa.obs.fixture_species_a.fixture_2026.ead
+observation_type: electrophysiology
+taxon: spa.tax.fixture_species_a
+context: {sex: male}
+responses:
+  - {compound: spa.cmpd.z3_z13_18_oac, method: GC-EAD, preparation: male antenna, response: active}
+evidence: {reference: spa.ref.fixture_2026, source_location: fixture}
