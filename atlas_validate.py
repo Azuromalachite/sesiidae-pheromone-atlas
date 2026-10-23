@@ -63,13 +63,51 @@ class Finding:
 
 # ---------------------------------------------------------------- loading
 
+class DuplicateKey(yaml.YAMLError):
+    pass
+
+
+class StrictLoader(yaml.SafeLoader):
+    """SafeLoader that refuses a repeated mapping key. PyYAML's default keeps
+    the last value silently, so `taxon:` typed twice would reach the schema as
+    one valid taxon and the first entry would vanish before any check ran."""
+
+    def construct_mapping(self, node, deep=False):
+        seen = set()
+        for key_node, _ in node.value:
+            key = self.construct_object(key_node, deep=deep)
+            if key in seen:
+                raise DuplicateKey(f"duplicate key {key!r} at line {key_node.start_mark.line + 1}")
+            seen.add(key)
+        return super().construct_mapping(node, deep=deep)
+
+
+def strict_load(text):
+    return yaml.load(text, Loader=StrictLoader)
+
+
+def uncovered_files(root):
+    """YAML under root that no record kind reads: a record nobody validates
+    must not look like source data. Subdirectories of a kind are read."""
+    root = Path(root)
+    covered = {root / "headgroups.yaml"}
+    for kind in KINDS:
+        covered |= set((root / kind).rglob("*.yaml"))
+    return sorted(p for p in root.rglob("*") if p.suffix in (".yaml", ".yml") and p not in covered)
+
+
 def load_root(root):
     """{kind: {id: (path, record)}} plus findings for unreadable files."""
     records, findings = {k: {} for k in KINDS}, []
+    for path in uncovered_files(root):
+        findings.append(Finding("DATA_OUTSIDE_GATE", str(path), "YAML outside every record directory (or .yml): it would never be validated"))
     for kind, (_, id_field) in KINDS.items():
-        for path in sorted((Path(root) / kind).glob("*.yaml")):
+        for path in sorted((Path(root) / kind).rglob("*.yaml")):
             try:
-                rec = yaml.safe_load(path.read_text(encoding="utf-8"))
+                rec = strict_load(path.read_text(encoding="utf-8"))
+            except DuplicateKey as e:
+                findings.append(Finding("YAML_DUPLICATE_KEY", str(path), str(e)))
+                continue
             except yaml.YAMLError as e:
                 findings.append(Finding("YAML", str(path), str(e).splitlines()[0]))
                 continue
@@ -82,7 +120,7 @@ def load_root(root):
 
 
 def load_headgroups(path=HEADGROUPS):
-    raw = yaml.safe_load(Path(path).read_text(encoding="utf-8"))
+    raw = strict_load(Path(path).read_text(encoding="utf-8"))
     out = {}
     for token, g in raw.items():
         atoms = {int(m): el for m, el in g["atoms"].items()}
@@ -408,6 +446,69 @@ def compound_findings(records, headgroups):
     return out
 
 
+# ---------------------------------------------------------------- identity
+
+def canonical_structure(mapped_smiles):
+    """Canonical isomeric SMILES with maps stripped: the molecular graph, not its numbering."""
+    from rdkit import Chem
+    mol = Chem.MolFromSmiles(mapped_smiles)
+    if mol is None:
+        return None
+    for a in mol.GetAtoms():
+        a.SetAtomMapNum(0)
+    return Chem.MolToSmiles(mol)
+
+
+def identity_findings(records):
+    """IDs are unique by construction; real things must be too. Two Atlas IDs
+    for one molecule, paper, assembly or taxon split the graph silently."""
+    out = []
+
+    def unique(kind, label, key_of):
+        seen = {}
+        for path, rec in records[kind].values():
+            key = key_of(rec)
+            if key in (None, ""):
+                continue
+            if key in seen:
+                out.append(Finding("IDENTITY_DUPLICATE", path, f"same {label} {key!r} as {seen[key]}"))
+            else:
+                seen[key] = path
+
+    unique("compounds", "structure", lambda c: canonical_structure(c["mapped_smiles"]) if isinstance(c.get("mapped_smiles"), str) else None)
+    unique("compounds", "InChIKey", lambda c: (c.get("generated") or {}).get("inchikey"))
+    unique("references", "DOI", lambda r: str(r["doi"]).strip().lower() if r.get("doi") else None)
+    unique("references", "PMID", lambda r: r.get("pmid"))
+    unique("genomes", "assembly", lambda g: f"{(g.get('assembly') or {}).get('accession')}.{(g.get('assembly') or {}).get('version')}")
+    unique("taxa", "NCBI taxid", lambda t: (t.get("identifiers") or {}).get("ncbi_taxid"))
+    unique("taxa", "GBIF key", lambda t: (t.get("identifiers") or {}).get("gbif"))
+    return out
+
+
+def entry_findings(records):
+    """One observation may not contradict itself: a compound appears once per
+    component list and once per blend, an antennal reading once per compound,
+    method and preparation, and an abundance class only on a detection."""
+    out = []
+    for path, o in records["observations"].values():
+        def dup(items, key, where):
+            seen = set()
+            for it in items or []:
+                k = key(it)
+                if k in seen:
+                    out.append(Finding("OBS_DUPLICATE_ENTRY", path, f"{where}: {k} appears twice"))
+                seen.add(k)
+        dup(o.get("components"), lambda c: c.get("compound"), "components")
+        dup(o.get("blend"), lambda b: b.get("compound"), "blend")
+        dup((o.get("comparator") or {}).get("blend"), lambda b: b.get("compound"), "comparator blend")
+        dup(o.get("responses"), lambda r: (r.get("compound"), r.get("method"), r.get("preparation")), "responses")
+        for c in o.get("components") or []:
+            if "abundance_class" in c and c.get("detected") is not True:
+                out.append(Finding("OBS_FIELD_CONFLICT", path,
+                                   f"{c.get('compound')}: abundance_class belongs to detected: true"))
+    return out
+
+
 # ---------------------------------------------------------------- driver
 
 def validate(root):
@@ -419,6 +520,8 @@ def validate(root):
     findings += reference_findings(records)
     findings += observation_findings(records)
     findings += compound_findings(records, load_headgroups())
+    findings += identity_findings(records)
+    findings += entry_findings(records)
     return findings
 
 

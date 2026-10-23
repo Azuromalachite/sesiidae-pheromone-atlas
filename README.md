@@ -38,7 +38,7 @@ generated machine-readable releases.
 
 | file | what it is |
 |---|---|
-| [`docs/concept.md`](docs/concept.md) | the technical concept: data model, curation rules, invariants, roadmap. Revision 3; earlier revisions are in this file's git history |
+| [`docs/concept.md`](docs/concept.md) | design history and direction (revision 3), **non-normative**: the schemas, `docs/validation.md` and `docs/identifiers.md` are the specification |
 | [`docs/context.md`](docs/context.md) | the natural-history and scientific motivation, from *Amegilla* to Sesiidae to lipid-derived signalling |
 | [`docs/literature-narrative.md`](docs/literature-narrative.md) | the literature as a story, from synthetic lures to blend, context and evidence layers, each claim tied to its record |
 | [`docs/identifiers.md`](docs/identifiers.md) | the permanent `spa.` ID scheme and its rules |

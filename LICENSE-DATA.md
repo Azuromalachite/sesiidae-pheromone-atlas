@@ -11,6 +11,12 @@ documentation under `docs/` — is licensed under the
 Source code (Python and workflow scripts) is licensed under the MIT licence;
 see `LICENSE`.
 
+**Quotations are not relicensed.** An observation's `author_statement` is a
+short quotation from the cited paper (or, where `author_statement_form` says
+so, a translation or paraphrase of it), included for scholarly reference.
+The CC BY 4.0 licence covers the Atlas's own records around it, not the
+quoted words, which remain under their source's terms.
+
 ## How to attribute
 
 Cite the Sesiidae Pheromone Atlas with the version or release you used and a

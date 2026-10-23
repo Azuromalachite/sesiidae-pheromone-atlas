@@ -28,7 +28,7 @@ def codes(root):
 def overlay(tmp_path, case):
     root = tmp_path / "root"
     shutil.copytree(GOOD, root)
-    for src in (FIX / "bad" / case).rglob("*.yaml"):
+    for src in (p for p in (FIX / "bad" / case).rglob("*") if p.is_file() and p.name != "EXPECT"):
         dst = root / src.relative_to(FIX / "bad" / case)
         dst.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy(src, dst)
@@ -47,9 +47,12 @@ def test_every_bad_case_names_its_expected_code():
 
 @pytest.mark.parametrize("case", BAD_CASES)
 def test_bad_fixture_fails_for_the_stated_reason(tmp_path, case):
-    expected = (FIX / "bad" / case / "EXPECT").read_text().strip()
+    """EXPECT lists every code the fixture must produce, one per line, and
+    nothing else may appear: a one-mutation fixture that starts failing for a
+    second reason no longer proves the first."""
+    expected = {line.strip() for line in (FIX / "bad" / case / "EXPECT").read_text().splitlines() if line.strip()}
     got = codes(overlay(tmp_path, case))
-    assert expected in got, f"{case}: expected {expected}, got {sorted(got) or 'no error'}"
+    assert got == expected, f"{case}: expected exactly {sorted(expected)}, got {sorted(got) or 'no error'}"
 
 
 # ---- the mutation test from concept §12: flip every E/Z, in the name and in the structure

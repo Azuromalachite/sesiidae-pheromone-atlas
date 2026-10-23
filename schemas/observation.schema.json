@@ -17,7 +17,8 @@
       "properties": {
         "reference": {"type": "string"},
         "source_location": {"type": "string", "description": "where in the source this was read, e.g. 'abstract', 'Table 2'"},
-        "author_statement": {"type": "string", "maxLength": 200, "description": "the authors' own short wording of the result, kept apart from the Atlas's reading"},
+        "author_statement": {"type": "string", "maxLength": 200, "description": "the authors' own short wording of the result, kept apart from the Atlas's reading. A short quotation from the source, under the source's own terms, not relicensed by the Atlas (LICENSE-DATA.md)"},
+        "author_statement_form": {"enum": ["verbatim", "source_translation", "curator_translation", "paraphrase"], "description": "absent means verbatim. source_translation: the source's own translation (e.g. an English summary); curator_translation: the Atlas curator's; paraphrase: not the authors' words at all"},
         "unresolved": {"type": "array", "items": {"type": "string"}, "description": "what this record needs and the source as read does not give: missing evidence, stated explicitly"},
         "notes": {"type": "string", "description": "the Atlas's notes and inferences, never the authors'"}
       }
@@ -146,9 +147,11 @@
       "type": "object",
       "additionalProperties": false,
       "required": ["value", "unit"],
+      "description": "a known amount. An unknown amount is no quantity at all: omit the object rather than fill it with nulls",
       "properties": {
-        "value": {"type": ["number", "null"]},
-        "unit": {"type": ["string", "null"]}
+        "value": {"type": "number", "minimum": 0},
+        "unit": {"enum": ["picogram", "nanogram", "microgram", "milligram", "gram", "ratio_part"],
+                 "description": "one spelling per unit, so doses and detection limits compare without parsing"}
       }
     },
     "component": {

@@ -6,7 +6,7 @@ sample: {materials: [effluvium], material_as_reported: effluvium of the protrude
 components:
   - {compound: spa.cmpd.z3_z13_18_oh, detected: true, method: spme_of_calling_female_gc_ms, abundance_class: major, measurements: [{value: 13, unit: percent, qualifier: mean, spread: {value: 3, kind: sd}}]}
   - {compound: spa.cmpd.e2_z13_18_al, detected: true, method: spme_of_calling_female_gc_ms, abundance_class: major, measurements: [{value: 87, unit: percent, qualifier: mean, spread: {value: 3, kind: sd}}]}
-  - {compound: spa.cmpd.e2_z13_18_oh, detected: false, method: spme_of_calling_female_gc_ms, detection_limit: {value: null, unit: null}}
+  - {compound: spa.cmpd.e2_z13_18_oh, detected: false, method: spme_of_calling_female_gc_ms}
 evidence:
   reference: spa.ref.francke_2004
   source_location: "Results and Discussion, Analyses"

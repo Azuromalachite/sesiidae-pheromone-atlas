@@ -1,5 +1,35 @@
 # Curation log
 
+## 2026-10-23 (10) — the database gate catches up with the structure gate
+
+An outside adversarial review (against `origin/main`, then checked against
+the local state) found the structure checks far stronger than the database
+checks. Fixed now:
+
+| finding | fix |
+|---|---|
+| R1 a repeated YAML key kept its last value silently, before any check ran | strict loader, `YAML_DUPLICATE_KEY`; fixtures at the root and inside an inline mapping |
+| R2 one real thing could hold two IDs | `IDENTITY_DUPLICATE` on molecular graph and InChIKey, DOI (case-folded) and PMID, assembly, NCBI taxid and GBIF key; three fixtures |
+| R3 an observation could contradict itself | `OBS_DUPLICATE_ENTRY` for components, each blend, and antennal readings by compound × method × preparation; `abundance_class` only on a detection |
+| R4 a record in a subdirectory was never read | records are read recursively; any other YAML or `.yml` under `data/` is `DATA_OUTSIDE_GATE` |
+| R7 a summary label could hide which evidence exists | the matrix's `chemical_materials` separates gland content from emission; the label is documented as a summary |
+| R8 `concept.md` read as a second specification and promised an `espmap --check` CI job that does not exist | it is marked non-normative, the missing job and the failed Tasmanian strain are stated, and the README index says so |
+| R9 `author_statement` mixed quotation and translation | `author_statement_form` (verbatim when absent); Tamaki's two are `curator_translation`; `LICENSE-DATA.md` carves quotations out of CC BY |
+| R10 quantities allowed nulls and free unit strings | value required and non-negative; unit from `picogram` … `gram`, `ratio_part`; the one null detection limit (Francke 2004 SPME) removed |
+| R12 a fixture only had to contain its code | `EXPECT` is the exact set. It exposed `missing_reference` also failing `OBS_ID`, now fixed |
+
+The narrative's "attracts one species and repels another" (Mozūraitis 2006)
+is corrected: E3 enhances attraction to a blend for one species and
+suppresses it for another, and was not tested alone.
+
+**Not done yet:**
+- R5 (`experiment_id`) and R6 (`taxon_name_as_reported`) are deferred: they
+  are additive and due before a public release.
+- R11 (head-group table validation, charge convention, CoA stereochemistry)
+  is written into `docs/validation.md` as the v0.2 chemistry gate.
+
+None of the 252 observations broke the new rules.
+
 ## 2026-10-23 (9) — stage C: release machinery, no release
 
 - **`scripts/build_release.py` writes `derived/`:**

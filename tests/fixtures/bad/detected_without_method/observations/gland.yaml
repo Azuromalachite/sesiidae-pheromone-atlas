@@ -20,7 +20,7 @@ components:
       - {value: 7, unit: ratio_part, method: spme_single_female_gc_ms, qualifier: approximate}
   - compound: spa.cmpd.z3_z13_18_oac
     detected: false
-    detection_limit: {value: null, unit: null}
+    detection_limit: {value: 100, unit: picogram}
   - compound: spa.cmpd.e3_z13_18_oac
     detected: not_tested
 evidence: {reference: spa.ref.fixture_2026, source_location: fixture}

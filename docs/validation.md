@@ -60,6 +60,15 @@ Two conventions the schema states but cannot check:
 | a search ID is built from its scope, layer and date; a searched taxon exists | `SEARCH_ID`, `REF_MISSING` |
 | ids unique | `DUPLICATE_ID` |
 | no two taxa share an accepted name; a synonym spelling another accepted name carries both authorities | `TAXON_NAME_DUPLICATE`, `NAME_AMBIGUOUS` |
+| no mapping key is repeated, at record root or inside an inline mapping; PyYAML would otherwise keep the last value silently, before any other check ran | `YAML_DUPLICATE_KEY` |
+| no YAML file sits outside a record directory, and no `.yml`; records in subdirectories are read | `DATA_OUTSIDE_GATE` |
+| one real thing, one ID: no two compounds with the same molecular graph (maps stripped) or InChIKey; no two references with the same DOI (case-insensitive) or PMID; no two genomes of one assembly; no two taxa with one NCBI taxid or GBIF key | `IDENTITY_DUPLICATE` |
+| an observation does not contradict itself: a compound once per component list and per blend; an antennal reading once per compound, method and preparation | `OBS_DUPLICATE_ENTRY` |
+| an abundance class only on a detection | `OBS_FIELD_CONFLICT` |
+
+Quantities (dose, amount, detection limit) are known or absent: a quantity has
+a number and one of `picogram`, `nanogram`, `microgram`, `milligram`, `gram`
+or `ratio_part`, and an unknown one is omitted rather than filled with nulls.
 
 ## Structural rules, not just checks
 
@@ -83,10 +92,31 @@ its acetate in one gland is not evidence that one is made from the other.
 Reaction evidence will be limited to types that test a conversion
 (isotope labelling, enzyme assay, heterologous expression).
 
+**The v0.2 chemistry gate, written down now so the first acyl-CoA does not
+discover it.** `data/headgroups.yaml` is the authoritative head-group grammar
+but has no schema of its own; only map 101 on C1 is tested. Before any
+CoA, NAC or other new head group:
+- **Validate the table itself.** Tokens and maps must be unique, maps at
+  least 101, elements valid, bond orders valid, the graph connected, with
+  exactly the declared attachment to the chain and no conflicting bonds.
+- **Decide a charge and protonation convention.** The structure check
+  currently refuses every formally charged molecule. That is right for
+  neutral pheromones and wrong for acyl-CoA, which must not be silently
+  neutralised to pass.
+- **Enforce tetrahedral stereochemistry where a head group has stereocentres**
+  (CoA). Today only chain E/Z is checked.
+
+**Deferred, additive before a public release:**
+- `experiment_id`, linking records from one trial;
+- `taxon_name_as_reported` on observations, so a record keeps the name the
+  source used when the accepted combination changes.
+
 ## The gate is seen to fail
 
-`tests/fixtures/bad/` holds 28 cases, each a one-change edit of a good
-fixture with the error code it must produce in `EXPECT`. On top of these,
+`tests/fixtures/bad/` holds one directory per case, each a minimal edit of
+a good fixture. Its `EXPECT` lists every code the case must produce, and the
+test requires exactly that set: a fixture that starts failing for a second
+reason no longer proves the first. On top of these,
 the mutation tests flip every double bond's E/Z, once in the shorthand and
 once in the structure, for every good compound, and require
 `DOUBLE_BOND_MISMATCH` each time.

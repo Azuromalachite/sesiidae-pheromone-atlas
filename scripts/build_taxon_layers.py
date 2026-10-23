@@ -22,7 +22,7 @@ import atlas_validate as av  # noqa: E402
 OUT = ROOT / "derived" / "taxon_layers.tsv"
 COLUMNS = [
     "taxon_id", "species", "genome_status", "assembly_accession", "assembly_name", "assembly_level",
-    "annotation_id", "pep_fasta_md5", "pheromone_status", "compounds_detected_in_females",
+    "annotation_id", "pep_fasta_md5", "pheromone_status", "chemical_materials", "compounds_detected_in_females",
     "compounds_tested_negative", "n_chemical_measurement", "n_behavioural_response", "n_electrophysiology",
     "references", "search_basis",
 ]
@@ -84,6 +84,7 @@ def build(data):
         else:
             status = "not_searched"
         row["pheromone_status"] = status
+        row["chemical_materials"] = "; ".join(sorted({m for o in chem for m in o["sample"]["materials"]}))
         row["compounds_detected_in_females"] = "; ".join(sorted(shorthand[c] for c in found))
         row["compounds_tested_negative"] = "; ".join(sorted(shorthand[c] for c in negative))
         row["n_chemical_measurement"] = str(n["chemical_measurement"])

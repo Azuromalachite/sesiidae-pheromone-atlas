@@ -28,7 +28,8 @@ One row per Atlas taxon, sorted by name.
 | `genome_status` | see the vocabulary below |
 | `assembly_accession`, `assembly_name`, `assembly_level` | the taxon's genome record (`data/genomes/`) |
 | `annotation_id`, `pep_fasta_md5` | its first gene set: the archived Ensembl Rapid Release set and the MD5 of its `-pep.fa.gz` from `md5sum.txt`, so a download can be checked |
-| `pheromone_status` | see the vocabulary below |
+| `pheromone_status` | see the vocabulary below. A summary label only: the columns after it keep female chemistry, emission, behaviour and antennal evidence apart |
+| `chemical_materials` | the sample materials of the taxon's `chemical_measurement` records (`gland_extract`, `effluvium`, `ovipositor_extract`): gland content and emission are different evidence |
 | `compounds_detected_in_females` | every compound with `detected: true` in the taxon's `chemical_measurement` records |
 | `compounds_tested_negative` | every compound with `detected: false` in those records. A compound in both columns was found in one study or population and not in another; the records say which |
 | `n_chemical_measurement`, `n_behavioural_response`, `n_electrophysiology` | record counts |

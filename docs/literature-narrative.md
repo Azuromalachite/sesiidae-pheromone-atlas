@@ -58,10 +58,13 @@ not always agree.
   arriving males to within 2 cm of the bait, and with E3 65.6 %
   (`spa.obs.synanthedon_tipuliformis.szocs_1990.approach.hungary`). The minor component
   works at close range, not only on trap catch.
-- Mozūraitis et al. 2006: E3,Z13-18:OAc, which synergises for *S.
-  tipuliformis*, suppressed *S. scoliaeformis* males entirely at their own
-  site (`spa.obs.synanthedon_scoliaeformis.mozuraitis_2006.trap_e3.forest_edge`). One minor
-  compound attracts one species and repels another.
+- Mozūraitis et al. 2006: E3,Z13-18:OAc raises *S. tipuliformis* catches
+  when added to E2,Z13-18:OAc. Added to the same E2,Z13-18:OAc lure at the
+  *S. scoliaeformis* site, it cut that species' catch from 3.4 per trap to
+  none (`spa.obs.synanthedon_scoliaeformis.mozuraitis_2006.trap_e3.forest_edge`).
+  One minor compound enhances attraction to a blend for one species and
+  suppresses it for another. That is not "attracts and repels": neither
+  effect was tested on the compound alone.
 - *S. bicingulata*: the female gland holds E3:Z3,Z13-18:OAc at 58:100, about
   4:6 (`spa.obs.synanthedon_bicingulata.yang_2011.gland`). Males came most to a 4:6
   lure, but 3:7 and 2:8 were not significantly worse

@@ -1,0 +1,30 @@
+# an abundance class belongs to a detection.
+# Test fixture: shapes of the three awkward cases, with made-up numbers.
+observation_id: spa.obs.fixture_species_a.fixture_2026.gland.pooled
+observation_type: chemical_measurement
+taxon: spa.tax.fixture_species_a
+context: {sex: female, life_stage: adult, population: null, locality: null, rearing: wild, mating_status: virgin, sampling_unit: pooled, n_individuals: null}
+sample: {materials: [gland_extract], material_as_reported: pheromone_gland, result_scope: single_material}
+components:
+  - compound: spa.cmpd.z3_z13_18_oh
+    detected: true
+    method: pooled_gland_extract_gc_ms
+    abundance_class: major
+    measurements:
+      - {value: 2, unit: ratio_part, qualifier: approximate}
+  - compound: spa.cmpd.e2_z13_18_al
+    identification: tentative
+    detected: true
+    method: pooled_gland_extract_gc_ms
+    abundance_class: major
+    measurements:
+      - {value: 3, unit: ratio_part, qualifier: approximate}
+      - {value: 7, unit: ratio_part, method: spme_single_female_gc_ms, qualifier: approximate}
+  - compound: spa.cmpd.z3_z13_18_oac
+    detected: false
+    method: pooled_gland_extract_gc_ms
+    detection_limit: {value: 100, unit: picogram}
+  - compound: spa.cmpd.e3_z13_18_oac
+    detected: not_tested
+    abundance_class: minor
+evidence: {reference: spa.ref.fixture_2026, source_location: fixture}

@@ -1,0 +1,18 @@
+# a repeated key inside an inline mapping is refused too.
+observation_id: spa.obs.fixture_species_a.fixture_2026.trap.population_b
+observation_type: behavioural_response
+taxon: spa.tax.fixture_species_a
+context: {sex: male, sex: female, population: population_b, locality: null}
+assay: field_trapping
+trap: {design: bucket, colour: yellow, colour_lab: {L: 59, a: 7, b: 46}}
+blend:
+  - {compound: spa.cmpd.e2_z13_18_oac, amount: {value: 100, unit: ratio_part}, purity: {value: 94, kind: chemical, basis: measured}}
+  - {compound: spa.cmpd.e3_z13_18_oac, amount: {value: 3, unit: ratio_part}}
+comparator:
+  description: major component alone
+  blend:
+    - {compound: spa.cmpd.e2_z13_18_oac, amount: {value: 100, unit: ratio_part}, purity: {value: 94, kind: chemical, basis: measured}}
+effect: decreased
+significance: not_reported
+response: {measure: trap_catch, unit: fold_change_vs_comparator, treatment_value: 0.5, comparator_value: 1, qualifier: approximate}
+evidence: {reference: spa.ref.fixture_2026, source_location: fixture}

@@ -4,10 +4,12 @@
 **Working subtitle:** *A curated, machine-readable resource linking Sesiidae pheromone chemistry, genomes, biosynthetic hypotheses, and candidate enzyme families.*  
 **Revision 3, 2026-10-23.** Addresses adversarial review 2 (`atlas-concept-review-2.md`: retractions R1–R3, findings N1–N8) on top of revision 2's response to review 1 (F1–F9). No external review has been run; the same model wrote the reviews and the revisions. F10 and F11 are still open; see §0.
 
-> **Where the implementation has moved on (2026-10-23).** The schemas, `docs/identifiers.md` and `docs/validation.md` are authoritative where they differ from this document.
+> **This document is design history and direction, not the specification.** It is non-normative wherever it disagrees with the implementation. The normative layer is `schemas/`, `atlas_validate.py`, `docs/validation.md` and `docs/identifiers.md`; the scientific synthesis is `docs/literature-narrative.md`. Where the implementation has moved on (2026-10-23):
 > - IDs are `spa.`-rooted, and observation IDs carry the full taxon slug and the reference slug (`spa.obs.synanthedon_tipuliformis.mozuraitis_2006.gland`).
 > - `compound_class` (§10, §10a) is replaced by `entity_type: chemical | computational_model`. `precursor` and `pheromone_component` are not properties of a molecule; they come from reaction and behavioural records.
 > - `gland_composition` (§13) is `chemical_measurement`, with a `sample` of fixed materials (gland extract, ovipositor extract, effluvium) in place of `context.tissue`.
+> - **The `espmap --check` CI job of §12, §36 and invariant 20 does not exist.** CI runs the tests, the validator and `build_release.py --check`; the Atlas applies the atom-map rule itself. The espmap job waits for espmap's per-site fixtures (P3).
+> - Population framing: the Tasmanian "pheromone strain" (§ examples) did not reproduce (Suckling et al. 2005); `docs/literature-narrative.md` §4 holds the current reading.
 >
 > The examples below keep their revision-3 form.
 

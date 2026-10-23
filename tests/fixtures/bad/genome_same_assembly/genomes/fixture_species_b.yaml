@@ -1,0 +1,14 @@
+# one assembly recorded twice, under two taxa.
+genome_id: spa.genome.fixture_species_b.GCA_000000001.1
+taxon: spa.tax.fixture_species_b
+assembly: {accession: GCA_000000001, version: 1, name: fixFixt1.1, level: chromosome, source: NCBI}
+specimen: {sex: male, locality: null}
+annotations:
+  - annotation_id: spa.annot.fixture_species_b.fixture.braker.2026_01
+    provider: fixture
+    method: braker
+    geneset: "2026_01"
+    protein_coding_genes: null
+    files:
+      protein_fasta: {url: "https://example.org/fixture-pep.fa.gz", md5: 0123456789abcdef0123456789abcdef}
+    current_platform_id: null

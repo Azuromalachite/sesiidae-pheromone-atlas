@@ -23,7 +23,7 @@ components:
   - compound: spa.cmpd.z3_z13_18_oac
     detected: false
     method: pooled_gland_extract_gc_ms
-    detection_limit: {value: null, unit: null}
+    detection_limit: {value: 100, unit: picogram}
   - compound: spa.cmpd.e3_z13_18_oac
     detected: not_tested
 evidence: {reference: spa.ref.fixture_2026, source_location: fixture}
