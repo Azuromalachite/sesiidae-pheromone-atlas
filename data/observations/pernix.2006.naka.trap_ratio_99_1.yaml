@@ -1,0 +1,18 @@
+observation_id: spa.obs.pernix.2006.naka.trap_ratio_99_1
+observation_type: behavioural_response
+taxon: spa.tax.nokona_pernix
+context: {sex: male, habitat: university experimental farm, population: "Aichi population", locality: "Kasugai City, Aichi Prefecture, Japan"}
+assay: field_trapping
+blend: [{compound: spa.cmpd.e3_z13_18_oh, amount: {value: 0.99, unit: milligram}}, {compound: spa.cmpd.z3_z13_18_oh, amount: {value: 0.01, unit: milligram}}]
+comparator:
+  description: E3:Z3,Z13-18:OH 9:1, 1 mg
+  blend: [{compound: spa.cmpd.e3_z13_18_oh, amount: {value: 0.9, unit: milligram}}, {compound: spa.cmpd.z3_z13_18_oh, amount: {value: 0.1, unit: milligram}}]
+effect: decreased
+significance: significant
+dose: {value: 1.0, unit: milligram}
+response: {measure: trap_catch, unit: mean_catch_per_trap, treatment_value: 0.0, comparator_value: 20.7, qualifier: as_reported}
+evidence:
+  reference: spa.ref.naka_2006
+  source_location: "Table 4, Test II"
+  author_statement: "In both tests, 9:1 was the optimum ratio among the examined combinations"
+  notes: "Test II, same farm, 15 June - 12 July 2004, 3 traps per treatment, same design. Letters b vs a. One percent Z3,Z13-18:OH caught nothing, like E3,Z13-18:OH alone. Mean +- SD per trap: treatment 0.0, comparator 13.4."

@@ -52,12 +52,28 @@ not always agree.
   tipuliformis*, suppressed *S. scoliaeformis* males entirely at their own
   site (`spa.obs.scoliaeformis.2006.mozuraitis.trap_e3.forest_edge`). One minor
   compound attracts one species and repels another.
-- *S. bicingulata*: Kwon et al. 2021 **(not yet curated)** put the optimum at
-  E3:Z3,Z13-18:OAc of about 4.3:5.7 once lure purity is accounted for. That
-  is close to the female's gland ratio of about 4:6 (Yang et al. 2011, not
-  yet read in full). They suggest the flatter ratio response found earlier
-  came from isomerically impure synthetics. **Lure purity is a hidden
-  variable in any attraction record.**
+- *S. bicingulata*: the female gland holds E3:Z3,Z13-18:OAc at 58:100, about
+  4:6 (`spa.obs.bicingulata.2011.yang.gland`). Males came most to a 4:6
+  lure, but 3:7 and 2:8 were not significantly worse
+  (`…yang.trap_ratio_3_7`), while 7:3 and 1:9 were (`…trap_ratio_7_3`,
+  `…trap_ratio_1_9`). Kwon et al. 2021 **(not yet curated)** also found a 4:6
+  optimum, then corrected it to about 4.3:5.7 for the purity of their own
+  synthetics, which they measured at 94 % (E3) and 83 % (Z3). They suggest
+  Yang's flatter response came from impure lures and say Yang gave no purity.
+  Yang et al. 2011 state the opposite in their Methods: isomeric purity above
+  99 %. On the papers as written, the less pure lures are Kwon's. **Lure
+  purity is a hidden variable in any attraction record, and a claim about
+  another paper's lures has to be checked against that paper.**
+- *Nokona pernix*: Naka et al. 2006 found two EAG-active alcohols, E3- and
+  Z3,Z13-18:OH, at about 9:1 (12.3 and 1.4 ng per female), and no acetate
+  (`spa.obs.pernix.2006.naka.gland`, `…gcead`). The 9:1 lure caught 49.7 males
+  per trap against 0.5 for E3 alone; 5:5 and 99:1 caught almost nothing
+  (`…trap_z3_added`, `…trap_ratio_5_5`, `…trap_ratio_99_1`). Swapping a
+  natural isomer for an unnatural 13E isomer showed that the major
+  component's geometry matters more than the minor's. As the minor component,
+  a 13E isomer still caught some males (not significantly fewer). As the major
+  component, it caught none
+  (`…trap_e3e13_for_e3`, `…trap_z3e13_for_e3`).
 
 Specificity is not one species, one molecule. It is encoded in which isomer,
 how much of it, and what else is present.
@@ -104,9 +120,12 @@ The Atlas keeps all of these and decides none of them.
   behaviourally: lures from 30:300 to 300:300 µg all worked.
 - Mozūraitis et al. 2006 found six compounds in *S. tipuliformis* glands, but
   the full six-component lure was no better than the E2/E3 pair. **The gland
-  holds more than the behaviourally sufficient blend.** Whether the extra
-  compounds are biosynthetic intermediates is the authors' hypothesis, not
-  an observation.
+  holds more than the behaviourally sufficient blend.** Yang et al. 2011 found
+  the same for *S. bicingulata*: four minor compounds, three of them
+  identified only tentatively, and none of them changed catches on the 4:6
+  pair, alone or all together (`spa.obs.bicingulata.2011.yang.trap_{z13oac,e2z13oac,e3oh,z3oh}_added`,
+  `…trap_complete`). Whether the extra compounds are biosynthetic
+  intermediates is the authors' hypothesis, not an observation.
 
 ## 6. The signal is more than chemistry
 
@@ -181,10 +200,10 @@ literature defines **what must be explained**. The next corpus has to say
 |---|---|
 | attraction ≠ production | *S. tenuis*: an attractant in Japan, absent and antagonistic in Korea |
 | one compound ≠ the pheromone | *S. apiformis*: the 1988 alcohol is inactive without the 2004 aldehyde |
-| gland content ≠ emitted blend ≠ sufficient blend | Francke 2004 extract vs SPME; Mozūraitis 2006 six vs two |
+| gland content ≠ emitted blend ≠ sufficient blend | Francke 2004 extract vs SPME; Mozūraitis 2006 and Yang 2011, six vs two |
 | a ratio belongs to its method and population | 2:3 vs 1:7; 93:7 (1985) vs 100:0.7:2.7:3.2 (2006) |
 | a finding is a record, not a consensus | the Tasmanian strain, reported in 1990 and rejected in 2005 |
-| an attraction record needs its conditions | lure purity (Kwon 2021), dose, trap type and colour |
+| an attraction record needs its conditions | lure purity (Kwon 2021 vs Yang 2011), dose, trap type and colour |
 | trap shutdown ≠ population control | Anderbrant 2025 |
 | receptor response ≠ behaviour | Cattaneo & Walker 2025 tested no behaviour |
 | co-occurrence ≠ conversion | no paper here tests a biosynthetic step |

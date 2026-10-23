@@ -8,7 +8,7 @@
   "required": ["compound_id", "compound_class", "names", "mapped_smiles", "external_ids", "generated"],
   "properties": {
     "compound_id": {"type": "string", "pattern": "^spa\\.(cmpd|model)\\.[a-z0-9_]+$", "description": "spa.model.* for computational models, spa.cmpd.* for everything else; permanent (docs/identifiers.md)"},
-    "compound_class": {"enum": ["natural_product", "precursor", "computational_model"], "description": "chemical state only. Whether a compound is a pheromone, synergist or antagonist is a conclusion from behavioural records, never a property of the compound (concept §35, 17)"},
+    "compound_class": {"enum": ["natural_product", "precursor", "synthetic_analogue", "computational_model"], "description": "chemical state only. Whether a compound is a pheromone, synergist or antagonist is a conclusion from behavioural records, never a property of the compound (concept §35, 17)"},
     "names": {
       "type": "object",
       "additionalProperties": false,

@@ -1,0 +1,28 @@
+# identification is confirmed or tentative, as the authors state it; nothing else.
+# Test fixture: shapes of the three awkward cases, with made-up numbers.
+observation_id: spa.obs.fixture.gland.pooled
+observation_type: gland_composition
+taxon: spa.tax.fixture_species_a
+context: {sex: female, tissue: pheromone_gland, life_stage: adult, population: null, locality: null, rearing: wild, mating_status: virgin, sampling_unit: pooled, n_individuals: null}
+components:
+  - compound: spa.cmpd.z3_z13_18_oh
+    identification: probable
+    detected: true
+    method: pooled_gland_extract_gc_ms
+    abundance_class: major
+    measurements:
+      - {value: 2, unit: ratio_part, qualifier: approximate}
+  - compound: spa.cmpd.e2_z13_18_al
+    detected: true
+    method: pooled_gland_extract_gc_ms
+    abundance_class: major
+    measurements:
+      - {value: 3, unit: ratio_part, qualifier: approximate}
+      - {value: 7, unit: ratio_part, method: spme_single_female_gc_ms, qualifier: approximate}
+  - compound: spa.cmpd.z3_z13_18_oac
+    detected: false
+    method: pooled_gland_extract_gc_ms
+    detection_limit: {value: null, unit: null}
+  - compound: spa.cmpd.e3_z13_18_oac
+    detected: not_tested
+evidence: {reference: spa.ref.fixture_2026, source_location: fixture}

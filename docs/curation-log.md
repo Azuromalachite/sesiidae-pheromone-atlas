@@ -1,5 +1,46 @@
 # Curation log
 
+## 2026-10-23 (3) — Yang et al. 2011 and Naka et al. 2006
+
+Two more full texts: Yang, Kim & Lee 2011 (*S. bicingulata*, Korea) and
+Naka et al. 2006 (*Nokona pernix*, Japan). New: 1 taxon (*N. pernix*,
+GBIF 1940056, no NCBI entry), 2 references, 2 compounds, 23 observations.
+The two new compounds, E3,E13- and Z3,E13-18:OH, are unnatural isomers
+that Naka tested as lure components; their InChIKeys resolve in PubChem
+to CID 5364515 and 5364516. Both PMIDs were checked against their titles.
+
+| paper | records |
+|---|---|
+| Yang 2011 | gland (six compounds, 2:58:100:6:3:4, N = 10); five ratio contrasts from Fig. 2; five minor-compound additions from Fig. 3 |
+| Naka 2006 | GC-EAD; gland (12.3 and 1.4 ng per female, n = 8, acetates not detected); six ratio contrasts from Table 4; four isomer substitutions from Table 5 |
+
+**Yang 2011 values are read from bar charts** (`qualifier: approximate`).
+Naka 2006 gives tables (`as_reported`), with mean ± SD in the notes.
+
+### What these papers corrected
+
+- **The narrative had Kwon et al. 2021's purity claim the wrong way round.**
+  Kwon says Yang 2011 gave no purity and suggests impure synthetics
+  flattened Yang's ratio response. Yang's Methods give isomeric purity
+  above 99 % (Pherobank). Kwon measured their own lures at 94 % and 83 %.
+  `docs/literature-narrative.md` §3 and the matrix row now say so.
+- **Naka's "slightly attractive" is not significant.** E3,Z13-18:OH alone
+  caught 0.5 per trap in Test I, which shares letter c with the blank, and
+  0.0 in Test II. The record is `no_effect` and quotes the authors' wording.
+- **Zero-catch treatments were left out of Yang's statistics.** Yang
+  excluded them from the ANOVA, so the binary blend against either single
+  acetate (10.3 vs 0) is `significance: not_reported`, not significant.
+
+### Schema changes forced by these papers
+
+| change | forced by |
+|---|---|
+| component `identification: confirmed / tentative`; only on a detected compound | Yang 2011 identifies three of six compounds by retention index only |
+| `compound_class: synthetic_analogue` | Naka 2006 tests E3,E13- and Z3,E13-18:OH, which are not reported from any sesiid |
+
+Two new failing fixtures, `identification_unknown` and
+`identification_on_negative`, keep the new field honest.
+
 ## 2026-10-23 (2) — full texts
 
 All records are now curated from full texts (`read: full_text`), ten papers:

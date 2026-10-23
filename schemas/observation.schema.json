@@ -135,6 +135,7 @@
         "compound": {"type": "string"},
         "detected": {"enum": [true, false, "not_tested"], "description": "not_tested is unknown; false is a negative and needs a method"},
         "method": {"type": "string", "description": "how presence or absence was established"},
+        "identification": {"enum": ["confirmed", "tentative"], "description": "as the authors state it: tentative when, for example, only retention indices matched"},
         "abundance_class": {"enum": ["major", "minor", "trace"]},
         "measurements": {
           "type": "array",
@@ -165,6 +166,10 @@
         {
           "if": {"properties": {"detected": {"enum": [true, false]}}},
           "then": {"required": ["method"]}
+        },
+        {
+          "if": {"required": ["identification"]},
+          "then": {"properties": {"detected": {"const": true}}}
         }
       ]
     },
