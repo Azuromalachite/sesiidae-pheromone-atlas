@@ -2,13 +2,14 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://github.com/Azuromalachite/sesiidae-pheromone-atlas/schemas/taxon.schema.json",
   "title": "Taxon",
-  "description": "A species. External identifiers are null until looked up; they are never guessed (concept §9).",
+  "description": "An Atlas taxon concept. The taxon_id is permanent: a name change edits accepted_name and synonyms, never the id. A split into two biological concepts mints new ids and keeps the relationship in derived_from (docs/identifiers.md). External identifiers are null until looked up; they are never guessed (concept §9).",
   "type": "object",
   "additionalProperties": false,
-  "required": ["taxon_id", "scientific_name", "taxonomy", "identifiers"],
+  "required": ["taxon_id", "accepted_name", "taxonomy", "identifiers"],
   "properties": {
-    "taxon_id": {"type": "string", "pattern": "^[a-z]+\\.[a-z_]+$"},
-    "scientific_name": {"type": "string", "pattern": "^[A-Z][a-z]+ [a-z]+$"},
+    "taxon_id": {"type": "string", "pattern": "^spa\\.tax\\.[a-z_]+$"},
+    "accepted_name": {"type": "string", "pattern": "^[A-Z][a-z]+ [a-z]+$"},
+    "authority": {"type": ["string", "null"]},
     "taxonomy": {
       "type": "object",
       "additionalProperties": false,
@@ -19,13 +20,31 @@
         "species": {"type": "string"}
       }
     },
+    "synonyms": {
+      "type": "array",
+      "description": "names that have referred to this concept; a name string alone never establishes identity",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name"],
+        "properties": {
+          "name": {"type": "string"},
+          "authority": {"type": ["string", "null"]},
+          "source": {"type": ["string", "null"]},
+          "notes": {"type": "string"}
+        }
+      }
+    },
+    "taxon_concept": {"type": ["string", "null"], "description": "what the Atlas means by this taxon, e.g. sensu a revision, or 'not Sesia bicingulata Rebel, 1910'"},
+    "derived_from": {"type": "array", "items": {"type": "string"}, "description": "ids of earlier concepts this one was split from or merged out of"},
     "identifiers": {
       "type": "object",
       "additionalProperties": false,
       "required": ["ncbi_taxid"],
       "properties": {
         "ncbi_taxid": {"type": ["integer", "null"]},
-        "gbif": {"type": ["integer", "null"]}
+        "gbif": {"type": ["integer", "string", "null"]},
+        "inaturalist": {"type": ["integer", "null"]}
       }
     },
     "notes": {"type": "string"}

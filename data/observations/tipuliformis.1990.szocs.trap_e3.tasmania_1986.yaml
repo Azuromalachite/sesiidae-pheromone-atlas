@@ -1,0 +1,19 @@
+observation_id: spa.obs.tipuliformis.1990.szocs.trap_e3.tasmania_1986
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_tipuliformis
+context: {sex: male, habitat: black currant plantation, population: null, locality: "Huonville, Tasmania, Australia"}
+assay: field_trapping
+blend:
+  - {compound: spa.cmpd.e2_z13_18_oac, amount: {value: 100, unit: microgram}}
+  - {compound: spa.cmpd.e3_z13_18_oac, amount: {value: 3, unit: microgram}}
+comparator:
+  description: E2,Z13-18:OAc alone, 100 micrograms
+  blend: [{compound: spa.cmpd.e2_z13_18_oac, amount: {value: 100, unit: microgram}}]
+effect: decreased
+significance: significant
+response: {measure: trap_catch, unit: mean_catch_per_trap, treatment_value: 3.24, comparator_value: 6.73, qualifier: as_reported}
+evidence:
+  reference: spa.ref.szocs_1990
+  source_location: "Table 5"
+  author_statement: "traps containing E,Z2,13-18:OAc/E,Z3,13-18:OAc in Tasmania caught males in significantly lower numbers"
+  notes: "January 15 - March 23, 1986; 5 traps per treatment. The next season's repeat was not significant (spa.obs.tipuliformis.1990.szocs.trap_e3.tasmania_1987), and Suckling et al. 2005 found no blend effect in Tasmania."

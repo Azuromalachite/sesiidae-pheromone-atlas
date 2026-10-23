@@ -1,0 +1,19 @@
+observation_id: spa.obs.tipuliformis.1990.szocs.trap_z13oac.tasmania
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_tipuliformis
+context: {sex: male, habitat: black currant plantation, population: null, locality: "Slateford, Tasmania, Australia"}
+assay: field_trapping
+blend:
+  - {compound: spa.cmpd.e2_z13_18_oac, amount: {value: 100, unit: microgram}}
+  - {compound: spa.cmpd.z13_18_oac, amount: {value: 10, unit: microgram}}
+comparator:
+  description: E2,Z13-18:OAc alone, 100 micrograms
+  blend: [{compound: spa.cmpd.e2_z13_18_oac, amount: {value: 100, unit: microgram}}]
+effect: no_effect
+significance: not_significant
+response: {measure: trap_catch, unit: mean_catch_per_trap, treatment_value: 2.73, comparator_value: 2.71, qualifier: as_reported}
+evidence:
+  reference: spa.ref.szocs_1990
+  source_location: "Table 1"
+  author_statement: "none of the blends tested caught significantly more males than the diene alone"
+  notes: "December 14, 1984 - February 20, 1985; 8 traps. The 10% ratio is recorded; 1-40% tested."

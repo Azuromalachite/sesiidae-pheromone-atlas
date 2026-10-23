@@ -1,0 +1,14 @@
+observation_id: spa.obs.apiformis.2004.francke.spme_individual
+observation_type: gland_composition
+taxon: spa.tax.sesia_apiformis
+context: {sex: female, tissue: effluvium of the protruded gland, life_stage: adult, mating_status: virgin, behavioural_state: calling, sampling_unit: individual, n_individuals: 5, population: null, locality: null, rearing: field_collected_reared}
+components:
+  - {compound: spa.cmpd.z3_z13_18_oh, detected: true, method: spme_of_calling_female_gc_ms, abundance_class: major, measurements: [{value: 13, unit: percent, qualifier: mean, spread: {value: 3, kind: sd}}]}
+  - {compound: spa.cmpd.e2_z13_18_al, detected: true, method: spme_of_calling_female_gc_ms, abundance_class: major, measurements: [{value: 87, unit: percent, qualifier: mean, spread: {value: 3, kind: sd}}]}
+  - {compound: spa.cmpd.e2_z13_18_oh, detected: false, method: spme_of_calling_female_gc_ms, detection_limit: {value: null, unit: null}}
+evidence:
+  reference: spa.ref.francke_2004
+  source_location: "Results and Discussion, Analyses"
+  author_statement: "SPME collections from effluvia of calling females showed the ratio of the major compounds to be 13 ± 3%:87 ± 3% (N = 5)"
+  unresolved: ["whether ± is SD or SE (recorded as SD)", "which population the five females came from"]
+  notes: "SPME fibre held a few mm from the gland for 2-4 h while calling; only compounds released exclusively during calling were analysed. E2,Z13-18:OH, present in gland extracts, was not detected in the effluvium."

@@ -1,0 +1,17 @@
+observation_id: spa.obs.tenuis.2012.yang.trap_acetate_alone
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_tenuis
+context: {sex: male, habitat: persimmon orchard, population: "Korean population", locality: "Gimhae, Republic of Korea"}
+assay: field_trapping
+blend:
+  - {compound: spa.cmpd.z3_z13_18_oac, amount: {value: 500, unit: microgram}}
+comparator:
+  description: unbaited trap
+effect: no_effect
+significance: not_reported
+response: {measure: trap_catch, unit: mean_catch_per_trap, treatment_value: 0, comparator_value: 0, qualifier: as_reported}
+evidence:
+  reference: spa.ref.yang_2012
+  source_location: "Table 1, trials 1 and 2"
+  author_statement: "pure Z3,Z13-18:OAc caught no male moths at all"
+  notes: "Contrasts with Japanese males caught by Z3,Z13-18:OAc alone (spa.obs.tenuis.1977.tamaki.trap_acetate_alone). The two studies differ in population, dose (0.5 vs 1 mg), dispenser and trap, so the contrast does not by itself show a population difference; the authors report no genitalic difference between Korean and Japanese insects."

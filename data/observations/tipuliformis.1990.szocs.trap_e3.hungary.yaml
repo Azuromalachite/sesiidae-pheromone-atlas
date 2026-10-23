@@ -1,0 +1,19 @@
+observation_id: spa.obs.tipuliformis.1990.szocs.trap_e3.hungary
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_tipuliformis
+context: {sex: male, habitat: black currant plantation, population: null, locality: "Kemence, Pest County, Hungary"}
+assay: field_trapping
+blend:
+  - {compound: spa.cmpd.e2_z13_18_oac, amount: {value: 100, unit: microgram}}
+  - {compound: spa.cmpd.e3_z13_18_oac, amount: {value: 3, unit: microgram}}
+comparator:
+  description: E2,Z13-18:OAc alone, 100 micrograms
+  blend: [{compound: spa.cmpd.e2_z13_18_oac, amount: {value: 100, unit: microgram}}]
+effect: increased
+significance: significant
+response: {measure: trap_catch, unit: mean_catch_per_trap, treatment_value: 40.81, comparator_value: 15.38, qualifier: as_reported}
+evidence:
+  reference: spa.ref.szocs_1990
+  source_location: "Table 5"
+  author_statement: "resulted in a statistically significant increase in captures in both New Zealand and Hungary"
+  notes: "June 20-25, 1986; 8 traps per treatment; mean moths per trap per check; Duncan's test on log(x+1), with each check counted as a repetition."

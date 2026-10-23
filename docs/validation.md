@@ -43,6 +43,7 @@ component whose `detected` is true or false; three observation types and no
 | amounts only on detections; a detection limit only on a negative | `OBS_FIELD_CONFLICT` |
 | `genome_id` ends with the assembly accession.version | `GENOME_ID` |
 | ids unique | `DUPLICATE_ID` |
+| no two taxa share an accepted name; a synonym spelling another accepted name carries both authorities | `TAXON_NAME_DUPLICATE`, `NAME_AMBIGUOUS` |
 
 ## Structural rules, not just checks
 
@@ -68,7 +69,7 @@ Reaction evidence will be limited to types that test a conversion
 
 ## The gate is seen to fail
 
-`tests/fixtures/bad/` holds 26 cases, each a one-change edit of a good
+`tests/fixtures/bad/` holds 28 cases, each a one-change edit of a good
 fixture with the error code it must produce in `EXPECT`. On top of these,
 the mutation tests flip every double bond's E/Z, once in the shorthand and
 once in the structure, for every good compound, and require

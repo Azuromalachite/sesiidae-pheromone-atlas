@@ -7,7 +7,7 @@
   "additionalProperties": false,
   "required": ["reference_id", "citation", "read"],
   "properties": {
-    "reference_id": {"type": "string", "pattern": "^ref\\.[a-z0-9_]+$"},
+    "reference_id": {"type": "string", "pattern": "^spa\\.ref\\.[a-z0-9_]+$"},
     "citation": {"type": "string"},
     "doi": {"type": ["string", "null"], "pattern": "^10\\.[0-9]{4,}/\\S+$"},
     "pmid": {"type": ["integer", "null"]},

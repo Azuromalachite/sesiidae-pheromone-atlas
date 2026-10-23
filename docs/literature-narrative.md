@@ -14,7 +14,7 @@ been read in full, but no records are made from them yet.
 Early sesiid work screened synthetic C18 dienyl acetates in the field.
 Tamaki et al. 1977 caught 51 Japanese *Synanthedon tenuis* males on
 Z3,Z13-18:OAc alone, and almost none once 5 % E3,Z13-18:OAc was added
-(`obs.tenuis.tamaki_1977.*`). The trial ran no unbaited control, with two
+(`spa.obs.tenuis.1977.tamaki.*`). The trial ran no unbaited control, with two
 traps per lure and no statistics.
 
 That is one kind of observation: **males come to a synthetic compound.** It
@@ -26,11 +26,11 @@ Gland analyses started to say what females produce:
 
 - *S. tipuliformis*: Szöcs et al. 1985 found E2,Z13-18:OAc and Z13-18:OAc at
   93:7 in pooled extracts of 19 Hungarian females, and no E3 isomer
-  (`obs.tipuliformis.szocs_1985.gland`). Z13-18:OAc gave a significant
+  (`spa.obs.tipuliformis.1985.szocs.gland`). Z13-18:OAc gave a significant
   increase in one trial (`…trap_z13oac`), not in later ones.
 - *Sesia apiformis*: Kovalev et al. 1988 isolated Z3,Z13-18:OH, EAG-active,
   from 370 abdominal tips and called it the sex pheromone
-  (`obs.apiformis.kovalev_1988.*`). They followed only the alcohol fraction,
+  (`spa.obs.apiformis.1988.kovalev.*`). They followed only the alcohol fraction,
   so the aldehyde found in 2004 was never looked for.
 
 **Production** and **attraction** are now two separate observations. They do
@@ -41,16 +41,16 @@ not always agree.
 - Priesner et al. 1986: a few percent of E3,Z13-18:OAc raised *S.
   tipuliformis* catches, while equal amounts caught none. The same two
   compounds attracted *S. formicaeformis* best at 100:100 and *S.
-  andrenaeformis* at 10:100 (`obs.*.priesner_1986.*`). Receptor cells for E2
+  andrenaeformis* at 10:100 (`spa.obs.*.1986.priesner.*`). Receptor cells for E2
   and E3, and none for Z13-18:OAc, were reported without data
-  (`obs.tipuliformis.priesner_1986.ssr`).
+  (`spa.obs.tipuliformis.1986.priesner.ssr`).
 - Szöcs et al. 1990: in Hungary, E2,Z13-18:OAc alone brought 20.6 % of
   arriving males to within 2 cm of the bait, and with E3 65.6 %
-  (`obs.tipuliformis.szocs_1990.approach.hungary`). The minor component
+  (`spa.obs.tipuliformis.1990.szocs.approach.hungary`). The minor component
   works at close range, not only on trap catch.
 - Mozūraitis et al. 2006: E3,Z13-18:OAc, which synergises for *S.
   tipuliformis*, suppressed *S. scoliaeformis* males entirely at their own
-  site (`obs.scoliaeformis.mozuraitis_2006.trap_e3.forest_edge`). One minor
+  site (`spa.obs.scoliaeformis.2006.mozuraitis.trap_e3.forest_edge`). One minor
   compound attracts one species and repels another.
 - *S. bicingulata*: Kwon et al. 2021 **(not yet curated)** put the optimum at
   E3:Z3,Z13-18:OAc of about 4.3:5.7 once lure purity is accounted for. That
@@ -65,7 +65,7 @@ how much of it, and what else is present.
 ## 4. Geography: a finding that did not hold
 
 Szöcs et al. 1990 found E3 synergistic in Hungary and New Zealand and
-inhibitory in Tasmania (`obs.tipuliformis.szocs_1990.trap_e3.*`). It was
+inhibitory in Tasmania (`spa.obs.tipuliformis.1990.szocs.trap_e3.*`). It was
 read as a Tasmanian pheromone strain.
 
 It did not hold up:
@@ -74,7 +74,7 @@ It did not hold up:
   (`…tasmania_1987`);
 - Suckling et al. 2005 found equivalent catches with and without E3 in **both**
   Tasmania (P = 0.83) and New Zealand (481 vs 490), and rejected the strain
-  (`obs.tipuliformis.suckling_2005.trap_e3.*`);
+  (`spa.obs.tipuliformis.2005.suckling.trap_e3.*`);
 - in 2025, Anderbrant et al. **(not yet curated)** summarised the minor E3
   component as one that increased catches "in some studies, but not in
   others".
@@ -82,7 +82,7 @@ It did not hold up:
 *S. tenuis* gives a second geographic contrast. The acetate attracted
 Japanese males in 1976, but in 2011 it was absent from Korean glands (below
 about 100 pg), caught nothing on its own, and blocked attraction to the real
-pheromone, Z3,Z13-18:OH (`obs.tenuis.yang_2012.*`). The two studies also
+pheromone, Z3,Z13-18:OH (`spa.obs.tenuis.2012.yang.*`). The two studies also
 differ in dose, dispenser and trap, so this is a contrast between records,
 not yet evidence of a population difference.
 
@@ -93,13 +93,13 @@ The Atlas keeps all of these and decides none of them.
 - James et al. 2001 joined female volatiles, SPME, ovipositor extracts,
   GC-MS and GC-EAD in one Washington population: E2 : E3 about 98.2 : 1.8
   (n = 3), with both compounds antennally active
-  (`obs.tipuliformis.james_2001.*`). **Production, emission and perception**
+  (`spa.obs.tipuliformis.2001.james.*`). **Production, emission and perception**
   appear in a single study. The abstract's "100:3" is the lure ratio, not the
   measurement.
 - Francke et al. 2004 solved *S. apiformis*: Z3,Z13-18:OH plus
   E2,Z13-18:Al, the first aldehyde in a sesiid pheromone. Neither attracts
   alone; the blend does. Pooled extracts give 2:3, single calling females by
-  SPME 13:87 (`obs.apiformis.francke_2004.*`). **The ratio is a property of
+  SPME 13:87 (`spa.obs.apiformis.2004.francke.*`). **The ratio is a property of
   the measurement, not only of the moth.** In this case it did not matter
   behaviourally: lures from 30:300 to 300:300 µg all worked.
 - Mozūraitis et al. 2006 found six compounds in *S. tipuliformis* glands, but

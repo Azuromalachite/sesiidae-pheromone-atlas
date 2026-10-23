@@ -1,9 +1,9 @@
-genome_id: genome.fixture_species_a.GCA_000000002.1
-taxon: fixture.species_a
+genome_id: spa.genome.fixture_species_a.GCA_000000002.1
+taxon: spa.tax.fixture_species_a
 assembly: {accession: GCA_000000001, version: 1, name: fixFixt1.1, level: chromosome, source: NCBI}
 specimen: {sex: male, locality: null}
 annotations:
-  - annotation_id: annot.fixture.braker.2026_01
+  - annotation_id: spa.annot.fixture.braker.2026_01
     provider: fixture
     method: braker
     geneset: "2026_01"

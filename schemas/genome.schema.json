@@ -7,7 +7,7 @@
   "additionalProperties": false,
   "required": ["genome_id", "taxon", "assembly", "annotations"],
   "properties": {
-    "genome_id": {"type": "string", "pattern": "^genome\\.[a-z_]+\\.GC[AF]_[0-9]{9}\\.[0-9]+$"},
+    "genome_id": {"type": "string", "pattern": "^spa\\.genome\\.[a-z_]+\\.GC[AF]_[0-9]{9}\\.[0-9]+$"},
     "taxon": {"type": "string"},
     "assembly": {
       "type": "object",
@@ -38,7 +38,7 @@
         "additionalProperties": false,
         "required": ["annotation_id", "provider", "method", "geneset", "files"],
         "properties": {
-          "annotation_id": {"type": "string", "pattern": "^annot\\.[a-z0-9_.]+$"},
+          "annotation_id": {"type": "string", "pattern": "^spa\\.annot\\.[a-z0-9_.]+$"},
           "provider": {"type": "string"},
           "method": {"type": "string"},
           "geneset": {"type": "string"},

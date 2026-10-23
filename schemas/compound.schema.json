@@ -7,7 +7,7 @@
   "additionalProperties": false,
   "required": ["compound_id", "compound_class", "names", "mapped_smiles", "external_ids", "generated"],
   "properties": {
-    "compound_id": {"type": "string", "pattern": "^(cmpd|precursor|model)\\.[a-z0-9_]+$"},
+    "compound_id": {"type": "string", "pattern": "^spa\\.(cmpd|model)\\.[a-z0-9_]+$", "description": "spa.model.* for computational models, spa.cmpd.* for everything else; permanent (docs/identifiers.md)"},
     "compound_class": {"enum": ["natural_product", "precursor", "computational_model"], "description": "chemical state only. Whether a compound is a pheromone, synergist or antagonist is a conclusion from behavioural records, never a property of the compound (concept §35, 17)"},
     "names": {
       "type": "object",
@@ -70,8 +70,8 @@
   "allOf": [
     {
       "if": {"properties": {"compound_class": {"const": "computational_model"}}},
-      "then": {"required": ["represents", "truncation"]},
-      "else": {"not": {"anyOf": [{"required": ["represents"]}, {"required": ["truncation"]}]}}
+      "then": {"required": ["represents", "truncation"], "properties": {"compound_id": {"pattern": "^spa\\.model\\."}}},
+      "else": {"not": {"anyOf": [{"required": ["represents"]}, {"required": ["truncation"]}]}, "properties": {"compound_id": {"pattern": "^spa\\.cmpd\\."}}}
     }
   ]
 }

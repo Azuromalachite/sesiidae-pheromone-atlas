@@ -1,0 +1,14 @@
+observation_id: spa.obs.apiformis.1988.kovalev.gland
+observation_type: gland_composition
+taxon: spa.tax.sesia_apiformis
+context: {sex: female, tissue: abdominal tips, life_stage: adult, mating_status: virgin, behavioural_state: calling, sampling_unit: pooled, n_individuals: 370, population: null, locality: null, rearing: field_collected_reared}
+components:
+  - {compound: spa.cmpd.z3_z13_18_oh, detected: true, method: eag_guided_fractionation_gc_retention_vs_four_isomers_ci_ms, abundance_class: major}
+  - {compound: spa.cmpd.e2_z13_18_al, detected: not_tested}
+evidence:
+  reference: spa.ref.kovalev_1988
+  source_location: "Results; Experimental"
+  author_statement: "has been identified as a sex pheromone"
+  unresolved:
+    - "collection locality: cocoons dug from poplar trunks; one author affiliation is the Donetsk Botanical Garden, but the site is not stated"
+  notes: "Only the EAG-active alcohol fraction was pursued, so the aldehyde found in 2004 (Francke et al.) was not examined: not_tested, not absent. The authors' label 'sex pheromone' is kept as their statement; later work found this alcohol unattractive alone."

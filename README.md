@@ -5,8 +5,8 @@ genomes, biosynthetic hypotheses, and candidate enzyme families.*
 
 **Status: building v0.1.** This repository holds the design documents, the
 first discovery table (the taxon × layer matrix), the record schemas and the
-validator with its failing fixtures, and the first 66 curated records
-(6 taxa, 10 references, 10 compounds, 40 observations), all from full texts
+validator with its failing fixtures, and the first 68 curated records
+(8 taxa, 10 references, 10 compounds, 40 observations), all from full texts
 ([`docs/curation-log.md`](docs/curation-log.md)). There are no reaction or
 pathway records yet: this corpus records what was observed, not how it is made.
 
@@ -30,6 +30,8 @@ generated machine-readable releases.
 | [`docs/concept.md`](docs/concept.md) | the technical concept: data model, curation rules, invariants, roadmap. Revision 3; earlier revisions are in this file's git history |
 | [`docs/context.md`](docs/context.md) | the natural-history and scientific motivation, from *Amegilla* to Sesiidae to lipid-derived signalling |
 | [`docs/literature-narrative.md`](docs/literature-narrative.md) | the literature as a story, from synthetic lures to blend, context and evidence layers, each claim tied to its record |
+| [`docs/identifiers.md`](docs/identifiers.md) | the permanent `spa.` ID scheme and its rules |
+| [`docs/releases-and-occurrences.md`](docs/releases-and-occurrences.md) | decisions on citable releases, the GBIF occurrence layer and roadmap order |
 | [`docs/reviews/`](docs/reviews/) | the two adversarial reviews the concept was revised against |
 | [`docs/knowledge-gaps.md`](docs/knowledge-gaps.md) | gaps that set direction: the tropical and Southeast Asian frontier, *Melittia*, the trapping blind spot |
 | [`releases/taxon_layers.tsv`](releases/taxon_layers.tsv) | the taxon × layer matrix: which species have genomes, gene sets and identified pheromones ([column guide](releases/README.md)) |

@@ -103,6 +103,35 @@ def schema_findings(records):
     return out
 
 
+# ---------------------------------------------------------------- taxon names
+
+def taxon_name_findings(records):
+    """A name string is never identity. Two concepts may not share an accepted
+    name, and a synonym that spells another concept's accepted name must say
+    whose name it is: both authorities given, and different. 'bicingulata'
+    is the reason -- Sesia bicingulata Rebel, 1910 sits under S. myopaeformis
+    in GBIF, while Synanthedon bicingulata is the East Asian species."""
+    out = []
+    accepted = {}
+    for path, t in records["taxa"].values():
+        name = t.get("accepted_name")
+        if name in accepted:
+            out.append(Finding("TAXON_NAME_DUPLICATE", path, f"{name!r} is also the accepted name of {accepted[name][1]}"))
+        else:
+            accepted[name] = (t, t.get("taxon_id"))
+    for path, t in records["taxa"].values():
+        for syn in t.get("synonyms") or []:
+            other = accepted.get(syn.get("name"))
+            if other is None or other[0] is t:
+                continue
+            a, b = syn.get("authority"), other[0].get("authority")
+            if not a or not b or a == b:
+                out.append(Finding("NAME_AMBIGUOUS", path,
+                                   f"synonym {syn.get('name')!r} spells the accepted name of {other[1]}; "
+                                   "give both authorities so the two usages can be told apart"))
+    return out
+
+
 # ---------------------------------------------------------------- references
 
 def reference_findings(records):
@@ -348,6 +377,7 @@ def validate(root):
     findings += schema_findings(records)
     if findings:  # cross-checks on malformed records only add noise
         return findings
+    findings += taxon_name_findings(records)
     findings += reference_findings(records)
     findings += observation_findings(records)
     findings += compound_findings(records, load_headgroups())

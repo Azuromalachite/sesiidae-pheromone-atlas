@@ -1,0 +1,17 @@
+observation_id: spa.obs.tenuis.2012.yang.trap_vs_females
+observation_type: behavioural_response
+taxon: spa.tax.synanthedon_tenuis
+context: {sex: male, habitat: persimmon orchard, population: "Korean population", locality: "Gimhae, Republic of Korea"}
+assay: field_trapping
+blend:
+  - {compound: spa.cmpd.z3_z13_18_oh, amount: {value: 500, unit: microgram}}
+comparator:
+  description: a single caged 0-1-day-old virgin female
+effect: no_effect
+significance: not_significant
+response: {measure: trap_catch, unit: mean_catch_per_trap, treatment_value: 5.3, comparator_value: 3.7, qualifier: as_reported}
+evidence:
+  reference: spa.ref.yang_2012
+  source_location: "Table 1, trial 2"
+  author_statement: "Traps baited with 500 µg of Z3,Z13-18:OH captured more male moths than did the caged virgin females, although the difference was not statistically significant"
+  notes: "August 29 - September 3, 2011; 3 replicate blocks; Tukey test on log(x+1). Means ± SE: 5.3 ± 1.5 vs 3.7 ± 3.2."
