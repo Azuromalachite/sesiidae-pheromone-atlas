@@ -1,0 +1,171 @@
+{
+ "slug": "e2_z13_18_oac",
+ "smiles": "[CH3:21][C:22](=[O:32])[O:31][CH2:1]/[CH:2]=[CH:3]/[CH2:4][CH2:5][CH2:6][CH2:7][CH2:8][CH2:9][CH2:10][CH2:11][CH2:12]/[CH:13]=[CH:14]\\[CH2:15][CH2:16][CH2:17][CH3:18]",
+ "expected": "CCCC/C=C\\CCCCCCCCC/C=C/COC(C)=O",
+ "seed": 20261024,
+ "n_embedded": 100,
+ "k": 20,
+ "method": "espmap v0.2.1 from_smiles (ETKDGv3 + MMFF94s), seed 20261024, 100 embeddings; bench/conformers.select: lowest MMFF94s + spread over Rg (RDKit RadiusOfGyration)",
+ "members": [
+  {
+   "conformer": "conf_00",
+   "embed_conf_id": 73,
+   "is_lowest_mmff": true,
+   "mmff_dE": 0.0,
+   "rg_selection": 6.168755386402627,
+   "rg_heavy": 6.093977961605747
+  },
+  {
+   "conformer": "conf_01",
+   "embed_conf_id": 91,
+   "is_lowest_mmff": false,
+   "mmff_dE": 5.8277336598285086,
+   "rg_selection": 4.6902719957874615,
+   "rg_heavy": 4.631447578694506
+  },
+  {
+   "conformer": "conf_02",
+   "embed_conf_id": 0,
+   "is_lowest_mmff": false,
+   "mmff_dE": 4.462387527843212,
+   "rg_selection": 5.2538307322245315,
+   "rg_heavy": 5.186585436665269
+  },
+  {
+   "conformer": "conf_03",
+   "embed_conf_id": 2,
+   "is_lowest_mmff": false,
+   "mmff_dE": 6.715882981696307,
+   "rg_selection": 5.336271531554219,
+   "rg_heavy": 5.259103101071813
+  },
+  {
+   "conformer": "conf_04",
+   "embed_conf_id": 5,
+   "is_lowest_mmff": false,
+   "mmff_dE": 6.172272611339327,
+   "rg_selection": 5.399116204856649,
+   "rg_heavy": 5.332487212672172
+  },
+  {
+   "conformer": "conf_05",
+   "embed_conf_id": 50,
+   "is_lowest_mmff": false,
+   "mmff_dE": 5.332975117771721,
+   "rg_selection": 5.533510350171164,
+   "rg_heavy": 5.4630235676466254
+  },
+  {
+   "conformer": "conf_06",
+   "embed_conf_id": 8,
+   "is_lowest_mmff": false,
+   "mmff_dE": 3.99211680855211,
+   "rg_selection": 5.6286082678071265,
+   "rg_heavy": 5.551018056821311
+  },
+  {
+   "conformer": "conf_07",
+   "embed_conf_id": 84,
+   "is_lowest_mmff": false,
+   "mmff_dE": 9.995503403923578,
+   "rg_selection": 5.689398465758432,
+   "rg_heavy": 5.62493512255379
+  },
+  {
+   "conformer": "conf_08",
+   "embed_conf_id": 80,
+   "is_lowest_mmff": false,
+   "mmff_dE": 6.295495990223781,
+   "rg_selection": 5.724132228367129,
+   "rg_heavy": 5.649415999627094
+  },
+  {
+   "conformer": "conf_09",
+   "embed_conf_id": 75,
+   "is_lowest_mmff": false,
+   "mmff_dE": 6.529295674824823,
+   "rg_selection": 5.823430453864335,
+   "rg_heavy": 5.7669333206909865
+  },
+  {
+   "conformer": "conf_10",
+   "embed_conf_id": 16,
+   "is_lowest_mmff": false,
+   "mmff_dE": 2.420026529365643,
+   "rg_selection": 5.898701551836489,
+   "rg_heavy": 5.832577924891956
+  },
+  {
+   "conformer": "conf_11",
+   "embed_conf_id": 52,
+   "is_lowest_mmff": false,
+   "mmff_dE": 2.295626917895788,
+   "rg_selection": 5.931801685893836,
+   "rg_heavy": 5.8683877240254585
+  },
+  {
+   "conformer": "conf_12",
+   "embed_conf_id": 47,
+   "is_lowest_mmff": false,
+   "mmff_dE": 2.3900083740828997,
+   "rg_selection": 5.956660473554822,
+   "rg_heavy": 5.892316241466891
+  },
+  {
+   "conformer": "conf_13",
+   "embed_conf_id": 18,
+   "is_lowest_mmff": false,
+   "mmff_dE": 3.1418158407139245,
+   "rg_selection": 6.033293719753211,
+   "rg_heavy": 5.965819502093453
+  },
+  {
+   "conformer": "conf_14",
+   "embed_conf_id": 40,
+   "is_lowest_mmff": false,
+   "mmff_dE": 6.894731917052372,
+   "rg_selection": 6.235531452419017,
+   "rg_heavy": 6.170765497609985
+  },
+  {
+   "conformer": "conf_15",
+   "embed_conf_id": 67,
+   "is_lowest_mmff": false,
+   "mmff_dE": 5.0009353868465904,
+   "rg_selection": 6.292344975236936,
+   "rg_heavy": 6.217428933515717
+  },
+  {
+   "conformer": "conf_16",
+   "embed_conf_id": 19,
+   "is_lowest_mmff": false,
+   "mmff_dE": 2.228850406216182,
+   "rg_selection": 6.437646297165084,
+   "rg_heavy": 6.362084562313253
+  },
+  {
+   "conformer": "conf_17",
+   "embed_conf_id": 7,
+   "is_lowest_mmff": false,
+   "mmff_dE": 3.8505194965936855,
+   "rg_selection": 6.484132019171612,
+   "rg_heavy": 6.402405767422348
+  },
+  {
+   "conformer": "conf_18",
+   "embed_conf_id": 25,
+   "is_lowest_mmff": false,
+   "mmff_dE": 0.7231331091576081,
+   "rg_selection": 6.882194045957206,
+   "rg_heavy": 6.805187463858812
+  },
+  {
+   "conformer": "conf_19",
+   "embed_conf_id": 89,
+   "is_lowest_mmff": false,
+   "mmff_dE": 8.41030757471178,
+   "rg_selection": 4.7896945473314885,
+   "rg_heavy": 4.7166298898972245
+  }
+ ]
+}

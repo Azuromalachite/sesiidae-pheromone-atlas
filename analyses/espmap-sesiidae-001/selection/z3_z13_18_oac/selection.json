@@ -1,0 +1,171 @@
+{
+ "slug": "z3_z13_18_oac",
+ "smiles": "[CH3:21][C:22](=[O:32])[O:31][CH2:1][CH2:2]/[CH:3]=[CH:4]\\[CH2:5][CH2:6][CH2:7][CH2:8][CH2:9][CH2:10][CH2:11][CH2:12]/[CH:13]=[CH:14]\\[CH2:15][CH2:16][CH2:17][CH3:18]",
+ "expected": "CCCC/C=C\\CCCCCCCC/C=C\\CCOC(C)=O",
+ "seed": 20261024,
+ "n_embedded": 100,
+ "k": 20,
+ "method": "espmap v0.2.1 from_smiles (ETKDGv3 + MMFF94s), seed 20261024, 100 embeddings; bench/conformers.select: lowest MMFF94s + spread over Rg (RDKit RadiusOfGyration)",
+ "members": [
+  {
+   "conformer": "conf_00",
+   "embed_conf_id": 3,
+   "is_lowest_mmff": true,
+   "mmff_dE": 0.0,
+   "rg_selection": 5.280958513699671,
+   "rg_heavy": 5.228301842433256
+  },
+  {
+   "conformer": "conf_01",
+   "embed_conf_id": 13,
+   "is_lowest_mmff": false,
+   "mmff_dE": 5.290846043769928,
+   "rg_selection": 3.7970158307984456,
+   "rg_heavy": 3.737723536764488
+  },
+  {
+   "conformer": "conf_02",
+   "embed_conf_id": 50,
+   "is_lowest_mmff": false,
+   "mmff_dE": 7.150091257847329,
+   "rg_selection": 4.876570385172177,
+   "rg_heavy": 4.817113442471421
+  },
+  {
+   "conformer": "conf_03",
+   "embed_conf_id": 16,
+   "is_lowest_mmff": false,
+   "mmff_dE": 5.899437062444026,
+   "rg_selection": 5.02690550438643,
+   "rg_heavy": 4.95060016790055
+  },
+  {
+   "conformer": "conf_04",
+   "embed_conf_id": 33,
+   "is_lowest_mmff": false,
+   "mmff_dE": 9.880118027669514,
+   "rg_selection": 5.231643501828046,
+   "rg_heavy": 5.173986252290139
+  },
+  {
+   "conformer": "conf_05",
+   "embed_conf_id": 56,
+   "is_lowest_mmff": false,
+   "mmff_dE": 4.454029945451799,
+   "rg_selection": 5.313263818760937,
+   "rg_heavy": 5.2461426978850465
+  },
+  {
+   "conformer": "conf_06",
+   "embed_conf_id": 30,
+   "is_lowest_mmff": false,
+   "mmff_dE": 6.9577210908768485,
+   "rg_selection": 5.427722849215877,
+   "rg_heavy": 5.363355922552892
+  },
+  {
+   "conformer": "conf_07",
+   "embed_conf_id": 24,
+   "is_lowest_mmff": false,
+   "mmff_dE": 2.8688493002058415,
+   "rg_selection": 5.470930956287192,
+   "rg_heavy": 5.402330563163506
+  },
+  {
+   "conformer": "conf_08",
+   "embed_conf_id": 57,
+   "is_lowest_mmff": false,
+   "mmff_dE": 6.167054587565627,
+   "rg_selection": 5.587936010629678,
+   "rg_heavy": 5.508887664526484
+  },
+  {
+   "conformer": "conf_09",
+   "embed_conf_id": 1,
+   "is_lowest_mmff": false,
+   "mmff_dE": 5.584636975954066,
+   "rg_selection": 5.688617363896441,
+   "rg_heavy": 5.60956564500373
+  },
+  {
+   "conformer": "conf_10",
+   "embed_conf_id": 60,
+   "is_lowest_mmff": false,
+   "mmff_dE": 6.041743197011391,
+   "rg_selection": 5.724033829729854,
+   "rg_heavy": 5.656023244106679
+  },
+  {
+   "conformer": "conf_11",
+   "embed_conf_id": 38,
+   "is_lowest_mmff": false,
+   "mmff_dE": 7.196805830100033,
+   "rg_selection": 5.762866455664491,
+   "rg_heavy": 5.689628347465235
+  },
+  {
+   "conformer": "conf_12",
+   "embed_conf_id": 66,
+   "is_lowest_mmff": false,
+   "mmff_dE": 5.906390998342067,
+   "rg_selection": 5.837639529790911,
+   "rg_heavy": 5.7837917498234335
+  },
+  {
+   "conformer": "conf_13",
+   "embed_conf_id": 18,
+   "is_lowest_mmff": false,
+   "mmff_dE": 7.893552964539559,
+   "rg_selection": 5.898882005749051,
+   "rg_heavy": 5.820527485931268
+  },
+  {
+   "conformer": "conf_14",
+   "embed_conf_id": 79,
+   "is_lowest_mmff": false,
+   "mmff_dE": 2.228027639676654,
+   "rg_selection": 5.956461981550528,
+   "rg_heavy": 5.877573919761275
+  },
+  {
+   "conformer": "conf_15",
+   "embed_conf_id": 10,
+   "is_lowest_mmff": false,
+   "mmff_dE": 6.032641358082083,
+   "rg_selection": 6.03612298118294,
+   "rg_heavy": 5.95034535063897
+  },
+  {
+   "conformer": "conf_16",
+   "embed_conf_id": 23,
+   "is_lowest_mmff": false,
+   "mmff_dE": 3.6653333861096726,
+   "rg_selection": 6.123690130976318,
+   "rg_heavy": 6.051337151178323
+  },
+  {
+   "conformer": "conf_17",
+   "embed_conf_id": 74,
+   "is_lowest_mmff": false,
+   "mmff_dE": 3.8307767990586434,
+   "rg_selection": 6.273062016849927,
+   "rg_heavy": 6.195342515115996
+  },
+  {
+   "conformer": "conf_18",
+   "embed_conf_id": 72,
+   "is_lowest_mmff": false,
+   "mmff_dE": 2.1214625056163925,
+   "rg_selection": 6.415800765634814,
+   "rg_heavy": 6.347462488487731
+  },
+  {
+   "conformer": "conf_19",
+   "embed_conf_id": 26,
+   "is_lowest_mmff": false,
+   "mmff_dE": 1.2918542022761201,
+   "rg_selection": 6.947875547299004,
+   "rg_heavy": 6.871265926211535
+  }
+ ]
+}

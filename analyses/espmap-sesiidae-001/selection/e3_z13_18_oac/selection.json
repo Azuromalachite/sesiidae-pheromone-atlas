@@ -1,0 +1,171 @@
+{
+ "slug": "e3_z13_18_oac",
+ "smiles": "[CH3:21][C:22](=[O:32])[O:31][CH2:1][CH2:2]/[CH:3]=[CH:4]/[CH2:5][CH2:6][CH2:7][CH2:8][CH2:9][CH2:10][CH2:11][CH2:12]/[CH:13]=[CH:14]\\[CH2:15][CH2:16][CH2:17][CH3:18]",
+ "expected": "CCCC/C=C\\CCCCCCCC/C=C/CCOC(C)=O",
+ "seed": 20261024,
+ "n_embedded": 100,
+ "k": 20,
+ "method": "espmap v0.2.1 from_smiles (ETKDGv3 + MMFF94s), seed 20261024, 100 embeddings; bench/conformers.select: lowest MMFF94s + spread over Rg (RDKit RadiusOfGyration)",
+ "members": [
+  {
+   "conformer": "conf_00",
+   "embed_conf_id": 70,
+   "is_lowest_mmff": true,
+   "mmff_dE": 0.0,
+   "rg_selection": 5.699754189149795,
+   "rg_heavy": 5.6406651737010876
+  },
+  {
+   "conformer": "conf_01",
+   "embed_conf_id": 58,
+   "is_lowest_mmff": false,
+   "mmff_dE": 1.3596021151755089,
+   "rg_selection": 3.83781354891863,
+   "rg_heavy": 3.775463185827701
+  },
+  {
+   "conformer": "conf_02",
+   "embed_conf_id": 53,
+   "is_lowest_mmff": false,
+   "mmff_dE": 1.9620178124952332,
+   "rg_selection": 5.249644443043365,
+   "rg_heavy": 5.191175495328955
+  },
+  {
+   "conformer": "conf_03",
+   "embed_conf_id": 88,
+   "is_lowest_mmff": false,
+   "mmff_dE": 4.756363332912137,
+   "rg_selection": 5.366428164799818,
+   "rg_heavy": 5.307786207067723
+  },
+  {
+   "conformer": "conf_04",
+   "embed_conf_id": 0,
+   "is_lowest_mmff": false,
+   "mmff_dE": 1.7550659818235026,
+   "rg_selection": 5.44743304790601,
+   "rg_heavy": 5.37210644687429
+  },
+  {
+   "conformer": "conf_05",
+   "embed_conf_id": 17,
+   "is_lowest_mmff": false,
+   "mmff_dE": 9.820403193240974,
+   "rg_selection": 5.5578870418295665,
+   "rg_heavy": 5.488574962802122
+  },
+  {
+   "conformer": "conf_06",
+   "embed_conf_id": 34,
+   "is_lowest_mmff": false,
+   "mmff_dE": 6.117157265458758,
+   "rg_selection": 5.62381885179294,
+   "rg_heavy": 5.5561411525627
+  },
+  {
+   "conformer": "conf_07",
+   "embed_conf_id": 33,
+   "is_lowest_mmff": false,
+   "mmff_dE": 3.39649390614583,
+   "rg_selection": 5.727287497937236,
+   "rg_heavy": 5.6515771358831195
+  },
+  {
+   "conformer": "conf_08",
+   "embed_conf_id": 7,
+   "is_lowest_mmff": false,
+   "mmff_dE": 2.506205275947625,
+   "rg_selection": 5.817332665791047,
+   "rg_heavy": 5.741105689866017
+  },
+  {
+   "conformer": "conf_09",
+   "embed_conf_id": 56,
+   "is_lowest_mmff": false,
+   "mmff_dE": 2.5005472349267706,
+   "rg_selection": 5.860445778904102,
+   "rg_heavy": 5.785086371973846
+  },
+  {
+   "conformer": "conf_10",
+   "embed_conf_id": 64,
+   "is_lowest_mmff": false,
+   "mmff_dE": 4.5868851854341575,
+   "rg_selection": 5.929856977220244,
+   "rg_heavy": 5.860167866748231
+  },
+  {
+   "conformer": "conf_11",
+   "embed_conf_id": 71,
+   "is_lowest_mmff": false,
+   "mmff_dE": 1.3897395396371621,
+   "rg_selection": 6.022602151188358,
+   "rg_heavy": 5.949297867365902
+  },
+  {
+   "conformer": "conf_12",
+   "embed_conf_id": 91,
+   "is_lowest_mmff": false,
+   "mmff_dE": 3.8269658642160813,
+   "rg_selection": 6.038039643318843,
+   "rg_heavy": 5.9725372544071185
+  },
+  {
+   "conformer": "conf_13",
+   "embed_conf_id": 72,
+   "is_lowest_mmff": false,
+   "mmff_dE": 1.454425011021577,
+   "rg_selection": 6.105228005252696,
+   "rg_heavy": 6.024668353429121
+  },
+  {
+   "conformer": "conf_14",
+   "embed_conf_id": 82,
+   "is_lowest_mmff": false,
+   "mmff_dE": 1.8185182962834183,
+   "rg_selection": 6.242570243843315,
+   "rg_heavy": 6.167324705006061
+  },
+  {
+   "conformer": "conf_15",
+   "embed_conf_id": 46,
+   "is_lowest_mmff": false,
+   "mmff_dE": 4.418318698668088,
+   "rg_selection": 6.28817602790615,
+   "rg_heavy": 6.209479100775257
+  },
+  {
+   "conformer": "conf_16",
+   "embed_conf_id": 18,
+   "is_lowest_mmff": false,
+   "mmff_dE": 2.2260304442419,
+   "rg_selection": 6.340653999342531,
+   "rg_heavy": 6.266753521425619
+  },
+  {
+   "conformer": "conf_17",
+   "embed_conf_id": 90,
+   "is_lowest_mmff": false,
+   "mmff_dE": 2.565574340233649,
+   "rg_selection": 6.479019073050317,
+   "rg_heavy": 6.396462527714904
+  },
+  {
+   "conformer": "conf_18",
+   "embed_conf_id": 63,
+   "is_lowest_mmff": false,
+   "mmff_dE": 1.8682982038288856,
+   "rg_selection": 6.537039577774985,
+   "rg_heavy": 6.451530934024227
+  },
+  {
+   "conformer": "conf_19",
+   "embed_conf_id": 41,
+   "is_lowest_mmff": false,
+   "mmff_dE": 1.2965386167831277,
+   "rg_selection": 6.924932543434448,
+   "rg_heavy": 6.846384282699027
+  }
+ ]
+}

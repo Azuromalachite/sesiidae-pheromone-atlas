@@ -1,0 +1,37 @@
+{
+ "study": "espmap-sesiidae-001",
+ "plan": "Atlas analyses/espmap-sesiidae-001/analysis-plan.md, frozen at 7e3465859bc2b8950078238f0bffb0ea6b4dd512",
+ "purpose": "records which implementation the plan section 3 allowed was used; changes nothing in the frozen analysis",
+ "espmap": {
+  "tag": "v0.2.1",
+  "commit": "41a989d6240b56e3c17938dac2084dfc5e1423e4",
+  "note": "v0.3 --ensemble was not released before the run, so the pilot selection code was used (plan section 3). No v0.3 member is mixed in."
+ },
+ "environment": {
+  "rdkit": "2026.09.1",
+  "pyscf": "2.14.0",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "threads": 4
+ },
+ "selection": {
+  "seed": 20261024,
+  "n_embed": 100,
+  "k": 20,
+  "rule": "rg_spread: lowest MMFF94s + 19 spread over RDKit RadiusOfGyration (mass-weighted, all atoms); bench/conformers.select at v0.2.1; no RMSD dedup",
+  "embedder": "espmap v0.2.1 from_smiles (ETKDGv3 + MMFF94s)"
+ },
+ "method": "B3LYP/def2-SVP + RI, gas, 0.26 bohr, nearest-nucleus primary, radius-scaled alongside",
+ "folded": "intramolecular contact (espmap master 5175515 rule: heavy atoms >= 5 bonds apart, < Bondi sum + 0.5 A) OR surface genus > 0, as the frozen plan defines it",
+ "verdict_rule": "espmap-sesiidae-001/range_partition_sign_v1",
+ "scripts": "s001_run.py (select, run), s001_build.py, s001_analyse.py, s001_report.py; committed with the records",
+ "chronology": {
+  "source": "file modification times in the run directory (KST, +09:00); a record's time is when it was written, so a member's time is when it completed",
+  "selection_completed": "2026-10-23T18:18:54+09:00 to 2026-10-23T18:19:16+09:00 (all five molecules: conformers chosen, identity and atom maps verified, SDFs and site files written)",
+  "first_member_completed": "2026-10-23T18:23:13+09:00 (e3_z13_18_oac conf_00, the trial)",
+  "manifest_written": "2026-10-23T20:20:12+09:00, after 30 of 100 member calculations had completed",
+  "last_member_completed": "2026-10-24T00:08:44+09:00",
+  "statement": "Fixed during selection, before any member calculation began (18:19:16): seed, number of embeddings, K, the selection rule, the embedder, and the method passed unchanged to all 100 runs. The folded definition is the frozen plan's (intramolecular contact OR surface genus > 0); its contact parameters (espmap master 5175515: heavy atoms >= 5 bonds apart, Bondi + 0.5 A) were pinned at 18:29:50, during the run, when 2 member records existed. From those two only the trial's validity and protocol fields had been read; no site value or comparison of any molecule had been seen. The folded calls use conformer geometries only. This file was written at 20:20:12, after 30 member calculations had completed, recording choices already fixed; nothing in it was chosen after seeing a member result.",
+  "folded_rule_pinned": "2026-10-23T18:29:50+09:00 (the copy of espmap master 5175515 holding intramolecular_contacts), when 2 member records existed"
+ }
+}

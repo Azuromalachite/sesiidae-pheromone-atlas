@@ -1,0 +1,171 @@
+{
+ "slug": "z3_z13_18_oh",
+ "smiles": "[OH:31][CH2:1][CH2:2]/[CH:3]=[CH:4]\\[CH2:5][CH2:6][CH2:7][CH2:8][CH2:9][CH2:10][CH2:11][CH2:12]/[CH:13]=[CH:14]\\[CH2:15][CH2:16][CH2:17][CH3:18]",
+ "expected": "CCCC/C=C\\CCCCCCCC/C=C\\CCO",
+ "seed": 20261024,
+ "n_embedded": 100,
+ "k": 20,
+ "method": "espmap v0.2.1 from_smiles (ETKDGv3 + MMFF94s), seed 20261024, 100 embeddings; bench/conformers.select: lowest MMFF94s + spread over Rg (RDKit RadiusOfGyration)",
+ "members": [
+  {
+   "conformer": "conf_00",
+   "embed_conf_id": 68,
+   "is_lowest_mmff": true,
+   "mmff_dE": 0.0,
+   "rg_selection": 5.619795894672223,
+   "rg_heavy": 5.525199973398066
+  },
+  {
+   "conformer": "conf_01",
+   "embed_conf_id": 92,
+   "is_lowest_mmff": false,
+   "mmff_dE": 5.661438800672329,
+   "rg_selection": 4.3114356207787194,
+   "rg_heavy": 4.251075073117133
+  },
+  {
+   "conformer": "conf_02",
+   "embed_conf_id": 9,
+   "is_lowest_mmff": false,
+   "mmff_dE": 6.4463389747508835,
+   "rg_selection": 4.591123973046389,
+   "rg_heavy": 4.52336454753264
+  },
+  {
+   "conformer": "conf_03",
+   "embed_conf_id": 88,
+   "is_lowest_mmff": false,
+   "mmff_dE": 4.772007848305446,
+   "rg_selection": 4.748260316332706,
+   "rg_heavy": 4.64581742422217
+  },
+  {
+   "conformer": "conf_04",
+   "embed_conf_id": 20,
+   "is_lowest_mmff": false,
+   "mmff_dE": 8.697019551844818,
+   "rg_selection": 4.827034876074665,
+   "rg_heavy": 4.74714944139713
+  },
+  {
+   "conformer": "conf_05",
+   "embed_conf_id": 48,
+   "is_lowest_mmff": false,
+   "mmff_dE": 4.473410102096857,
+   "rg_selection": 4.967058908175471,
+   "rg_heavy": 4.8589634514758675
+  },
+  {
+   "conformer": "conf_06",
+   "embed_conf_id": 26,
+   "is_lowest_mmff": false,
+   "mmff_dE": 3.7612648376012316,
+   "rg_selection": 5.05211904971874,
+   "rg_heavy": 4.96135717272628
+  },
+  {
+   "conformer": "conf_07",
+   "embed_conf_id": 97,
+   "is_lowest_mmff": false,
+   "mmff_dE": 4.0174963868689595,
+   "rg_selection": 5.097920837752867,
+   "rg_heavy": 5.026855276132173
+  },
+  {
+   "conformer": "conf_08",
+   "embed_conf_id": 52,
+   "is_lowest_mmff": false,
+   "mmff_dE": 3.9211790448914456,
+   "rg_selection": 5.1499499545674485,
+   "rg_heavy": 5.0549066530127655
+  },
+  {
+   "conformer": "conf_09",
+   "embed_conf_id": 90,
+   "is_lowest_mmff": false,
+   "mmff_dE": 3.745874676378758,
+   "rg_selection": 5.180777715769534,
+   "rg_heavy": 5.07143319558525
+  },
+  {
+   "conformer": "conf_10",
+   "embed_conf_id": 12,
+   "is_lowest_mmff": false,
+   "mmff_dE": 6.4766534375730735,
+   "rg_selection": 5.234871279928612,
+   "rg_heavy": 5.165322626751958
+  },
+  {
+   "conformer": "conf_11",
+   "embed_conf_id": 32,
+   "is_lowest_mmff": false,
+   "mmff_dE": 5.899572242529857,
+   "rg_selection": 5.29243245862981,
+   "rg_heavy": 5.189471766907589
+  },
+  {
+   "conformer": "conf_12",
+   "embed_conf_id": 29,
+   "is_lowest_mmff": false,
+   "mmff_dE": 3.0044678432799152,
+   "rg_selection": 5.359847730021224,
+   "rg_heavy": 5.277519605018953
+  },
+  {
+   "conformer": "conf_13",
+   "embed_conf_id": 73,
+   "is_lowest_mmff": false,
+   "mmff_dE": 5.930986940902379,
+   "rg_selection": 5.397554077096585,
+   "rg_heavy": 5.333489433782109
+  },
+  {
+   "conformer": "conf_14",
+   "embed_conf_id": 54,
+   "is_lowest_mmff": false,
+   "mmff_dE": 3.3355515432021683,
+   "rg_selection": 5.432092882619591,
+   "rg_heavy": 5.346179410712168
+  },
+  {
+   "conformer": "conf_15",
+   "embed_conf_id": 38,
+   "is_lowest_mmff": false,
+   "mmff_dE": 5.190993480913079,
+   "rg_selection": 5.458683700697084,
+   "rg_heavy": 5.380290656939926
+  },
+  {
+   "conformer": "conf_16",
+   "embed_conf_id": 13,
+   "is_lowest_mmff": false,
+   "mmff_dE": 0.8220586253593716,
+   "rg_selection": 5.496928444912841,
+   "rg_heavy": 5.4186916688188616
+  },
+  {
+   "conformer": "conf_17",
+   "embed_conf_id": 47,
+   "is_lowest_mmff": false,
+   "mmff_dE": 3.149218264331271,
+   "rg_selection": 5.641471323248722,
+   "rg_heavy": 5.539307087351007
+  },
+  {
+   "conformer": "conf_18",
+   "embed_conf_id": 94,
+   "is_lowest_mmff": false,
+   "mmff_dE": 3.908601008115003,
+   "rg_selection": 5.6909627233427384,
+   "rg_heavy": 5.61800235660889
+  },
+  {
+   "conformer": "conf_19",
+   "embed_conf_id": 98,
+   "is_lowest_mmff": false,
+   "mmff_dE": 1.6226000338998503,
+   "rg_selection": 5.8187040462983415,
+   "rg_heavy": 5.73050368118796
+  }
+ ]
+}
