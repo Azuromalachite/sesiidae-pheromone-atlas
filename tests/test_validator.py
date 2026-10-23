@@ -235,3 +235,33 @@ def test_freeze_check_catches_a_breaking_change():
     obs["/"]["required"] = obs["/"]["required"] + ["new"]  # add a required field
     problems = ss.breaks(frozen, now)
     assert any("enum lost" in p for p in problems) and any("required changed" in p for p in problems), problems
+
+
+# ---- tidy tables: rectangular, and every key joins to its entity table
+
+def test_tables_are_rectangular_and_join():
+    bt = _load("build_tables")
+    tables = {}
+    for name, text in bt.build(ROOT / "data").items():
+        lines = text.splitlines()
+        head = lines[0].split("\t")
+        rows = [dict(zip(head, line.split("\t"))) for line in lines[1:]]
+        assert all(len(line.split("\t")) == len(head) for line in lines), name
+        tables[name.removeprefix("tables/").removesuffix(".tsv")] = rows
+    ids = {t: {r[k] for r in tables[t]} for t, k in [("taxa", "taxon_id"), ("references", "reference_id"),
+                                                       ("compounds", "compound_id"), ("genomes", "genome_id"),
+                                                       ("observations", "observation_id")]}
+    joins = [("observations", "taxon_id", "taxa"), ("observations", "reference_id", "references"),
+             ("genomes", "taxon_id", "taxa"), ("genome_annotations", "genome_id", "genomes"),
+             ("taxon_synonyms", "taxon_id", "taxa"), ("compound_double_bonds", "compound_id", "compounds")]
+    for t in ("observation_experiments", "chemical_samples", "chemical_components", "chemical_values",
+              "behavioural_assays", "behavioural_stimuli", "behavioural_setups", "electrophysiology_responses"):
+        joins.append((t, "observation_id", "observations"))
+    for t in ("chemical_components", "chemical_values", "behavioural_stimuli", "electrophysiology_responses"):
+        joins.append((t, "compound_id", "compounds"))
+    for table, key, target in joins:
+        missing = {r[key] for r in tables[table] if r[key]} - ids[target]
+        assert not missing, f"{table}.{key} not in {target}: {sorted(missing)[:3]}"
+    # one row per behavioural observation in its assay table
+    n_beh = sum(r["observation_type"] == "behavioural_response" for r in tables["observations"])
+    assert len(tables["behavioural_assays"]) == n_beh

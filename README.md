@@ -21,7 +21,8 @@ python atlas_validate.py data          # validate curated records
 python scripts/build_release.py        # regenerate derived/ (CI runs it with --check)
 ```
 
-`derived/` holds machine-readable exports: one JSONL file per record kind,
+`derived/` holds machine-readable exports: tidy relational tables in
+`derived/tables/` (the analytical form), one JSONL file per record kind,
 the taxon × layer matrix, and checksums. They are generated from the records,
 never edited by hand. No release has been tagged and no DOI minted yet; to
 cite the Atlas meanwhile, see [`CITATION.cff`](CITATION.cff) and

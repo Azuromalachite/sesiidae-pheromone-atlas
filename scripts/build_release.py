@@ -32,6 +32,7 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "scripts"))
 import atlas_validate as av  # noqa: E402
 import build_taxon_layers as btl  # noqa: E402
+import build_tables as bt  # noqa: E402
 
 DERIVED = ROOT / "derived"
 SCHEMA_VERSION = "0.1"   # the frozen record shape (schemas/frozen-v0.1.json); a breaking change bumps it
@@ -61,6 +62,8 @@ def derived_files(data):
         counts[kind] = len(recs)
         out[f"{kind}.jsonl"] = jsonl(recs).encode("utf-8")
     out["taxon_layers.tsv"] = btl.build(data).encode("utf-8")
+    for name, text in bt.build(data).items():
+        out[name] = text.encode("utf-8")
     generators = sorted({json.dumps(c["generated"]["generator"], sort_keys=True)
                          for _, (_, c) in records["compounds"].items() if c.get("generated")})
     schemas = {p.name: sha256(p.read_bytes()) for p in sorted((ROOT / "schemas").glob("*.json"))}
@@ -73,15 +76,16 @@ def derived_files(data):
 
 
 def write_derived(files):
-    DERIVED.mkdir(exist_ok=True)
     for name, data in files.items():
+        (DERIVED / name).parent.mkdir(parents=True, exist_ok=True)
         (DERIVED / name).write_bytes(data)
 
 
 def check_derived(files):
     stale = [n for n, data in files.items() if not (DERIVED / n).exists() or (DERIVED / n).read_bytes() != data]
     known = set(files) | {"README.md"}
-    extra = sorted(p.name for p in DERIVED.iterdir() if p.is_file() and p.name not in known)
+    extra = sorted(p.relative_to(DERIVED).as_posix() for p in DERIVED.rglob("*")
+                   if p.is_file() and p.relative_to(DERIVED).as_posix() not in known)
     return stale, extra
 
 
@@ -120,6 +124,7 @@ def bundle(version, allow_untagged, out_root):
     contents["manifest.json"] = (json.dumps(manifest, sort_keys=True, indent=2) + "\n").encode("utf-8")
     contents["SHA256SUMS"] = "".join(f"{sha256(contents[n])}  {n}\n" for n in sorted(contents)).encode("utf-8")
     for name, data in contents.items():
+        (dest / name).parent.mkdir(parents=True, exist_ok=True)
         (dest / name).write_bytes(data)
     return dest
 

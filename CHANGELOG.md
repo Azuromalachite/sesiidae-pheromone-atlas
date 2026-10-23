@@ -48,6 +48,11 @@ nothing here is a release, and no DOI has been minted
   **`evidence.experiment_id`** on every behavioural record (backfilled across
   all 278). `evidence.author_statement_form` marks translations.
 
+- **Tidy relational tables** (`derived/tables/*.tsv`, 17 tables) generated
+  by `scripts/build_tables.py`: one entity or kind of measurement per table,
+  keyed by Atlas IDs, tested for rectangularity and join integrity. They are
+  the analytical form; `taxon_layers.tsv` is a human-facing summary.
+
 ### Frozen
 
 - **The v0.1 record shape** (`schemas/frozen-v0.1.json`, schema version 0.1).
