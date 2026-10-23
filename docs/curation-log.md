@@ -1,5 +1,33 @@
 # Curation log
 
+## 2026-10-23 (14) — scope statement and the first analysis
+
+**`docs/scope-v0.1.md`** states what v0.1 is complete for: species with a
+female pheromone identified from glands or emissions. 9 are curated and 7
+are listed to curate, with verified DOIs. No complete census was reachable:
+Ando's list returned 404, the Wayback Machine refused the request (rate
+limit), and the Pherobase sits behind a bot check. So the target list comes
+from the identifications that the curated papers cite. The gap to the
+papers' count of about 20 is stated, and the v0.1.0 tag waits for it.
+
+**`analyses/added_compound_effects.py`** is the first analysis. It reads only
+`derived/tables/`. It found 66 contrasts in which the treatment lure holds one
+compound more than its comparator, across 8 species, and separates 50 true
+additions from 16 replacements at constant dose. That distinction was not
+in the first version of the analysis; it is derivable from the tables.
+Results:
+- E3,Z13-18:OAc is the most-tested modifier, with population-dependent
+  effects in *S. tipuliformis* and suppression from 9 % up in Japanese
+  *S. tenuis*.
+- E2,Z13-18:OAc never changed catches of the 3,13-diene users.
+- Z3,Z13-18:OH is required, antagonistic or neutral depending on the
+  species.
+
+The tables answered without the YAML. The one gap is in the data: Yang
+2011's minor compounds have no amounts ("3 %"), so no share can be
+computed. This meets the "one real analysis" condition for a DOI in
+`docs/releases-and-occurrences.md`; the scope condition is not met yet.
+
 ## 2026-10-23 (13) — tidy tables as the analytical form
 
 `taxon_layers.tsv` is not tidy. It puts several compounds in one cell, and

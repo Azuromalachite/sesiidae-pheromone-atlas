@@ -265,3 +265,12 @@ def test_tables_are_rectangular_and_join():
     # one row per behavioural observation in its assay table
     n_beh = sum(r["observation_type"] == "behavioural_response" for r in tables["observations"])
     assert len(tables["behavioural_assays"]) == n_beh
+
+
+# ---- analyses read only derived/tables/, and their committed reports are current
+
+def test_analysis_reports_are_current():
+    import subprocess, sys
+    for script in sorted((ROOT / "analyses").glob("*.py")):
+        r = subprocess.run([sys.executable, str(script), "--check"], capture_output=True, text=True)
+        assert r.returncode == 0, f"{script.name}: {r.stderr}"
