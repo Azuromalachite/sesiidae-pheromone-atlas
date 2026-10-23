@@ -51,6 +51,7 @@ generated machine-readable releases.
 | [`docs/identifiers.md`](docs/identifiers.md) | the permanent `spa.` ID scheme and its rules |
 | [`docs/releases-and-occurrences.md`](docs/releases-and-occurrences.md) | decisions on citable releases, the GBIF occurrence layer and roadmap order |
 | [`docs/scope-v0.1.md`](docs/scope-v0.1.md) | what v0.1 is complete for: the scope statement, curated and target species, and how the list was built |
+| [`docs/evidence-classes.md`](docs/evidence-classes.md) | the evidence-class vocabulary (gland constituent, emitted, antennally active, attractant, addition effects, female pheromone component) and the rules that derive it from records into `derived/tables/evidence_classes.tsv` |
 | [`docs/computed-and-teaching.md`](docs/computed-and-teaching.md) | the contract for espmap results (`computed/espmap/`) and teaching bundles (`teaching/cases/` → `derived/teaching/`): layout, checks, what a bundle may assert |
 | [`docs/direction-type1-grammar.md`](docs/direction-type1-grammar.md) | v0.2 direction: a Type-I moth reaction grammar from primary experiments, applied to Sesiidae (not built) |
 | [`docs/reviews/`](docs/reviews/) | the two adversarial reviews the concept was revised against |

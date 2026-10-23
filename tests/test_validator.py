@@ -466,3 +466,43 @@ def test_committed_spot_checks_are_well_formed():
     sc = _load("spot_check")
     for d in sorted((ROOT / "review").glob("spot-check-*")):
         assert sc.summarise(d)[1] == [], d.name
+
+
+# ---- evidence classes: every class documented, every row traceable to its records
+
+def test_evidence_classes_are_documented_and_traceable():
+    bev = _load("build_evidence")
+    doc = (ROOT / "docs" / "evidence-classes.md").read_text(encoding="utf-8")
+    assert all(f"`{c}`" in doc for c in bev.CLASSES)
+    records, _ = av.load_root(ROOT / "data")
+    obs = {k: v[1] for k, v in records["observations"].items()}
+    text = bev.build(ROOT / "data")["tables/evidence_classes.tsv"]
+    lines = text.splitlines()
+    head = lines[0].split("\t")
+    assert head == bev.COLUMNS
+    rows = [dict(zip(head, line.split("\t"))) for line in lines[1:]]
+    assert rows and all(len(line.split("\t")) == len(head) for line in lines)
+    for r in rows:
+        assert r["evidence_class"] in bev.CLASSES
+        assert r["taxon_id"] in records["taxa"] and r["compound_id"] in records["compounds"]
+        ids = r["observation_ids"].split(";")
+        assert int(r["n_observations"]) == len(ids)
+        for oid in ids:
+            assert obs[oid]["taxon"] == r["taxon_id"] and r["compound_id"] in av.observed_compounds(obs[oid])
+        if r["evidence_class"] == "female_pheromone_component":
+            kinds = {obs[oid]["observation_type"] for oid in ids}
+            assert {"chemical_measurement", "behavioural_response"} <= kinds, r
+            assert r["population_match"] in ("yes", "no", "unknown")
+        else:
+            assert r["population_match"] == ""
+
+
+def test_evidence_classes_keep_contradictions():
+    # S. tenuis: the Japanese gland has the acetate and not the alcohol; the Korean one the reverse
+    bev = _load("build_evidence")
+    text = bev.build(ROOT / "data")["tables/evidence_classes.tsv"]
+    got = {tuple(l.split("\t")[1:3]) + (l.split("\t")[6],) for l in text.splitlines()[1:] if l.startswith("spa.tax.synanthedon_tenuis\t")}
+    assert ("spa.cmpd.z3_z13_18_oac", "female_detected_gland", "Japanese population") in got
+    assert ("spa.cmpd.z3_z13_18_oac", "female_not_detected", "Korean population") in got
+    assert ("spa.cmpd.z3_z13_18_oh", "female_detected_gland", "Korean population") in got
+    assert ("spa.cmpd.z3_z13_18_oh", "female_not_detected", "Japanese population") in got

@@ -48,6 +48,7 @@ it stays prose.
 | `behavioural_stimuli` | compound in a treatment or comparator lure, with amount and purity | `observation_id`, `role` |
 | `behavioural_setups` | trap and dispenser of the treatment and the comparator | `observation_id`, `role` |
 | `electrophysiology_responses` | antennal reading | `observation_id`, `compound_id` |
+| `evidence_classes` | taxon × compound × evidence class, with its supporting observations (`scripts/build_evidence.py`; rules in `docs/evidence-classes.md`) | `taxon_id`, `compound_id`, `evidence_class` |
 
 Empty cells are missing values. The files load as they are into a data frame,
 or into DuckDB:
