@@ -21,6 +21,13 @@ with its sha256 in `ensemble.json`. The teaching control
 (Z3,Z13-18:Al) is not an Atlas compound: its records live in Arrowfield,
 and its selection and run log are here with the rest of the study.
 
+**Seed fields in the member records.** Each record's `settings.seed`
+(12648430, which is 0xC0FFEE) and `settings.nconfs` (20) are espmap's
+defaults, unused here. Every member's geometry was read from its SDF
+(`--file`), so espmap generated no conformer. They are neither the pilot's
+seed nor this study's. The study's seed is 20261024, used at selection
+(`execution-manifest.json`, `selection/<slug>/selection.json`).
+
 `s001_build.py` imports espmap master's `intramolecular_contacts` from a
 copy of `esp_map.py` at commit 5175515, for the folded call (contact OR
 surface genus > 0, as the plan defines it). That rule is provisional in

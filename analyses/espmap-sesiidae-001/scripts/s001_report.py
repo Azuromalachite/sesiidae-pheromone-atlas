@@ -102,9 +102,9 @@ def main(a):
                                           if r["outcome"] in ("no data", "not evaluable") else
                                           f" The plan expected **{exp}**: "
                                           + ("as expected." if exp == r["outcome"] else
-                                             "not as expected in category: observed 'different on average', "
-                                             "which is also not resolved. The pilot predicted no resolution and "
-                                             "none occurred; the means do differ (descriptive)."
+                                             "observed different on average (also not resolved). The pilot "
+                                             "predicted no resolution and none occurred; the means do differ "
+                                             "(descriptive)."
                                              if (exp, r["outcome"]) == ("unresolved", "different on average") else
                                              "**not as expected**" + (
                                                  " — the pilot's C4-H call did not replicate under the stricter "
@@ -116,6 +116,14 @@ def main(a):
         md += [f"\n### Sensitivity: extended members only (n = {e['n'][0]} / {e['n'][1]}), beside, never instead of, "
                "the result above\n", HEAD]
         md += [row(k.split(':', 1)[1], r) for k, r in e["sites"].items() if k.startswith("primary:")]
+        md += ["\nSecondary sites, extended members only (plan section 6 applies the rule to the extended "
+               "population; reported beside the secondary rows above, never instead of them):\n", HEAD]
+        md += [row(k.split(':', 1)[1], r) for k, r in e["sites"].items() if k.startswith("secondary:")]
+        changed = [f"{k.split(':', 1)[1]} ({c['sites'][k]['outcome']} → {r['outcome']})"
+                   for k, r in e["sites"].items() if k.split(":", 1)[0] in ("primary", "secondary")
+                   and r["outcome"] != c["sites"][k]["outcome"]]
+        md.append("\nOutcomes that differ between all members and extended members only: "
+                  + ("; ".join(changed) if changed else "none") + ".")
         ex = [k.split(':', 1)[1] for k, r in c["sites"].items() if k.startswith("exploratory:") and r["outcome"] == "resolved"]
         md.append("\nExploratory, never interpreted (plan section 2): other chain sites meeting the rule: "
                   + (", ".join(ex) if ex else "none") + ".")
@@ -128,7 +136,8 @@ def main(a):
            "- Basis (def2-TZVP single points, plan section 6): " + (a.basis or "**not run**") + ".",
            "- Solvent: not studied; gas phase is the stated baseline.",
            "\n## Deviations from the plan\n", (Path(a.deviations).read_text().strip() if a.deviations else "None."),
-           "\n## No outcome of this study means\n"] + [f"- {x};" for x in NEVER]
+           "\n## No outcome of this study means\n"] + [f"- {x}{'.' if i == len(NEVER) - 1 else ';'}"
+                                                      for i, x in enumerate(NEVER)]
     md += ["\n## Provenance\n",
            "- espmap v0.2.1 (41a989d), each member an espmap.record/1 with its sha256 in the Atlas index.",
            f"- Atlas commit (records): {a.atlas or '_to fill_'}; plan frozen at 7e34658.",

@@ -25,7 +25,7 @@ Potential in kcal/mol, B3LYP/def2-SVP + RI, gas phase, 0.26 bohr, nearest-nucleu
 | C3-H | **different on average** | +2.31 | -2.78…5.02 / 1.04…6.60 | 0.93 (2.01) | +1.20…+3.42 | ✗✓✓ |
 | C4-H | **unresolved** | -0.04 | 0.27…5.08 / 0.22…5.54 | 0.69 (1.11) | -0.84…+0.74 | ✗✗✓ |
 
-- **C3-H: different on average.** We may say: the ensemble means differ, but some single conformations of the two molecules are electrostatically indistinguishable at this site. We may not say: that the site is resolved. The plan expected **unresolved**: not as expected in category: observed 'different on average', which is also not resolved. The pilot predicted no resolution and none occurred; the means do differ (descriptive).
+- **C3-H: different on average.** We may say: the ensemble means differ, but some single conformations of the two molecules are electrostatically indistinguishable at this site. We may not say: that the site is resolved. The plan expected **unresolved**: observed different on average (also not resolved). The pilot predicted no resolution and none occurred; the means do differ (descriptive).
 - **C4-H: unresolved.** We may say: under this protocol, free-molecule ESP does not resolve the two compounds at this site. We may not say: that the compounds are electrostatically identical, or that electrostatics plays no biological role. The plan expected **unresolved**: as expected.
 
 ### Secondary
@@ -43,6 +43,16 @@ Potential in kcal/mol, B3LYP/def2-SVP + RI, gas phase, 0.26 bohr, nearest-nucleu
 | C3-H | **different on average** | +1.90 | -0.60…4.16 / 1.04…6.60 | 0.86 (2.01) | +0.64…+3.15 | ✗✓✓ |
 | C4-H | **unresolved** | -0.60 | 1.45…5.08 / 0.22…5.54 | 0.68 (1.11) | -1.57…+0.33 | ✗✗✓ |
 
+Secondary sites, extended members only (plan section 6 applies the rule to the extended population; reported beside the secondary rows above, never instead of them):
+
+| site | outcome | Δ (Y − X) | range X / Y | partition (pilot-style) | bootstrap interval (selected set) | 1 2 3 |
+| --- | --- | --- | --- | --- | --- | --- |
+| head O | **unresolved** | -1.03 | -13.80…-8.02 / -12.98…-9.81 | 0.21 (0.54) | -2.00…+0.05 | ✗✓✓ |
+| global V_min | **unresolved** | -0.28 | -40.93…-39.79 / -41.20…-39.81 | 0.00 (0.00) | -0.58…+0.02 | ✗✓✓ |
+| global V_max | **different on average** | -0.35 | 19.57…20.95 / 19.34…21.03 | 0.00 (0.00) | -0.65…-0.05 | ✗✓✓ |
+
+Outcomes that differ between all members and extended members only: head O (different on average → unresolved); global V_min (different on average → unresolved); global V_max (unresolved → different on average).
+
 Exploratory, never interpreted (plan section 2): other chain sites meeting the rule: none.
 
 ## C_position: X = E3,Z13-18:OAc, Y = E2,Z13-18:OAc (n = 20 / 20)
@@ -55,7 +65,7 @@ Exploratory, never interpreted (plan section 2): other chain sites meeting the r
 | C3-H | **unresolved** | -0.35 | 1.04…6.60 / -1.79…8.80 | 0.93 (2.01) | -1.95…+1.27 | ✗✗✗ |
 | C4-H | **resolved** | +5.22 | 0.22…5.54 / 6.66…9.53 | 0.69 (1.11) | +4.57…+5.88 | ✓✓✓ |
 
-- **C2-H: different on average.** We may say: the ensemble means differ, but some single conformations of the two molecules are electrostatically indistinguishable at this site. We may not say: that the site is resolved. The plan expected **unresolved**: not as expected in category: observed 'different on average', which is also not resolved. The pilot predicted no resolution and none occurred; the means do differ (descriptive).
+- **C2-H: different on average.** We may say: the ensemble means differ, but some single conformations of the two molecules are electrostatically indistinguishable at this site. We may not say: that the site is resolved. The plan expected **unresolved**: observed different on average (also not resolved). The pilot predicted no resolution and none occurred; the means do differ (descriptive).
 - **C3-H: unresolved.** We may say: under this protocol, free-molecule ESP does not resolve the two compounds at this site. We may not say: that the compounds are electrostatically identical, or that electrostatics plays no biological role. The plan expected **unresolved**: as expected.
 - **C4-H: resolved.** We may say: under this protocol, the free molecule's ESP at this site distinguishes the two compounds by more than their conformational variation. We may not say: that this difference explains any biological difference. The plan expected **resolved**: as expected.
 
@@ -74,6 +84,16 @@ Exploratory, never interpreted (plan section 2): other chain sites meeting the r
 | C2-H | **different on average** | -2.57 | 3.30…9.27 / -0.67…6.89 | 0.93 (1.21) | -4.10…-1.09 | ✗✓✓ |
 | C3-H | **unresolved** | -0.02 | 1.04…6.60 / -1.79…7.74 | 0.86 (2.01) | -1.85…+1.86 | ✗✗✗ |
 | C4-H | **resolved** | +5.21 | 0.22…5.54 / 6.66…9.53 | 0.67 (1.11) | +4.46…+5.97 | ✓✓✓ |
+
+Secondary sites, extended members only (plan section 6 applies the rule to the extended population; reported beside the secondary rows above, never instead of them):
+
+| site | outcome | Δ (Y − X) | range X / Y | partition (pilot-style) | bootstrap interval (selected set) | 1 2 3 |
+| --- | --- | --- | --- | --- | --- | --- |
+| head O | **unresolved** | +0.84 | -12.98…-9.81 / -11.95…-6.66 | 0.83 (1.40) | -0.25…+2.00 | ✗✓✓ |
+| global V_min | **unresolved** | -0.02 | -41.20…-39.81 / -41.36…-39.82 | 0.00 (0.00) | -0.33…+0.29 | ✗✓✓ |
+| global V_max | **unresolved** | -0.07 | 19.34…21.03 / 18.60…21.57 | 0.00 (0.00) | -0.61…+0.51 | ✗✓✓ |
+
+Outcomes that differ between all members and extended members only: none.
 
 Exploratory, never interpreted (plan section 2): other chain sites meeting the rule: none.
 
@@ -101,6 +121,14 @@ Exploratory, never interpreted (plan section 2): other chain sites meeting the r
 | --- | --- | --- | --- | --- | --- | --- |
 | global V_max | **resolved** | +25.96 | 19.57…20.95 / 34.00…51.68 | 0.00 (0.00) | +22.99…+28.66 | ✓✓✓ |
 | global V_min | **different on average** | -1.15 | -40.93…-39.79 / -42.62…-39.09 | 0.00 (0.00) | -1.67…-0.61 | ✗✓✓ |
+
+Secondary sites, extended members only (plan section 6 applies the rule to the extended population; reported beside the secondary rows above, never instead of them):
+
+| site | outcome | Δ (Y − X) | range X / Y | partition (pilot-style) | bootstrap interval (selected set) | 1 2 3 |
+| --- | --- | --- | --- | --- | --- | --- |
+| head O | **resolved** | -21.02 | -13.80…-8.02 / -31.95…-29.03 | 5.98 (6.73) | -21.94…-19.94 | ✓✓✓ |
+
+Outcomes that differ between all members and extended members only: none.
 
 Exploratory, never interpreted (plan section 2): other chain sites meeting the rule: none.
 
@@ -142,12 +170,12 @@ The analysis and report scripts were tested during the run, on the pilot's K = 1
 - that biological activity is predicted;
 - that a site is where a desaturase or other enzyme acts;
 - anything about solvated, bound or membrane-embedded states;
-- anything about taxa or compounds outside the case bundle;
+- anything about taxa or compounds outside the case bundle.
 
 ## Provenance
 
 - espmap v0.2.1 (41a989d), each member an espmap.record/1 with its sha256 in the Atlas index.
 - Atlas commit (records): base 30c4a11; records added by the PR that adds this file; plan frozen at 7e34658.
-- Arrowfield commit: 9d7720b (main); control records in Arrowfield controls/ (PR #6).
+- Arrowfield commit: 4711f9f (main); control records in Arrowfield controls/ (PR #6).
 - Folded: an intramolecular contact (espmap master 5175515's provisional rule) or surface genus > 0.
 - Partition sensitivity: section 4's definition decides; on 2026-10-23, before any analysis, the user chose to keep it and to report the pilot's max-member number beside it. The plan's pilot table quotes that pilot-style number (1.43 at C4-H); section 4's gives 0.77 on the same data.
