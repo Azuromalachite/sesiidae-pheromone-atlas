@@ -22,7 +22,7 @@ import atlas_validate as av  # noqa: E402
 OUT = ROOT / "derived" / "taxon_layers.tsv"
 COLUMNS = [
     "taxon_id", "species", "genome_status", "assembly_accession", "assembly_name", "assembly_level",
-    "annotation_id", "pep_fasta_md5", "pheromone_status", "chemical_materials", "compounds_detected_in_females",
+    "annotation_id", "pep_fasta_md5", "curation_coverage", "chemical_materials", "compounds_detected_in_females",
     "compounds_tested_negative", "n_chemical_measurement", "n_behavioural_response", "n_electrophysiology",
     "references", "search_basis",
 ]
@@ -75,15 +75,15 @@ def build(data):
         mine_searches = sorted((s for s in searches.get("pheromone", []) if s["scope"].get("taxon") == tid),
                                key=lambda s: s["date"], reverse=True)
         if found:
-            status = "female_chemistry_curated"
+            coverage = "female_chemistry_curated"
         elif n["behavioural_response"]:
-            status = "attraction_curated"
+            coverage = "attraction_curated"
         elif mine_searches:
-            status = {"found_not_curated": "found_not_curated", "not_found": "searched_not_found"}[mine_searches[0]["outcome"]]
+            coverage = {"found_not_curated": "found_not_curated", "not_found": "searched_not_found"}[mine_searches[0]["outcome"]]
             basis.append(mine_searches[0]["search_id"])
         else:
-            status = "not_searched"
-        row["pheromone_status"] = status
+            coverage = "not_searched"
+        row["curation_coverage"] = coverage
         row["chemical_materials"] = "; ".join(sorted({m for o in chem for m in o["sample"]["materials"]}))
         row["compounds_detected_in_females"] = "; ".join(sorted(shorthand[c] for c in found))
         row["compounds_tested_negative"] = "; ".join(sorted(shorthand[c] for c in negative))

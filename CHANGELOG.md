@@ -97,6 +97,10 @@ nothing here is a release, and no DOI has been minted
 
 ### Changed (breaking, all before any release)
 
+- **`taxon_layers.tsv`: `pheromone_status` → `curation_coverage`**, with the
+  same values. The column says how far the Atlas has curated a taxon, not
+  what it uses, and v0.1 has no status layer (`docs/scope-v0.1.md`).
+
 - **All IDs are `spa.`-rooted** (`spa.tax.`, `spa.cmpd.`, `spa.obs.`, …).
   Taxon IDs no longer carry a family prefix.
 - **Observation IDs** are `spa.obs.<taxon slug>.<reference slug>.<what>`,

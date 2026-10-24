@@ -169,7 +169,7 @@ def test_taxon_layers_never_infers_not_found():
     col = {name: i for i, name in enumerate(head)}
     for r in body:
         # a status that rests on a search names the search
-        if r[col["pheromone_status"]] in ("searched_not_found", "found_not_curated") or r[col["genome_status"]] == "no_assembly_in_census":
+        if r[col["curation_coverage"]] in ("searched_not_found", "found_not_curated") or r[col["genome_status"]] == "no_assembly_in_census":
             assert r[col["search_basis"]], r[col["species"]]
 
 
