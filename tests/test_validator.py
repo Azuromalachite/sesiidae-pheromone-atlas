@@ -547,3 +547,64 @@ def test_evidence_classes_keep_contradictions():
     assert ("spa.cmpd.z3_z13_18_oac", "female_not_detected", "Korean population") in got
     assert ("spa.cmpd.z3_z13_18_oh", "female_detected_gland", "Korean population") in got
     assert ("spa.cmpd.z3_z13_18_oh", "female_not_detected", "Japanese population") in got
+
+
+# ---- the census: what the Atlas holds, counted from the records, with no status field
+
+def _census():
+    bc = _load("build_census")
+    files = bc.build(ROOT / "data")
+    parse = lambda t: [dict(zip(t.splitlines()[0].split("\t"), l.split("\t"))) for l in t.splitlines()[1:]]
+    return bc, parse(files["tables/census_taxa.tsv"]), parse(files["tables/census_taxon_compound.tsv"]), json.loads(files["census.json"])
+
+
+def test_census_has_no_status_field():
+    # v0.1 decision (docs/scope-v0.1.md): coverage counts only, never a pheromone/synergist/antagonist label
+    bc, taxa, pairs, head = _census()
+    names = set(taxa[0]) | set(pairs[0]) | set(head) | set(head["taxa_with"])
+    assert not any(re.search(r"status|pheromone|synergist|antagonist|attractant|role", n) for n in names), names
+
+
+def test_census_counts_trace_to_records():
+    bc, taxa, pairs, head = _census()
+    records, _ = av.load_root(ROOT / "data")
+    obs = [o for _, o in records["observations"].values()]
+    assert head["observations"] == len(obs) and head["taxa"] == len(records["taxa"])
+    assert head["compounds"] == len(records["compounds"]) and head["references"] == len(records["references"])
+    by_taxon = {t["taxon_id"]: t for t in taxa}
+    assert set(by_taxon) == set(records["taxa"])
+    for tid, t in by_taxon.items():
+        mine = [o for o in obs if o["taxon"] == tid]
+        assert int(t["n_observations"]) == len(mine)
+        for layer, kind in (("chemistry", "chemical_measurement"), ("behaviour", "behavioural_response"), ("electrophysiology", "electrophysiology")):
+            assert int(t[f"n_{layer}"]) == sum(o["observation_type"] == kind for o in mine)
+        layers = [int(t[f"n_{l}"]) > 0 for l in ("chemistry", "behaviour", "electrophysiology")]   # genome is its own column, not evidence
+        assert int(t["n_evidence_layers"]) == sum(layers)
+    for key, col in (("female_chemistry", "female_chemistry"), ("behaviour", "n_behaviour"), ("electrophysiology", "n_electrophysiology"), ("genome", "genome")):
+        n = sum((t[col] == "true") if col in ("female_chemistry", "genome") else int(t[col]) > 0 for t in taxa)
+        assert head["taxa_with"][key] == n, key
+    assert head["taxa_with"]["two_or_more_evidence_layers"] == sum(int(t["n_evidence_layers"]) >= 2 for t in taxa)
+
+
+def test_census_taxon_compound_rows_add_up():
+    bc, taxa, pairs, head = _census()
+    records, _ = av.load_root(ROOT / "data")
+    for p in pairs:
+        assert p["taxon_id"] in records["taxa"] and p["compound_id"] in records["compounds"]
+        assert int(p["behaviour_n"]) == sum(int(p[c]) for c in bc.BEHAVIOUR_BUCKETS)
+        assert sum(int(p[c]) for c in bc.COUNT_COLUMNS) > 0, p
+    # the Japan/Korea reversal stays visible as counts on both sides, never netted
+    tenuis = {p["compound_id"]: p for p in pairs if p["taxon_id"] == "spa.tax.synanthedon_tenuis"}
+    for cid in ("spa.cmpd.z3_z13_18_oac", "spa.cmpd.z3_z13_18_oh"):
+        assert int(tenuis[cid]["chemical_detected"]) >= 1 and int(tenuis[cid]["chemical_not_detected"]) >= 1
+
+
+def test_readme_census_headline_matches_census():
+    # the README quotes the census; a record change that moves a number must move the sentence
+    *_, head = _census()
+    text = re.sub(r"\s+", " ", (ROOT / "README.md").read_text(encoding="utf-8"))
+    w = head["taxa_with"]
+    expect = (f"of {head['taxa']} taxa, {w['female_chemistry']} have female chemistry, {w['behaviour']} have behavioural assays "
+              f"and {w['electrophysiology']} have electrophysiology; - {w['two_or_more_evidence_layers']} have two or more of these "
+              f"evidence layers; - {w['genome']} have a genome; - {head['taxon_compound_pairs']} taxon–compound pairs are linked by records.")
+    assert expect in text

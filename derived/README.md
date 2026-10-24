@@ -49,6 +49,8 @@ it stays prose.
 | `behavioural_setups` | trap and dispenser of the treatment and the comparator | `observation_id`, `role` |
 | `electrophysiology_responses` | antennal reading | `observation_id`, `compound_id` |
 | `evidence_classes` | taxon × compound × evidence class, with its supporting observations (`scripts/build_evidence.py`; rules in `docs/evidence-classes.md`) | `taxon_id`, `compound_id`, `evidence_class` |
+| `census_taxa` | taxon: observation counts per evidence layer, genome yes/no, layers covered, compounds, references, populations (`scripts/build_census.py`) | `taxon_id` |
+| `census_taxon_compound` | taxon × compound linked by any record, counting observations by what they report (below) | `taxon_id`, `compound_id` |
 
 Empty cells are missing values. The files load as they are into a data frame,
 or into DuckDB:
@@ -60,6 +62,42 @@ JOIN 'derived/tables/observations.tsv' o USING (observation_id)
 WHERE c.detected = 'true'
 GROUP BY ALL ORDER BY ALL;
 ```
+
+## The census: what the Atlas holds
+
+`census.json`, `tables/census_taxa.tsv` and `tables/census_taxon_compound.tsv`
+count evidence coverage. They do not say what any species "uses". **No
+taxon or compound has a status** (pheromone, synergist, antagonist,
+inactive). Those labels depend on population, assay, dose, blend and study,
+so v0.1 has none (`docs/scope-v0.1.md`). A test refuses any status-like
+field.
+
+- **Evidence layers.** These are chemistry (`chemical_measurement`),
+  behaviour (`behavioural_response`) and electrophysiology.
+  `n_evidence_layers` counts the layers a taxon has. The genome is a
+  resource, not evidence, so it is a separate yes/no column and is not
+  counted as a layer.
+- **`female_chemistry`** is true when the taxon has at least one
+  `chemical_measurement` record with females as the sampled sex.
+- **`census_taxon_compound` counts.** Every count is a number of
+  observations:
+  - `chemical_detected`, `chemical_not_detected`, `chemical_not_tested`:
+    by the component's `detected`;
+  - `behaviour_n`: observations whose **treatment lure contains the
+    compound**, split into:
+    - `behaviour_increased_significant` and
+      `behaviour_decreased_significant`;
+    - `behaviour_not_significant`: tested, no difference;
+    - `behaviour_significance_not_tested`: not tested, not reported, or a
+      catch with no control.
+
+    The four parts sum to `behaviour_n`. They say nothing about which
+    component of the lure caused the effect. `evidence_classes` isolates
+    true additions.
+  - `antennal_active`, `antennal_inconsistent`, `antennal_inactive`,
+    `antennal_not_tested`: by the reading.
+- **Contradictions.** A compound found in one population and absent in
+  another has counts on both sides, and they are never netted.
 
 ## `taxon_layers.tsv`: the taxon × layer matrix
 

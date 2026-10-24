@@ -9,8 +9,9 @@ holds.
 
 v0.1.0 is tagged, with no DOI, only when all four hold:
 
-- [ ] **computed/:** the four Atlas compounds' espmap v0.2.1 ensembles
-  (espmap-sesiidae-001) are merged and pass the gate.
+- [x] **computed/:** the four Atlas compounds' espmap v0.2.1 ensembles
+  (espmap-sesiidae-001) are merged and pass the gate. Done: Atlas PR #1,
+  merge dabaf15.
 - [ ] **Human spot-check:** `review/spot-check-001` is complete, and every
   error it finds is fixed afterwards in its own traceable commit. Records
   are not repaired during the check.
@@ -20,8 +21,9 @@ v0.1.0 is tagged, with no DOI, only when all four hold:
   verdicts for the three records drawn there). The random sample says how
   reliable the Atlas is; this check says whether every fact the homework
   teaches has been read by a person.
-- [ ] **Census:** generated from the records, with no curated taxon–compound
-  status field. It counts what the Atlas holds, not what each species
+- [x] **Census:** generated from the records, with no curated taxon–compound
+  status field. Done: `scripts/build_census.py`, `derived/census.json`
+  (`derived/README.md`, "The census"). It counts what the Atlas holds, not what each species
   "uses":
   - taxon × evidence layer (chemistry, behaviour, electrophysiology, genome),
     with observation, compound, reference and population counts;

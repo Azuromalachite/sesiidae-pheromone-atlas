@@ -41,6 +41,7 @@ import build_taxon_layers as btl  # noqa: E402
 import build_tables as bt  # noqa: E402
 import export_teaching_bundle as etb  # noqa: E402
 import build_evidence as bev  # noqa: E402
+import build_census as bcn  # noqa: E402
 
 DERIVED = ROOT / "derived"
 SCHEMA_VERSION = "0.1"   # the frozen record shape (schemas/frozen-v0.1.json); a breaking change bumps it
@@ -73,6 +74,8 @@ def derived_files(data):
     for name, text in bt.build(data).items():
         out[name] = text.encode("utf-8")
     for name, text in bev.build(data).items():
+        out[name] = text.encode("utf-8")
+    for name, text in bcn.build(data).items():
         out[name] = text.encode("utf-8")
     for case in etb.cases(data):
         out[f"teaching/{case}.json"] = etb.dumps(etb.build(data, case, validated=True)).encode("utf-8")

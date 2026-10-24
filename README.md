@@ -16,6 +16,17 @@ record was extracted by Claude and re-read against the PDFs by other Claude
 reviewers. A human spot-check, 24 random records and 14 hard cases, is
 drawn and waiting in [`review/`](review/README.md).
 
+**What the Atlas holds** ([`derived/census.json`](derived/census.json),
+generated from the records):
+- of 28 taxa, 19 have female chemistry, 23 have behavioural assays and 11
+  have electrophysiology;
+- 19 have two or more of these evidence layers;
+- 11 have a genome;
+- 130 taxon–compound pairs are linked by records.
+
+These counts measure coverage, not pheromone status: no taxon or compound
+has a status label ([column guide](derived/README.md)).
+
 The taxon × layer matrix is generated from these records. There are no reaction or
 pathway records yet: this corpus records what was observed, not how it is made.
 

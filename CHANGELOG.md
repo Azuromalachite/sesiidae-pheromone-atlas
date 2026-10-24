@@ -13,6 +13,11 @@ nothing here is a release, and no DOI has been minted
 
 ### Added
 
+- **Census** (`scripts/build_census.py`, `derived/census.json`,
+  `derived/tables/census_taxa.tsv`, `derived/tables/census_taxon_compound.tsv`):
+  evidence coverage counted from the records, per taxon and per taxon ×
+  compound, with the headline in the README. No status field (v0.1
+  decision, `docs/scope-v0.1.md`); a test refuses one.
 - **Evidence classes** (`docs/evidence-classes.md`, `scripts/build_evidence.py`,
   `derived/tables/evidence_classes.tsv`): 13 classes derived from record
   fields, one row per taxon × compound × class with its observations. The
