@@ -47,6 +47,18 @@ never committed.
    - `unclear`: the paper does not settle it; say why in `notes`.
 
    Fill in `checker` (your name) and `date` too.
+
+   **What counts as an error** (clarified 2026-10-25, after the first
+   record checked; it applies to every record in both checks):
+   - A row is wrong only when its claim is false, is unsupported in the
+     form claimed, or misrepresents the paper.
+   - Imprecision is not an error. For example, "Table 4, test IV" for a
+     record of Test IV-1 is imprecise, because the trial ID and the numbers
+     pin it to IV-1. Give such a record `ok` and name the imprecision in
+     `notes`. It is tidied after the check.
+   - A quotation is verbatim unless the sheet marks its form. A paraphrase
+     stored as verbatim is an error in the quotation row, even when its
+     meaning is right.
 4. **Check what you see.** Record what the paper shows, not what you think
    the curator meant. A record whose notes explain a judgement call is still
    checked against the paper.
