@@ -32,8 +32,8 @@
         "spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.tasmania_1986"
       ],
       "observed_contrast": {
-        "a": "Synanthedon tipuliformis (Kemence, Pest County, Hungary), field_trapping: E2,Z13-18:OAc 100 ug + E3,Z13-18:OAc 3 ug vs E2,Z13-18:OAc 100 ug (E2,Z13-18:OAc alone, 100 micrograms): increased, significant; 40.81 vs 15.38 mean_catch_per_trap (trap_catch, as_reported)",
-        "b": "Synanthedon tipuliformis (Huonville, Tasmania, Australia), field_trapping: E2,Z13-18:OAc 100 ug + E3,Z13-18:OAc 3 ug vs E2,Z13-18:OAc 100 ug (E2,Z13-18:OAc alone, 100 micrograms): decreased, significant; 3.24 vs 6.73 mean_catch_per_trap (trap_catch, as_reported)"
+        "a": "Synanthedon tipuliformis (Kemence, Pest County, Hungary), field_trapping: E2,Z13-18:OAc 100 ug + E3,Z13-18:OAc 3 ug vs E2,Z13-18:OAc 100 ug (E2,Z13-18:OAc alone, 100 micrograms): increased, significant; 40.81 vs 15.38 mean_catch_per_trap_per_check (trap_catch, as_reported)",
+        "b": "Synanthedon tipuliformis (Huonville, Tasmania, Australia), field_trapping: E2,Z13-18:OAc 100 ug + E3,Z13-18:OAc 3 ug vs E2,Z13-18:OAc 100 ug (E2,Z13-18:OAc alone, 100 micrograms): decreased, significant; 3.24 vs 6.73 mean_catch_per_trap_per_check (trap_catch, as_reported)"
       }
     },
     {
@@ -43,7 +43,7 @@
         "spa.obs.synanthedon_tipuliformis.suckling_2005.trap_e3.tasmania"
       ],
       "observed_contrast": {
-        "a": "Synanthedon tipuliformis (Huonville, Tasmania, Australia), field_trapping: E2,Z13-18:OAc 100 ug + E3,Z13-18:OAc 3 ug vs E2,Z13-18:OAc 100 ug (E2,Z13-18:OAc alone, 100 micrograms): decreased, significant; 3.24 vs 6.73 mean_catch_per_trap (trap_catch, as_reported)",
+        "a": "Synanthedon tipuliformis (Huonville, Tasmania, Australia), field_trapping: E2,Z13-18:OAc 100 ug + E3,Z13-18:OAc 3 ug vs E2,Z13-18:OAc 100 ug (E2,Z13-18:OAc alone, 100 micrograms): decreased, significant; 3.24 vs 6.73 mean_catch_per_trap_per_check (trap_catch, as_reported)",
         "b": "Synanthedon tipuliformis (near Hobart, Tasmania, Australia), field_trapping: E2,Z13-18:OAc 97 parts + E3,Z13-18:OAc 3 parts vs E2,Z13-18:OAc amount not given (E2,Z13-18:OAc alone, same doses (100 and 1000 micrograms)): no_effect, not_significant"
       }
     },
@@ -1178,7 +1178,7 @@
           "measure": "trap_catch",
           "qualifier": "as_reported",
           "treatment_value": 40.81,
-          "unit": "mean_catch_per_trap"
+          "unit": "mean_catch_per_trap_per_check"
         },
         "significance": "significant"
       },
@@ -1188,7 +1188,7 @@
         "doi": "10.1007/BF01021027"
       },
       "source_location": "Table 5",
-      "statement": "Synanthedon tipuliformis (Kemence, Pest County, Hungary), field_trapping: E2,Z13-18:OAc 100 ug + E3,Z13-18:OAc 3 ug vs E2,Z13-18:OAc 100 ug (E2,Z13-18:OAc alone, 100 micrograms): increased, significant; 40.81 vs 15.38 mean_catch_per_trap (trap_catch, as_reported)",
+      "statement": "Synanthedon tipuliformis (Kemence, Pest County, Hungary), field_trapping: E2,Z13-18:OAc 100 ug + E3,Z13-18:OAc 3 ug vs E2,Z13-18:OAc 100 ug (E2,Z13-18:OAc alone, 100 micrograms): increased, significant; 40.81 vs 15.38 mean_catch_per_trap_per_check (trap_catch, as_reported)",
       "taxon": {
         "accepted_name": "Synanthedon tipuliformis",
         "atlas_id": "spa.tax.synanthedon_tipuliformis",
@@ -1255,7 +1255,7 @@
           "measure": "trap_catch",
           "qualifier": "as_reported",
           "treatment_value": 3.24,
-          "unit": "mean_catch_per_trap"
+          "unit": "mean_catch_per_trap_per_check"
         },
         "significance": "significant"
       },
@@ -1265,7 +1265,7 @@
         "doi": "10.1007/BF01021027"
       },
       "source_location": "Table 5",
-      "statement": "Synanthedon tipuliformis (Huonville, Tasmania, Australia), field_trapping: E2,Z13-18:OAc 100 ug + E3,Z13-18:OAc 3 ug vs E2,Z13-18:OAc 100 ug (E2,Z13-18:OAc alone, 100 micrograms): decreased, significant; 3.24 vs 6.73 mean_catch_per_trap (trap_catch, as_reported)",
+      "statement": "Synanthedon tipuliformis (Huonville, Tasmania, Australia), field_trapping: E2,Z13-18:OAc 100 ug + E3,Z13-18:OAc 3 ug vs E2,Z13-18:OAc 100 ug (E2,Z13-18:OAc alone, 100 micrograms): decreased, significant; 3.24 vs 6.73 mean_catch_per_trap_per_check (trap_catch, as_reported)",
       "taxon": {
         "accepted_name": "Synanthedon tipuliformis",
         "atlas_id": "spa.tax.synanthedon_tipuliformis",
@@ -1332,7 +1332,7 @@
           "measure": "trap_catch",
           "qualifier": "as_reported",
           "treatment_value": 0.15,
-          "unit": "mean_catch_per_trap"
+          "unit": "mean_catch_per_trap_per_check"
         },
         "significance": "not_significant"
       },
@@ -1342,7 +1342,7 @@
         "doi": "10.1007/BF01021027"
       },
       "source_location": "Table 6",
-      "statement": "Synanthedon tipuliformis (Slateford, Tasmania, Australia), field_trapping: E2,Z13-18:OAc 10 ug + E3,Z13-18:OAc 0.3 ug vs E2,Z13-18:OAc 10 ug (E2,Z13-18:OAc alone, 10 micrograms): no_effect, not_significant; 0.15 vs 0.19 mean_catch_per_trap (trap_catch, as_reported)",
+      "statement": "Synanthedon tipuliformis (Slateford, Tasmania, Australia), field_trapping: E2,Z13-18:OAc 10 ug + E3,Z13-18:OAc 0.3 ug vs E2,Z13-18:OAc 10 ug (E2,Z13-18:OAc alone, 10 micrograms): no_effect, not_significant; 0.15 vs 0.19 mean_catch_per_trap_per_check (trap_catch, as_reported)",
       "taxon": {
         "accepted_name": "Synanthedon tipuliformis",
         "atlas_id": "spa.tax.synanthedon_tipuliformis",

@@ -1,5 +1,43 @@
 # Curation log
 
+## 2026-10-25 (19) — response units checked against each paper's tables
+
+**Prompted by the human check.** The check found that Szöcs 1990's Table
+5 reports "Mean No. moths/trap/check", while its records said
+`mean_catch_per_trap`. Every paper with behavioural records was then
+checked: 28 papers, 480 records. Entry 18, on the branch
+`fix/trap-dispenser`, is the matching pass for traps and dispensers. Both
+were merged only after the human checks were complete.
+
+**What a unit means** is now stated in the schema:
+- `mean_catch_per_trap` is the catch over the whole test, averaged across
+  traps;
+- the per-day, per-week and per-check units are rates that the source
+  itself reports;
+- `total_catch` and `count` are sums.
+
+| paper | records | was | now | the source says |
+|---|---|---|---|---|
+| Szöcs 1990 | 6 | `mean_catch_per_trap` | `mean_catch_per_trap_per_check` (new) | Tables 1, 5, 6: "Mean No. moths/trap/check" |
+| James 2001 | 1 | `mean_catch_per_trap` | `mean_catch_per_trap_per_check` | "39.6 ± 5.5 moths/trap/visit"; traps checked three times a week |
+| Naka 2007, *M. longipes* | 14 | `count` | `mean_count_per_day` (new) | Table 2: "Mean number of 4 days", males approaching or touching septa, with no trap |
+
+**Checked and left as they were:**
+- **Mean per trap over the test:**
+  - Yang 2009, 2011 and 2012;
+  - Naka 2006, 2008, 2010 and 2013, and Naka 2007 *M. japona*;
+  - Mozūraitis 2006, Francke 2004, Judd 2011 and 2014, Kwon 2021;
+  - Szöcs 1985, Suckling 2005, Voerman 1984 (Table 1 and text), Snow 1987
+    (Table 2);
+  - Priesner 1986: its "♂/trap/flight season" is the whole test.
+- **Rates as reported:** Klun 1990 (per day); Levi-Zada 2011 and Zhang
+  2005 (per week).
+- **Totals:** Karalius 2001, Mozūraitis 2013, Zhang 1986, Tamaki 1977,
+  Voerman 1984 (Table 2), Snow 1987 (Table 1) and the Tumlinson 1974
+  trapping test. Zhang 1986's text gives per-trap averages, but the
+  records use the tables' Total column, which is labelled as such.
+- **Counts:** the Tumlinson 1974 bioassays.
+
 ## 2026-10-23 (17) — *P. tabaniformis* in China, and the Kazakh field screen
 
 | paper | taxon | records |

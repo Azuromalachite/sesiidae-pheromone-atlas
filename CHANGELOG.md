@@ -71,6 +71,12 @@ nothing here is a release, and no DOI has been minted
   the analytical form; `taxon_layers.tsv` is a human-facing summary.
 - **Response unit `mean_catch_per_trap_per_day`** (additive, after the
   freeze), for Klun et al. 1990.
+- **Response units `mean_catch_per_trap_per_check` and
+  `mean_count_per_day`** (additive), with a description of every unit. They
+  are used by Szöcs et al. 1990 and James et al. 2001 (per check), and by
+  the *M. longipes* observations of Naka et al. 2007 (per day, no trap).
+  Every paper's units were checked against its tables (curation log, entry
+  19).
 - **The six papers of the v0.1 target list** are curated (162
   observations): Tumlinson 1974, Snow 1987, Klun 1990, Naka 2010, Yang 2009
   and Zhang 2005. The squash vine borer is `spa.tax.eichlinia_cucurbitae`

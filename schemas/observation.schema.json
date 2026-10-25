@@ -74,7 +74,7 @@
           "description": "the size of the effect, when the source gives one",
           "properties": {
             "measure": {"enum": ["trap_catch", "close_range_approach", "landing", "other"]},
-            "unit": {"enum": ["fold_change_vs_comparator", "percent_of_males", "count", "mean_catch_per_trap", "mean_catch_per_trap_per_week", "mean_catch_per_trap_per_day", "total_catch"]},
+            "unit": {"enum": ["fold_change_vs_comparator", "percent_of_males", "count", "mean_catch_per_trap", "mean_catch_per_trap_per_week", "mean_catch_per_trap_per_day", "mean_catch_per_trap_per_check", "mean_count_per_day", "total_catch"], "description": "per trap: over the whole test, as a mean across traps; per day, week or check: a rate the source reports so; mean_count_per_day: a mean over observation days with no trap; total_catch and count: sums, not means"},
             "treatment_value": {"type": ["number", "null"]},
             "comparator_value": {"type": ["number", "null"]},
             "qualifier": {"enum": ["as_reported", "approximate", "more_than", "less_than"]}

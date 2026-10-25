@@ -471,12 +471,13 @@ def test_committed_spot_checks_are_well_formed():
 
 
 def test_spot_check_001_is_reproduced_by_its_draw(tmp_path):
-    # the committed draw is what the script draws from its seed: nothing was picked by hand after the fact
+    # the committed draw is what the script draws from its seed: nothing was picked by hand after the fact.
+    # The selection is compared, not the record values or hashes: records are fixed after a check, and
+    # summarise reports them as changed since the draw
     sc = _load("spot_check")
     sc.draw(tmp_path / "spot-check-001", 20261023, 24)
-    for name in ("sheet.md", "results.yaml"):
-        assert (tmp_path / "spot-check-001" / name).read_text(encoding="utf-8") == \
-               (ROOT / "review" / "spot-check-001" / name).read_text(encoding="utf-8"), name
+    pick = lambda d: [(r["observation_id"], r["part"]) for r in yaml.safe_load((d / "results.yaml").read_text(encoding="utf-8"))["records"]]
+    assert pick(tmp_path / "spot-check-001") == pick(ROOT / "review" / "spot-check-001")
 
 
 def test_case_check_covers_every_case_observation_once():
