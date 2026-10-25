@@ -3,6 +3,8 @@ observation_type: behavioural_response
 taxon: spa.tax.synanthedon_tipuliformis
 context: {sex: male, habitat: red currant field, population: null, locality: "Prosser, Washington, USA"}
 assay: field_trapping
+trap: {design: other, colour: null, supplier: 'Trece, Salinas, CA'}
+dispenser: {design: rubber_septum, description: 'red rubber septum, 1.5 mg per septum'}
 blend:
   - {compound: spa.cmpd.e2_z13_18_oac, amount: {value: 97, unit: ratio_part}}
   - {compound: spa.cmpd.e3_z13_18_oac, amount: {value: 3, unit: ratio_part}}
@@ -18,4 +20,4 @@ evidence:
   taxon_name_as_reported: Synanthedon tipuliformis
   source_location: "Results, Pheromone-Trapping"
   author_statement: "Unbaited traps did not catch any moths except during peak abundance"
-  notes: "May 15 - August 16, 2000; 3 baited and 3 unbaited traps per site. The value is the untreated commercial site (mean per trap per visit); the insecticide-treated and abandoned sites gave 4.8 and 14.4. A monitoring study, not a blend test."
+  notes: "May 15 - August 16, 2000; 3 baited and 3 unbaited traps per site. The value is the untreated commercial site (mean per trap per visit); the insecticide-treated and abandoned sites gave 4.8 and 14.4. A monitoring study, not a blend test. Trap and dispenser from Methods, 2026-10-25: Trap: Pherocon IC sticky trap."

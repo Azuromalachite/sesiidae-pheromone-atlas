@@ -1,5 +1,62 @@
 # Curation log
 
+## 2026-10-25 (18) — trap and dispenser from each paper's Methods
+
+**Prompted by the human check.** `review/case-check-sesiidae-homework-1`
+found trap and dispenser recorded as "not given" for Yang 2012 and Szöcs
+1990, although both papers' Methods give them. A count across all 480
+behavioural records found the same gap in 15 papers. This pass read each
+paper's Methods and changed 105 records. The fields were added on a branch
+and merged only after both human checks were complete, so the records the
+checker read are the records as curated.
+
+**Rules:**
+- A field is filled only from the paper's own text.
+- A field stays absent (shown as "not given") only where the paper is
+  silent, or where there was no trap. Each such record's notes say which,
+  after "Trap and dispenser from Methods, 2026-10-25".
+- Existing trap or dispenser values are never replaced.
+- A named trap that the schema has no value for keeps `design: other`, with
+  its name in the notes; no wing or delta design is inferred from a product
+  name. This covers the Tetra trap, the plastic prism trap, Zoecon ICP and
+  Pherocon IC.
+
+| paper | records | added |
+|---|---|---|
+| Yang 2012 | 5 | sticky delta trap (Green Agro Tech); white rubber septum, 8 mm OD. The caged-female comparator gets its own dispenser |
+| Yang 2011 | 15 | rubber septum (Aldrich) |
+| Naka 2006 | 14 | white rubber septum, 8 mm OD (Sigma-Aldrich) |
+| Kwon 2021 | 34 | sleeve-stopper septum (Sigma-Aldrich), loaded with BHT |
+| Mozūraitis 2006 | 4 | Atracon A delta trap, opaque white (Flora Co.); red rubber tube, 8 × 15 mm |
+| Francke 2004 | 3 | delta traps, opaque white. Denmark: red rubber cap; Lithuania: Atracon A, red rubber tube |
+| Priesner 1986 | 3 | Tetra trap (`other`); rubber cap (serum bottle cap, 1.8 cm) |
+| Szöcs 1985 | 1 | Tetra trap (`other`); 1 × 1 cm grey rubber tubing |
+| Szöcs 1990 | 7 | dispenser for every trap record (1 × 1 cm Taurus rubber tubing, sent to Australia and New Zealand too); traps by country and year (below) |
+| Tamaki 1977 | 2 | Takeda plastic trap with a 25 × 30 cm sticky board (`sticky_board`); rubber cap (Takeda); curator's translation |
+| Suckling 2005 | 2 | traps only: composite funnel (New Zealand), white or yellow delta (Tasmania). The lure carrier is not described |
+| James 2001 | 1 | Pherocon IC sticky trap (`other`, Trécé); red rubber septum |
+| Voerman 1984 | 1 | delta trap, opaque white |
+| Tumlinson 1974 | 13 | none: the field bioassay counted males at a petri dish, with no trap (note only) |
+
+**Szöcs 1990 traps:**
+- Hungary 1985 (Table 1): Tetra trap.
+- Hungary 1986 (Table 5): transparent plastic trap of similar shape and
+  size.
+- Tasmania 1984–85 (Table 1): plastic prism trap.
+- New Zealand (Table 5): Zoecon ICP design.
+- Tasmania 1986 and 1987 (Tables 5 and 6): **not given**. The Methods name
+  prism traps for 1984–85 only and give just spacings for the later years.
+- The approach observations had no trap, and the bait dispenser is not
+  described.
+
+**Left as they were:**
+- the 14 *M. longipes* records of Naka 2007, whose lures were pinned to
+  plants and watched, with no trap;
+- every record that already had both fields.
+
+**Still open:** response units. Szöcs 1990 reports moths per trap per
+check, which the schema cannot yet say. This is left until after the check.
+
 ## 2026-10-23 (17) — *P. tabaniformis* in China, and the Kazakh field screen
 
 | paper | taxon | records |

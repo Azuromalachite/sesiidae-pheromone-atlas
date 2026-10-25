@@ -3,6 +3,8 @@ observation_type: behavioural_response
 taxon: spa.tax.synanthedon_tipuliformis
 context: {sex: male, habitat: currant plantation, population: null, locality: "Bernecebaráti, Hungary"}
 assay: field_trapping
+trap: {design: other, colour: null, supplier: null}
+dispenser: {design: rubber_tube, description: '1 x 1 cm piece of grey rubber tubing, loaded in 10 ul hexane'}
 blend:
   - {compound: spa.cmpd.e2_z13_18_oac, amount: {value: 500, unit: microgram}}
   - {compound: spa.cmpd.z13_18_oac, amount: {value: 100, unit: microgram}}
@@ -18,4 +20,4 @@ evidence:
   taxon_name_as_reported: Synanthedon tipuliformis
   source_location: "Table 1, test A"
   author_statement: "Statistically significant differences could be found, however, only in the case of the first test at 5:1 diene/monoene ratio"
-  notes: "June 8-22, 1984; 5 replicates; Duncan's test. Five other ratios in test A and all four in test B were not significant. The same group found no consistent Z13-18:OAc effect in 1985-87 (Szöcs et al. 1990)."
+  notes: "June 8-22, 1984; 5 replicates; Duncan's test. Five other ratios in test A and all four in test B were not significant. The same group found no consistent Z13-18:OAc effect in 1985-87 (Szöcs et al. 1990). Trap and dispenser from Methods, 2026-10-25: Trap: Tetra trap (Arn et al. 1979)."

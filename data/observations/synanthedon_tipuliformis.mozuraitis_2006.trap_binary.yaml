@@ -3,6 +3,8 @@ observation_type: behavioural_response
 taxon: spa.tax.synanthedon_tipuliformis
 context: {sex: male, habitat: black currant plantation, population: null, locality: "Kairėnai near Vilnius, Lithuania"}
 assay: field_trapping
+trap: {design: delta, colour: opaque white, supplier: 'Flora Co., Tartu, Estonia'}
+dispenser: {design: rubber_tube, description: 'red rubber tube, 8 x 15 mm'}
 blend:
   - {compound: spa.cmpd.e2_z13_18_oac, amount: {value: 280, unit: microgram}}
   - {compound: spa.cmpd.e3_z13_18_oac, amount: {value: 2.3, unit: microgram}}
@@ -18,4 +20,4 @@ evidence:
   taxon_name_as_reported: Synanthedon tipuliformis
   source_location: "Table I"
   author_statement: "increased the effectiveness of E2,Z13-18:OAc over seven times"
-  notes: "June 1-29, 2001; 5 replicates; Kruskal-Wallis then Mann-Whitney U, P < 0.05. Means ± SD: 20.8 ± 7.3 vs 2.8 ± 1.5."
+  notes: "June 1-29, 2001; 5 replicates; Kruskal-Wallis then Mann-Whitney U, P < 0.05. Means ± SD: 20.8 ± 7.3 vs 2.8 ± 1.5. Trap and dispenser from Methods, 2026-10-25: Trap: Atracon A delta trap with a sticky bottom."

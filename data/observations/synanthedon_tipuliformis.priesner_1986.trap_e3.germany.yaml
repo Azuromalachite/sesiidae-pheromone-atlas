@@ -3,6 +3,8 @@ observation_type: behavioural_response
 taxon: spa.tax.synanthedon_tipuliformis
 context: {sex: male, population: null, locality: "Starnberg/Seewiesen, Germany"}
 assay: field_trapping
+trap: {design: other, colour: null, supplier: null}
+dispenser: {design: other, description: 'rubber cap (serum bottle cap, 1.8 cm diameter)'}
 blend:
   - {compound: spa.cmpd.e2_z13_18_oac, amount: {value: 100, unit: microgram}}
   - {compound: spa.cmpd.e3_z13_18_oac, amount: {value: 3, unit: microgram}}
@@ -18,4 +20,4 @@ evidence:
   taxon_name_as_reported: Synanthedon tipuliformis
   source_location: "Table 1, 1984"
   author_statement: "addition of 3 or 10% of the E3Z13 isomer has a pronounced enhancing effect on trap captures"
-  notes: "Mean males per trap per flight season, 4 replicates, no statistical test. 1985 (6 replicates): 11.7 vs 2.3. At 100:100 the E3 isomer gave 0 in both years, so the effect reverses with ratio."
+  notes: "Mean males per trap per flight season, 4 replicates, no statistical test. 1985 (6 replicates): 11.7 vs 2.3. At 100:100 the E3 isomer gave 0 in both years, so the effect reverses with ratio. Trap and dispenser from Methods, 2026-10-25: Trap: Tetra trap (Arn et al. 1979)."

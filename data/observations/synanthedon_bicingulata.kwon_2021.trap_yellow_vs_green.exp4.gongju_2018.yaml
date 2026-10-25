@@ -4,6 +4,7 @@ taxon: spa.tax.synanthedon_bicingulata
 context: {sex: male, habitat: roadside cherry trees, population: "Korean population", locality: "Gongju, Republic of Korea"}
 assay: field_trapping
 trap: {design: bucket, colour: yellow, colour_lab: {L: 59.29, a: 6.88, b: 45.80}, supplier: Korea Institute of Insect Pheromone}
+dispenser: {design: rubber_sleeve_stopper, description: 'sleeve-stopper septum, 2.4 mm bottom ID, 5.3 mm OD (Sigma-Aldrich), loaded with the lure and an equal amount of BHT'}
 blend: [{compound: spa.cmpd.e3_z13_18_oac, amount: {value: 0.4, unit: milligram}, purity: {value: 94.18, kind: unspecified, basis: measured, method: GC-MS peak area on HP-5MS (Fig. 4)}}, {compound: spa.cmpd.z3_z13_18_oac, amount: {value: 0.6, unit: milligram}, purity: {value: 82.8, kind: unspecified, basis: measured, method: GC-MS peak area on HP-5MS (Fig. 4)}}]
 comparator:
   description: same lure in a green bucket trap

@@ -3,6 +3,8 @@ observation_type: behavioural_response
 taxon: spa.tax.synanthedon_scoliaeformis
 context: {sex: male, habitat: deciduous forest edge with birch, population: null, locality: "Visoriai and Žemaitėliai near Vilnius, Lithuania"}
 assay: field_trapping
+trap: {design: delta, colour: opaque white, supplier: 'Flora Co., Tartu, Estonia'}
+dispenser: {design: rubber_tube, description: 'red rubber tube, 8 x 15 mm'}
 blend:
   - {compound: spa.cmpd.e2_z13_18_oac, amount: {value: 280, unit: microgram}}
   - {compound: spa.cmpd.e3_z13_18_oac, amount: {value: 2.3, unit: microgram}}
@@ -18,4 +20,4 @@ evidence:
   taxon_name_as_reported: Synanthedon scoliaeformis
   source_location: "Table II"
   author_statement: "suppressed the attractiveness of the latter acetate entirely"
-  notes: "Zero catches carry no letter in Table II, so no test is stated for this pair. 5 replicates."
+  notes: "Zero catches carry no letter in Table II, so no test is stated for this pair. 5 replicates. Trap and dispenser from Methods, 2026-10-25: Trap: Atracon A delta trap with a sticky bottom."

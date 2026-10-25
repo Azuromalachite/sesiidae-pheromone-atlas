@@ -3,6 +3,8 @@ observation_type: behavioural_response
 taxon: spa.tax.synanthedon_tipuliformis
 context: {sex: male, habitat: black currant plantation, population: null, locality: "Irwell, Canterbury, New Zealand"}
 assay: field_trapping
+trap: {design: other, colour: null, supplier: Zoecon}
+dispenser: {design: rubber_tube, description: '1 x 1 cm piece of rubber tubing (Taurus, Budapest), loaded in 10 ul hexane'}
 blend:
   - {compound: spa.cmpd.e2_z13_18_oac, amount: {value: 100, unit: microgram}}
   - {compound: spa.cmpd.e3_z13_18_oac, amount: {value: 3, unit: microgram}}
@@ -18,4 +20,4 @@ evidence:
   taxon_name_as_reported: Synanthedon tipuliformis
   source_location: "Table 5"
   author_statement: "resulted in a statistically significant increase in captures in both New Zealand and Hungary"
-  notes: "December 13, 1985 - January 3, 1986; 8 traps per treatment; checks counted as repetitions. Contradicted in the same region in 2003-04 by spa.obs.synanthedon_tipuliformis.suckling_2005.trap_e3.new_zealand; the Atlas records both and decides neither."
+  notes: "December 13, 1985 - January 3, 1986; 8 traps per treatment; checks counted as repetitions. Contradicted in the same region in 2003-04 by spa.obs.synanthedon_tipuliformis.suckling_2005.trap_e3.new_zealand; the Atlas records both and decides neither. Trap and dispenser from Methods, 2026-10-25: Trap: Zoecon ICP design."

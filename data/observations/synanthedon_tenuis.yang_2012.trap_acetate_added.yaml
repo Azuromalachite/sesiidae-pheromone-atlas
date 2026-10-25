@@ -3,6 +3,8 @@ observation_type: behavioural_response
 taxon: spa.tax.synanthedon_tenuis
 context: {sex: male, habitat: persimmon orchard, population: "Korean population", locality: "Gimhae, Republic of Korea"}
 assay: field_trapping
+trap: {design: delta, colour: null, supplier: 'Green Agro Tech, Gyeongsan, Korea'}
+dispenser: {design: rubber_septum, description: 'white rubber septum, 8 mm OD (Aldrich Chemical)'}
 blend:
   - {compound: spa.cmpd.z3_z13_18_oh, amount: {value: 500, unit: microgram}}
   - {compound: spa.cmpd.z3_z13_18_oac, amount: {value: 50, unit: microgram}}

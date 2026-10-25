@@ -3,6 +3,8 @@ observation_type: behavioural_response
 taxon: spa.tax.sesia_apiformis
 context: {sex: male, habitat: green stands of poplar, population: null, locality: "Roskilde, Hojby and Sidinge, Zealand, Denmark"}
 assay: field_trapping
+trap: {design: delta, colour: opaque white, supplier: 'Danish Institute of Plant and Soil Science, Lyngby'}
+dispenser: {design: other, description: 'red rubber cap (serum bottle cap no. 90142, Auer Bittman Soulie, Zurich)'}
 blend:
   - {compound: spa.cmpd.z3_z13_18_oh, amount: {value: 200, unit: microgram}}
   - {compound: spa.cmpd.e2_z13_18_al, amount: {value: 300, unit: microgram}}
@@ -17,4 +19,4 @@ evidence:
   taxon_name_as_reported: Sesia apiformis
   source_location: "Table 1"
   author_statement: "When synthetic compounds were tested alone or as mixtures in the ratios identified in extracts of abdominal tips of females, only blends were attractive"
-  notes: "July 23 - August 1, 1996; 5 replicates. Zero-catch lures were excluded from Duncan's test, so no test is stated against single compounds."
+  notes: "July 23 - August 1, 1996; 5 replicates. Zero-catch lures were excluded from Duncan's test, so no test is stated against single compounds. Trap and dispenser from Methods, 2026-10-25: Trap: smaller delta trap, sticky bottom 10 x 15 cm."

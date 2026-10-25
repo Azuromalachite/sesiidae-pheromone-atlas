@@ -1083,7 +1083,10 @@
         "population": "Korean population",
         "sex": "male"
       },
-      "dispenser": null,
+      "dispenser": {
+        "description": "white rubber septum, 8 mm OD (Aldrich Chemical)",
+        "design": "rubber_septum"
+      },
       "dose": null,
       "evidence": {
         "atlas_notes": "May 30 - June 4, 2011. Trial 2 gave the same result (0 vs 5.3). Zero-catch treatments were excluded from the ANOVA, so no test is stated.",
@@ -1117,7 +1120,11 @@
         "atlas_id": "spa.tax.synanthedon_tenuis",
         "name_as_reported": "Synanthedon tenuis"
       },
-      "trap": null,
+      "trap": {
+        "colour": null,
+        "design": "delta",
+        "supplier": "Green Agro Tech, Gyeongsan, Korea"
+      },
       "treatment": [
         {
           "amount": {
@@ -1160,10 +1167,13 @@
         "population": null,
         "sex": "male"
       },
-      "dispenser": null,
+      "dispenser": {
+        "description": "1 x 1 cm piece of rubber tubing (Taurus, Budapest), loaded in 10 ul hexane",
+        "design": "rubber_tube"
+      },
       "dose": null,
       "evidence": {
-        "atlas_notes": "June 20-25, 1986; 8 traps per treatment; mean moths per trap per check; Duncan's test on log(x+1), with each check counted as a repetition.",
+        "atlas_notes": "June 20-25, 1986; 8 traps per treatment; mean moths per trap per check; Duncan's test on log(x+1), with each check counted as a repetition. Trap and dispenser from Methods, 2026-10-25: Trap: transparent plastic trap of similar shape and size to the Tetra trap, used in Hungary in 1986 and 1987.",
         "author_statement": "resulted in a statistically significant increase in captures in both New Zealand and Hungary",
         "author_statement_form": null,
         "unresolved": []
@@ -1194,7 +1204,11 @@
         "atlas_id": "spa.tax.synanthedon_tipuliformis",
         "name_as_reported": "Synanthedon tipuliformis"
       },
-      "trap": null,
+      "trap": {
+        "colour": "transparent",
+        "design": "other",
+        "supplier": null
+      },
       "treatment": [
         {
           "amount": {
@@ -1237,10 +1251,13 @@
         "population": null,
         "sex": "male"
       },
-      "dispenser": null,
+      "dispenser": {
+        "description": "1 x 1 cm piece of rubber tubing (Taurus, Budapest), loaded in 10 ul hexane",
+        "design": "rubber_tube"
+      },
       "dose": null,
       "evidence": {
-        "atlas_notes": "January 15 - March 23, 1986; 5 traps per treatment. The next season's repeat was not significant (spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.tasmania_1987), and Suckling et al. 2005 found no blend effect in Tasmania.",
+        "atlas_notes": "January 15 - March 23, 1986; 5 traps per treatment. The next season's repeat was not significant (spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.tasmania_1987), and Suckling et al. 2005 found no blend effect in Tasmania. Trap and dispenser from Methods, 2026-10-25: Trap not given: Methods name plastic prism traps for Tasmania in 1984-1985 only, and give only spacings for 1986 and 1987.",
         "author_statement": "traps containing E,Z2,13-18:OAc/E,Z3,13-18:OAc in Tasmania caught males in significantly lower numbers",
         "author_statement_form": null,
         "unresolved": []
@@ -1314,10 +1331,13 @@
         "population": null,
         "sex": "male"
       },
-      "dispenser": null,
+      "dispenser": {
+        "description": "1 x 1 cm piece of rubber tubing (Taurus, Budapest), loaded in 10 ul hexane",
+        "design": "rubber_tube"
+      },
       "dose": null,
       "evidence": {
-        "atlas_notes": "January 21 - April 5, 1987; 9 traps per treatment; very low catches.",
+        "atlas_notes": "January 21 - April 5, 1987; 9 traps per treatment; very low catches. Trap and dispenser from Methods, 2026-10-25: Trap not given: Methods name plastic prism traps for Tasmania in 1984-1985 only, and give only spacings for 1986 and 1987.",
         "author_statement": "although the capture of the 100:3 mixture did not differ significantly from that of E,Z2,13-18:OAc alone, the former was numerically lower",
         "author_statement_form": null,
         "unresolved": []
@@ -1391,7 +1411,7 @@
       "dispenser": null,
       "dose": null,
       "evidence": {
-        "atlas_notes": "November 20, 2003 - January 16, 2004; 4 replicates; 3,016 moths in total; one-way ANOVA F(1,22) = 0.05, P = 0.83. Values only in a figure. The authors read this as refuting a Tasmanian strain; Szöcs et al. 1990 found a decrease in 1986 and no difference in 1987.",
+        "atlas_notes": "November 20, 2003 - January 16, 2004; 4 replicates; 3,016 moths in total; one-way ANOVA F(1,22) = 0.05, P = 0.83. Values only in a figure. The authors read this as refuting a Tasmanian strain; Szöcs et al. 1990 found a decrease in 1986 and no difference in 1987. Trap and dispenser from Methods, 2026-10-25: Dispenser not given: the lure carrier is not described. White and yellow delta traps were both used at the lower dose, yellow alone at the higher.",
         "author_statement": "There was no evidence of a blend effect, with single or two component lures",
         "author_statement_form": null,
         "unresolved": []
@@ -1416,7 +1436,11 @@
         "atlas_id": "spa.tax.synanthedon_tipuliformis",
         "name_as_reported": "Synanthedon tipuliformis"
       },
-      "trap": null,
+      "trap": {
+        "colour": "white or yellow",
+        "design": "delta",
+        "supplier": null
+      },
       "treatment": [
         {
           "amount": {
@@ -1462,7 +1486,7 @@
         "value": 1
       },
       "evidence": {
-        "atlas_notes": "November 10, 2003 - January 23, 2004; 3 composite funnel traps per block. Contradicts the 4.6-fold synergism found in the same region in 1985-86 (spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.new_zealand). The Atlas records both and decides neither.",
+        "atlas_notes": "November 10, 2003 - January 23, 2004; 3 composite funnel traps per block. Contradicts the 4.6-fold synergism found in the same region in 1985-86 (spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.new_zealand). The Atlas records both and decides neither. Trap and dispenser from Methods, 2026-10-25: Dispenser not given: the lure carrier is not described.",
         "author_statement": "Equivalent catches with the single component and two component lures in both New Zealand and Tasmanian populations",
         "author_statement_form": null,
         "unresolved": [
@@ -1495,7 +1519,11 @@
         "atlas_id": "spa.tax.synanthedon_tipuliformis",
         "name_as_reported": "Synanthedon tipuliformis"
       },
-      "trap": null,
+      "trap": {
+        "colour": "green lid, yellow funnel, white base",
+        "design": "funnel",
+        "supplier": null
+      },
       "treatment": [
         {
           "amount": {
@@ -1666,10 +1694,13 @@
         "population": null,
         "sex": "male"
       },
-      "dispenser": null,
+      "dispenser": {
+        "description": "red rubber tube, 8 x 15 mm",
+        "design": "rubber_tube"
+      },
       "dose": null,
       "evidence": {
-        "atlas_notes": null,
+        "atlas_notes": "Trap and dispenser from Methods, 2026-10-25: Trap: Atracon A delta trap with a sticky bottom.",
         "author_statement": "The attractiveness of six component lures did not differ significantly from the one of the binary lures",
         "author_statement_form": null,
         "unresolved": []
@@ -1700,7 +1731,11 @@
         "atlas_id": "spa.tax.synanthedon_tipuliformis",
         "name_as_reported": "Synanthedon tipuliformis"
       },
-      "trap": null,
+      "trap": {
+        "colour": "opaque white",
+        "design": "delta",
+        "supplier": "Flora Co., Tartu, Estonia"
+      },
       "treatment": [
         {
           "amount": {

@@ -3,10 +3,13 @@ observation_type: behavioural_response
 taxon: spa.tax.synanthedon_tenuis
 context: {sex: male, habitat: persimmon orchard, population: "Korean population", locality: "Gimhae, Republic of Korea"}
 assay: field_trapping
+trap: {design: delta, colour: null, supplier: 'Green Agro Tech, Gyeongsan, Korea'}
+dispenser: {design: rubber_septum, description: 'white rubber septum, 8 mm OD (Aldrich Chemical)'}
 blend:
   - {compound: spa.cmpd.z3_z13_18_oh, amount: {value: 500, unit: microgram}}
 comparator:
   description: a single caged 0-1-day-old virgin female
+  dispenser: {design: other, description: a single 0- to 1-d-old virgin female in a small mesh cage}
 effect: no_effect
 significance: not_significant
 response: {measure: trap_catch, unit: mean_catch_per_trap, treatment_value: 5.3, comparator_value: 3.7, qualifier: as_reported}

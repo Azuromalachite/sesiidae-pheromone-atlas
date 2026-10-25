@@ -3,6 +3,8 @@ observation_type: behavioural_response
 taxon: spa.tax.synanthedon_tenuis
 context: {sex: male, habitat: persimmon orchard (cv. Fuyu), population: "Japanese population", locality: "Nakayama-cho, Tenri, Nara, Japan"}
 assay: field_trapping
+trap: {design: sticky_board, colour: null, supplier: Takeda Chemical Industries}
+dispenser: {design: other, description: 'rubber cap (Takeda), impregnated with the hexane solution'}
 blend:
   - {compound: spa.cmpd.z3_z13_18_oac, amount: {value: 1, unit: milligram}}
 effect: caught_without_control
@@ -16,4 +18,4 @@ evidence:
   author_statement: "(Z,Z)-3,13-ODDA alone was confirmed to attract S. tenuis males sufficiently"
   author_statement_form: curator_translation
   unresolved: [an unbaited control; none appears in the 1976 table]
-  notes: "May 6 - June 30, 1976; total of 2 traps per lure; no statistics. A synthetic-lure screen: it shows males are attracted to the acetate, not that females produce it. In the 1975 screen at Isehara (Kanagawa), 22 lures caught 5 males in total. Korean males were not caught by the acetate alone (spa.obs.synanthedon_tenuis.yang_2012.trap_acetate_alone)."
+  notes: "May 6 - June 30, 1976; total of 2 traps per lure; no statistics. A synthetic-lure screen: it shows males are attracted to the acetate, not that females produce it. In the 1975 screen at Isehara (Kanagawa), 22 lures caught 5 males in total. Korean males were not caught by the acetate alone (spa.obs.synanthedon_tenuis.yang_2012.trap_acetate_alone). Trap and dispenser from Methods, 2026-10-25: Trap: plastic trap fitted with a 25 x 30 cm sticky board (Takeda sticky trap); curator's translation of Materials and methods."

@@ -3,6 +3,8 @@ observation_type: behavioural_response
 taxon: spa.tax.synanthedon_tenuis
 context: {sex: male, habitat: persimmon orchard (cv. Fuyu), population: "Japanese population", locality: "Nakayama-cho, Tenri, Nara, Japan"}
 assay: field_trapping
+trap: {design: sticky_board, colour: null, supplier: Takeda Chemical Industries}
+dispenser: {design: other, description: 'rubber cap (Takeda), impregnated with the hexane solution'}
 blend:
   - {compound: spa.cmpd.z3_z13_18_oac, amount: {value: 0.95, unit: milligram}}
   - {compound: spa.cmpd.e3_z13_18_oac, amount: {value: 0.05, unit: milligram}}
@@ -19,4 +21,4 @@ evidence:
   source_location: "Table 1, lures 1 and 3"
   author_statement: "the (E,Z) isomer added at 5% or more markedly inhibited the attractiveness of the (Z,Z) isomer"
   author_statement_form: curator_translation
-  notes: "(E,Z)-3,13 in the paper is E3,Z13. 10% and 20% gave 0. Totals of 2 traps; no statistics."
+  notes: "(E,Z)-3,13 in the paper is E3,Z13. 10% and 20% gave 0. Totals of 2 traps; no statistics. Trap and dispenser from Methods, 2026-10-25: Trap: plastic trap fitted with a 25 x 30 cm sticky board (Takeda sticky trap); curator's translation of Materials and methods."

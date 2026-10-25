@@ -3,6 +3,8 @@ observation_type: behavioural_response
 taxon: spa.tax.synanthedon_andrenaeformis
 context: {sex: male, population: null, locality: "Starnberg/Seewiesen, Germany"}
 assay: field_trapping
+trap: {design: other, colour: null, supplier: null}
+dispenser: {design: other, description: 'rubber cap (serum bottle cap, 1.8 cm diameter)'}
 blend:
   - {compound: spa.cmpd.e2_z13_18_oac, amount: {value: 10, unit: microgram}}
   - {compound: spa.cmpd.e3_z13_18_oac, amount: {value: 100, unit: microgram}}
@@ -17,4 +19,4 @@ evidence:
   taxon_name_as_reported: Synanthedon andrenaeformis
   source_location: "Table 1, 1984"
   author_statement: "strongly attracted male Synanthedon andrenaeformis"
-  notes: "A field attractant with the E3 isomer dominant, the reverse of S. tipuliformis's optimum. 3 replicates; 1985: 11.7. No gland analysis."
+  notes: "A field attractant with the E3 isomer dominant, the reverse of S. tipuliformis's optimum. 3 replicates; 1985: 11.7. No gland analysis. Trap and dispenser from Methods, 2026-10-25: Trap: Tetra trap (Arn et al. 1979)."

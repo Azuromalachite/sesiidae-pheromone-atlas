@@ -4,6 +4,7 @@ taxon: spa.tax.nokona_pernix
 context: {sex: male, habitat: university experimental farm, population: "Aichi population", locality: "Kasugai City, Aichi Prefecture, Japan"}
 assay: field_trapping
 trap: {design: sticky_board, colour: null, supplier: Takeda Chemical Industries}
+dispenser: {design: rubber_septum, description: 'white rubber septum, 8 mm OD (Sigma-Aldrich)'}
 blend: [{compound: spa.cmpd.e3_z13_18_oh, amount: {value: 0.9, unit: milligram}}, {compound: spa.cmpd.e3_e13_18_oh, amount: {value: 0.1, unit: milligram}}]
 comparator:
   description: E3:Z3,Z13-18:OH 9:1, 1 mg

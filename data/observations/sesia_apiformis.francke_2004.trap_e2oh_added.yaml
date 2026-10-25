@@ -3,6 +3,8 @@ observation_type: behavioural_response
 taxon: spa.tax.sesia_apiformis
 context: {sex: male, habitat: green stands of poplar, population: null, locality: "near Vilnius, Lithuania"}
 assay: field_trapping
+trap: {design: delta, colour: opaque white, supplier: 'Flora Co., Tartu, Estonia'}
+dispenser: {design: rubber_tube, description: 'red rubber tube, 8 mm diameter, 15 mm long'}
 blend:
   - {compound: spa.cmpd.z3_z13_18_oh, amount: {value: 200, unit: microgram}}
   - {compound: spa.cmpd.e2_z13_18_oh, amount: {value: 200, unit: microgram}}
@@ -21,4 +23,4 @@ evidence:
   taxon_name_as_reported: Sesia apiformis
   source_location: "Table 3; Results"
   author_statement: "when 200 µg of 2E,13Z-18:OH were added to 500 µg of the binary mixture, the attractiveness of the lure was significantly reduced"
-  notes: "Table and text disagree. In Table 3 the 200-microgram lure (2.5, letter b) shares a letter with the binary blend (4.7, ab), so it is not significantly different from it; it differs from the 2-microgram lure (6.1, a). Recorded as not significant against the stated comparator, with the authors' wording kept. June 16 - July 15, 1997."
+  notes: "Table and text disagree. In Table 3 the 200-microgram lure (2.5, letter b) shares a letter with the binary blend (4.7, ab), so it is not significantly different from it; it differs from the 2-microgram lure (6.1, a). Recorded as not significant against the stated comparator, with the authors' wording kept. June 16 - July 15, 1997. Trap and dispenser from Methods, 2026-10-25: Trap: Atracon A delta trap, sticky bottom 11 x 18 cm."

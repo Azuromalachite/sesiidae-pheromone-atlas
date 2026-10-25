@@ -3,6 +3,8 @@ observation_type: behavioural_response
 taxon: spa.tax.synanthedon_tipuliformis
 context: {sex: male, habitat: black currant plantation, population: null, locality: "Slateford, Tasmania, Australia"}
 assay: field_trapping
+trap: {design: other, colour: null, supplier: null}
+dispenser: {design: rubber_tube, description: '1 x 1 cm piece of rubber tubing (Taurus, Budapest), loaded in 10 ul hexane'}
 blend:
   - {compound: spa.cmpd.e2_z13_18_oac, amount: {value: 100, unit: microgram}}
   - {compound: spa.cmpd.z13_18_oac, amount: {value: 10, unit: microgram}}
@@ -18,4 +20,4 @@ evidence:
   taxon_name_as_reported: Synanthedon tipuliformis
   source_location: "Table 1"
   author_statement: "none of the blends tested caught significantly more males than the diene alone"
-  notes: "December 14, 1984 - February 20, 1985; 8 traps. The 10% ratio is recorded; 1-40% tested."
+  notes: "December 14, 1984 - February 20, 1985; 8 traps. The 10% ratio is recorded; 1-40% tested. Trap and dispenser from Methods, 2026-10-25: Trap: plastic prism trap, used in Tasmania in 1984-1985."
