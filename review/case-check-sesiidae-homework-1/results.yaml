@@ -15,21 +15,25 @@ records:
 - observation_id: spa.obs.synanthedon_tenuis.naka_2013.trap_z3z13oh_added.test4_1
   part: complete
   record_sha256: be712def03e4baeb20afbdb78c95967ff2f927d28d7ff9a9b04de3496b40deaa
-  verdict: null
+  verdict: ok
   wrong_rows: []
-  notes: ''
+  notes: The source location could be narrowed to Test IV-1; the sheet gives Table 4, test IV. Imprecision, not an error (review/README.md).
 - observation_id: spa.obs.synanthedon_tenuis.yang_2012.trap_acetate_added
   part: complete
   record_sha256: 1f93799fb5e5f31e07971bd864e0d9decda00a67bc746073df66cc81216c8f45
-  verdict: null
-  wrong_rows: []
-  notes: ''
+  verdict: error
+  wrong_rows:
+  - trap
+  - dispenser
+  notes: Both fields are absent from the record while the source supplies them.
 - observation_id: spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.hungary
   part: complete
   record_sha256: 4a5e4d9a03e3934f61db8501486bbe159b0ddc959ccb58a8c7bc029dee3a714d
-  verdict: null
-  wrong_rows: []
-  notes: ''
+  verdict: error
+  wrong_rows:
+  - trap
+  - dispenser
+  notes: Both fields are absent from the record while the source supplies them. The response unit is per trap per check.
 - observation_id: spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.tasmania_1986
   part: complete
   record_sha256: 82a812b930f9d6e1c8ce83e02114e11edceb9d5d2f52161a0596b45402d67d4e
