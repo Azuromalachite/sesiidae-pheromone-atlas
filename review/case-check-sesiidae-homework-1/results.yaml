@@ -55,9 +55,10 @@ records:
 - observation_id: spa.obs.synanthedon_tipuliformis.suckling_2005.trap_e3.new_zealand
   part: complete
   record_sha256: dc370564e4803e38a1c1ee5128d950c2c10e3f773a9744dece5ed15734350d44
-  verdict: null
-  wrong_rows: []
-  notes: ''
+  verdict: error
+  wrong_rows:
+  - trap
+  notes: The trap field is absent while Experiment 2 explicitly identifies composite colored plastic funnel traps. The lure dispenser type is not stated.
 - observation_id: spa.obs.synanthedon_tipuliformis.mozuraitis_2006.gland
   part: complete
   record_sha256: 4ff12f6c16d03b49dd75fee1cd87238324212b4966977fdc4d0f36b87b418e3b
