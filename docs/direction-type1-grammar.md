@@ -255,8 +255,13 @@ where it can be argued with and recomputed.
 
 ## Ordering
 
-1. **Finish the Atlas v0.1.0 gate.** The real census is the remaining
-   blocker; the tag is not cut.
+1. **Finish the Atlas v0.1.0 gate**, in the four parts `docs/scope-v0.1.md`
+   states. `computed/` and the census are done — the census is generated from
+   the records, with no curated status field. What is outstanding is **human
+   primary-source verification**: `review/spot-check-001` and
+   `review/case-check-sesiidae-homework-1`, neither of which has a verdict
+   filled in yet, and then the corrections they turn up, each in its own
+   traceable commit. The tag is not cut.
 2. **Land the v0.2 chemistry validation and schema gate** in
    `docs/validation.md` — head-group table validation, charge and protonation
    convention, CoA stereochemistry. The first acyl-CoA must not discover it.
@@ -274,12 +279,39 @@ assertable. It is **the only admissible basis for "not found"; the absence of
 records never is.** A corpus whose stop condition is coverage (below) depends
 on it entirely.
 
-But its `layer` enum and its `search_id` pattern both admit only `pheromone`
-and `genome`. A biosynthesis or reaction layer needs **both** widened — the
-enum, and the pattern, which repeats the same two values. The widening is
-additive, so the frozen-shape rule permits it. **Do not change the schema
-now**: this is recorded as a prerequisite of stage (3), not as work for
-stage (1) or (2).
+The obvious gap is the vocabulary: its `layer` enum and its `search_id`
+pattern both admit only `pheromone` and `genome`, and a biosynthesis or
+reaction layer needs **both** widened — the enum, and the pattern, which
+repeats the same two values. That much is backward-compatible: the
+schema-freeze mechanism permits widening of this kind (`docs/validation.md`
+counts new enumeration values as additive, and `scripts/schema_shape.py`
+records enum values and property names, not patterns), so it needs no
+breaking change and no v0.1 migration. This is not blanket permission for
+anything else the corpus might want.
+
+**Widening the vocabulary alone is insufficient.** The stop condition below
+promises something stronger than a human reading search notes: that every
+required transformation has either a reaction observation or a dated
+`not_found` search, **derived by a script**. Two gaps block that, and both
+are stage-3 prerequisites:
+
+- **A search record has no structured field naming what was searched for.**
+  There is `scope`, there is `sources`, and there is free text in `found` and
+  `notes` — nothing a script can join to a transformation. Coverage cannot be
+  derived from free text.
+- **Scope has no corpus-wide shape.** For every non-`census` outcome the
+  `allOf` block forces `scope` to a single taxon; `census` requires a
+  `family` and means "every item found in scope has an Atlas record". A
+  Type-I search ranges *across* moths for evidence of one transformation,
+  which fits neither, and reusing `census` for it would abuse the one word in
+  this schema that currently has a precise meaning.
+
+So the prerequisite is **structured biosynthesis-search targeting**: a way to
+say which transformation or reaction query a search was for, and a way to
+express a corpus-wide scope without overloading `census`. **Do not design
+those fields now, and do not change the schema now.** The requirement is
+named here and stops here; it is work for stage (3), not for stage (1) or
+(2).
 
 ## The route, route-first
 
@@ -339,18 +371,30 @@ a record, an edge, or a derived row.**
 **Q1. Does one β-oxidation cycle reach Δ3,Δ13-C18 from Δ5,Δ15-C20?**
 β-oxidation removes two carbons from the carboxyl end, so it lowers every
 double-bond position by two. One cycle therefore maps Δ5,Δ15-C20 onto
-Δ3,Δ13-C18. The prediction is **a Δ5 desaturase acting on a C20 substrate** —
-a specific, falsifiable thing to look for, in assays and in gland
-transcriptomes.
+Δ3,Δ13-C18. What the arithmetic strictly predicts is **a Δ5,Δ15-C20
+precursor**. **A Δ5 desaturase acting on a C20 substrate** is one mechanism
+that would produce it, and the discriminating sub-hypothesis to look for in
+assays and in gland transcriptomes — but the precursor could be reached
+another way, and finding it would not by itself establish the desaturase.
 
 **Q2. Do Δ2 and Δ3 sit across one enzyme's equilibrium rather than across two
 desaturations?** trans-2-enoyl-CoA is the first intermediate of every
 β-oxidation cycle, and enoyl-CoA isomerase interconverts cis-3-enoyl-CoA and
 trans-2-enoyl-CoA. The Sesiidae Δ2 and Δ3 bonds may therefore sit on either
 side of one standard enzyme's equilibrium. If so, the Δ2/Δ3 question is a
-**chain-shortening** question rather than a desaturation question — and the
-co-occurrence of 2,13- and 3,13-dienes in one gland would be the expected
-signature rather than a puzzle.
+**chain-shortening** question rather than a desaturation question, and it
+could provide a common biochemical route consistent with the co-occurrence of
+2,13- and 3,13-dienes in one gland. Co-occurrence does not discriminate it:
+two independent routes would produce the same observation.
+
+*(Unverified, from the maintainer's search and not checked against a primary
+paper.)* Candidate Δ3,Δ2-*trans*-enoyl-CoA isomerases have reportedly been
+found among β-oxidation genes in moth pheromone-gland transcriptome work, but
+no functional evidence was found that Sesiidae divert those intermediates into
+their 2,13- and 3,13-dienes; the Sesiidae literature remains chemistry and
+identification evidence. That is the gap Q2 exists to make the corpus
+adjudicate, and it is exactly the case-3 situation of the hostile table below:
+a transcript present, a reaction not demonstrated.
 
 Q1 and Q2 are not alternatives; both could hold, or neither. What each buys is
 a testable prediction, which is what an open question in this repository is
@@ -361,7 +405,7 @@ for.
 The corpus is **done for v0.2** when every transformation the Sesiidae
 homework chemistry requires has either its strongest primary experiment
 curated as a reaction observation, or a recorded search (`spa.search.*`, once
-the layer exists) saying none was found:
+the layer and its structured targeting exist) saying none was found:
 
 | transformation | required by |
 |---|---|
