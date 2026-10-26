@@ -48,9 +48,10 @@ records:
 - observation_id: spa.obs.synanthedon_tipuliformis.suckling_2005.trap_e3.tasmania
   part: complete
   record_sha256: 012d0795b408a7630bfaf69fb9abb4b2c81af5ee0fa85bd880862913946cab39
-  verdict: null
-  wrong_rows: []
-  notes: ''
+  verdict: error
+  wrong_rows:
+  - trap
+  notes: The trap field is absent while Experiment 7 explicitly identifies delta traps. The lure dispenser type is not stated.
 - observation_id: spa.obs.synanthedon_tipuliformis.suckling_2005.trap_e3.new_zealand
   part: complete
   record_sha256: dc370564e4803e38a1c1ee5128d950c2c10e3f773a9744dece5ed15734350d44
