@@ -108,8 +108,10 @@ Reaction evidence will be limited to types that test a conversion
 
 **The v0.2 chemistry gate, written down now so the first acyl-CoA does not
 discover it.** `data/headgroups.yaml` is the authoritative head-group grammar
-but has no schema of its own; only map 101 on C1 is tested. Before any
-CoA, NAC or other new head group:
+but has no schema of its own; only map 101 on C1 is tested. The three
+requirements below are specified, with error codes, fixtures and an order of
+work, in `docs/chemistry-gate-v0.2.md` — a specification, not an
+implementation. Before any CoA, NAC or other new head group:
 - **Validate the table itself.** Tokens and maps must be unique, maps at
   least 101, elements valid, bond orders valid, the graph connected, with
   exactly the declared attachment to the chain and no conflicting bonds.
