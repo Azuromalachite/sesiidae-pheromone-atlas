@@ -13,6 +13,15 @@ paper.
 | **Sesiidae Atlas** (today) | focal biological observations: species × compounds × populations × assays × genomes | Sesiidae |
 | **Type-I reference corpus** (v0.2) | experimentally established transformations: reaction observations, enzymes, substrates, isotope evidence | any moth whose experiment establishes a Type-I step |
 | **Pathway compiler** (later) | the grammar, applied to explain Sesiidae chemistry | Sesiidae as the hard test case |
+| **Analogue evidence lane** (v0.2, derived) | no store of its own: the same reaction observations, derived as analogue-only evidence | any system whose chemistry bears on a transformation without being admissible as Type-I proof — *Drosophila*, and moths outside the Type-I system |
+
+The fourth row is a **view, not a layer**: it holds no records, and its
+contents are the same `spa.rxnobs.*` records the row above holds, derived
+into a separate inferential role. Its scope is **inferential, not
+taxonomic** — a Lepidopteran experiment can be analogue-only. It is listed
+here because the corpus row's scope ("any moth") would otherwise read as the
+whole of what the corpus may contain, and because that row's "any moth" is
+not sufficient on its own. See "Amendment, 2026-10-26 (2)" below.
 
 The Atlas stays focal on Sesiidae. It does not become a general moth pheromone
 database, and a field-lure paper from another family is out of scope. A paper
@@ -438,3 +447,285 @@ A schema that cannot tell 1 from 3, or 4a from 4b, is not ready to hold a
 reaction record. These are the cases to write bad fixtures for first, in the
 style `tests/fixtures/bad/` already uses: the gate must be **seen to refuse**
 the confusion, not merely to permit the correct form.
+
+---
+
+# Amendment, 2026-10-26 (2): the analogue evidence lane
+
+Decided in discussion with the maintainer, and written down here as design
+before any implementation. **Nothing here is built.** No schema, no record,
+no `derived/` output and no new analysis changes with this amendment, and
+nothing in v0.1 changes. Everything marked *(unverified)* has not been
+checked against a primary paper and enters the Atlas, if at all, only as a
+curated record read from that paper.
+
+## Why the lane exists
+
+*Drosophila* has experimentally resolved chemistry sitting very close to the
+Sesiidae molecules. cVA is Z11-18:OAc — a straight-chain C18 monounsaturated
+acetate — and the system has both a characterised elongase and a
+biochemically demonstrated acetylation step *(unverified)*. That is more
+directly resolved than much of what the moth literature offers for the same
+operations.
+
+Which is exactly the hazard. Attractive, well-resolved evidence will drift
+into the corpus and be read as Type-I moth evidence, because it answers the
+question the corpus is asking. The lane exists to **admit that evidence and
+keep its inferential role separate** — not to keep it out.
+
+### The lane is inferential, not taxonomic
+
+An earlier draft of this amendment called it the *cross-order* analogue lane,
+on the assumption that the analogue cases would be the non-moth ones. **That
+framing is too narrow, and it is wrong in a way that would promote.**
+
+*Ithomia salapia* is Lepidoptera. Its male androconial chemistry is
+specialised signalling chemistry, and the lipid chemistry is highly relevant
+to the operations this corpus is about *(unverified)*. It is still **not
+direct Type-I moth pheromone evidence**: androconial signalling in an
+ithomiine is not the Type-I female-gland system the grammar is a grammar of.
+
+A taxonomic lane has nowhere to put that case. "Cross-order" says no — same
+order — so the case falls through to direct evidence, which is the one
+outcome that must not happen by default. The same hole would swallow any
+Lepidopteran semiochemical system that is not Type-I.
+
+So the lane is defined by **inferential role, not by taxonomy**. An analogue
+is evidence that bears on a transformation without being admissible as proof
+of the Type-I rule, whatever clade it comes from. *Drosophila* is then one
+instance of analogue evidence — the cross-order instance — not the definition
+of the category.
+
+## Reaction observations stay taxonomically neutral; membership is derived
+
+A `spa.rxnobs.*` record means one thing: **this experiment demonstrated this
+substrate → product transformation under these conditions.** It does not
+mean "this is part of the moth Type-I grammar." It never did; this amendment
+makes the consequence explicit.
+
+So **corpus membership is derived, never stored**. The experiment is recorded
+once, taxonomically neutral and factual, and a derivation decides whether it
+counts as direct Type-I evidence or as analogue evidence. There is no
+`is_type_i` flag on a record, and no separate analogue record store.
+
+This is the merged amendment's own principle one level up. That amendment
+refuses a curator-written evidence score because evidence classes are derived
+from record fields by a script; this refuses a curator-written corpus-membership
+label for the same reason. A record states what happened. What it counts as is
+computed, re-computable, and arguable without touching the record.
+
+## The derivation reads taxon *and* experimental context — never taxon alone
+
+Lepidoptera-vs-not is the wrong test, and it fails in the direction that
+matters: it **promotes**. Two cases, from opposite sides:
+
+- An elongase assay **in a moth**, done in a general lipid-metabolism
+  context, is not Type-I pheromone evidence merely because the species is a
+  moth.
+- *Ithomia salapia* androconial chemistry is **within Lepidoptera** *and*
+  **in a chemical-signalling context**, and is still not Type-I evidence
+  *(unverified)*.
+
+A taxon-only rule admits both as direct evidence. The first case is the
+ordinary one and the second is the sharp one, because it survives the obvious
+repair: adding "is it signalling chemistry?" does not fix it either.
+
+**"Pheromone-biosynthetic context" is therefore also too broad.** *Ithomia*
+is pheromone biosynthesis by any reasonable reading, and still not the Type-I
+moth system the rule is supposed to establish. What the derivation needs to
+determine is **Type-I eligibility** — whether this experiment is admissible
+as evidence for the Type-I rule — and taxon, tissue and "is it a pheromone"
+each fail to settle it alone.
+
+That is a requirement on the future schema: it must carry enough structured
+context for the derivation to decide Type-I eligibility, rather than
+approximating it from the species, the tissue, or the word "pheromone".
+
+**Do not choose the field name or the enum here, and do not write the
+eligibility rule here.** The requirement is named and stops. It joins the
+structured search targeting the previous amendment names, as a **stage-3
+prerequisite**:
+
+| stage-3 prerequisite | named in |
+|---|---|
+| structured biosynthesis-search targeting, and a corpus-wide scope that does not overload `census` | amendment 1 |
+| structured experimental context, enough to determine **Type-I eligibility** — not merely taxon, tissue, or whether the chemistry is a pheromone | this amendment |
+
+## Transformation coverage is a Cartesian product, not an enum
+
+Coverage has **two independent axes**, and they must stay independent:
+
+- **evidence state** — direct Type-I evidence / analogue-only / none;
+- **search state** — searched and found / searched and not found / not yet
+  searched.
+
+|  | searched, found | searched, not found | not yet searched |
+|---|---|---|---|
+| **direct Type-I evidence** | covered | contradictory: the evidence came from somewhere | evidence held, no dated search behind it |
+| **analogue-only** | Type-I literature exists and is not curated (`found_not_curated`): curation owed | **a finding**: the Type-I literature was read and holds nothing | **unfinished work**: nobody has looked |
+| **none** | curation owed | an honest, dated hole | nothing done yet |
+
+The evidence axis says **direct Type-I evidence** and **analogue-only**, not
+"direct moth evidence" and "cross-order analogue". The old wording named the
+analogue row by taxonomic distance, which leaves cases inside the distance
+with nowhere to sit: *Ithomia* is within Lepidoptera, so it is not
+*cross-order*, and it is not direct Type-I evidence either. An axis with a
+gap in it does not report the gap — the case falls to the default, which is
+the top row, and the transformation is reported covered on evidence that does
+not cover it.
+
+The two cells in bold are the reason for the product. "An analogue and a
+dated search that found nothing" is a **result** — it says something about
+the Type-I literature. "An analogue and nobody has looked" is **unfinished
+work**. Collapsed into one enum they render
+identically, and the collapsed value reads as the first while meaning the
+second. The corpus would look finished where it is merely unexamined.
+
+This is `not_tested ≠ negative` lifted from the assay to the transformation.
+The Atlas already refuses that collapse for a substrate never offered; a
+transformation never searched for gets the same refusal.
+
+**An analogue never makes a transformation covered**, however good it is and
+whatever clade it comes from. The corpus can hold a strong *Drosophila*
+result, or a strong *Ithomia* one, and still visibly owe a Type-I literature
+search for the same step; the coverage view must show that it does.
+
+## The firewall
+
+Analogues **can**:
+
+- establish that a biochemical operation occurs in another experimentally
+  defined system;
+- illuminate enzyme capabilities, substrate tolerance or mechanism;
+- motivate a discriminating experiment.
+
+Analogues **cannot**, by themselves:
+
+- establish a Type-I moth rule;
+- satisfy the Type-I evidence requirement for a transformation;
+- **substitute for a recorded Type-I literature search.**
+
+That last clause is what makes the second coverage axis binding rather than
+decorative. Without it, a good analogue quietly discharges the obligation to
+go and look.
+
+## Wording discipline for analogues
+
+State what an experiment established, not what arithmetic already gives.
+
+That +2 elongation shifts Δ9-C16 to Δ11-C18 is **arithmetic**. It follows
+from adding two carbons at the carboxyl end, and no experiment is needed or
+tested by it. Writing an analogue up as the coordinate transform dresses a
+counting fact as a result — and overstates it in precisely the direction the
+firewall exists to prevent.
+
+What an experiment **can** establish is narrower and biologically richer:
+that an elongase **accepts an unsaturated C16 substrate**, **elongates it in
+the relevant biological system**, and **contributes flux toward the pheromone
+product**. Those are three separable claims, each of which an experiment may
+or may not support. A record and a rule say which.
+
+## Nothing hand-curated enters `analyses/`
+
+`analyses/README.md` is explicit: analyses read **only** `derived/tables/`,
+never the YAML records, and each writes a committed report with a `--check`
+that fails when it is stale. (The one documented exception, `motivating.py`,
+reads records *through the validator's loader* for a frozen selection rule —
+still generated from validated records, never hand-written.)
+
+A hand-curated `analogues/drosophila/ligand_series.tsv` beside a
+`references.yaml` would therefore be **a second primary data store with no
+schema, no validator and no provenance, placed inside the one directory whose
+whole contract is that it derives everything it holds**.
+
+The boundary, stated: **no comparative dataset, receptor table or ligand
+series enters `analyses/` unless it is generated from validated Atlas
+records** — *Drosophila*, ithomiine or otherwise. Comparative material that
+cannot be so generated is not an
+analysis; it is external reference material, and it lives outside Atlas
+primary data.
+
+## Receptors and large comparative material stay external
+
+The OR67d cryo-EM work and the 99-species drosophilid comparative dataset
+*(both unverified)* inform Arrowfield and the design discussion. Their papers
+may exist as ordinary reference records if something needs to cite them. They
+do not become Atlas primary data.
+
+**No new ontology now.** No `spa.ligandobs.*`, no `spa.receptorobs.*`. And
+**receptor activation is not a biosynthetic reaction**: it must not enter
+`spa.rxnobs.*`, whose meaning is a demonstrated substrate → product
+transformation and nothing else. A ligand that activates a receptor has not
+been converted into anything.
+
+## Candidate anchors
+
+Candidates for future consideration, **not work**. All *(unverified)*: none
+has been checked against a primary paper, and none is curated by this
+amendment or by the stage it belongs to.
+
+1. ***D. melanogaster* Elo68α / CG32072** — the molecular elongation anchor
+   *(unverified)*.
+2. **cVA transacetylation**, Z11-18:OH → Z11-18:OAc, demonstrated
+   biochemically in male ejaculatory bulbs, with the responsible gene
+   unresolved *(unverified)*.
+3. ***D. bipectinata* Z11-20:OAc** — a C18 ↔ C20 chain-length series
+   *(unverified)*.
+4. **The Drosophila CHC desaturase/elongase evolutionary series** (desatF,
+   eloF) *(unverified)*, as a model of **how pheromone biosynthetic enzymes
+   evolve**. Explicitly **not** Type-I pathway proof: the hydrocarbon
+   pathway's terminal chemistry differs.
+
+### Anchor 2 is the worked example of hostile case 1
+
+cVA transacetylation is the previous amendment's **case 1 occurring in
+nature**: a transformation demonstrated — the acetylation happens, and was
+shown biochemically — with **no enzyme identified**, since the responsible
+gene is unresolved.
+
+So it is a reaction observation with a substrate, a product, an assay system
+and no enzyme field, and it must not be refused for lacking one, nor quietly
+downgraded to a candidate. It is simultaneously **analogue evidence**, so the
+derivation must mark it analogue-only and leave the Type-I acetylation step
+still owing a search. One real example exercises both tables at once: the
+four-case table and the coverage product. Use it when either is tested.
+
+### *Ithomia salapia*: the hostile case for the lane itself
+
+Where cVA tests the record shape, *Ithomia* tests the **classification**. It
+is the case to keep on hand whenever the eligibility rule is written or
+revised, because it is true on both of the cheap proxies and still must come
+out analogue-only:
+
+| proxy | *Ithomia salapia* | verdict it would give |
+|---|---|---|
+| is it Lepidoptera? | yes | direct — **wrong** |
+| is it specialised signalling tissue? | yes (male androconia) | direct — **wrong** |
+| is the lipid chemistry relevant? | yes | direct — **wrong** |
+| is it the Type-I female-gland system the rule is about? | no | analogue-only — correct |
+
+A generic moth lipid-metabolism experiment fails only the second and third
+rows, so it can be sorted by a crude rule and proves little. *Ithomia* fails
+none of them until the last, which is why it is the better test: **the
+classification problem survives even when both Lepidoptera and
+chemical-signalling context are true.**
+
+*(Unverified candidate context, not a pathway hypothesis and not curated
+here.)* *Ithomia salapia* may be a particularly strong future analogue
+candidate because published chemistry has been interpreted as the elongation
+sequence Z11-C16 → 3-hydroxy-Z13-C18 → E2,Z13-C18 → Z13-C18. If that reading
+holds it touches the Δ13, Δ3 and Δ2 questions at once. **It must not become a
+reaction record or a Type-I rule without primary-paper curation**, and this
+amendment neither curates it nor adopts the mechanism.
+
+## Sequencing, restated
+
+This is design, and stays design, until:
+
+1. the human verification gate is complete — `review/spot-check-001` and
+   `review/case-check-sesiidae-homework-1`;
+2. the v0.2 chemistry gate in `docs/validation.md` has landed.
+
+Until both hold: **no *Drosophila* curation, no schema change, no new
+analysis.** The lane is written down now so that when the evidence arrives it
+has somewhere to go that is not the moth corpus.
