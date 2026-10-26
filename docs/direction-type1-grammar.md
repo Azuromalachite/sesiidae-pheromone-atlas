@@ -13,6 +13,13 @@ paper.
 | **Sesiidae Atlas** (today) | focal biological observations: species × compounds × populations × assays × genomes | Sesiidae |
 | **Type-I reference corpus** (v0.2) | experimentally established transformations: reaction observations, enzymes, substrates, isotope evidence | any moth whose experiment establishes a Type-I step |
 | **Pathway compiler** (later) | the grammar, applied to explain Sesiidae chemistry | Sesiidae as the hard test case |
+| **Cross-order analogue lane** (v0.2, derived) | no store of its own: the same reaction observations, derived as analogue-only evidence | non-moth systems with resolved chemistry, e.g. *Drosophila* |
+
+The fourth row is a **view, not a layer**: it holds no records, and its
+contents are the same `spa.rxnobs.*` records the row above holds, derived
+into a separate inferential role. It is listed here because the corpus row's
+scope ("any moth") would otherwise read as the whole of what the corpus may
+contain. See "Amendment, 2026-10-26 (2)" below.
 
 The Atlas stays focal on Sesiidae. It does not become a general moth pheromone
 database, and a field-lure paper from another family is out of scope. A paper
@@ -438,3 +445,208 @@ A schema that cannot tell 1 from 3, or 4a from 4b, is not ready to hold a
 reaction record. These are the cases to write bad fixtures for first, in the
 style `tests/fixtures/bad/` already uses: the gate must be **seen to refuse**
 the confusion, not merely to permit the correct form.
+
+---
+
+# Amendment, 2026-10-26 (2): the cross-order analogue lane
+
+Decided in discussion with the maintainer, and written down here as design
+before any implementation. **Nothing here is built.** No schema, no record,
+no `derived/` output and no new analysis changes with this amendment, and
+nothing in v0.1 changes. Everything marked *(unverified)* has not been
+checked against a primary paper and enters the Atlas, if at all, only as a
+curated record read from that paper.
+
+## Why the lane exists
+
+*Drosophila* has experimentally resolved chemistry sitting very close to the
+Sesiidae molecules. cVA is Z11-18:OAc — a straight-chain C18 monounsaturated
+acetate — and the system has both a characterised elongase and a
+biochemically demonstrated acetylation step *(unverified)*. That is more
+directly resolved than much of what the moth literature offers for the same
+operations.
+
+Which is exactly the hazard. Attractive, well-resolved non-moth evidence will
+drift into the corpus and be read as Type-I moth evidence, because it answers
+the question the corpus is asking. The lane exists to **admit that evidence
+and keep its inferential role separate** — not to keep it out.
+
+## Reaction observations stay taxonomically neutral; membership is derived
+
+A `spa.rxnobs.*` record means one thing: **this experiment demonstrated this
+substrate → product transformation under these conditions.** It does not
+mean "this is part of the moth Type-I grammar." It never did; this amendment
+makes the consequence explicit.
+
+So **corpus membership is derived, never stored**. The experiment is recorded
+once, taxonomically neutral and factual, and a derivation decides whether it
+counts as direct Type-I evidence or as a cross-order analogue. There is no
+`is_type_i` flag on a record, and no separate Drosophila record store.
+
+This is the merged amendment's own principle one level up. That amendment
+refuses a curator-written evidence score because evidence classes are derived
+from record fields by a script; this refuses a curator-written corpus-membership
+label for the same reason. A record states what happened. What it counts as is
+computed, re-computable, and arguable without touching the record.
+
+## The derivation reads taxon *and* experimental context — never taxon alone
+
+Lepidoptera-vs-not is the wrong test, and it fails in the direction that
+matters: it **promotes**. An elongase assay in a moth, done in a general
+lipid-metabolism context, is not Type-I pheromone evidence merely because the
+species is a moth. A taxon-only rule would admit it as direct evidence, which
+is the same mistake as the Drosophila drift, arriving from the other side.
+
+The derivation therefore needs to know whether an experiment was performed in
+a **pheromone-biosynthetic context** or merely demonstrates the same chemistry
+elsewhere. That is a requirement on the future schema: it must carry enough
+structured context to tell those apart.
+
+**Do not choose the field name or the enum here.** The requirement is named
+and stops. It joins the structured search targeting the previous amendment
+names, as a **stage-3 prerequisite**:
+
+| stage-3 prerequisite | named in |
+|---|---|
+| structured biosynthesis-search targeting, and a corpus-wide scope that does not overload `census` | amendment 1 |
+| structured experimental context, enough to tell a pheromone-biosynthetic experiment from the same chemistry elsewhere | this amendment |
+
+## Transformation coverage is a Cartesian product, not an enum
+
+Coverage has **two independent axes**, and they must stay independent:
+
+- **evidence state** — direct moth evidence / cross-order analogue only / none;
+- **search state** — searched and found / searched and not found / not yet
+  searched.
+
+|  | searched, found | searched, not found | not yet searched |
+|---|---|---|---|
+| **direct moth evidence** | covered | contradictory: the evidence came from somewhere | evidence held, no dated search behind it |
+| **cross-order analogue only** | moth literature exists and is not curated (`found_not_curated`): curation owed | **a finding**: the moth literature was read and holds nothing | **unfinished work**: nobody has looked |
+| **none** | curation owed | an honest, dated hole | nothing done yet |
+
+The two cells in bold are the reason for the product. "A *Drosophila*
+analogue and a dated moth search that found nothing" is a **result** — it
+says something about the moth literature. "A *Drosophila* analogue and nobody
+has looked" is **unfinished work**. Collapsed into one enum they render
+identically, and the collapsed value reads as the first while meaning the
+second. The corpus would look finished where it is merely unexamined.
+
+This is `not_tested ≠ negative` lifted from the assay to the transformation.
+The Atlas already refuses that collapse for a substrate never offered; a
+transformation never searched for gets the same refusal.
+
+**A cross-order analogue never makes a transformation covered.** The corpus
+can hold a strong *Drosophila* result and still visibly owe a moth-literature
+search for the same step, and the coverage view must show that it does.
+
+## The firewall
+
+Cross-order analogues **can**:
+
+- establish that a biochemical operation occurs in another experimentally
+  defined system;
+- illuminate enzyme capabilities, substrate tolerance or mechanism;
+- motivate a discriminating experiment.
+
+Cross-order analogues **cannot**, by themselves:
+
+- establish a Type-I moth rule;
+- satisfy the moth-evidence requirement for a transformation;
+- **substitute for a recorded moth-literature search.**
+
+That last clause is what makes the second coverage axis binding rather than
+decorative. Without it, a good analogue quietly discharges the obligation to
+go and look.
+
+## Wording discipline for analogues
+
+State what an experiment established, not what arithmetic already gives.
+
+That +2 elongation shifts Δ9-C16 to Δ11-C18 is **arithmetic**. It follows
+from adding two carbons at the carboxyl end, and no experiment is needed or
+tested by it. Writing an analogue up as the coordinate transform dresses a
+counting fact as a result — and overstates it in precisely the direction the
+firewall exists to prevent.
+
+What an experiment **can** establish is narrower and biologically richer:
+that an elongase **accepts an unsaturated C16 substrate**, **elongates it in
+the relevant biological system**, and **contributes flux toward the pheromone
+product**. Those are three separable claims, each of which an experiment may
+or may not support. A record and a rule say which.
+
+## Nothing hand-curated enters `analyses/`
+
+`analyses/README.md` is explicit: analyses read **only** `derived/tables/`,
+never the YAML records, and each writes a committed report with a `--check`
+that fails when it is stale. (The one documented exception, `motivating.py`,
+reads records *through the validator's loader* for a frozen selection rule —
+still generated from validated records, never hand-written.)
+
+A hand-curated `cross_order/drosophila/ligand_series.tsv` beside a
+`references.yaml` would therefore be **a second primary data store with no
+schema, no validator and no provenance, placed inside the one directory whose
+whole contract is that it derives everything it holds**.
+
+The boundary, stated: **no *Drosophila* comparative dataset, receptor table or
+ligand series enters `analyses/` unless it is generated from validated Atlas
+records.** Comparative material that cannot be so generated is not an
+analysis; it is external reference material, and it lives outside Atlas
+primary data.
+
+## Receptors and large comparative material stay external
+
+The OR67d cryo-EM work and the 99-species drosophilid comparative dataset
+*(both unverified)* inform Arrowfield and the design discussion. Their papers
+may exist as ordinary reference records if something needs to cite them. They
+do not become Atlas primary data.
+
+**No new ontology now.** No `spa.ligandobs.*`, no `spa.receptorobs.*`. And
+**receptor activation is not a biosynthetic reaction**: it must not enter
+`spa.rxnobs.*`, whose meaning is a demonstrated substrate → product
+transformation and nothing else. A ligand that activates a receptor has not
+been converted into anything.
+
+## Candidate anchors
+
+Candidates for future consideration, **not work**. All *(unverified)*: none
+has been checked against a primary paper, and none is curated by this
+amendment or by the stage it belongs to.
+
+1. ***D. melanogaster* Elo68α / CG32072** — the molecular elongation anchor
+   *(unverified)*.
+2. **cVA transacetylation**, Z11-18:OH → Z11-18:OAc, demonstrated
+   biochemically in male ejaculatory bulbs, with the responsible gene
+   unresolved *(unverified)*.
+3. ***D. bipectinata* Z11-20:OAc** — a C18 ↔ C20 chain-length series
+   *(unverified)*.
+4. **The Drosophila CHC desaturase/elongase evolutionary series** (desatF,
+   eloF) *(unverified)*, as a model of **how pheromone biosynthetic enzymes
+   evolve**. Explicitly **not** Type-I pathway proof: the hydrocarbon
+   pathway's terminal chemistry differs.
+
+### Anchor 2 is the worked example of hostile case 1
+
+cVA transacetylation is the previous amendment's **case 1 occurring in
+nature**: a transformation demonstrated — the acetylation happens, and was
+shown biochemically — with **no enzyme identified**, since the responsible
+gene is unresolved.
+
+So it is a reaction observation with a substrate, a product, an assay system
+and no enzyme field, and it must not be refused for lacking one, nor quietly
+downgraded to a candidate. It is simultaneously a **cross-order analogue**,
+so the derivation must mark it as analogue-only and leave the moth acetylation
+step still owing a search. One real example exercises both tables at once:
+the four-case table and the coverage product. Use it when either is tested.
+
+## Sequencing, restated
+
+This is design, and stays design, until:
+
+1. the human verification gate is complete — `review/spot-check-001` and
+   `review/case-check-sesiidae-homework-1`;
+2. the v0.2 chemistry gate in `docs/validation.md` has landed.
+
+Until both hold: **no *Drosophila* curation, no schema change, no new
+analysis.** The lane is written down now so that when the evidence arrives it
+has somewhere to go that is not the moth corpus.
