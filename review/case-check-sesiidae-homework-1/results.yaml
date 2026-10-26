@@ -41,9 +41,10 @@ records:
 - observation_id: spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.tasmania_1987
   part: complete
   record_sha256: 289ddb1fa18150d0ea6051e3d29962efbcf896f6abcef2fe7f43642644e8a9fc
-  verdict: null
-  wrong_rows: []
-  notes: ''
+  verdict: error
+  wrong_rows:
+  - dispenser
+  notes: The dispenser field is absent while the source supplies it. The source explicitly identifies plastic prism traps for Tasmania in 1984-1985, but does not explicitly identify the trap type for the 1987 trial.
 - observation_id: spa.obs.synanthedon_tipuliformis.suckling_2005.trap_e3.tasmania
   part: complete
   record_sha256: 012d0795b408a7630bfaf69fb9abb4b2c81af5ee0fa85bd880862913946cab39
