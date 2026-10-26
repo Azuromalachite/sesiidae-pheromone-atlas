@@ -470,13 +470,89 @@ def test_committed_spot_checks_are_well_formed():
         assert sc.summarise(d)[1] == [], d.name
 
 
-def test_spot_check_001_is_reproduced_by_its_draw(tmp_path):
-    # the committed draw is what the script draws from its seed: nothing was picked by hand after the fact
+# The checker's own fields. A finished review fills these in, so comparing a committed
+# results.yaml byte for byte against a fresh draw would turn CI red the moment the first
+# verdict is written. Everything else in the file is the draw's, and still compared.
+CHECKER_FIELDS = ("verdict", "wrong_rows", "notes")
+
+
+def _results(d):
+    return yaml.safe_load((Path(d) / "results.yaml").read_text(encoding="utf-8"))
+
+
+def as_drawn(res):
+    """A results file with the checker's answers removed but their shape kept: the
+    sample, its order, each record's part and record_sha256, and the draw's own
+    parameters, all compared; verdict, wrong_rows, notes, checker and date not.
+    Which of the three a record carries is kept, so a covered_by record can never
+    gain a verdict and a checked record can never lose one (review/README.md)."""
+    out = {k: v for k, v in res.items() if k not in ("records", "checker", "date")}
+    out["records"] = [{**{k: v for k, v in r.items() if k not in CHECKER_FIELDS},
+                       "_fields_for_the_checker": sorted(k for k in CHECKER_FIELDS if k in r)}
+                      for r in res["records"]]
+    return out
+
+
+def test_committed_spot_checks_are_reproduced_by_their_draw(tmp_path):
+    # the committed draw is what the script draws from its seed: nothing was picked by hand
+    # after the fact. The verdicts are the checker's, so they are left out of the comparison
+    # and a finished review cannot turn CI red; the sample is not, and still cannot move.
     sc = _load("spot_check")
-    sc.draw(tmp_path / "spot-check-001", 20261023, 24)
-    for name in ("sheet.md", "results.yaml"):
-        assert (tmp_path / "spot-check-001" / name).read_text(encoding="utf-8") == \
-               (ROOT / "review" / "spot-check-001" / name).read_text(encoding="utf-8"), name
+    dirs = sorted((ROOT / "review").glob("spot-check-*"))
+    assert dirs
+    for d in dirs:
+        committed = _results(d)
+        fresh = tmp_path / d.name
+        sc.draw(fresh, committed["seed"], committed["n_random"])
+        assert (fresh / "sheet.md").read_text(encoding="utf-8") == \
+               (d / "sheet.md").read_text(encoding="utf-8"), d.name
+        assert as_drawn(_results(fresh)) == as_drawn(committed), d.name
+
+
+def test_the_narrowed_comparison_passes_a_filled_in_check_and_refuses_an_edited_sample(tmp_path):
+    # the gate is seen to fail. Writing verdicts must pass; touching the sample must not.
+    sc = _load("spot_check")
+    sc.draw(tmp_path / "drawn", 20261023, 3)
+    drawn = _results(tmp_path / "drawn")
+    copy = lambda res: yaml.safe_load(yaml.safe_dump(res))
+
+    filled = copy(drawn)
+    filled["checker"], filled["date"] = "A. Checker", "2026-10-27"
+    for r, verdict in zip(filled["records"], ("ok", "error", "unclear")):
+        r["verdict"] = verdict
+        r["wrong_rows"] = ["dose"] if verdict == "error" else []
+        r["notes"] = "Table 2 says 100 ug" if verdict != "ok" else ""
+    assert as_drawn(filled) == as_drawn(drawn), "a finished review must still match its draw"
+
+    def swap_a_record(res):
+        res["records"][0]["observation_id"] = "spa.obs.not.a.record"
+
+    def edit_a_hash(res):
+        res["records"][0]["record_sha256"] = "0" * 64
+
+    def reorder(res):
+        res["records"].reverse()
+
+    def drop_a_record(res):
+        res["records"].pop()
+
+    def add_a_record(res):
+        res["records"].append(copy(res["records"][0]))
+
+    def change_the_seed(res):
+        res["seed"] = res["seed"] + 1
+
+    def hide_a_record_behind_covered_by(res):
+        r = res["records"][0]
+        for k in CHECKER_FIELDS:
+            r.pop(k, None)
+        r["covered_by"] = "spot-check-001, entry 1"
+
+    for mutate in (swap_a_record, edit_a_hash, reorder, drop_a_record, add_a_record,
+                   change_the_seed, hide_a_record_behind_covered_by):
+        bad = copy(filled)
+        mutate(bad)
+        assert as_drawn(bad) != as_drawn(drawn), mutate.__name__
 
 
 def test_case_check_covers_every_case_observation_once():
