@@ -41,21 +41,24 @@ records:
 - observation_id: spa.obs.synanthedon_tipuliformis.szocs_1990.trap_e3.tasmania_1987
   part: complete
   record_sha256: 289ddb1fa18150d0ea6051e3d29962efbcf896f6abcef2fe7f43642644e8a9fc
-  verdict: null
-  wrong_rows: []
-  notes: ''
+  verdict: error
+  wrong_rows:
+  - dispenser
+  notes: 'The dispenser field is absent while the source supplies it: Methods state dispensers prepared in Hungary from 1 x 1 cm rubber tubing, loaded with compounds in hexane and sent to Australia and New Zealand, so the dispenser applies unambiguously to this trial. The source explicitly identifies plastic prism traps for Tasmania in 1984-1985, but does not explicitly identify the trap type for the 1987 trial.'
 - observation_id: spa.obs.synanthedon_tipuliformis.suckling_2005.trap_e3.tasmania
   part: complete
   record_sha256: 012d0795b408a7630bfaf69fb9abb4b2c81af5ee0fa85bd880862913946cab39
-  verdict: null
-  wrong_rows: []
-  notes: ''
+  verdict: error
+  wrong_rows:
+  - trap
+  notes: The trap field is absent while Experiment 7 explicitly identifies delta traps. The lure dispenser type is not stated.
 - observation_id: spa.obs.synanthedon_tipuliformis.suckling_2005.trap_e3.new_zealand
   part: complete
   record_sha256: dc370564e4803e38a1c1ee5128d950c2c10e3f773a9744dece5ed15734350d44
-  verdict: null
-  wrong_rows: []
-  notes: ''
+  verdict: error
+  wrong_rows:
+  - trap
+  notes: The trap field is absent while Experiment 2 explicitly identifies composite colored plastic funnel traps. The lure dispenser type is not stated.
 - observation_id: spa.obs.synanthedon_tipuliformis.mozuraitis_2006.gland
   part: complete
   record_sha256: 4ff12f6c16d03b49dd75fee1cd87238324212b4966977fdc4d0f36b87b418e3b
